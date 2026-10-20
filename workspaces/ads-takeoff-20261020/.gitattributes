@@ -1,0 +1,2 @@
+# Keep captured command output, including trailing blank lines, unchanged.
+*.log -whitespace

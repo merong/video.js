@@ -1,8 +1,11 @@
 # Claude 오케스트레이터 Takeoff — Video.js 광고 플러그인
 
-작성일: 2026-10-20 KST  
-작업 디렉터리: `/Users/brian/works/tools/videojs/video.js`  
-참조 저장소: `../v10` — 읽기 전용  
+작성일: 2026-10-20 KST
+
+작업 디렉터리: `/Users/brian/works/tools/videojs/video.js`
+
+참조 저장소: `../v10` — 읽기 전용
+
 인수 대상: 광고 플레이어·관리자·Grok 예제의 기존 구현과 Herdr 팀
 
 ## 1. 인수 목적과 현재 상태

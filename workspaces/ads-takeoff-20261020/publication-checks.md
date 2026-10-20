@@ -43,6 +43,7 @@
 - JSON 48개를 parse했다. Grok 파일마다 manifest의 크기·SHA-256을 대조했다.
 - 과거 증거·미디어 105개 파일의 로컬 SHA-256 기준을 저장하고 evidence 커밋 후 변경 0개를 확인했다. 이 수에는 기존 ignore 로그 등 로컬 보존 파일도 포함되며 Git 추가 파일 수와는 다르다.
 - raw JSON fixture·manifest·브라우저 증거를 자동 포맷하지 않도록 `vite.config.ts`의 도구 제외 경로에 `workspaces/ads-*/**`를 추가했다. 제품 코드 검사 범위는 유지했다. Git hook을 끄지 않았다.
+- 이 디렉터리의 `.gitattributes`는 원본 로그의 끝 빈 줄을 유지하도록 `*.log -whitespace`만 설정한다. takeoff 문서의 불필요한 끝 공백은 제거했다.
 - 검토 대상 비추적 파일에서 private key/GitHub token/provider key/URL credential 패턴을 검사했다. 유일한 URL credential 일치는 `tests/admin/model.test.ts`의 `example.test` 거부 테스트였으며 실제 자격 증명이 아니다. 선택한 검사 로그에서도 해당 비밀 값 패턴은 발견되지 않았다. 이는 전용 보안 감사 전체를 의미하지 않는다.
 - takeoff 문서의 상대 파일 링크가 실제 파일로 연결되는지 확인했다.
 
