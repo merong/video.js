@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS {{meta}} (name VARCHAR(64) PRIMARY KEY, value TEXT NOT NULL) {{options}};
+CREATE TABLE IF NOT EXISTS {{admins}} (username VARCHAR(128) PRIMARY KEY, password_hash VARCHAR(255) NOT NULL) {{options}};
+CREATE TABLE IF NOT EXISTS {{creatives}} (creative_id VARCHAR(128) PRIMARY KEY, current_version INTEGER NOT NULL, archived INTEGER NOT NULL DEFAULT 0) {{options}};
+CREATE TABLE IF NOT EXISTS {{creative_versions}} (creative_id VARCHAR(128) NOT NULL, version INTEGER NOT NULL, document LONGTEXT NOT NULL, PRIMARY KEY (creative_id, version)) {{options}};
+CREATE TABLE IF NOT EXISTS {{video_contexts}} (video_id VARCHAR(128) PRIMARY KEY, label VARCHAR(255) NOT NULL, board_id VARCHAR(128), category_id VARCHAR(128)) {{options}};
+CREATE TABLE IF NOT EXISTS {{drafts}} (target_key VARCHAR(64) PRIMARY KEY, target_json TEXT NOT NULL, mode VARCHAR(16) NOT NULL, revision INTEGER NOT NULL, breaks_json LONGTEXT NOT NULL, live_version INTEGER, updated_at VARCHAR(32) NOT NULL) {{options}};
+CREATE TABLE IF NOT EXISTS {{publications}} (schedule_id VARCHAR(128) NOT NULL, version INTEGER NOT NULL, target_json TEXT NOT NULL, mode VARCHAR(16) NOT NULL, breaks_json LONGTEXT NOT NULL, created_at VARCHAR(32) NOT NULL, PRIMARY KEY (schedule_id, version)) {{options}};
+CREATE TABLE IF NOT EXISTS {{sessions}} (session_id VARCHAR(128) PRIMARY KEY, snapshot_json LONGTEXT NOT NULL, expires_at INTEGER NOT NULL) {{options}};
+CREATE TABLE IF NOT EXISTS {{break_attempts}} (break_attempt_id VARCHAR(128) PRIMARY KEY, session_id VARCHAR(128) NOT NULL, break_id VARCHAR(128) NOT NULL, UNIQUE (session_id, break_id)) {{options}};
+CREATE TABLE IF NOT EXISTS {{attempts}} (attempt_id VARCHAR(128) PRIMARY KEY, session_id VARCHAR(128) NOT NULL, break_attempt_id VARCHAR(128) NOT NULL, break_id VARCHAR(128) NOT NULL, item_id VARCHAR(128) NOT NULL, ad_id VARCHAR(128) NOT NULL, video_id VARCHAR(128) NOT NULL, board_id VARCHAR(128), UNIQUE (session_id, item_id)) {{options}};
+CREATE TABLE IF NOT EXISTS {{events}} (site_id VARCHAR(128) NOT NULL, event_id VARCHAR(128) NOT NULL, attempt_id VARCHAR(128) NOT NULL, sequence INTEGER NOT NULL, type VARCHAR(16) NOT NULL, received_at VARCHAR(32) NOT NULL, payload LONGTEXT NOT NULL, PRIMARY KEY (site_id, event_id), UNIQUE (attempt_id, sequence)) {{options}};
+CREATE TABLE IF NOT EXISTS {{rejections}} (rejection_id VARCHAR(32) PRIMARY KEY, session_id VARCHAR(128) NOT NULL, reason VARCHAR(64) NOT NULL, received_at VARCHAR(32) NOT NULL, payload LONGTEXT NOT NULL) {{options}};
+CREATE TABLE IF NOT EXISTS {{rate_limits}} (bucket_key VARCHAR(64) PRIMARY KEY, hits INTEGER NOT NULL, window_start INTEGER NOT NULL) {{options}};

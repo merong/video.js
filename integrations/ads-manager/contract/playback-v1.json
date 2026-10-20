@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "siteId": "site-local",
+  "videoId": "video-1",
+  "boardId": "free",
+  "categoryId": null,
+  "scheduleId": "schedule-site",
+  "scheduleVersion": 1,
+  "breaks": [
+    {
+      "breakId": "pre-1",
+      "position": "pre",
+      "ads": [
+        {
+          "itemId": "pre-image",
+          "adId": "creative-image",
+          "creativeId": "creative-image",
+          "creativeVersion": 1,
+          "kind": "image",
+          "url": "https://example.test/ad.png",
+          "mime": "image/png",
+          "alt": "이미지 광고",
+          "clickUrl": "https://example.test/offer",
+          "skipAfterSeconds": 2,
+          "displaySeconds": 5
+        },
+        {
+          "itemId": "pre-video",
+          "adId": "creative-video",
+          "creativeId": "creative-video",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "https://example.test/ad.mp4",
+          "mime": "video/mp4",
+          "alt": "영상 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": null
+        }
+      ]
+    },
+    {
+      "breakId": "mid-10",
+      "position": "mid",
+      "atSeconds": 10,
+      "ads": [
+        {
+          "itemId": "mid-gif",
+          "adId": "creative-gif",
+          "creativeId": "creative-gif",
+          "creativeVersion": 1,
+          "kind": "image",
+          "url": "https://example.test/ad.gif",
+          "mime": "image/gif",
+          "alt": "움직이는 이미지 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": 1,
+          "displaySeconds": 3
+        }
+      ]
+    },
+    {
+      "breakId": "mid-20",
+      "position": "mid",
+      "atSeconds": 20,
+      "ads": [
+        {
+          "itemId": "mid-webm",
+          "adId": "creative-webm",
+          "creativeId": "creative-webm",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "https://example.test/ad.webm",
+          "mime": "video/webm",
+          "alt": "WebM 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": 2
+        }
+      ]
+    },
+    {
+      "breakId": "post-1",
+      "position": "post",
+      "ads": [
+        {
+          "itemId": "post-image",
+          "adId": "creative-image",
+          "creativeId": "creative-image",
+          "creativeVersion": 1,
+          "kind": "image",
+          "url": "https://example.test/ad.png",
+          "mime": "image/png",
+          "alt": "종료 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": null,
+          "displaySeconds": 2
+        }
+      ]
+    }
+  ]
+}

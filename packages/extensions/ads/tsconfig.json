@@ -1,0 +1,17 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "declarationDir": "types"
+  },
+  "references": [
+    { "path": "../../utils" },
+    { "path": "../../core" },
+    { "path": "../../core/src/dom" },
+    { "path": "../../element" },
+    { "path": "../../html" }
+  ],
+  "include": ["src"]
+}

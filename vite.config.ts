@@ -19,6 +19,8 @@ const ignoredPaths = [
   '**/build/agents/**',
   '**/dist/**',
   '**/examples/**',
+  // Preserve recorded ads fixtures, browser evidence, and media manifests byte-for-byte.
+  'workspaces/ads-*/**',
   'site/scripts/api-docs-builder/src/tests/fixtures/**',
   '**/packages/cdn/*.css',
   '**/packages/cdn/*.d.ts',

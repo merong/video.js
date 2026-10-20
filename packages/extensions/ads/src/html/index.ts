@@ -1,0 +1,1 @@
+export { MediaAdsElement } from './element';

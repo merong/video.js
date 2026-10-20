@@ -1,0 +1,596 @@
+.ads-admin {
+  --ads-ink: #20233d;
+  --ads-muted: #62677e;
+  --ads-paper: #f5f6fa;
+  --ads-white: #fff;
+  --ads-line: #d9ddea;
+  --ads-accent: #4d3bbf;
+  --ads-soft: #eeebfc;
+  --ads-error: #a51d38;
+  margin: 0;
+  color: var(--ads-ink);
+  background: var(--ads-paper);
+  font:
+    15px/1.65 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    system-ui,
+    sans-serif;
+}
+.ads-admin *,
+.ads-admin *::before,
+.ads-admin *::after {
+  box-sizing: border-box;
+}
+.ads-admin [hidden] {
+  display: none !important;
+}
+.ads-admin :focus-visible {
+  outline: 3px solid var(--ads-accent);
+  outline-offset: 4px;
+}
+.ads-admin button,
+.ads-admin input,
+.ads-admin select {
+  font: inherit;
+}
+.ads-admin button,
+.ads-admin .ads-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid var(--ads-line);
+  border-radius: 7px;
+  background: var(--ads-white);
+  color: var(--ads-ink);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 650;
+  line-height: 1.3;
+}
+.ads-admin button:hover:not(:disabled),
+.ads-admin .ads-button:hover {
+  border-color: var(--ads-accent);
+  color: var(--ads-accent);
+}
+.ads-admin button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ads-admin .ads-primary {
+  background: var(--ads-accent);
+  color: var(--ads-white);
+  border-color: var(--ads-accent);
+}
+.ads-admin .ads-primary:hover:not(:disabled) {
+  background: #3c2d99;
+  color: var(--ads-white);
+}
+.ads-admin input,
+.ads-admin select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #a9afc3;
+  border-radius: 6px;
+  padding: 9px 11px;
+  background: var(--ads-white);
+  color: var(--ads-ink);
+}
+.ads-admin input[readonly] {
+  background: var(--ads-paper);
+}
+.ads-admin [aria-invalid="true"] {
+  border-color: var(--ads-error);
+}
+.ads-admin label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 650;
+  margin-bottom: 17px;
+}
+.ads-admin fieldset {
+  min-width: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.ads-admin legend {
+  font-weight: 750;
+  margin-bottom: 15px;
+}
+.ads-admin h1 {
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -0.045em;
+  line-height: 1.35;
+  margin: 7px 0 10px;
+}
+.ads-admin h2 {
+  font-size: 19px;
+  letter-spacing: -0.025em;
+  margin: 0 0 15px;
+}
+.ads-admin p {
+  margin: 7px 0 18px;
+}
+.ads-admin .ads-eyebrow {
+  color: var(--ads-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.ads-admin .ads-header {
+  min-height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px max(24px, calc((100vw - 1320px) / 2));
+  background: var(--ads-white);
+  border-bottom: 1px solid var(--ads-line);
+}
+.ads-admin .ads-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.ads-admin .ads-brand strong {
+  display: block;
+  font-size: 22px;
+  letter-spacing: -0.05em;
+}
+.ads-admin .ads-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--ads-accent);
+  color: var(--ads-white);
+}
+.ads-admin .ads-session {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+  color: var(--ads-muted);
+}
+.ads-admin main {
+  max-width: 1368px;
+  margin: auto;
+  padding: 28px 24px 80px;
+}
+.ads-admin .ads-nav {
+  display: flex;
+  border-bottom: 1px solid var(--ads-line);
+  margin-bottom: 34px;
+  gap: 24px;
+}
+.ads-admin .ads-nav button {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 14px 2px;
+  background: transparent;
+}
+.ads-admin .ads-nav [aria-current="page"] {
+  border-bottom-color: var(--ads-accent);
+  color: var(--ads-accent);
+}
+.ads-admin .ads-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+.ads-admin .ads-heading p,
+.ads-admin .ads-muted {
+  color: var(--ads-muted);
+  font-size: 14px;
+}
+.ads-admin .ads-panel {
+  padding: 25px;
+  background: var(--ads-white);
+  border: 1px solid var(--ads-line);
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+.ads-admin .ads-panel-heading,
+.ads-admin .ads-break-heading,
+.ads-admin .ads-dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.ads-admin .ads-panel-heading h2,
+.ads-admin .ads-break-heading h2,
+.ads-admin .ads-dialog-heading h2 {
+  margin: 0;
+}
+.ads-admin .ads-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.ads-admin .ads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px 18px;
+  align-items: end;
+}
+.ads-admin .ads-grid > button {
+  align-self: center;
+}
+.ads-admin .ads-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.ads-admin .ads-actions label {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 180px;
+}
+.ads-admin .ads-hint {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ads-muted);
+}
+.ads-admin .ads-notice,
+.ads-admin [role="status"]:not(:empty) {
+  padding: 13px 16px;
+  border-left: 3px solid var(--ads-accent);
+  background: var(--ads-soft);
+  border-radius: 4px;
+  margin: 14px 0;
+  overflow-wrap: anywhere;
+}
+.ads-admin [data-error="true"] {
+  color: var(--ads-error);
+  border-color: var(--ads-error) !important;
+  background: #fff0f2 !important;
+}
+.ads-admin .ads-login {
+  max-width: 480px;
+  margin: 45px auto;
+}
+.ads-admin .ads-creative-list {
+  display: grid;
+  gap: 1px;
+}
+.ads-admin .ads-creative-card {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--ads-line);
+}
+.ads-admin .ads-creative-card:first-child {
+  padding-top: 0;
+}
+.ads-admin .ads-creative-card:last-child {
+  border-bottom: 0;
+}
+.ads-admin .ads-creative-card h3 {
+  font-size: 16px;
+  margin: 0 0 3px;
+  overflow-wrap: anywhere;
+}
+.ads-admin .ads-creative-card p {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+.ads-admin .ads-media-preview {
+  margin-top: 18px;
+  background: #e8ebf3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ads-admin .ads-media-preview video,
+.ads-admin .ads-media-preview img {
+  display: block;
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+.ads-admin details {
+  margin-top: 18px;
+  border-top: 1px solid var(--ads-line);
+  padding-top: 15px;
+}
+.ads-admin summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: 8px 0;
+}
+.ads-admin .ads-editor-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 0;
+}
+.ads-admin .ads-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ads-admin .ads-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--ads-line);
+  border-radius: 5px;
+  background: var(--ads-white);
+  font-size: 12px;
+}
+.ads-admin .ads-timeline {
+  border-left: 3px solid #b9b1e9;
+  padding-left: 26px;
+  margin-left: 10px;
+}
+.ads-admin .ads-break {
+  position: relative;
+  padding: 22px;
+  border: 1px solid var(--ads-line);
+  border-radius: 10px;
+  background: var(--ads-white);
+  margin: 22px 0;
+}
+.ads-admin .ads-break::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--ads-paper);
+  background: var(--ads-accent);
+  border-radius: 50%;
+}
+.ads-admin .ads-ad-item {
+  border: 1px solid var(--ads-line);
+  border-radius: 8px;
+  padding: 14px 17px;
+  margin: 22px 0;
+}
+.ads-admin .ads-ad-item legend {
+  padding: 0 7px;
+  margin: 0;
+  font-size: 14px;
+}
+.ads-admin .ads-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: var(--ads-muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.ads-admin .ads-item-top button {
+  min-height: 36px;
+  font-size: 12px;
+  padding: 7px 10px;
+}
+.ads-admin .ads-add-breaks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+}
+.ads-admin .ads-savebar {
+  position: sticky;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px solid #b9b1e9;
+  background: var(--ads-white);
+  box-shadow: 0 5px 22px #20233d12;
+  padding: 16px;
+  margin: 25px 0;
+  border-radius: 9px;
+  font-size: 13px;
+}
+.ads-admin .ads-metrics {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(100px, 1fr));
+  gap: 1px;
+  background: var(--ads-line);
+  border: 1px solid var(--ads-line);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 22px 0;
+}
+.ads-admin .ads-metrics > div {
+  padding: 19px 15px;
+  background: var(--ads-white);
+}
+.ads-admin .ads-metrics dt {
+  font-size: 12px;
+  color: var(--ads-muted);
+}
+.ads-admin .ads-metrics dd {
+  margin: 5px 0 0;
+  font:
+    650 27px/1.3 ui-monospace,
+    "SFMono-Regular",
+    monospace;
+  letter-spacing: -0.06em;
+}
+.ads-admin .ads-table-scroll {
+  overflow: auto;
+  border: 1px solid var(--ads-line);
+  border-radius: 10px;
+  background: var(--ads-white);
+}
+.ads-admin table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+.ads-admin caption {
+  text-align: left;
+  padding: 16px;
+  font-weight: 750;
+}
+.ads-admin th,
+.ads-admin td {
+  padding: 12px 15px;
+  border-top: 1px solid var(--ads-line);
+  white-space: nowrap;
+}
+.ads-admin th {
+  background: #f0f1f8;
+  font-weight: 650;
+}
+.ads-admin td:nth-child(n + 4) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.ads-admin dialog {
+  color: var(--ads-ink);
+  width: min(960px, calc(100vw - 24px));
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 24px);
+  border: 1px solid var(--ads-line);
+  border-radius: 14px;
+  padding: 27px;
+  overflow: auto;
+}
+.ads-admin dialog::backdrop {
+  background: #171c36b3;
+}
+.ads-admin .ads-player {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #111522;
+  margin-top: 18px;
+  isolation: isolate;
+}
+.ads-admin .ads-player > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ads-admin .ads-preview-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+.ads-admin .ads-preview-state p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.ads-admin .ads-preview-state button {
+  flex-shrink: 0;
+}
+.ads-admin #ads-preview-context,
+.ads-admin #ads-preview-events {
+  overflow-wrap: anywhere;
+}
+.ads-admin #ads-preview-events {
+  max-height: 180px;
+  overflow: auto;
+  padding-left: 22px;
+}
+.ads-admin .ads-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ads-admin .ads-skip {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  z-index: 10;
+  background: var(--ads-white);
+  padding: 12px;
+}
+.ads-admin .ads-skip:focus {
+  top: 10px;
+}
+@media (max-width: 900px) {
+  .ads-admin .ads-columns {
+    grid-template-columns: 1fr;
+  }
+  .ads-admin .ads-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .ads-admin .ads-savebar {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 600px) {
+  .ads-admin main {
+    padding: 18px 14px 40px;
+  }
+  .ads-admin .ads-header {
+    padding: 15px;
+    align-items: start;
+  }
+  .ads-admin .ads-session {
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+  .ads-admin .ads-panel,
+  .ads-admin .ads-break {
+    padding: 17px;
+  }
+  .ads-admin .ads-heading,
+  .ads-admin .ads-editor-summary,
+  .ads-admin .ads-item-top {
+    align-items: start;
+    flex-direction: column;
+  }
+  .ads-admin .ads-heading > button {
+    width: 100%;
+  }
+  .ads-admin .ads-grid {
+    grid-template-columns: 1fr;
+  }
+  .ads-admin .ads-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ads-admin .ads-timeline {
+    padding-left: 15px;
+    margin-left: 4px;
+  }
+  .ads-admin .ads-break::before {
+    left: -24px;
+  }
+  .ads-admin .ads-nav {
+    gap: 22px;
+  }
+  .ads-admin dialog {
+    padding: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ads-admin *,
+  .ads-admin *::before,
+  .ads-admin *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
