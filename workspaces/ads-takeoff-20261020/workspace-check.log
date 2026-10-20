@@ -1,0 +1,15 @@
+mise WARN  missing: pnpm@12.6.0
+$ node build/scripts/check-workspace.mjs
+[32m✓[0m CI test coverage
+[32m✓[0m Commitlint scopes
+[32m✓[0m Root tsconfig references
+[32m✓[0m Package metadata
+[32m✓[0m Release-please config
+[32m✓[0m Bundled docs publishing
+[32m✓[0m Define imports
+[32m✓[0m i18n locales
+[32m✓[0m Agent context
+[32m✓[0m Internal records
+[32m✓[0m mise tool pins
+
+11 passed, 0 failed

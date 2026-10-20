@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-10-18 10:35:32 UTC",
+  "workspace": "w1",
+  "tab": "w1:t1",
+  "cwd": "/Users/brian/works/tools/videojs/video.js",
+  "orchestrator_pane": "w1:p1",
+  "preserved_user_panes": [
+    "w1:p1"
+  ],
+  "product_plan": "ads-module-plan.md",
+  "workflow": "ads-orchestration.md",
+  "product_implementation_status": "implemented_local_validation_complete",
+  "dispatch_rule": "Explicit coordinator assignments; P2 is authorized immediately after P1 checks. Independent incremental review may run before integration; final R1 still requires integrated source.",
+  "agents": [
+    {
+      "name": "ads-source-analyst",
+      "task": "UX1-SOURCE",
+      "pane": "w1:p2",
+      "session": "01a14840-dfc1-7630-9362-6f2a55cfd424",
+      "status": "done",
+      "ready": true,
+      "cwd": "/Users/brian/works/tools/videojs/video.js",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "reserved_write_scope": [],
+      "observed_at_utc": "2026-10-18 06:05:02 UTC",
+      "last_completed_task": "UX1 SOURCE READY; final callback binding guard and regressions reviewed read-only",
+      "tab": "w1:t2",
+      "herdr_session": "tools",
+      "migration_acknowledgement": "MIGRATION READY | ads-source-analyst | tools | w1:p2"
+    },
+    {
+      "name": "ads-implementer",
+      "task": "UX1-PLAYER",
+      "pane": "w1:p3",
+      "session": "01a14841-332b-7561-9b3b-4b3c4fbbe6bd",
+      "status": "done",
+      "ready": true,
+      "cwd": "/Users/brian/works/tools/videojs/video.js",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "reserved_write_scope": [
+        "packages/extensions/ads/**"
+      ],
+      "observed_at_utc": "2026-10-18 06:05:02 UTC",
+      "last_completed_task": "UX1 player UI and lifecycle fixes; 150 tests/build/types/lint; root browser evidence recorded",
+      "tab": "w1:t2",
+      "herdr_session": "tools",
+      "migration_acknowledgement": "MIGRATION READY | ads-implementer | tools | w1:p3"
+    },
+    {
+      "name": "ads-admin-api",
+      "task": "A1/A2",
+      "pane": "w1:p4",
+      "session": "01a14874-e0de-7c33-b579-f716cdec5561",
+      "status": "done",
+      "ready": true,
+      "cwd": "/Users/brian/works/tools/videojs/video.js",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "reserved_write_scope": [
+        "integrations/ads-manager/src/**",
+        "integrations/ads-manager/database/**",
+        "integrations/ads-manager/public/api/**",
+        "integrations/ads-manager/hosts/**",
+        "integrations/ads-manager/tests/backend/**"
+      ],
+      "observed_at_utc": "2026-10-17 17:20:44 UTC",
+      "last_completed_task": "A1/A2 + Range; root MySQL70/HTTP110",
+      "tab": "w1:t3",
+      "herdr_session": "tools",
+      "migration_acknowledgement": "MIGRATION READY | ads-admin-api | tools | w1:p4"
+    },
+    {
+      "name": "ads-admin-ui",
+      "task": "G1-EXAMPLE",
+      "pane": "w1:p5",
+      "session": "01a14876-0d6a-78a0-8123-142836ccc2d5",
+      "status": "done",
+      "ready": true,
+      "cwd": "/Users/brian/works/tools/videojs/video.js",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "reserved_write_scope": [
+        "integrations/ads-manager/admin/**",
+        "integrations/ads-manager/public/assets/admin/**",
+        "integrations/ads-manager/tests/admin/**",
+        "integrations/ads-manager/public/examples/**"
+      ],
+      "observed_at_utc": "2026-10-18 10:35:32 UTC",
+      "last_completed_task": "Grok example Video.js/native; syntax/direct lint and DOM checks, root actual playback verified",
+      "tab": "w1:t3",
+      "herdr_session": "tools",
+      "migration_acknowledgement": "MIGRATION READY | ads-admin-ui | tools | w1:p5"
+    },
+    {
+      "name": "ads-qa",
+      "task": "UX0-QA",
+      "pane": "w1:p6",
+      "session": "01a14876-1831-7712-9015-a326b2f016a6",
+      "status": "done",
+      "ready": true,
+      "cwd": "/Users/brian/works/tools/videojs/video.js",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "reserved_write_scope": [
+        "workspaces/ads-ux-20261018/qa/**",
+        "integrations/ads-manager/public/demo-media/ux-review-*"
+      ],
+      "observed_at_utc": "2026-10-18 06:05:02 UTC",
+      "last_completed_task": "UX0 fixture preparation READY; original browser scenarios remain NOT_RUN; root execution is separate",
+      "tab": "w1:t4",
+      "herdr_session": "tools",
+      "migration_acknowledgement": "MIGRATION READY | ads-qa | tools | w1:p6"
+    },
+    {
+      "name": "grok",
+      "kind": "grok",
+      "task": "G1-DELIVERY",
+      "pane": "w1:p7",
+      "tab": "w1:t1",
+      "session": "01a14b14-a0d0-7263-9691-91f2b7dfd942",
+      "herdr_session": "tools",
+      "status": "done",
+      "ready": true,
+      "cwd": "/Users/brian/works/tools/videojs/video.js",
+      "model_display": "Grok 4.7 (high)",
+      "reserved_write_scope": [
+        "workspaces/ads-media/**"
+      ],
+      "observed_at_utc": "2026-10-18 10:35:32 UTC",
+      "last_completed_task": "G1 existing 10s content and 6/12/8s ad files handed off; root hash/HTTP/browser verified",
+      "brief": "ads-media-brief.md"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "W0-REVIEW",
+      "owner": "ads-source-analyst",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "acceptance": "Read-only readiness/contract report reviewed by orchestrator; not product completion.",
+      "result": "Ownership and U2 prerequisites corrected; configuration re-review READY FOR C0."
+    },
+    {
+      "id": "W0-PLAYER",
+      "owner": "ads-implementer",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "acceptance": "Read-only readiness/contract report reviewed by orchestrator; not product completion.",
+      "result": "Read-only report received and reviewed; recommendations remain C0 inputs."
+    },
+    {
+      "id": "W0-API",
+      "owner": "ads-admin-api",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "acceptance": "Read-only readiness/contract report reviewed by orchestrator; not product completion.",
+      "result": "Read-only report received and reviewed; recommendations remain C0 inputs."
+    },
+    {
+      "id": "W0-UI",
+      "owner": "ads-admin-ui",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "acceptance": "Read-only readiness/contract report reviewed by orchestrator; not product completion.",
+      "result": "Read-only report received and reviewed; recommendations remain C0 inputs."
+    },
+    {
+      "id": "W0-QA",
+      "owner": "ads-qa",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "acceptance": "Read-only readiness/contract report reviewed by orchestrator; not product completion.",
+      "result": "Read-only report received and reviewed; recommendations remain C0 inputs."
+    },
+    {
+      "id": "C0",
+      "owner": "orchestrator",
+      "status": "accepted",
+      "depends_on": [
+        "W0-REVIEW",
+        "W0-PLAYER",
+        "W0-API",
+        "W0-UI",
+        "W0-QA"
+      ],
+      "write_scope": null,
+      "acceptance": "Unified JSON/events/admin DTO/fixtures, lifecycle/default policies, host environment, and reviewer acceptance; see C0 requirements in workflow.",
+      "result": "Independent READY; contract and shared fixture written."
+    },
+    {
+      "id": "P1",
+      "owner": "ads-implementer",
+      "status": "accepted",
+      "depends_on": [
+        "C0"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required."
+    },
+    {
+      "id": "A1",
+      "owner": "ads-admin-api",
+      "status": "accepted",
+      "depends_on": [
+        "C0"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required."
+    },
+    {
+      "id": "U1",
+      "owner": "ads-admin-ui",
+      "status": "accepted",
+      "depends_on": [
+        "C0"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required.",
+      "result": "UI source, mocked boundary tests and lint complete; real U2 validation pending."
+    },
+    {
+      "id": "P2",
+      "owner": "ads-implementer",
+      "status": "accepted",
+      "depends_on": [
+        "P1"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required."
+    },
+    {
+      "id": "A2",
+      "owner": "ads-admin-api",
+      "status": "accepted",
+      "depends_on": [
+        "A1"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required."
+    },
+    {
+      "id": "U2",
+      "owner": "ads-admin-ui",
+      "status": "accepted",
+      "depends_on": [
+        "U1",
+        "A1",
+        "A2",
+        "P2"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required."
+    },
+    {
+      "id": "I1",
+      "owner": "orchestrator",
+      "status": "accepted",
+      "depends_on": [
+        "P2",
+        "A2",
+        "U2"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required.",
+      "result": "Standalone and real GnuBoard UI→player→collector→MySQL→stats/CSV verified locally."
+    },
+    {
+      "id": "R1",
+      "owner": "ads-source-analyst",
+      "status": "accepted",
+      "depends_on": [
+        "I1"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required.",
+      "result": "SOURCE READY; root inspected corrections; final browser regressions passed separately."
+    },
+    {
+      "id": "Q1",
+      "owner": "ads-qa",
+      "status": "accepted",
+      "depends_on": [
+        "I1"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required.",
+      "result": "Native/VideoJS/SPF/hls.js, actual HTTP55 and MySQL persistence passed for tested scope; remaining platform cases documented."
+    },
+    {
+      "id": "H1",
+      "owner": "orchestrator",
+      "status": "accepted",
+      "depends_on": [
+        "R1",
+        "Q1"
+      ],
+      "write_scope": null,
+      "acceptance": "See ads-orchestration.md; explicit coordinator dispatch required.",
+      "result": "Local tested implementation handed off with running player/manager pages, separate source/browser/HTTP/MySQL evidence, remaining platform coverage explicit. No deployment."
+    },
+    {
+      "id": "QENV",
+      "owner": "ads-qa",
+      "status": "accepted",
+      "depends_on": [
+        "W0-QA"
+      ],
+      "write_scope": [
+        "/tmp/ads-qa-*/**"
+      ],
+      "acceptance": "Isolated MySQL and clean GnuBoard test environment; preserve existing services.",
+      "result": "Isolated MySQL unix socket; separate app/host DB credentials; clean GnuBoard 5.6.25 official installer and admin HTTP login verified. Evidence /tmp/ads-qa-txrhuzog."
+    },
+    {
+      "id": "G0",
+      "owner": "grok",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "acceptance": "Grok CLI starts in tools/video.js, reads media brief, confirms location and scope, and waits for Grok Imagine.",
+      "result": "GROK MEDIA READY received; initial four video candidates acknowledged; no videos generated during setup."
+    },
+    {
+      "id": "UX0-SOURCE",
+      "owner": "ads-source-analyst",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [],
+      "result": "Read-only ../v10 audit; current versus custom behaviors mapped in ads-ux-parity.md."
+    },
+    {
+      "id": "UX0-QA",
+      "owner": "ads-qa",
+      "status": "accepted",
+      "depends_on": [],
+      "write_scope": [
+        "workspaces/ads-ux-20261018/qa/**",
+        "integrations/ads-manager/public/demo-media/ux-review-*"
+      ],
+      "result": "Fixtures/parser/media/HTTP preparation accepted; no browser execution by QA."
+    },
+    {
+      "id": "UX1-PLAYER",
+      "owner": "ads-implementer",
+      "status": "accepted",
+      "depends_on": [
+        "UX0-SOURCE"
+      ],
+      "write_scope": [
+        "packages/extensions/ads/**"
+      ],
+      "result": "Full-frame overlay, skin tokens/icons, locale/labels, keyboard/focus/fullscreen and cancellation/playback-state corrections. Root 150 tests and scoped real browser proof."
+    },
+    {
+      "id": "UX1-HOST",
+      "owner": "ads-admin-ui",
+      "status": "accepted",
+      "depends_on": [
+        "UX0-SOURCE"
+      ],
+      "write_scope": [
+        "integrations/ads-manager/public/examples/**",
+        "integrations/ads-manager/public/assets/admin/**",
+        "integrations/ads-manager/admin/index.php",
+        "integrations/ads-manager/tests/admin/**"
+      ],
+      "result": "Responsive examples, query preservation/BFCache restoration and actual manager preview state. Root admin59 and browser review."
+    },
+    {
+      "id": "UX1-SOURCE",
+      "owner": "ads-source-analyst",
+      "status": "accepted",
+      "depends_on": [
+        "UX1-PLAYER",
+        "UX1-HOST"
+      ],
+      "write_scope": [],
+      "result": "SOURCE READY; final callback cancellation guard reviewed. No execution or deployment claim."
+    },
+    {
+      "id": "UX1-ROOT",
+      "owner": "orchestrator",
+      "status": "accepted",
+      "depends_on": [
+        "UX0-QA",
+        "UX1-SOURCE"
+      ],
+      "write_scope": null,
+      "result": "Root tests/build/type/lint and browser proof, original negative skip0 retained. Test page and manager left open. Exact versions and limits in workspaces/ads-ux-20261018/review.md."
+    }
+  ],
+  "configuration_status": "ready",
+  "readiness_evidence": {
+    "all_five_agents_started": true,
+    "all_five_reports_received": true,
+    "product_code_changed": true,
+    "configuration_dependency_check": "All 24 tasks accepted for their recorded scopes; historical and UX follow-up proof remain separate",
+    "php_cli": "8.5.8",
+    "pdo_mysql_available": true,
+    "mysql_client": "5.7.44",
+    "database_runtime_verified": true,
+    "gnuboard_runtime_verified": true
+  },
+  "next_task_id": null,
+  "configuration_review": {
+    "result": "R1 SOURCE READY; known integration defects repaired and retested",
+    "reviewer": "ads-source-analyst",
+    "orchestrator_verified": true,
+    "scope": "Local tested paths only; see ads-validation.md for remaining browser/runtime coverage"
+  },
+  "max_panes_per_tab": 2,
+  "tabs": {
+    "orchestrator": "w1:t1",
+    "player_review": "w1:t2",
+    "admin": "w1:t3",
+    "qa": "w1:t4"
+  },
+  "contract": "ads-contract-v1.md",
+  "runtime": {
+    "manager_url": "http://127.0.0.1:18766/",
+    "manager_pid": 34509,
+    "config": "/tmp/ads-qa-txrhuzog/manager/config.php",
+    "database": "isolated ads_qa_app via private socket",
+    "host_url": "http://127.0.0.1:18765/",
+    "baseline_gets": "manager/bootstrap/examples HTTP 200",
+    "advertising_playback_verified": true,
+    "gnuboard_ads_url": "http://127.0.0.1:18765/ads/",
+    "player_url": "http://127.0.0.1:18766/examples/videojs.html?media=mp4&video=qa-playback-mp4-1018",
+    "bundle_sha256": "b6a7e8e4734fa37c7064d0869a51bdb9469298052631ed8ae30b90a15b88288c",
+    "browser_handoff": "TaskSpace63 finished exactly once; ready player and standalone manager retained; browser-handoff.json records state",
+    "previous_bundle_sha256": "10812294dc033576dc3c03c5015b1200e7b5e16d691f21f62cf55a4b93373e08"
+  },
+  "validation": "ads-validation.md",
+  "qa_report": "/tmp/ads-qa-txrhuzog/acceptance/QA-report.md",
+  "session_migration": {
+    "from_herdr_session": "default",
+    "from_workspace": "wB",
+    "to_herdr_session": "tools",
+    "method": "graceful_exit_and_codex_resume",
+    "codex_session_ids_preserved": true,
+    "status": "verified_complete",
+    "started_at_utc": "2026-10-17 17:17:58 UTC",
+    "previous_agents": [
+      {
+        "name": "ads-source-analyst",
+        "pane": "wB:pB",
+        "tab": "wB:t6",
+        "codex_session_id": "01a14840-dfc1-7630-9362-6f2a55cfd424"
+      },
+      {
+        "name": "ads-implementer",
+        "pane": "wB:pC",
+        "tab": "wB:t6",
+        "codex_session_id": "01a14841-332b-7561-9b3b-4b3c4fbbe6bd"
+      },
+      {
+        "name": "ads-admin-api",
+        "pane": "wB:pD",
+        "tab": "wB:t7",
+        "codex_session_id": "01a14874-e0de-7c33-b579-f716cdec5561"
+      },
+      {
+        "name": "ads-admin-ui",
+        "pane": "wB:pE",
+        "tab": "wB:t7",
+        "codex_session_id": "01a14876-0d6a-78a0-8123-142836ccc2d5"
+      },
+      {
+        "name": "ads-qa",
+        "pane": "wB:pF",
+        "tab": "wB:t8",
+        "codex_session_id": "01a14876-1831-7712-9015-a326b2f016a6"
+      }
+    ],
+    "completed_at_utc": "2026-10-17 17:20:44 UTC",
+    "acknowledgements": [
+      {
+        "name": "ads-source-analyst",
+        "pane": "w1:p2",
+        "status": "done",
+        "codex_session_preserved": true
+      },
+      {
+        "name": "ads-implementer",
+        "pane": "w1:p3",
+        "status": "done",
+        "codex_session_preserved": true
+      },
+      {
+        "name": "ads-admin-api",
+        "pane": "w1:p4",
+        "status": "done",
+        "codex_session_preserved": true
+      },
+      {
+        "name": "ads-admin-ui",
+        "pane": "w1:p5",
+        "status": "done",
+        "codex_session_preserved": true
+      },
+      {
+        "name": "ads-qa",
+        "pane": "w1:p6",
+        "status": "done",
+        "codex_session_preserved": true
+      }
+    ],
+    "removed_old_tabs": [
+      "wB:t6",
+      "wB:t7",
+      "wB:t8"
+    ],
+    "all_five_agents_ready": true,
+    "original_orchestrator_preserved": true,
+    "max_panes_per_tab_verified": 2
+  },
+  "herdr_session": "tools",
+  "herdr_command_prefix": "herdr --session tools",
+  "media_production": {
+    "agent": "grok",
+    "herdr_session": "tools",
+    "pane": "w1:p7",
+    "brief": "ads-media-brief.md",
+    "output_directory": "workspaces/ads-media",
+    "status": "delivered_assets_integrated_local_demo",
+    "grok_imagine_app_connection_verified": false,
+    "generated_assets": 11,
+    "delivery_requests": 4,
+    "delivered_video_files": 11,
+    "root_verified_example_files": 4,
+    "example_url": "http://127.0.0.1:18766/examples/grok.html",
+    "evidence_directory": "workspaces/ads-grok-demo-20261018",
+    "generation_proof": "Grok agent and source manifests report prior Grok Imagine generation; no generation initiated by root in G1",
+    "root_new_generation_calls": 0
+  },
+  "active_followup": {
+    "id": "UX1",
+    "request": "v10 custom feature review and player-fit UI/UX",
+    "plan": "ads-ux-parity.md",
+    "browser_task_space": 63,
+    "evidence_directory": "workspaces/ads-ux-20261018",
+    "status": "implemented_reviewed_local_validation_complete",
+    "completed_at_utc": "2026-10-18 06:05:02 UTC",
+    "report": "workspaces/ads-ux-20261018/review.md",
+    "source_review": "SOURCE READY",
+    "browser_handoff_complete": true,
+    "skip_zero_status": "unsupported_negative_preserved",
+    "deployment": "not_performed"
+  },
+  "followups": [
+    {
+      "id": "G1",
+      "request": "Verify player corner options and use Grok supplied content/ad videos",
+      "status": "local_validation_complete",
+      "evidence_directory": "workspaces/ads-grok-demo-20261018",
+      "radius_api": "public CSS --media-border-radius; no new loading option",
+      "runtime_changes": "New Grok examples and copied verified media; no DB/server/core mutation"
+    }
+  ]
+}

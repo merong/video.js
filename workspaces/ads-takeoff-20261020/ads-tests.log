@@ -1,0 +1,15 @@
+mise WARN  missing: pnpm@12.6.0
+$ vp test run
+
+ RUN  v5.0.3 /Users/brian/works/tools/videojs/video.js/packages/extensions/ads
+
+
+ Test Files  7 passed (7)
+      Tests  150 passed (150)
+   Start at  14:21:58
+   Duration  4.56s (environment 40%, transform 39%, tests 11%, import 7%, worker 2%)
+
+  Transform  transforming modules took 4.08s · 39% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+

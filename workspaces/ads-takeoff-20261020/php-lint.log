@@ -1,0 +1,25 @@
+No syntax errors detected in integrations/ads-manager/admin/index.php
+No syntax errors detected in integrations/ads-manager/bin/install.php
+No syntax errors detected in integrations/ads-manager/config.example.php
+No syntax errors detected in integrations/ads-manager/hosts/GnuBoard.php
+No syntax errors detected in integrations/ads-manager/hosts/Host.php
+No syntax errors detected in integrations/ads-manager/hosts/Standalone.php
+No syntax errors detected in integrations/ads-manager/hosts/gnuboard-admin.php
+No syntax errors detected in integrations/ads-manager/public/api/index.php
+No syntax errors detected in integrations/ads-manager/public/index.php
+No syntax errors detected in integrations/ads-manager/public/router.php
+No syntax errors detected in integrations/ads-manager/src/App.php
+No syntax errors detected in integrations/ads-manager/src/Config.php
+No syntax errors detected in integrations/ads-manager/src/Creatives.php
+No syntax errors detected in integrations/ads-manager/src/Database.php
+No syntax errors detected in integrations/ads-manager/src/Events.php
+No syntax errors detected in integrations/ads-manager/src/Http.php
+No syntax errors detected in integrations/ads-manager/src/MediaResponse.php
+No syntax errors detected in integrations/ads-manager/src/Schedules.php
+No syntax errors detected in integrations/ads-manager/src/Statistics.php
+No syntax errors detected in integrations/ads-manager/src/Support.php
+No syntax errors detected in integrations/ads-manager/src/bootstrap.php
+No syntax errors detected in integrations/ads-manager/src/load.php
+No syntax errors detected in integrations/ads-manager/tests/backend/gnuboard_keys.php
+No syntax errors detected in integrations/ads-manager/tests/backend/run.php
+PASS 24 PHP files

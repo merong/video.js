@@ -1,0 +1,355 @@
+mise WARN  missing: pnpm@12.6.0
+$ vp run typecheck:workspace
+14:22:06 [@astrojs/netlify] Enabling sessions with Netlify Blobs
+~/packages/utils$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/array/index.ts, ./src/dom/index.ts, ./src/events/index.ts, ./src/function/index.ts, ./src/i18n/index.ts, ./src/jwt/index.ts, ./src/number/index.ts, ./src/object/index.ts, ./src/percent/index.ts, ./src/predicate/index.ts, ./src/string/index.ts, ./src/style/index.ts, ./src/time/index.ts, ./src/types/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Cleaning 232 files
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 587ms
+
+~/packages/element$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/context.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts, ./src/context.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 721ms
+✔ Build complete in 1784ms
+
+~/packages/video.js$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/errors/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts, ./src/errors/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 783ms
+✔ Build complete in 1803ms
+
+~/packages/media$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/core/index.ts, ./src/core/media-tracks/index.ts, ./src/dom/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/core/index.ts, ./src/core/media-tracks/index.ts, ./src/dom/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 211ms
+✔ Build complete in 436ms
+
+~/packages/vjsc$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/ast/index.ts, ./src/components/index.ts, ./src/components/jsx-runtime.ts, ./src/components/jsx-dev-runtime.ts, ./src/graph/index.ts, ./src/html-runtime/jsx-runtime.ts, ./src/html-runtime/jsx-dev-runtime.ts, ./src/target/index.ts, ./src/target/jsx-runtime.ts, ./src/target/jsx-dev-runtime.ts, ./src/shadcn/index.ts, ./src/styles/index.ts, ./src/plugins/index.ts, ./src/vite/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Cleaning 235 files
+✔ Build complete in 984ms
+
+~/packages/vjsc$ node scripts/check-exports.mjs ◉ cache hit, replaying
+
+~/packages/store$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/core/index.ts, ./src/html/index.ts, ./src/react/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/core/index.ts, ./src/html/index.ts, ./src/react/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 214ms
+✔ Build complete in 322ms
+
+~/packages/adapters/mux$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 116ms
+✔ Build complete in 318ms
+
+~/packages/adapters/vimeo-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 125ms
+✔ Build complete in 293ms
+
+~/packages/adapters/dash-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/server.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts, ./src/server.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 122ms
+✔ Build complete in 264ms
+
+~/packages/adapters/twitch-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 92ms
+✔ Build complete in 233ms
+
+~/packages/adapters/cloudflare-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 85ms
+✔ Build complete in 218ms
+
+~/packages/adapters/tiktok-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+✔ Build complete in 79ms
+✔ Build complete in 186ms
+
+~/packages/adapters/spotify-audio$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 38ms
+✔ Build complete in 330ms
+
+~/packages/adapters/youtube-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 60ms
+✔ Build complete in 337ms
+
+~/packages/adapters/shaka-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 142ms
+✔ Build complete in 247ms
+
+~/packages/adapters/wistia-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/helpers.ts, ./src/index.ts, ./src/server.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/helpers.ts, ./src/index.ts, ./src/server.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 54ms
+✔ Build complete in 201ms
+
+~/packages/adapters/playerjs-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 69ms
+✔ Build complete in 236ms
+
+~/packages/spf$ vp pack ◉ cache hit, replaying
+ℹ entry: src/index.ts, src/dom.ts, src/playback/engines/hls/index.ts, src/media/media-tracks/index.ts, src/playback/adapters/hls-audio/index.ts, src/playback/adapters/hls-background-video/index.ts, src/playback/adapters/hls-video/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/index.ts, src/dom.ts, src/playback/engines/hls/index.ts, src/media/media-tracks/index.ts, src/playback/adapters/hls-audio/index.ts, src/playback/adapters/hls-background-video/index.ts, src/playback/adapters/hls-video/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+✔ Build complete in 365ms
+✔ Build complete in 814ms
+
+~/packages/installation$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/node.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Cleaning 71 files
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 291ms
+
+~/packages/icons$ node --import tsx scripts/build-icons.ts ◉ cache hit, replaying
+Building 4 icon families: compat, default, neutral, scaffold
+Building compat (25 icons)
+Building default (25 icons)
+Building neutral (25 icons)
+Building scaffold (25 icons)
+Build complete.
+
+~/packages/core$ node --import tsx ./scripts/generate-i18n-locales.ts ◉ cache hit, replaying
+[generate-i18n-locales] Updated locale packs, text descriptors, and platform re-exports
+
+~/packages/core$ node --import tsx ./scripts/generate-i18n-types.ts ◉ cache hit, replaying
+[generate-i18n-types] Updated generated translation types
+
+~/packages/core$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/core/index.ts, ./src/core/i18n/index.ts, ./src/core/i18n/locales/all.ts, ./src/core/i18n/locales/en.ts, ./src/core/i18n/locales/ar.ts, ./src/core/i18n/locales/az.ts, ./src/core/i18n/locales/bs.ts, ./src/core/i18n/locales/bg.ts, ./src/core/i18n/locales/bn.ts, ./src/core/i18n/locales/ca.ts, ./src/core/i18n/locales/cs.ts, ./src/core/i18n/locales/cy.ts, ./src/core/i18n/locales/da.ts, ./src/core/i18n/locales/de.ts, ./src/core/i18n/locales/el.ts, ./src/core/i18n/locales/es.ts, ./src/core/i18n/locales/et.ts, ./src/core/i18n/locales/eu.ts, ./src/core/i18n/locales/fa.ts, ./src/core/i18n/locales/fi.ts, ./src/core/i18n/locales/fr.ts, ./src/core/i18n/locales/gd.ts, ./src/core/i18n/locales/gl.ts, ./src/core/i18n/locales/he.ts, ./src/core/i18n/locales/hi.ts, ./src/core/i18n/locales/hr.ts, ./src/core/i18n/locales/hu.ts, ./src/core/i18n/locales/id.ts, ./src/core/i18n/locales/it.ts, ./src/core/i18n/locales/ja.ts, ./src/core/i18n/locales/ko.ts, ./src/core/i18n/locales/lt.ts, ./src/core/i18n/locales/lv.ts, ./src/core/i18n/locales/mr.ts, ./src/core/i18n/locales/nb.ts, ./src/core/i18n/locales/nl.ts, ./src/core/i18n/locales/nn.ts, ./src/core/i18n/locales/ne.ts, ./src/core/i18n/locales/oc.ts, ./src/core/i18n/locales/pl.ts, ./src/core/i18n/locales/pt-BR.ts, ./src/core/i18n/locales/pt-PT.ts, ./src/core/i18n/locales/ro.ts, ./src/core/i18n/locales/ru.ts, ./src/core/i18n/locales/sk.ts, ./src/core/i18n/locales/sl.ts, ./src/core/i18n/locales/sr.ts, ./src/core/i18n/locales/sv.ts, ./src/core/i18n/locales/te.ts, ./src/core/i18n/locales/th.ts, ./src/core/i18n/locales/tr.ts, ./src/core/i18n/locales/uk.ts, ./src/core/i18n/locales/vi.ts, ./src/core/i18n/locales/zh-CN.ts, ./src/core/i18n/locales/zh-TW.ts, ./src/core/i18n/locales/pt.ts, ./src/core/i18n/locales/zh.ts, ./src/core/i18n/text/buttons.ts, ./src/core/i18n/text/seek.ts, ./src/core/i18n/text/fullscreen.ts, ./src/core/i18n/text/captions.ts, ./src/core/i18n/text/pip.ts, ./src/core/i18n/text/live.ts, ./src/core/i18n/text/cast.ts, ./src/core/i18n/text/airplay.ts, ./src/core/i18n/text/slider.ts, ./src/core/i18n/text/time.ts, ./src/core/i18n/text/playback.ts, ./src/core/i18n/text/volume.ts, ./src/core/i18n/text/status.ts, ./src/core/i18n/text/container.ts, ./src/core/i18n/text/errors.ts, ./src/core/i18n/text/common.ts, ./src/core/i18n/text/menu.ts, ./src/dom/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/core/index.ts, ./src/core/i18n/index.ts, ./src/core/i18n/locales/all.ts, ./src/core/i18n/locales/en.ts, ./src/core/i18n/locales/ar.ts, ./src/core/i18n/locales/az.ts, ./src/core/i18n/locales/bs.ts, ./src/core/i18n/locales/bg.ts, ./src/core/i18n/locales/bn.ts, ./src/core/i18n/locales/ca.ts, ./src/core/i18n/locales/cs.ts, ./src/core/i18n/locales/cy.ts, ./src/core/i18n/locales/da.ts, ./src/core/i18n/locales/de.ts, ./src/core/i18n/locales/el.ts, ./src/core/i18n/locales/es.ts, ./src/core/i18n/locales/et.ts, ./src/core/i18n/locales/eu.ts, ./src/core/i18n/locales/fa.ts, ./src/core/i18n/locales/fi.ts, ./src/core/i18n/locales/fr.ts, ./src/core/i18n/locales/gd.ts, ./src/core/i18n/locales/gl.ts, ./src/core/i18n/locales/he.ts, ./src/core/i18n/locales/hi.ts, ./src/core/i18n/locales/hr.ts, ./src/core/i18n/locales/hu.ts, ./src/core/i18n/locales/id.ts, ./src/core/i18n/locales/it.ts, ./src/core/i18n/locales/ja.ts, ./src/core/i18n/locales/ko.ts, ./src/core/i18n/locales/lt.ts, ./src/core/i18n/locales/lv.ts, ./src/core/i18n/locales/mr.ts, ./src/core/i18n/locales/nb.ts, ./src/core/i18n/locales/nl.ts, ./src/core/i18n/locales/nn.ts, ./src/core/i18n/locales/ne.ts, ./src/core/i18n/locales/oc.ts, ./src/core/i18n/locales/pl.ts, ./src/core/i18n/locales/pt-BR.ts, ./src/core/i18n/locales/pt-PT.ts, ./src/core/i18n/locales/ro.ts, ./src/core/i18n/locales/ru.ts, ./src/core/i18n/locales/sk.ts, ./src/core/i18n/locales/sl.ts, ./src/core/i18n/locales/sr.ts, ./src/core/i18n/locales/sv.ts, ./src/core/i18n/locales/te.ts, ./src/core/i18n/locales/th.ts, ./src/core/i18n/locales/tr.ts, ./src/core/i18n/locales/uk.ts, ./src/core/i18n/locales/vi.ts, ./src/core/i18n/locales/zh-CN.ts, ./src/core/i18n/locales/zh-TW.ts, ./src/core/i18n/locales/pt.ts, ./src/core/i18n/locales/zh.ts, ./src/core/i18n/text/buttons.ts, ./src/core/i18n/text/seek.ts, ./src/core/i18n/text/fullscreen.ts, ./src/core/i18n/text/captions.ts, ./src/core/i18n/text/pip.ts, ./src/core/i18n/text/live.ts, ./src/core/i18n/text/cast.ts, ./src/core/i18n/text/airplay.ts, ./src/core/i18n/text/slider.ts, ./src/core/i18n/text/time.ts, ./src/core/i18n/text/playback.ts, ./src/core/i18n/text/volume.ts, ./src/core/i18n/text/status.ts, ./src/core/i18n/text/container.ts, ./src/core/i18n/text/errors.ts, ./src/core/i18n/text/common.ts, ./src/core/i18n/text/menu.ts, ./src/dom/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 327ms
+✔ Build complete in 1547ms
+
+~/packages/adapters/native-hls-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 131ms
+✔ Build complete in 275ms
+
+~/packages/extensions/mux-data$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 33ms
+✔ Build complete in 142ms
+
+~/packages/extensions/google-cast$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 59ms
+✔ Build complete in 144ms
+
+~/packages/skins$ vp -C build pack ◉ cache hit, replaying
+ℹ [skins] entry: src/utils.ts
+ℹ [skins] tsconfig: tsconfig.json
+ℹ Build start
+ℹ Cleaning 1433 files
+[PLUGIN_TIMINGS] JavaScript callbacks ran for 35.2s of this 35.9s build (98%).
+The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+  - plugin skins:packages generateBundle (46%, 16.4s, 1 call)
+  - plugin vjsc:graph buildEnd (3%, 1.0s, 1 call)
+Additional callback time came from the callbacks below and from callbacks under 1s.
+5 callbacks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
+  - plugin tsdown:deps resolveId (22384 calls)
+  - plugin vjsc:component-modules resolveId (40486 calls)
+  - plugin vjsc:component-modules load (1586 calls)
+  … and 2 more
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
+
+✔ [skins] Build complete in 36269ms
+
+~/packages/adapters/hlsjs-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 80ms
+✔ Build complete in 167ms
+
+~/packages/adapters/mux-video$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/spf/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts, ./src/spf/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 43ms
+✔ Build complete in 198ms
+
+~/packages/adapters/mux-audio$ vp pack ◉ cache hit, replaying
+ℹ entry: ./src/index.ts, ./src/spf/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: ./src/index.ts, ./src/spf/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 33ms
+✔ Build complete in 165ms
+
+~/packages/html$ vp pack ◉ cache hit, replaying
+ℹ [package] entry: src/index.ts, src/i18n/index.ts, src/i18n/locales/all.ts, src/i18n/locales/all/register.ts, src/i18n/locales/en.ts, src/i18n/locales/en/register.ts, src/i18n/locales/ar.ts, src/i18n/locales/az.ts, src/i18n/locales/bs.ts, src/i18n/locales/bg.ts, src/i18n/locales/bn.ts, src/i18n/locales/ca.ts, src/i18n/locales/cs.ts, src/i18n/locales/cy.ts, src/i18n/locales/da.ts, src/i18n/locales/de.ts, src/i18n/locales/el.ts, src/i18n/locales/es.ts, src/i18n/locales/et.ts, src/i18n/locales/eu.ts, src/i18n/locales/fa.ts, src/i18n/locales/fi.ts, src/i18n/locales/fr.ts, src/i18n/locales/gd.ts, src/i18n/locales/gl.ts, src/i18n/locales/he.ts, src/i18n/locales/hi.ts, src/i18n/locales/hr.ts, src/i18n/locales/hu.ts, src/i18n/locales/id.ts, src/i18n/locales/it.ts, src/i18n/locales/ja.ts, src/i18n/locales/ko.ts, src/i18n/locales/lt.ts, src/i18n/locales/lv.ts, src/i18n/locales/mr.ts, src/i18n/locales/nb.ts, src/i18n/locales/nl.ts, src/i18n/locales/nn.ts, src/i18n/locales/ne.ts, src/i18n/locales/oc.ts, src/i18n/locales/pl.ts, src/i18n/locales/pt-BR.ts, src/i18n/locales/pt-PT.ts, src/i18n/locales/ro.ts, src/i18n/locales/ru.ts, src/i18n/locales/sk.ts, src/i18n/locales/sl.ts, src/i18n/locales/sr.ts, src/i18n/locales/sv.ts, src/i18n/locales/te.ts, src/i18n/locales/th.ts, src/i18n/locales/tr.ts, src/i18n/locales/uk.ts, src/i18n/locales/vi.ts, src/i18n/locales/zh-CN.ts, src/i18n/locales/zh-TW.ts, src/i18n/locales/pt.ts, src/i18n/locales/zh.ts, src/i18n/locales/ar/register.ts, src/i18n/locales/az/register.ts, src/i18n/locales/bs/register.ts, src/i18n/locales/bg/register.ts, src/i18n/locales/bn/register.ts, src/i18n/locales/ca/register.ts, src/i18n/locales/cs/register.ts, src/i18n/locales/cy/register.ts, src/i18n/locales/da/register.ts, src/i18n/locales/de/register.ts, src/i18n/locales/el/register.ts, src/i18n/locales/es/register.ts, src/i18n/locales/et/register.ts, src/i18n/locales/eu/register.ts, src/i18n/locales/fa/register.ts, src/i18n/locales/fi/register.ts, src/i18n/locales/fr/register.ts, src/i18n/locales/gd/register.ts, src/i18n/locales/gl/register.ts, src/i18n/locales/he/register.ts, src/i18n/locales/hi/register.ts, src/i18n/locales/hr/register.ts, src/i18n/locales/hu/register.ts, src/i18n/locales/id/register.ts, src/i18n/locales/it/register.ts, src/i18n/locales/ja/register.ts, src/i18n/locales/ko/register.ts, src/i18n/locales/lt/register.ts, src/i18n/locales/lv/register.ts, src/i18n/locales/mr/register.ts, src/i18n/locales/nb/register.ts, src/i18n/locales/nl/register.ts, src/i18n/locales/nn/register.ts, src/i18n/locales/ne/register.ts, src/i18n/locales/oc/register.ts, src/i18n/locales/pl/register.ts, src/i18n/locales/pt-BR/register.ts, src/i18n/locales/pt-PT/register.ts, src/i18n/locales/ro/register.ts, src/i18n/locales/ru/register.ts, src/i18n/locales/sk/register.ts, src/i18n/locales/sl/register.ts, src/i18n/locales/sr/register.ts, src/i18n/locales/sv/register.ts, src/i18n/locales/te/register.ts, src/i18n/locales/th/register.ts, src/i18n/locales/tr/register.ts, src/i18n/locales/uk/register.ts, src/i18n/locales/vi/register.ts, src/i18n/locales/zh-CN/register.ts, src/i18n/locales/zh-TW/register.ts, src/i18n/locales/pt/register.ts, src/i18n/locales/zh/register.ts, src/i18n/text/airplay.ts, src/i18n/text/buttons.ts, src/i18n/text/captions.ts, src/i18n/text/cast.ts, src/i18n/text/common.ts, src/i18n/text/container.ts, src/i18n/text/errors.ts, src/i18n/text/fullscreen.ts, src/i18n/text/live.ts, src/i18n/text/menu.ts, src/i18n/text/pip.ts, src/i18n/text/playback.ts, src/i18n/text/seek.ts, src/i18n/text/slider.ts, src/i18n/text/status.ts, src/i18n/text/time.ts, src/i18n/text/volume.ts, src/icons/index.ts, src/icons/scaffold/index.ts, src/icons/neutral/index.ts, src/icons/element/index.ts, src/icons/element/scaffold/index.ts, src/icons/element/register/index.ts, src/icons/element/neutral/index.ts, src/icons/element/default/index.ts, src/icons/element/compat/index.ts, src/icons/default/index.ts, src/icons/compat/index.ts, src/define/i18n.ts, src/define/video/compat-skin.ts, src/define/video/neutral-skin.ts, src/define/video/neutral-ui.ts, src/define/video/player.ts, src/define/video/scaffold-skin.ts, src/define/video/skin.ts, src/define/video/ui.ts, src/define/ui/airplay-button.ts, src/define/ui/alert-dialog.ts, src/define/ui/audio-track-radio-group.ts, src/define/ui/buffering-indicator.ts, src/define/ui/captions-button.ts, src/define/ui/captions-radio-group.ts, src/define/ui/cast-button.ts, src/define/ui/container.ts, src/define/ui/controls-backdrop.ts, src/define/ui/controls-content.ts, src/define/ui/controls-group.ts, src/define/ui/controls.ts, src/define/ui/dialog-backdrop.ts, src/define/ui/dialog-close.ts, src/define/ui/dialog-description.ts, src/define/ui/dialog-popup.ts, src/define/ui/dialog-title.ts, src/define/ui/dialog.ts, src/define/ui/error-dialog.ts, src/define/ui/fullscreen-button.ts, src/define/ui/gesture.ts, src/define/ui/hotkey.ts, src/define/ui/live-button.ts, src/define/ui/menu-checkbox-item.ts, src/define/ui/menu-content.ts, src/define/ui/menu-group-label.ts, src/define/ui/menu-group.ts, src/define/ui/menu-item-indicator.ts, src/define/ui/menu-item.ts, src/define/ui/menu-radio-group.ts, src/define/ui/menu-radio-item.ts, src/define/ui/menu-separator.ts, src/define/ui/menu.ts, src/define/ui/mute-button.ts, src/define/ui/pip-button.ts, src/define/ui/play-button.ts, src/define/ui/playback-rate-button.ts, src/define/ui/playback-rate-radio-group.ts, src/define/ui/popover.ts, src/define/ui/poster.ts, src/define/ui/quality-radio-group.ts, src/define/ui/seek-button.ts, src/define/ui/seek-indicator-value.ts, src/define/ui/seek-indicator.ts, src/define/ui/slider-buffer.ts, src/define/ui/slider-fill.ts, src/define/ui/slider-preview.ts, src/define/ui/slider-thumb.ts, src/define/ui/slider-thumbnail.ts, src/define/ui/slider-track.ts, src/define/ui/slider-value.ts, src/define/ui/slider.ts, src/define/ui/status-announcer.ts, src/define/ui/status-indicator-value.ts, src/define/ui/status-indicator.ts, src/define/ui/thumbnail.ts, src/define/ui/time-group.ts, src/define/ui/time-separator.ts, src/define/ui/time-slider-chapter-title.ts, src/define/ui/time-slider-chapters.ts, src/define/ui/time-slider.ts, src/define/ui/time.ts, src/define/ui/title.ts, src/define/ui/tooltip-group.ts, src/define/ui/tooltip-label.ts, src/define/ui/tooltip-shortcut.ts, src/define/ui/tooltip.ts, src/define/ui/volume-indicator-fill.ts, src/define/ui/volume-indicator-value.ts, src/define/ui/volume-indicator.ts, src/define/ui/volume-popover.ts, src/define/ui/volume-slider.ts, src/define/media/background-video.ts, src/define/media/cloudflare-video.ts, src/define/media/dash-video.ts, src/define/media/hls-audio.ts, src/define/media/hls-background-video.ts, src/define/media/hls-video.ts, src/define/media/hlsjs-video.ts, src/define/media/mux-background-video.ts, src/define/media/native-hls-video.ts, src/define/media/playerjs-video.ts, src/define/media/shaka-video.ts, src/define/media/spotify-audio.ts, src/define/media/tiktok-video.ts, src/define/media/twitch-video.ts, src/define/media/vimeo-video.ts, src/define/media/wistia-video.ts, src/define/media/youtube-video.ts, src/define/media/mux-video/hls-js.ts, src/define/media/mux-video/index.ts, src/define/media/mux-video/spf.ts, src/define/media/mux-audio/hls-js.ts, src/define/media/mux-audio/index.ts, src/define/media/mux-audio/spf.ts, src/define/live-video/compat-skin.ts, src/define/live-video/neutral-skin.ts, src/define/live-video/neutral-ui.ts, src/define/live-video/player.ts, src/define/live-video/scaffold-skin.ts, src/define/live-video/skin.ts, src/define/live-video/ui.ts, src/define/live-audio/compat-skin.ts, src/define/live-audio/neutral-skin.ts, src/define/live-audio/neutral-ui.ts, src/define/live-audio/player.ts, src/define/live-audio/scaffold-skin.ts, src/define/live-audio/skin.ts, src/define/live-audio/ui.ts, src/define/feature/video.ts, src/define/extensions/google-cast.ts, src/define/extensions/mux-data.ts, src/define/background/player.ts, src/define/background/skin.ts, src/define/background/video.ts, src/define/audio/compat-skin.ts, src/define/audio/neutral-skin.ts, src/define/audio/neutral-ui.ts, src/define/audio/player.ts, src/define/audio/scaffold-skin.ts, src/define/audio/skin.ts, src/define/audio/ui.ts, src/presets/video/index.ts, src/presets/live-video/index.ts, src/presets/live-audio/index.ts, src/presets/background/index.ts, src/presets/audio/index.ts
+ℹ [package] tsconfig: tsconfig.json
+ℹ [package] entry: src/index.ts, src/i18n/index.ts, src/i18n/locales/all.ts, src/i18n/locales/all/register.ts, src/i18n/locales/en.ts, src/i18n/locales/en/register.ts, src/i18n/locales/ar.ts, src/i18n/locales/az.ts, src/i18n/locales/bs.ts, src/i18n/locales/bg.ts, src/i18n/locales/bn.ts, src/i18n/locales/ca.ts, src/i18n/locales/cs.ts, src/i18n/locales/cy.ts, src/i18n/locales/da.ts, src/i18n/locales/de.ts, src/i18n/locales/el.ts, src/i18n/locales/es.ts, src/i18n/locales/et.ts, src/i18n/locales/eu.ts, src/i18n/locales/fa.ts, src/i18n/locales/fi.ts, src/i18n/locales/fr.ts, src/i18n/locales/gd.ts, src/i18n/locales/gl.ts, src/i18n/locales/he.ts, src/i18n/locales/hi.ts, src/i18n/locales/hr.ts, src/i18n/locales/hu.ts, src/i18n/locales/id.ts, src/i18n/locales/it.ts, src/i18n/locales/ja.ts, src/i18n/locales/ko.ts, src/i18n/locales/lt.ts, src/i18n/locales/lv.ts, src/i18n/locales/mr.ts, src/i18n/locales/nb.ts, src/i18n/locales/nl.ts, src/i18n/locales/nn.ts, src/i18n/locales/ne.ts, src/i18n/locales/oc.ts, src/i18n/locales/pl.ts, src/i18n/locales/pt-BR.ts, src/i18n/locales/pt-PT.ts, src/i18n/locales/ro.ts, src/i18n/locales/ru.ts, src/i18n/locales/sk.ts, src/i18n/locales/sl.ts, src/i18n/locales/sr.ts, src/i18n/locales/sv.ts, src/i18n/locales/te.ts, src/i18n/locales/th.ts, src/i18n/locales/tr.ts, src/i18n/locales/uk.ts, src/i18n/locales/vi.ts, src/i18n/locales/zh-CN.ts, src/i18n/locales/zh-TW.ts, src/i18n/locales/pt.ts, src/i18n/locales/zh.ts, src/i18n/locales/ar/register.ts, src/i18n/locales/az/register.ts, src/i18n/locales/bs/register.ts, src/i18n/locales/bg/register.ts, src/i18n/locales/bn/register.ts, src/i18n/locales/ca/register.ts, src/i18n/locales/cs/register.ts, src/i18n/locales/cy/register.ts, src/i18n/locales/da/register.ts, src/i18n/locales/de/register.ts, src/i18n/locales/el/register.ts, src/i18n/locales/es/register.ts, src/i18n/locales/et/register.ts, src/i18n/locales/eu/register.ts, src/i18n/locales/fa/register.ts, src/i18n/locales/fi/register.ts, src/i18n/locales/fr/register.ts, src/i18n/locales/gd/register.ts, src/i18n/locales/gl/register.ts, src/i18n/locales/he/register.ts, src/i18n/locales/hi/register.ts, src/i18n/locales/hr/register.ts, src/i18n/locales/hu/register.ts, src/i18n/locales/id/register.ts, src/i18n/locales/it/register.ts, src/i18n/locales/ja/register.ts, src/i18n/locales/ko/register.ts, src/i18n/locales/lt/register.ts, src/i18n/locales/lv/register.ts, src/i18n/locales/mr/register.ts, src/i18n/locales/nb/register.ts, src/i18n/locales/nl/register.ts, src/i18n/locales/nn/register.ts, src/i18n/locales/ne/register.ts, src/i18n/locales/oc/register.ts, src/i18n/locales/pl/register.ts, src/i18n/locales/pt-BR/register.ts, src/i18n/locales/pt-PT/register.ts, src/i18n/locales/ro/register.ts, src/i18n/locales/ru/register.ts, src/i18n/locales/sk/register.ts, src/i18n/locales/sl/register.ts, src/i18n/locales/sr/register.ts, src/i18n/locales/sv/register.ts, src/i18n/locales/te/register.ts, src/i18n/locales/th/register.ts, src/i18n/locales/tr/register.ts, src/i18n/locales/uk/register.ts, src/i18n/locales/vi/register.ts, src/i18n/locales/zh-CN/register.ts, src/i18n/locales/zh-TW/register.ts, src/i18n/locales/pt/register.ts, src/i18n/locales/zh/register.ts, src/i18n/text/airplay.ts, src/i18n/text/buttons.ts, src/i18n/text/captions.ts, src/i18n/text/cast.ts, src/i18n/text/common.ts, src/i18n/text/container.ts, src/i18n/text/errors.ts, src/i18n/text/fullscreen.ts, src/i18n/text/live.ts, src/i18n/text/menu.ts, src/i18n/text/pip.ts, src/i18n/text/playback.ts, src/i18n/text/seek.ts, src/i18n/text/slider.ts, src/i18n/text/status.ts, src/i18n/text/time.ts, src/i18n/text/volume.ts, src/icons/index.ts, src/icons/scaffold/index.ts, src/icons/neutral/index.ts, src/icons/element/index.ts, src/icons/element/scaffold/index.ts, src/icons/element/register/index.ts, src/icons/element/neutral/index.ts, src/icons/element/default/index.ts, src/icons/element/compat/index.ts, src/icons/default/index.ts, src/icons/compat/index.ts, src/define/i18n.ts, src/define/video/compat-skin.ts, src/define/video/neutral-skin.ts, src/define/video/neutral-ui.ts, src/define/video/player.ts, src/define/video/scaffold-skin.ts, src/define/video/skin.ts, src/define/video/ui.ts, src/define/ui/airplay-button.ts, src/define/ui/alert-dialog.ts, src/define/ui/audio-track-radio-group.ts, src/define/ui/buffering-indicator.ts, src/define/ui/captions-button.ts, src/define/ui/captions-radio-group.ts, src/define/ui/cast-button.ts, src/define/ui/container.ts, src/define/ui/controls-backdrop.ts, src/define/ui/controls-content.ts, src/define/ui/controls-group.ts, src/define/ui/controls.ts, src/define/ui/dialog-backdrop.ts, src/define/ui/dialog-close.ts, src/define/ui/dialog-description.ts, src/define/ui/dialog-popup.ts, src/define/ui/dialog-title.ts, src/define/ui/dialog.ts, src/define/ui/error-dialog.ts, src/define/ui/fullscreen-button.ts, src/define/ui/gesture.ts, src/define/ui/hotkey.ts, src/define/ui/live-button.ts, src/define/ui/menu-checkbox-item.ts, src/define/ui/menu-content.ts, src/define/ui/menu-group-label.ts, src/define/ui/menu-group.ts, src/define/ui/menu-item-indicator.ts, src/define/ui/menu-item.ts, src/define/ui/menu-radio-group.ts, src/define/ui/menu-radio-item.ts, src/define/ui/menu-separator.ts, src/define/ui/menu.ts, src/define/ui/mute-button.ts, src/define/ui/pip-button.ts, src/define/ui/play-button.ts, src/define/ui/playback-rate-button.ts, src/define/ui/playback-rate-radio-group.ts, src/define/ui/popover.ts, src/define/ui/poster.ts, src/define/ui/quality-radio-group.ts, src/define/ui/seek-button.ts, src/define/ui/seek-indicator-value.ts, src/define/ui/seek-indicator.ts, src/define/ui/slider-buffer.ts, src/define/ui/slider-fill.ts, src/define/ui/slider-preview.ts, src/define/ui/slider-thumb.ts, src/define/ui/slider-thumbnail.ts, src/define/ui/slider-track.ts, src/define/ui/slider-value.ts, src/define/ui/slider.ts, src/define/ui/status-announcer.ts, src/define/ui/status-indicator-value.ts, src/define/ui/status-indicator.ts, src/define/ui/thumbnail.ts, src/define/ui/time-group.ts, src/define/ui/time-separator.ts, src/define/ui/time-slider-chapter-title.ts, src/define/ui/time-slider-chapters.ts, src/define/ui/time-slider.ts, src/define/ui/time.ts, src/define/ui/title.ts, src/define/ui/tooltip-group.ts, src/define/ui/tooltip-label.ts, src/define/ui/tooltip-shortcut.ts, src/define/ui/tooltip.ts, src/define/ui/volume-indicator-fill.ts, src/define/ui/volume-indicator-value.ts, src/define/ui/volume-indicator.ts, src/define/ui/volume-popover.ts, src/define/ui/volume-slider.ts, src/define/media/background-video.ts, src/define/media/cloudflare-video.ts, src/define/media/dash-video.ts, src/define/media/hls-audio.ts, src/define/media/hls-background-video.ts, src/define/media/hls-video.ts, src/define/media/hlsjs-video.ts, src/define/media/mux-background-video.ts, src/define/media/native-hls-video.ts, src/define/media/playerjs-video.ts, src/define/media/shaka-video.ts, src/define/media/spotify-audio.ts, src/define/media/tiktok-video.ts, src/define/media/twitch-video.ts, src/define/media/vimeo-video.ts, src/define/media/wistia-video.ts, src/define/media/youtube-video.ts, src/define/media/mux-video/hls-js.ts, src/define/media/mux-video/index.ts, src/define/media/mux-video/spf.ts, src/define/media/mux-audio/hls-js.ts, src/define/media/mux-audio/index.ts, src/define/media/mux-audio/spf.ts, src/define/live-video/compat-skin.ts, src/define/live-video/neutral-skin.ts, src/define/live-video/neutral-ui.ts, src/define/live-video/player.ts, src/define/live-video/scaffold-skin.ts, src/define/live-video/skin.ts, src/define/live-video/ui.ts, src/define/live-audio/compat-skin.ts, src/define/live-audio/neutral-skin.ts, src/define/live-audio/neutral-ui.ts, src/define/live-audio/player.ts, src/define/live-audio/scaffold-skin.ts, src/define/live-audio/skin.ts, src/define/live-audio/ui.ts, src/define/feature/video.ts, src/define/extensions/google-cast.ts, src/define/extensions/mux-data.ts, src/define/background/player.ts, src/define/background/skin.ts, src/define/background/video.ts, src/define/audio/compat-skin.ts, src/define/audio/neutral-skin.ts, src/define/audio/neutral-ui.ts, src/define/audio/player.ts, src/define/audio/scaffold-skin.ts, src/define/audio/skin.ts, src/define/audio/ui.ts, src/presets/video/index.ts, src/presets/live-video/index.ts, src/presets/live-audio/index.ts, src/presets/background/index.ts, src/presets/audio/index.ts
+ℹ [package] tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ [package] Build complete in 1407ms
+✔ [package] Build complete in 5708ms
+[PLUGIN_TIMINGS] JavaScript callbacks ran for 4.8s of this 5.6s build (86%).
+The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+  - plugin rolldown-plugin-dts:generate buildStart (31%, 1.8s, 1 call)
+Additional callback time came from the callbacks below and from callbacks under 1s.
+7 callbacks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
+  - plugin rolldown-plugin-dts:resolver resolveId (3608 calls)
+  - plugin rolldown-plugin-dts:generate load (471 calls)
+  - plugin rolldown-plugin-dts:fake-js transform (471 calls)
+  … and 4 more
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
+
+
+~/packages/react$ vp pack ◉ cache hit, replaying
+ℹ entry: src/index.ts, src/icons/index.ts, src/i18n/index.ts, src/extensions/google-cast/index.ts, src/extensions/mux-data/index.ts, src/icons/neutral/index.ts, src/icons/scaffold/index.ts, src/icons/compat/index.ts, src/media/cloudflare-video/index.ts, src/media/dash-video/index.ts, src/media/background-video/index.ts, src/media/hls-audio/index.ts, src/media/mux-audio/hls-js.tsx, src/media/mux-audio/index.ts, src/media/mux-audio/spf.tsx, src/media/hlsjs-video/index.ts, src/media/hls-background-video/index.ts, src/media/hls-video/index.ts, src/media/mux-background-video/index.ts, src/media/native-hls-video/index.ts, src/media/playerjs-video/index.ts, src/media/mux-video/hls-js.tsx, src/media/mux-video/index.ts, src/media/mux-video/spf.tsx, src/media/tiktok-video/index.ts, src/media/spotify-audio/index.ts, src/media/shaka-video/index.ts, src/media/twitch-video/index.ts, src/media/vimeo-video/index.ts, src/media/wistia-video/index.ts, src/media/youtube-video/index.ts, src/presets/background/index.ts, src/presets/audio/index.ts, src/presets/live-audio/index.ts, src/presets/live-video/index.ts, src/presets/video/index.ts, src/ui/airplay-button/index.ts, src/ui/audio-track-radio-group/index.ts, src/ui/alert-dialog/index.ts, src/ui/audio-track/index.ts, src/ui/captions-button/index.ts, src/ui/buffering-indicator/index.ts, src/ui/cast-button/index.ts, src/ui/dialog/index.ts, src/ui/controls/index.ts, src/ui/captions-radio-group/index.ts, src/ui/hotkey/index.ts, src/ui/fullscreen-button/index.ts, src/ui/error-dialog/index.ts, src/ui/gesture/index.ts, src/ui/menu/index.ts, src/ui/live-button/index.ts, src/ui/mute-button/index.ts, src/ui/pip-button/index.ts, src/ui/play-button/index.ts, src/ui/playback-rate/index.ts, src/ui/playback-rate-button/index.ts, src/ui/playback-rate-radio-group/index.ts, src/ui/quality/index.ts, src/ui/quality-radio-group/index.ts, src/ui/poster/index.ts, src/ui/popover/index.ts, src/ui/seek-indicator/index.ts, src/ui/seek-button/index.ts, src/ui/status-announcer/index.ts, src/ui/status-indicator/index.ts, src/ui/thumbnail/index.ts, src/ui/slider/index.ts, src/ui/time-slider/index.ts, src/ui/title/index.ts, src/ui/tooltip/index.ts, src/ui/time/index.ts, src/ui/volume-slider/index.ts, src/ui/volume-popover/index.ts, src/ui/volume-indicator/index.ts, src/i18n/locales/all.ts, src/i18n/locales/all/register.ts, src/i18n/locales/en.ts, src/i18n/locales/en/register.ts, src/i18n/locales/ar.ts, src/i18n/locales/az.ts, src/i18n/locales/bs.ts, src/i18n/locales/bg.ts, src/i18n/locales/bn.ts, src/i18n/locales/ca.ts, src/i18n/locales/cs.ts, src/i18n/locales/cy.ts, src/i18n/locales/da.ts, src/i18n/locales/de.ts, src/i18n/locales/el.ts, src/i18n/locales/es.ts, src/i18n/locales/et.ts, src/i18n/locales/eu.ts, src/i18n/locales/fa.ts, src/i18n/locales/fi.ts, src/i18n/locales/fr.ts, src/i18n/locales/gd.ts, src/i18n/locales/gl.ts, src/i18n/locales/he.ts, src/i18n/locales/hi.ts, src/i18n/locales/hr.ts, src/i18n/locales/hu.ts, src/i18n/locales/id.ts, src/i18n/locales/it.ts, src/i18n/locales/ja.ts, src/i18n/locales/ko.ts, src/i18n/locales/lt.ts, src/i18n/locales/lv.ts, src/i18n/locales/mr.ts, src/i18n/locales/nb.ts, src/i18n/locales/nl.ts, src/i18n/locales/nn.ts, src/i18n/locales/ne.ts, src/i18n/locales/oc.ts, src/i18n/locales/pl.ts, src/i18n/locales/pt-BR.ts, src/i18n/locales/pt-PT.ts, src/i18n/locales/ro.ts, src/i18n/locales/ru.ts, src/i18n/locales/sk.ts, src/i18n/locales/sl.ts, src/i18n/locales/sr.ts, src/i18n/locales/sv.ts, src/i18n/locales/te.ts, src/i18n/locales/th.ts, src/i18n/locales/tr.ts, src/i18n/locales/uk.ts, src/i18n/locales/vi.ts, src/i18n/locales/zh-CN.ts, src/i18n/locales/zh-TW.ts, src/i18n/locales/pt.ts, src/i18n/locales/zh.ts, src/i18n/locales/ar/register.ts, src/i18n/locales/az/register.ts, src/i18n/locales/bs/register.ts, src/i18n/locales/bg/register.ts, src/i18n/locales/bn/register.ts, src/i18n/locales/ca/register.ts, src/i18n/locales/cs/register.ts, src/i18n/locales/cy/register.ts, src/i18n/locales/da/register.ts, src/i18n/locales/de/register.ts, src/i18n/locales/el/register.ts, src/i18n/locales/es/register.ts, src/i18n/locales/et/register.ts, src/i18n/locales/eu/register.ts, src/i18n/locales/fa/register.ts, src/i18n/locales/fi/register.ts, src/i18n/locales/fr/register.ts, src/i18n/locales/gd/register.ts, src/i18n/locales/gl/register.ts, src/i18n/locales/he/register.ts, src/i18n/locales/hi/register.ts, src/i18n/locales/hr/register.ts, src/i18n/locales/hu/register.ts, src/i18n/locales/id/register.ts, src/i18n/locales/it/register.ts, src/i18n/locales/ja/register.ts, src/i18n/locales/ko/register.ts, src/i18n/locales/lt/register.ts, src/i18n/locales/lv/register.ts, src/i18n/locales/mr/register.ts, src/i18n/locales/nb/register.ts, src/i18n/locales/nl/register.ts, src/i18n/locales/nn/register.ts, src/i18n/locales/ne/register.ts, src/i18n/locales/oc/register.ts, src/i18n/locales/pl/register.ts, src/i18n/locales/pt-BR/register.ts, src/i18n/locales/pt-PT/register.ts, src/i18n/locales/ro/register.ts, src/i18n/locales/ru/register.ts, src/i18n/locales/sk/register.ts, src/i18n/locales/sl/register.ts, src/i18n/locales/sr/register.ts, src/i18n/locales/sv/register.ts, src/i18n/locales/te/register.ts, src/i18n/locales/th/register.ts, src/i18n/locales/tr/register.ts, src/i18n/locales/uk/register.ts, src/i18n/locales/vi/register.ts, src/i18n/locales/zh-CN/register.ts, src/i18n/locales/zh-TW/register.ts, src/i18n/locales/pt/register.ts, src/i18n/locales/zh/register.ts, src/i18n/text/airplay.ts, src/i18n/text/buttons.ts, src/i18n/text/captions.ts, src/i18n/text/cast.ts, src/i18n/text/common.ts, src/i18n/text/container.ts, src/i18n/text/errors.ts, src/i18n/text/fullscreen.ts, src/i18n/text/live.ts, src/i18n/text/menu.ts, src/i18n/text/pip.ts, src/i18n/text/playback.ts, src/i18n/text/seek.ts, src/i18n/text/slider.ts, src/i18n/text/status.ts, src/i18n/text/time.ts, src/i18n/text/volume.ts
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/index.ts, src/icons/index.ts, src/i18n/index.ts, src/extensions/google-cast/index.ts, src/extensions/mux-data/index.ts, src/media/cloudflare-video/index.ts, src/media/background-video/index.ts, src/media/dash-video/index.ts, src/media/hls-audio/index.ts, src/media/hls-background-video/index.ts, src/media/hls-video/index.ts, src/media/mux-audio/hls-js.tsx, src/media/mux-audio/index.ts, src/media/mux-audio/spf.tsx, src/media/hlsjs-video/index.ts, src/media/mux-background-video/index.ts, src/media/mux-video/hls-js.tsx, src/media/mux-video/index.ts, src/media/mux-video/spf.tsx, src/media/native-hls-video/index.ts, src/media/playerjs-video/index.ts, src/media/shaka-video/index.ts, src/media/spotify-audio/index.ts, src/media/tiktok-video/index.ts, src/media/vimeo-video/index.ts, src/media/twitch-video/index.ts, src/media/wistia-video/index.ts, src/media/youtube-video/index.ts, src/presets/background/index.ts, src/presets/audio/index.ts, src/presets/live-video/index.ts, src/presets/live-audio/index.ts, src/presets/video/index.ts, src/icons/compat/index.ts, src/icons/scaffold/index.ts, src/icons/neutral/index.ts, src/ui/airplay-button/index.ts, src/ui/alert-dialog/index.ts, src/ui/audio-track/index.ts, src/ui/audio-track-radio-group/index.ts, src/ui/buffering-indicator/index.ts, src/ui/cast-button/index.ts, src/ui/controls/index.ts, src/ui/captions-radio-group/index.ts, src/ui/dialog/index.ts, src/ui/error-dialog/index.ts, src/ui/captions-button/index.ts, src/ui/gesture/index.ts, src/ui/fullscreen-button/index.ts, src/ui/hotkey/index.ts, src/ui/mute-button/index.ts, src/ui/live-button/index.ts, src/ui/menu/index.ts, src/ui/pip-button/index.ts, src/ui/play-button/index.ts, src/ui/playback-rate/index.ts, src/ui/playback-rate-button/index.ts, src/ui/playback-rate-radio-group/index.ts, src/ui/popover/index.ts, src/ui/seek-button/index.ts, src/ui/quality/index.ts, src/ui/quality-radio-group/index.ts, src/ui/seek-indicator/index.ts, src/ui/poster/index.ts, src/ui/status-announcer/index.ts, src/ui/slider/index.ts, src/ui/status-indicator/index.ts, src/ui/thumbnail/index.ts, src/ui/time/index.ts, src/ui/time-slider/index.ts, src/ui/title/index.ts, src/ui/tooltip/index.ts, src/ui/volume-indicator/index.ts, src/ui/volume-slider/index.ts, src/ui/volume-popover/index.ts, src/i18n/locales/all.ts, src/i18n/locales/all/register.ts, src/i18n/locales/en.ts, src/i18n/locales/en/register.ts, src/i18n/locales/ar.ts, src/i18n/locales/az.ts, src/i18n/locales/bs.ts, src/i18n/locales/bg.ts, src/i18n/locales/bn.ts, src/i18n/locales/ca.ts, src/i18n/locales/cs.ts, src/i18n/locales/cy.ts, src/i18n/locales/da.ts, src/i18n/locales/de.ts, src/i18n/locales/el.ts, src/i18n/locales/es.ts, src/i18n/locales/et.ts, src/i18n/locales/eu.ts, src/i18n/locales/fa.ts, src/i18n/locales/fi.ts, src/i18n/locales/fr.ts, src/i18n/locales/gd.ts, src/i18n/locales/gl.ts, src/i18n/locales/he.ts, src/i18n/locales/hi.ts, src/i18n/locales/hr.ts, src/i18n/locales/hu.ts, src/i18n/locales/id.ts, src/i18n/locales/it.ts, src/i18n/locales/ja.ts, src/i18n/locales/ko.ts, src/i18n/locales/lt.ts, src/i18n/locales/lv.ts, src/i18n/locales/mr.ts, src/i18n/locales/nb.ts, src/i18n/locales/nl.ts, src/i18n/locales/nn.ts, src/i18n/locales/ne.ts, src/i18n/locales/oc.ts, src/i18n/locales/pl.ts, src/i18n/locales/pt-BR.ts, src/i18n/locales/pt-PT.ts, src/i18n/locales/ro.ts, src/i18n/locales/ru.ts, src/i18n/locales/sk.ts, src/i18n/locales/sl.ts, src/i18n/locales/sr.ts, src/i18n/locales/sv.ts, src/i18n/locales/te.ts, src/i18n/locales/th.ts, src/i18n/locales/tr.ts, src/i18n/locales/uk.ts, src/i18n/locales/vi.ts, src/i18n/locales/zh-CN.ts, src/i18n/locales/zh-TW.ts, src/i18n/locales/pt.ts, src/i18n/locales/zh.ts, src/i18n/locales/ar/register.ts, src/i18n/locales/az/register.ts, src/i18n/locales/bs/register.ts, src/i18n/locales/bg/register.ts, src/i18n/locales/bn/register.ts, src/i18n/locales/ca/register.ts, src/i18n/locales/cs/register.ts, src/i18n/locales/cy/register.ts, src/i18n/locales/da/register.ts, src/i18n/locales/de/register.ts, src/i18n/locales/el/register.ts, src/i18n/locales/es/register.ts, src/i18n/locales/et/register.ts, src/i18n/locales/eu/register.ts, src/i18n/locales/fa/register.ts, src/i18n/locales/fi/register.ts, src/i18n/locales/fr/register.ts, src/i18n/locales/gd/register.ts, src/i18n/locales/gl/register.ts, src/i18n/locales/he/register.ts, src/i18n/locales/hi/register.ts, src/i18n/locales/hr/register.ts, src/i18n/locales/hu/register.ts, src/i18n/locales/id/register.ts, src/i18n/locales/it/register.ts, src/i18n/locales/ja/register.ts, src/i18n/locales/ko/register.ts, src/i18n/locales/lt/register.ts, src/i18n/locales/lv/register.ts, src/i18n/locales/mr/register.ts, src/i18n/locales/nb/register.ts, src/i18n/locales/nl/register.ts, src/i18n/locales/nn/register.ts, src/i18n/locales/ne/register.ts, src/i18n/locales/oc/register.ts, src/i18n/locales/pl/register.ts, src/i18n/locales/pt-BR/register.ts, src/i18n/locales/pt-PT/register.ts, src/i18n/locales/ro/register.ts, src/i18n/locales/ru/register.ts, src/i18n/locales/sk/register.ts, src/i18n/locales/sl/register.ts, src/i18n/locales/sr/register.ts, src/i18n/locales/sv/register.ts, src/i18n/locales/te/register.ts, src/i18n/locales/th/register.ts, src/i18n/locales/tr/register.ts, src/i18n/locales/uk/register.ts, src/i18n/locales/vi/register.ts, src/i18n/locales/zh-CN/register.ts, src/i18n/locales/zh-TW/register.ts, src/i18n/locales/pt/register.ts, src/i18n/locales/zh/register.ts, src/i18n/text/airplay.ts, src/i18n/text/buttons.ts, src/i18n/text/captions.ts, src/i18n/text/cast.ts, src/i18n/text/common.ts, src/i18n/text/container.ts, src/i18n/text/errors.ts, src/i18n/text/fullscreen.ts, src/i18n/text/live.ts, src/i18n/text/menu.ts, src/i18n/text/pip.ts, src/i18n/text/playback.ts, src/i18n/text/seek.ts, src/i18n/text/slider.ts, src/i18n/text/status.ts, src/i18n/text/time.ts, src/i18n/text/volume.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+warn: TypeScript 7.0 does not yet have a stable API and is experimental. Some options will be unavailable.
+ℹ Emit types with @typescript/native-preview@7.0.0-dev.20260421.2
+✔ Build complete in 1416ms
+✔ Build complete in 4249ms
+
+~/apps/e2e$ tsgo --project tsconfig.json --noEmit ◉ cache hit, replaying
+
+$ tsgo --build ⊘ cache disabled
+
+---
+vp run: 34/35 cache hit (97%), 83.80s saved. (Run `vp run --last-details` for full details)

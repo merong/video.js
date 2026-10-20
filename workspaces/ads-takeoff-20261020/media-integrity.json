@@ -1,0 +1,61 @@
+{
+  "checked_on": "2026-10-20",
+  "result": "PASS",
+  "files": [
+    {
+      "path": "workspaces/ads-media/ads-preroll-b-001/video.mp4",
+      "bytes": 9365072,
+      "sha256": "293e20d8a53d4647d5e1cfbaec51f7ffbcf5811c9ddfce3de9f15f30b0a2e3f3"
+    },
+    {
+      "path": "workspaces/ads-media/ads-preroll-a-001/video.mp4",
+      "bytes": 3900834,
+      "sha256": "7d00f760896410f2f73a34169156a4186556241fc9c99598b0864c8ca02c71af"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-01.mp4",
+      "bytes": 12243780,
+      "sha256": "15810e0655842ac188cc1aaeeb345f3dc127b64160ff73a8e4f2141f85ed67e3"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-02.mp4",
+      "bytes": 11561008,
+      "sha256": "aa733d53a9453610da8bba36c993865f1586c49cf3cfb42fbbc3b2d3b89efacd"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-03.mp4",
+      "bytes": 11335058,
+      "sha256": "881fbf121abb43b7ba2982e3a3e143ef6314495e2dcfe6827ade1b813b7fee8e"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-04.mp4",
+      "bytes": 22952148,
+      "sha256": "f5a7d2ac28a65a480d434bd1542d856712589c014e507cbb0d55f4d713079bd3"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-05.mp4",
+      "bytes": 16176316,
+      "sha256": "7fa0f2771c1bdf0a22cc9fad237b45953577554eb61a006d5c8ea6a126fa540f"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-06.mp4",
+      "bytes": 12234844,
+      "sha256": "4d6373f153bc185bcd6a7edf15345f2f734056496d2fc38dc82b37c65a496f4a"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-07.mp4",
+      "bytes": 14255493,
+      "sha256": "4cc58612bc52885423bb497c27f063791f11a89c8df5c86fa9fd4c5b10976eb7"
+    },
+    {
+      "path": "workspaces/ads-media/ads-content-001/segment-08.mp4",
+      "bytes": 7339496,
+      "sha256": "34f80962256449f7b38f155434dbc5658548fbc7671b2131e93e3eb5efa06d18"
+    },
+    {
+      "path": "workspaces/ads-media/ads-midroll-c-001/video.mp4",
+      "bytes": 10602955,
+      "sha256": "236fa3bdb1365e8437bda241b7d8a78a059ff5e0b2c37da8983b749a287ca872"
+    }
+  ]
+}

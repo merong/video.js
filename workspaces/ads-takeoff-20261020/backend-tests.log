@@ -1,0 +1,2 @@
+PASS 70 persistence/authorization/publication/collector/statistics assertions (sqlite).
+Isolated test prefix: ads_; SQLite/test files: /private/var/folders/wh/rrdr8vl512q19t1pf933hb980000gn/T/ads-backend-133729de0072

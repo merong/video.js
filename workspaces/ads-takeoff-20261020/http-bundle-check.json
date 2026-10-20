@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-10-20T05:25:23.127054+00:00",
+  "scope": "Read-only HTTP availability and bundle bytes; no browser or DB execution",
+  "http": [
+    {
+      "url": "http://127.0.0.1:18766/",
+      "status": 200,
+      "final_url": "http://127.0.0.1:18766/",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:18766/examples/grok.html",
+      "status": 200,
+      "final_url": "http://127.0.0.1:18766/examples/grok.html",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:18766/examples/grok.html?mode=native",
+      "status": 200,
+      "final_url": "http://127.0.0.1:18766/examples/grok.html?mode=native",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "http://127.0.0.1:18765/ads/",
+      "status": 200,
+      "final_url": "http://127.0.0.1:18765/ads/",
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "files": [
+    {
+      "path": "packages/extensions/ads/dist/cdn/ads.js",
+      "bytes": 79134,
+      "sha256": "b6a7e8e4734fa37c7064d0869a51bdb9469298052631ed8ae30b90a15b88288c"
+    },
+    {
+      "path": "integrations/ads-manager/public/assets/ads.js",
+      "bytes": 79134,
+      "sha256": "b6a7e8e4734fa37c7064d0869a51bdb9469298052631ed8ae30b90a15b88288c"
+    }
+  ],
+  "bundle_http": {
+    "status": 200,
+    "bytes": 79134,
+    "sha256": "b6a7e8e4734fa37c7064d0869a51bdb9469298052631ed8ae30b90a15b88288c"
+  },
+  "bundle_matches": true
+}
