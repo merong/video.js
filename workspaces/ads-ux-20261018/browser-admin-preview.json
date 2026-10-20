@@ -1,0 +1,12 @@
+{
+  "phase": "ad",
+  "text": "프리롤 · 광고 1/4 진행 중",
+  "events": "프리롤 · 광고 1/4 · 시작",
+  "requests": [
+    "http://127.0.0.1:18766/api/index.php?action=bootstrap",
+    "http://127.0.0.1:18766/api/index.php?action=creatives",
+    "http://127.0.0.1:18766/api/index.php?action=schedule-draft&targetType=video&targetId=qa-playback-mp4-1018",
+    "http://127.0.0.1:18766/api/index.php?action=schedule-preview"
+  ],
+  "contentPaused": true
+}

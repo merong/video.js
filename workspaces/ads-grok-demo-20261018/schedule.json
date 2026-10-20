@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "siteId": "grok-local-demo",
+  "videoId": "grok-demo-scene-01",
+  "boardId": null,
+  "categoryId": null,
+  "scheduleId": "grok-demo-20261018",
+  "scheduleVersion": 1,
+  "breaks": [
+    {
+      "breakId": "grok-pre",
+      "position": "pre",
+      "ads": [
+        {
+          "itemId": "grok-pre-coffee",
+          "adId": "grok-coffee",
+          "creativeId": "grok-coffee",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "mime": "video/mp4",
+          "alt": "Grok Imagine 커피 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": null
+        },
+        {
+          "itemId": "grok-pre-earbuds",
+          "adId": "grok-earbuds",
+          "creativeId": "grok-earbuds",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+          "mime": "video/mp4",
+          "alt": "Grok Imagine 이어폰 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": 3
+        }
+      ]
+    },
+    {
+      "breakId": "grok-mid-5",
+      "position": "mid",
+      "atSeconds": 5,
+      "ads": [
+        {
+          "itemId": "grok-mid-water",
+          "adId": "grok-water",
+          "creativeId": "grok-water",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "/demo-media/grok-20261018/ad-water-8s.mp4",
+          "mime": "video/mp4",
+          "alt": "Grok Imagine 생수 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": 3
+        }
+      ]
+    },
+    {
+      "breakId": "grok-post",
+      "position": "post",
+      "ads": [
+        {
+          "itemId": "grok-post-coffee",
+          "adId": "grok-coffee",
+          "creativeId": "grok-coffee",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "mime": "video/mp4",
+          "alt": "Grok Imagine 커피 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "case": "skip0-negative",
+  "status": "광고 진단: schedule_unavailable (schedule). 0초 입력 거부 여부를 확인하세요.",
+  "variant": "requested",
+  "mode": "videojs",
+  "videoId": "ux-review-20261018",
+  "language": "ko",
+  "scheduleUrl": "http://127.0.0.1:18766/demo-media/ux-review-requested-20261018.json.js",
+  "tracking": "raw schedule; native preview:true; no manager API",
+  "layout": {
+    "viewport": {
+      "width": 1686,
+      "height": 973
+    },
+    "document": {
+      "clientWidth": 1686,
+      "scrollWidth": 1686,
+      "scrollHeight": 1193
+    },
+    "body": {
+      "width": 1686,
+      "height": 1193.328125,
+      "scrollWidth": 1686
+    },
+    "player": {
+      "width": 960,
+      "height": 540,
+      "top": 333,
+      "bottom": 873
+    },
+    "horizontalOverflow": false,
+    "fullscreenElement": null
+  },
+  "media": {
+    "paused": false,
+    "ended": false,
+    "time": 0.260419,
+    "duration": 36,
+    "readyState": 4,
+    "networkState": 1,
+    "errorCode": null
+  },
+  "observations": [
+    {
+      "atMs": 220,
+      "kind": "fixture-attached",
+      "variant": "requested",
+      "mode": "videojs",
+      "videoId": "ux-review-20261018",
+      "bundleUrl": "http://127.0.0.1:18766/assets/ads.js?ux-review=1792301815072"
+    },
+    {
+      "atMs": 255,
+      "kind": "ads-error",
+      "code": "schedule_unavailable",
+      "stage": "schedule"
+    },
+    {
+      "atMs": 258,
+      "kind": "content-loadedmetadata",
+      "time": 0,
+      "paused": true
+    },
+    {
+      "atMs": 7780,
+      "kind": "content-playing",
+      "time": 0.04559,
+      "paused": false
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>광고 UX 독립 QA · __VARIANT__</title>
+    <link rel="stylesheet" href="/assets/videojs/video.css" />
+    <style>
+      :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #131719; color: #f0f4f2; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 20px 16px 32px; }
+      main { width: 100%; max-width: 960px; margin-inline: auto; }
+      h1 { font-size: 1.35rem; margin-block: 0 12px; }
+      p { line-height: 1.5; }
+      nav, .fixture-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 12px; }
+      a { color: #a5e8ce; }
+      .fixture-actions button { font: inherit; padding: 8px 12px; color: inherit; background: #263038; border: 1px solid #81928e; border-radius: 6px; }
+      .fixture-actions button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #bbf171; outline-offset: 3px; }
+      #stage { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #080b0d; }
+      video-player, video-skin { display: block; width: 100%; height: 100%; }
+      video-skin { position: relative; }
+      video { display: block; width: 100%; height: 100%; object-fit: contain; }
+      #fixture-kind, #fixture-note { border-inline-start: 3px solid #b8de7a; padding-inline-start: 12px; }
+      output, code, pre { overflow-wrap: anywhere; }
+      #geometry { display: block; font-size: .85rem; color: #c5d2cd; margin-block: 10px; }
+      details { margin-block: 14px; border-block-start: 1px solid #4b5954; padding-block-start: 12px; }
+      pre { white-space: pre-wrap; font-size: .8rem; max-height: 20rem; overflow: auto; }
+      #below-player { padding-block: 14px; border-block: 1px dashed #73857c; }
+      #advertiser-target { padding-block-start: 18px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>광고 UX 독립 QA fixture</h1>
+      <p id="fixture-kind">__VARIANT_LABEL__ · 브라우저 검증 결과가 아닌 재현 입력입니다.</p>
+      <nav aria-label="QA 입력 선택">
+        <a href="/demo-media/ux-review-valid-20261018.html?mode=videojs">Valid · Video.js</a>
+        <a href="/demo-media/ux-review-valid-20261018.html?mode=native">Valid · Native preview</a>
+        <a href="/demo-media/ux-review-requested-20261018.html?mode=videojs">Negative · Video.js</a>
+        <a href="/demo-media/ux-review-requested-20261018.html?mode=native">Negative · Native preview</a>
+      </nav>
+      <p id="fixture-note">__EXPECTATION__</p>
+      <p>본편 및 첫 광고: 기존 36초 MP4. 프리롤: 영상(3초 후 스킵) → 이미지(8초).
+        본편 10초: 이미지 3초·스킵 없음. 포스트롤: 이미지 3초.
+        편성 JSON에는 추적 정보가 없으며 관리자 API를 호출하지 않습니다.</p>
+      <p id="status" role="status">로컬 번들과 정적 편성을 준비합니다.</p>
+      <div class="fixture-actions">
+        <button id="play" type="button" disabled>본편 재생으로 시작</button>
+        <button id="snapshot" type="button">관측 상태 갱신</button>
+        <button id="reload" type="button">새 페이지로 다시 시작</button>
+      </div>
+      <div id="stage" aria-label="광고와 본편 플레이어"></div>
+      <output id="geometry" aria-label="페이지와 플레이어 크기"></output>
+      <p id="below-player">플레이어 아래 경계 — 광고가 이 영역을 밀거나 가리지 않아야 합니다. 페이지의 세로 스크롤은 허용하며 가로 넘침을 숨기지 않습니다.</p>
+      <details>
+        <summary>로컬 관측 기록 · 판정은 root 실제 브라우저 검증 후</summary>
+        <p>버튼·키보드 조작은 실제 제품 컨트롤을 사용합니다. 이 페이지는 광고 타이머·스킵·포커스·전체화면 동작을 재구현하지 않습니다.</p>
+        <pre id="observations">[]</pre>
+        <pre id="state">아직 상태를 읽지 않았습니다.</pre>
+      </details>
+      <section id="advertiser-target" tabindex="-1">
+        <h2>QA 광고주 링크 대상</h2>
+        <p>외부 서비스 대신 이 페이지의 로컬 영역을 참조합니다. 첫 광고만 CTA를 가져 다음 이미지로 넘어갈 때 숨겨지는 링크의 포커스를 확인할 수 있습니다.</p>
+      </section>
+    </main>
+    <script type="module">
+      const variant = '__VARIANT__';
+      const videoId = '__VIDEO_ID__';
+      const scheduleUrl = new URL('/demo-media/ux-review-__VARIANT__-20261018.json.js', location.href);
+      const query = new URLSearchParams(location.search);
+      const mode = query.get('mode') === 'native' ? 'native' : 'videojs';
+      const stage = document.querySelector('#stage');
+      const status = document.querySelector('#status');
+      const play = document.querySelector('#play');
+      const observations = document.querySelector('#observations');
+      const state = document.querySelector('#state');
+      const geometry = document.querySelector('#geometry');
+      const records = [];
+      let media;
+      let ads;
+      let controller;
+      let schedule;
+      let sawError = false;
+
+      function record(kind, detail = {}) {
+        records.push({ atMs: Math.round(performance.now()), kind, ...detail });
+        observations.textContent = JSON.stringify(records.slice(-80), null, 2);
+      }
+
+      function adEvent(event) {
+        record('ad-event', {
+          type: event.type,
+          breakId: event.breakId,
+          itemId: event.itemId,
+          adAttemptId: event.adAttemptId,
+          elapsed: event.adElapsedSeconds,
+        });
+        status.textContent = `로컬 관측: ${event.type} · ${event.itemId} · ${event.adElapsedSeconds}초`;
+      }
+
+      function layout() {
+        const rect = stage.getBoundingClientRect();
+        const root = document.documentElement;
+        const body = document.body;
+        const result = {
+          viewport: { width: innerWidth, height: innerHeight },
+          document: { clientWidth: root.clientWidth, scrollWidth: root.scrollWidth, scrollHeight: root.scrollHeight },
+          body: { width: body.getBoundingClientRect().width, height: body.getBoundingClientRect().height, scrollWidth: body.scrollWidth },
+          player: { width: rect.width, height: rect.height, top: rect.top, bottom: rect.bottom },
+          horizontalOverflow: root.scrollWidth > root.clientWidth + 1,
+          fullscreenElement: document.fullscreenElement?.tagName ?? null,
+        };
+        geometry.textContent = `viewport ${innerWidth}×${innerHeight} · player ${rect.width.toFixed(1)}×${rect.height.toFixed(1)} · body H ${result.body.height.toFixed(1)} · scroll W/H ${root.scrollWidth}/${root.scrollHeight} · 가로 넘침 ${result.horizontalOverflow ? '있음' : '없음'}`;
+        return result;
+      }
+
+      function snapshot() {
+        const value = {
+          variant, mode, videoId, language: document.documentElement.lang,
+          scheduleUrl: scheduleUrl.href,
+          tracking: 'raw schedule; native preview:true; no manager API',
+          layout: layout(),
+          media: media ? {
+            paused: media.paused, ended: media.ended, time: media.currentTime,
+            duration: Number.isFinite(media.duration) ? media.duration : null,
+            readyState: media.readyState, networkState: media.networkState,
+            errorCode: media.error?.code ?? null,
+          } : null,
+          observations: records.slice(),
+        };
+        state.textContent = JSON.stringify(value, null, 2);
+        return value;
+      }
+
+      stage.addEventListener('ads-error', (event) => {
+        sawError = true;
+        record('ads-error', { code: event.detail.code, stage: event.detail.stage });
+        status.textContent = `광고 진단: ${event.detail.code} (${event.detail.stage}). ${variant === 'requested' ? '0초 입력 거부 여부를 확인하세요.' : 'Valid fixture에서 발생한 오류입니다.'}`;
+      });
+      stage.addEventListener('ads-event', (event) => adEvent(event.detail));
+      document.querySelector('#snapshot').addEventListener('click', snapshot);
+      document.querySelector('#reload').addEventListener('click', () => location.reload());
+      window.addEventListener('resize', layout);
+      document.addEventListener('fullscreenchange', () => { record('fullscreen', { element: document.fullscreenElement?.tagName ?? null }); layout(); });
+      play.addEventListener('click', () => {
+        record('user-play');
+        void media.play().catch((error) => {
+          record('content-play-rejected', { name: error.name, message: error.message });
+          status.textContent = `본편 재생 거부: ${error.name}`;
+        });
+      });
+
+      window.uxReview = Object.freeze({
+        snapshot,
+        get media() { return media; },
+        get ads() { return ads; },
+        get controller() { return controller; },
+        get schedule() { return schedule; },
+      });
+
+      try {
+        if (mode === 'videojs') await import('/assets/videojs/video.js');
+        const bundleUrl = new URL('/assets/ads.js', location.href);
+        bundleUrl.searchParams.set('ux-review', String(Date.now()));
+        const { createAdsController } = await import(bundleUrl.href);
+        media = document.createElement('video');
+        media.id = 'ux-review-content';
+        media.playsInline = true;
+        media.preload = 'metadata';
+        media.src = new URL('/demo-media/content.mp4', location.href).href;
+        media.addEventListener('error', () => {
+          record('content-error', { code: media.error?.code ?? null });
+          status.textContent = '실제 본편 미디어 오류입니다.';
+        });
+        for (const type of ['loadedmetadata', 'playing', 'pause', 'seeking', 'seeked', 'ended']) {
+          media.addEventListener(type, () => record(`content-${type}`, { time: media.currentTime, paused: media.paused }));
+        }
+
+        if (mode === 'native') {
+          const response = await fetch(scheduleUrl, { cache: 'no-store', credentials: 'omit' });
+          if (!response.ok) throw new Error(`Schedule HTTP ${response.status}`);
+          schedule = await response.json();
+          media.controls = true;
+          stage.append(media);
+          controller = createAdsController({ media, container: stage, schedule, preview: true, ui: { locale: 'ko' }, onEvent: adEvent });
+        } else {
+          const player = document.createElement('video-player');
+          const skin = document.createElement('video-skin');
+          ads = document.createElement('media-ads');
+          ads.lang = 'ko';
+          ads.setAttribute('for', media.id);
+          ads.setAttribute('src', scheduleUrl.href);
+          ads.setAttribute('video-id', videoId);
+          skin.append(media, ads);
+          player.append(skin);
+          stage.append(player);
+        }
+
+        record('fixture-attached', { variant, mode, videoId, bundleUrl: bundleUrl.href });
+        play.disabled = false;
+        if (!sawError) status.textContent = `${mode} · 기본 한국어 · 사용자 Play 또는 기존 플레이어 재생 컨트롤로 시작하세요.`;
+        new ResizeObserver(layout).observe(stage);
+        snapshot();
+      } catch (error) {
+        record('fixture-setup-error', { name: error.name, message: error.message });
+        status.textContent = `fixture 준비 오류: ${error.message}`;
+      }
+
+      window.addEventListener('pagehide', () => controller?.destroy(), { once: true });
+    </script>
+  </body>
+</html>

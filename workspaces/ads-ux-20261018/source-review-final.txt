@@ -1,0 +1,22 @@
+    Search binding|cancel|disconnect|fetch|hold|replacement|stale in element.test.ts
+    Read element.test.ts
+
+• SOURCE READY — 이번 마지막 수정 범위에 잔여 결함을 발견하지 못했습니다.
+
+  • element.ts:179 (packages/extensions/ads/src/html/element.ts:179): cancel/동기화 콜백으로 연결·대상·
+    소스·설정이 바뀌면 현재 update를 종료합니다. 제거된 요소가 #load()로 진행해 추가 fetch·본편 차단 리
+    스너를 만드는 경로가 닫혔습니다.
+
+  • 연결이 유지된 경우에만 microtask에서 재평가하며, 유효성 확인 후 세션 식별자를 갱신합니다.
+  • element.test.ts:213 (packages/extensions/ads/src/html/tests/element.test.ts:213): 제거 후 추가
+    fetch 없음, 본편 play 비간섭을 검사합니다. 대상·소스·설정 교체 회귀도 확인했습니다.
+
+  소스·테스트 코드를 읽은 판정입니다. 테스트·빌드·브라우저 실행이나 CDN 해시 검증은 하지 않았으며, 브라
+  우저·배포 승인을 의미하지 않습니다.
+
+  Worked for 28s • 3:02 PM
+
+
+› Ask Codex to do anything
+
+  GPT-6-Astra xhigh · Context 20% left · ~/works/tools/videojs/video.js · …  ⚠ 5 warnings · f2 to view

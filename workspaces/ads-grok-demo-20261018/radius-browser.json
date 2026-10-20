@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-18T10:30:30.654Z",
+  "values": [
+    {
+      "set": "0px",
+      "actual": "0px",
+      "overflow": "clip",
+      "clipPath": "none",
+      "videoRadius": "0px",
+      "skinValue": "0px"
+    },
+    {
+      "set": "16px",
+      "actual": "16px",
+      "overflow": "clip",
+      "clipPath": "none",
+      "videoRadius": "0px",
+      "skinValue": "16px"
+    }
+  ]
+}

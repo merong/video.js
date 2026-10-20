@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-18T10:35:33.438Z",
+  "taskSpace": 67,
+  "finished": true,
+  "kept": [
+    "p1"
+  ],
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "playerWidth": 366,
+    "notice": ""
+  },
+  "final": {
+    "url": "http://127.0.0.1:18766/examples/grok.html",
+    "title": "Grok Imagine 예제 · 본편 10초",
+    "readyState": 4,
+    "paused": true,
+    "phase": "재생 대기"
+  }
+}

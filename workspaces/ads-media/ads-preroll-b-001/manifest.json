@@ -1,0 +1,40 @@
+{
+  "requestId": "ads-preroll-b-001",
+  "roles": [
+    "preroll"
+  ],
+  "prompt": "Premium product commercial shot of a pair of sleek matte off-white wireless earbuds and their smooth pebble-shaped charging case resting on a slowly rotating round turntable pedestal in a minimal studio. The turntable rotates continuously and smoothly the entire time while the camera slowly orbits and gently pushes in, so motion is constant from start to end. Refined neutral palette: warm grey, soft cream, stone beige, with a deep navy seamless backdrop and soft navy shadows. Soft studio key light with gentle moving specular highlights gliding across the glossy surfaces. Clean, elegant, calm. Completely unbranded product: no text, no logos, no labels, no people, no orange tones.",
+  "brand": "fictional wireless earbuds (unbranded, no text/logos)",
+  "target": {
+    "lengthSec": 12,
+    "allowedRangeSec": [
+      10,
+      15
+    ],
+    "aspect": "16:9",
+    "resolution": "1920x1080",
+    "container": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac"
+  },
+  "path": "workspaces/ads-media/ads-preroll-b-001/video.mp4",
+  "actual": {
+    "durationSec": 12.0,
+    "resolution": "1920x1080",
+    "aspect": "16:9",
+    "fps": 24.0,
+    "videoCodec": "h264 (High, yuv420p, faststart)",
+    "audioCodec": "aac (48000Hz, 2ch) - 160kbps, generated studio ambience (mean -17.4 dB / max -4.3 dB)",
+    "fileSizeBytes": 9365072,
+    "sha256": "293e20d8a53d4647d5e1cfbaec51f7ffbcf5811c9ddfce3de9f15f30b0a2e3f3"
+  },
+  "source": "original (single generated 12s clip, not concatenated; upscaled 1280x720 -> 1920x1080 lanczos, trimmed 12.04s -> 12.00s)",
+  "generator": "Grok Bot GenerateVideo (Grok Imagine), 720p 16:9, 12s",
+  "flags": {
+    "generated": true,
+    "downloaded": true,
+    "playbackChecked": true
+  },
+  "playbackCheck": "ffprobe + decoded-frame check only (NOT browser playback): duration/resolution/codecs verified; frames at 0.5/3.0/6.0/9.0/11.5s inspected; per-second frame-difference ~7-11 (0-255 scale) for every second 1-12, so continuous rotation/motion after 5s; no text/logos/people/orange",
+  "createdAt": "2026-10-18T13:55:20+09:00"
+}

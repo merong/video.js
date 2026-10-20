@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "siteId": "ux-review-local",
+  "videoId": "ux-review-20261018",
+  "boardId": null,
+  "categoryId": null,
+  "scheduleId": "ux-review-requested-20261018",
+  "scheduleVersion": 1,
+  "breaks": [
+    {
+      "breakId": "ux-pre",
+      "position": "pre",
+      "ads": [
+        {
+          "itemId": "ux-pre-video",
+          "adId": "ux-pre-video-creative",
+          "creativeId": "ux-pre-video-creative",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "/demo-media/content.mp4",
+          "mime": "video/mp4",
+          "alt": "QA 실제 36초 영상",
+          "clickUrl": "/demo-media/ux-review-valid-20261018.html#advertiser-target",
+          "skipAfterSeconds": 3
+        },
+        {
+          "itemId": "ux-pre-image",
+          "adId": "ux-pre-image-creative",
+          "creativeId": "ux-pre-image-creative",
+          "creativeVersion": 1,
+          "kind": "image",
+          "url": "/demo-media/ad.png",
+          "mime": "image/png",
+          "alt": "QA 기존 PNG 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": 0,
+          "displaySeconds": 8
+        }
+      ]
+    },
+    {
+      "breakId": "ux-mid-10",
+      "position": "mid",
+      "atSeconds": 10,
+      "ads": [
+        {
+          "itemId": "ux-mid-image",
+          "adId": "ux-mid-image-creative",
+          "creativeId": "ux-mid-image-creative",
+          "creativeVersion": 1,
+          "kind": "image",
+          "url": "/demo-media/ad.png",
+          "mime": "image/png",
+          "alt": "QA 기존 PNG 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": null,
+          "displaySeconds": 3
+        }
+      ]
+    },
+    {
+      "breakId": "ux-post",
+      "position": "post",
+      "ads": [
+        {
+          "itemId": "ux-post-image",
+          "adId": "ux-post-image-creative",
+          "creativeId": "ux-post-image-creative",
+          "creativeVersion": 1,
+          "kind": "image",
+          "url": "/demo-media/ad.png",
+          "mime": "image/png",
+          "alt": "QA 기존 PNG 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": 0,
+          "displaySeconds": 3
+        }
+      ]
+    }
+  ]
+}

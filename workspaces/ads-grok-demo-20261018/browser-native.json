@@ -1,0 +1,148 @@
+{
+  "at": "2026-10-18T10:34:26.761Z",
+  "coffee": {
+    "phase": "광고",
+    "status": "프리롤 · 광고 1/2 진행 중",
+    "notice": "",
+    "ad": {
+      "src": "http://127.0.0.1:18766/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "time": 0.320811,
+      "duration": 6,
+      "width": 1920,
+      "height": 1080
+    },
+    "content": {
+      "time": 0,
+      "duration": 10,
+      "ended": false,
+      "paused": true
+    },
+    "history": [
+      "프리롤 · 광고 1/2 · 시작"
+    ],
+    "requests": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/examples/example.css",
+      "http://127.0.0.1:18766/examples/grok.js",
+      "http://127.0.0.1:18766/assets/admin/preview.js",
+      "http://127.0.0.1:18766/assets/admin/model.js",
+      "http://127.0.0.1:18766/assets/ads.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/schedule.json.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/content-scene-01.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-coffee-6s.mp4"
+    ]
+  },
+  "earbuds": {
+    "phase": "광고",
+    "status": "프리롤 · 광고 2/2 진행 중",
+    "notice": "",
+    "ad": {
+      "src": "http://127.0.0.1:18766/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+      "time": 6.102987,
+      "duration": 12,
+      "width": 1920,
+      "height": 1080
+    },
+    "content": {
+      "time": 0,
+      "duration": 10,
+      "ended": false,
+      "paused": true
+    },
+    "history": [
+      "프리롤 · 광고 1/2 · 시작",
+      "프리롤 · 광고 1/2 · 완료",
+      "프리롤 · 광고 2/2 · 시작"
+    ],
+    "requests": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/examples/example.css",
+      "http://127.0.0.1:18766/examples/grok.js",
+      "http://127.0.0.1:18766/assets/admin/preview.js",
+      "http://127.0.0.1:18766/assets/admin/model.js",
+      "http://127.0.0.1:18766/assets/ads.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/schedule.json.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/content-scene-01.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-earbuds-12s.mp4"
+    ]
+  },
+  "water": {
+    "phase": "광고",
+    "status": "미드롤 · 광고 1/1 진행 중",
+    "notice": "",
+    "ad": {
+      "src": "http://127.0.0.1:18766/demo-media/grok-20261018/ad-water-8s.mp4",
+      "time": 2.044762,
+      "duration": 8,
+      "width": 1920,
+      "height": 1080
+    },
+    "content": {
+      "time": 5.245592,
+      "duration": 10,
+      "ended": false,
+      "paused": true
+    },
+    "history": [
+      "프리롤 · 광고 1/2 · 시작",
+      "프리롤 · 광고 1/2 · 완료",
+      "프리롤 · 광고 2/2 · 시작",
+      "프리롤 · 광고 2/2 · 완료",
+      "본편 복귀",
+      "미드롤 · 광고 1/1 · 시작"
+    ],
+    "requests": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/examples/example.css",
+      "http://127.0.0.1:18766/examples/grok.js",
+      "http://127.0.0.1:18766/assets/admin/preview.js",
+      "http://127.0.0.1:18766/assets/admin/model.js",
+      "http://127.0.0.1:18766/assets/ads.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/schedule.json.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/content-scene-01.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-water-8s.mp4"
+    ]
+  },
+  "final": {
+    "phase": "종료",
+    "status": "포스트롤 · 광고 1/1 완료 · 재생이 끝났습니다.",
+    "notice": "",
+    "ad": null,
+    "content": {
+      "time": 10,
+      "duration": 10,
+      "ended": true,
+      "paused": true
+    },
+    "history": [
+      "프리롤 · 광고 1/2 · 시작",
+      "프리롤 · 광고 1/2 · 완료",
+      "프리롤 · 광고 2/2 · 시작",
+      "프리롤 · 광고 2/2 · 완료",
+      "본편 복귀",
+      "미드롤 · 광고 1/1 · 시작",
+      "미드롤 · 광고 1/1 · 완료",
+      "본편 복귀",
+      "포스트롤 · 광고 1/1 · 시작",
+      "포스트롤 · 광고 1/1 · 완료"
+    ],
+    "requests": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/examples/example.css",
+      "http://127.0.0.1:18766/examples/grok.js",
+      "http://127.0.0.1:18766/assets/admin/preview.js",
+      "http://127.0.0.1:18766/assets/admin/model.js",
+      "http://127.0.0.1:18766/assets/ads.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/schedule.json.js",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/content-scene-01.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/content-scene-01.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-water-8s.mp4",
+      "http://127.0.0.1:18766/demo-media/grok-20261018/ad-coffee-6s.mp4"
+    ]
+  }
+}

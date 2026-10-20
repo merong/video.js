@@ -1,0 +1,15 @@
+{
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390,
+    "dialogWidth": 354,
+    "status": "프리롤 · 광고 1/4 진행 중"
+  },
+  "closed": {
+    "open": false,
+    "focus": "실제 플레이어 미리보기",
+    "mediaSrc": null,
+    "overlay": false,
+    "collectorRequests": 0
+  }
+}

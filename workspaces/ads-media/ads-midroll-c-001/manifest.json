@@ -1,0 +1,37 @@
+{
+  "requestId": "ads-midroll-c-001",
+  "roles": [
+    "midroll",
+    "postroll"
+  ],
+  "prompt": "Slow motion macro commercial shot of an unlabeled clear glass water bottle with crystal clear water, covered in cold condensation. Fresh water droplets slowly slide down the glass and a few droplets splash in super slow motion around the bottle. Gentle slow camera arc. Cool, fresh teal and aqua palette with icy blue-green backlight, soft cyan reflections, clean white highlights, dark teal background. Crisp, refreshing, pure mood. Completely unbranded: no text, no logos, no labels, no people, no warm or orange tones.",
+  "brand": "fictional bottled water (unlabeled glass bottle, no text/logos)",
+  "target": {
+    "lengthSec": 8,
+    "aspect": "16:9",
+    "resolution": "1920x1080",
+    "container": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac"
+  },
+  "path": "workspaces/ads-media/ads-midroll-c-001/video.mp4",
+  "actual": {
+    "durationSec": 8.0,
+    "resolution": "1920x1080",
+    "aspect": "16:9",
+    "fps": 24.0,
+    "videoCodec": "h264 (High, yuv420p, faststart)",
+    "audioCodec": "aac (48000Hz, 2ch) - 160kbps, generated soft water ambience (mean -33.3 dB / max -19.3 dB)",
+    "fileSizeBytes": 10602955,
+    "sha256": "236fa3bdb1365e8437bda241b7d8a78a059ff5e0b2c37da8983b749a287ca872"
+  },
+  "source": "original (single generated 8s clip, not concatenated; upscaled 1280x720 -> 1920x1080 lanczos, trimmed 8.04s -> 8.00s)",
+  "generator": "Grok Bot GenerateVideo (Grok Imagine), 720p 16:9, 8s",
+  "flags": {
+    "generated": true,
+    "downloaded": true,
+    "playbackChecked": true
+  },
+  "playbackCheck": "ffprobe + decoded-frame check only (NOT browser playback): duration/resolution/codecs verified; frames at 0.5/4.0/7.5s inspected; per-second frame-difference ~9-12 throughout (slow-motion droplets + camera arc), not blank/static; teal/cool palette distinct from warm-brown coffee ad A; no text/logos/people/orange",
+  "createdAt": "2026-10-18T13:57:48+09:00"
+}

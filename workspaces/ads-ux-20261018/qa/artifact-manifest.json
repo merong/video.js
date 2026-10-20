@@ -1,0 +1,95 @@
+{
+  "createdAt": "2026-10-18T05:39:28.535962+00:00",
+  "phase": "UX0-QA fixture preparation",
+  "result": "PREPARED; static/HTTP/parser checks PASS; browser NOT_RUN",
+  "originalSkip0": "preserved negative; parser rejection is expected; no zero-second UI pass",
+  "validSkip1": "separately authorized; accepted by built parser",
+  "browserOwner": "root TaskSpace63",
+  "files": [
+    {
+      "path": "workspaces/ads-ux-20261018/qa/README.md",
+      "bytes": 4628,
+      "sha256": "c55920bb60960db9c570070b5d5dad3ea5eec0d65406ee0385dfe86c74285d79"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/fixture.template.html",
+      "bytes": 11613,
+      "sha256": "be7824ce65d0d7e852fe7f5d31d7a4d15c7b93a252fcc817fa364f5910f11373"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/http-parser-evidence.json",
+      "bytes": 1766,
+      "sha256": "219d43aede12f5b9a393fab374f93682f6107272833150c4ede1758514d64558"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/inspect-fixtures.py",
+      "bytes": 4133,
+      "sha256": "76fe109b7d5ab4decac70ce7f7a75fa94835f3bff79343b061c15571de0fe805"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/media-http-evidence.json",
+      "bytes": 7026,
+      "sha256": "bb3aa03566ad3a8e07b22ade9053fd36dfa8527c6f22160635235bafb142aead"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/prepare-fixtures.py",
+      "bytes": 3379,
+      "sha256": "a67c35fbbe51f6a419e343c4ebbb794ecce83fc3f0750e3b751bd5923f1b83aa"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/scenarios.md",
+      "bytes": 6846,
+      "sha256": "78de6e8eab941471140b4913d8ef98703fc59501013e43738ce741614da5b7e8"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/syntax-evidence.json",
+      "bytes": 1014,
+      "sha256": "3c9b3b618fc9b463b909d184336b3efb51dc7ab6b675b040f32ed824309f0cd3"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/ux-review-requested-20261018.html",
+      "bytes": 11796,
+      "sha256": "9f28f30c74564881b1c64f5625275841ea4f41e8f25542eda23d60e2dc2385d5"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/ux-review-requested-20261018.json",
+      "bytes": 2190,
+      "sha256": "dad0462a1f62f61d64a08b6ac0d2d5c2174299574599f387ce8042cf05fbe22b"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/ux-review-valid-20261018.html",
+      "bytes": 11789,
+      "sha256": "fd8e2d4615231c616462547aa6b482d8ef1b053ddfe4589e90a3745149af9e4c"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/ux-review-valid-20261018.json",
+      "bytes": 2192,
+      "sha256": "24989527c6eb9795cdc1f6668cde635a722ff111578b9f6078e634d00b517464"
+    },
+    {
+      "path": "workspaces/ads-ux-20261018/qa/verify-http-parser.mjs",
+      "bytes": 3318,
+      "sha256": "258f3bd3de12dfd6ffc21f35cd0bbf41de0b08204c9446a46fbad5211fa36ae9"
+    },
+    {
+      "path": "integrations/ads-manager/public/demo-media/ux-review-requested-20261018.html",
+      "bytes": 11796,
+      "sha256": "9f28f30c74564881b1c64f5625275841ea4f41e8f25542eda23d60e2dc2385d5"
+    },
+    {
+      "path": "integrations/ads-manager/public/demo-media/ux-review-requested-20261018.json.js",
+      "bytes": 2190,
+      "sha256": "dad0462a1f62f61d64a08b6ac0d2d5c2174299574599f387ce8042cf05fbe22b"
+    },
+    {
+      "path": "integrations/ads-manager/public/demo-media/ux-review-valid-20261018.html",
+      "bytes": 11789,
+      "sha256": "fd8e2d4615231c616462547aa6b482d8ef1b053ddfe4589e90a3745149af9e4c"
+    },
+    {
+      "path": "integrations/ads-manager/public/demo-media/ux-review-valid-20261018.json.js",
+      "bytes": 2192,
+      "sha256": "24989527c6eb9795cdc1f6668cde635a722ff111578b9f6078e634d00b517464"
+    }
+  ]
+}

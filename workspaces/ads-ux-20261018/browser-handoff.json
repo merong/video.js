@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-18T06:04:02.846Z",
+  "taskSpace": 63,
+  "finished": true,
+  "kept": [
+    "p1",
+    "p2"
+  ],
+  "pages": [
+    {
+      "label": "p1",
+      "title": "Video.js · 광고 연동 예제",
+      "url": "http://127.0.0.1:18766/examples/videojs.html?media=mp4&video=qa-playback-mp4-1018"
+    },
+    {
+      "label": "p2",
+      "title": "광고 운영실 · 광고 관리자",
+      "url": "http://127.0.0.1:18766/"
+    }
+  ],
+  "playerState": {
+    "readyState": 4,
+    "paused": true,
+    "hasMediaAds": true
+  },
+  "bundleSha256": "b6a7e8e4734fa37c7064d0869a51bdb9469298052631ed8ae30b90a15b88288c"
+}

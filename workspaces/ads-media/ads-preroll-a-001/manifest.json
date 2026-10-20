@@ -1,0 +1,23 @@
+{
+  "requestId": "ads-preroll-a-001",
+  "roles": ["preroll"],
+  "prompt": "Cinematic macro close-up of a matte cream ceramic coffee cup filled with dark espresso coffee on a deep walnut-brown wooden table. Soft, delicate wisps of white steam rise slowly and curl upward from the cup. Very slow gentle push-in dolly camera movement. Calm, refined, premium mood. Warm neutral palette of deep brown, cream and soft beige, with dark navy blue background fabric and subtle navy shadows. Soft diffused side window light, shallow depth of field, elegant bokeh. No people, no text, no logos, no labels, no orange tones.",
+  "brand": "fictional coffee brand (no real brands, no on-screen text or logos)",
+  "target": { "lengthSec": 6, "aspect": "16:9", "resolution": "1920x1080", "container": "mp4", "videoCodec": "h264", "audioCodec": "aac" },
+  "path": "workspaces/ads-media/ads-preroll-a-001/video.mp4",
+  "actual": {
+    "durationSec": 6.0,
+    "resolution": "1920x1080",
+    "aspect": "16:9",
+    "fps": 24,
+    "videoCodec": "h264 (High, yuv420p, faststart)",
+    "audioCodec": "aac (48kHz, 160kbps; generated ambient audio, mean -35.4 dB / max -16.8 dB)",
+    "fileSizeBytes": 3900834,
+    "sha256": "7d00f760896410f2f73a34169156a4186556241fc9c99598b0864c8ca02c71af"
+  },
+  "source": "original (single generated clip, not concatenated; upscaled 1280x720 -> 1920x1080 lanczos, trimmed 6.04s -> 6.00s)",
+  "generator": "Grok Bot GenerateVideo (Grok Imagine), 720p 16:9, 6s",
+  "flags": { "generated": true, "downloaded": true, "playbackChecked": true },
+  "playbackCheck": "ffprobe verified duration/resolution/codecs; frames at 0.3s/3.0s/5.7s inspected: steam moves, slow push-in, not blank/static, no text/logos/people, no orange",
+  "createdAt": "2026-10-18T13:48:00+09:00"
+}

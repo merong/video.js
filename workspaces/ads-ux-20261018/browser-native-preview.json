@@ -1,0 +1,558 @@
+{
+  "before": {
+    "phase": "paused",
+    "status": "광고 1/2 — 광고 일시정지",
+    "timer": "0:00 / 0:36",
+    "adTime": 0.883726,
+    "adPaused": true,
+    "skipDisabled": true,
+    "skipHidden": false,
+    "skipText": "3초 후 건너뛰기",
+    "focus": {
+      "tag": "BUTTON",
+      "part": "play",
+      "label": "광고 재생 / 일시정지"
+    },
+    "fixture": {
+      "variant": "valid",
+      "mode": "native",
+      "videoId": "ux-review-valid-20261018",
+      "language": "ko",
+      "scheduleUrl": "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "tracking": "raw schedule; native preview:true; no manager API",
+      "layout": {
+        "viewport": {
+          "width": 1686,
+          "height": 973
+        },
+        "document": {
+          "clientWidth": 1686,
+          "scrollWidth": 1686,
+          "scrollHeight": 1193
+        },
+        "body": {
+          "width": 1686,
+          "height": 1193.328125,
+          "scrollWidth": 1686
+        },
+        "player": {
+          "width": 960,
+          "height": 540,
+          "top": 333,
+          "bottom": 873
+        },
+        "horizontalOverflow": false,
+        "fullscreenElement": null
+      },
+      "media": {
+        "paused": true,
+        "ended": false,
+        "time": 0,
+        "duration": 36,
+        "readyState": 4,
+        "networkState": 1,
+        "errorCode": null
+      },
+      "observations": [
+        {
+          "atMs": 28,
+          "kind": "fixture-attached",
+          "variant": "valid",
+          "mode": "native",
+          "videoId": "ux-review-valid-20261018",
+          "bundleUrl": "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562"
+        },
+        {
+          "atMs": 41,
+          "kind": "content-loadedmetadata",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17733,
+          "kind": "user-play"
+        },
+        {
+          "atMs": 17793,
+          "kind": "content-playing",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17794,
+          "kind": "content-pause",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17812,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-video",
+          "adAttemptId": "cef3e384-ae25-4757-a1f1-991fb9351aa7",
+          "elapsed": 0
+        }
+      ]
+    },
+    "resources": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562",
+      "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "http://127.0.0.1:18766/demo-media/content.mp4",
+      "http://127.0.0.1:18766/demo-media/content.mp4"
+    ]
+  },
+  "localized": {
+    "phase": "paused",
+    "status": "Advertisement 1 of 2 — Advertisement paused",
+    "timer": "Elapsed 0:00 / 0:36",
+    "adTime": 0.883726,
+    "adPaused": true,
+    "skipDisabled": true,
+    "skipHidden": false,
+    "skipText": "Skip in 3s",
+    "focus": {
+      "tag": "BUTTON",
+      "part": "play",
+      "label": "Play / pause ad"
+    },
+    "fixture": {
+      "variant": "valid",
+      "mode": "native",
+      "videoId": "ux-review-valid-20261018",
+      "language": "ko",
+      "scheduleUrl": "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "tracking": "raw schedule; native preview:true; no manager API",
+      "layout": {
+        "viewport": {
+          "width": 1686,
+          "height": 973
+        },
+        "document": {
+          "clientWidth": 1686,
+          "scrollWidth": 1686,
+          "scrollHeight": 1193
+        },
+        "body": {
+          "width": 1686,
+          "height": 1193.328125,
+          "scrollWidth": 1686
+        },
+        "player": {
+          "width": 960,
+          "height": 540,
+          "top": 333,
+          "bottom": 873
+        },
+        "horizontalOverflow": false,
+        "fullscreenElement": null
+      },
+      "media": {
+        "paused": true,
+        "ended": false,
+        "time": 0,
+        "duration": 36,
+        "readyState": 4,
+        "networkState": 1,
+        "errorCode": null
+      },
+      "observations": [
+        {
+          "atMs": 28,
+          "kind": "fixture-attached",
+          "variant": "valid",
+          "mode": "native",
+          "videoId": "ux-review-valid-20261018",
+          "bundleUrl": "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562"
+        },
+        {
+          "atMs": 41,
+          "kind": "content-loadedmetadata",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17733,
+          "kind": "user-play"
+        },
+        {
+          "atMs": 17793,
+          "kind": "content-playing",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17794,
+          "kind": "content-pause",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17812,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-video",
+          "adAttemptId": "cef3e384-ae25-4757-a1f1-991fb9351aa7",
+          "elapsed": 0
+        }
+      ]
+    },
+    "resources": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562",
+      "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "http://127.0.0.1:18766/demo-media/content.mp4",
+      "http://127.0.0.1:18766/demo-media/content.mp4"
+    ]
+  },
+  "image": {
+    "phase": "playing",
+    "status": "광고 2/2",
+    "timer": "0:00 / 0:08",
+    "skipDisabled": true,
+    "skipHidden": false,
+    "skipText": "1초 후 건너뛰기",
+    "imageAlt": "광고 이미지 QA 재정의",
+    "focus": {
+      "tag": "BUTTON",
+      "part": "play",
+      "label": "광고 재생 / 일시정지"
+    },
+    "fixture": {
+      "variant": "valid",
+      "mode": "native",
+      "videoId": "ux-review-valid-20261018",
+      "language": "ko",
+      "scheduleUrl": "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "tracking": "raw schedule; native preview:true; no manager API",
+      "layout": {
+        "viewport": {
+          "width": 1686,
+          "height": 973
+        },
+        "document": {
+          "clientWidth": 1686,
+          "scrollWidth": 1686,
+          "scrollHeight": 1193
+        },
+        "body": {
+          "width": 1686,
+          "height": 1193.328125,
+          "scrollWidth": 1686
+        },
+        "player": {
+          "width": 960,
+          "height": 540,
+          "top": 333,
+          "bottom": 873
+        },
+        "horizontalOverflow": false,
+        "fullscreenElement": null
+      },
+      "media": {
+        "paused": true,
+        "ended": false,
+        "time": 0,
+        "duration": 36,
+        "readyState": 4,
+        "networkState": 1,
+        "errorCode": null
+      },
+      "observations": [
+        {
+          "atMs": 28,
+          "kind": "fixture-attached",
+          "variant": "valid",
+          "mode": "native",
+          "videoId": "ux-review-valid-20261018",
+          "bundleUrl": "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562"
+        },
+        {
+          "atMs": 41,
+          "kind": "content-loadedmetadata",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17733,
+          "kind": "user-play"
+        },
+        {
+          "atMs": 17793,
+          "kind": "content-playing",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17794,
+          "kind": "content-pause",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17812,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-video",
+          "adAttemptId": "cef3e384-ae25-4757-a1f1-991fb9351aa7",
+          "elapsed": 0
+        },
+        {
+          "atMs": 22880,
+          "kind": "ad-event",
+          "type": "skip",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-video",
+          "adAttemptId": "cef3e384-ae25-4757-a1f1-991fb9351aa7",
+          "elapsed": 4.002879
+        },
+        {
+          "atMs": 22935,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-image",
+          "adAttemptId": "21bb385a-8577-41bc-9a3b-46fe8b19d8e6",
+          "elapsed": 0
+        }
+      ]
+    },
+    "resources": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562",
+      "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "http://127.0.0.1:18766/demo-media/content.mp4",
+      "http://127.0.0.1:18766/demo-media/content.mp4",
+      "http://127.0.0.1:18766/demo-media/ad.png"
+    ]
+  },
+  "ended": {
+    "focus": {
+      "tag": "BODY",
+      "part": null,
+      "label": null
+    },
+    "fixture": {
+      "variant": "valid",
+      "mode": "native",
+      "videoId": "ux-review-valid-20261018",
+      "language": "ko",
+      "scheduleUrl": "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "tracking": "raw schedule; native preview:true; no manager API",
+      "layout": {
+        "viewport": {
+          "width": 1686,
+          "height": 973
+        },
+        "document": {
+          "clientWidth": 1686,
+          "scrollWidth": 1686,
+          "scrollHeight": 1193
+        },
+        "body": {
+          "width": 1686,
+          "height": 1193.328125,
+          "scrollWidth": 1686
+        },
+        "player": {
+          "width": 960,
+          "height": 540,
+          "top": 333,
+          "bottom": 873
+        },
+        "horizontalOverflow": false,
+        "fullscreenElement": null
+      },
+      "media": {
+        "paused": true,
+        "ended": true,
+        "time": 36,
+        "duration": 36,
+        "readyState": 4,
+        "networkState": 1,
+        "errorCode": null
+      },
+      "observations": [
+        {
+          "atMs": 28,
+          "kind": "fixture-attached",
+          "variant": "valid",
+          "mode": "native",
+          "videoId": "ux-review-valid-20261018",
+          "bundleUrl": "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562"
+        },
+        {
+          "atMs": 41,
+          "kind": "content-loadedmetadata",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17733,
+          "kind": "user-play"
+        },
+        {
+          "atMs": 17793,
+          "kind": "content-playing",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17794,
+          "kind": "content-pause",
+          "time": 0,
+          "paused": true
+        },
+        {
+          "atMs": 17812,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-video",
+          "adAttemptId": "cef3e384-ae25-4757-a1f1-991fb9351aa7",
+          "elapsed": 0
+        },
+        {
+          "atMs": 22880,
+          "kind": "ad-event",
+          "type": "skip",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-video",
+          "adAttemptId": "cef3e384-ae25-4757-a1f1-991fb9351aa7",
+          "elapsed": 4.002879
+        },
+        {
+          "atMs": 22935,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-image",
+          "adAttemptId": "21bb385a-8577-41bc-9a3b-46fe8b19d8e6",
+          "elapsed": 0
+        },
+        {
+          "atMs": 24960,
+          "kind": "ad-event",
+          "type": "skip",
+          "breakId": "ux-pre",
+          "itemId": "ux-pre-image",
+          "adAttemptId": "21bb385a-8577-41bc-9a3b-46fe8b19d8e6",
+          "elapsed": 1.9978000000715255
+        },
+        {
+          "atMs": 25014,
+          "kind": "content-playing",
+          "time": 0.052347,
+          "paused": false
+        },
+        {
+          "atMs": 25020,
+          "kind": "content-seeking",
+          "time": 15,
+          "paused": false
+        },
+        {
+          "atMs": 25072,
+          "kind": "content-seeked",
+          "time": 15.000195,
+          "paused": false
+        },
+        {
+          "atMs": 25073,
+          "kind": "content-playing",
+          "time": 15.000427,
+          "paused": true
+        },
+        {
+          "atMs": 25073,
+          "kind": "content-pause",
+          "time": 15.000427,
+          "paused": true
+        },
+        {
+          "atMs": 25073,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-mid-10",
+          "itemId": "ux-mid-image",
+          "adAttemptId": "a8f62a8f-c616-41df-b80b-c85b70232d66",
+          "elapsed": 0
+        },
+        {
+          "atMs": 28075,
+          "kind": "ad-event",
+          "type": "complete",
+          "breakId": "ux-mid-10",
+          "itemId": "ux-mid-image",
+          "adAttemptId": "a8f62a8f-c616-41df-b80b-c85b70232d66",
+          "elapsed": 3
+        },
+        {
+          "atMs": 28076,
+          "kind": "content-playing",
+          "time": 15.001469,
+          "paused": false
+        },
+        {
+          "atMs": 28133,
+          "kind": "content-seeking",
+          "time": 35.5,
+          "paused": false
+        },
+        {
+          "atMs": 28200,
+          "kind": "content-seeked",
+          "time": 35.500143,
+          "paused": false
+        },
+        {
+          "atMs": 28200,
+          "kind": "content-playing",
+          "time": 35.500309,
+          "paused": false
+        },
+        {
+          "atMs": 28711,
+          "kind": "content-pause",
+          "time": 36,
+          "paused": true
+        },
+        {
+          "atMs": 28712,
+          "kind": "content-ended",
+          "time": 36,
+          "paused": true
+        },
+        {
+          "atMs": 28712,
+          "kind": "ad-event",
+          "type": "start",
+          "breakId": "ux-post",
+          "itemId": "ux-post-image",
+          "adAttemptId": "e0a9d5a6-92a0-45fa-aeff-021a4e8ae3ea",
+          "elapsed": 0
+        },
+        {
+          "atMs": 30245,
+          "kind": "ad-event",
+          "type": "skip",
+          "breakId": "ux-post",
+          "itemId": "ux-post-image",
+          "adAttemptId": "e0a9d5a6-92a0-45fa-aeff-021a4e8ae3ea",
+          "elapsed": 1.5009000000953674
+        }
+      ]
+    },
+    "resources": [
+      "http://127.0.0.1:18766/assets/videojs/video.css",
+      "http://127.0.0.1:18766/assets/ads.js?ux-review=1792302721562",
+      "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+      "http://127.0.0.1:18766/demo-media/content.mp4",
+      "http://127.0.0.1:18766/demo-media/content.mp4",
+      "http://127.0.0.1:18766/demo-media/ad.png"
+    ]
+  }
+}

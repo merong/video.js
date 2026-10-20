@@ -1,0 +1,128 @@
+{
+  "at": "2026-10-18T10:29:56.350902+00:00",
+  "agent": "grok",
+  "herdrSession": "tools",
+  "sourceManifests": "workspaces/ads-media/<requestId>/manifest.json",
+  "files": [
+    {
+      "requestId": "ads-content-001",
+      "source": "workspaces/ads-media/ads-content-001/segment-01.mp4",
+      "served": "integrations/ads-manager/public/demo-media/grok-20261018/content-scene-01.mp4",
+      "url": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "sha256": "15810e0655842ac188cc1aaeeb345f3dc127b64160ff73a8e4f2141f85ed67e3",
+      "bytes": 12243780,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "requestId": "ads-preroll-a-001",
+      "source": "workspaces/ads-media/ads-preroll-a-001/video.mp4",
+      "served": "integrations/ads-manager/public/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "sha256": "7d00f760896410f2f73a34169156a4186556241fc9c99598b0864c8ca02c71af",
+      "bytes": 3900834,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "6.000000"
+        }
+      }
+    },
+    {
+      "requestId": "ads-preroll-b-001",
+      "source": "workspaces/ads-media/ads-preroll-b-001/video.mp4",
+      "served": "integrations/ads-manager/public/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+      "url": "/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+      "sha256": "293e20d8a53d4647d5e1cfbaec51f7ffbcf5811c9ddfce3de9f15f30b0a2e3f3",
+      "bytes": 9365072,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "12.000000"
+        }
+      }
+    },
+    {
+      "requestId": "ads-midroll-c-001",
+      "source": "workspaces/ads-media/ads-midroll-c-001/video.mp4",
+      "served": "integrations/ads-manager/public/demo-media/grok-20261018/ad-water-8s.mp4",
+      "url": "/demo-media/grok-20261018/ad-water-8s.mp4",
+      "sha256": "236fa3bdb1365e8437bda241b7d8a78a059ff5e0b2c37da8983b749a287ca872",
+      "bytes": 10602955,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    }
+  ],
+  "scheduleSha256": "254bbe42f13962e56a92808ccb2a7fe3a781043eb70bf60f44838a08aff1a023",
+  "contentScope": "One independent 10s scene, not the full 80s series; no concatenation performed",
+  "generatedBy": "Grok Imagine per Grok delivery manifest; no new generation in this step",
+  "browserValidation": "pending"
+}

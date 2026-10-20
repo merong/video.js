@@ -1,0 +1,33 @@
+{
+  "observedAt": "2026-10-18T05:39:02.048538+00:00",
+  "checks": [
+    {
+      "file": "workspaces/ads-ux-20261018/qa/ux-review-requested-20261018.html",
+      "check": "inline ESM syntax only",
+      "status": "PASS",
+      "sha256": "9f28f30c74564881b1c64f5625275841ea4f41e8f25542eda23d60e2dc2385d5"
+    },
+    {
+      "file": "workspaces/ads-ux-20261018/qa/ux-review-valid-20261018.html",
+      "check": "inline ESM syntax only",
+      "status": "PASS",
+      "sha256": "fd8e2d4615231c616462547aa6b482d8ef1b053ddfe4589e90a3745149af9e4c"
+    },
+    {
+      "file": "workspaces/ads-ux-20261018/qa/prepare-fixtures.py",
+      "check": "Python AST syntax only",
+      "status": "PASS"
+    },
+    {
+      "file": "workspaces/ads-ux-20261018/qa/inspect-fixtures.py",
+      "check": "Python AST syntax only",
+      "status": "PASS"
+    },
+    {
+      "file": "workspaces/ads-ux-20261018/qa/verify-http-parser.mjs",
+      "check": "Node ESM syntax only",
+      "status": "PASS"
+    }
+  ],
+  "browserExecuted": false
+}

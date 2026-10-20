@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-18T06:03:32.389Z",
+  "servedStatus": 200,
+  "sha256": "b6a7e8e4734fa37c7064d0869a51bdb9469298052631ed8ae30b90a15b88288c",
+  "bytes": 79134,
+  "cases": [
+    {
+      "variant": "valid",
+      "accepted": true
+    },
+    {
+      "variant": "requested",
+      "accepted": false,
+      "issues": [
+        {
+          "code": "invalid_schedule",
+          "path": "breaks[0].ads[1].skipAfterSeconds",
+          "message": "Expected a finite positive number."
+        }
+      ]
+    }
+  ]
+}

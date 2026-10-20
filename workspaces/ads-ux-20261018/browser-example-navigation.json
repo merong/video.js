@@ -1,0 +1,47 @@
+{
+  "before": {
+    "url": "http://127.0.0.1:18766/examples/videojs.html?media=mp4&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4",
+    "status": "재생 버튼을 눌러 본편과 광고를 확인하세요.",
+    "links": [
+      {
+        "text": "Video.js",
+        "href": "http://127.0.0.1:18766/examples/videojs.html?media=mp4&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4"
+      },
+      {
+        "text": "기본 video",
+        "href": "http://127.0.0.1:18766/examples/player.html?media=mp4&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4"
+      },
+      {
+        "text": "MP4",
+        "href": "http://127.0.0.1:18766/examples/videojs.html?media=mp4&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4"
+      },
+      {
+        "text": "HLS",
+        "href": "http://127.0.0.1:18766/examples/videojs.html?media=hls&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4"
+      },
+      {
+        "text": "SPF",
+        "href": "http://127.0.0.1:18766/examples/videojs.html?media=hls&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4"
+      },
+      {
+        "text": "hls.js",
+        "href": "http://127.0.0.1:18766/examples/videojs.html?media=hls&video=qa-playback-mp4-1018&engine=hlsjs&content=%2Fdemo-media%2Fcontent.mp4"
+      }
+    ]
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "native": {
+    "url": "http://127.0.0.1:18766/examples/player.html?media=mp4&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4",
+    "status": "재생 버튼을 눌러 본편과 광고를 확인하세요.",
+    "src": "http://127.0.0.1:18766/demo-media/content.mp4"
+  },
+  "restored": {
+    "url": "http://127.0.0.1:18766/examples/videojs.html?media=mp4&video=qa-playback-mp4-1018&engine=spf&content=%2Fdemo-media%2Fcontent.mp4",
+    "status": "재생 버튼을 눌러 본편과 광고를 확인하세요.",
+    "nav": "reload",
+    "mediaReady": 4
+  }
+}

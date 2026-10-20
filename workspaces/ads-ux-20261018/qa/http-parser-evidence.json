@@ -1,0 +1,52 @@
+{
+  "observedAt": "2026-10-18T05:37:04.818Z",
+  "layer": "actual HTTP fetch().json() plus built pure parser; no browser",
+  "parserPath": "/Users/brian/works/tools/videojs/video.js/packages/extensions/ads/dist/default/core/playback.js",
+  "parserSha256": "18547debe9b63ef23e75fabbc4e59113b537f8d1118ce4693c03ac9b91a0f5f2",
+  "servedBundleSha256": "10812294dc033576dc3c03c5015b1200e7b5e16d691f21f62cf55a4b93373e08",
+  "servedBundleBytes": 59843,
+  "cases": [
+    {
+      "id": "requested-fetch-json-parser",
+      "status": "PASS",
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "videoId": "ux-review-20261018",
+      "expectedParserAccepted": false,
+      "actualParserAccepted": false,
+      "issues": [
+        {
+          "code": "invalid_schedule",
+          "path": "breaks[0].ads[1].skipAfterSeconds",
+          "message": "Expected a finite positive number."
+        }
+      ],
+      "meaning": "negative input rejected; not zero-second-skip success"
+    },
+    {
+      "id": "valid-fetch-json-parser",
+      "status": "PASS",
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "videoId": "ux-review-valid-20261018",
+      "expectedParserAccepted": true,
+      "actualParserAccepted": true,
+      "issues": [],
+      "meaning": "valid data accepted; not browser playback proof"
+    },
+    {
+      "id": "isolated-post0-negative",
+      "status": "PASS",
+      "actualParserAccepted": false,
+      "issues": [
+        {
+          "code": "invalid_schedule",
+          "path": "breaks[2].ads[0].skipAfterSeconds",
+          "message": "Expected a finite positive number."
+        }
+      ]
+    }
+  ],
+  "browserStatus": "NOT_RUN",
+  "rawZeroSkipUiStatus": "BLOCKED_BY_C0; negative rejection expected"
+}

@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-18T05:41:38.117439+00:00",
+  "source": "packages/extensions/ads/dist/cdn/ads.js",
+  "served": "integrations/ads-manager/public/assets/ads.js",
+  "previousSha256": "10812294dc033576dc3c03c5015b1200e7b5e16d691f21f62cf55a4b93373e08",
+  "sha256": "4ddf47d6c72afa4e444e166726a806d518ae6ea120c6e2a73f25c651bced85fe",
+  "bytes": 77732
+}

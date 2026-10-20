@@ -1,0 +1,158 @@
+{
+  "requestId": "ads-content-001",
+  "roles": [
+    "content"
+  ],
+  "prompt": "8 scenes, shared style: 'Blue hour cinematic travel film ... deep cobalt and indigo sky, cool blue-hour color grade, gentle film grain, serene mood. No text, no logos, no recognizable landmarks, no people.'; per-scene subjects listed in segments[].scene.",
+  "brand": null,
+  "target": {
+    "lengthSec": 75,
+    "allowedRangeSec": [
+      60,
+      90
+    ],
+    "aspect": "16:9",
+    "resolution": "1920x1080",
+    "container": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "delivery": "segment series (rule: videos 30s+ must not be concatenated)"
+  },
+  "path": "workspaces/ads-media/ads-content-001/segment-01.mp4 ... segment-08.mp4",
+  "delivery": "segments",
+  "joinNote": "consumer joins segments; not pre-concatenated",
+  "segmentLengthSec": 10,
+  "segmentCount": 8,
+  "totalDurationSec": 80.0,
+  "segments": [
+    {
+      "order": 1,
+      "file": "segment-01.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-01.mp4",
+      "scene": "aerial glide over fictional coastal city skyline at blue hour",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 12243780,
+      "sha256": "15810e0655842ac188cc1aaeeb345f3dc127b64160ff73a8e4f2141f85ed67e3",
+      "generatedSource": "single original 10s Grok Imagine clip s01 (not concatenated)"
+    },
+    {
+      "order": 2,
+      "file": "segment-02.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-02.mp4",
+      "scene": "seaside promenade with lamp posts and waves",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 11561008,
+      "sha256": "aa733d53a9453610da8bba36c993865f1586c49cf3cfb42fbbc3b2d3b89efacd",
+      "generatedSource": "single original 10s Grok Imagine clip s02 (not concatenated)"
+    },
+    {
+      "order": 3,
+      "file": "segment-03.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-03.mp4",
+      "scene": "rocky coastal cliffs, slow-motion waves, distant lighthouse",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 11335058,
+      "sha256": "881fbf121abb43b7ba2982e3a3e143ef6314495e2dcfe6827ade1b813b7fee8e",
+      "generatedSource": "single original 10s Grok Imagine clip s03 (not concatenated)"
+    },
+    {
+      "order": 4,
+      "file": "segment-04.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-04.mp4",
+      "scene": "old-town cobblestone street with glowing windows",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 22952148,
+      "sha256": "f5a7d2ac28a65a480d434bd1542d856712589c014e507cbb0d55f4d713079bd3",
+      "generatedSource": "single original 10s Grok Imagine clip s04 (not concatenated)"
+    },
+    {
+      "order": 5,
+      "file": "segment-05.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-05.mp4",
+      "scene": "river bridge with car light trails and reflections",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 16176316,
+      "sha256": "7fa0f2771c1bdf0a22cc9fad237b45953577554eb61a006d5c8ea6a126fa540f",
+      "generatedSource": "single original 10s Grok Imagine clip s05 (not concatenated)"
+    },
+    {
+      "order": 6,
+      "file": "segment-06.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-06.mp4",
+      "scene": "harbor marina with sailboats and dock lights",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 12234844,
+      "sha256": "4d6373f153bc185bcd6a7edf15345f2f734056496d2fc38dc82b37c65a496f4a",
+      "generatedSource": "single original 10s Grok Imagine clip s06 (not concatenated)"
+    },
+    {
+      "order": 7,
+      "file": "segment-07.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-07.mp4",
+      "scene": "aerial follow of winding coastal highway along cliffs",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 14255493,
+      "sha256": "4cc58612bc52885423bb497c27f063791f11a89c8df5c86fa9fd4c5b10976eb7",
+      "generatedSource": "single original 10s Grok Imagine clip s07 (not concatenated)"
+    },
+    {
+      "order": 8,
+      "file": "segment-08.mp4",
+      "path": "workspaces/ads-media/ads-content-001/segment-08.mp4",
+      "scene": "calm beach with slow-motion waves, distant skyline (closing)",
+      "durationSec": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24.0,
+      "videoCodec": "h264 (High, yuv420p, level 40, GOP 48, faststart)",
+      "audioCodec": "aac (48000Hz, 2ch, 160kbps)",
+      "fileSizeBytes": 7339496,
+      "sha256": "34f80962256449f7b38f155434dbc5658548fbc7671b2131e93e3eb5efa06d18",
+      "generatedSource": "single original 10s Grok Imagine clip s08 (not concatenated)"
+    }
+  ],
+  "actual": {
+    "totalDurationSec": 80.0,
+    "resolution": "1920x1080",
+    "aspect": "16:9",
+    "fps": 24,
+    "videoCodec": "h264 (High, yuv420p, level 4.0, GOP 48, faststart) - identical params for all segments",
+    "audioCodec": "aac 48kHz stereo 160kbps - identical params; each segment loudnorm I=-28 LUFS (measured mean -28.5..-30.0 dB), 50ms audio fade in/out at segment edges to avoid clicks at joins"
+  },
+  "source": "segments (each segment = one original generated clip; NOT pre-concatenated; consumer joins). Upscaled 1280x720 -> 1920x1080 lanczos, trimmed 10.04s -> 10.00s each.",
+  "generator": "Grok Bot GenerateVideo (Grok Imagine), 720p 16:9, 10s x 8",
+  "flags": {
+    "generated": true,
+    "downloaded": true,
+    "playbackChecked": true
+  },
+  "playbackCheck": "ffprobe + decoded-frame check only (NOT browser playback): each segment 10.000s 1920x1080 24fps h264/aac verified; frames at 0.5/5.0/9.5s of every segment inspected (consistent blue-hour palette, no text/logos/people, no orange); per-second frame-difference >0 throughout every segment (2.1-16.2); concat-demuxer stream-copy join test on box succeeded (80.02s) but no joined file was delivered",
+  "createdAt": "2026-10-18T14:09:30+09:00"
+}

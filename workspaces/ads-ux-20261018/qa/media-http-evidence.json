@@ -1,0 +1,238 @@
+{
+  "observedAt": "2026-10-18T05:37:04.407083+00:00",
+  "scope": "file/ffprobe/read-only HTTP; no browser, server mutation, DB or collector access",
+  "media": [
+    {
+      "path": "integrations/ads-manager/public/demo-media/content.mp4",
+      "bytes": 2967928,
+      "sha256": "ed677b69743a0746f7971fac8ff17c814faa2c5a65fc1c899b159548fa32c1d5",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 640,
+            "height": 360,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "12/1",
+            "duration": "36.000000"
+          }
+        ],
+        "format": {
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "duration": "36.000000",
+          "size": "2967928"
+        }
+      },
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/content.mp4",
+        "status": 200,
+        "headers": {
+          "Content-Type": "video/mp4",
+          "Content-Length": "2967928",
+          "Accept-Ranges": "bytes"
+        },
+        "bytes": 2967928,
+        "sha256": "ed677b69743a0746f7971fac8ff17c814faa2c5a65fc1c899b159548fa32c1d5"
+      },
+      "httpMatchesLocal": true,
+      "used": true
+    },
+    {
+      "path": "integrations/ads-manager/public/demo-media/ad.mp4",
+      "bytes": 103748,
+      "sha256": "c1cf9d57c2afecbfa2a72e0052b26d9ff7e2c4813c9e31e8dd99ad5ee2af5626",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 320,
+            "height": 180,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "12/1",
+            "duration": "3.000000"
+          }
+        ],
+        "format": {
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "duration": "3.000000",
+          "size": "103748"
+        }
+      },
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/ad.mp4",
+        "status": 200,
+        "headers": {
+          "Content-Type": "video/mp4",
+          "Content-Length": "103748",
+          "Accept-Ranges": "bytes"
+        },
+        "bytes": 103748,
+        "sha256": "c1cf9d57c2afecbfa2a72e0052b26d9ff7e2c4813c9e31e8dd99ad5ee2af5626"
+      },
+      "httpMatchesLocal": true,
+      "used": false
+    },
+    {
+      "path": "integrations/ads-manager/public/demo-media/ad.png",
+      "bytes": 1054,
+      "sha256": "522350d755b60b16172ba90627cd291f6becca8c2bba4be719cea34d9a38a7e1",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "png",
+            "codec_type": "video",
+            "width": 480,
+            "height": 270,
+            "pix_fmt": "rgb24",
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "format_name": "png_pipe",
+          "size": "1054"
+        }
+      },
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/ad.png",
+        "status": 200,
+        "headers": {
+          "Content-Type": "image/png",
+          "Content-Length": "1054"
+        },
+        "bytes": 1054,
+        "sha256": "522350d755b60b16172ba90627cd291f6becca8c2bba4be719cea34d9a38a7e1"
+      },
+      "httpMatchesLocal": true,
+      "used": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/ads.js",
+      "http": {
+        "url": "http://127.0.0.1:18766/assets/ads.js",
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/javascript",
+          "Content-Length": "59843"
+        },
+        "bytes": 59843,
+        "sha256": "10812294dc033576dc3c03c5015b1200e7b5e16d691f21f62cf55a4b93373e08"
+      },
+      "httpMatchesLocal": true
+    },
+    {
+      "path": "assets/videojs/video.js",
+      "http": {
+        "url": "http://127.0.0.1:18766/assets/videojs/video.js",
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/javascript",
+          "Content-Length": "107267"
+        },
+        "bytes": 107267,
+        "sha256": "df91903144b8d97690b2563bcf86311d4f6978cae61e3fd8272dfb22b03e15de"
+      },
+      "httpMatchesLocal": true
+    },
+    {
+      "path": "assets/videojs/video.css",
+      "http": {
+        "url": "http://127.0.0.1:18766/assets/videojs/video.css",
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/css; charset=UTF-8",
+          "Content-Length": "84230"
+        },
+        "bytes": 84230,
+        "sha256": "c22076384bd2740e8a0fd517017e64f79cc458993c549fe9506b7135d731fbfb"
+      },
+      "httpMatchesLocal": true
+    }
+  ],
+  "fixtures": [
+    {
+      "variant": "requested",
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/ux-review-requested-20261018.html",
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/html; charset=UTF-8",
+          "Content-Length": "11796"
+        },
+        "bytes": 11796,
+        "sha256": "9f28f30c74564881b1c64f5625275841ea4f41e8f25542eda23d60e2dc2385d5"
+      },
+      "httpMatchesLocal": true
+    },
+    {
+      "variant": "requested",
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/ux-review-requested-20261018.json.js",
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/javascript",
+          "Content-Length": "2190"
+        },
+        "bytes": 2190,
+        "sha256": "dad0462a1f62f61d64a08b6ac0d2d5c2174299574599f387ce8042cf05fbe22b"
+      },
+      "httpMatchesLocal": true,
+      "rawJson": true,
+      "videoId": "ux-review-20261018",
+      "trackingKeys": false
+    },
+    {
+      "variant": "valid",
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.html",
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/html; charset=UTF-8",
+          "Content-Length": "11789"
+        },
+        "bytes": 11789,
+        "sha256": "fd8e2d4615231c616462547aa6b482d8ef1b053ddfe4589e90a3745149af9e4c"
+      },
+      "httpMatchesLocal": true
+    },
+    {
+      "variant": "valid",
+      "http": {
+        "url": "http://127.0.0.1:18766/demo-media/ux-review-valid-20261018.json.js",
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/javascript",
+          "Content-Length": "2192"
+        },
+        "bytes": 2192,
+        "sha256": "24989527c6eb9795cdc1f6668cde635a722ff111578b9f6078e634d00b517464"
+      },
+      "httpMatchesLocal": true,
+      "rawJson": true,
+      "videoId": "ux-review-valid-20261018",
+      "trackingKeys": false
+    }
+  ],
+  "contentRange": {
+    "url": "http://127.0.0.1:18766/demo-media/content.mp4",
+    "status": 206,
+    "headers": {
+      "Content-Type": "video/mp4",
+      "Content-Length": "1024",
+      "Content-Range": "bytes 0-1023/2967928",
+      "Accept-Ranges": "bytes"
+    },
+    "bytes": 1024,
+    "sha256": "d1e8ca2b30d4ebaceb3ddb0632a5ee28a4559332aeb89d494f7c59df15068f63"
+  },
+  "browserStatus": "NOT_RUN; root owns TaskSpace63"
+}

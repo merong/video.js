@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-18T10:30:13.956Z",
+  "files": [
+    {
+      "url": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "http": 200,
+      "sha256": "15810e0655842ac188cc1aaeeb345f3dc127b64160ff73a8e4f2141f85ed67e3",
+      "rangeStatus": 206,
+      "contentRange": "bytes 0-99/12243780"
+    },
+    {
+      "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "http": 200,
+      "sha256": "7d00f760896410f2f73a34169156a4186556241fc9c99598b0864c8ca02c71af",
+      "rangeStatus": 206,
+      "contentRange": "bytes 0-99/3900834"
+    },
+    {
+      "url": "/demo-media/grok-20261018/ad-earbuds-12s.mp4",
+      "http": 200,
+      "sha256": "293e20d8a53d4647d5e1cfbaec51f7ffbcf5811c9ddfce3de9f15f30b0a2e3f3",
+      "rangeStatus": 206,
+      "contentRange": "bytes 0-99/9365072"
+    },
+    {
+      "url": "/demo-media/grok-20261018/ad-water-8s.mp4",
+      "http": 200,
+      "sha256": "236fa3bdb1365e8437bda241b7d8a78a059ff5e0b2c37da8983b749a287ca872",
+      "rangeStatus": 206,
+      "contentRange": "bytes 0-99/10602955"
+    }
+  ],
+  "rawSchedule": {
+    "status": 200,
+    "parserAccepted": true,
+    "tracking": false
+  }
+}
