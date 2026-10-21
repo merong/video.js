@@ -1,0 +1,57 @@
+<!-- @dsCard group="입력" height=90 subtitle="켜짐, 꺼짐, 바꿀 수 없음" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Toggle</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <div class="sa-row" style="gap: 24px">
+        <span class="sa-row"
+          ><button class="sa-toggle" type="button" role="switch" aria-checked="true" aria-labelledby="t1"></button
+          ><span class="sa-body" id="t1">프리롤 보장</span></span
+        >
+        <span class="sa-row"
+          ><button class="sa-toggle" type="button" role="switch" aria-checked="false" aria-labelledby="t2"></button
+          ><span class="sa-body" id="t2">미드롤 보장</span></span
+        >
+        <span class="sa-row"
+          ><button
+            class="sa-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="t3"
+            disabled
+          ></button
+          ><span class="sa-body" id="t3">추석 프리롤 <span class="sa-small">미달 종료</span></span></span
+        >
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-toggle').forEach(function (t) {
+        t.addEventListener('click', function () {
+          if (!t.disabled) t.setAttribute('aria-checked', String(t.getAttribute('aria-checked') !== 'true'));
+        });
+      });
+      document.querySelectorAll('.sa-chips').forEach(function (g) {
+        var multi = g.hasAttribute('data-multi');
+        g.querySelectorAll('.sa-chip').forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (multi) {
+              b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+              return;
+            }
+            g.querySelectorAll('.sa-chip').forEach(function (o) {
+              o.setAttribute('aria-pressed', String(o === b));
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

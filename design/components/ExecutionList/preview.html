@@ -1,0 +1,288 @@
+<!-- @dsCard group="화면 예시" height=640 width=1320 page subtitle="캠페인 상세 · 밀집 표와 기본 패널" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>집행 목록</title>
+  </head>
+  <body>
+    <div class="sa-app">
+      <header class="sa-top">
+        <span class="sa-logo">솔애드 <em>관리자</em></span>
+        <nav class="sa-nav" aria-label="주 메뉴">
+          <a href="#">대시보드</a><a href="#" aria-current="page">캠페인</a><a href="#">소재</a><a href="#">지면 편성</a
+          ><a href="#">승인함<b>8</b></a
+          ><a href="#">리포트</a><a href="#">설정</a>
+        </nav>
+        <div class="sa-top-r"><span class="sa-avatar" aria-label="김운영 · 승인자">김</span></div>
+      </header>
+      <main class="sa-main">
+        <div class="sa-phead">
+          <div>
+            <p class="sa-small">캠페인 › 한빛투어</p>
+            <div class="sa-row">
+              <h1 class="sa-page-title">2026 가을 여행</h1>
+              <span class="sa-badge" data-st="active">진행</span>
+            </div>
+            <p class="sa-small">10.01 – 11.30 · 집행 5 · 소재 3</p>
+          </div>
+          <div class="sa-row">
+            <button class="sa-btn" type="button">리포트</button
+            ><button class="sa-btn is-lime" type="button">
+              <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" /></svg>집행 만들기
+            </button>
+          </div>
+        </div>
+        <div class="sa-split">
+          <div class="sa-card is-flush sa-dense">
+            <div class="sa-toolbar">
+              <div class="sa-chips" role="group" aria-label="상태 필터">
+                <button class="sa-chip" type="button" aria-pressed="true">전체<b>5</b></button
+                ><button class="sa-chip" type="button" aria-pressed="false">진행<b>3</b></button
+                ><button class="sa-chip" type="button" aria-pressed="false">일시중지<b>1</b></button
+                ><button class="sa-chip" type="button" aria-pressed="false">종료<b>1</b></button>
+              </div>
+              <span class="sa-spacer"></span
+              ><span class="sa-search" style="width: 180px"
+                ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                  <circle cx="7" cy="7" r="4.5" />
+                  <path d="M10.5 10.5L14 14" /></svg
+                >집행 검색</span
+              >
+            </div>
+            <div class="sa-scroll">
+              <table class="sa-table" aria-label="집행 목록">
+                <thead>
+                  <tr>
+                    <th scope="col">켜기</th>
+                    <th scope="col">집행</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">등급</th>
+                    <th scope="col">기간</th>
+                    <th scope="col">진도</th>
+                    <th scope="col" class="num">노출</th>
+                    <th scope="col" class="num">완료율</th>
+                    <th scope="col" class="num">클릭률</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="is-selected">
+                    <td>
+                      <button
+                        class="sa-toggle"
+                        type="button"
+                        role="switch"
+                        aria-checked="true"
+                        aria-label="프리롤 보장 · 가을 여행 켜기"
+                      ></button>
+                    </td>
+                    <td>
+                      <div class="sa-name">
+                        <b>프리롤 보장 · 가을 여행</b><small>L-2041 · 수정본 r4 승인 대기</small>
+                      </div>
+                    </td>
+                    <td><span class="sa-badge" data-st="active">진행</span></td>
+                    <td><span class="sa-tag is-guaranteed">보장</span></td>
+                    <td class="sa-num">10.10 – 11.10</td>
+                    <td>
+                      <div class="sa-progress">
+                        <div
+                          class="sa-bar"
+                          style="--v: 34.1; --e: 33.2"
+                          role="img"
+                          aria-label="진도 34.1% · 기대 33.2%"
+                        >
+                          <i></i><b></b>
+                        </div>
+                        <span class="sa-small">34.1% · 기대 33.2%</span>
+                      </div>
+                    </td>
+                    <td class="num">102,300</td>
+                    <td class="num">72.4%</td>
+                    <td class="num">2.21%</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button
+                        class="sa-toggle"
+                        type="button"
+                        role="switch"
+                        aria-checked="true"
+                        aria-label="여행 게시판 점유 40% 켜기"
+                      ></button>
+                    </td>
+                    <td>
+                      <div class="sa-name"><b>여행 게시판 점유 40%</b><small>L-2038</small></div>
+                    </td>
+                    <td><span class="sa-badge" data-st="active">진행</span></td>
+                    <td><span class="sa-tag is-period">기간제</span></td>
+                    <td class="sa-num">10.15 – 10.31</td>
+                    <td><span class="sa-small">–</span></td>
+                    <td class="num">41,870</td>
+                    <td class="num">70.9%</td>
+                    <td class="num">1.98%</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button
+                        class="sa-toggle"
+                        type="button"
+                        role="switch"
+                        aria-checked="false"
+                        aria-label="미드롤 보장 켜기"
+                      ></button>
+                    </td>
+                    <td>
+                      <div class="sa-name"><b>미드롤 보장</b><small>L-2044 · 10.18 일시중지</small></div>
+                    </td>
+                    <td><span class="sa-badge" data-st="paused">일시중지</span></td>
+                    <td><span class="sa-tag is-guaranteed">보장</span></td>
+                    <td class="sa-num">10.10 – 10.31</td>
+                    <td>
+                      <div class="sa-progress">
+                        <div class="sa-bar" style="--v: 54.2; --e: 50" role="img" aria-label="진도 54.2% · 기대 50.0%">
+                          <i></i><b></b>
+                        </div>
+                        <span class="sa-small">54.2% · 기대 50.0%</span>
+                      </div>
+                    </td>
+                    <td class="num">81,230</td>
+                    <td class="num">74.1%</td>
+                    <td class="num">2.35%</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button
+                        class="sa-toggle"
+                        type="button"
+                        role="switch"
+                        aria-checked="true"
+                        aria-label="자사 구독 안내 켜기"
+                      ></button>
+                    </td>
+                    <td>
+                      <div class="sa-name"><b>자사 구독 안내</b><small>L-0007 · 가중치 3</small></div>
+                    </td>
+                    <td><span class="sa-badge" data-st="active">진행</span></td>
+                    <td><span class="sa-tag is-house">하우스</span></td>
+                    <td class="sa-num">상시</td>
+                    <td><span class="sa-small">–</span></td>
+                    <td class="num">12,410</td>
+                    <td class="num">65.2%</td>
+                    <td class="num">0.84%</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button
+                        class="sa-toggle"
+                        type="button"
+                        role="switch"
+                        aria-checked="false"
+                        aria-label="추석 프리롤 켜기"
+                        disabled
+                      ></button>
+                    </td>
+                    <td>
+                      <div class="sa-name"><b>추석 프리롤</b><small>L-1990</small></div>
+                    </td>
+                    <td><span class="sa-badge" data-st="under">미달 종료</span></td>
+                    <td><span class="sa-tag is-guaranteed">보장</span></td>
+                    <td class="sa-num">10.01 – 10.09</td>
+                    <td>
+                      <div class="sa-progress is-behind">
+                        <div class="sa-bar" style="--v: 91.6; --e: 100" role="img" aria-label="진도 91.6% · 미달">
+                          <i></i><b></b>
+                        </div>
+                        <span class="sa-small">91.6% · 미달</span>
+                      </div>
+                    </td>
+                    <td class="num">109,920</td>
+                    <td class="num">71.0%</td>
+                    <td class="num">2.02%</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td colspan="5">집행 5개 결과</td>
+                    <td class="num">347,730</td>
+                    <td class="num">71.6%</td>
+                    <td class="num">2.09%</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <aside class="sa-card sa-panel" aria-label="집행 수정">
+            <div class="sa-panel-h">
+              <span class="sa-small">집행 수정 · L-2041</span>
+              <h2 class="sa-card-title">프리롤 보장 · 가을 여행</h2>
+              <div class="sa-row">
+                <span class="sa-tag is-guaranteed">보장</span
+                ><span class="sa-badge" data-st="pending">수정본 r4 승인 대기</span>
+              </div>
+            </div>
+            <div class="sa-field">
+              <label class="sa-label" for="p1">집행 이름</label
+              ><input class="sa-input" id="p1" value="프리롤 보장 · 가을 여행" />
+            </div>
+            <div class="sa-field">
+              <label class="sa-label" for="p2">노출 목표</label
+              ><input class="sa-input is-num" id="p2" value="300,000" aria-describedby="p2h" /><span
+                class="sa-help"
+                id="p2h"
+                >지금까지 102,300 · 남은 197,700</span
+              >
+            </div>
+            <div class="sa-field is-error">
+              <label class="sa-label" for="p3">종료 일시</label
+              ><input
+                class="sa-input is-num"
+                id="p3"
+                value="2026-12-05 23:59"
+                aria-invalid="true"
+                aria-describedby="p3h"
+              /><span class="sa-help" id="p3h">캠페인 기간(11.30까지)을 넘습니다. 11.30 이전으로 바꿔 주세요.</span>
+            </div>
+            <div class="sa-field">
+              <span class="sa-label" id="p4">스킵 정책</span>
+              <div class="sa-chips" role="group" aria-labelledby="p4">
+                <button class="sa-chip" type="button" aria-pressed="false">건너뛰기 없음</button
+                ><button class="sa-chip" type="button" aria-pressed="true">5초 후</button
+                ><button class="sa-chip" type="button" aria-pressed="false">10초 후</button>
+              </div>
+            </div>
+            <div class="sa-panel-f">
+              <button class="sa-btn is-sm" type="button">초안 저장</button
+              ><button class="sa-btn is-sm is-primary" type="button">승인 요청</button>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-toggle').forEach(function (t) {
+        t.addEventListener('click', function () {
+          if (!t.disabled) t.setAttribute('aria-checked', String(t.getAttribute('aria-checked') !== 'true'));
+        });
+      });
+      document.querySelectorAll('.sa-chips').forEach(function (g) {
+        var multi = g.hasAttribute('data-multi');
+        g.querySelectorAll('.sa-chip').forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (multi) {
+              b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+              return;
+            }
+            g.querySelectorAll('.sa-chip').forEach(function (o) {
+              o.setAttribute('aria-pressed', String(o === b));
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

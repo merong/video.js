@@ -1,0 +1,53 @@
+<!-- @dsCard group="데이터" height=300 width=1000 subtitle="기본 22px과 큰 수치 28px" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>KpiStat</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <span class="sa-cap">기본 · kpi 22px · 캠페인 상세 요약</span>
+      <section class="sa-card sa-kpis" style="--n: 3" aria-label="캠페인 요약">
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">노출</span><span class="sa-kpi-value">347,730</span
+          ><span class="sa-small">10.01 – 10.20</span>
+        </div>
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">완료율</span><span class="sa-kpi-value">71.6%</span
+          ><span class="sa-small">집행 5개 평균</span>
+        </div>
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">클릭률</span><span class="sa-kpi-value">2.09%</span
+          ><span class="sa-small">클릭 7,268</span>
+        </div>
+      </section>
+      <span class="sa-cap">큰 수치 · kpi-hero 28px · 대시보드, 리포트 상단</span>
+      <section class="sa-card sa-kpis is-hero" aria-label="오늘 요약, 어제 같은 시각과 비교">
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">노출</span><span class="sa-kpi-value">31,320</span
+          ><span class="sa-delta is-good">▲ 4.2%<em>어제 30,060</em></span>
+        </div>
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">완료율</span><span class="sa-kpi-value">71.8%</span
+          ><span class="sa-delta is-good">▲ 0.6%p<em>어제 71.2%</em></span>
+        </div>
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">클릭률</span><span class="sa-kpi-value">2.11%</span
+          ><span class="sa-delta is-bad">▼ 0.08%p<em>어제 2.19%</em></span>
+        </div>
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">채움률</span><span class="sa-kpi-value">86.4%</span
+          ><span class="sa-delta is-bad">▼ 1.2%p<em>어제 87.6%</em></span>
+        </div>
+        <div class="sa-kpi">
+          <span class="sa-kpi-label">오류</span><span class="sa-kpi-value">27</span
+          ><span class="sa-delta is-bad">▲ 9건<em>어제 18</em></span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

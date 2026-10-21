@@ -1,0 +1,141 @@
+<!-- @dsCard group="화면 틀" height=940 width=1280 subtitle="위쪽 탐색, 목차, 제목 앵커, 단계 표시" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>도움말 · 솔애드 플레이어</title>
+  </head>
+  <body>
+    <header class="sa-top">
+      <span class="sa-logo">솔애드 <em>플레이어</em></span>
+      <nav class="sa-nav" aria-label="플레이어 문서">
+        <a href="#">데모</a><a href="#">설명서</a><a href="#" aria-current="page">도움말</a>
+      </nav>
+      <div class="sa-top-r"><a class="sa-btn is-sm" href="#">관리자 열기</a></div>
+    </header>
+    <div class="sa-doc">
+      <details class="sa-disclosure sa-toc" open>
+        <summary>이 페이지 목차</summary>
+        <nav class="sa-secnav" aria-label="이 페이지 목차">
+          <a href="#install" aria-current="true">설치 코드 두 줄</a>
+          <a href="#attributes">자리 요소 속성</a>
+          <a href="#js-api">JS API</a>
+          <a href="#events">이벤트와 오류 코드</a>
+          <a href="#precedence">값의 우선순위</a>
+          <a href="#autoplay">자동재생과 음소거</a>
+          <a href="#language">플레이어 화면 언어</a>
+          <a href="#preset-fields">프리셋 설정 옵션</a>
+          <a href="#failure">프리셋을 받지 못할 때</a>
+          <a href="#same-origin">같은 사이트에서만 동작</a>
+        </nav>
+      </details>
+      <main class="sa-doc-body">
+        <div class="sa-doc-head">
+          <h1 class="sa-page-title">도움말</h1>
+          <p class="sa-body" style="max-width: 72ch">
+            로더 설치 코드, 자리 요소 속성, JS API, 프리셋 설정 옵션을 모았어요. 관리자 화면의 옵션 설명 링크가 이
+            페이지의 각 항목으로 와요.
+          </p>
+        </div>
+
+        <section class="sa-doc-sec" aria-labelledby="install">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="install">설치 코드 두 줄</h2>
+            <a class="sa-anchor" href="#install"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘설치 코드 두 줄’ 절 주소</span></a
+            >
+          </div>
+          <p>영상이 들어갈 곳에 자리 요소를 두고, 페이지에 로더를 한 번 넣어요.</p>
+          <div class="sa-codeblock">
+            <div class="sa-codeblock-head">
+              <span class="sa-codeblock-title" id="code-t">설치 코드</span
+              ><button class="sa-btn is-sm" type="button">설치 코드 복사</button>
+            </div>
+            <pre
+              role="region"
+              aria-labelledby="code-t"
+              tabindex="0"
+            ><code>&lt;div data-solad-player data-video-id="intro-2026" data-src="/media/intro.mp4"&gt;&lt;/div&gt;
+&lt;script type="module" src="/ads/player/loader.js"&gt;&lt;/script&gt;</code></pre>
+            <p class="sa-status" role="status"></p>
+          </div>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="precedence">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="precedence">값의 우선순위</h2>
+            <a class="sa-anchor" href="#precedence"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘값의 우선순위’ 절 주소</span></a
+            >
+          </div>
+          <p>같은 값을 여러 곳에서 정하면 앞에 있는 것이 이겨요.</p>
+          <ol>
+            <li>JS API의 <code class="sa-code">overrides</code></li>
+            <li>자리 요소의 <code class="sa-code">data-*</code></li>
+            <li>프리셋</li>
+            <li>기본값</li>
+          </ol>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="preset-fields">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="preset-fields">프리셋 설정 옵션</h2>
+            <a class="sa-anchor" href="#preset-fields"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘프리셋 설정 옵션’ 절 주소</span></a
+            >
+          </div>
+          <p class="sa-small">
+            <b>준비 중</b>인 값은 저장할 때 검사하지만 플레이어 화면에는 아직 쓰지 않아요. 괄호 안은 그 값을 화면에 쓰기
+            시작하는 작업 단계예요.
+          </p>
+          <div class="sa-doc-hrow">
+            <h3 class="sa-doc-h3" id="field-logo">로고</h3>
+            <a class="sa-anchor" href="#field-logo"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘로고’ 항목 주소</span></a
+            ><span class="sa-phase">준비 중(A2-3)</span>
+          </div>
+          <p>옵션 표는 OptionTable 미리보기를 보세요.</p>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="failure">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="failure">프리셋을 받지 못할 때</h2>
+            <a class="sa-anchor" href="#failure"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘프리셋을 받지 못할 때’ 절 주소</span></a
+            >
+          </div>
+          <p>본문은 ads-implementer가 코드에서 씁니다.</p>
+        </section>
+      </main>
+    </div>
+    <script>
+      // 좁은 폭(960 이하)에서는 목차를 접어 둔다. 스크립트가 없으면 열린 채로 남는다.
+      var toc = document.querySelector('.sa-toc');
+      if (matchMedia('(max-width: 960px)').matches) toc.open = false;
+
+      // 지금 읽는 절에 aria-current="true". 페이지 이동이 아니므로 "page"가 아니다.
+      var links = toc.querySelectorAll('a');
+      function mark(id) {
+        links.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+      var spy = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) mark(e.target.id);
+          });
+        },
+        { rootMargin: '0px 0px -70% 0px' }
+      );
+      document.querySelectorAll('.sa-doc-sec > .sa-doc-hrow > h2').forEach(function (h) {
+        spy.observe(h);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!-- @dsCard group="입력" height=310 subtitle="기본, 바꿈과 되돌리기, 자리표시자, 오류" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>LabelField</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <div class="sa-labelfields">
+        <div class="sa-labelfield">
+          <div class="sa-field">
+            <label class="sa-label" for="l-seq">광고 순서 <span class="sa-key">sequence</span></label
+            ><input class="sa-input" id="l-seq" placeholder="광고 {index}/{count}" aria-describedby="l-seq-h" /><span
+              class="sa-help"
+              id="l-seq-h"
+              ><code class="sa-code">{index}</code> 몇 번째 광고, <code class="sa-code">{count}</code> 이번 구간의 광고
+              수</span
+            >
+          </div>
+        </div>
+        <div class="sa-labelfield">
+          <div class="sa-field">
+            <label class="sa-label" for="l-skip">건너뛰기 버튼 <span class="sa-key">skip</span></label
+            ><input class="sa-input" id="l-skip" value="광고 넘기기" aria-describedby="l-skip-h" /><span
+              class="sa-help"
+              id="l-skip-h"
+              >기본: 광고 건너뛰기</span
+            >
+          </div>
+          <button class="sa-btn is-sm" type="button" aria-label="건너뛰기 버튼 문구를 기본값으로">기본값으로</button>
+        </div>
+        <div class="sa-labelfield">
+          <div class="sa-field is-error">
+            <label class="sa-label" for="l-skipc">건너뛰기 대기 <span class="sa-key">skipCountdown</span></label
+            ><input
+              class="sa-input"
+              id="l-skipc"
+              value="{second}초 뒤 넘기기"
+              aria-invalid="true"
+              aria-describedby="l-skipc-h"
+            /><span class="sa-help" id="l-skipc-h"
+              >{second}는 쓸 수 없는 자리표시자예요. 남은 초는 {seconds}로 고쳐 주세요.</span
+            >
+          </div>
+          <button class="sa-btn is-sm" type="button" aria-label="건너뛰기 대기 문구를 기본값으로">기본값으로</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-labelfield > .sa-btn').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var row = b.parentElement;
+          var input = row.querySelector('.sa-input');
+          input.value = '';
+          input.removeAttribute('aria-invalid');
+          row.querySelector('.sa-field').classList.remove('is-error');
+          b.remove();
+          input.focus();
+        });
+      });
+    </script>
+  </body>
+</html>

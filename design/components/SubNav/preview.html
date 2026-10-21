@@ -1,0 +1,26 @@
+<!-- @dsCard group="화면 틀" height=170 subtitle="하위 화면 링크, aria-current" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>SubNav</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <span class="sa-cap">플레이어 메뉴 · 현재 화면은 aria-current="page"</span>
+      <nav class="sa-subnav" aria-label="플레이어 화면">
+        <a href="#/players">프리셋 목록</a><a href="#/players/setup" aria-current="page">초기 설정 방법</a
+        ><a href="#/players/options">옵션 설명</a>
+      </nav>
+      <span class="sa-cap">프리셋 편집·새 프리셋 화면 · 링크를 더하지 않고 "프리셋 목록"을 현재로 둔다</span>
+      <nav class="sa-subnav" aria-label="플레이어 화면 2">
+        <a href="#/players" aria-current="page">프리셋 목록</a><a href="#/players/setup">초기 설정 방법</a
+        ><a href="#/players/options">옵션 설명</a>
+      </nav>
+      <h2 class="sa-card-title">가을 캠페인 편집</h2>
+    </div>
+  </body>
+</html>

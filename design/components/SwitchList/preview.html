@@ -1,0 +1,166 @@
+<!-- @dsCard group="입력" height=1000 subtitle="켬, 끔, 단축키 줄, 잠김, 편집기 컨트롤 절" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>SwitchList</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <ul class="sa-switches">
+        <li>
+          <button
+            class="sa-toggle"
+            type="button"
+            role="switch"
+            aria-checked="true"
+            aria-labelledby="cap-n"
+            aria-describedby="cap-d cap-k"
+          ></button
+          ><span class="sa-switch-name" id="cap-n">자막</span
+          ><span class="sa-switch-desc" id="cap-d">자막 버튼과 설정 메뉴의 자막 항목이에요.</span
+          ><span class="sa-switch-keys" id="cap-k">끄면 단축키 <kbd class="sa-kbd">c</kbd>도 꺼져요.</span>
+        </li>
+        <li>
+          <button
+            class="sa-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="q-n"
+            aria-describedby="q-d"
+          ></button
+          ><span class="sa-switch-name" id="q-n">화질</span
+          ><span class="sa-switch-desc" id="q-d"
+            >설정 메뉴의 화질 항목이에요. 화질이 여러 개인 영상(HLS)에서만 쓸모가 있어요.</span
+          >
+        </li>
+        <li>
+          <button
+            class="sa-toggle"
+            type="button"
+            role="switch"
+            aria-checked="true"
+            aria-labelledby="fs-n"
+            aria-describedby="fs-d fs-k"
+          ></button
+          ><span class="sa-switch-name" id="fs-n">전체화면</span
+          ><span class="sa-switch-desc" id="fs-d">전체화면 버튼이에요.</span
+          ><span class="sa-switch-keys" id="fs-k"
+            >끄면 단축키 <kbd class="sa-kbd">f</kbd>와 가운데 두 번 탭도 꺼져요.</span
+          >
+        </li>
+        <li class="is-locked">
+          <button
+            class="sa-toggle"
+            type="button"
+            role="switch"
+            aria-checked="true"
+            aria-labelledby="g-n"
+            aria-describedby="g-d"
+            disabled
+          ></button
+          ><span class="sa-switch-name" id="g-n">제스처</span
+          ><span class="sa-switch-desc" id="g-d"
+            >기본 video에서는 쓸 수 없어요. 플레이어 종류를 Video.js로 바꾸면 쓸 수 있어요.</span
+          >
+        </li>
+      </ul>
+
+      <p class="sa-cap">편집기 컨트롤 절 (A2-E) · 이전·이후 버튼과 건너뛰는 폭, 자막</p>
+      <section class="sa-card" aria-labelledby="ctl-h" style="display: grid; gap: var(--gap-md); max-width: 560px">
+        <h3 class="sa-card-title" id="ctl-h">컨트롤</h3>
+        <ul class="sa-switches">
+          <li>
+            <button
+              class="sa-toggle"
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-labelledby="e-sk-n"
+              aria-describedby="e-sk-d"
+              aria-controls="e-sk-sub"
+            ></button
+            ><span class="sa-switch-name" id="e-sk-n">이전·이후 버튼</span
+            ><span class="sa-switch-desc" id="e-sk-d">컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.</span>
+            <div class="sa-field sa-switch-sub" id="e-sk-sub">
+              <span class="sa-label" id="e-sk-l">건너뛰는 폭</span>
+              <div class="sa-seg is-num" role="radiogroup" aria-labelledby="e-sk-l">
+                <label><input type="radio" name="e-sk" value="5" />5초</label
+                ><label><input type="radio" name="e-sk" value="10" checked />10초</label
+                ><label><input type="radio" name="e-sk" value="15" />15초</label
+                ><label><input type="radio" name="e-sk" value="30" />30초</label>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="sa-toggle"
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-labelledby="e-cc-n"
+              aria-describedby="e-cc-d e-cc-k"
+            ></button
+            ><span class="sa-switch-name" id="e-cc-n">자막</span
+            ><span class="sa-switch-desc" id="e-cc-d"
+              >자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.</span
+            ><span class="sa-switch-keys" id="e-cc-k">끄면 단축키 <kbd class="sa-kbd">c</kbd>도 꺼져요.</span>
+          </li>
+        </ul>
+      </section>
+
+      <p class="sa-cap">플레이어 종류가 기본 video일 때</p>
+      <section class="sa-card" aria-labelledby="ctl2-h" style="display: grid; gap: var(--gap-md); max-width: 560px">
+        <h3 class="sa-card-title" id="ctl2-h">컨트롤</h3>
+        <p class="sa-off-reason" id="ctl2-why">
+          <span
+            ><b>기본 video에서는 컨트롤을 쓸 수 없어요.</b> 기본 구획의 플레이어 종류를 Video.js로 바꾸면 쓸 수
+            있어요.</span
+          >
+        </p>
+        <div class="sa-off-body">
+          <ul class="sa-switches">
+            <li class="is-locked">
+              <button
+                class="sa-toggle"
+                type="button"
+                role="switch"
+                aria-checked="true"
+                aria-labelledby="n-sk-n"
+                aria-describedby="ctl2-why"
+                disabled
+              ></button
+              ><span class="sa-switch-name" id="n-sk-n">이전·이후 버튼</span>
+            </li>
+            <li class="is-locked">
+              <button
+                class="sa-toggle"
+                type="button"
+                role="switch"
+                aria-checked="true"
+                aria-labelledby="n-cc-n"
+                aria-describedby="ctl2-why"
+                disabled
+              ></button
+              ><span class="sa-switch-name" id="n-cc-n">자막</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-toggle').forEach(function (t) {
+        t.addEventListener('click', function () {
+          if (t.disabled) return;
+          t.setAttribute('aria-checked', String(t.getAttribute('aria-checked') !== 'true'));
+          var sub = document.getElementById(t.getAttribute('aria-controls'));
+          if (sub) sub.hidden = t.getAttribute('aria-checked') !== 'true';
+        });
+      });
+    </script>
+  </body>
+</html>

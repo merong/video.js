@@ -1,0 +1,63 @@
+<!-- @dsCard group="화면 틀" height=620 subtitle="세로 목록, 칩 줄, 고르기 칸" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>SectionNav</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <p class="sa-cap">1280 · 세로 목록 (로고 구획에 오류 1)</p>
+      <nav class="sa-secnav" aria-label="편집 구획" style="max-width: 200px">
+        <span class="sa-secnav-h">구획으로 이동</span>
+        <a href="#s-basic" aria-current="true">기본</a>
+        <a href="#s-theme">테마</a>
+        <a href="#s-logo">로고 <span class="sa-secnav-err">오류 1</span></a>
+        <a href="#s-controls">컨트롤</a>
+        <a href="#s-playback">재생 동작</a>
+        <a href="#s-language">언어</a>
+        <a href="#s-ads">광고 화면</a>
+      </nav>
+
+      <p class="sa-cap">768 · 칩 줄 (기본 video 프리셋: 쓸 수 없는 구획)</p>
+      <nav class="sa-secnav is-row" aria-label="편집 구획">
+        <a href="#s-basic" aria-current="true">기본</a
+        ><a href="#s-theme" class="is-off">테마 <span class="sa-small">쓸 수 없음</span></a
+        ><a href="#s-logo" class="is-off">로고 <span class="sa-small">쓸 수 없음</span></a
+        ><a href="#s-controls" class="is-off">컨트롤 <span class="sa-small">쓸 수 없음</span></a
+        ><a href="#s-playback">재생 동작</a><a href="#s-language">언어</a><a href="#s-ads">광고 화면</a>
+      </nav>
+
+      <p class="sa-cap">390 · 고르기 칸</p>
+      <div class="sa-secjump" style="max-width: 358px">
+        <label class="sa-label" for="jump">구획으로 이동</label>
+        <select class="sa-input" id="jump" aria-describedby="jump-h">
+          <option selected>기본</option>
+          <option>테마</option>
+          <option>로고 · 오류 1</option>
+          <option>컨트롤</option>
+          <option>재생 동작</option>
+          <option>언어</option>
+          <option>광고 화면</option>
+        </select>
+        <span class="sa-help" id="jump-h">로고 구획에 고칠 칸이 1개 있어요.</span>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-secnav').forEach(function (nav) {
+        nav.addEventListener('click', function (e) {
+          var a = e.target.closest('a');
+          if (!a) return;
+          e.preventDefault();
+          nav.querySelectorAll('a').forEach(function (o) {
+            if (o === a) o.setAttribute('aria-current', 'true');
+            else o.removeAttribute('aria-current');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

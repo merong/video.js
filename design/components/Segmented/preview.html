@@ -1,0 +1,44 @@
+<!-- @dsCard group="입력" height=290 subtitle="±초, 미리 불러오기, 장면 고르기" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Segmented</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <div class="sa-field">
+        <span class="sa-label" id="seek-l">±초 버튼</span>
+        <div class="sa-seg is-num" role="radiogroup" aria-labelledby="seek-l" aria-describedby="seek-h">
+          <label><input type="radio" name="seek" value="" checked />숨김 (기본)</label
+          ><label><input type="radio" name="seek" value="5" />5초</label
+          ><label><input type="radio" name="seek" value="10" />10초</label
+          ><label><input type="radio" name="seek" value="15" />15초</label
+          ><label><input type="radio" name="seek" value="30" />30초</label>
+        </div>
+        <span class="sa-help" id="seek-h">숨기면 ±초 버튼이 없어요. 두 번 탭과 방향키는 기본 폭으로 움직여요.</span>
+      </div>
+
+      <div class="sa-field">
+        <span class="sa-label" id="pre-l">미리 불러오기</span>
+        <div class="sa-seg" role="radiogroup" aria-labelledby="pre-l" aria-describedby="pre-h">
+          <label><input type="radio" name="preload" value="none" />누를 때</label
+          ><label><input type="radio" name="preload" value="metadata" checked />정보만 (기본)</label
+          ><label><input type="radio" name="preload" value="auto" />미리 받기</label>
+        </div>
+        <span class="sa-help" id="pre-h">길이와 첫 정보만 미리 받아요. 기본값이에요.</span>
+      </div>
+
+      <div class="sa-field">
+        <span class="sa-label" id="scene-l">미리보기 장면</span>
+        <div class="sa-seg" role="radiogroup" aria-labelledby="scene-l">
+          <label><input type="radio" name="scene" checked />본편</label
+          ><label><input type="radio" name="scene" />광고 중</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

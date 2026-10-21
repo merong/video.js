@@ -1,0 +1,65 @@
+<!-- @dsCard group="입력" height=630 subtitle="비어 있음, 올림, 형식·용량 오류" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>LogoUpload</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <div class="sa-field">
+        <span class="sa-label" id="u1-l">로고 이미지</span>
+        <div class="sa-upload" role="group" aria-labelledby="u1-l" aria-describedby="u1-h">
+          <span class="sa-body">로고가 없어요. 이미지를 고르거나 여기에 끌어다 놓으세요.</span>
+          <input
+            class="sa-sr"
+            id="u1-f"
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            tabindex="-1"
+            aria-hidden="true"
+          /><button class="sa-btn is-sm" type="button" onclick="document.getElementById('u1-f').click()">
+            이미지 고르기
+          </button>
+        </div>
+        <span class="sa-help" id="u1-h">PNG, JPEG, WebP · 512KB · 가로·세로 1024px 이하</span>
+      </div>
+
+      <div class="sa-field">
+        <span class="sa-label" id="u2-l">로고 이미지</span>
+        <div class="sa-file" role="group" aria-labelledby="u2-l">
+          <span class="sa-file-thumb"><span class="sa-tag is-house">LOGO</span></span>
+          <span class="sa-file-meta"
+            ><span class="sa-file-name">logo-white.png</span><span class="sa-small">PNG · 24KB · 320×96px</span
+            ><span class="sa-row"
+              ><button class="sa-btn is-sm" type="button" aria-label="로고 이미지 바꾸기">바꾸기</button
+              ><button class="sa-btn is-sm is-danger" type="button" aria-label="로고 이미지 지우기">
+                지우기
+              </button></span
+            ></span
+          >
+        </div>
+      </div>
+
+      <div class="sa-field is-error">
+        <span class="sa-label" id="u3-l">로고 이미지</span>
+        <div class="sa-upload" role="group" aria-labelledby="u3-l" aria-describedby="u3-h">
+          <span class="sa-body">logo.svg</span><button class="sa-btn is-sm" type="button">다른 이미지 고르기</button>
+        </div>
+        <span class="sa-help" id="u3-h">SVG는 올릴 수 없어요. PNG, JPEG, WebP 가운데 하나로 바꿔서 올려 주세요.</span>
+      </div>
+
+      <div class="sa-field is-error">
+        <span class="sa-label" id="u4-l">로고 이미지</span>
+        <div class="sa-upload" role="group" aria-labelledby="u4-l" aria-describedby="u4-h">
+          <span class="sa-body">brand-full.png · 780KB</span
+          ><button class="sa-btn is-sm" type="button">다른 이미지 고르기</button>
+        </div>
+        <span class="sa-help" id="u4-h">파일이 512KB보다 커요(780KB). 용량을 줄여서 다시 올려 주세요.</span>
+      </div>
+    </div>
+  </body>
+</html>

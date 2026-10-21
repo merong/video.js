@@ -1,0 +1,82 @@
+<!-- @dsCard group="도움말" height=640 width=900 subtitle="로더 3장면, 사이트 적용 프리셋 2장면" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Storyboard</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <section class="sa-sb" aria-labelledby="sb1">
+        <div class="sa-sb-h">
+          <h3 class="sa-card-title" id="sb1">로더</h3>
+          <span class="sa-small">페이지에 한 번 넣는 스크립트가 자리 요소를 찾아 플레이어로 바꿔요</span>
+        </div>
+        <ol class="sa-sb-scenes">
+          <li class="sa-sb-scene">
+            <span class="sa-sb-n">1</span>
+            <div class="sa-sb-stage" aria-hidden="true">
+              <div class="sa-sb-page"><span class="sa-sb-line"></span><span class="sa-sb-line is-short"></span></div>
+            </div>
+            <p>페이지가 열리면 로더가 먼저 받아져요.</p>
+          </li>
+          <li class="sa-sb-scene">
+            <span class="sa-sb-n">2</span>
+            <div class="sa-sb-stage" aria-hidden="true">
+              <div class="sa-sb-page">
+                <span class="sa-sb-line"></span><span class="sa-sb-slot">data-solad-player</span
+                ><span class="sa-sb-line is-short"></span>
+              </div>
+            </div>
+            <p>로더가 페이지에서 자리 요소를 모두 찾아요.</p>
+          </li>
+          <li class="sa-sb-scene">
+            <span class="sa-sb-n">3</span>
+            <div class="sa-sb-stage" aria-hidden="true">
+              <div class="sa-sb-page">
+                <span class="sa-sb-line"></span><span class="sa-sb-slot is-filled">플레이어</span
+                ><span class="sa-sb-line is-short"></span>
+              </div>
+            </div>
+            <p>찾은 자리마다 사이트 적용 프리셋으로 플레이어를 만들어요.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="sa-sb" aria-labelledby="sb2">
+        <div class="sa-sb-h">
+          <h3 class="sa-card-title" id="sb2">사이트 적용 프리셋</h3>
+          <span class="sa-small">사이트의 모든 플레이어가 따르는 프리셋 하나</span>
+        </div>
+        <ol class="sa-sb-scenes">
+          <li class="sa-sb-scene">
+            <span class="sa-sb-n">1</span>
+            <div class="sa-sb-stage" aria-hidden="true">
+              <div class="sa-sb-page">
+                <span class="sa-row"
+                  ><span class="sa-small">공지 영상</span><span class="sa-sb-chip">사이트 적용</span></span
+                ><span class="sa-small">이벤트 페이지</span>
+              </div>
+            </div>
+            <p>프리셋은 여러 개지만 사이트에 적용되는 건 하나예요.</p>
+          </li>
+          <li class="sa-sb-scene">
+            <span class="sa-sb-n">2</span>
+            <div class="sa-sb-stage" aria-hidden="true">
+              <div class="sa-sb-page">
+                <span class="sa-small">공지 영상</span
+                ><span class="sa-row"
+                  ><span class="sa-small">이벤트 페이지</span><span class="sa-sb-chip is-mark">사이트 적용</span></span
+                >
+              </div>
+            </div>
+            <p>"사이트에 적용"을 누르면 배지가 옮겨 가요.</p>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </body>
+</html>

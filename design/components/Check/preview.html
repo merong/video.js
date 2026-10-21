@@ -1,0 +1,33 @@
+<!-- @dsCard group="입력" height=150 subtitle="체크박스, 라디오, 묶음" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Check</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <fieldset class="sa-fieldset has-aside">
+        <legend class="sa-label">위치</legend>
+        <span class="sa-fieldset-aside"
+          ><a class="sa-help-link" href="#/help/ad-break" aria-label="광고 구간 도움말">?</a></span
+        >
+        <div class="sa-row">
+          <label class="sa-check"><input type="checkbox" checked />프리롤</label
+          ><label class="sa-check"><input type="checkbox" />미드롤</label
+          ><label class="sa-check"><input type="checkbox" disabled />포스트롤</label>
+        </div>
+      </fieldset>
+      <fieldset class="sa-fieldset">
+        <legend class="sa-label">요청 받기</legend>
+        <div class="sa-row">
+          <label class="sa-check"><input type="radio" name="use" checked />받음</label
+          ><label class="sa-check"><input type="radio" name="use" />받지 않음</label>
+        </div>
+      </fieldset>
+    </div>
+  </body>
+</html>

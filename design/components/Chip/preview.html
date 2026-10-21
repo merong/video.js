@@ -1,0 +1,75 @@
+<!-- @dsCard group="입력" height=370 subtitle="필터, 요일, 단일 선택, 고를 수 없는 링크 칩" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Chip</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <span class="sa-cap">상태 필터 · 하나만 선택</span>
+      <div class="sa-chips" role="group" aria-label="상태 필터">
+        <button class="sa-chip" type="button" aria-pressed="true">전체<b>5</b></button
+        ><button class="sa-chip" type="button" aria-pressed="false">진행<b>3</b></button
+        ><button class="sa-chip" type="button" aria-pressed="false">일시중지<b>1</b></button
+        ><button class="sa-chip" type="button" aria-pressed="false">종료<b>1</b></button>
+      </div>
+      <span class="sa-cap">요일 · 여러 개 선택 / 스킵 정책 · 하나만 선택</span>
+      <div class="sa-row" style="gap: 20px">
+        <div class="sa-chips is-days" role="group" aria-label="요일" data-multi>
+          <button class="sa-chip" type="button" aria-pressed="true">월</button
+          ><button class="sa-chip" type="button" aria-pressed="true">화</button
+          ><button class="sa-chip" type="button" aria-pressed="true">수</button
+          ><button class="sa-chip" type="button" aria-pressed="true">목</button
+          ><button class="sa-chip" type="button" aria-pressed="true">금</button
+          ><button class="sa-chip" type="button" aria-pressed="false">토</button
+          ><button class="sa-chip" type="button" aria-pressed="false">일</button>
+        </div>
+        <div class="sa-chips" role="group" aria-label="스킵 정책">
+          <button class="sa-chip" type="button" aria-pressed="false">건너뛰기 없음</button
+          ><button class="sa-chip" type="button" aria-pressed="true">5초 후</button
+          ><button class="sa-chip" type="button" aria-pressed="false">10초 후</button>
+        </div>
+      </div>
+      <span class="sa-cap">링크 탭 · 현재 탭은 aria-current</span>
+      <nav class="sa-chips" aria-label="요청 상태">
+        <a class="sa-chip" href="#all" aria-current="page">전체<b>18</b></a
+        ><a class="sa-chip" href="#new">접수<b>3</b></a
+        ><a class="sa-chip" href="#review">검토<b>2</b></a
+        ><a class="sa-chip" href="#live">집행<b>4</b></a>
+      </nav>
+      <p class="sa-cap">링크 칩 · 고를 수 없는 값 (재생 테스트 전환 줄)</p>
+      <div class="sa-field">
+        <span class="sa-label" id="lk-m">미디어</span>
+        <nav class="sa-chips" aria-labelledby="lk-m" aria-describedby="lk-m-h">
+          <a class="sa-chip" href="#" aria-current="page">MP4</a><span class="sa-chip is-off">HLS</span>
+        </nav>
+        <span class="sa-help" id="lk-m-h">기본 video는 HLS를 재생하지 못해요.</span>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-toggle').forEach(function (t) {
+        t.addEventListener('click', function () {
+          if (!t.disabled) t.setAttribute('aria-checked', String(t.getAttribute('aria-checked') !== 'true'));
+        });
+      });
+      document.querySelectorAll('.sa-chips').forEach(function (g) {
+        var multi = g.hasAttribute('data-multi');
+        g.querySelectorAll('.sa-chip').forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (multi) {
+              b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+              return;
+            }
+            g.querySelectorAll('.sa-chip').forEach(function (o) {
+              o.setAttribute('aria-pressed', String(o === b));
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

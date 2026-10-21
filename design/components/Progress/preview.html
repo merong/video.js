@@ -1,0 +1,35 @@
+<!-- @dsCard group="상태" height=110 subtitle="보장 집행 진도와 기대 진도, 기대 눈금 없음" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Progress</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="grid-template-columns: repeat(auto-fill, minmax(160px, 200px))">
+      <div class="sa-progress">
+        <div class="sa-bar" style="--v: 34.1; --e: 33.2" role="img" aria-label="진도 34.1% · 기대 33.2%">
+          <i></i><b></b>
+        </div>
+        <span class="sa-small">34.1% · 기대 33.2%</span>
+      </div>
+      <div class="sa-progress">
+        <div class="sa-bar" style="--v: 54.2; --e: 50" role="img" aria-label="진도 54.2% · 기대 50.0%">
+          <i></i><b></b>
+        </div>
+        <span class="sa-small">54.2% · 기대 50.0%</span>
+      </div>
+      <div class="sa-progress is-behind">
+        <div class="sa-bar" style="--v: 91.6; --e: 100" role="img" aria-label="진도 91.6% · 미달"><i></i><b></b></div>
+        <span class="sa-small">91.6% · 미달</span>
+      </div>
+      <div class="sa-progress">
+        <div class="sa-bar" style="--v: 42" role="img" aria-label="진도 42%"><i></i><b></b></div>
+        <span class="sa-small">42% · 기대 눈금 없음(--e 비움)</span>
+      </div>
+    </div>
+  </body>
+</html>

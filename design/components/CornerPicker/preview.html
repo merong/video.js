@@ -1,0 +1,45 @@
+<!-- @dsCard group="입력" height=460 subtitle="네 모서리, 쓸 수 없음" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>CornerPicker</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <fieldset class="sa-corner" aria-describedby="pos-h">
+        <legend class="sa-label">로고 위치</legend>
+        <div class="sa-corner-frame">
+          <label><input type="radio" name="pos" value="top-left" />왼쪽 위</label
+          ><label><input type="radio" name="pos" value="top-right" checked />오른쪽 위</label
+          ><label><input type="radio" name="pos" value="bottom-left" />왼쪽 아래</label
+          ><label><input type="radio" name="pos" value="bottom-right" />오른쪽 아래</label>
+        </div>
+        <span class="sa-help" id="pos-h"
+          >방향키로 모서리를 옮겨 고를 수 있어요. 지금: <span id="pos-now">오른쪽 위</span></span
+        >
+      </fieldset>
+
+      <fieldset class="sa-corner" disabled aria-describedby="pos2-h">
+        <legend class="sa-label">로고 위치</legend>
+        <div class="sa-corner-frame">
+          <label><input type="radio" name="pos2" value="top-left" />왼쪽 위</label
+          ><label><input type="radio" name="pos2" value="top-right" checked />오른쪽 위</label
+          ><label><input type="radio" name="pos2" value="bottom-left" />왼쪽 아래</label
+          ><label><input type="radio" name="pos2" value="bottom-right" />오른쪽 아래</label>
+        </div>
+        <span class="sa-help" id="pos2-h">기본 video에서는 로고를 쓸 수 없어요.</span>
+      </fieldset>
+    </div>
+    <script>
+      document.querySelectorAll('input[name="pos"]').forEach(function (r) {
+        r.addEventListener('change', function () {
+          document.getElementById('pos-now').textContent = r.parentElement.textContent;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>솔애드 관리자 디자인 시스템</title>
+    <link rel="stylesheet" href="components/fonts.css" />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="components/bundle.css" />
+    <style>
+      .ds {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 max(16px, env(safe-area-inset-right, 0px)) 64px max(16px, env(safe-area-inset-left, 0px));
+        display: grid;
+        gap: 32px;
+      }
+      .ds-head {
+        display: grid;
+        gap: 8px;
+        padding-top: 32px;
+      }
+      .ds-cover {
+        width: 100%;
+        height: 288px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-card);
+        background: var(--bg);
+      }
+      .ds-group {
+        display: grid;
+        gap: 14px;
+      }
+      .ds-card {
+        display: grid;
+        gap: 8px;
+        min-width: 0;
+        padding: var(--pad-card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-card);
+        background: var(--panel);
+      }
+      .ds-card header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 4px 12px;
+      }
+      .ds-card h3 {
+        font: 700 14px/20px var(--font-num);
+      }
+      .ds-card header a {
+        margin-left: auto;
+        color: var(--accent-text);
+      }
+      .ds-card iframe {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-control);
+        background: var(--bg);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="sa-top">
+      <span class="sa-logo">솔애드 <em>관리자</em></span
+      ><span class="sa-small">디자인 시스템</span>
+    </header>
+    <main class="ds">
+      <div class="ds-head">
+        <h1 class="sa-page-title">솔애드 관리자 디자인 시스템</h1>
+        <p class="sa-small">
+          사용 규칙은 README.md, 값은 tokens.json, 컴포넌트 스타일은 components/bundle.css에 있습니다. 이 페이지는 각
+          컴포넌트의 preview.html을 모아 보여 줍니다.
+        </p>
+      </div>
+      <iframe class="ds-cover" src="components/Cover/preview.html" title="표지"></iframe>
+      <section class="ds-group">
+        <h2 class="sa-card-title">동작</h2>
+        <article class="ds-card" id="Button">
+          <header>
+            <h3>Button</h3>
+            <span class="sa-small">기본·작은 크기와 밀집 툴바, 초점을 받는 비활성</span
+            ><a class="sa-small" href="components/Button/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            하는 일을 그대로 적은 동작 버튼입니다. 화면에서 가장 중요한 한 가지는 `is-lime`(집행 만들기, 승인함 열기),
+            폼의 제출은 `is-primary`(승인 요청, 저장), 나머지는 기본 버튼을 씁니다.
+          </p>
+          <iframe
+            src="components/Button/preview.html"
+            title="Button 미리보기"
+            loading="lazy"
+            style="height: 470px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">입력</h2>
+        <article class="ds-card" id="Chip">
+          <header>
+            <h3>Chip</h3>
+            <span class="sa-small">필터, 요일, 단일 선택, 고를 수 없는 링크 칩</span
+            ><a class="sa-small" href="components/Chip/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            짧은 선택지를 눌러 고르는 버튼 묶음입니다. 목록 필터, 요일, 스킵 정책, 차트 지표 전환에 씁니다.
+          </p>
+          <iframe
+            src="components/Chip/preview.html"
+            title="Chip 미리보기"
+            loading="lazy"
+            style="height: 370px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Field">
+          <header>
+            <h3>Field</h3>
+            <span class="sa-small">라벨, 도움말, 오류, 단위 붙은 숫자</span
+            ><a class="sa-small" href="components/Field/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            라벨, 입력란, 도움말을 묶은 입력 단위입니다. 라벨은 `label`(13px/500), 입력값은 `body`(14px), 도움말은
+            `small`(12.5px, `sub`)입니다.
+          </p>
+          <iframe
+            src="components/Field/preview.html"
+            title="Field 미리보기"
+            loading="lazy"
+            style="height: 600px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="ColorField">
+          <header>
+            <h3>ColorField</h3>
+            <span class="sa-small">색 고르기, #rrggbb, 기본값 사용, 광고 강조색, 테두리 없음</span
+            ><a class="sa-small" href="components/ColorField/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            색 고르기 칸과 #rrggbb 글자 입력을 한 라벨로 묶은 입력란입니다. 비운 값은 "기본값 사용"이고, 형식 오류는
+            값을 내보내지 않고 안내합니다.
+          </p>
+          <iframe
+            src="components/ColorField/preview.html"
+            title="ColorField 미리보기"
+            loading="lazy"
+            style="height: 480px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Toggle">
+          <header>
+            <h3>Toggle</h3>
+            <span class="sa-small">켜짐, 꺼짐, 바꿀 수 없음</span
+            ><a class="sa-small" href="components/Toggle/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">집행을 바로 켜고 끄는 스위치입니다. 집행 표의 첫 칸에 둡니다.</p>
+          <iframe
+            src="components/Toggle/preview.html"
+            title="Toggle 미리보기"
+            loading="lazy"
+            style="height: 90px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Check">
+          <header>
+            <h3>Check</h3>
+            <span class="sa-small">체크박스, 라디오, 묶음</span
+            ><a class="sa-small" href="components/Check/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            여러 개를 고르는 체크박스와 하나만 고르는 라디오입니다. 묶음은 fieldset과 legend로 이름을 붙입니다.
+          </p>
+          <iframe
+            src="components/Check/preview.html"
+            title="Check 미리보기"
+            loading="lazy"
+            style="height: 150px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="SwitchList">
+          <header>
+            <h3>SwitchList</h3>
+            <span class="sa-small">켬, 끔, 단축키 줄, 잠김, 편집기 컨트롤 절</span
+            ><a class="sa-small" href="components/SwitchList/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            스위치, 이름, 설명, 함께 꺼지는 단축키를 한 줄로 묶은 목록입니다. 설명은 aria-describedby로 스위치에
+            잇습니다.
+          </p>
+          <iframe
+            src="components/SwitchList/preview.html"
+            title="SwitchList 미리보기"
+            loading="lazy"
+            style="height: 1000px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Segmented">
+          <header>
+            <h3>Segmented</h3>
+            <span class="sa-small">±초, 미리 불러오기, 장면 고르기</span
+            ><a class="sa-small" href="components/Segmented/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            값이 몇 개뿐인 선택을 붙은 버튼 모양으로 보입니다. 속은 네이티브 라디오 묶음이라 방향키로 옮깁니다.
+          </p>
+          <iframe
+            src="components/Segmented/preview.html"
+            title="Segmented 미리보기"
+            loading="lazy"
+            style="height: 290px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="CornerPicker">
+          <header>
+            <h3>CornerPicker</h3>
+            <span class="sa-small">네 모서리, 쓸 수 없음</span
+            ><a class="sa-small" href="components/CornerPicker/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">로고 위치를 플레이어 모양 안 네 모서리에서 고르는 라디오 묶음입니다.</p>
+          <iframe
+            src="components/CornerPicker/preview.html"
+            title="CornerPicker 미리보기"
+            loading="lazy"
+            style="height: 460px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="LogoUpload">
+          <header>
+            <h3>LogoUpload</h3>
+            <span class="sa-small">비어 있음, 올림, 형식·용량 오류</span
+            ><a class="sa-small" href="components/LogoUpload/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            로고 이미지를 고르고, 올린 파일을 확인하고, 바꾸거나 지우는 칸입니다. PNG·JPEG·WebP, 512KB, 1024px
+            이하입니다.
+          </p>
+          <iframe
+            src="components/LogoUpload/preview.html"
+            title="LogoUpload 미리보기"
+            loading="lazy"
+            style="height: 630px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="LabelField">
+          <header>
+            <h3>LabelField</h3>
+            <span class="sa-small">기본, 바꿈과 되돌리기, 자리표시자, 오류</span
+            ><a class="sa-small" href="components/LabelField/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            광고 화면 문구 칸입니다. 흐린 기본 문구는 늘 한국어이고, 바꾼 칸에만 "기본값으로" 버튼이 생깁니다.
+          </p>
+          <iframe
+            src="components/LabelField/preview.html"
+            title="LabelField 미리보기"
+            loading="lazy"
+            style="height: 310px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">상태</h2>
+        <article class="ds-card" id="Progress">
+          <header>
+            <h3>Progress</h3>
+            <span class="sa-small">보장 집행 진도와 기대 진도</span
+            ><a class="sa-small" href="components/Progress/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            보장 집행의 노출 진도를 기대 진도와 함께 보여 주는 막대입니다. 캠페인 목록과 상세의 집행 표에 씁니다.
+          </p>
+          <iframe
+            src="components/Progress/preview.html"
+            title="Progress 미리보기"
+            loading="lazy"
+            style="height: 110px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="StatusBadge">
+          <header>
+            <h3>StatusBadge</h3>
+            <span class="sa-small">아홉 가지 상태, 사이트 적용, 옮김</span
+            ><a class="sa-small" href="components/StatusBadge/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            캠페인, 집행, 소재, 지면 편성의 상태를 보여 주는 배지입니다. 상태 이름과 점 색은 모든 화면에서 같습니다.
+          </p>
+          <iframe
+            src="components/StatusBadge/preview.html"
+            title="StatusBadge 미리보기"
+            loading="lazy"
+            style="height: 90px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="TierTag">
+          <header>
+            <h3>TierTag</h3>
+            <span class="sa-small">기간제, 보장, 하우스</span
+            ><a class="sa-small" href="components/TierTag/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            집행 등급을 나타내는 태그입니다. 클래스픽의 멤버십·BEST·일반 태그 모양을 그대로 씁니다.
+          </p>
+          <iframe
+            src="components/TierTag/preview.html"
+            title="TierTag 미리보기"
+            loading="lazy"
+            style="height: 60px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="DisabledReason">
+          <header>
+            <h3>DisabledReason</h3>
+            <span class="sa-small">구획 전체, 스위치 하나</span
+            ><a class="sa-small" href="components/DisabledReason/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            기본 video 프리셋에서 쓸 수 없는 구획과 스위치에 이유와 바꾸는 방법을 붙입니다. 입력한 값은 화면에 남깁니다.
+          </p>
+          <iframe
+            src="components/DisabledReason/preview.html"
+            title="DisabledReason 미리보기"
+            loading="lazy"
+            style="height: 360px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="PhaseTag">
+          <header>
+            <h3>PhaseTag</h3>
+            <span class="sa-small">적용, 준비 중(A2-2·A2-3)</span
+            ><a class="sa-small" href="components/PhaseTag/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            설명서·도움말의 옵션이 지금 플레이어 화면에 쓰이는지, 저장만 되고 다음 단계에 쓰이는지를 글자로 보입니다.
+          </p>
+          <iframe
+            src="components/PhaseTag/preview.html"
+            title="PhaseTag 미리보기"
+            loading="lazy"
+            style="height: 240px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">데이터</h2>
+        <article class="ds-card" id="DataTable">
+          <header>
+            <h3>DataTable</h3>
+            <span class="sa-small">기본 표, 밀집 표, 동작 열 고정, 프리셋 표, 좁은 화면</span
+            ><a class="sa-small" href="components/DataTable/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            목록과 집행 라인을 보여 주는 표입니다. 기본과 밀집 두 밀도가 있고, 마지막 동작 열은 표가 넘쳐도 오른쪽에
+            남습니다.
+          </p>
+          <iframe
+            src="components/DataTable/preview.html"
+            title="DataTable 미리보기"
+            loading="lazy"
+            style="height: 1220px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="OptionTable">
+          <header>
+            <h3>OptionTable</h3>
+            <span class="sa-small">설치 옵션·프리셋 필드 표, 600px 이하 카드</span
+            ><a class="sa-small" href="components/OptionTable/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            도움말의 설치 옵션 표와 프리셋 필드 표입니다. 카드 폭 600px 이하에서는 행마다 카드로 바뀌고, 각 행은 앵커
+            대상입니다.
+          </p>
+          <iframe
+            src="components/OptionTable/preview.html"
+            title="OptionTable 미리보기"
+            loading="lazy"
+            style="height: 1100px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Pager">
+          <header>
+            <h3>Pager</h3>
+            <span class="sa-small">표 카드 안, 첫 쪽, 한 쪽뿐</span
+            ><a class="sa-small" href="components/Pager/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            표 아래에서 전체 개수와 "이전 · 3 / 12쪽 · 다음"을 보여 주는 쪽 넘김입니다. 학습 진도 같은 긴 기록 표에
+            씁니다.
+          </p>
+          <iframe
+            src="components/Pager/preview.html"
+            title="Pager 미리보기"
+            loading="lazy"
+            style="height: 460px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="KpiStat">
+          <header>
+            <h3>KpiStat</h3>
+            <span class="sa-small">기본 22px과 큰 수치 28px</span
+            ><a class="sa-small" href="components/KpiStat/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            핵심 수치 한 개와 그 이름, 비교를 묶은 칸입니다. 여러 칸을 한 카드 안에 세로 구분선으로 나란히 둡니다.
+          </p>
+          <iframe
+            src="components/KpiStat/preview.html"
+            title="KpiStat 미리보기"
+            loading="lazy"
+            style="height: 300px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="TrendChart">
+          <header>
+            <h3>TrendChart</h3>
+            <span class="sa-small">14일 추이와 표 보기</span
+            ><a class="sa-small" href="components/TrendChart/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            최근 14일 노출·클릭 추이를 보여 주는 선 차트 카드입니다. 같은 데이터를 표로 볼 수 있습니다.
+          </p>
+          <iframe
+            src="components/TrendChart/preview.html"
+            title="TrendChart 미리보기"
+            loading="lazy"
+            style="height: 360px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="KeyValue">
+          <header>
+            <h3>KeyValue</h3>
+            <span class="sa-small">요청서 항목과 값</span
+            ><a class="sa-small" href="components/KeyValue/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">항목 이름과 값을 위아래로 늘어놓는 표입니다. 요청서와 집행 요약에 씁니다.</p>
+          <iframe
+            src="components/KeyValue/preview.html"
+            title="KeyValue 미리보기"
+            loading="lazy"
+            style="height: 250px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="ActivityLog">
+          <header>
+            <h3>ActivityLog</h3>
+            <span class="sa-small">최신 순 처리 기록, 광고 진행 기록 상자</span
+            ><a class="sa-small" href="components/ActivityLog/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">누가 언제 무엇을 했는지 최신 순으로 보여 주는 기록입니다.</p>
+          <iframe
+            src="components/ActivityLog/preview.html"
+            title="ActivityLog 미리보기"
+            loading="lazy"
+            style="height: 420px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="CodeBlock">
+          <header>
+            <h3>CodeBlock</h3>
+            <span class="sa-small">설치 코드, 복사, 결과 알림</span
+            ><a class="sa-small" href="components/CodeBlock/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            줄바꿈 없이 가로로 스크롤하는 코드 칸과 복사 버튼입니다. 복사하지 못하면 코드를 선택하고 직접 복사하도록
+            안내합니다.
+          </p>
+          <iframe
+            src="components/CodeBlock/preview.html"
+            title="CodeBlock 미리보기"
+            loading="lazy"
+            style="height: 330px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">알림</h2>
+        <article class="ds-card" id="StatusMessage">
+          <header>
+            <h3>StatusMessage</h3>
+            <span class="sa-small">완료, 안내, 일부만 됨, 실패</span
+            ><a class="sa-small" href="components/StatusMessage/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">방금 한 일의 결과를 알리는 aria-live 문구입니다. 실패는 role="alert"로 바로 읽힙니다.</p>
+          <iframe
+            src="components/StatusMessage/preview.html"
+            title="StatusMessage 미리보기"
+            loading="lazy"
+            style="height: 200px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Note">
+          <header>
+            <h3>Note</h3>
+            <span class="sa-small">기본, 주의, 막힘, 동작 버튼</span
+            ><a class="sa-small" href="components/Note/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">폼과 패널 안에서 미리 알아 둘 점을 적는 안내 메모입니다.</p>
+          <iframe
+            src="components/Note/preview.html"
+            title="Note 미리보기"
+            loading="lazy"
+            style="height: 270px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="MockBadge">
+          <header>
+            <h3>MockBadge</h3>
+            <span class="sa-small">목업 화면 제목 옆</span
+            ><a class="sa-small" href="components/MockBadge/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            아직 서버와 이어지지 않은 화면 표시입니다. 문구는 항상 "목업 · 아직 동작하지 않아요"입니다.
+          </p>
+          <iframe
+            src="components/MockBadge/preview.html"
+            title="MockBadge 미리보기"
+            loading="lazy"
+            style="height: 110px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="UnimplementedCard">
+          <header>
+            <h3>UnimplementedCard</h3>
+            <span class="sa-small">미구현 화면 카드와 빈 표</span
+            ><a class="sa-small" href="components/UnimplementedCard/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">아직 만들지 않은 화면 자리와 결과가 없는 표에 두는 안내입니다.</p>
+          <iframe
+            src="components/UnimplementedCard/preview.html"
+            title="UnimplementedCard 미리보기"
+            loading="lazy"
+            style="height: 330px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Dialog">
+          <header>
+            <h3>Dialog</h3>
+            <span class="sa-small">반려 확인, 사이트에 적용 확인, 플레이어 미리보기(넓은 변형)</span
+            ><a class="sa-small" href="components/Dialog/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">네이티브 dialog로 여는 대화상자입니다. 닫으면 연 버튼으로 포커스가 돌아갑니다.</p>
+          <iframe
+            src="components/Dialog/preview.html"
+            title="Dialog 미리보기"
+            loading="lazy"
+            style="height: 110px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">화면 틀</h2>
+        <article class="ds-card" id="Stepper">
+          <header>
+            <h3>Stepper</h3>
+            <span class="sa-small">집행 편집 7단계</span
+            ><a class="sa-small" href="components/Stepper/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            집행 편집 단계형 폼의 단계 목록입니다. 기본 → 기간·요일·시간대 → 등급별 조건 → 타겟 → 소재 연결 → 스킵 정책
+            → 검토·제출 순서입니다.
+          </p>
+          <iframe
+            src="components/Stepper/preview.html"
+            title="Stepper 미리보기"
+            loading="lazy"
+            style="height: 480px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="TodoBanner">
+          <header>
+            <h3>TodoBanner</h3>
+            <span class="sa-small">대시보드 운영 할 일</span
+            ><a class="sa-small" href="components/TodoBanner/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            대시보드 맨 위의 운영 할 일 배너입니다. 클래스픽 스튜디오의 어두운 배너를 그대로 씁니다.
+          </p>
+          <iframe
+            src="components/TodoBanner/preview.html"
+            title="TodoBanner 미리보기"
+            loading="lazy"
+            style="height: 330px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="TopNav">
+          <header>
+            <h3>TopNav</h3>
+            <span class="sa-small">상단 메뉴</span
+            ><a class="sa-small" href="components/TopNav/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">모든 화면 위에 붙는 주 메뉴입니다. 높이는 `nav-h`(56px), 바탕은 `panel`입니다.</p>
+          <iframe
+            src="components/TopNav/preview.html"
+            title="TopNav 미리보기"
+            loading="lazy"
+            style="height: 80px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="SubNav">
+          <header>
+            <h3>SubNav</h3>
+            <span class="sa-small">하위 화면 링크, aria-current</span
+            ><a class="sa-small" href="components/SubNav/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            한 메뉴 안의 화면을 오가는 링크 줄입니다. ARIA 탭이 아니라 주소가 바뀌는 링크이고, 현재 화면에
+            aria-current="page"를 붙입니다.
+          </p>
+          <iframe
+            src="components/SubNav/preview.html"
+            title="SubNav 미리보기"
+            loading="lazy"
+            style="height: 170px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="SectionNav">
+          <header>
+            <h3>SectionNav</h3>
+            <span class="sa-small">세로 목록, 칩 줄, 고르기 칸</span
+            ><a class="sa-small" href="components/SectionNav/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            프리셋 편집기의 일곱 구획 사이를 옮겨 다닙니다. 1280 세로 목록, 768 칩 줄, 390 고르기 칸입니다.
+          </p>
+          <iframe
+            src="components/SectionNav/preview.html"
+            title="SectionNav 미리보기"
+            loading="lazy"
+            style="height: 620px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Disclosure">
+          <header>
+            <h3>Disclosure</h3>
+            <span class="sa-small">닫힘, 열림</span
+            ><a class="sa-small" href="components/Disclosure/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">자주 보지 않는 내용을 details·summary로 접어 둡니다.</p>
+          <iframe
+            src="components/Disclosure/preview.html"
+            title="Disclosure 미리보기"
+            loading="lazy"
+            style="height: 160px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="DocShell">
+          <header>
+            <h3>DocShell</h3>
+            <span class="sa-small">위쪽 탐색, 목차, 제목 앵커, 단계 표시</span
+            ><a class="sa-small" href="components/DocShell/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            공개 페이지(데모, 설명서, 도움말)의 틀입니다. 위쪽 탐색, 접히는 목차, 본문, 제목 앵커로 이뤄집니다.
+          </p>
+          <iframe
+            src="components/DocShell/preview.html"
+            title="DocShell 미리보기"
+            loading="lazy"
+            style="height: 940px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="PlayerStage">
+          <header>
+            <h3>PlayerStage</h3>
+            <span class="sa-small">폭 보기, 줄인 비율, 장면 바로가기, 샘플 없음, 프리셋 모양 그대로</span
+            ><a class="sa-small" href="components/PlayerStage/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            데모, 재생 테스트, 관리자 미리보기가 함께 쓰는 플레이어 무대입니다. 고른 폭으로 그리고 자리보다 넓으면 줄여
+            보이며 비율을 글자로 적습니다.
+          </p>
+          <iframe
+            src="components/PlayerStage/preview.html"
+            title="PlayerStage 미리보기"
+            loading="lazy"
+            style="height: 2300px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">화면 예시</h2>
+        <article class="ds-card" id="Dashboard">
+          <header>
+            <h3>Dashboard</h3>
+            <span class="sa-small">대시보드 · 큰 수치 적용</span
+            ><a class="sa-small" href="components/Dashboard/preview.html">따로 열기</a>
+          </header>
+          <iframe
+            src="components/Dashboard/preview.html"
+            title="Dashboard 미리보기"
+            loading="lazy"
+            style="height: 1000px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="ExecutionList">
+          <header>
+            <h3>ExecutionList</h3>
+            <span class="sa-small">캠페인 상세 · 밀집 표와 기본 패널</span
+            ><a class="sa-small" href="components/ExecutionList/preview.html">따로 열기</a>
+          </header>
+          <iframe
+            src="components/ExecutionList/preview.html"
+            title="ExecutionList 미리보기"
+            loading="lazy"
+            style="height: 640px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="PlayerMock">
+          <header>
+            <h3>PlayerMock</h3>
+            <span class="sa-small">본편, 광고 중, 360, 컨트롤 숨김, 작은 칸</span
+            ><a class="sa-small" href="components/PlayerMock/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            관리자 미리보기와 도움말에 쓰는 플레이어 그림입니다. 실제 플레이어 스킨은 design/ 밖에서 만듭니다.
+          </p>
+          <iframe
+            src="components/PlayerMock/preview.html"
+            title="PlayerMock 미리보기"
+            loading="lazy"
+            style="height: 1300px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="DemoBench">
+          <header>
+            <h3>DemoBench</h3>
+            <span class="sa-small"
+              >데모 index.html: 프리셋, 설정 옵션(컨트롤·로고), 무대, 설치 코드, 광고 진행 기록</span
+            ><a class="sa-small" href="components/DemoBench/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            플레이어 데모 화면입니다. 프리셋을 고르고 설정 옵션을 바꿔 보며 플레이어를 확인하고 그 상태의 설치 코드를
+            복사합니다. 저장하지 않습니다.
+          </p>
+          <iframe
+            src="components/DemoBench/preview.html"
+            title="DemoBench 미리보기"
+            loading="lazy"
+            style="height: 7230px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="PlayTest">
+          <header>
+            <h3>PlayTest</h3>
+            <span class="sa-small">재생 테스트 play-test.html: 전환 링크, 수집 안내, 광고 진행</span
+            ><a class="sa-small" href="components/PlayTest/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">게시한 편성을 실제 수집 API로 재생하는 재생 테스트 페이지입니다.</p>
+          <iframe
+            src="components/PlayTest/preview.html"
+            title="PlayTest 미리보기"
+            loading="lazy"
+            style="height: 1250px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="PlayerPreview">
+          <header>
+            <h3>PlayerPreview</h3>
+            <span class="sa-small">편집기 플레이어 미리보기, 게시 전 미리보기</span
+            ><a class="sa-small" href="components/PlayerPreview/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            관리자 화면의 플레이어 미리보기 칸입니다. 프리셋 편집기와 지면 편성 게시 전 미리보기가 같은 틀을 씁니다.
+          </p>
+          <iframe
+            src="components/PlayerPreview/preview.html"
+            title="PlayerPreview 미리보기"
+            loading="lazy"
+            style="height: 1700px"
+          ></iframe>
+        </article>
+      </section>
+      <section class="ds-group">
+        <h2 class="sa-card-title">도움말</h2>
+        <article class="ds-card" id="HelpMotion">
+          <header>
+            <h3>HelpMotion</h3>
+            <span class="sa-small">용어 카드와 모션 그림</span
+            ><a class="sa-small" href="components/HelpMotion/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">
+            도움말 용어 카드와 CSS·인라인 SVG 모션 그림, 필드 옆 "?" 링크입니다. 움직임 줄이기 설정에서는 핵심 상태 한
+            장만 보입니다.
+          </p>
+          <iframe
+            src="components/HelpMotion/preview.html"
+            title="HelpMotion 미리보기"
+            loading="lazy"
+            style="height: 760px"
+          ></iframe>
+        </article>
+        <article class="ds-card" id="Storyboard">
+          <header>
+            <h3>Storyboard</h3>
+            <span class="sa-small">로더 3장면, 사이트 적용 프리셋 2장면</span
+            ><a class="sa-small" href="components/Storyboard/preview.html">따로 열기</a>
+          </header>
+          <p class="sa-small">도움말 용어의 움직임을 2–4장면 정지 그림으로 나눠 보입니다.</p>
+          <iframe
+            src="components/Storyboard/preview.html"
+            title="Storyboard 미리보기"
+            loading="lazy"
+            style="height: 640px"
+          ></iframe>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!-- @dsCard group="화면 틀" height=330 width=1100 subtitle="대시보드 운영 할 일" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>TodoBanner</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <section class="sa-banner" aria-label="오늘의 할 일">
+        <div class="sa-banner-l">
+          <span class="sa-tag is-period">오늘의 할 일</span>
+          <h2 class="sa-banner-title">김운영 님, 확인할 일이<br /><em>11</em>건 있어요</h2>
+          <p>10.20 15:00 기준. 오래된 승인 대기부터 처리하면 집행이 늦어지지 않습니다.</p>
+          <div class="sa-row" style="gap: 14px">
+            <button class="sa-btn is-lime" type="button">승인함 열기</button
+            ><a class="sa-banner-link" href="#">캠페인 보기 →</a>
+          </div>
+        </div>
+        <ul class="sa-todo">
+          <li>
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+            ><span><b>소재 심사 대기</b><small>가을_15s v3 외 2건 · 가장 오래된 건 10.18</small></span
+            ><i>3</i>
+          </li>
+          <li>
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+            ><span><b>지면 편성 승인 대기</b><small>영상 #4821 제주 3박4일 · r8</small></span
+            ><i>1</i>
+          </li>
+          <li>
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+            ><span><b>집행 승인 대기</b><small>프리롤 보장 · 가을 여행 외 3건</small></span
+            ><i>4</i>
+          </li>
+          <li>
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+            ><span><b>7일 안에 종료되는 캠페인</b><small>가을 정기 세일 · 웹툰 '달빛 정원' 런칭</small></span
+            ><i>2</i>
+          </li>
+          <li class="is-bad">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="8" cy="8" r="6" />
+              <path d="M8 4.8v3.8M8 11.1v.1" /></svg
+            ><span><b>내 제출 중 반려</b><small>자사 구독 안내 배너 v1 · 클릭 URL 404</small></span
+            ><i>1</i>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!-- @dsCard group="도움말" height=760 width=1000 subtitle="용어 카드와 모션 그림" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>HelpMotion</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="gap: 16px">
+      <p class="sa-label">
+        스킵 대기 (초) <a class="sa-help-link" href="#/help/skip-offset" aria-label="스킵 대기 도움말">?</a>
+      </p>
+      <ul class="sa-terms">
+        <li>
+          <article class="sa-term" aria-labelledby="t-break">
+            <div class="sa-term-h">
+              <h4 id="t-break" tabindex="-1">광고 구간</h4>
+              <span class="sa-badge" data-st="active">지금 동작</span>
+            </div>
+            <p class="sa-body">
+              본편 시작 전, 재생 중 정한 초, 본편이 끝난 뒤 가운데 한 시점에 끼어드는 광고 묶음이에요.
+            </p>
+            <figure class="sa-motion">
+              <div
+                class="sa-motion-stage"
+                role="img"
+                aria-label="본편 앞에 프리롤, 본편 중간에 미드롤, 본편이 끝난 뒤 포스트롤이 차례로 재생되는 그림이에요."
+              >
+                <div class="sa-mo">
+                  <div class="sa-mo-segs">
+                    <div class="sa-mo-seg is-ad">
+                      <span class="sa-mo-bar"><i class="sa-mo-fill1"></i></span><span class="sa-mo-cap">프리롤</span>
+                    </div>
+                    <div class="sa-mo-seg is-content">
+                      <span class="sa-mo-bar"><i class="sa-mo-fill2"></i></span><span class="sa-mo-cap">본편</span>
+                    </div>
+                    <div class="sa-mo-seg is-ad">
+                      <span class="sa-mo-bar"><i class="sa-mo-fill3"></i></span><span class="sa-mo-cap">미드롤</span>
+                    </div>
+                    <div class="sa-mo-seg is-content">
+                      <span class="sa-mo-bar"><i class="sa-mo-fill4"></i></span><span class="sa-mo-cap">본편</span>
+                    </div>
+                    <div class="sa-mo-seg is-ad">
+                      <span class="sa-mo-bar"><i class="sa-mo-fill5"></i></span><span class="sa-mo-cap">포스트롤</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sa-motion-ctrl" role="group" aria-label="광고 구간 그림 조작">
+                <button type="button" class="sa-btn is-sm" aria-pressed="false" data-pause>일시정지</button>
+                <button type="button" class="sa-btn is-sm" data-replay>다시 보기</button>
+              </div>
+            </figure>
+            <p class="sa-small">관련 화면 · 지면 편성 › 광고 구간</p>
+          </article>
+        </li>
+        <li>
+          <article class="sa-term" aria-labelledby="t-skip">
+            <div class="sa-term-h">
+              <h4 id="t-skip" tabindex="-1">스킵 대기</h4>
+              <span class="sa-badge" data-st="active">지금 동작</span>
+            </div>
+            <p class="sa-body">광고가 재생을 시작한 뒤 건너뛰기 버튼을 누를 수 있을 때까지의 시간이에요.</p>
+            <figure class="sa-motion">
+              <div
+                class="sa-motion-stage"
+                role="img"
+                aria-label="광고가 재생되는 동안 5초 후 건너뛰기가 1초씩 줄어든 뒤 광고 건너뛰기 버튼이 켜지는 그림이에요."
+              >
+                <div class="sa-mo">
+                  <div class="sa-mo-screen">
+                    <span class="sa-mo-skip"
+                      ><span class="sa-mo-wait"
+                        ><span class="sa-mo-roll sa-mo-count"
+                          ><span
+                            ><span class="sa-mo-num">5</span><span class="sa-mo-num">4</span
+                            ><span class="sa-mo-num">3</span><span class="sa-mo-num">2</span
+                            ><span class="sa-mo-num">1</span></span
+                          ></span
+                        >초 후 건너뛰기</span
+                      ><span class="sa-mo-go">광고 건너뛰기</span></span
+                    >
+                    <span class="sa-mo-tag">광고</span>
+                    <span class="sa-mo-bar"><i class="sa-mo-play"></i></span>
+                  </div>
+                  <span class="sa-mo-cap">스킵 대기 5초</span>
+                </div>
+              </div>
+              <div class="sa-motion-ctrl" role="group" aria-label="스킵 대기 그림 조작">
+                <button type="button" class="sa-btn is-sm" aria-pressed="false" data-pause>일시정지</button>
+                <button type="button" class="sa-btn is-sm" data-replay>다시 보기</button>
+              </div>
+            </figure>
+            <p class="sa-small">관련 화면 · 지면 편성 › 스킵 대기 (초)</p>
+          </article>
+        </li>
+        <li>
+          <article class="sa-term" aria-labelledby="t-disabled">
+            <div class="sa-term-h">
+              <h4 id="t-disabled" tabindex="-1">광고 비활성화 · 상속 중단</h4>
+              <span class="sa-badge" data-st="active">지금 동작</span>
+            </div>
+            <p class="sa-body">이 대상에서 광고를 끄고, 위 단계 편성이 내려오는 것도 막아요.</p>
+            <figure class="sa-motion">
+              <div
+                class="sa-motion-stage"
+                role="img"
+                aria-label="게시판에서 광고를 비활성화하면 사이트 편성 A가 내려오지 못해 분류와 영상에도 광고가 없는 그림이에요."
+              >
+                <div class="sa-mo">
+                  <div class="sa-mo-tree">
+                    <span class="sa-mo-cap">사이트</span><span class="sa-mo-cap">게시판</span
+                    ><span class="sa-mo-cap">분류</span><span class="sa-mo-cap">영상</span>
+                    <span class="sa-mo-cap sa-mo-span">설정</span>
+                    <span class="sa-mo-box is-ad">A</span><span class="sa-mo-box is-off">비활성</span
+                    ><span class="sa-mo-box is-ghost">상속</span><span class="sa-mo-box is-ghost">상속</span>
+                    <span class="sa-mo-cap sa-mo-span">재생되는 편성</span>
+                    <span class="sa-mo-box is-ad sa-mo-in1">A</span><span class="sa-mo-box is-off sa-mo-in2">없음</span
+                    ><span class="sa-mo-box is-faint sa-mo-in3">없음</span
+                    ><span class="sa-mo-box is-faint sa-mo-in4">없음</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sa-motion-ctrl" role="group" aria-label="광고 비활성화 그림 조작">
+                <button type="button" class="sa-btn is-sm" aria-pressed="false" data-pause>일시정지</button>
+                <button type="button" class="sa-btn is-sm" data-replay>다시 보기</button>
+              </div>
+            </figure>
+            <p class="sa-small">관련 화면 · 지면 편성 › 이 대상의 광고</p>
+          </article>
+        </li>
+        <li>
+          <article class="sa-term" aria-labelledby="t-preview">
+            <div class="sa-term-h">
+              <h4 id="t-preview" tabindex="-1">게시 전 미리보기</h4>
+              <span class="sa-badge" data-st="active">지금 동작</span>
+            </div>
+            <p class="sa-body">편집 중인 초안을 실제 광고 모듈로 재생해 봐요. 통계에는 기록하지 않아요.</p>
+            <figure class="sa-motion">
+              <div
+                class="sa-motion-stage"
+                role="img"
+                aria-label="두 줄 그림이에요. 미리보기에서 나온 재생 신호는 통계로 가지 않고, 재생 테스트에서 나온 신호만 통계에 쌓여요."
+              >
+                <div class="sa-mo">
+                  <div class="sa-mo-lane is-focus">
+                    <span class="sa-mo-box">미리보기</span><span class="sa-mo-pipe"></span
+                    ><span class="sa-mo-box is-off">기록 안 함<small>통계</small></span>
+                  </div>
+                  <div class="sa-mo-lane sa-mo-dim">
+                    <span class="sa-mo-box">재생 테스트</span
+                    ><span class="sa-mo-pipe"
+                      ><i class="sa-mo-dot1"></i><i class="sa-mo-dot2"></i><i class="sa-mo-dot3"></i></span
+                    ><span class="sa-mo-box is-ad"
+                      >+<span class="sa-mo-roll sa-mo-tally"
+                        ><span
+                          ><span class="sa-mo-num">0</span><span class="sa-mo-num">1</span
+                          ><span class="sa-mo-num">2</span><span class="sa-mo-num">3</span></span
+                        ></span
+                      ><small>통계</small></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="sa-motion-ctrl" role="group" aria-label="게시 전 미리보기 그림 조작">
+                <button type="button" class="sa-btn is-sm" aria-pressed="false" data-pause>일시정지</button>
+                <button type="button" class="sa-btn is-sm" data-replay>다시 보기</button>
+              </div>
+            </figure>
+            <p class="sa-small">관련 화면 · 지면 편성 › 게시 전 미리보기</p>
+          </article>
+        </li>
+        <li>
+          <article class="sa-term" aria-labelledby="t-rate">
+            <div class="sa-term-h">
+              <h4 id="t-rate" tabindex="-1">완료와 완료율</h4>
+              <span class="sa-badge" data-st="active">지금 동작</span>
+            </div>
+            <p class="sa-body">완료는 시작한 광고 가운데 끝까지 재생된 수예요. 완료율은 완료 ÷ 시작이에요.</p>
+            <figure class="sa-motion">
+              <div
+                class="sa-motion-stage"
+                role="img"
+                aria-label="시작 10칸 가운데 7칸이 끝까지 재생되어 완료율 70%가 되는 그림이에요."
+              >
+                <div class="sa-mo">
+                  <span class="sa-mo-pips"
+                    ><span class="sa-mo-pip is-done"></span><span class="sa-mo-pip is-done"></span
+                    ><span class="sa-mo-pip is-done"></span><span class="sa-mo-pip is-done"></span
+                    ><span class="sa-mo-pip is-done"></span><span class="sa-mo-pip is-done"></span
+                    ><span class="sa-mo-pip is-done"></span><span class="sa-mo-pip"></span
+                    ><span class="sa-mo-pip"></span><span class="sa-mo-pip"></span
+                  ></span>
+                  <span class="sa-mo-legend"
+                    ><span><span class="sa-mo-pip"></span>시작</span
+                    ><span><span class="sa-mo-pip is-done"></span>완료</span></span
+                  >
+                  <span class="sa-mo-formula sa-mo-in4">완료 7 ÷ 시작 10 = 완료율 70%</span>
+                </div>
+              </div>
+              <div class="sa-motion-ctrl" role="group" aria-label="완료와 완료율 그림 조작">
+                <button type="button" class="sa-btn is-sm" aria-pressed="false" data-pause>일시정지</button>
+                <button type="button" class="sa-btn is-sm" data-replay>다시 보기</button>
+              </div>
+            </figure>
+            <p class="sa-small">관련 화면 · 리포트 › 기본 통계</p>
+          </article>
+        </li>
+        <li>
+          <article class="sa-term" aria-labelledby="t-request">
+            <div class="sa-term-h">
+              <h4 id="t-request" tabindex="-1">광고 요청</h4>
+              <span class="sa-badge" data-st="draft">목업</span>
+            </div>
+            <p class="sa-body">
+              회원이 사이트에 광고 게재를 신청하고 관리자가 검토하는 흐름이에요. 지금은 목업 화면이라 처리되지 않아요.
+            </p>
+            <figure class="sa-motion is-once">
+              <div
+                class="sa-motion-stage"
+                role="img"
+                aria-label="요청이 접수, 검토, 집행 예정, 집행, 종료로 넘어가고, 갈림길로 보완 요청과 반려가 있는 그림이에요."
+              >
+                <div class="sa-mo">
+                  <div class="sa-mo-flow">
+                    <span class="sa-mo-item sa-mo-in1"><span class="sa-badge" data-st="draft">접수</span></span
+                    ><span class="sa-mo-item sa-mo-in2"><span class="sa-badge" data-st="pending">검토</span></span
+                    ><span class="sa-mo-item sa-mo-in3"
+                      ><span class="sa-badge" data-st="scheduled">집행 예정</span></span
+                    ><span class="sa-mo-item sa-mo-in4"><span class="sa-badge" data-st="active">집행</span></span
+                    ><span class="sa-mo-item sa-mo-in5"><span class="sa-badge" data-st="done">종료</span></span>
+                  </div>
+                  <div class="sa-mo-flow">
+                    <span class="sa-mo-cap sa-mo-in5">갈림길</span
+                    ><span class="sa-mo-item sa-mo-in5"><span class="sa-badge" data-st="paused">보완 요청</span></span
+                    ><span class="sa-mo-item sa-mo-in5"><span class="sa-badge" data-st="rejected">반려</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="sa-motion-ctrl" role="group" aria-label="광고 요청 그림 조작">
+                <button type="button" class="sa-btn is-sm" data-replay>다시 보기</button>
+              </div>
+            </figure>
+            <p class="sa-small">관련 화면 · 광고 요청(목업)</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <script>
+      // 미리보기용 조작. 앱에서는 HelpMotion 컴포넌트가 같은 일을 한다.
+      // 움직임 줄이기 설정에서는 효과 없는 버튼을 숨긴다(설정이 바뀌면 따라간다).
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const syncControls = () => {
+        for (const group of document.querySelectorAll('.sa-motion-ctrl')) group.hidden = reduce.matches;
+      };
+      syncControls();
+      reduce.addEventListener('change', syncControls);
+
+      for (const figure of document.querySelectorAll('.sa-motion')) {
+        const pause = figure.querySelector('[data-pause]');
+        pause?.addEventListener('click', () => {
+          const paused = figure.classList.toggle('is-paused');
+          pause.setAttribute('aria-pressed', String(paused));
+        });
+        figure.querySelector('[data-replay]')?.addEventListener('click', () => {
+          const stage = figure.querySelector('.sa-motion-stage');
+          figure.classList.remove('is-paused');
+          pause?.setAttribute('aria-pressed', 'false');
+          stage.replaceWith(stage.cloneNode(true));
+        });
+      }
+    </script>
+  </body>
+</html>

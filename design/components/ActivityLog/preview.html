@@ -1,0 +1,39 @@
+<!-- @dsCard group="데이터" height=420 subtitle="최신 순 처리 기록, 광고 진행 기록 상자" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>ActivityLog</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="max-width: 640px">
+      <section class="sa-card" aria-labelledby="l1">
+        <div class="sa-card-h"><h2 class="sa-card-title" id="l1">처리 기록</h2></div>
+        <ol class="sa-log">
+          <li>
+            <time class="sa-num" datetime="2026-10-18T10:31">10.18 10:31</time><span>admin이 검토를 시작했어요.</span>
+          </li>
+          <li>
+            <time class="sa-num" datetime="2026-10-18T09:12">10.18 09:12</time
+            ><span>요청이 접수됐어요. 쪽지 알림을 보냈어요(admin).</span>
+          </li>
+        </ol>
+      </section>
+
+      <p class="sa-cap">광고 진행 기록 상자 (데모 · 재생 테스트)</p>
+      <section class="sa-card" aria-labelledby="ad-log-h" style="display: grid; gap: var(--gap-md); max-width: 360px">
+        <h2 class="sa-card-title" id="ad-log-h">광고 진행 기록</h2>
+        <div class="sa-logbox" role="region" aria-labelledby="ad-log-h" tabindex="0">
+          <ol class="sa-log">
+            <li><time class="sa-num" datetime="12:04:31">12:04:31</time><span>미드롤 1/2 · 시작</span></li>
+            <li><time class="sa-num" datetime="12:04:02">12:04:02</time><span>프리롤 1/1 · 끝남</span></li>
+            <li><time class="sa-num" datetime="12:03:49">12:03:49</time><span>프리롤 1/1 · 건너뜀</span></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

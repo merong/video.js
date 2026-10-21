@@ -1,0 +1,83 @@
+<!-- @dsCard group="데이터" height=330 subtitle="설치 코드, 복사, 결과 알림" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>CodeBlock</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <span class="sa-cap">복사 전</span>
+      <div class="sa-codeblock">
+        <div class="sa-codeblock-head">
+          <span class="sa-codeblock-title" id="k1-title">설치 코드</span
+          ><button class="sa-btn is-sm" type="button" id="k1-copy" aria-labelledby="k1-title k1-copy">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <rect x="5.5" y="5.5" width="8" height="8" rx="1.5" />
+              <path d="M10.5 3.5v-.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h.5" /></svg
+            >복사
+          </button>
+        </div>
+        <pre
+          role="region"
+          aria-labelledby="k1-title"
+          tabindex="0"
+        ><code>&lt;link rel="stylesheet" href="/ads/assets/videojs/video.css" /&gt;
+&lt;script type="module" src="/ads/assets/videojs/video.js"&gt;&lt;/script&gt;
+&lt;video-player&gt;
+	&lt;video-skin style="--media-accent-color: #cdf352; --media-border-radius: 12px"&gt;
+		&lt;video src="https://example.com/content.mp4" playsinline&gt;&lt;/video&gt;
+	&lt;/video-skin&gt;
+&lt;/video-player&gt;</code></pre>
+        <p class="sa-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+      <span class="sa-cap">복사하지 못했을 때 · 코드를 선택하고 안내</span>
+      <div class="sa-codeblock">
+        <div class="sa-codeblock-head">
+          <span class="sa-codeblock-title" id="k2-title">예제 페이지 쿼리</span
+          ><button class="sa-btn is-sm" type="button" id="k2-copy" aria-labelledby="k2-title k2-copy">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <rect x="5.5" y="5.5" width="8" height="8" rx="1.5" />
+              <path d="M10.5 3.5v-.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h.5" /></svg
+            >복사
+          </button>
+        </div>
+        <pre
+          role="region"
+          aria-labelledby="k2-title"
+          tabindex="0"
+        ><code>?video=free:12:main&amp;preset=p-a1b2c3d4e5</code></pre>
+        <p class="sa-status is-warn" role="status" aria-live="polite" aria-atomic="true">
+          복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.
+        </p>
+      </div>
+    </div>
+    <script>
+      // 미리보기용: 클립보드가 있으면 복사하고, 없으면 코드를 선택해 안내한다.
+      document.querySelectorAll('.sa-codeblock').forEach(function (box) {
+        var pre = box.querySelector('pre');
+        var status = box.querySelector('.sa-status');
+        box.querySelector('.sa-btn').addEventListener('click', function () {
+          function fail() {
+            pre.focus();
+            var range = document.createRange();
+            range.selectNodeContents(pre);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            status.className = 'sa-status is-warn';
+            status.textContent = '복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.';
+          }
+          if (!navigator.clipboard) return fail();
+          navigator.clipboard.writeText(pre.textContent).then(function () {
+            status.className = 'sa-status is-good';
+            status.textContent = '복사했어요.';
+          }, fail);
+        });
+      });
+    </script>
+  </body>
+</html>

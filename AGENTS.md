@@ -30,6 +30,7 @@ When prose conflicts with executable sources, follow the executable source and u
 - `apps/sandbox`: Vite playground. `templates/` is tracked; `src/` is scratch.
 - `apps/e2e`: Playwright coverage.
 - `site`: Astro documentation site; follow `site/AGENTS.md`.
+- `design`: ads manager (솔애드 관리자) design system: `tokens.json` source, generated `tokens.css`, component CSS and previews.
 
 Keep framework-neutral packages free of DOM or framework dependencies. Put platform behavior in the appropriate adapter or binding package.
 

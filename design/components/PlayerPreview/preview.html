@@ -1,0 +1,333 @@
+<!-- @dsCard group="화면 예시" height=1700 width=1280 subtitle="관리자 편집기 플레이어 미리보기, 지면 편성 게시 전 미리보기" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>PlayerPreview</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <div class="sa-row" style="align-items: start; gap: var(--gap-lg)">
+        <div style="display: grid; gap: var(--gap-sm); flex: 0 1 460px; min-width: 0">
+          <p class="sa-cap">프리셋 편집기 · 저장하지 않은 입력이 있음 · 언어 비움</p>
+          <section class="sa-ppv sa-card" aria-labelledby="e-h">
+            <div class="sa-ppv-h">
+              <h2 class="sa-card-title" id="e-h">플레이어 미리보기</h2>
+              <span class="sa-small">저장하기 전 입력도 보여요</span>
+            </div>
+            <p class="sa-status" role="status"></p>
+            <div class="sa-stage">
+              <div class="sa-stage-bar">
+                <div class="sa-field">
+                  <span class="sa-label" id="e-w-l">폭 보기</span>
+                  <div class="sa-seg" role="radiogroup" aria-labelledby="e-w-l" aria-describedby="e-w-n">
+                    <label><input type="radio" name="e-w" value="390" />좁게 · 390</label
+                    ><label><input type="radio" name="e-w" value="768" checked />보통 · 768</label
+                    ><label><input type="radio" name="e-w" value="fill" />넓게 · 자리 폭</label>
+                  </div>
+                </div>
+                <p class="sa-small" id="e-w-n" data-scale-note>자리 폭 · 실제 크기예요</p>
+              </div>
+              <div class="sa-stage-view">
+                <div class="sa-stage-frame">
+                  <div
+                    class="sa-pm"
+                    role="img"
+                    aria-label="본편 장면: 제목, 오른쪽 위 로고, ±10초 버튼과 PiP가 있는 컨트롤"
+                    style="--sa-pm-radius: 28px"
+                  >
+                    <span class="sa-pm-scene"></span><span class="sa-pm-title">회사 소개</span
+                    ><span class="sa-pm-logo is-tr">LOGO</span>
+                    <div class="sa-pm-ctl">
+                      <div class="sa-pm-row">
+                        <span class="sa-pm-track" style="--_p: 38%"><b></b></span>
+                      </div>
+                      <div class="sa-pm-row">
+                        <span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" /></svg></span
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20">
+                            <path d="M4 10a6 6 0 1 0 2-4.5" />
+                            <path d="M4 3v3h3" /></svg
+                          ><span class="sa-pm-n">10</span></span
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20">
+                            <path d="M16 10a6 6 0 1 1-2-4.5" />
+                            <path d="M16 3v3h-3" /></svg
+                          ><span class="sa-pm-n">10</span></span
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20">
+                            <path d="M3 8h3l4-3v10l-4-3H3z" />
+                            <path d="M13 7.5a3.5 3.5 0 0 1 0 5" /></svg></span
+                        ><span class="sa-pm-time">1:24 / 3:40</span><span class="sa-pm-sp"></span
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="2.5" />
+                            <path
+                              d="M10 3v2M10 15v2M3 10h2M15 10h2M5 5l1.4 1.4M13.6 13.6 15 15M5 15l1.4-1.4M13.6 6.4 15 5"
+                            /></svg></span
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20">
+                            <rect x="3" y="4" width="14" height="12" rx="2" />
+                            <rect x="10" y="10" width="5" height="4" /></svg></span
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4" /></svg
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sa-stage-tools">
+                <span class="sa-label" id="e-j-l">장면 바로가기</span>
+                <div class="sa-row" role="group" aria-labelledby="e-j-l">
+                  <button class="sa-btn is-sm" type="button">처음부터</button
+                  ><button class="sa-btn is-sm" type="button">미드롤 앞</button
+                  ><button class="sa-btn is-sm" type="button">끝 직전</button
+                  ><button class="sa-btn is-sm" type="button">다시 불러오기</button>
+                </div>
+              </div>
+              <p class="sa-stage-now"><span>최근 광고 진행</span><span>아직 광고가 나오지 않았어요</span></p>
+            </div>
+            <div class="sa-field">
+              <label class="sa-label" for="e-lang">페이지 언어</label>
+              <select class="sa-input" id="e-lang" aria-describedby="e-lang-h">
+                <option selected>한국어 (ko)</option>
+                <option>영어 (en)</option>
+                <option>일본어 (ja)</option>
+                <option>중국어 간체 (zh-CN)</option>
+                <option>그 밖의 언어 (fr)</option>
+              </select>
+              <span class="sa-help" id="e-lang-h"
+                >플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요.</span
+              >
+            </div>
+            <div class="sa-ppv-f">
+              <span class="sa-btn-why"
+                ><button class="sa-btn" type="button" aria-disabled="true" aria-describedby="e-demo-why">
+                  <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M9 3h4v4M13 3 7.5 8.5M11 9.5V13H3V5h3.5" /></svg
+                  >데모에서 열기</button
+                ><span class="sa-help" id="e-demo-why"
+                  >저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요.</span
+                ></span
+              >
+            </div>
+          </section>
+        </div>
+
+        <div style="display: grid; gap: var(--gap-sm); flex: 0 1 460px; min-width: 0">
+          <p class="sa-cap">프리셋 편집기 · 저장됨 · 언어 지정(ja) · 광고 중</p>
+          <section class="sa-ppv sa-card" aria-labelledby="s-h">
+            <div class="sa-ppv-h">
+              <h2 class="sa-card-title" id="s-h">플레이어 미리보기</h2>
+              <span class="sa-small">저장하기 전 입력도 보여요</span>
+            </div>
+            <p class="sa-status" role="status"></p>
+            <div class="sa-stage">
+              <div class="sa-stage-bar">
+                <div class="sa-field">
+                  <span class="sa-label" id="s-w-l">폭 보기</span>
+                  <div class="sa-seg" role="radiogroup" aria-labelledby="s-w-l" aria-describedby="s-w-n">
+                    <label><input type="radio" name="s-w" value="390" />좁게 · 390</label
+                    ><label><input type="radio" name="s-w" value="768" />보통 · 768</label
+                    ><label><input type="radio" name="s-w" value="fill" checked />넓게 · 자리 폭</label>
+                  </div>
+                </div>
+                <p class="sa-small" id="s-w-n" data-scale-note>자리 폭 · 실제 크기예요</p>
+              </div>
+              <div class="sa-stage-view">
+                <div class="sa-stage-frame">
+                  <div
+                    class="sa-pm"
+                    role="img"
+                    aria-label="광고 중 장면: 광고 1/2 배지, 시간 0:07 / 0:15, 건너뛰기 버튼, 맨 아래 진행 막대"
+                  >
+                    <span class="sa-pm-scene"></span><span class="sa-pm-badge">광고 1/2</span>
+                    <div class="sa-pm-adfoot">
+                      <span class="sa-pm-row"
+                        ><span class="sa-pm-btn"
+                          ><svg viewBox="0 0 20 20">
+                            <path d="M3 8h3l4-3v10l-4-3H3z" />
+                            <path d="M13 7.5a3.5 3.5 0 0 1 0 5" /></svg></span
+                        ><span class="sa-pm-time">0:07 / 0:15</span></span
+                      ><span class="sa-pm-skip">광고 건너뛰기</span>
+                    </div>
+                    <span class="sa-pm-adbar" style="--_p: 46%"><b></b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="sa-stage-tools">
+                <span class="sa-label" id="s-j-l">장면 바로가기</span>
+                <div class="sa-row" role="group" aria-labelledby="s-j-l">
+                  <button class="sa-btn is-sm" type="button">처음부터</button
+                  ><button class="sa-btn is-sm" type="button">미드롤 앞</button
+                  ><button class="sa-btn is-sm" type="button">끝 직전</button
+                  ><button class="sa-btn is-sm" type="button">다시 불러오기</button>
+                </div>
+              </div>
+              <p class="sa-stage-now">
+                <span>최근 광고 진행</span><span>프리롤 1/2 재생 중</span><time datetime="10:12:08">10:12:08</time>
+              </p>
+            </div>
+            <div class="sa-ppv-f">
+              <a class="sa-btn" href="#" target="_blank"
+                ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M9 3h4v4M13 3 7.5 8.5M11 9.5V13H3V5h3.5" /></svg
+                >데모에서 열기<span class="sa-sr"> (새 창)</span></a
+              >
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <p class="sa-cap">지면 편성 · 게시 전 미리보기 (같은 틀, 프리셋 고르기 자리가 위에 있고 데모 링크가 없음)</p>
+      <section class="sa-ppv sa-card" aria-labelledby="p-h" style="max-width: 640px">
+        <div class="sa-ppv-h">
+          <h2 class="sa-card-title" id="p-h">게시 전 미리보기</h2>
+          <span class="sa-small">통계에 남기지 않아요</span>
+        </div>
+        <div class="sa-field">
+          <label class="sa-label" for="p-preset">적용할 프리셋</label>
+          <select class="sa-input" id="p-preset" aria-describedby="p-preset-h">
+            <option selected>이벤트 페이지 (사이트 적용)</option>
+            <option>공지 영상</option>
+            <option>기본</option>
+            <option>플랫</option>
+            <option>둥근 테두리</option>
+            <option>강조색</option>
+          </select>
+          <span class="sa-help" id="p-preset-h"
+            >고른 프리셋 모양으로 이 초안을 재생해요. 편성에는 저장되지 않아요.</span
+          >
+        </div>
+        <p class="sa-status" role="status"></p>
+        <div class="sa-stage">
+          <div class="sa-stage-bar">
+            <div class="sa-field">
+              <span class="sa-label" id="p-w-l">폭 보기</span>
+              <div class="sa-seg" role="radiogroup" aria-labelledby="p-w-l" aria-describedby="p-w-n">
+                <label><input type="radio" name="p-w" value="390" />좁게 · 390</label
+                ><label><input type="radio" name="p-w" value="768" />보통 · 768</label
+                ><label><input type="radio" name="p-w" value="fill" checked />넓게 · 자리 폭</label>
+              </div>
+            </div>
+            <p class="sa-small" id="p-w-n" data-scale-note>자리 폭 · 실제 크기예요</p>
+          </div>
+          <div class="sa-stage-view">
+            <div class="sa-stage-frame">
+              <div
+                class="sa-pm"
+                role="img"
+                aria-label="본편 장면: 제목, 오른쪽 위 로고, ±10초 버튼과 PiP가 있는 컨트롤"
+                style="--sa-pm-radius: 28px"
+              >
+                <span class="sa-pm-scene"></span><span class="sa-pm-title">회사 소개</span
+                ><span class="sa-pm-logo is-tr">LOGO</span>
+                <div class="sa-pm-ctl">
+                  <div class="sa-pm-row">
+                    <span class="sa-pm-track" style="--_p: 38%"><b></b></span>
+                  </div>
+                  <div class="sa-pm-row">
+                    <span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" /></svg></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <path d="M4 10a6 6 0 1 0 2-4.5" />
+                        <path d="M4 3v3h3" /></svg
+                      ><span class="sa-pm-n">10</span></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <path d="M16 10a6 6 0 1 1-2-4.5" />
+                        <path d="M16 3v3h-3" /></svg
+                      ><span class="sa-pm-n">10</span></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <path d="M3 8h3l4-3v10l-4-3H3z" />
+                        <path d="M13 7.5a3.5 3.5 0 0 1 0 5" /></svg></span
+                    ><span class="sa-pm-time">1:24 / 3:40</span><span class="sa-pm-sp"></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="2.5" />
+                        <path
+                          d="M10 3v2M10 15v2M3 10h2M15 10h2M5 5l1.4 1.4M13.6 13.6 15 15M5 15l1.4-1.4M13.6 6.4 15 5"
+                        /></svg></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <rect x="3" y="4" width="14" height="12" rx="2" />
+                        <rect x="10" y="10" width="5" height="4" /></svg></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4" /></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sa-stage-tools">
+            <span class="sa-label" id="p-j-l">장면 바로가기</span>
+            <div class="sa-row" role="group" aria-labelledby="p-j-l">
+              <button class="sa-btn is-sm" type="button">처음부터</button
+              ><button class="sa-btn is-sm" type="button">미드롤 앞</button
+              ><button class="sa-btn is-sm" type="button">끝 직전</button
+              ><button class="sa-btn is-sm" type="button">다시 불러오기</button>
+            </div>
+          </div>
+          <p class="sa-stage-now">
+            <span>최근 광고 진행</span><span>미드롤 1/1 · 끝남</span><time datetime="10:20:41">10:20:41</time>
+          </p>
+        </div>
+      </section>
+
+      <p class="sa-cap">상태 · 준비 중 · 샘플 없음 · 프레임 오류 · 새 프리셋</p>
+      <div style="display: grid; gap: var(--gap-sm); max-width: 460px">
+        <p class="sa-status" role="status">미리보기를 준비하는 중이에요…</p>
+        <p class="sa-status is-warn" role="status">
+          샘플 미디어가 없어 미리보기를 재생할 수 없어요. 서버에 demo-media/grok-20261018/ 폴더를 넣어 주세요.
+        </p>
+        <p class="sa-status is-bad" role="alert">미리보기를 만들지 못했어요. 다시 불러오기를 눌러 주세요.</p>
+        <span class="sa-btn-why"
+          ><button class="sa-btn" type="button" aria-disabled="true" aria-describedby="n-demo-why">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M9 3h4v4M13 3 7.5 8.5M11 9.5V13H3V5h3.5" /></svg
+            >데모에서 열기</button
+          ><span class="sa-help" id="n-demo-why">새 프리셋은 저장한 뒤 데모에서 열 수 있어요.</span></span
+        >
+      </div>
+    </div>
+    <script>
+      // 폭 보기: 고른 폭으로 그리고, 자리보다 크면 줄인다. 높이는 16:9로 맞춘다.
+      function fitStage(stage) {
+        var view = stage.querySelector('.sa-stage-view');
+        var frame = stage.querySelector('.sa-stage-frame');
+        var note = stage.querySelector('[data-scale-note]');
+        var picked = stage.querySelector('.sa-stage-bar input:checked');
+        if (!view || !frame || !picked) return;
+        var room = view.clientWidth;
+        var w = picked.value === 'fill' ? room : Number(picked.value);
+        var s = Math.min(1, room / w);
+        frame.style.setProperty('--_w', w + 'px');
+        frame.style.setProperty('--_s', String(s));
+        view.style.setProperty('--_h', Math.round((w * 9) / 16) * s + 'px');
+        if (note) {
+          var label = picked.value === 'fill' ? '자리 폭 ' : '보이는 폭 ';
+          note.textContent =
+            label + w + 'px · ' + (s < 1 ? '실제의 ' + Math.round(s * 100) + '%로 줄여 보여요' : '실제 크기예요');
+        }
+      }
+      document.querySelectorAll('.sa-stage').forEach(function (stage) {
+        stage.addEventListener('change', function () {
+          fitStage(stage);
+        });
+        new ResizeObserver(function () {
+          fitStage(stage);
+        }).observe(stage);
+        fitStage(stage);
+      });
+    </script>
+  </body>
+</html>

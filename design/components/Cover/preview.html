@@ -1,0 +1,115 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>솔애드 관리자</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        overflow: hidden;
+      }
+      .cover {
+        position: relative;
+        height: 288px;
+        overflow: hidden;
+      }
+      .art {
+        position: absolute;
+        top: 0;
+        left: 480px;
+        width: 480px;
+        height: 288px;
+        overflow: hidden;
+      }
+      .art svg {
+        display: block;
+        width: 480px;
+        height: 288px;
+      }
+      .deep {
+        fill: var(--ink);
+        rx: var(--radius-banner);
+      }
+      .lime {
+        fill: var(--accent);
+        rx: var(--radius-card);
+      }
+      .olive {
+        fill: var(--accent-text);
+        rx: var(--radius-card);
+      }
+      .grey {
+        fill: var(--sub);
+        rx: var(--radius-card);
+      }
+      .tile {
+        fill: var(--bg);
+        rx: var(--radius-item);
+      }
+      .chip {
+        fill: var(--primary);
+        rx: var(--radius-tag);
+      }
+      .words {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        max-width: 440px;
+      }
+      .name {
+        margin: 0;
+        font: 800 96px/0.95 var(--font-sans, 'Noto Sans KR', sans-serif);
+        letter-spacing: -0.03em;
+        color: var(--ink);
+      }
+      .tag {
+        margin: 8px 0 0 2px;
+        font: 400 14px/20px var(--font-sans, 'Noto Sans KR', sans-serif);
+        color: var(--sub);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 480 288" width="480" height="288">
+          <!--
+  blocks      ink 264×240 (할 일 배너 slab, radius-banner) · accent 168×148 bled off the top · sub 104×120 · accent-text 80×120 bled off the right edge — about 40% of 960×288
+  arrangement one tall ink slab with satellites, the way the dashboard opens: dark banner left, lime and neutral blocks right; bottoms on one line 24 above the edge
+  pattern     tiles cut out of the slab in bg, each with a primary count chip: "geometric, modular, dense UI" — the banner's to-do list is this system's signature
+  scales      tile 224×28 at a row-head-h pitch (36), radius-item corners; chips 24×16 radius-tag; blocks radius-card; slab radius-banner; gutters gap-lg (16)
+-->
+          <rect class="deep" x="16" y="24" width="264" height="240" rx="20" />
+          <rect class="lime" x="296" y="-20" width="168" height="148" rx="12" />
+          <rect class="grey" x="296" y="144" width="104" height="120" rx="12" />
+          <rect class="olive" x="416" y="144" width="80" height="120" rx="12" />
+          <rect class="tile" x="36" y="58" width="224" height="28" rx="10" />
+          <rect class="tile" x="36" y="94" width="224" height="28" rx="10" />
+          <rect class="tile" x="36" y="130" width="224" height="28" rx="10" />
+          <rect class="tile" x="36" y="166" width="224" height="28" rx="10" />
+          <rect class="tile" x="36" y="202" width="224" height="28" rx="10" />
+          <rect class="chip" x="228" y="64" width="24" height="16" rx="4" />
+          <rect class="chip" x="228" y="100" width="24" height="16" rx="4" />
+          <rect class="chip" x="228" y="136" width="24" height="16" rx="4" />
+          <rect class="chip" x="228" y="172" width="24" height="16" rx="4" />
+          <rect class="chip" x="228" y="208" width="24" height="16" rx="4" />
+        </svg>
+      </div>
+      <div class="words">
+        <h1 class="name">솔애드<br />관리자</h1>
+        <p class="tag">클래스픽 스튜디오 스타일로 만든 광고 관리 화면</p>
+      </div>
+    </div>
+  </body>
+</html>

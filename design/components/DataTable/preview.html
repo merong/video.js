@@ -1,0 +1,463 @@
+<!-- @dsCard group="데이터" height=1220 width=1100 subtitle="기본 표, 밀집 표, 동작 열 고정, 프리셋 표, 좁은 화면" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>DataTable</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <span class="sa-cap">기본 · 행 46px, 셀 13.5px, 숫자 13px · 마지막 "열기" 열은 is-pinned</span>
+      <div class="sa-card is-flush">
+        <div class="sa-scroll">
+          <table class="sa-table" aria-label="집행 목록">
+            <thead>
+              <tr>
+                <th scope="col">켜기</th>
+                <th scope="col">집행</th>
+                <th scope="col">상태</th>
+                <th scope="col">등급</th>
+                <th scope="col">기간</th>
+                <th scope="col">진도</th>
+                <th scope="col" class="num">노출</th>
+                <th scope="col" class="num">완료율</th>
+                <th scope="col" class="num">클릭률</th>
+                <th scope="col" class="is-pinned"><span class="sa-sr">동작</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-selected">
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="true"
+                    aria-label="프리롤 보장 · 가을 여행 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>프리롤 보장 · 가을 여행</b><small>L-2041 · 수정본 r4 승인 대기</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td><span class="sa-tag is-guaranteed">보장</span></td>
+                <td class="sa-num">10.10 – 11.10</td>
+                <td>
+                  <div class="sa-progress">
+                    <div class="sa-bar" style="--v: 34.1; --e: 33.2" role="img" aria-label="진도 34.1% · 기대 33.2%">
+                      <i></i><b></b>
+                    </div>
+                    <span class="sa-small">34.1% · 기대 33.2%</span>
+                  </div>
+                </td>
+                <td class="num">102,300</td>
+                <td class="num">72.4%</td>
+                <td class="num">2.21%</td>
+                <td class="is-pinned">
+                  <button class="sa-btn is-sm" type="button" aria-label="프리롤 보장 · 가을 여행 열기">열기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="true"
+                    aria-label="여행 게시판 점유 40% 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>여행 게시판 점유 40%</b><small>L-2038</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td><span class="sa-tag is-period">기간제</span></td>
+                <td class="sa-num">10.15 – 10.31</td>
+                <td><span class="sa-small">–</span></td>
+                <td class="num">41,870</td>
+                <td class="num">70.9%</td>
+                <td class="num">1.98%</td>
+                <td class="is-pinned">
+                  <button class="sa-btn is-sm" type="button" aria-label="여행 게시판 점유 40% 열기">열기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="false"
+                    aria-label="미드롤 보장 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>미드롤 보장</b><small>L-2044 · 10.18 일시중지</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="paused">일시중지</span></td>
+                <td><span class="sa-tag is-guaranteed">보장</span></td>
+                <td class="sa-num">10.10 – 10.31</td>
+                <td>
+                  <div class="sa-progress">
+                    <div class="sa-bar" style="--v: 54.2; --e: 50" role="img" aria-label="진도 54.2% · 기대 50.0%">
+                      <i></i><b></b>
+                    </div>
+                    <span class="sa-small">54.2% · 기대 50.0%</span>
+                  </div>
+                </td>
+                <td class="num">81,230</td>
+                <td class="num">74.1%</td>
+                <td class="num">2.35%</td>
+                <td class="is-pinned">
+                  <button class="sa-btn is-sm" type="button" aria-label="미드롤 보장 열기">열기</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <span class="sa-cap">밀집 · 행 40px, 셀 13px, 숫자 12.5px · 승인함, 집행 표, 지면 편성, 소재 목록</span>
+      <div class="sa-card is-flush sa-dense">
+        <div class="sa-toolbar">
+          <div class="sa-chips" role="group" aria-label="상태 필터">
+            <button class="sa-chip" type="button" aria-pressed="true">전체<b>5</b></button
+            ><button class="sa-chip" type="button" aria-pressed="false">진행<b>3</b></button
+            ><button class="sa-chip" type="button" aria-pressed="false">일시중지<b>1</b></button
+            ><button class="sa-chip" type="button" aria-pressed="false">종료<b>1</b></button>
+          </div>
+          <span class="sa-spacer"></span
+          ><span class="sa-search" style="width: 180px"
+            ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5L14 14" /></svg
+            >집행 검색</span
+          >
+        </div>
+        <div class="sa-scroll">
+          <table class="sa-table" aria-label="집행 목록">
+            <thead>
+              <tr>
+                <th scope="col">켜기</th>
+                <th scope="col">집행</th>
+                <th scope="col">상태</th>
+                <th scope="col">등급</th>
+                <th scope="col">기간</th>
+                <th scope="col">진도</th>
+                <th scope="col" class="num">노출</th>
+                <th scope="col" class="num">완료율</th>
+                <th scope="col" class="num">클릭률</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-selected">
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="true"
+                    aria-label="프리롤 보장 · 가을 여행 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>프리롤 보장 · 가을 여행</b><small>L-2041 · 수정본 r4 승인 대기</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td><span class="sa-tag is-guaranteed">보장</span></td>
+                <td class="sa-num">10.10 – 11.10</td>
+                <td>
+                  <div class="sa-progress">
+                    <div class="sa-bar" style="--v: 34.1; --e: 33.2" role="img" aria-label="진도 34.1% · 기대 33.2%">
+                      <i></i><b></b>
+                    </div>
+                    <span class="sa-small">34.1% · 기대 33.2%</span>
+                  </div>
+                </td>
+                <td class="num">102,300</td>
+                <td class="num">72.4%</td>
+                <td class="num">2.21%</td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="true"
+                    aria-label="여행 게시판 점유 40% 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>여행 게시판 점유 40%</b><small>L-2038</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td><span class="sa-tag is-period">기간제</span></td>
+                <td class="sa-num">10.15 – 10.31</td>
+                <td><span class="sa-small">–</span></td>
+                <td class="num">41,870</td>
+                <td class="num">70.9%</td>
+                <td class="num">1.98%</td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="false"
+                    aria-label="미드롤 보장 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>미드롤 보장</b><small>L-2044 · 10.18 일시중지</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="paused">일시중지</span></td>
+                <td><span class="sa-tag is-guaranteed">보장</span></td>
+                <td class="sa-num">10.10 – 10.31</td>
+                <td>
+                  <div class="sa-progress">
+                    <div class="sa-bar" style="--v: 54.2; --e: 50" role="img" aria-label="진도 54.2% · 기대 50.0%">
+                      <i></i><b></b>
+                    </div>
+                    <span class="sa-small">54.2% · 기대 50.0%</span>
+                  </div>
+                </td>
+                <td class="num">81,230</td>
+                <td class="num">74.1%</td>
+                <td class="num">2.35%</td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="true"
+                    aria-label="자사 구독 안내 켜기"
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>자사 구독 안내</b><small>L-0007 · 가중치 3</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td><span class="sa-tag is-house">하우스</span></td>
+                <td class="sa-num">상시</td>
+                <td><span class="sa-small">–</span></td>
+                <td class="num">12,410</td>
+                <td class="num">65.2%</td>
+                <td class="num">0.84%</td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    class="sa-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="false"
+                    aria-label="추석 프리롤 켜기"
+                    disabled
+                  ></button>
+                </td>
+                <td>
+                  <div class="sa-name"><b>추석 프리롤</b><small>L-1990</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="under">미달 종료</span></td>
+                <td><span class="sa-tag is-guaranteed">보장</span></td>
+                <td class="sa-num">10.01 – 10.09</td>
+                <td>
+                  <div class="sa-progress is-behind">
+                    <div class="sa-bar" style="--v: 91.6; --e: 100" role="img" aria-label="진도 91.6% · 미달">
+                      <i></i><b></b>
+                    </div>
+                    <span class="sa-small">91.6% · 미달</span>
+                  </div>
+                </td>
+                <td class="num">109,920</td>
+                <td class="num">71.0%</td>
+                <td class="num">2.02%</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td colspan="5">집행 5개 결과</td>
+                <td class="num">347,730</td>
+                <td class="num">71.6%</td>
+                <td class="num">2.09%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <span class="sa-cap"
+        >좁은 폭 · 표가 가로로 넘쳐도 "열기" 열은 카드 오른쪽 끝에 남습니다 (캠페인 목록, 768px 화면)</span
+      >
+      <div class="sa-card is-flush" style="max-width: 560px">
+        <div class="sa-scroll" role="region" aria-label="캠페인 목록" tabindex="0">
+          <table class="sa-table" aria-label="캠페인 목록">
+            <thead>
+              <tr>
+                <th scope="col">캠페인</th>
+                <th scope="col">계약 기간</th>
+                <th scope="col">진도</th>
+                <th scope="col" class="num">어제 노출</th>
+                <th scope="col">상태</th>
+                <th scope="col" class="is-pinned"><span class="sa-sr">동작</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="sa-name"><b>예시 캠페인 A</b><small>예시 광고주</small></div>
+                </td>
+                <td class="sa-num">10.01 – 10.31</td>
+                <td>
+                  <div class="sa-progress">
+                    <div class="sa-bar" style="--v: 61.3; --e: 64.5" role="img" aria-label="진도 61.3% · 기대 64.5%">
+                      <i></i><b></b>
+                    </div>
+                    <span class="sa-small">61.3% · 기대 64.5%</span>
+                  </div>
+                </td>
+                <td class="num">31,320</td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td class="is-pinned">
+                  <button class="sa-btn is-sm" type="button" aria-label="예시 캠페인 A 열기">열기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sa-name"><b>예시 캠페인 B</b><small>예시 광고주</small></div>
+                </td>
+                <td class="sa-num">10.10 – 11.10</td>
+                <td><span class="sa-small">보장 집행 없음</span></td>
+                <td class="num">8,410</td>
+                <td><span class="sa-badge" data-st="paused">일시중지</span></td>
+                <td class="is-pinned">
+                  <button class="sa-btn is-sm" type="button" aria-label="예시 캠페인 B 열기">열기</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <span class="sa-cap">플레이어 프리셋 표 · 사이트 적용 열, 미리보기(동작 칸 맨 앞), 막힌 동작과 이유</span>
+      <div class="sa-card is-flush">
+        <div class="sa-toolbar"><h2 class="sa-card-title" id="pv-preset-t">플레이어 프리셋</h2></div>
+        <div class="sa-scroll" role="region" aria-labelledby="pv-preset-t" tabindex="0">
+          <table class="sa-table" aria-labelledby="pv-preset-t">
+            <thead>
+              <tr>
+                <th scope="col">이름</th>
+                <th scope="col">플레이어 종류</th>
+                <th scope="col">사이트 적용</th>
+                <th scope="col" class="num">바꾼 날</th>
+                <th scope="col" class="is-pinned"><span class="sa-sr">동작</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="sa-name"><b>공지 영상</b><small>preset-notice</small></div>
+                </td>
+                <td>Video.js</td>
+                <td><span class="sa-badge is-site">사이트 적용</span></td>
+                <td class="num">10.20</td>
+                <td class="is-pinned">
+                  <div class="sa-row">
+                    <button class="sa-btn is-sm" type="button" aria-label="공지 영상 미리보기">미리보기</button
+                    ><button class="sa-btn is-sm" type="button" aria-label="공지 영상 편집">편집</button
+                    ><span class="sa-btn-why"
+                      ><button class="sa-btn is-sm" type="button" aria-disabled="true" aria-describedby="pv-why-1">
+                        사이트에 적용</button
+                      ><span class="sa-small" id="pv-why-1">지금 적용된 프리셋이에요</span></span
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sa-name"><b>이벤트 페이지</b><small>preset-event</small></div>
+                </td>
+                <td>Video.js <span class="sa-badge is-moved">중립 스킨에서 옮김</span></td>
+                <td></td>
+                <td class="num">10.18</td>
+                <td class="is-pinned">
+                  <div class="sa-row">
+                    <button class="sa-btn is-sm" type="button" aria-label="이벤트 페이지 미리보기">미리보기</button
+                    ><button class="sa-btn is-sm" type="button" aria-label="이벤트 페이지 편집">편집</button
+                    ><button class="sa-btn is-sm" type="button" aria-label="이벤트 페이지를 사이트에 적용">
+                      사이트에 적용
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <span class="sa-cap"
+        >390px 화면 · 숨긴 caption과 "관리" 머리글(sa-sr)도 sa-scroll 안에 갇혀 페이지 폭을 늘리지 않습니다</span
+      >
+      <div class="sa-card is-flush" style="max-width: 358px">
+        <div class="sa-scroll" role="region" aria-labelledby="pv-house-caption" tabindex="0">
+          <table class="sa-table">
+            <caption id="pv-house-caption" class="sa-sr">
+              하우스 광고
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">소재</th>
+                <th scope="col">상태</th>
+                <th scope="col" class="num">노출</th>
+                <th scope="col"><span class="sa-sr">관리</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="sa-name"><b>회원 가입 안내</b><small>영상 · 15초</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="active">진행</span></td>
+                <td class="num">48,210</td>
+                <td><a href="#edit" aria-label="회원 가입 안내 수정">수정</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sa-name"><b>앱 다운로드 배너</b><small>이미지 · 5초</small></div>
+                </td>
+                <td><span class="sa-badge" data-st="paused">일시중지</span></td>
+                <td class="num">12,940</td>
+                <td><a href="#edit" aria-label="앱 다운로드 배너 수정">수정</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-toggle').forEach(function (t) {
+        t.addEventListener('click', function () {
+          if (!t.disabled) t.setAttribute('aria-checked', String(t.getAttribute('aria-checked') !== 'true'));
+        });
+      });
+      document.querySelectorAll('.sa-chips').forEach(function (g) {
+        var multi = g.hasAttribute('data-multi');
+        g.querySelectorAll('.sa-chip').forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (multi) {
+              b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+              return;
+            }
+            g.querySelectorAll('.sa-chip').forEach(function (o) {
+              o.setAttribute('aria-pressed', String(o === b));
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

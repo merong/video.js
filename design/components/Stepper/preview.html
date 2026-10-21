@@ -1,0 +1,95 @@
+<!-- @dsCard group="화면 틀" height=480 width=1000 subtitle="집행 편집 7단계" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Stepper</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="grid-template-columns: 240px minmax(0, 1fr); align-items: start; gap: 16px">
+      <ol class="sa-flow" aria-label="요청 처리 단계" style="grid-column: 1 / -1">
+        <li class="is-done">접수</li>
+        <li aria-current="step">검토</li>
+        <li>승인</li>
+        <li>집행</li>
+        <li>종료</li>
+      </ol>
+      <nav class="sa-card" aria-label="집행 편집 단계" style="padding: 10px">
+        <ol class="sa-steps">
+          <li class="is-done">기본 · 이름과 등급</li>
+          <li aria-current="step">기간 · 요일 · 시간대</li>
+          <li>등급별 조건</li>
+          <li>타겟</li>
+          <li class="is-error">소재 연결</li>
+          <li>스킵 정책</li>
+          <li>검토 · 제출</li>
+        </ol>
+      </nav>
+      <section class="sa-card" style="display: grid; gap: 14px">
+        <div style="display: grid; gap: 4px">
+          <span class="sa-small">2 / 7 단계</span>
+          <h2 class="sa-card-title">기간 · 요일 · 시간대</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+          <div class="sa-field">
+            <label class="sa-label" for="s1">시작 일시</label
+            ><input class="sa-input is-num" id="s1" value="2026-10-10 00:00" />
+          </div>
+          <div class="sa-field is-error">
+            <label class="sa-label" for="s2">종료 일시</label
+            ><input
+              class="sa-input is-num"
+              id="s2"
+              value="2026-12-05 23:59"
+              aria-invalid="true"
+              aria-describedby="s2h"
+            /><span class="sa-help" id="s2h">캠페인 기간(11.30까지)을 넘습니다. 11.30 이전으로 바꿔 주세요.</span>
+          </div>
+        </div>
+        <div class="sa-field">
+          <span class="sa-label" id="s3">요일</span>
+          <div class="sa-chips is-days" role="group" aria-labelledby="s3" data-multi>
+            <button class="sa-chip" type="button" aria-pressed="true">월</button
+            ><button class="sa-chip" type="button" aria-pressed="true">화</button
+            ><button class="sa-chip" type="button" aria-pressed="true">수</button
+            ><button class="sa-chip" type="button" aria-pressed="true">목</button
+            ><button class="sa-chip" type="button" aria-pressed="true">금</button
+            ><button class="sa-chip" type="button" aria-pressed="false">토</button
+            ><button class="sa-chip" type="button" aria-pressed="false">일</button>
+          </div>
+        </div>
+        <div class="sa-panel-f" style="justify-content: space-between">
+          <button class="sa-btn" type="button">이전</button
+          ><span class="sa-row"
+            ><button class="sa-btn" type="button">초안 저장</button
+            ><button class="sa-btn is-primary" type="button">다음 · 등급별 조건</button></span
+          >
+        </div>
+      </section>
+    </div>
+    <script>
+      document.querySelectorAll('.sa-toggle').forEach(function (t) {
+        t.addEventListener('click', function () {
+          if (!t.disabled) t.setAttribute('aria-checked', String(t.getAttribute('aria-checked') !== 'true'));
+        });
+      });
+      document.querySelectorAll('.sa-chips').forEach(function (g) {
+        var multi = g.hasAttribute('data-multi');
+        g.querySelectorAll('.sa-chip').forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (multi) {
+              b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+              return;
+            }
+            g.querySelectorAll('.sa-chip').forEach(function (o) {
+              o.setAttribute('aria-pressed', String(o === b));
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

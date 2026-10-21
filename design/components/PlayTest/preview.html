@@ -1,0 +1,194 @@
+<!-- @dsCard group="화면 예시" height=1250 width=1280 subtitle="재생 테스트 play-test.html: 전환 링크, 프리셋, 수집 안내, 광고 진행" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>재생 테스트 · 솔애드 플레이어</title>
+  </head>
+  <body>
+    <header class="sa-top">
+      <span class="sa-logo">솔애드 <em>플레이어</em></span>
+      <nav class="sa-nav" aria-label="플레이어 문서">
+        <a href="#">데모</a><a href="#">설명서</a><a href="#">도움말</a>
+      </nav>
+      <div class="sa-top-r"><a class="sa-btn is-sm" href="#">관리자 열기</a></div>
+    </header>
+    <main class="sa-main" style="max-width: 1320px; margin: 0 auto">
+      <div class="sa-phead">
+        <div>
+          <h1 class="sa-page-title">재생 테스트</h1>
+          <p class="sa-small">게시한 편성을 실제 서비스와 같은 방법으로 재생해요.</p>
+        </div>
+      </div>
+      <p class="sa-note is-warn" role="note">
+        <span
+          ><b>이 페이지는 실제 수집 API로 광고 기록을 보내요.</b> 여기서 재생한 시작·완료·클릭이 통계에 쌓여요.</span
+        >
+      </p>
+
+      <div class="sa-card">
+        <div class="sa-switchbar">
+          <div class="sa-field">
+            <span class="sa-label" id="sw-p">플레이어</span>
+            <nav class="sa-chips" aria-labelledby="sw-p">
+              <a class="sa-chip" href="#" aria-current="page">Video.js</a><a class="sa-chip" href="#">기본 video</a>
+            </nav>
+          </div>
+          <div class="sa-field">
+            <span class="sa-label" id="sw-m">미디어</span>
+            <nav class="sa-chips" aria-labelledby="sw-m">
+              <a class="sa-chip" href="#">MP4</a><a class="sa-chip" href="#" aria-current="page">HLS</a>
+            </nav>
+          </div>
+          <div class="sa-field">
+            <span class="sa-label" id="sw-e">HLS 엔진</span>
+            <nav class="sa-chips" aria-labelledby="sw-e">
+              <a class="sa-chip" href="#" aria-current="page">Video.js 자체(SPF)</a
+              ><a class="sa-chip" href="#">hls.js</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="sa-grid2">
+        <section class="sa-stage" aria-label="플레이어">
+          <div class="sa-stage-view" style="height: auto">
+            <div class="sa-stage-frame">
+              <div
+                class="sa-pm"
+                role="img"
+                aria-label="본편 장면: 제목, 오른쪽 위 로고, ±10초 버튼과 PiP가 있는 컨트롤"
+              >
+                <span class="sa-pm-scene"></span><span class="sa-pm-title">회사 소개</span
+                ><span class="sa-pm-logo is-tr">LOGO</span>
+                <div class="sa-pm-ctl">
+                  <div class="sa-pm-row">
+                    <span class="sa-pm-track" style="--_p: 38%"><b></b></span>
+                  </div>
+                  <div class="sa-pm-row">
+                    <span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" /></svg></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <path d="M4 10a6 6 0 1 0 2-4.5" />
+                        <path d="M4 3v3h3" /></svg
+                      ><span class="sa-pm-n">10</span></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <path d="M16 10a6 6 0 1 1-2-4.5" />
+                        <path d="M16 3v3h-3" /></svg
+                      ><span class="sa-pm-n">10</span></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <path d="M3 8h3l4-3v10l-4-3H3z" />
+                        <path d="M13 7.5a3.5 3.5 0 0 1 0 5" /></svg></span
+                    ><span class="sa-pm-time">1:24 / 3:40</span><span class="sa-pm-sp"></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="2.5" />
+                        <path
+                          d="M10 3v2M10 15v2M3 10h2M15 10h2M5 5l1.4 1.4M13.6 13.6 15 15M5 15l1.4-1.4M13.6 6.4 15 5"
+                        /></svg></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20">
+                        <rect x="3" y="4" width="14" height="12" rx="2" />
+                        <rect x="10" y="10" width="5" height="4" /></svg></span
+                    ><span class="sa-pm-btn"
+                      ><svg viewBox="0 0 20 20"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4" /></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="sa-stage-now">
+            <span>최근 광고 진행</span><span>프리롤 1/1 · 끝남</span><time datetime="15:20:12">15:20:12</time>
+          </p>
+          <p class="sa-status" role="status"></p>
+        </section>
+        <div class="sa-panel">
+          <div class="sa-card is-flush">
+            <table class="sa-table sa-kv">
+              <caption class="sa-sr">
+                재생 조건
+              </caption>
+              <tbody>
+                <tr>
+                  <th scope="row">프리셋</th>
+                  <td>이벤트 페이지 (사이트 적용)</td>
+                </tr>
+                <tr>
+                  <th scope="row">영상 ID</th>
+                  <td><code class="sa-code">notice:12:main</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">본편</th>
+                  <td><code class="sa-code">/media/notice-12.m3u8</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">편성</th>
+                  <td>게시본</td>
+                </tr>
+                <tr>
+                  <th scope="row">통계</th>
+                  <td>수집해요</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <section class="sa-card" aria-labelledby="lg-h" style="display: grid; gap: var(--gap-md)">
+            <h2 class="sa-card-title" id="lg-h">광고 진행</h2>
+            <div class="sa-logbox" role="region" aria-labelledby="lg-h" tabindex="0">
+              <ol class="sa-log">
+                <li><time class="sa-num" datetime="15:20:12">15:20:12</time><span>프리롤 1/1 · 끝남</span></li>
+                <li><time class="sa-num" datetime="15:20:05">15:20:05</time><span>프리롤 1/1 · 클릭</span></li>
+                <li><time class="sa-num" datetime="15:19:57">15:19:57</time><span>프리롤 1/1 · 시작</span></li>
+              </ol>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <section class="sa-pv" aria-label="상태 예시">
+      <p class="sa-cap">기본 video를 골랐을 때 · HLS는 고를 수 없음</p>
+      <div class="sa-card">
+        <div class="sa-switchbar">
+          <div class="sa-field">
+            <span class="sa-label" id="sw2-p">플레이어</span>
+            <nav class="sa-chips" aria-labelledby="sw2-p">
+              <a class="sa-chip" href="#">Video.js</a><a class="sa-chip" href="#" aria-current="page">기본 video</a>
+            </nav>
+          </div>
+          <div class="sa-field">
+            <span class="sa-label" id="sw2-m">미디어</span>
+            <nav class="sa-chips" aria-labelledby="sw2-m" aria-describedby="sw2-m-h">
+              <a class="sa-chip" href="#" aria-current="page">MP4</a><span class="sa-chip is-off">HLS</span>
+            </nav>
+            <span class="sa-help" id="sw2-m-h">기본 video는 HLS를 재생하지 못해요.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="sa-cap">다른 플레이어용 프리셋</p>
+      <p class="sa-note is-warn" role="note">
+        <span
+          ><b>‘이벤트 페이지’는 Video.js용 프리셋이에요.</b> 기본 video에서는 이 프리셋 대신 기본값으로 재생해요. 로더도
+          같은 규칙이에요.</span
+        >
+      </p>
+
+      <p class="sa-cap">주소에 영상이 없을 때</p>
+      <div class="sa-card">
+        <div class="sa-empty">
+          <b>재생할 영상이 없어요</b>
+          <span>관리자의 지면 편성에서 재생 테스트 링크로 열어 주세요. 주소에 video 값이 있어야 해요.</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

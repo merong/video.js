@@ -1,0 +1,340 @@
+<!-- @dsCard group="데이터" height=1100 subtitle="설치 옵션·프리셋 필드 표, 600px 이하 카드" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>OptionTable</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <p class="sa-cap">설치 옵션 · 자리 요소 data-* 속성 (# 링크를 누르면 그 행이 주소 대상이 되어 바탕이 바뀌어요)</p>
+      <div class="sa-doc-hrow">
+        <h3 class="sa-doc-h3" id="t-install">자리 요소 data-* 속성</h3>
+      </div>
+      <div class="sa-card is-flush sa-opts">
+        <div class="sa-scroll">
+          <table class="sa-table sa-optt" role="table" aria-labelledby="t-install">
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader">이름</th>
+                <th scope="col" role="columnheader">받는 값</th>
+                <th scope="col" role="columnheader">기본값</th>
+                <th scope="col" role="columnheader">설명</th>
+                <th scope="col" role="columnheader">적용 단계</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr id="opt-data-solad-player" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>data-solad-player</code
+                    ><a class="sa-anchor" href="#opt-data-solad-player"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘data-solad-player’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">받는 값</span><span>있음</span></td>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">기본값</span><span>없음(필수)</span></td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>로더가 플레이어를 만들 자리예요. 한 페이지에 여러 개 둘 수 있어요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+              <tr id="opt-data-video-id" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>data-video-id</code
+                    ><a class="sa-anchor" href="#opt-data-video-id"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘data-video-id’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">받는 값</span><span>문자열, 128자 이하</span>
+                </td>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">기본값</span><span>없음(필수)</span></td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>편성과 통계에 쓰는 고정 영상 ID예요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+              <tr id="opt-data-preset" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>data-preset</code
+                    ><a class="sa-anchor" href="#opt-data-preset"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘data-preset’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">받는 값</span><span>프리셋 id</span></td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">기본값</span><span>사이트 적용 프리셋</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>이 자리만 다른 프리셋으로 만들어요. 사이트 적용 프리셋을 쓸 때는 넣지 않아요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+              <tr id="opt-data-autoplay" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>data-autoplay</code
+                    ><a class="sa-anchor" href="#opt-data-autoplay"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘data-autoplay’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                  ><span><code>true</code> | <code>false</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">기본값</span
+                  ><span>프리셋 값, 없으면 <code>false</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>자동재생이에요. 켜면 늘 음소거로 시작해요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+              <tr id="opt-ads-accent-color" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>--ads-accent-color</code
+                    ><a class="sa-anchor" href="#opt-ads-accent-color"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘--ads-accent-color’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">받는 값</span><span>CSS 색</span></td>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">기본값</span><span>테마 강조색</span></td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>광고 음량 막대와 진행 막대 색이에요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="sa-cap">프리셋 필드</p>
+      <div class="sa-doc-hrow">
+        <h3 class="sa-doc-h3" id="t-fields">프리셋 필드</h3>
+      </div>
+      <p class="sa-small" style="max-width: 72ch">
+        <b>준비 중</b>인 값은 저장할 때 검사하지만 플레이어 화면에는 아직 쓰지 않아요. 괄호 안은 그 값을 화면에 쓰기
+        시작하는 작업 단계예요.
+      </p>
+      <div class="sa-card is-flush sa-opts">
+        <div class="sa-scroll">
+          <table class="sa-table sa-optt" role="table" aria-labelledby="t-fields">
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader">이름</th>
+                <th scope="col" role="columnheader">받는 값</th>
+                <th scope="col" role="columnheader">기본값</th>
+                <th scope="col" role="columnheader">설명</th>
+                <th scope="col" role="columnheader">적용 단계</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr id="field-playback-autoplay" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>playback.autoplay</code
+                    ><a class="sa-anchor" href="#field-playback-autoplay"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘playback.autoplay’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                  ><span><code>true</code> | <code>false</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">기본값</span><span><code>false</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>자동재생이에요. 켜면 음소거로 시작해요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+              <tr id="field-language" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>language</code
+                    ><a class="sa-anchor" href="#field-language"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘language’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                  ><span>비움 | <code>ko</code> | <code>en</code> | <code>ja</code> | <code>zh-CN</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">기본값</span><span>비움(페이지 lang)</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span
+                  ><span>플레이어 화면 언어예요. 광고 문구는 늘 한국어예요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase is-live">적용</span></span>
+                </td>
+              </tr>
+              <tr id="field-controls-seekButtons" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>controls.seekButtons</code
+                    ><a class="sa-anchor" href="#field-controls-seekButtons"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘controls.seekButtons’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                  ><span>비움 | <code>5</code> | <code>10</code> | <code>15</code> | <code>30</code></span>
+                </td>
+                <td role="cell"><span class="sa-optt-k" aria-hidden="true">기본값</span><span>비움(숨김)</span></td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span><span>±초 버튼과 한 번에 움직이는 초예요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase">준비 중(A2-2)</span></span>
+                </td>
+              </tr>
+              <tr id="field-ads-progress-bar" role="row">
+                <th scope="row" role="rowheader">
+                  <span class="sa-optt-name"
+                    ><code>ads.progress.bar</code
+                    ><a class="sa-anchor" href="#field-ads-progress-bar"
+                      ><span aria-hidden="true">#</span><span class="sa-sr">‘ads.progress.bar’ 항목 주소</span></a
+                    ></span
+                  >
+                </th>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                  ><span><code>true</code> | <code>false</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">기본값</span><span><code>false</code></span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">설명</span><span>광고 아래쪽 진행 막대예요.</span>
+                </td>
+                <td role="cell">
+                  <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                  ><span><span class="sa-phase">준비 중(A2-3)</span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="sa-cap">좁은 칸(358px) · 행마다 카드</p>
+      <div style="max-width: 358px">
+        <div class="sa-card is-flush sa-opts">
+          <div class="sa-scroll">
+            <table class="sa-table sa-optt" role="table" aria-labelledby="t-narrow">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th scope="col" role="columnheader">이름</th>
+                  <th scope="col" role="columnheader">받는 값</th>
+                  <th scope="col" role="columnheader">기본값</th>
+                  <th scope="col" role="columnheader">설명</th>
+                  <th scope="col" role="columnheader">적용 단계</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                <tr id="n-field-playback-autoplay" role="row">
+                  <th scope="row" role="rowheader">
+                    <span class="sa-optt-name"
+                      ><code>playback.autoplay</code
+                      ><a class="sa-anchor" href="#n-field-playback-autoplay"
+                        ><span aria-hidden="true">#</span><span class="sa-sr">‘playback.autoplay’ 항목 주소</span></a
+                      ></span
+                    >
+                  </th>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                    ><span><code>true</code> | <code>false</code></span>
+                  </td>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">기본값</span><span><code>false</code></span>
+                  </td>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">설명</span
+                    ><span>자동재생이에요. 켜면 음소거로 시작해요.</span>
+                  </td>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                    ><span><span class="sa-phase is-live">적용</span></span>
+                  </td>
+                </tr>
+                <tr id="n-field-language" role="row">
+                  <th scope="row" role="rowheader">
+                    <span class="sa-optt-name"
+                      ><code>language</code
+                      ><a class="sa-anchor" href="#n-field-language"
+                        ><span aria-hidden="true">#</span><span class="sa-sr">‘language’ 항목 주소</span></a
+                      ></span
+                    >
+                  </th>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">받는 값</span
+                    ><span>비움 | <code>ko</code> | <code>en</code> | <code>ja</code> | <code>zh-CN</code></span>
+                  </td>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">기본값</span><span>비움(페이지 lang)</span>
+                  </td>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">설명</span
+                    ><span>플레이어 화면 언어예요. 광고 문구는 늘 한국어예요.</span>
+                  </td>
+                  <td role="cell">
+                    <span class="sa-optt-k" aria-hidden="true">적용 단계</span
+                    ><span><span class="sa-phase is-live">적용</span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

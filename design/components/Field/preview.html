@@ -1,0 +1,106 @@
+<!-- @dsCard group="입력" height=600 subtitle="라벨, 도움말, 오류, 단위 붙은 숫자" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Field</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start">
+      <div class="sa-field">
+        <label class="sa-label" for="f1">집행 이름</label
+        ><input class="sa-input" id="f1" value="프리롤 보장 · 가을 여행" />
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f2">노출 목표</label
+        ><input class="sa-input is-num" id="f2" value="300,000" aria-describedby="f2h" /><span class="sa-help" id="f2h"
+          >지금까지 102,300 · 남은 197,700</span
+        >
+      </div>
+      <div class="sa-field is-error">
+        <label class="sa-label" for="f3">종료 일시</label
+        ><input
+          class="sa-input is-num"
+          id="f3"
+          value="2026-12-05 23:59"
+          aria-invalid="true"
+          aria-describedby="f3h"
+        /><span class="sa-help" id="f3h">캠페인 기간(11.30까지)을 넘습니다. 11.30 이전으로 바꿔 주세요.</span>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f4">클릭 URL</label><input class="sa-input" id="f4" placeholder="https://" />
+      </div>
+      <div class="sa-field is-warn">
+        <label class="sa-label" for="f5">점유율</label
+        ><input class="sa-input is-num" id="f5" value="40%" aria-describedby="f5h" /><span class="sa-help" id="f5h"
+          >같은 위치 점유율 합계가 110%입니다. 제출은 할 수 있어요.</span
+        >
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f6">스킵</label
+        ><select class="sa-input" id="f6">
+          <option>5초 후 스킵 (기본값)</option>
+          <option>스킵 없음</option>
+        </select>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f7">소재 파일</label
+        ><input class="sa-input" id="f7" type="file" aria-describedby="f7h" /><span class="sa-help" id="f7h"
+          >MP4, WebM, JPEG, PNG · 파일 하나당 50MB까지</span
+        >
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f8">이미지 표시 시간</label
+        ><input class="sa-input" id="f8" value="영상 소재라 해당 없음" disabled />
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f10">여백<span class="sa-sr"> (px)</span></label
+        ><span class="sa-unit"
+          ><input
+            class="sa-input is-num"
+            id="f10"
+            type="number"
+            min="0"
+            max="48"
+            step="1"
+            value="12"
+            aria-describedby="f10h"
+          /><span class="sa-unit-text" aria-hidden="true">px</span></span
+        ><span class="sa-help" id="f10h">0–48 정수예요.</span>
+      </div>
+      <div class="sa-field is-error">
+        <label class="sa-label" for="f11">폭<span class="sa-sr"> (px)</span></label
+        ><span class="sa-unit"
+          ><input
+            class="sa-input is-num"
+            id="f11"
+            type="number"
+            min="24"
+            max="240"
+            step="1"
+            value="300"
+            aria-invalid="true"
+            aria-describedby="f11h"
+          /><span class="sa-unit-text" aria-hidden="true">px</span></span
+        ><span class="sa-help" id="f11h">240px보다 커요. 24–240 사이의 정수로 입력해 주세요.</span>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" for="f12">불투명도<span class="sa-sr"> (%)</span></label
+        ><span class="sa-unit"
+          ><input class="sa-input is-num" id="f12" type="number" value="80" disabled /><span
+            class="sa-unit-text"
+            aria-hidden="true"
+            >%</span
+          ></span
+        >
+      </div>
+      <div class="sa-field" style="grid-column: 1 / -1">
+        <label class="sa-label" for="f9">요청자에게 보낼 답변</label
+        ><textarea class="sa-input" id="f9" rows="3" placeholder="보완 요청이나 반려할 때는 꼭 적어 주세요."></textarea>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!-- @dsCard group="상태" height=360 subtitle="구획 전체, 스위치 하나" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>DisabledReason</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <p class="sa-cap">구획 전체 · 값은 남아 있음</p>
+      <section class="sa-card" aria-labelledby="h-logo" style="display: grid; gap: var(--gap-md)">
+        <h2 class="sa-card-title" id="h-logo">로고</h2>
+        <p class="sa-off-reason" id="logo-off">
+          <span
+            ><b>기본 video에서는 로고를 쓸 수 없어요.</b> 기본 구획의 플레이어 종류를 Video.js로 바꾸면 쓸 수 있어요.
+            입력한 값은 저장할 때 빠져요.</span
+          >
+        </p>
+        <div class="sa-off-body sa-row" style="gap: var(--gap-md); align-items: end">
+          <div class="sa-field">
+            <label class="sa-label" for="m">여백<span class="sa-sr"> (px)</span></label
+            ><span class="sa-unit"
+              ><input
+                class="sa-input is-num"
+                id="m"
+                type="number"
+                value="12"
+                disabled
+                aria-describedby="logo-off"
+              /><span class="sa-unit-text" aria-hidden="true">px</span></span
+            >
+          </div>
+          <div class="sa-field">
+            <label class="sa-label" for="w">폭<span class="sa-sr"> (px)</span></label
+            ><span class="sa-unit"
+              ><input
+                class="sa-input is-num"
+                id="w"
+                type="number"
+                value="80"
+                disabled
+                aria-describedby="logo-off"
+              /><span class="sa-unit-text" aria-hidden="true">px</span></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <p class="sa-cap">스위치 하나</p>
+      <ul class="sa-switches">
+        <li class="is-locked">
+          <button
+            class="sa-toggle"
+            type="button"
+            role="switch"
+            aria-checked="true"
+            aria-labelledby="hk-n"
+            aria-describedby="hk-r"
+            disabled
+          ></button
+          ><span class="sa-switch-name" id="hk-n">단축키</span
+          ><span class="sa-switch-desc" id="hk-r">기본 video는 브라우저 단축키를 그대로 써서 끌 수 없어요.</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

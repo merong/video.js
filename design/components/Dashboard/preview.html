@@ -1,0 +1,286 @@
+<!-- @dsCard group="화면 예시" height=1000 width=1240 page subtitle="대시보드 · 큰 수치 적용" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>대시보드</title>
+  </head>
+  <body>
+    <div class="sa-app">
+      <header class="sa-top">
+        <span class="sa-logo">솔애드 <em>관리자</em></span>
+        <nav class="sa-nav" aria-label="주 메뉴">
+          <a href="#" aria-current="page">대시보드</a><a href="#">캠페인</a><a href="#">소재</a><a href="#">지면 편성</a
+          ><a href="#">승인함<b>8</b></a
+          ><a href="#">리포트</a><a href="#">설정</a>
+        </nav>
+        <div class="sa-top-r">
+          <span class="sa-search"
+            ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5L14 14" /></svg
+            >캠페인·소재 검색</span
+          ><button class="sa-btn is-lime is-sm" type="button">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" /></svg>집행 만들기</button
+          ><span class="sa-avatar" aria-label="김운영 · 승인자">김</span>
+        </div>
+      </header>
+      <main class="sa-main">
+        <section class="sa-banner" aria-label="오늘의 할 일">
+          <div class="sa-banner-l">
+            <span class="sa-tag is-period">오늘의 할 일</span>
+            <h2 class="sa-banner-title">김운영 님, 확인할 일이<br /><em>11</em>건 있어요</h2>
+            <p>10.20 15:00 기준. 오래된 승인 대기부터 처리하면 집행이 늦어지지 않습니다.</p>
+            <div class="sa-row" style="gap: 14px">
+              <button class="sa-btn is-lime" type="button">승인함 열기</button
+              ><a class="sa-banner-link" href="#">캠페인 보기 →</a>
+            </div>
+          </div>
+          <ul class="sa-todo">
+            <li>
+              <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+              ><span><b>소재 심사 대기</b><small>가을_15s v3 외 2건 · 가장 오래된 건 10.18</small></span
+              ><i>3</i>
+            </li>
+            <li>
+              <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+              ><span><b>지면 편성 승인 대기</b><small>영상 #4821 제주 3박4일 · r8</small></span
+              ><i>1</i>
+            </li>
+            <li>
+              <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+              ><span><b>집행 승인 대기</b><small>프리롤 보장 · 가을 여행 외 3건</small></span
+              ><i>4</i>
+            </li>
+            <li>
+              <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg
+              ><span><b>7일 안에 종료되는 캠페인</b><small>가을 정기 세일 · 웹툰 '달빛 정원' 런칭</small></span
+              ><i>2</i>
+            </li>
+            <li class="is-bad">
+              <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 4.8v3.8M8 11.1v.1" /></svg
+              ><span><b>내 제출 중 반려</b><small>자사 구독 안내 배너 v1 · 클릭 URL 404</small></span
+              ><i>1</i>
+            </li>
+          </ul>
+        </section>
+        <section class="sa-card sa-kpis is-hero" aria-label="오늘 요약, 어제 같은 시각과 비교">
+          <div class="sa-kpi">
+            <span class="sa-kpi-label">노출</span><span class="sa-kpi-value">31,320</span
+            ><span class="sa-delta is-good">▲ 4.2%<em>어제 30,060</em></span>
+          </div>
+          <div class="sa-kpi">
+            <span class="sa-kpi-label">완료율</span><span class="sa-kpi-value">71.8%</span
+            ><span class="sa-delta is-good">▲ 0.6%p<em>어제 71.2%</em></span>
+          </div>
+          <div class="sa-kpi">
+            <span class="sa-kpi-label">클릭률</span><span class="sa-kpi-value">2.11%</span
+            ><span class="sa-delta is-bad">▼ 0.08%p<em>어제 2.19%</em></span>
+          </div>
+          <div class="sa-kpi">
+            <span class="sa-kpi-label">채움률</span><span class="sa-kpi-value">86.4%</span
+            ><span class="sa-delta is-bad">▼ 1.2%p<em>어제 87.6%</em></span>
+          </div>
+          <div class="sa-kpi">
+            <span class="sa-kpi-label">오류</span><span class="sa-kpi-value">27</span
+            ><span class="sa-delta is-bad">▲ 9건<em>어제 18</em></span>
+          </div>
+        </section>
+        <div class="sa-grid2">
+          <div class="sa-card" data-trend>
+            <div class="sa-card-h">
+              <h3 class="sa-card-title">최근 14일 성과</h3>
+              <div class="sa-chips" role="group" aria-label="추이 지표">
+                <button class="sa-chip" type="button" data-metric="imp" aria-pressed="true">노출</button
+                ><button class="sa-chip" type="button" data-metric="clk" aria-pressed="false">클릭</button
+                ><button class="sa-chip" type="button" data-metric="table" aria-pressed="false">표</button>
+              </div>
+            </div>
+            <div class="sa-chart"></div>
+            <div class="sa-scroll" hidden></div>
+          </div>
+          <section class="sa-card">
+            <div class="sa-card-h">
+              <h3 class="sa-card-title">곧 끝나는 캠페인</h3>
+              <span class="sa-small">7일 안</span>
+            </div>
+            <ul class="sa-endl">
+              <li>
+                <span class="sa-thumb" style="--g: linear-gradient(135deg, #fcd34d, #f97316 55%, #9a3412)"
+                  ><small>0:15</small></span
+                ><span><b>가을 정기 세일</b><small class="sa-small">한빛몰 · 집행 3 · 10.24 종료</small></span
+                ><span class="sa-dday">D-4</span>
+              </li>
+              <li>
+                <span class="sa-thumb" style="--g: linear-gradient(150deg, #a5b4fc, #6366f1 50%, #1e1b4b)"
+                  ><small>0:20</small></span
+                ><span
+                  ><b>웹툰 '달빛 정원' 런칭</b><small class="sa-small">스튜디오나무 · 집행 2 · 10.26 종료</small></span
+                ><span class="sa-dday">D-6</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script>
+      var dates = [
+        '10.07',
+        '10.08',
+        '10.09',
+        '10.10',
+        '10.11',
+        '10.12',
+        '10.13',
+        '10.14',
+        '10.15',
+        '10.16',
+        '10.17',
+        '10.18',
+        '10.19',
+        '10.20',
+      ];
+      var imp = [40210, 42380, 41050, 46120, 51040, 51830, 42900, 43870, 45410, 47390, 49060, 54580, 56590, 31320];
+      var clk = [852, 889, 851, 986, 1092, 1119, 906, 924, 951, 1011, 1043, 1166, 1199, 661];
+      var metrics = {
+        imp: { vals: imp, ticks: [0, 20000, 40000, 60000], name: '노출' },
+        clk: { vals: clk, ticks: [0, 500, 1000, 1500], name: '클릭' },
+      };
+      function fmt(n) {
+        return Math.round(n).toLocaleString('ko-KR');
+      }
+      function lineChart(m) {
+        var vals = m.vals,
+          ticks = m.ticks,
+          W = 680,
+          H = 240,
+          p = { l: 56, r: 24, t: 24, b: 34 },
+          n = vals.length,
+          yMax = ticks[ticks.length - 1];
+        function x(i) {
+          return p.l + (i * (W - p.l - p.r)) / (n - 1);
+        }
+        function y(v) {
+          return p.t + (1 - v / yMax) * (H - p.t - p.b);
+        }
+        var solid = vals
+          .slice(0, n - 1)
+          .map(function (v, i) {
+            return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1);
+          })
+          .join(' ');
+        var s =
+          '<svg viewBox="0 0 ' +
+          W +
+          ' ' +
+          H +
+          '" role="img" aria-label="최근 14일 일별 ' +
+          m.name +
+          '. 어제 ' +
+          fmt(vals[n - 2]) +
+          ', 오늘 15시까지 ' +
+          fmt(vals[n - 1]) +
+          ' 집계 중">';
+        ticks.forEach(function (t) {
+          s +=
+            '<line class="gd" x1="' +
+            p.l +
+            '" x2="' +
+            (W - p.r) +
+            '" y1="' +
+            y(t) +
+            '" y2="' +
+            y(t) +
+            '"/><text class="tx" x="' +
+            (p.l - 10) +
+            '" y="' +
+            (y(t) + 4) +
+            '" text-anchor="end">' +
+            fmt(t) +
+            '</text>';
+        });
+        dates.forEach(function (d, i) {
+          if (i % 2 === 0 || i === n - 1)
+            s += '<text class="tx" x="' + x(i) + '" y="' + (H - 10) + '" text-anchor="middle">' + d + '</text>';
+        });
+        s +=
+          '<path class="ar" d="' + solid + ' L' + x(n - 2).toFixed(1) + ' ' + y(0) + ' L' + x(0) + ' ' + y(0) + ' Z"/>';
+        s += '<path class="ln" d="' + solid + '"/>';
+        s +=
+          '<path class="ln ln-part" d="M' +
+          x(n - 2).toFixed(1) +
+          ' ' +
+          y(vals[n - 2]).toFixed(1) +
+          ' L' +
+          x(n - 1).toFixed(1) +
+          ' ' +
+          y(vals[n - 1]).toFixed(1) +
+          '"/>';
+        s +=
+          '<circle class="pt" cx="' +
+          x(n - 2) +
+          '" cy="' +
+          y(vals[n - 2]) +
+          '" r="4"/><text class="tx-b" x="' +
+          x(n - 2) +
+          '" y="' +
+          (y(vals[n - 2]) - 10) +
+          '" text-anchor="middle">' +
+          fmt(vals[n - 2]) +
+          '</text>';
+        s +=
+          '<circle class="pt-open" cx="' +
+          x(n - 1) +
+          '" cy="' +
+          y(vals[n - 1]) +
+          '" r="4"/><text class="tx" x="' +
+          (x(n - 1) - 8) +
+          '" y="' +
+          (y(vals[n - 1]) + 20) +
+          '" text-anchor="end">집계 중</text>';
+        return s + '</svg>';
+      }
+      function trendTable() {
+        var t =
+          '<table class="sa-table"><caption>일별 노출·클릭 (10.20은 15시까지 집계)</caption><thead><tr><th scope="col">날짜</th><th scope="col" class="num">노출</th><th scope="col" class="num">클릭</th><th scope="col" class="num">클릭률</th></tr></thead><tbody>';
+        dates.forEach(function (d, i) {
+          t +=
+            '<tr><td class="sa-num">' +
+            d +
+            '</td><td class="num">' +
+            fmt(imp[i]) +
+            '</td><td class="num">' +
+            fmt(clk[i]) +
+            '</td><td class="num">' +
+            ((clk[i] / imp[i]) * 100).toFixed(2) +
+            '%</td></tr>';
+        });
+        return t + '</tbody></table>';
+      }
+      document.querySelectorAll('[data-trend]').forEach(function (box) {
+        var host = box.querySelector('.sa-chart'),
+          tw = box.querySelector('.sa-scroll');
+        tw.innerHTML = trendTable();
+        function set(k) {
+          box.querySelectorAll('[data-metric]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b.getAttribute('data-metric') === k));
+          });
+          host.hidden = k === 'table';
+          tw.hidden = k !== 'table';
+          if (metrics[k]) host.innerHTML = lineChart(metrics[k]);
+        }
+        box.querySelectorAll('[data-metric]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            set(b.getAttribute('data-metric'));
+          });
+        });
+        set('imp');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!-- @dsCard group="표" height=330 subtitle="쪽 넘김: 표 카드 안, 첫 쪽, 한 쪽뿐" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Pager</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="max-width: 720px">
+      <p class="sa-cap">표 카드 안 · 가운데 쪽</p>
+      <div class="sa-card is-flush">
+        <div class="sa-scroll">
+          <table class="sa-table">
+            <caption class="sa-sr">
+              학습 진도
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">학습자</th>
+                <th scope="col" class="num">진도율</th>
+                <th scope="col">갱신</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>hong01</td>
+                <td class="num">92%</td>
+                <td>3분 전</td>
+              </tr>
+              <tr>
+                <td>lms:4821</td>
+                <td class="num">41%</td>
+                <td>1시간 전</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <nav class="sa-pager" aria-label="쪽 넘김">
+          <span class="sa-pager-total">기록 1,234개</span>
+          <div class="sa-pager-nav">
+            <button class="sa-btn is-sm" type="button">이전</button
+            ><span class="sa-pager-now" aria-current="page">3 / 25쪽</span
+            ><button class="sa-btn is-sm" type="button">다음</button>
+          </div>
+        </nav>
+      </div>
+
+      <p class="sa-cap">첫 쪽 · 이전 막힘</p>
+      <nav class="sa-pager" aria-label="쪽 넘김">
+        <span class="sa-pager-total">기록 120개</span>
+        <div class="sa-pager-nav">
+          <button class="sa-btn is-sm" type="button" disabled>이전</button
+          ><span class="sa-pager-now" aria-current="page">1 / 3쪽</span
+          ><button class="sa-btn is-sm" type="button">다음</button>
+        </div>
+      </nav>
+
+      <p class="sa-cap">한 쪽뿐 · 개수만</p>
+      <nav class="sa-pager" aria-label="쪽 넘김">
+        <span class="sa-pager-total">기록 12개</span>
+      </nav>
+    </div>
+  </body>
+</html>

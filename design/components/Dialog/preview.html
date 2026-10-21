@@ -1,0 +1,239 @@
+<!-- @dsCard group="알림" height=110 subtitle="반려 확인, 사이트에 적용 확인, 플레이어 미리보기(넓은 변형)" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Dialog</title>
+  </head>
+  <body>
+    <div class="sa-pv">
+      <div class="sa-row">
+        <button class="sa-btn is-danger" type="button" id="open">반려</button
+        ><button class="sa-btn" type="button" id="open2">사이트에 적용</button
+        ><button class="sa-btn is-sm" type="button" id="open3" aria-label="공지 영상 미리보기">미리보기</button>
+      </div>
+    </div>
+    <dialog class="sa-dialog" id="dlg" aria-labelledby="dlg-t">
+      <form method="dialog">
+        <div class="sa-dialog-h">
+          <h2 class="sa-card-title" id="dlg-t">요청을 반려할까요?</h2>
+          <button class="sa-btn is-sm" value="cancel" aria-label="닫기">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+          </button>
+        </div>
+        <div class="sa-dialog-b">
+          <div class="sa-field">
+            <label class="sa-label" for="why">반려 사유</label
+            ><textarea class="sa-input" id="why" rows="3" aria-describedby="why-h"></textarea
+            ><span class="sa-help" id="why-h">요청자에게 그대로 보여요.</span>
+          </div>
+        </div>
+        <div class="sa-dialog-f">
+          <button class="sa-btn" value="cancel">취소</button><button class="sa-btn is-danger" value="ok">반려</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog class="sa-dialog" id="dlg2" aria-labelledby="dlg2-t">
+      <form method="dialog">
+        <div class="sa-dialog-h">
+          <h2 class="sa-card-title" id="dlg2-t">이벤트 페이지를 사이트에 적용할까요?</h2>
+          <button class="sa-btn is-sm" value="cancel" aria-label="닫기">
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+          </button>
+        </div>
+        <div class="sa-dialog-b">
+          <p class="sa-body">
+            로더를 넣은 사이트의 모든 플레이어가 이 프리셋으로 바뀌어요. 방문자가 페이지를 새로고침하면 바로 보여요.
+          </p>
+          <table class="sa-table sa-kv">
+            <tbody>
+              <tr>
+                <th scope="row">지금 사이트 적용</th>
+                <td>공지 영상</td>
+              </tr>
+              <tr>
+                <th scope="row">바꿀 프리셋</th>
+                <td><b>이벤트 페이지</b> · Video.js 플레이어 · 영어</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sa-dialog-f">
+          <span class="sa-status" role="status" id="dlg2-st"></span
+          ><button class="sa-btn" value="cancel" autofocus>취소</button
+          ><button class="sa-btn is-primary" type="button" id="dlg2-ok">사이트에 적용</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog class="sa-dialog is-wide" id="dlg3" aria-labelledby="dlg3-t" aria-describedby="dlg3-n">
+      <form method="dialog">
+        <div class="sa-dialog-h">
+          <div class="sa-dialog-title">
+            <h2 class="sa-card-title" id="dlg3-t">공지 영상 미리보기</h2>
+            <span class="sa-small">저장된 값 · 통계에 남기지 않아요</span>
+          </div>
+          <button class="sa-btn is-sm" value="close" aria-label="닫기" autofocus>
+            <svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+          </button>
+        </div>
+        <div class="sa-dialog-b">
+          <p class="sa-note" role="note" id="dlg3-n">
+            <span
+              ><b>저장된 값으로 보여요.</b> 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도
+              보여요.</span
+            >
+          </p>
+          <p class="sa-status" role="status"></p>
+          <div class="sa-stage">
+            <div class="sa-stage-bar">
+              <div class="sa-field">
+                <span class="sa-label" id="m-w-l">폭 보기</span>
+                <div class="sa-seg" role="radiogroup" aria-labelledby="m-w-l" aria-describedby="m-w-n">
+                  <label><input type="radio" name="m-w" value="390" />좁게 · 390</label
+                  ><label><input type="radio" name="m-w" value="768" />보통 · 768</label
+                  ><label><input type="radio" name="m-w" value="fill" checked />넓게 · 자리 폭</label>
+                </div>
+              </div>
+              <p class="sa-small" id="m-w-n" data-scale-note>자리 폭 · 실제 크기예요</p>
+            </div>
+            <div class="sa-stage-view">
+              <div class="sa-stage-frame">
+                <div
+                  class="sa-pm"
+                  role="img"
+                  aria-label="본편 장면: 제목, 오른쪽 위 로고, ±10초 버튼과 PiP가 있는 컨트롤"
+                  style="--sa-pm-radius: 28px"
+                >
+                  <span class="sa-pm-scene"></span><span class="sa-pm-title">회사 소개</span
+                  ><span class="sa-pm-logo is-tr">LOGO</span>
+                  <div class="sa-pm-ctl">
+                    <div class="sa-pm-row">
+                      <span class="sa-pm-track" style="--_p: 38%"><b></b></span>
+                    </div>
+                    <div class="sa-pm-row">
+                      <span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" /></svg></span
+                      ><span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20">
+                          <path d="M4 10a6 6 0 1 0 2-4.5" />
+                          <path d="M4 3v3h3" /></svg
+                        ><span class="sa-pm-n">10</span></span
+                      ><span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20">
+                          <path d="M16 10a6 6 0 1 1-2-4.5" />
+                          <path d="M16 3v3h-3" /></svg
+                        ><span class="sa-pm-n">10</span></span
+                      ><span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20">
+                          <path d="M3 8h3l4-3v10l-4-3H3z" />
+                          <path d="M13 7.5a3.5 3.5 0 0 1 0 5" /></svg></span
+                      ><span class="sa-pm-time">1:24 / 3:40</span><span class="sa-pm-sp"></span
+                      ><span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20">
+                          <circle cx="10" cy="10" r="2.5" />
+                          <path
+                            d="M10 3v2M10 15v2M3 10h2M15 10h2M5 5l1.4 1.4M13.6 13.6 15 15M5 15l1.4-1.4M13.6 6.4 15 5"
+                          /></svg></span
+                      ><span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20">
+                          <rect x="3" y="4" width="14" height="12" rx="2" />
+                          <rect x="10" y="10" width="5" height="4" /></svg></span
+                      ><span class="sa-pm-btn"
+                        ><svg viewBox="0 0 20 20"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4" /></svg
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sa-stage-tools">
+              <span class="sa-label" id="m-j-l">장면 바로가기</span>
+              <div class="sa-row" role="group" aria-labelledby="m-j-l">
+                <button class="sa-btn is-sm" type="button">처음부터</button
+                ><button class="sa-btn is-sm" type="button">미드롤 앞</button
+                ><button class="sa-btn is-sm" type="button">끝 직전</button
+                ><button class="sa-btn is-sm" type="button">다시 불러오기</button>
+              </div>
+            </div>
+            <p class="sa-stage-now"><span>최근 광고 진행</span><span>아직 광고가 나오지 않았어요</span></p>
+          </div>
+        </div>
+        <div class="sa-dialog-f">
+          <a class="sa-btn is-start" href="#" target="_blank"
+            ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M9 3h4v4M13 3 7.5 8.5M11 9.5V13H3V5h3.5" /></svg
+            >데모에서 열기<span class="sa-sr"> (새 창)</span></a
+          ><button class="sa-btn" value="close">닫기</button>
+        </div>
+      </form>
+    </dialog>
+    <script>
+      var opener2 = document.getElementById('open2');
+      var dlg2 = document.getElementById('dlg2');
+      opener2.addEventListener('click', function () {
+        document.getElementById('dlg2-st').textContent = '';
+        dlg2.showModal();
+      });
+      document.getElementById('dlg2-ok').addEventListener('click', function () {
+        document.getElementById('dlg2-st').textContent = '적용하는 중…';
+      });
+      dlg2.addEventListener('close', function () {
+        opener2.focus();
+      });
+    </script>
+    <script>
+      var opener = document.getElementById('open');
+      var dlg = document.getElementById('dlg');
+      opener.addEventListener('click', function () {
+        dlg.showModal();
+      });
+      dlg.addEventListener('close', function () {
+        opener.focus();
+      });
+    </script>
+    <script>
+      // 플레이어 미리보기: 열 때 무대를 맞추고, 닫으면 연 버튼으로 초점을 돌린다. 주소가 #preview면 바로 연다.
+      function fitStage(stage) {
+        var view = stage.querySelector('.sa-stage-view');
+        var frame = stage.querySelector('.sa-stage-frame');
+        var note = stage.querySelector('[data-scale-note]');
+        var picked = stage.querySelector('.sa-stage-bar input:checked');
+        if (!view || !frame || !picked) return;
+        var room = view.clientWidth;
+        var w = picked.value === 'fill' ? room : Number(picked.value);
+        var s = Math.min(1, room / w);
+        frame.style.setProperty('--_w', w + 'px');
+        frame.style.setProperty('--_s', String(s));
+        view.style.setProperty('--_h', Math.round((w * 9) / 16) * s + 'px');
+        // 꾸밈 그림만 좁은 폭 모양으로 바꾼다. 실제 화면에서는 iframe 안 플레이어가 스스로 맞춘다.
+        var mock = frame.querySelector('.sa-pm');
+        if (mock) mock.classList.toggle('is-360', w < 480);
+        if (note) {
+          var label = picked.value === 'fill' ? '자리 폭 ' : '보이는 폭 ';
+          note.textContent =
+            label + w + 'px · ' + (s < 1 ? '실제의 ' + Math.round(s * 100) + '%로 줄여 보여요' : '실제 크기예요');
+        }
+      }
+      var opener3 = document.getElementById('open3');
+      var dlg3 = document.getElementById('dlg3');
+      var stage3 = dlg3.querySelector('.sa-stage');
+      stage3.addEventListener('change', function () {
+        fitStage(stage3);
+      });
+      new ResizeObserver(function () {
+        fitStage(stage3);
+      }).observe(stage3);
+      opener3.addEventListener('click', function () {
+        dlg3.showModal();
+      });
+      dlg3.addEventListener('close', function () {
+        opener3.focus();
+      });
+      if (location.hash === '#preview') dlg3.showModal();
+    </script>
+  </body>
+</html>

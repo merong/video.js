@@ -1,0 +1,172 @@
+<!-- @dsCard group="입력" height=480 subtitle="색 고르기, #rrggbb, 기본값 사용, 광고 강조색, 테두리 없음" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>ColorField</title>
+  </head>
+  <body>
+    <div class="sa-pv" style="grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start">
+      <div class="sa-field">
+        <label class="sa-label" id="c1-label" for="c1">강조색</label>
+        <div class="sa-color">
+          <span class="sa-color-swatch"
+            ><input type="color" value="#cdf352" aria-labelledby="c1-label c1-pick" /><span id="c1-pick" hidden
+              >색 고르기</span
+            ></span
+          ><input class="sa-input" id="c1" value="#cdf352" spellcheck="false" autocomplete="off" /><button
+            class="sa-btn is-sm"
+            type="button"
+            id="c1-clear"
+            aria-labelledby="c1-label c1-clear"
+          >
+            지우기
+          </button>
+        </div>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" id="c2-label" for="c2">강조 글자색</label>
+        <div class="sa-color is-empty">
+          <span class="sa-color-swatch"
+            ><input type="color" value="#000000" aria-labelledby="c2-label c2-pick" aria-describedby="c2-state" /><span
+              id="c2-pick"
+              hidden
+              >색 고르기</span
+            ></span
+          ><input class="sa-input" id="c2" value="" placeholder="#rrggbb" aria-describedby="c2-state" /><span
+            class="sa-color-state"
+            id="c2-state"
+            >기본값 사용 · 자동 대비</span
+          >
+        </div>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" id="c5-label" for="c5">광고 강조색</label>
+        <div class="sa-color is-empty">
+          <span class="sa-color-swatch"
+            ><input
+              type="color"
+              value="#000000"
+              aria-labelledby="c5-label c5-pick"
+              aria-describedby="c5-state c5-h"
+            /><span id="c5-pick" hidden>색 고르기</span></span
+          ><input class="sa-input" id="c5" value="" placeholder="#rrggbb" aria-describedby="c5-state c5-h" /><span
+            class="sa-color-state"
+            id="c5-state"
+            >기본값 사용 · 테마 강조색</span
+          >
+        </div>
+        <span class="sa-help" id="c5-h">광고 음량 막대와 광고 진행 막대에 써요.</span>
+      </div>
+      <div class="sa-field is-error">
+        <label class="sa-label" id="c3-label" for="c3">테두리 색</label>
+        <div class="sa-color">
+          <span class="sa-color-swatch"
+            ><input type="color" value="#2a2a2f" aria-labelledby="c3-label c3-pick" /><span id="c3-pick" hidden
+              >색 고르기</span
+            ></span
+          ><input class="sa-input" id="c3" value="#2a2a2" aria-invalid="true" aria-describedby="c3-error" /><button
+            class="sa-btn is-sm"
+            type="button"
+            id="c3-clear"
+            aria-labelledby="c3-label c3-clear"
+          >
+            지우기
+          </button>
+        </div>
+        <span class="sa-help" id="c3-error"
+          >#과 16진수 6자리로 입력해 주세요. 투명도를 넣으려면 8자리로 써요. 예: #cdf352, #00000026</span
+        >
+      </div>
+      <div class="sa-field is-warn">
+        <label class="sa-label" id="c4-label" for="c4">강조색</label>
+        <div class="sa-color">
+          <span class="sa-color-swatch"
+            ><input type="color" value="#9a9aa0" aria-labelledby="c4-label c4-pick" /><span id="c4-pick" hidden
+              >색 고르기</span
+            ></span
+          ><input class="sa-input" id="c4" value="#9a9aa0" aria-describedby="c4-warn" /><button
+            class="sa-btn is-sm"
+            type="button"
+            id="c4-clear"
+            aria-labelledby="c4-label c4-clear"
+          >
+            지우기
+          </button>
+        </div>
+        <span class="sa-help" id="c4-warn">강조 글자색과 대비가 4.5:1보다 낮아요. 저장은 할 수 있어요.</span>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" id="c6-label" for="c6">테두리 색</label>
+        <div class="sa-color is-none">
+          <span class="sa-color-swatch"
+            ><input
+              type="color"
+              value="#000000"
+              disabled
+              aria-labelledby="c6-label c6-pick"
+              aria-describedby="c6-h"
+            /><span id="c6-pick" hidden>색 고르기</span></span
+          ><input class="sa-input" id="c6" value="#00000000" disabled spellcheck="false" aria-describedby="c6-h" />
+        </div>
+        <label class="sa-check"
+          ><input type="checkbox" id="c6-none" checked aria-describedby="c6-h" />테두리 없음</label
+        >
+        <span class="sa-help" id="c6-h">켜면 플레이어 둘레에 선을 그리지 않아요.</span>
+      </div>
+      <div class="sa-field">
+        <label class="sa-label" id="c7-label" for="c7">테두리 색</label>
+        <div class="sa-color">
+          <span class="sa-color-swatch"
+            ><input type="color" value="#000000" aria-labelledby="c7-label c7-pick" aria-describedby="c7-a" /><span
+              id="c7-pick"
+              hidden
+              >색 고르기</span
+            ></span
+          ><input class="sa-input" id="c7" value="#00000026" spellcheck="false" aria-describedby="c7-a" /><button
+            class="sa-btn is-sm"
+            type="button"
+            id="c7-clear"
+            aria-labelledby="c7-label c7-clear"
+          >
+            지우기
+          </button>
+        </div>
+        <label class="sa-check"><input type="checkbox" aria-describedby="c7-h" />테두리 없음</label>
+        <span class="sa-help" id="c7-a">색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.</span>
+        <span class="sa-help" id="c7-h">켜면 플레이어 둘레에 선을 그리지 않아요.</span>
+      </div>
+    </div>
+    <script>
+      // 미리보기용: 색 칸과 글자 입력이 같은 값을 따른다.
+      document.querySelectorAll('.sa-color').forEach(function (box) {
+        var pick = box.querySelector('input[type=color]');
+        var text = box.querySelector('.sa-input');
+        pick.addEventListener('input', function () {
+          text.value = pick.value;
+          box.classList.remove('is-empty');
+        });
+        text.addEventListener('input', function () {
+          if (/^#[0-9a-f]{6}([0-9a-f]{2})?$/i.test(text.value)) pick.value = text.value.slice(0, 7).toLowerCase();
+        });
+      });
+      // 테두리 없음: 켜면 #00000000으로 두고 색 입력을 막는다. 끄면 비운 값(스킨 기본)으로 돌아간다.
+      document.querySelectorAll('.sa-check input[type=checkbox]').forEach(function (none) {
+        var box = none.closest('.sa-field').querySelector('.sa-color');
+        none.addEventListener('change', function () {
+          var text = box.querySelector('.sa-input');
+          box.classList.toggle('is-none', none.checked);
+          box.classList.toggle('is-empty', !none.checked);
+          box.querySelectorAll('input, button').forEach(function (i) {
+            i.disabled = none.checked;
+          });
+          text.value = none.checked ? '#00000000' : '';
+          text.placeholder = '#rrggbb';
+        });
+      });
+    </script>
+  </body>
+</html>

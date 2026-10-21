@@ -1,0 +1,150 @@
+/* 솔애드 관리자 — generated from tokens.json */
+
+:root,
+[data-theme="light"] {
+  --bg: #f4f4f4;
+  --panel: #ffffff;
+  --panel-2: #f7f7f7;
+  --hover: #f2f2f3;
+  --ink: #18181a;
+  --sub: #5f5f66;
+  --faint: #9a9aa0;
+  --line: #e4e4e7;
+  --line-2: #d4d4d8;
+  --accent: #cdf352;
+  --on-accent: #18181a;
+  --accent-soft: #f0f8d4;
+  --accent-text: #4d6b00;
+  --primary: #18181a;
+  --on-primary: #ffffff;
+  --dark: #18181a;
+  --on-dark: #f4f4f5;
+  --dark-sub: #a1a1aa;
+  --dark-raised: #232327;
+  --dark-line: #2e2e33;
+  --bad-on-dark: #ff8a8d;
+  --mark: #7fa600;
+  --good: #4f7a00;
+  --bad: #d9363e;
+  --warn: #b45309;
+  --focus-ring: #18181a;
+  --chart-line: #18181a;
+  --chart-area: rgba(205, 243, 82, 0.5);
+  --st-draft: #a1a1aa;
+  --st-pending: #e8a600;
+  --st-scheduled: #3b82f6;
+  --st-active: #1f9d55;
+  --st-paused: #f97316;
+  --st-done: #3f3f46;
+  --st-under: #db2777;
+  --st-rejected: #d9363e;
+  --st-archived: #c4c4cc;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0f11;
+    --panel: #18181a;
+    --panel-2: #202024;
+    --hover: #232328;
+    --ink: #f4f4f5;
+    --sub: #a1a1aa;
+    --faint: #71717a;
+    --line: #2a2a2f;
+    --line-2: #3a3a40;
+    --accent-soft: #2a3310;
+    --accent-text: #cdf352;
+    --primary: #cdf352;
+    --on-primary: #18181a;
+    --dark: #0a0a0b;
+    --dark-raised: #161618;
+    --dark-line: #26262b;
+    --mark: #f4f4f5;
+    --good: #b5e048;
+    --bad: #ff6b6e;
+    --warn: #ffb547;
+    --focus-ring: #cdf352;
+    --chart-line: #cdf352;
+    --chart-area: rgba(205, 243, 82, 0.12);
+    --st-pending: #ffc233;
+    --st-scheduled: #60a5fa;
+    --st-active: #4ade80;
+    --st-paused: #fb923c;
+    --st-done: #d4d4d8;
+    --st-under: #f472b6;
+    --st-rejected: #ff6b6e;
+    --st-archived: #52525b;
+    color-scheme: dark;
+  }
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f11;
+  --panel: #18181a;
+  --panel-2: #202024;
+  --hover: #232328;
+  --ink: #f4f4f5;
+  --sub: #a1a1aa;
+  --faint: #71717a;
+  --line: #2a2a2f;
+  --line-2: #3a3a40;
+  --accent-soft: #2a3310;
+  --accent-text: #cdf352;
+  --primary: #cdf352;
+  --on-primary: #18181a;
+  --dark: #0a0a0b;
+  --dark-raised: #161618;
+  --dark-line: #26262b;
+  --mark: #f4f4f5;
+  --good: #b5e048;
+  --bad: #ff6b6e;
+  --warn: #ffb547;
+  --focus-ring: #cdf352;
+  --chart-line: #cdf352;
+  --chart-area: rgba(205, 243, 82, 0.12);
+  --st-pending: #ffc233;
+  --st-scheduled: #60a5fa;
+  --st-active: #4ade80;
+  --st-paused: #fb923c;
+  --st-done: #d4d4d8;
+  --st-under: #f472b6;
+  --st-rejected: #ff6b6e;
+  --st-archived: #52525b;
+  color-scheme: dark;
+}
+
+:root {
+  --gap-xs: 6px;
+  --gap-sm: 8px;
+  --gap-md: 12px;
+  --gap-lg: 16px;
+  --pad-card-dense: 14px;
+  --pad-card: 18px;
+  --pad-page: 24px;
+  --pad-banner: 28px;
+  --radius-tag: 4px;
+  --radius-control: 8px;
+  --radius-item: 10px;
+  --radius-card: 12px;
+  --radius-banner: 20px;
+  --radius-pill: 999px;
+  --control-h: 36px;
+  --control-h-sm: 30px;
+  --control-h-dense: 32px;
+  --control-h-dense-sm: 28px;
+  --row-h: 46px;
+  --row-head-h: 36px;
+  --row-h-dense: 40px;
+  --row-head-h-dense: 32px;
+  --nav-h: 56px;
+  --shadow-knob: 0 1px 2px #00000040;
+  --motion-fast: 150ms;
+  --motion-help-once: 5s;
+  --motion-help-loop: 8s;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --font-sans:
+    "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-num: Inter, "Noto Sans KR", -apple-system, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Noto Sans KR", monospace;
+}
