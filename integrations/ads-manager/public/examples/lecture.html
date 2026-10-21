@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>샘플 강의 · 솔애드 플레이어</title>
+    <link rel="stylesheet" href="../assets/admin-app/design.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <style>
+      /* The lecture stage: the loader root (player + panel) at the chosen width, centered. */
+      .lc-root {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .lc-root[data-width='390'] {
+        max-width: 390px;
+      }
+      .lc-root[data-width='768'] {
+        max-width: 768px;
+      }
+      .lc-root media-i18n {
+        display: block;
+        min-width: 0;
+      }
+      .lc-scenes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--gap-sm, 8px);
+      }
+      .lc-scenes > .lc-end {
+        margin-inline-start: auto;
+      }
+      .lc-token {
+        font-family: var(--sa-monof, ui-monospace, monospace);
+      }
+    </style>
+    <script type="module">
+      import { startLecture } from './lecture.js';
+
+      startLecture();
+    </script>
+  </head>
+  <body>
+    <header class="sa-top">
+      <span class="sa-logo">솔애드 <em>플레이어</em></span>
+      <nav class="sa-nav" aria-label="플레이어 문서">
+        <a href="index.html">데모</a><a href="lecture.html" aria-current="page">샘플 강의</a
+        ><a href="guide.html">설명서</a><a href="help.html">도움말</a>
+      </nav>
+      <div class="sa-top-r"><a class="sa-btn is-sm" href="../">관리자 열기</a></div>
+    </header>
+    <main class="sa-bench is-lecture">
+      <div class="sa-bench-pick">
+        <div class="sa-doc-head">
+          <h1 class="sa-page-title">샘플 강의</h1>
+          <p class="sa-body ex-lead">
+            내장 ‘강의’ 프리셋으로 진도, 목차, 슬라이드, 스크립트, 메모를 함께 보여 줘요. 영상은 8장 × 10초, 소리 없는
+            샘플이에요.
+          </p>
+        </div>
+      </div>
+
+      <section class="sa-bench-stage sa-stage sa-card" aria-labelledby="st-h" id="stage">
+        <div class="sa-stage-bar">
+          <h2 class="sa-card-title" id="st-h">미리보기</h2>
+          <div class="sa-field">
+            <span class="sa-label" id="st-w-l">폭 보기</span>
+            <div class="sa-seg" role="radiogroup" aria-labelledby="st-w-l">
+              <label><input type="radio" name="st-w" value="390" />390</label
+              ><label><input type="radio" name="st-w" value="768" />768</label
+              ><label><input type="radio" name="st-w" value="fill" checked />자리 폭</label>
+            </div>
+          </div>
+        </div>
+        <p class="sa-note is-warn" role="note" id="no-video" hidden>
+          <span><b>샘플 강의 영상이 없어요.</b> bin/sample-lecture.sh로 만들어 주세요.</span>
+        </p>
+        <div class="lc-root" id="root" data-width="fill">
+          <div id="player" data-solad-player data-solad-manual></div>
+        </div>
+        <p class="sa-status" role="status" id="stage-status"></p>
+        <div class="lc-scenes" role="group" aria-labelledby="sc-l">
+          <span class="sa-label" id="sc-l">장면 바로가기</span>
+          <button class="sa-btn is-sm" type="button" data-time="0">처음부터</button
+          ><button class="sa-btn is-sm" type="button" data-time="29">4장 앞으로(0:29)</button
+          ><button class="sa-btn is-sm" type="button" data-time="75">끝 직전(1:15)</button
+          ><button class="sa-btn is-sm" type="button" id="reload">다시 불러오기</button>
+          <button class="sa-btn is-sm is-danger lc-end" type="button" id="clear">이 브라우저 기록 지우기</button>
+        </div>
+        <p class="sa-small">장면 버튼도 수강 규칙을 따라요. 막히면 플레이어에 알림이 떠요.</p>
+      </section>
+
+      <section class="sa-bench-opts sa-card" aria-labelledby="op-h" id="options">
+        <div class="sa-doc-head">
+          <h2 class="sa-card-title" id="op-h">설정 옵션</h2>
+          <p class="sa-small">
+            저장하지 않아요. 바꾸면 플레이어를 다시 만들어요.
+            <a class="sa-link" href="help.html#lms">강의 옵션 설명 보기</a>
+          </p>
+        </div>
+        <fieldset class="sa-optgrp">
+          <legend>강의 규칙</legend>
+          <p class="sa-off-reason" id="rules-off" hidden><span>서버에 저장할 때는 프리셋 규칙을 써요</span></p>
+          <div class="sa-field">
+            <span class="sa-label" id="rs-l">이어보기</span>
+            <div class="sa-seg" role="radiogroup" aria-labelledby="rs-l">
+              <label><input type="radio" name="resume" value="ask" />물어보기</label
+              ><label><input type="radio" name="resume" value="auto" />바로 이어서</label
+              ><label><input type="radio" name="resume" value="off" />처음부터</label>
+            </div>
+          </div>
+          <div class="sa-field">
+            <span class="sa-label" id="sk-l">앞으로 건너뛰기</span>
+            <div class="sa-seg" role="radiogroup" aria-labelledby="sk-l" aria-describedby="rules-off" data-rule>
+              <label><input type="radio" name="seekLimit" value="free" />자유롭게</label
+              ><label><input type="radio" name="seekLimit" value="watched" />본 곳까지만</label>
+            </div>
+          </div>
+          <div class="sa-field">
+            <span class="sa-label" id="mr-l">최대 배속</span>
+            <div class="sa-seg is-num" role="radiogroup" aria-labelledby="mr-l" aria-describedby="rules-off" data-rule>
+              <label><input type="radio" name="maxRate" value="1" />1</label
+              ><label><input type="radio" name="maxRate" value="1.2" />1.2</label
+              ><label><input type="radio" name="maxRate" value="1.5" />1.5</label
+              ><label><input type="radio" name="maxRate" value="1.7" />1.7</label
+              ><label><input type="radio" name="maxRate" value="2" />2</label>
+            </div>
+          </div>
+          <div class="sa-field">
+            <label class="sa-label" for="completion">완료 기준(%)</label>
+            <input
+              class="sa-input"
+              id="completion"
+              type="number"
+              min="50"
+              max="100"
+              step="1"
+              inputmode="numeric"
+              aria-describedby="completion-h rules-off"
+              data-rule
+            />
+            <span class="sa-help" id="completion-h">50에서 100 사이. 본 구간이 이만큼 되면 완료예요.</span>
+          </div>
+        </fieldset>
+        <fieldset class="sa-optgrp">
+          <legend>패널과 버튼</legend>
+          <ul class="sa-switches" id="tabs">
+            <li>
+              <button class="sa-toggle" type="button" role="switch" aria-labelledby="tc-n" data-tab="chapters"></button
+              ><span class="sa-switch-name" id="tc-n">목차</span>
+            </li>
+            <li>
+              <button class="sa-toggle" type="button" role="switch" aria-labelledby="tm-n" data-tab="materials"></button
+              ><span class="sa-switch-name" id="tm-n">자료</span>
+            </li>
+            <li>
+              <button
+                class="sa-toggle"
+                type="button"
+                role="switch"
+                aria-labelledby="tt-n"
+                data-tab="transcript"
+              ></button
+              ><span class="sa-switch-name" id="tt-n">스크립트</span>
+            </li>
+            <li>
+              <button class="sa-toggle" type="button" role="switch" aria-labelledby="tn-n" data-tab="notes"></button
+              ><span class="sa-switch-name" id="tn-n">메모</span>
+            </li>
+            <li>
+              <button
+                class="sa-toggle"
+                type="button"
+                role="switch"
+                aria-labelledby="bm-n"
+                aria-describedby="bm-d"
+                id="bookmarks"
+              ></button
+              ><span class="sa-switch-name" id="bm-n">북마크</span
+              ><span class="sa-switch-desc" id="bm-d">메모 탭이 켜져 있을 때만 버튼과 B 키가 보여요.</span>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="sa-optgrp">
+          <legend>광고</legend>
+          <div class="sa-field">
+            <span class="sa-label" id="ad-l">광고</span>
+            <div class="sa-seg" role="radiogroup" aria-labelledby="ad-l" aria-describedby="ad-h">
+              <label><input type="radio" name="ads" value="off" />끔</label
+              ><label><input type="radio" name="ads" value="preroll" />프리롤만</label>
+            </div>
+            <span class="sa-help" id="ad-h">프리롤이 편성돼 있지 않으면 광고 없이 시작해요.</span>
+          </div>
+        </fieldset>
+        <fieldset class="sa-optgrp">
+          <legend>학습자 토큰</legend>
+          <div class="sa-field">
+            <label class="sa-label" for="token">학습자 토큰</label>
+            <input
+              class="sa-input lc-token"
+              id="token"
+              autocomplete="off"
+              spellcheck="false"
+              aria-describedby="token-h"
+            />
+            <span class="sa-help" id="token-h"
+              >관리자 ‘LMS 연동’에서 만든 시험 토큰을 붙여 넣어요. 비우면 이 브라우저에만 저장해요.</span
+            >
+          </div>
+          <div class="sa-row">
+            <button class="sa-btn is-sm" type="button" id="token-apply">적용</button
+            ><button class="sa-btn is-sm" type="button" id="token-clear">비우기</button>
+          </div>
+          <p class="sa-status" role="status" id="token-status"></p>
+        </fieldset>
+      </section>
+
+      <section class="sa-bench-code sa-card" aria-labelledby="cd-h">
+        <div class="sa-doc-head">
+          <h2 class="sa-card-title" id="cd-h">설치 코드</h2>
+          <p class="sa-small">강의 규칙과 탭은 프리셋 값이라 설치 코드에 넣지 않아요. 관리자에서 프리셋을 고쳐요.</p>
+        </div>
+        <div class="sa-codeblock" id="code-html">
+          <div class="sa-codeblock-head">
+            <span class="sa-codeblock-title" id="cd-html">HTML · 자리 요소와 로더</span
+            ><button class="sa-btn is-sm" type="button">HTML 코드 복사</button>
+          </div>
+          <pre role="region" aria-labelledby="cd-html" tabindex="0"><code></code></pre>
+          <p class="sa-status" role="status"></p>
+        </div>
+      </section>
+
+      <section class="sa-bench-log sa-card" aria-labelledby="lg-h">
+        <div class="sa-card-h">
+          <h2 class="sa-card-title" id="lg-h">강의 이벤트 기록</h2>
+          <button class="sa-btn is-sm" type="button" id="clear-log">지우기</button>
+        </div>
+        <p class="sa-note" role="note"><span>최근 20개만 이 화면에 보여요. 새 것이 위에 와요.</span></p>
+        <div class="sa-logbox" role="region" aria-labelledby="lg-h" tabindex="0" id="log"></div>
+      </section>
+    </main>
+
+    <dialog class="sa-dialog" id="clear-dialog" aria-labelledby="cl-h" aria-describedby="cl-b">
+      <form method="dialog">
+        <div class="sa-dialog-h"><h2 class="sa-card-title" id="cl-h">이 브라우저의 학습 기록을 지울까요?</h2></div>
+        <div class="sa-dialog-b">
+          <p class="sa-body" id="cl-b">진도와 메모가 모두 지워져요. 서버에 저장된 기록은 그대로예요.</p>
+        </div>
+        <div class="sa-dialog-f">
+          <button class="sa-btn" value="cancel" autofocus>취소</button
+          ><button class="sa-btn is-danger" value="clear">지우기</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "start": 0,
+      "title": "들어가며"
+    },
+    {
+      "start": 10,
+      "title": "강의 프리셋 고르기"
+    },
+    {
+      "start": 20,
+      "title": "진도와 완료 기준"
+    },
+    {
+      "start": 30,
+      "title": "앞으로 건너뛰기 제한"
+    },
+    {
+      "start": 40,
+      "title": "목차와 슬라이드"
+    },
+    {
+      "start": 50,
+      "title": "스크립트 찾기"
+    },
+    {
+      "start": 60,
+      "title": "메모와 북마크"
+    },
+    {
+      "start": 70,
+      "title": "정리"
+    }
+  ],
+  "slides": [
+    {
+      "start": 0,
+      "image": "/examples/lecture/slide-01.svg",
+      "alt": "1장 들어가며 슬라이드. 강의 프리셋으로 강의실을 만들어요, 본 만큼 진도가 쌓여요, 자료와 스크립트가 영상을 따라가요.",
+      "title": "1장 들어가며"
+    },
+    {
+      "start": 10,
+      "image": "/examples/lecture/slide-02.svg",
+      "alt": "2장 강의 프리셋 고르기 슬라이드. 관리자 플레이어 메뉴에서 ‘강의’, 강의 기능 사용을 켜요, 설치 코드에 data-lecture를 더해요.",
+      "title": "2장 강의 프리셋 고르기"
+    },
+    {
+      "start": 20,
+      "image": "/examples/lecture/slide-03.svg",
+      "alt": "3장 진도와 완료 기준 슬라이드. 실제로 본 구간만 진도에 들어가요, 완료 기준(기본 90%)을 넘으면 완료, 광고 시간은 진도에 넣지 않아요.",
+      "title": "3장 진도와 완료 기준"
+    },
+    {
+      "start": 30,
+      "image": "/examples/lecture/slide-04.svg",
+      "alt": "4장 앞으로 건너뛰기 제한 슬라이드. ‘본 곳까지만’을 고를 수 있어요, 보지 않은 구간으로는 못 가요, 뒤로는 자유, 완료하면 풀려요.",
+      "title": "4장 앞으로 건너뛰기 제한"
+    },
+    {
+      "start": 40,
+      "image": "/examples/lecture/slide-05.svg",
+      "alt": "5장 목차와 슬라이드 슬라이드. 목차에서 장을 눌러 이동해요, 슬라이드가 장면을 따라 바뀌어요, ‘영상 따라가기’로 돌아와요.",
+      "title": "5장 목차와 슬라이드"
+    },
+    {
+      "start": 50,
+      "image": "/examples/lecture/slide-06.svg",
+      "alt": "6장 스크립트 찾기 슬라이드. 지금 문장이 강조돼요, 낱말을 검색해 장면으로 가요, 스크롤하면 자동 스크롤이 꺼져요.",
+      "title": "6장 스크립트 찾기"
+    },
+    {
+      "start": 60,
+      "image": "/examples/lecture/slide-07.svg",
+      "alt": "7장 메모와 북마크 슬라이드. 지금 시각에 메모를 남겨요, 북마크 버튼이나 b 키, 메모와 북마크는 시간순으로 모여요.",
+      "title": "7장 메모와 북마크"
+    },
+    {
+      "start": 70,
+      "image": "/examples/lecture/slide-08.svg",
+      "alt": "8장 정리 슬라이드. 프리셋 하나로 진도와 자료까지, 서버 저장은 로그인이나 학습자 토큰, 관리자 ‘학습 진도’에서 확인해요.",
+      "title": "8장 정리"
+    }
+  ],
+  "files": [
+    {
+      "title": "강의 자료(PDF)",
+      "url": "/demo-media/lecture/slides.pdf"
+    },
+    {
+      "title": "1장 슬라이드(SVG)",
+      "url": "/examples/lecture/slide-01.svg",
+      "size": "2.2KB"
+    }
+  ],
+  "transcript": {
+    "src": "/examples/lecture/transcript.ko.vtt",
+    "lang": "ko"
+  }
+}

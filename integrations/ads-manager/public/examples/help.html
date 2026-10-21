@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>도움말 · 솔애드 플레이어</title>
+    <link rel="stylesheet" href="../assets/admin-app/design.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <script type="module">
+      import { startHelp } from './help.js';
+
+      startHelp();
+    </script>
+  </head>
+  <body>
+    <header class="sa-top">
+      <span class="sa-logo">솔애드 <em>플레이어</em></span>
+      <nav class="sa-nav" aria-label="플레이어 문서">
+        <a href="index.html">데모</a><a href="lecture.html">샘플 강의</a><a href="guide.html">설명서</a><a href="help.html" aria-current="page">도움말</a>
+      </nav>
+      <div class="sa-top-r"><a class="sa-btn is-sm" href="../">관리자 열기</a></div>
+    </header>
+    <div class="sa-doc">
+      <details class="sa-disclosure sa-toc" open>
+        <summary>이 페이지 목차</summary>
+        <nav class="sa-secnav" aria-label="이 페이지 목차">
+          <a href="#install">설치 코드 두 줄</a>
+          <a href="#attributes">자리 요소 속성</a>
+          <a href="#js-api">JS API</a>
+          <a href="#events">이벤트와 오류 코드</a>
+          <a href="#precedence">값의 우선순위</a>
+          <a href="#autoplay">자동재생과 음소거</a>
+          <a href="#language">플레이어 화면 언어</a>
+          <a href="#preset-fields">프리셋 설정 옵션</a>
+          <a href="#failure">프리셋을 받지 못할 때</a>
+          <a href="#same-origin">같은 사이트에서만 동작</a>
+        </nav>
+      </details>
+      <main class="sa-doc-body">
+        <div class="sa-doc-head">
+          <h1 class="sa-page-title">도움말</h1>
+          <p class="sa-body ex-lead">
+            로더 설치 코드, 자리 요소 속성, JS API, 프리셋 설정 옵션을 모았어요. 관리자 화면의 옵션 설명 링크가 이
+            페이지의 각 항목으로 와요.
+          </p>
+        </div>
+
+        <section class="sa-doc-sec" aria-labelledby="install">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="install">설치 코드 두 줄</h2>
+            <a class="sa-anchor" href="#install"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘설치 코드 두 줄’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            영상이 들어갈 곳에 자리 요소를 두고, 페이지에 로더를 한 번 넣어요. 로더 주소는 관리자를 설치한 주소 아래의
+            <code class="sa-code">player/loader.js</code>예요. 아래 예는 관리자를 사이트의 <code class="sa-code">/ads/</code>에
+            설치했을 때예요.
+          </p>
+          <div class="sa-codeblock">
+            <div class="sa-codeblock-head">
+              <span class="sa-codeblock-title" id="code-install">설치 코드</span
+              ><button class="sa-btn is-sm" type="button">설치 코드 복사</button>
+            </div>
+            <pre
+              role="region"
+              aria-labelledby="code-install"
+              tabindex="0"
+            ><code>&lt;div data-solad-player data-video-id="intro-2026" data-src="/media/intro.mp4"&gt;&lt;/div&gt;
+&lt;script type="module" src="/ads/player/loader.js"&gt;&lt;/script&gt;</code></pre>
+            <p class="sa-status" role="status"></p>
+          </div>
+          <ul>
+            <li>자리 요소는 한 페이지에 여러 개 둘 수 있어요. 로더 줄은 그래도 한 번만 넣어요.</li>
+            <li>페이지를 그린 뒤에 넣은 자리 요소도 로더가 찾아서 만들어요.</li>
+            <li>
+              테마, 컨트롤, 언어, 광고 화면 같은 모습은 사이트 적용 프리셋에서 가져와요. 프리셋을 바꿔도 이 코드는 그대로
+              두고, 페이지를 새로고침하면 바뀐 모습이 나와요.
+            </li>
+            <li>이 코드로 재생하면 광고 기록이 통계에 쌓여요.</li>
+            <li>파일을 직접(<code class="sa-code">file://</code>) 열지 말고 웹 서버에서 열어 주세요.</li>
+          </ul>
+          <p>
+            데모와 재생 테스트 페이지는 아래 쿼리를 읽어요. 데모에서 바꾼 값은 주소에 남아서 그 주소를 그대로 나눌 수
+            있어요.
+          </p>
+          <div data-options="exampleQuery"></div>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="attributes">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="attributes">자리 요소 속성</h2>
+            <a class="sa-anchor" href="#attributes"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘자리 요소 속성’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            영상마다 다른 값은 자리 요소의 <code class="sa-code">data-*</code> 속성으로 정해요. 테마, 컨트롤, 로고처럼
+            보이는 모습은 속성으로 바꿀 수 없어요. 프리셋에서 바꿔 주세요.
+          </p>
+          <div data-options="loaderData"></div>
+          <p>
+            Video.js 플레이어에서는 로더가 광고 요소 <code class="sa-code">&lt;media-ads&gt;</code>를 만들고 프리셋 값을
+            속성으로 넣어요. 로더 없이 광고 요소를 직접 붙일 때 아래 속성을 써요.
+          </p>
+          <div data-options="element"></div>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="js-api">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="js-api">JS API</h2>
+            <a class="sa-anchor" href="#js-api"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘JS API’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            페이지를 그린 뒤에 영상을 넣거나 이벤트를 받아야 할 때 써요. 자리 요소에
+            <code class="sa-code">data-solad-manual</code>을 붙이면 로더가 먼저 만들지 않고,
+            <code class="sa-code">mount(element, options)</code>를 부를 때 만들어요.
+          </p>
+          <div class="sa-codeblock">
+            <div class="sa-codeblock-head">
+              <span class="sa-codeblock-title" id="code-api">JS API 예</span
+              ><button class="sa-btn is-sm" type="button">JS API 예 복사</button>
+            </div>
+            <pre
+              role="region"
+              aria-labelledby="code-api"
+              tabindex="0"
+            ><code>import { mount } from '/ads/player/loader.js';
+
+// 자리 요소: &lt;div id="player" data-solad-player data-solad-manual&gt;&lt;/div&gt;
+const handle = await mount(document.getElementById('player'), {
+  videoId: 'intro-2026',
+  src: '/media/intro.mp4',
+  onEvent(event) {}, // ads-event의 detail
+  onError(error) {}, // { code, message }
+});
+
+handle.destroy();</code></pre>
+            <p class="sa-status" role="status"></p>
+          </div>
+          <p class="sa-note is-warn" role="note">
+            <span
+              ><b>미리보기 전용이에요. 사이트 설치에는 쓰지 않아요.</b> <code class="sa-code">preview</code> 옵션과
+              <code class="sa-code">handle.seek</code>, <code class="sa-code">handle.restyle</code>은 데모와 관리자
+              미리보기가 써요. Video.js 플레이어에 편성을 주소가 아닌 객체로 넘기면 광고 중에 누른 키보드 단축키가
+              본편에 들어가요. 미드롤 앞이나 끝 직전 장면으로 만든 플레이어도 줄인 편성 객체로 재생하므로 같아요.
+              그 밖에 편성을 주소로 넘기면 사이트 설치와 같은 광고 요소로 재생해요.</span
+            >
+          </p>
+          <div data-options="mount"></div>
+          <p>
+            로더 없이 기본 <code class="sa-code">&lt;video&gt;</code>에 광고를 붙일 때는 광고 모듈의
+            <code class="sa-code">createAdsController</code>를 써요.
+          </p>
+          <div data-options="controller"></div>
+          <div data-options="controllerMethods"></div>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="events">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="events">이벤트와 오류 코드</h2>
+            <a class="sa-anchor" href="#events"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘이벤트와 오류 코드’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            <code class="sa-code">ads-event</code>의 <code class="sa-code">detail.type</code>은
+            <code class="sa-code">start</code>, <code class="sa-code">complete</code>,
+            <code class="sa-code">skip</code>, <code class="sa-code">click</code>, <code class="sa-code">error</code>,
+            <code class="sa-code">cancel</code> 중 하나예요. 관찰한 시각은
+            <code class="sa-code">detail.occurredAt</code>에 ISO 문자열로 와요.
+          </p>
+          <div data-options="events"></div>
+          <div class="sa-doc-hrow"><h3 class="sa-doc-h3" id="error-codes">오류 코드</h3></div>
+          <p>
+            <code class="sa-code">solad-error</code>와 <code class="sa-code">onError</code>는
+            <code class="sa-code">{ code, message }</code>를 받아요. 방문자 화면에는 오류를 띄우지 않아요.
+          </p>
+          <div class="sa-card is-flush">
+            <div class="sa-scroll">
+              <table class="sa-table" aria-labelledby="error-codes">
+                <thead>
+                  <tr>
+                    <th scope="col">코드</th>
+                    <th scope="col">알리는 곳</th>
+                    <th scope="col">뜻과 결과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>missing_video_id</code></td>
+                    <td>solad-error, onError</td>
+                    <td>영상 ID가 없거나 형식이 틀려요. 그 자리는 플레이어를 만들지 않아요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>missing_src</code></td>
+                    <td>solad-error, onError</td>
+                    <td>본편 주소가 없어요. 그 자리는 플레이어를 만들지 않아요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>invalid_src</code></td>
+                    <td>solad-error, onError</td>
+                    <td>본편 주소가 /경로나 http(s):// 주소가 아니에요. 그 자리는 플레이어를 만들지 않아요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>preset_not_found</code></td>
+                    <td>onError</td>
+                    <td>프리셋이 없어요. 기본 설정으로 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>preset_unavailable</code></td>
+                    <td>onError</td>
+                    <td>프리셋 응답이 실패했거나 3초 안에 오지 않았어요. 기본 설정으로 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>preset_invalid</code></td>
+                    <td>onError</td>
+                    <td>받은 프리셋 값이 올바르지 않아요. 기본 설정으로 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>invalid_overrides</code></td>
+                    <td>onError</td>
+                    <td><code>overrides</code>에 틀린 값이 있어요. <code>overrides</code> 전체를 쓰지 않아요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>schedule_unavailable</code></td>
+                    <td>onError</td>
+                    <td>기본 video 플레이어가 광고 편성을 받지 못했어요. 광고 없이 본편을 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>load_failed</code></td>
+                    <td>onError</td>
+                    <td>플레이어 파일을 불러오지 못했어요. 플레이어를 만들지 못해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>player_type</code></td>
+                    <td>onError</td>
+                    <td>예제 페이지가 정한 플레이어와 프리셋의 플레이어 종류가 달라요. 기본 설정으로 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>invalid_preview_preset</code></td>
+                    <td>onError(미리보기 전용)</td>
+                    <td>미리보기 프리셋 값이 틀려요. 기본 설정으로 보여요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>invalid_preview_schedule</code></td>
+                    <td>onError(미리보기 전용)</td>
+                    <td>미리보기 편성이 raw 편성이 아니에요. 광고 없이 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>invalid_preview_logo</code></td>
+                    <td>onError(미리보기 전용)</td>
+                    <td>미리보기 로고 주소가 틀려요. 로고 없이 재생해요.</td>
+                  </tr>
+                  <tr>
+                    <td><code>preview_schedule_unavailable</code></td>
+                    <td>onError(미리보기 전용)</td>
+                    <td>미리보기 편성 주소에서 편성을 받지 못했어요. 광고 없이 재생해요.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="precedence">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="precedence">값의 우선순위</h2>
+            <a class="sa-anchor" href="#precedence"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘값의 우선순위’ 절 주소</span></a
+            >
+          </div>
+          <p>같은 값을 여러 곳에서 정하면 앞에 있는 것이 이겨요.</p>
+          <ol>
+            <li>JS API의 옵션과 <code class="sa-code">overrides</code></li>
+            <li>자리 요소의 <code class="sa-code">data-*</code></li>
+            <li>프리셋(<code class="sa-code">data-preset</code>이 없으면 사이트 적용 프리셋)</li>
+            <li>기본값</li>
+          </ol>
+          <ul>
+            <li>잘못된 <code class="sa-code">data-*</code> 값은 그 속성만 무시하고 콘솔에 경고를 남겨요.</li>
+            <li>
+              <code class="sa-code">overrides</code>에 잘못된 값이 하나라도 있으면 <code class="sa-code">overrides</code>
+              전체를 쓰지 않고 <code class="sa-code">onError</code>로 알려요.
+            </li>
+            <li>프리셋에서 비운 값은 기본값을 써요.</li>
+          </ul>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="autoplay">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="autoplay">자동재생과 음소거</h2>
+            <a class="sa-anchor" href="#autoplay"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘자동재생과 음소거’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            자동재생은 늘 음소거로 시작해요. 브라우저가 소리 나는 자동재생을 막기 때문이에요. 프리셋에는 자동재생을 켜고
+            음소거를 끈 값을 저장할 수 없어요.
+          </p>
+          <ul>
+            <li>
+              페이지에서 자동재생과 함께 <code class="sa-code">data-muted="false"</code>를 넣어도 로더는 음소거를 켜고
+              콘솔에 경고를 남겨요.
+            </li>
+            <li>그래서 데모와 관리자의 설치 코드는 자동재생을 켜면 <code class="sa-code">data-muted</code>를 쓰지 않아요.</li>
+            <li>음소거 자동재생도 막는 브라우저 설정이 있어요. 그때는 방문자가 재생 버튼을 눌러야 해요.</li>
+          </ul>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="language">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="language">플레이어 화면 언어</h2>
+            <a class="sa-anchor" href="#language"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘플레이어 화면 언어’ 절 주소</span></a
+            >
+          </div>
+          <p>플레이어 화면 언어는 다음 순서로 정해요.</p>
+          <ol>
+            <li>JS API의 <code class="sa-code">lang</code> 또는 자리 요소의 <code class="sa-code">data-lang</code></li>
+            <li>프리셋의 언어</li>
+            <li>자리 요소에서 위로 가장 가까운 <code class="sa-code">lang</code> 속성, 없으면 문서의 lang</li>
+          </ol>
+          <p>
+            페이지 lang은 <code class="sa-code">ko</code>, <code class="sa-code">en</code>,
+            <code class="sa-code">ja</code>로 시작하면 그 언어, <code class="sa-code">zh</code>,
+            <code class="sa-code">zh-CN</code>, <code class="sa-code">zh-SG</code>,
+            <code class="sa-code">zh-Hans</code>로 시작하면 중국어 간체예요. 그 밖의 언어는 영어로 보여요. 광고 문구는
+            언어와 상관없이 늘 한국어예요.
+          </p>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="preset-fields">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="preset-fields">프리셋 설정 옵션</h2>
+            <a class="sa-anchor" href="#preset-fields"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘프리셋 설정 옵션’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            프리셋은 관리자의 플레이어 메뉴에서 만들어요. 비운 값은 기본값을 쓰고, 고를 플레이어가 쓸 수 없는 값은
+            저장할 때 막아요.
+          </p>
+          <p class="sa-small">
+            <b>준비 중</b>인 값은 저장할 때 검사하지만 플레이어 화면에는 아직 쓰지 않아요. 괄호 안은 그 값을 화면에 쓰기
+            시작하는 작업 단계예요.
+          </p>
+          <div data-fields="meta"></div>
+          <div data-fields="theme"></div>
+          <div data-fields="playback"></div>
+          <div data-fields="display"></div>
+          <div data-fields="language"></div>
+          <div data-fields="input"></div>
+          <div data-fields="controls"></div>
+          <div data-fields="logo"></div>
+          <div data-fields="ads"></div>
+          <div data-fields="lms"></div>
+          <div class="sa-doc-hrow"><h3 class="sa-doc-h3" id="lms">강의(LMS) 기능</h3></div>
+          <p>
+            강의 프리셋(<code class="sa-code">lms.enabled</code>)을 쓰는 자리 요소에
+            <code class="sa-code">data-lecture</code>로 강의 자료 매니페스트를, <code class="sa-code">data-learner-token</code>으로
+            학습자 토큰을 넣어요. 플레이어 옆(960px 이상) 또는 아래에 진도, 목차, 자료, 스크립트, 메모 패널이 붙어요.
+            <a class="sa-link" href="lecture.html">샘플 강의</a>에서 동작을 볼 수 있어요.
+          </p>
+          <div class="sa-codeblock">
+            <div class="sa-codeblock-head">
+              <span class="sa-codeblock-title" id="code-lms-install">강의 자리 요소</span
+              ><button class="sa-btn is-sm" type="button">강의 자리 요소 복사</button>
+            </div>
+            <pre
+              role="region"
+              aria-labelledby="code-lms-install"
+              tabindex="0"
+            ><code>&lt;div data-solad-player data-video-id="course-1-lesson-3" data-src="/media/lesson-3.mp4"
+     data-preset="lms"
+     data-lecture="/lectures/lesson-3/manifest.json"
+     data-learner-token="&lt;?= htmlspecialchars($learnerToken) ?&gt;"&gt;&lt;/div&gt;</code></pre>
+            <p class="sa-status" role="status"></p>
+          </div>
+          <p>
+            <b>매니페스트</b>는 같은 사이트의 JSON이에요. 시간은 초이고 앞에서부터 커져야 해요. 틀린 항목은 버리고 나머지를
+            보여 줘요. 스크립트가 없으면 <code class="sa-code">data-captions</code> 자막을 스크립트로 써요.
+          </p>
+          <div class="sa-codeblock">
+            <div class="sa-codeblock-head">
+              <span class="sa-codeblock-title" id="code-lms-manifest">매니페스트 형식</span
+              ><button class="sa-btn is-sm" type="button">매니페스트 형식 복사</button>
+            </div>
+            <pre role="region" aria-labelledby="code-lms-manifest" tabindex="0"><code>{
+  "version": 1,
+  "chapters": [{ "start": 0, "title": "들어가며" }, { "start": 10, "title": "강의 프리셋 고르기" }],
+  "slides": [{ "start": 0, "image": "/lectures/lesson-3/slide-01.svg", "alt": "1장 표지", "title": "들어가며" }],
+  "files": [{ "title": "강의 자료(PDF)", "url": "/lectures/lesson-3/slides.pdf", "size": "1.2MB" }],
+  "transcript": { "src": "/lectures/lesson-3/transcript.ko.vtt", "lang": "ko" }
+}</code></pre>
+            <p class="sa-status" role="status"></p>
+          </div>
+          <p>
+            <b>학습자 토큰</b>은 사이트 서버가 학습자마다 만들어요. 관리자 ‘LMS 연동’의 연동 키로 서명하고, 키는 서버에만
+            둬요. <code class="sa-code">sub</code>는 학습자 ID(영문, 숫자, <code class="sa-code">. _ : @ -</code>, 1~64자),
+            <code class="sa-code">exp</code>는 만료 시각(지금부터 하루 안)이에요. 토큰이 없거나 틀리거나 만료되면 진도와
+            메모를 이 브라우저에만 저장해요. 그누보드에 로그인한 회원은 토큰 없이 서버에 저장해요.
+          </p>
+          <div class="sa-codeblock">
+            <div class="sa-codeblock-head">
+              <span class="sa-codeblock-title" id="code-lms-token">PHP · 학습자 토큰 만들기</span
+              ><button class="sa-btn is-sm" type="button">PHP 코드 복사</button>
+            </div>
+            <pre role="region" aria-labelledby="code-lms-token" tabindex="0"><code>&lt;?php
+// $lmsKey: 관리자 ‘LMS 연동’에서 만든 연동 키(64자). 페이지나 JS에 넣지 않아요.
+function solad_learner_token(string $learnerId, string $lmsKey, int $minutes = 120): string
+{
+    $encode = fn (string $bytes): string =&gt; rtrim(strtr(base64_encode($bytes), '+/', '-_'), '=');
+    $payload = $encode(json_encode(['v' =&gt; 1, 'sub' =&gt; $learnerId, 'exp' =&gt; time() + $minutes * 60]));
+
+    return $payload . '.' . $encode(hash_hmac('sha256', $payload, $lmsKey, true));
+}
+
+$learnerToken = solad_learner_token($currentUserId, $lmsKey);</code></pre>
+            <p class="sa-status" role="status"></p>
+          </div>
+          <p>
+            <b>패널 밝기</b>는 OS 설정과 관계없이 밝게 시작해요. 어두운 페이지에서는
+            <code class="sa-code">solad-lms-panel { color-scheme: dark }</code>로, OS를 따르려면
+            <code class="sa-code">solad-lms-panel { color-scheme: light dark }</code>로 바꿔요. 패널도 프리셋의 테마 CSS
+            변수(강조색, 글꼴)를 따라요.
+          </p>
+          <p><b>한계</b></p>
+          <ul>
+            <li>관리자와 같은 사이트에서만 저장해요(아래 ‘같은 사이트에서만 동작’). 다른 도메인의 LMS에서는 이벤트로 받아 직접 저장해요.</li>
+            <li>전체화면에서는 패널이 보이지 않아요. 진도는 그대로 세요.</li>
+            <li>
+              원격훈련 수준 기능(탭을 벗어나면 멈춤, 중복 재생 막기, 학습 확인 팝업, 하루 학습 시간 상한, 영상 속 퀴즈)은
+              없어요.
+            </li>
+            <li>미리보기와 데모에서는 패널을 그리지 않고 진도도 저장하지 않아요.</li>
+          </ul>
+          <p>
+            스킨과 광고 화면은 아래 CSS 변수로 꾸며요. 로더는 프리셋의 테마와 광고 화면 값을 이 가운데 일부 변수로
+            넣어요.
+          </p>
+          <div data-options="skinCss"></div>
+          <div data-options="adsCss"></div>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="failure">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="failure">프리셋을 받지 못할 때</h2>
+            <a class="sa-anchor" href="#failure"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘프리셋을 받지 못할 때’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            로더는 프리셋을 3초까지 기다려요. 없거나, 실패하거나, 값이 틀리면 내장 기본 설정으로 재생해요. 방문자 화면에는
+            오류를 띄우지 않아요.
+          </p>
+          <ul>
+            <li>콘솔에 <code class="sa-code">[solad]</code>로 시작하는 경고를 프리셋마다 한 번 남겨요.</li>
+            <li>
+              <code class="sa-code">onError</code>로 오류 코드를 알리고, <code class="sa-code">solad-ready</code>의
+              <code class="sa-code">detail.fallback</code>과 <code class="sa-code">handle.fallback</code>이
+              <code class="sa-code">true</code>예요.
+            </li>
+            <li>한 페이지에서 같은 프리셋은 한 번만 요청해요. 자리 요소가 여러 개여도 같아요.</li>
+            <li>
+              프리셋 응답은 브라우저가 매번 서버에 바뀌었는지 물어봐요(<code class="sa-code">ETag</code>). 바뀌지
+              않았으면 <code class="sa-code">304</code>로 답해서 다시 받지 않아요.
+            </li>
+          </ul>
+        </section>
+
+        <section class="sa-doc-sec" aria-labelledby="same-origin">
+          <div class="sa-doc-hrow">
+            <h2 class="sa-doc-h" id="same-origin">같은 사이트에서만 동작</h2>
+            <a class="sa-anchor" href="#same-origin"
+              ><span aria-hidden="true">#</span><span class="sa-sr">‘같은 사이트에서만 동작’ 절 주소</span></a
+            >
+          </div>
+          <p>
+            로더는 자기 주소 옆의 관리자 API(<code class="sa-code">api/index.php</code>)에서 프리셋과 편성을 받아요. API는
+            다른 사이트에서 온 요청을 막아요(<code class="sa-code">403</code>). 그래서 관리자를 영상 페이지와 같은 사이트에
+            설치하고, 그 설치의 로더를 넣어야 해요.
+          </p>
+          <ul>
+            <li>그누보드에서는 관리자를 사이트 아래 <code class="sa-code">/ads/</code>처럼 설치해서 같은 출처로 써요.</li>
+            <li>본편 주소(<code class="sa-code">data-src</code>)는 다른 사이트의 주소여도 돼요.</li>
+            <li>프리셋과 편성, 광고 기록 API는 로그인 없이 동작해요. 관리자 화면만 로그인이 필요해요.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

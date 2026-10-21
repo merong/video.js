@@ -54,6 +54,7 @@ try {
 
     $db = new \AdsManager\Database($config);
     $db->migrate($config['siteId']);
+    $db->migrateLms();
     if (isset($options['admin'])) {
         if ($config['host'] !== 'standalone' || !isset($options['password-stdin'])) {
             throw new RuntimeException('Standalone account creation requires --password-stdin.');
@@ -72,7 +73,7 @@ try {
             $db->run('INSERT INTO ' . $db->table('admins') . ' (username, password_hash) VALUES (?, ?)', [$username, $hash]);
         });
     }
-    fwrite(STDOUT, "Installed schema version 1 (" . $db->driver . "). No customer data imported.\n");
+    fwrite(STDOUT, "Installed schema version 1 and LMS schema version " . $db->meta('lms_schema_version') . " (" . $db->driver . "). No customer data imported.\n");
 } catch (Throwable $error) {
     // PDO exceptions can contain connection details. Do not print them.
     fwrite(STDERR, $error instanceof PDOException ? "Database installation failed; check the private configuration.\n" : $error->getMessage() . "\n");

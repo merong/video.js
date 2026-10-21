@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>솔애드 관리자 (개발)</title>
+    <!-- Layout work only: Vite has no API proxy, so /api/index.php fails here. For a real API, build and open / on the manager (admin/app.php). -->
+    <script id="ads-config" type="application/json">
+      { "apiUrl": "/api/index.php" }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </head>
+  <body>
+    <div id="ads-admin-root"></div>
+  </body>
+</html>

@@ -8,6 +8,8 @@ abstract class Host
     public function __construct(protected readonly Database $db, protected readonly array $config) {}
 
     abstract public function authenticated(): bool;
+    /** Name shown for the authenticated administrator; call only after authentication. */
+    abstract public function displayName(): string;
     abstract public function csrfToken(): string;
     abstract public function verifyCsrf(mixed $token): void;
     abstract public function resolveVideoContext(string $videoId): array;
@@ -22,6 +24,12 @@ abstract class Host
     }
 
     public function validateTarget(array $target): void {}
+
+    /** The host's own signed-in visitor for LMS progress, or null when the host has none. */
+    public function learnerId(): ?string
+    {
+        return null;
+    }
 
     public function login(array $input): array
     {

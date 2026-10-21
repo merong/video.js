@@ -14,11 +14,15 @@ final class Events
         return hash_hmac('sha256', $payload, $this->db->meta('signing_key'));
     }
 
-    public function issue(array $schedule): array
+    public function issue(array $schedule, ?string $breaks = null): array
     {
         $id = 'session-' . Value::uuid();
         $expiry = time() + $this->config['sessionSeconds'];
         $claims = ['siteId' => $schedule['siteId'], 'videoId' => $schedule['videoId'], 'boardId' => $schedule['boardId'], 'categoryId' => $schedule['categoryId'], 'scheduleId' => $schedule['scheduleId'], 'scheduleVersion' => $schedule['scheduleVersion'], 'playbackSessionId' => $id, 'expires' => $expiry];
+        if ($breaks !== null) {
+            // Only present when set, so tokens without a filter keep their exact bytes.
+            $claims['breaks'] = $breaks;
+        }
         $payload = rtrim(strtr(base64_encode(Value::json($claims)), '+/', '-_'), '=');
         return ['schedule' => $schedule, 'playbackSessionId' => $id, 'eventToken' => $payload . '.' . $this->sign($payload), 'expiresAt' => gmdate('Y-m-d\TH:i:s\Z', $expiry), 'eventsUrl' => $this->config['apiUrl'] . '?action=events'];
     }

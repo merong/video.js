@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>플레이어 미리보기 · 솔애드 플레이어</title>
+    <link rel="stylesheet" href="../assets/admin-app/design.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <script type="module">
+      import { startPreviewFrame } from './preview-frame.js';
+
+      startPreviewFrame({ root: document.getElementById('player'), notice: document.getElementById('notice') });
+    </script>
+  </head>
+  <body class="ex-frame">
+    <div class="ex-player" id="player" data-solad-manual></div>
+    <p class="sa-note is-warn" id="notice" role="alert" hidden></p>
+  </body>
+</html>

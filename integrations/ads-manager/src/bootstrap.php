@@ -26,7 +26,9 @@ if ($adsConfig['host'] === 'gnuboard') {
         $_POST = $adsOriginalPost;
         $_REQUEST = $adsOriginalRequest;
     }
-} elseif (session_status() !== PHP_SESSION_ACTIVE) {
+} elseif (session_status() !== PHP_SESSION_ACTIVE && !in_array($adsAction ?? null, \AdsManager\Http::PUBLIC_ACTIONS, true)) {
+    // public/api/index.php sets $adsAction. Visitor actions never read the admin session,
+    // so starting one would only hand every page viewer a session cookie.
     ini_set('session.use_strict_mode', '1');
     ini_set('session.use_only_cookies', '1');
     session_name('ADS' . substr(hash('sha256', $adsConfig['dsn'] . $adsConfig['tablePrefix']), 0, 16));

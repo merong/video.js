@@ -13,6 +13,12 @@ final class ApiError extends \RuntimeException
 
 final class Value
 {
+    // ECMAScript WhiteSpace + LineTerminator, the set String.prototype.trim removes:
+    // U+0009–U+000D, U+FEFF, Zs (U+0020, U+00A0, U+1680, U+2000–U+200A, U+202F, U+205F, U+3000), U+2028, U+2029.
+    // Not U+0085: JS keeps it, and \p{Cc} rejects it anyway.
+    public const SPACE = '[\x{0009}-\x{000D}\x{FEFF}\p{Zs}\x{2028}\x{2029}]';
+    // Embeddings, overrides and isolates can reverse how text reads. Marks such as U+200F stay allowed.
+    public const BIDI_CONTROL = '[\x{202A}-\x{202E}\x{2066}-\x{2069}]';
     public const MIMES = ['video/mp4' => 'mp4', 'video/webm' => 'webm', 'image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp', 'image/gif' => 'gif'];
 
     public static function fail(string $field, string $message = '입력값을 확인해 주세요.'): never
@@ -32,6 +38,18 @@ final class Value
     public static function id(mixed $value, string $field): string
     {
         return self::text($value, $field);
+    }
+
+    /**
+     * A content video ID: id() tightened by the contract 4.1 string rules (no \p{Cc} or bidirectional
+     * controls, not empty or only JS whitespace). Never trimmed: players require the echoed ID verbatim.
+     */
+    public static function videoId(mixed $value, string $field = 'videoId'): string
+    {
+        if (!is_string($value) || !preg_match('//u', $value) || mb_strlen($value) > 128 || preg_match('/\p{Cc}|' . self::BIDI_CONTROL . '|^' . self::SPACE . '*$/Du', $value)) {
+            self::fail($field, '영상 ID를 확인해 주세요.');
+        }
+        return $value;
     }
 
     public static function nullableId(mixed $value, string $field): ?string
@@ -124,7 +142,7 @@ final class Value
             self::fail('target.type');
         }
 
-        $target = ['type' => $type, 'id' => self::id($value['id'] ?? null, 'target.id')];
+        $target = ['type' => $type, 'id' => $type === 'video' ? self::videoId($value['id'] ?? null, 'target.id') : self::id($value['id'] ?? null, 'target.id')];
         if ($type === 'site' && $target['id'] !== $siteId) {
             self::fail('target.id');
         }

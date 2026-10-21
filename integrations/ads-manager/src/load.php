@@ -10,6 +10,8 @@ require_once __DIR__ . '/Creatives.php';
 require_once __DIR__ . '/Schedules.php';
 require_once __DIR__ . '/Events.php';
 require_once __DIR__ . '/Statistics.php';
+require_once __DIR__ . '/PlayerPresets.php';
+require_once __DIR__ . '/Lms.php';
 require_once __DIR__ . '/App.php';
 require_once __DIR__ . '/Config.php';
 require_once __DIR__ . '/Http.php';

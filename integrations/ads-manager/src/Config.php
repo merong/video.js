@@ -20,7 +20,7 @@ final class Config
 
     public static function validate(array $config): array
     {
-        $config += ['host' => 'standalone', 'siteId' => 'site-local', 'timeZone' => 'Asia/Seoul', 'tablePrefix' => 'ads_', 'dbUser' => null, 'dbPassword' => null, 'apiUrl' => '/api/index.php', 'playerModuleUrl' => null, 'uploadBytes' => 100 * 1024 * 1024, 'uploadUrl' => '/media', 'sessionSeconds' => 7200, 'retentionDays' => 90, 'gnuboardRoot' => null, 'gnuboardMenu' => '300950', 'gnuboardVideoKeys' => null];
+        $config += ['host' => 'standalone', 'siteId' => 'site-local', 'timeZone' => 'Asia/Seoul', 'tablePrefix' => 'ads_', 'dbUser' => null, 'dbPassword' => null, 'apiUrl' => '/api/index.php', 'playerModuleUrl' => null, 'uploadBytes' => 100 * 1024 * 1024, 'uploadUrl' => '/media', 'sessionSeconds' => 7200, 'retentionDays' => 90, 'gnuboardRoot' => null, 'gnuboardMenu' => '300950', 'gnuboardVideoKeys' => null, 'lmsRateLimitPerMinute' => 6000];
         if (!in_array($config['host'], ['standalone', 'gnuboard'], true) || !is_string($config['dsn'] ?? null) || !preg_match('/^(sqlite:|mysql:)/', $config['dsn'])) {
             throw new \RuntimeException('Invalid host or PDO configuration.');
         }
@@ -41,6 +41,7 @@ final class Config
         Value::integer($config['uploadBytes'], 'uploadBytes', 1, 1024 * 1024 * 1024);
         Value::integer($config['sessionSeconds'], 'sessionSeconds', 60, 86400);
         Value::integer($config['retentionDays'], 'retentionDays', 1, 3650);
+        Value::integer($config['lmsRateLimitPerMinute'], 'lmsRateLimitPerMinute', 1, 1000000);
         if ($config['gnuboardVideoKeys'] !== null && !is_callable($config['gnuboardVideoKeys'])) {
             throw new \RuntimeException('gnuboardVideoKeys must be callable.');
         }

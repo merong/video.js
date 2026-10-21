@@ -5,6 +5,9 @@ namespace AdsManager;
 
 final class Http
 {
+    /** Visitor-facing actions: no admin session, CSRF token or login. */
+    public const PUBLIC_ACTIONS = ['schedule', 'events', 'player-preset', 'lms-session', 'lms-progress', 'lms-notes'];
+
     public static function sameOrigin(): void
     {
         if (($_SERVER['HTTP_SEC_FETCH_SITE'] ?? '') === 'cross-site') {
@@ -64,9 +67,50 @@ final class Http
         echo Value::json(['ok' => false, 'error' => $details]);
     }
 
+    /** Strong tag over the exact response data bytes, so a manager upgrade that changes the render also changes it. */
+    public static function etag(array $data): string
+    {
+        return '"' . substr(hash('sha256', Value::json($data)), 0, 32) . '"';
+    }
+
+    /** If-None-Match: `*` or any listed tag; W/ prefixes are compared as their strong form. */
+    public static function matches(?string $ifNoneMatch, string $etag): bool
+    {
+        if ($ifNoneMatch === null) {
+            return false;
+        }
+        foreach (explode(',', $ifNoneMatch) as $candidate) {
+            $candidate = trim($candidate);
+            if ($candidate === '*' || (str_starts_with($candidate, 'W/') ? substr($candidate, 2) : $candidate) === $etag) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Replaces the API's no-store with revalidation for a successful public player-preset render.
+     * A matching If-None-Match ends the request with 304 and no body. Errors never reach this.
+     */
+    public static function revalidate(array $data): array
+    {
+        if (headers_sent()) {
+            return $data;
+        }
+        $etag = self::etag($data);
+        header('Cache-Control: no-cache');
+        header('ETag: ' . $etag);
+        if (self::matches($_SERVER['HTTP_IF_NONE_MATCH'] ?? null, $etag)) {
+            http_response_code(304);
+            ini_set('default_mimetype', '');
+            exit;
+        }
+        return $data;
+    }
+
     public static function csrfHeader(?App $app, string $action): void
     {
-        if (!$app || in_array($action, ['schedule', 'events'], true)) {
+        if (!$app || in_array($action, self::PUBLIC_ACTIONS, true)) {
             return;
         }
         // GnuBoard consumes its native token even when a later input validation fails.

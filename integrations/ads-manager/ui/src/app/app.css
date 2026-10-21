@@ -1,0 +1,234 @@
+/* App layout only. Colors, spacing and shapes come from design/tokens.css; type sizes come from the sa- classes. */
+
+.aa-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Several sa- classes set display, which would otherwise override the hidden attribute. */
+.aa-app [hidden],
+.aa-app[hidden] {
+  display: none !important;
+}
+
+.aa-workspace {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.aa-stack {
+  display: grid;
+  gap: var(--gap-lg);
+  align-content: start;
+  min-width: 0;
+}
+
+.aa-main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.aa-main:focus {
+  outline: none;
+}
+
+.aa-skip {
+  position: absolute;
+  left: var(--gap-sm);
+  top: var(--gap-sm);
+  z-index: 1;
+  transform: translateY(-200%);
+}
+
+.aa-skip:focus-visible {
+  transform: none;
+}
+
+.aa-global {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-sm);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--gap-md) var(--pad-page) 0;
+}
+
+/* Mock screens bring their own `sa-main`; the app's main already pads the page. */
+.aa-main .sa-main {
+  padding: 0;
+}
+
+.aa-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+  gap: var(--gap-lg);
+  align-items: start;
+}
+
+.aa-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap-md);
+  align-items: start;
+}
+
+.aa-fieldset {
+  display: grid;
+  gap: var(--gap-md);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.aa-fieldset > legend {
+  padding: 0;
+  margin-bottom: var(--gap-sm);
+}
+
+.aa-login {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.aa-media {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-control);
+  background: var(--dark);
+}
+
+.aa-media > video,
+.aa-media > img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+.aa-break {
+  display: grid;
+  gap: var(--gap-md);
+}
+
+.aa-item {
+  display: grid;
+  gap: var(--gap-md);
+  min-width: 0;
+  margin: 0;
+  padding: var(--gap-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+}
+
+.aa-item > legend {
+  padding: 0 var(--gap-xs);
+}
+
+.aa-between {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-md);
+}
+
+.aa-savebar {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Preset editor (A2 canvas): 1280 is section list, sections and a sticky preview; narrower widths stack the section
+   chips or select and the folding preview above the sections. `PresetEditor` picks the width class. */
+.aa-editor {
+  display: grid;
+  grid-template-areas: "nav main preview";
+  grid-template-columns: 200px minmax(0, 1fr) minmax(0, 360px);
+  gap: var(--gap-lg);
+  align-items: start;
+}
+
+.aa-editor:not(.is-wide) {
+  grid-template-areas: "nav" "preview" "main";
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gap-md);
+}
+
+.aa-editor-nav {
+  grid-area: nav;
+  position: sticky;
+  top: var(--gap-md);
+  z-index: 2;
+  min-width: 0;
+}
+
+.aa-editor:not(.is-wide) .aa-editor-nav {
+  top: 0;
+}
+
+.aa-editor-main {
+  grid-area: main;
+  min-width: 0;
+}
+
+.aa-editor-preview {
+  grid-area: preview;
+  position: sticky;
+  top: var(--gap-md);
+  min-width: 0;
+}
+
+.aa-editor:not(.is-wide) .aa-editor-preview {
+  position: static;
+}
+
+/* Built-in preset page: the notice beside its preview on wide screens, stacked like the editor below that. The
+   preview is the tallest item there, so unlike the editor's it is not sticky. */
+.aa-builtin {
+  display: grid;
+  gap: var(--gap-lg);
+  align-items: start;
+}
+
+.aa-builtin.is-wide {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+}
+
+/* Clears the sticky section chips when a link scrolls a section into view. */
+.aa-editor .aa-section {
+  scroll-margin-top: 96px;
+}
+
+.aa-editor.is-narrow .aa-savebar > *:last-child,
+.aa-editor.is-narrow .aa-savebar .sa-btn {
+  width: 100%;
+}
+
+.aa-preset-id {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.aa-steps {
+  display: grid;
+  gap: var(--gap-sm);
+  margin: 0;
+  padding-inline-start: var(--gap-lg);
+}
+
+@media (max-width: 960px) {
+  .aa-split,
+  .aa-main .sa-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

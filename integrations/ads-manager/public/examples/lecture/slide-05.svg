@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t">
+  <!-- Sample lecture slide 5/8 (ads-lms-spec 4), made by workspaces/ads-lms-20261022/design/make-slides.py.
+       Colors are design/tokens.json light values: bg, ink, sub, line-strong, accent.
+       Header, footer and page bar removed and the body scaled to 80% so the player title and control bar cover nothing. -->
+  <title id="t">5장 목차와 슬라이드</title>
+  <rect width="1280" height="720" fill="#F4F4F4" />
+  <g transform="translate(128 72) scale(0.8)" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto Sans CJK KR', 'Malgun Gothic', sans-serif" fill="#18181A">
+  <rect x="80" y="120" width="408" height="480" rx="32" fill="#18181A" />
+  <text x="124" y="190" font-size="36" font-weight="700" fill="#CDF352">5장</text>
+  <text x="284" y="500" font-size="300" font-weight="800" fill="#CDF352" text-anchor="middle">05</text>
+  <text x="124" y="564" font-size="26" fill="#F4F4F4">0:40 – 0:50</text>
+  <text x="544" y="236" font-size="64" font-weight="700">목차와 슬라이드</text>
+  <rect x="544" y="264" width="96" height="8" rx="4" fill="#18181A" />
+  <circle cx="560" cy="345" r="6" fill="#18181A" />
+  <text x="584" y="356" font-size="34">목차에서 장을 눌러 이동해요</text>
+  <circle cx="560" cy="421" r="6" fill="#18181A" />
+  <text x="584" y="432" font-size="34">슬라이드가 장면을 따라 바뀌어요</text>
+  <circle cx="560" cy="497" r="6" fill="#18181A" />
+  <text x="584" y="508" font-size="34">‘영상 따라가기’로 돌아와요</text>
+  </g>
+</svg>

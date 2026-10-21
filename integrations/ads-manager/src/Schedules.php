@@ -194,7 +194,7 @@ final class Schedules
         $draft = $this->validate($input);
         // Preview is administrator-only; context is still host-derived for video targets.
         $hasVideo = isset($input['videoId']) && $input['videoId'] !== '';
-        $context = $hasVideo ? $this->host->resolveVideoContext(Value::id($input['videoId'], 'videoId')) : $this->contextForTarget($draft['target']);
+        $context = $hasVideo ? $this->host->resolveVideoContext(Value::videoId($input['videoId'])) : $this->contextForTarget($draft['target']);
         return ['schedule' => $this->resolve($context, $draft, $hasVideo || $draft['target']['type'] === 'video')['schedule']];
     }
 
@@ -212,6 +212,13 @@ final class Schedules
         if (!$row) {
             throw new ApiError(403, 'invalid_session', '재생 세션이 유효하지 않습니다.');
         }
-        return $this->dto($claims, $claims['scheduleId'], $claims['scheduleVersion'], $row['mode'] === 'disabled' ? [] : Value::decode($row['breaks_json']));
+        $schedule = $this->dto($claims, $claims['scheduleId'], $claims['scheduleVersion'], $row['mode'] === 'disabled' ? [] : Value::decode($row['breaks_json']));
+        return ($claims['breaks'] ?? null) === 'preroll' ? self::preroll($schedule) : $schedule;
+    }
+
+    /** `schedule&breaks=preroll` (LMS presets): only the pre break is served and frozen into the session. */
+    public static function preroll(array $schedule): array
+    {
+        return [...$schedule, 'breaks' => array_values(array_filter($schedule['breaks'], static fn (array $break): bool => $break['position'] === 'pre'))];
     }
 }

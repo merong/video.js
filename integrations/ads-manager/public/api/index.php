@@ -15,9 +15,9 @@ try {
     $adsInput = \AdsManager\Http::input($adsMethod, $adsAction, $adsConfig);
     $adsResult = $adsApp->dispatch($adsMethod, $adsAction, $adsInput, $_SERVER['HTTP_X_CSRF_TOKEN'] ?? ($adsInput['csrfToken'] ?? null), $_FILES);
     \AdsManager\Http::csrfHeader($adsApp, $adsAction);
-    if ($adsAction === 'stats-csv') {
+    if (in_array($adsAction, ['stats-csv', 'lms-progress-csv'], true)) {
         header('Content-Type: text/csv; charset=utf-8');
-        header('Content-Disposition: attachment; filename="ads-stats.csv"');
+        header('Content-Disposition: attachment; filename="' . ($adsAction === 'stats-csv' ? 'ads-stats.csv' : 'lms-progress.csv') . '"');
         echo $adsResult;
     } else {
         header('Content-Type: application/json; charset=utf-8');

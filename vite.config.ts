@@ -187,8 +187,8 @@ export default defineConfig({
       'typecheck:workspace': {
         command: 'tsgo --build',
         cache: false,
-        // The E2E suites are not project references, so type-check them as a task alongside the build graph.
-        dependsOn: ['@videojs/skins#generate', '@videojs/e2e#typecheck'],
+        // The E2E suites and the ads manager UI are not project references, so type-check them as tasks alongside the build graph.
+        dependsOn: ['@videojs/skins#generate', '@videojs/e2e#typecheck', '@videojs/ads-manager-ui#typecheck'],
       },
     },
   },

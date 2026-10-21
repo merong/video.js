@@ -37,6 +37,23 @@ final class GnuBoard extends Host
         return $this->permission('r');
     }
 
+    public function learnerId(): ?string
+    {
+        global $member;
+        // The same session-key check as permission(): a copied session cookie is not a learner.
+        if (empty($member['mb_id']) || !function_exists('verify_mb_key') || !verify_mb_key($member)) {
+            return null;
+        }
+        return (string) $member['mb_id'];
+    }
+
+    public function displayName(): string
+    {
+        global $member;
+        $nick = trim((string) ($member['mb_nick'] ?? ''));
+        return $nick !== '' ? $nick : (string) $member['mb_id'];
+    }
+
     public function requireAdmin(bool $write = false): void
     {
         global $auth;
@@ -68,7 +85,7 @@ final class GnuBoard extends Host
 
     public function capabilities(): array
     {
-        return ['host' => 'gnuboard', 'manualTargets' => false, 'uploads' => true, 'loginUrl' => Value::url(G5_BBS_URL . '/login.php', 'loginUrl')];
+        return ['host' => 'gnuboard', 'manualTargets' => false, 'uploads' => true, 'loginUrl' => Value::url(G5_BBS_URL . '/login.php', 'loginUrl'), 'siteUrl' => Value::url(G5_URL, 'siteUrl'), 'adminUrl' => Value::url(G5_ADMIN_URL, 'adminUrl')];
     }
 
     private function board(string $id): array

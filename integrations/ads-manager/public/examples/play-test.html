@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>재생 테스트 · 솔애드 플레이어</title>
+    <link rel="stylesheet" href="../assets/admin-app/design.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <script type="module">
+      import { reloadOnRestore, startPlayTestPage } from './play-test.js';
+
+      reloadOnRestore();
+      startPlayTestPage(document, location.href);
+    </script>
+  </head>
+  <body>
+    <header class="sa-top">
+      <span class="sa-logo">솔애드 <em>플레이어</em></span>
+      <nav class="sa-nav" aria-label="플레이어 문서">
+        <a href="index.html">데모</a><a href="lecture.html">샘플 강의</a><a href="guide.html">설명서</a><a href="help.html">도움말</a>
+      </nav>
+      <div class="sa-top-r"><a class="sa-btn is-sm" href="../">관리자 열기</a></div>
+    </header>
+    <main class="sa-main ex-wide">
+      <div class="sa-phead">
+        <div>
+          <h1 class="sa-page-title">재생 테스트</h1>
+          <p class="sa-small">게시한 편성을 실제 서비스와 같은 방법으로 재생해요.</p>
+        </div>
+      </div>
+      <p class="sa-note is-warn" role="note">
+        <span
+          ><b>이 페이지는 실제 수집 API로 광고 기록을 보내요.</b> 여기서 재생한 시작·완료·클릭이 통계에 쌓여요.</span
+        >
+      </p>
+
+      <div class="sa-card">
+        <div class="sa-switchbar">
+          <div class="sa-field">
+            <span class="sa-label" id="sw-p">플레이어</span>
+            <nav class="sa-chips" aria-labelledby="sw-p">
+              <a class="sa-chip" data-type="videojs">Video.js</a><a class="sa-chip" data-type="native">기본 video</a>
+            </nav>
+          </div>
+          <div class="sa-field">
+            <span class="sa-label" id="sw-m">미디어</span>
+            <nav class="sa-chips" aria-labelledby="sw-m">
+              <a class="sa-chip" data-media="mp4">MP4</a><a class="sa-chip" data-media="hls">HLS</a
+              ><span class="sa-chip is-off" data-media-off hidden>HLS</span>
+            </nav>
+            <span class="sa-help" id="sw-m-h" data-media-why hidden>기본 video는 HLS를 재생하지 못해요.</span>
+          </div>
+          <div class="sa-field" data-engine-field hidden>
+            <span class="sa-label" id="sw-e">HLS 엔진</span>
+            <nav class="sa-chips" aria-labelledby="sw-e">
+              <a class="sa-chip" data-engine="spf">Video.js 자체(SPF)</a><a class="sa-chip" data-engine="hlsjs">hls.js</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <p class="sa-note is-warn" role="note" id="query-note" hidden></p>
+      <p class="sa-note is-warn" role="note" id="preset-note" hidden></p>
+
+      <div class="sa-grid2">
+        <section class="sa-stage" aria-label="플레이어">
+          <div class="sa-stage-view" id="stage-view">
+            <div class="sa-stage-frame" id="stage-frame"><div class="ex-player" id="player" data-solad-manual></div></div>
+            <div class="sa-empty" id="stage-empty" hidden>
+              <b>재생할 영상이 없어요</b>
+              <span>관리자의 지면 편성에서 재생 테스트 링크로 열어 주세요. 주소에 video 값이 있어야 해요.</span>
+            </div>
+          </div>
+          <p class="sa-stage-now" id="now"><span>최근 광고 진행</span><span>아직 광고가 나오지 않았어요</span></p>
+          <p class="sa-status" role="status" id="status"></p>
+          <div class="sa-row">
+            <button class="sa-btn is-sm" type="button" id="restart" hidden>다시 불러오기</button>
+          </div>
+        </section>
+        <div class="sa-panel" id="conditions">
+          <div class="sa-card is-flush">
+            <table class="sa-table sa-kv">
+              <caption class="sa-sr">
+                재생 조건
+              </caption>
+              <tbody>
+                <tr>
+                  <th scope="row">프리셋</th>
+                  <td id="cond-preset"></td>
+                </tr>
+                <tr>
+                  <th scope="row">영상 ID</th>
+                  <td><code class="sa-code" id="cond-video"></code></td>
+                </tr>
+                <tr>
+                  <th scope="row">본편</th>
+                  <td><code class="sa-code" id="cond-src"></code></td>
+                </tr>
+                <tr>
+                  <th scope="row">편성</th>
+                  <td>게시본</td>
+                </tr>
+                <tr>
+                  <th scope="row">통계</th>
+                  <td>수집해요</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <section class="sa-card ex-stack" aria-labelledby="lg-h">
+            <h2 class="sa-card-title" id="lg-h">광고 진행</h2>
+            <div class="sa-logbox" role="region" aria-labelledby="lg-h" tabindex="0" id="log"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

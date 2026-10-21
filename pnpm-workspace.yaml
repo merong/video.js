@@ -43,6 +43,7 @@ packages:
   - 'packages/adapters/*'
   - 'packages/extensions/*'
   - 'apps/*'
+  - 'integrations/ads-manager/ui'
   - site
 
 allowBuilds:

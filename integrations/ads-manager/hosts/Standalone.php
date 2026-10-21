@@ -11,6 +11,11 @@ final class Standalone extends Host
         return is_string($username) && $this->db->one('SELECT username FROM ' . $this->db->table('admins') . ' WHERE username = ?', [$username]) !== null;
     }
 
+    public function displayName(): string
+    {
+        return $_SESSION['ads_admin'];
+    }
+
     public function csrfToken(): string
     {
         return $_SESSION['ads_csrf'] ??= bin2hex(random_bytes(32));
@@ -59,7 +64,7 @@ final class Standalone extends Host
 
     public function capabilities(): array
     {
-        return ['host' => 'standalone', 'manualTargets' => true, 'uploads' => true, 'loginUrl' => null];
+        return ['host' => 'standalone', 'manualTargets' => true, 'uploads' => true, 'loginUrl' => null, 'siteUrl' => null, 'adminUrl' => null];
     }
 
     public function resolveVideoContext(string $videoId): array
@@ -70,7 +75,7 @@ final class Standalone extends Host
 
     public function saveVideoContext(array $input): array
     {
-        $id = Value::id($input['videoId'] ?? null, 'videoId');
+        $id = Value::videoId($input['videoId'] ?? null);
         $label = Value::text($input['label'] ?? null, 'label', 255);
         $board = Value::nullableId($input['boardId'] ?? null, 'boardId');
         $category = Value::nullableId($input['categoryId'] ?? null, 'categoryId');

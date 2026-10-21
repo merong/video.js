@@ -1,0 +1,18 @@
+<!--
+  Placeholder poster for the admin player preview (contract A2-D 6), so "포스터 표시" shows before saving.
+  Colors are design/tokens.json light values, written raw because an image cannot read CSS variables:
+  dark (background), dark-line (frame), on-dark (main line), dark-sub (small line).
+  Font: the tokens' sans family stack.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="포스터 자리">
+  <style>
+    text {
+      font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+      text-anchor: middle;
+    }
+  </style>
+  <rect width="1280" height="720" fill="#18181A" />
+  <rect x="40" y="40" width="1200" height="640" rx="16" fill="none" stroke="#2E2E33" stroke-width="4" stroke-dasharray="24 16" />
+  <text x="640" y="350" font-size="64" font-weight="700" fill="#F4F4F5">포스터 자리</text>
+  <text x="640" y="420" font-size="32" fill="#A1A1AA">미리보기에서 포스터 표시를 확인하는 그림이에요</text>
+</svg>

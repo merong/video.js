@@ -1,0 +1,8 @@
+/* Layout only for the player preview and test links. Colors, spacing and shape come from design/tokens.css. */
+.ads-test-links {
+  display: grid;
+  gap: var(--gap-sm);
+}
+.ads-test-links-reason {
+  margin: 0;
+}
