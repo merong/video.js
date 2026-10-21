@@ -377,6 +377,43 @@ describe('createAdsController', () => {
     expect(container.querySelector('[data-ads-overlay]')).toBeNull();
   });
 
+  // A looping element seeks back to the start instead of ending, and `ended` stays false while `loop` is set.
+  it('runs a midroll on the first loop only and never starts postroll while looping', async () => {
+    const fixture = loadPlaybackFixture();
+
+    bind({
+      ...fixture,
+      breaks: fixture.breaks.filter((item) => item.breakId === 'mid-10' || item.position === 'post'),
+    });
+    content.loop = true;
+    await content.play();
+
+    for (const lap of [1, 2, 3]) {
+      mediaState(content, { currentTime: 12 });
+      content.dispatchEvent(new Event('timeupdate'));
+
+      if (lap === 1) {
+        overlayRoot(container).querySelector('img')!.dispatchEvent(new Event('load'));
+        vi.advanceTimersByTime(3000);
+      }
+
+      expect(container.querySelector('[data-ads-overlay]')).toBeNull();
+      mediaState(content, { currentTime: 99.9 });
+      content.dispatchEvent(new Event('timeupdate'));
+      mediaState(content, { currentTime: 0, seeking: true });
+      content.dispatchEvent(new Event('seeking'));
+      mediaState(content, { seeking: false });
+      content.dispatchEvent(new Event('seeked'));
+      content.dispatchEvent(new Event('timeupdate'));
+      expect(container.querySelector('[data-ads-overlay]')).toBeNull();
+    }
+
+    expect(events.map((event) => [event.type, event.breakId])).toEqual([
+      ['start', 'mid-10'],
+      ['complete', 'mid-10'],
+    ]);
+  });
+
   it('keeps postroll playing through the content pause queued after seeked at the actual end', async () => {
     let resolvePlay!: () => void;
     let rejectPlay!: (error: DOMException) => void;
