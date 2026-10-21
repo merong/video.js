@@ -1,0 +1,301 @@
+{
+  "demo": {
+    "walk": {
+      "label": "demo-1280",
+      "count": 39,
+      "noRing": [],
+      "stops": [
+        "A:데모",
+        "A:설명서",
+        "A:도움말",
+        "A:관리자 열기",
+        "SELECT#preset:사이트 적용 프리셋기본둥근 테두리강조색",
+        "INPUT[st-w=fill]:fill",
+        "MEDIA-CONTAINER:미디어 플레이어",
+        "MEDIA-PLAY-BUTTON#vjs-t8h5QXcn-0-trigger:재생",
+        "MEDIA-MUTE-BUTTON#vjs-t8h5QXcn-0-2-trigger:음소거",
+        "MEDIA-SLIDER-THUMB:볼륨",
+        "MEDIA-SLIDER-THUMB:탐색",
+        "MEDIA-TIME:재생 시간 표시, 10초 남음.",
+        "BUTTON#vjs-t8h5QXcn-0-4-trigger:설정",
+        "MEDIA-CAST-BUTTON#vjs-t8h5QXcn-0-5-trigger:전송 시작",
+        "MEDIA-PIP-BUTTON#vjs-t8h5QXcn-0-7-trigger:화면 속 화면",
+        "MEDIA-FULLSCREEN-BUTTON#vjs-t8h5QXcn-0-8-trigger:전체 화면",
+        "BUTTON:처음부터",
+        "BUTTON:미드롤 앞",
+        "BUTTON:끝 직전",
+        "A:옵션 설명 보기",
+        "BUTTON:",
+        "BUTTON:",
+        "BUTTON:",
+        "INPUT[preload=metadata]:metadata",
+        "INPUT#poster:on",
+        "INPUT#poster-url:",
+        "INPUT#title:on",
+        "INPUT#title-text:",
+        "INPUT#vtt:",
+        "SELECT#lang:비움 · 페이지 언어를 따름 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (",
+        "SELECT#page-lang:한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (",
+        "INPUT[media=mp4]:mp4",
+        "BUTTON:HTML 코드 복사",
+        "PRE:<!-- 솔애드 광고 플레이어 --> <div data-solad-player data-v",
+        "BUTTON:JS API 코드 복사",
+        "PRE:import { mount } from \"/player/loader.js\"; // 자리 요",
+        "BUTTON#clear-log:기록 지우기",
+        "DIV#log:아직 광고 진행이 없어요재생하면 여기에 쌓여요.",
+        "BODY:undefined (NO RING)"
+      ]
+    },
+    "preset": {
+      "tag": "SELECT",
+      "id": "preset",
+      "type": "select-one",
+      "name": null,
+      "value": "p-i0aecb28w3",
+      "text": "사이트 적용 프리셋기본둥근 테두리강조색",
+      "ring": true,
+      "outline": "solid 2px rgb(24, 24, 26)",
+      "shadow": null,
+      "focusVisible": true,
+      "inView": true
+    },
+    "presetChange": {
+      "before": "p-i0aecb28w3",
+      "after": "p-i0aecb28w3",
+      "url": "/examples/index.html"
+    },
+    "preload": {
+      "tag": "INPUT",
+      "id": null,
+      "type": "radio",
+      "name": "preload",
+      "value": "metadata",
+      "text": "metadata",
+      "ring": true,
+      "outline": "solid 2px rgb(24, 24, 26)",
+      "shadow": null,
+      "focusVisible": true,
+      "inView": true
+    },
+    "preloadAfter": {
+      "focused": {
+        "tag": "INPUT",
+        "id": null,
+        "type": "radio",
+        "name": "preload",
+        "value": "auto",
+        "text": "auto",
+        "ring": true,
+        "outline": "solid 2px rgb(24, 24, 26)",
+        "shadow": null,
+        "focusVisible": true,
+        "inView": true
+      },
+      "checked": "auto"
+    },
+    "poster": {
+      "tag": "INPUT",
+      "id": "poster",
+      "type": "checkbox",
+      "name": null,
+      "text": "on",
+      "ring": true,
+      "outline": "solid 2px rgb(24, 24, 26)",
+      "shadow": null,
+      "focusVisible": true,
+      "inView": true
+    },
+    "posterAfter": false,
+    "copy": [
+      {
+        "name": "HTML 코드 복사",
+        "reached": true,
+        "ring": true,
+        "copiedLengths": [
+          299
+        ],
+        "status": [
+          "복사했어요."
+        ]
+      },
+      {
+        "name": "JS API 코드 복사",
+        "reached": true,
+        "ring": true,
+        "copiedLengths": [
+          299,
+          490
+        ],
+        "status": [
+          "복사했어요.",
+          "복사했어요."
+        ]
+      }
+    ],
+    "play": null,
+    "nowAfterPlay": "최근 광고 진행 아직 광고가 나오지 않았어요",
+    "scene": {
+      "tag": "BUTTON",
+      "id": null,
+      "type": "button",
+      "name": null,
+      "text": "미드롤 앞",
+      "ring": true,
+      "outline": "solid 2px rgb(24, 24, 26)",
+      "shadow": null,
+      "focusVisible": true,
+      "inView": true
+    },
+    "nowAfterScene": "최근 광고 진행 미드롤 1/1 재생 중 19:05:37",
+    "console": []
+  },
+  "help": {
+    "summary": {
+      "tag": "SUMMARY",
+      "id": null,
+      "type": null,
+      "name": null,
+      "text": "이 페이지 목차",
+      "ring": true,
+      "outline": "solid 2px rgb(24, 24, 26)",
+      "shadow": null,
+      "focusVisible": true,
+      "inView": true
+    },
+    "open": true,
+    "link": {
+      "tag": "A",
+      "id": null,
+      "type": null,
+      "name": null,
+      "text": "이벤트와 오류 코드",
+      "ring": true,
+      "outline": "solid 2px rgb(24, 24, 26)",
+      "shadow": null,
+      "focusVisible": true,
+      "inView": true
+    },
+    "hash": "#events",
+    "walk": {
+      "label": "help-768",
+      "count": 25,
+      "noRing": [],
+      "stops": [
+        "A:#‘이벤트와 오류 코드’ 절 주소",
+        "A:#‘solad-ready’ 항목 주소",
+        "A:#‘solad-error’ 항목 주소",
+        "A:#‘ads-event’ 항목 주소",
+        "DIV:코드 알리는 곳 뜻과 결과 missing_video_id solad-error, onErr",
+        "A:#‘값의 우선순위’ 절 주소",
+        "A:#‘자동재생과 음소거’ 절 주소",
+        "A:#‘플레이어 화면 언어’ 절 주소",
+        "A:#‘프리셋 설정 옵션’ 절 주소",
+        "A:#‘이름과 플레이어 종류’ 항목 주소",
+        "A:#‘name’ 항목 주소",
+        "A:#‘playerType’ 항목 주소",
+        "A:#‘테마’ 항목 주소",
+        "A:#‘theme.accentColor’ 항목 주소",
+        "A:#‘theme.accentTextColor’ 항목 주소",
+        "A:#‘theme.borderColor’ 항목 주소",
+        "A:#‘theme.borderRadius’ 항목 주소",
+        "A:#‘theme.fontFamily’ 항목 주소",
+        "A:#‘theme.objectFit’ 항목 주소",
+        "A:#‘theme.scaleUnit’ 항목 주소",
+        "A:#‘재생 동작’ 항목 주소",
+        "A:#‘playback.autoplay’ 항목 주소",
+        "A:#‘playback.muted’ 항목 주소",
+        "A:#‘playback.loop’ 항목 주소",
+        "A:#‘playback.preload’ 항목 주소"
+      ]
+    }
+  },
+  "admin": {
+    "768": {
+      "width": 768,
+      "opener": {
+        "tag": "BUTTON",
+        "id": null,
+        "type": "button",
+        "name": null,
+        "text": "열기",
+        "ring": true,
+        "outline": "solid 2px rgb(24, 24, 26)",
+        "shadow": null,
+        "focusVisible": true,
+        "inView": true
+      },
+      "openerAfter": "true",
+      "containment": [],
+      "radio": {
+        "tag": "INPUT",
+        "id": null,
+        "type": "radio",
+        "name": "_r_27_",
+        "value": "wide",
+        "text": "wide",
+        "ring": true,
+        "outline": "solid 2px rgb(24, 24, 26)",
+        "shadow": null,
+        "focusVisible": true,
+        "inView": true
+      },
+      "radioAfter": {
+        "focused": {
+          "tag": "INPUT",
+          "id": null,
+          "type": "radio",
+          "name": "_r_27_",
+          "value": "narrow",
+          "text": "narrow",
+          "ring": true,
+          "outline": "solid 2px rgb(24, 24, 26)",
+          "shadow": null,
+          "focusVisible": true,
+          "inView": true
+        },
+        "scale": "보이는 폭 390px · 실제 크기예요"
+      },
+      "scene": {
+        "tag": "BUTTON",
+        "id": null,
+        "type": "button",
+        "name": null,
+        "text": "끝 직전",
+        "ring": true,
+        "outline": "solid 2px rgb(24, 24, 26)",
+        "shadow": null,
+        "focusVisible": true,
+        "inView": true
+      },
+      "nowAfterScene": "최근 광고 진행 포스트롤 1/1 재생 중 19:06:18",
+      "demoLink": {
+        "tag": "A",
+        "id": null,
+        "type": null,
+        "name": null,
+        "text": "데모에서 열기 (새 창)",
+        "ring": true,
+        "outline": "solid 2px rgb(24, 24, 26)",
+        "shadow": null,
+        "focusVisible": true,
+        "inView": true
+      },
+      "popup": "/examples/index.html?preset=p-i0aecb28w3"
+    }
+  },
+  "containment": {
+    "help-390": [
+      "CODE. r=677 scroller=PRE.(auto) r=374",
+      "CODE. r=576 scroller=PRE.(auto) r=374",
+      "TABLE.sa-table r=956 scroller=DIV.sa-scroll(auto) r=373"
+    ],
+    "demo-390": [
+      "CODE. r=526 scroller=PRE.(auto) r=355",
+      "CODE. r=595 scroller=PRE.(auto) r=355"
+    ],
+    "guide-390": [
+      "CODE. r=677 scroller=PRE.(auto) r=374"
+    ]
+  },
+  "error": "TimeoutError: browserContext.waitForEvent: Timeout 8000ms exceeded while waiting for event \"page\""
+}

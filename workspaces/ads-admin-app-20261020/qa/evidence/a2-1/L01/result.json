@@ -1,0 +1,714 @@
+{
+  "runs": {
+    "accent": {
+      "ready": [
+        {
+          "at": 150,
+          "target": "a1-qa-video-1",
+          "presetId": "accent",
+          "fallback": false,
+          "player": "VIDEO-PLAYER"
+        }
+      ],
+      "before": {
+        "id": null,
+        "videoId": "a1-qa-video-1",
+        "children": [
+          "MEDIA-I18N"
+        ],
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "i18nLang": "ko",
+        "playerAttrs": {
+          "contentTitle": null,
+          "poster": null
+        },
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "autoplayAttr": false,
+          "mutedAttr": false,
+          "mutedProp": false,
+          "loop": false,
+          "preload": "metadata",
+          "playsinline": true,
+          "poster": null,
+          "paused": true,
+          "currentTime": 0,
+          "controls": false,
+          "tracks": []
+        },
+        "ads": {
+          "lang": "ko",
+          "accentVar": "#2563eb",
+          "attrs": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "a1-qa-video-1"
+          }
+        },
+        "skin": {
+          "tag": "VIDEO-SKIN",
+          "accentVar": "#2563eb",
+          "accentTextVar": "#ffffff",
+          "adsAccentVar": "#2563eb",
+          "primary": "#2563eb",
+          "fillBefore": "rgb(37, 99, 235)",
+          "borderRadius": "28px",
+          "borderRadiusVar": "",
+          "borderColor": "rgb(0, 0, 0)",
+          "inline": "--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;",
+          "skinRootClass": "media-skin media-container video-skin",
+          "fillFound": true
+        },
+        "buttonLabels": [
+          "닫기",
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "visibleText": [
+          "0:00",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      "duringPre": {
+        "id": null,
+        "videoId": "a1-qa-video-1",
+        "children": [
+          "MEDIA-I18N"
+        ],
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "i18nLang": "ko",
+        "playerAttrs": {
+          "contentTitle": null,
+          "poster": null
+        },
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "autoplayAttr": false,
+          "mutedAttr": false,
+          "mutedProp": false,
+          "loop": false,
+          "preload": "metadata",
+          "playsinline": true,
+          "poster": null,
+          "paused": true,
+          "currentTime": 0,
+          "controls": false,
+          "tracks": []
+        },
+        "ads": {
+          "lang": "ko",
+          "accentVar": "#2563eb",
+          "attrs": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "a1-qa-video-1"
+          }
+        },
+        "skin": {
+          "tag": "VIDEO-SKIN",
+          "accentVar": "#2563eb",
+          "accentTextVar": "#ffffff",
+          "adsAccentVar": "#2563eb",
+          "primary": "#2563eb",
+          "fillBefore": "rgb(37, 99, 235)",
+          "borderRadius": "28px",
+          "borderRadiusVar": "",
+          "borderColor": "rgb(0, 0, 0)",
+          "inline": "--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;",
+          "skinRootClass": "media-skin media-container video-skin",
+          "fillFound": true
+        },
+        "buttonLabels": [
+          "닫기",
+          "일시중지",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면",
+          "광고 건너뛰기",
+          "광고 재생 / 일시정지",
+          "광고 음소거",
+          "광고 음량",
+          "전체화면 시작"
+        ],
+        "visibleText": [
+          "0:00",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "-",
+          "0:10",
+          "설정",
+          "광고 1/2",
+          "광고주 사이트",
+          "0:02 / 0:06"
+        ]
+      },
+      "adSequence": [
+        "pre:start",
+        "pre:complete",
+        "pre:start",
+        "pre:complete",
+        "mid@5.1:start",
+        "mid@5.1:complete",
+        "post:start",
+        "post:complete"
+      ],
+      "events": [
+        {
+          "at": 1988,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 0,
+          "ad": "eeda3a",
+          "break": "396276",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 8254,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 0,
+          "ad": "eeda3a",
+          "break": "396276",
+          "sequence": 2,
+          "code": null
+        },
+        {
+          "at": 8282,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 0,
+          "ad": "6fa130",
+          "break": "396276",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 20560,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 0,
+          "ad": "6fa130",
+          "break": "396276",
+          "sequence": 2,
+          "code": null
+        },
+        {
+          "at": 26194,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 5.054208,
+          "ad": "5faadd",
+          "break": "d15720",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 34475,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 5.054208,
+          "ad": "5faadd",
+          "break": "d15720",
+          "sequence": 2,
+          "code": null
+        },
+        {
+          "at": 39431,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 10,
+          "ad": "c26c49",
+          "break": "aab634",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 42474,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 10,
+          "ad": "c26c49",
+          "break": "aab634",
+          "sequence": 2,
+          "code": null
+        }
+      ],
+      "errors": [],
+      "after": {
+        "id": null,
+        "videoId": "a1-qa-video-1",
+        "children": [
+          "MEDIA-I18N"
+        ],
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "i18nLang": "ko",
+        "playerAttrs": {
+          "contentTitle": null,
+          "poster": null
+        },
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "autoplayAttr": false,
+          "mutedAttr": false,
+          "mutedProp": false,
+          "loop": false,
+          "preload": "metadata",
+          "playsinline": true,
+          "poster": null,
+          "paused": true,
+          "currentTime": 10,
+          "controls": false,
+          "tracks": []
+        },
+        "ads": {
+          "lang": "ko",
+          "accentVar": "#2563eb",
+          "attrs": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "a1-qa-video-1"
+          }
+        },
+        "skin": {
+          "tag": "VIDEO-SKIN",
+          "accentVar": "#2563eb",
+          "accentTextVar": "#ffffff",
+          "adsAccentVar": "#2563eb",
+          "primary": "#2563eb",
+          "fillBefore": "rgb(37, 99, 235)",
+          "borderRadius": "28px",
+          "borderRadiusVar": "",
+          "borderColor": "rgb(0, 0, 0)",
+          "inline": "--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;",
+          "skinRootClass": "media-skin media-container video-skin",
+          "fillFound": true
+        },
+        "buttonLabels": [
+          "닫기",
+          "다시 재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 0초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "visibleText": [
+          "0:10",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "0:00",
+          "설정",
+          "일시중지됨"
+        ]
+      },
+      "solad": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "default": {
+      "ready": [
+        {
+          "at": 146,
+          "target": "a1-qa-video-1",
+          "presetId": "default",
+          "fallback": false,
+          "player": "VIDEO-PLAYER"
+        }
+      ],
+      "before": {
+        "id": null,
+        "videoId": "a1-qa-video-1",
+        "children": [
+          "MEDIA-I18N"
+        ],
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "i18nLang": "ko",
+        "playerAttrs": {
+          "contentTitle": null,
+          "poster": null
+        },
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "autoplayAttr": false,
+          "mutedAttr": false,
+          "mutedProp": false,
+          "loop": false,
+          "preload": "metadata",
+          "playsinline": true,
+          "poster": null,
+          "paused": true,
+          "currentTime": 0,
+          "controls": false,
+          "tracks": []
+        },
+        "ads": {
+          "lang": "ko",
+          "accentVar": "",
+          "attrs": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "a1-qa-video-1"
+          }
+        },
+        "skin": {
+          "tag": "VIDEO-SKIN",
+          "accentVar": "",
+          "accentTextVar": "",
+          "adsAccentVar": "",
+          "primary": "oklch(100% 0 0)",
+          "fillBefore": "oklch(1 0 0)",
+          "borderRadius": "28px",
+          "borderRadiusVar": "",
+          "borderColor": "rgb(0, 0, 0)",
+          "inline": null,
+          "skinRootClass": "media-skin media-container video-skin",
+          "fillFound": true
+        },
+        "buttonLabels": [
+          "닫기",
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "visibleText": [
+          "0:00",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      "duringPre": {
+        "id": null,
+        "videoId": "a1-qa-video-1",
+        "children": [
+          "MEDIA-I18N"
+        ],
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "i18nLang": "ko",
+        "playerAttrs": {
+          "contentTitle": null,
+          "poster": null
+        },
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "autoplayAttr": false,
+          "mutedAttr": false,
+          "mutedProp": false,
+          "loop": false,
+          "preload": "metadata",
+          "playsinline": true,
+          "poster": null,
+          "paused": true,
+          "currentTime": 0,
+          "controls": false,
+          "tracks": []
+        },
+        "ads": {
+          "lang": "ko",
+          "accentVar": "",
+          "attrs": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "a1-qa-video-1"
+          }
+        },
+        "skin": {
+          "tag": "VIDEO-SKIN",
+          "accentVar": "",
+          "accentTextVar": "",
+          "adsAccentVar": "",
+          "primary": "oklch(100% 0 0)",
+          "fillBefore": "oklch(1 0 0)",
+          "borderRadius": "28px",
+          "borderRadiusVar": "",
+          "borderColor": "rgb(0, 0, 0)",
+          "inline": null,
+          "skinRootClass": "media-skin media-container video-skin",
+          "fillFound": true
+        },
+        "buttonLabels": [
+          "닫기",
+          "일시중지",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면",
+          "광고 건너뛰기",
+          "광고 재생 / 일시정지",
+          "광고 음소거",
+          "광고 음량",
+          "전체화면 시작"
+        ],
+        "visibleText": [
+          "0:00",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "-",
+          "0:10",
+          "설정",
+          "광고 1/2",
+          "광고주 사이트",
+          "0:02 / 0:06"
+        ]
+      },
+      "adSequence": [
+        "pre:start",
+        "pre:complete",
+        "pre:start",
+        "pre:complete",
+        "mid@5.2:start",
+        "mid@5.2:complete",
+        "post:start",
+        "post:complete"
+      ],
+      "events": [
+        {
+          "at": 2010,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 0,
+          "ad": "eeda3a",
+          "break": "396276",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 8275,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 0,
+          "ad": "eeda3a",
+          "break": "396276",
+          "sequence": 2,
+          "code": null
+        },
+        {
+          "at": 8294,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 0,
+          "ad": "6fa130",
+          "break": "396276",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 20558,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 0,
+          "ad": "6fa130",
+          "break": "396276",
+          "sequence": 2,
+          "code": null
+        },
+        {
+          "at": 26437,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 5.171344,
+          "ad": "5faadd",
+          "break": "d15720",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 34703,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 5.171344,
+          "ad": "5faadd",
+          "break": "d15720",
+          "sequence": 2,
+          "code": null
+        },
+        {
+          "at": 39549,
+          "target": "a1-qa-video-1",
+          "type": "start",
+          "contentTime": 10,
+          "ad": "c26c49",
+          "break": "aab634",
+          "sequence": 1,
+          "code": null
+        },
+        {
+          "at": 42595,
+          "target": "a1-qa-video-1",
+          "type": "complete",
+          "contentTime": 10,
+          "ad": "c26c49",
+          "break": "aab634",
+          "sequence": 2,
+          "code": null
+        }
+      ],
+      "errors": [],
+      "after": {
+        "id": null,
+        "videoId": "a1-qa-video-1",
+        "children": [
+          "MEDIA-I18N"
+        ],
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "i18nLang": "ko",
+        "playerAttrs": {
+          "contentTitle": null,
+          "poster": null
+        },
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "autoplayAttr": false,
+          "mutedAttr": false,
+          "mutedProp": false,
+          "loop": false,
+          "preload": "metadata",
+          "playsinline": true,
+          "poster": null,
+          "paused": true,
+          "currentTime": 10,
+          "controls": false,
+          "tracks": []
+        },
+        "ads": {
+          "lang": "ko",
+          "accentVar": "",
+          "attrs": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "a1-qa-video-1"
+          }
+        },
+        "skin": {
+          "tag": "VIDEO-SKIN",
+          "accentVar": "",
+          "accentTextVar": "",
+          "adsAccentVar": "",
+          "primary": "oklch(100% 0 0)",
+          "fillBefore": "oklch(1 0 0)",
+          "borderRadius": "28px",
+          "borderRadiusVar": "",
+          "borderColor": "rgb(0, 0, 0)",
+          "inline": null,
+          "skinRootClass": "media-skin media-container video-skin",
+          "fillFound": true
+        },
+        "buttonLabels": [
+          "닫기",
+          "다시 재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 0초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "visibleText": [
+          "0:10",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "0:00",
+          "설정",
+          "일시중지됨"
+        ]
+      },
+      "solad": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    }
+  },
+  "code": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"a1-qa-video-1\"\n     data-src=\"http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+  "paste": "qa/fixtures/paste/a2-1-l01.html",
+  "applyAccent": {
+    "dialogText": "\"강조색\" 프리셋을 사이트에 적용할까요?\n\n로더를 넣은 사이트의 모든 플레이어가 이 프리셋으로 바뀌어요. 방문자가 페이지를 새로고침하면 바로 보여요.\n\n지금 사이트 적용\t기본 · Video.js 플레이어 · 페이지 언어\n바꿀 프리셋\t강조색 · Video.js 플레이어 · 페이지 언어\n\n취소\n사이트에 적용",
+    "status": [
+      "\"강조색\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ]
+  },
+  "listAfterAccent": "accent",
+  "applyDefault": {
+    "dialogText": "\"기본\" 프리셋을 사이트에 적용할까요?\n\n로더를 넣은 사이트의 모든 플레이어가 이 프리셋으로 바뀌어요. 방문자가 페이지를 새로고침하면 바로 보여요.\n\n지금 사이트 적용\t강조색 · Video.js 플레이어 · 페이지 언어\n바꿀 프리셋\t기본 · Video.js 플레이어 · 페이지 언어\n\n취소\n사이트에 적용",
+    "status": [
+      "\"기본\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ]
+  },
+  "listAfterDefault": "default",
+  "presetRequests": [
+    {
+      "t": 4436,
+      "status": 200,
+      "url": "/api/index.php?action=player-preset"
+    },
+    {
+      "t": 48786,
+      "status": 200,
+      "url": "/api/index.php?action=player-preset"
+    }
+  ],
+  "adminConsole": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

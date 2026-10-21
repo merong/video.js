@@ -1,0 +1,121 @@
+- form "광고 편성 편집":
+  - region "사이트 · site-local":
+    - heading "사이트 · site-local" [level=2]
+    - text: 게시본 없음
+    - link "게시본과 게시 버전 도움말":
+      - /url: "#/help/publish-version"
+      - text: "?"
+    - text: 저장하지 않은 변경
+    - link "초안 revision 도움말":
+      - /url: "#/help/draft-revision"
+      - text: "?"
+    - paragraph: 현재 적용되는 게시 편성이 없어요.
+    - text: 이 대상의 광고
+    - combobox "이 대상의 광고":
+      - option "상위 설정 상속" [disabled]
+      - option "직접 편성 · 전체 대체" [selected]
+      - option "광고 비활성화 · 상속 중단"
+    - text: 상위 편성과 합치지 않고 아래 편성 전체로 대체해요.
+    - link "직접 편성 · 전체 대체 도움말":
+      - /url: "#/help/replace"
+      - text: "?"
+  - region "광고 구간 2개":
+    - heading "광고 구간 2개" [level=2]
+    - link "광고 구간 도움말":
+      - /url: "#/help/ad-break"
+      - text: "?"
+    - group "광고 구간 추가":
+      - button "프리롤"
+      - button "미드롤"
+      - button "포스트롤"
+    - article "프리롤 · 시작 전":
+      - heading "프리롤 · 시작 전" [level=3]
+      - link "프리롤 도움말":
+        - /url: "#/help/pre-roll"
+        - text: "?"
+      - button "구간 삭제"
+      - group "1. QA 커피 프리롤 v2":
+        - text: 1. QA 커피 프리롤 v2 v2 · video/mp4
+        - button "1번 광고 위로 이동" [disabled]: 위로
+        - button "1번 광고 아래로 이동": 아래로
+        - button "광고 제거"
+        - text: 클릭 목적지 URL
+        - textbox "클릭 목적지 URL":
+          - /placeholder: 선택 사항
+        - link "클릭 목적지 URL 도움말":
+          - /url: "#/help/click-through-url"
+          - text: "?"
+        - text: 이 광고의 스킵
+        - combobox "이 광고의 스킵":
+          - option "스킵 불가" [selected]
+          - option "N초 후 현재 광고만 스킵"
+        - link "이 광고의 스킵 도움말":
+          - /url: "#/help/ad-skip"
+          - text: "?"
+      - group "2. QA 포스트롤 이미지":
+        - text: 2. QA 포스트롤 이미지 v1 · image/png
+        - button "2번 광고 위로 이동": 위로
+        - button "2번 광고 아래로 이동" [disabled]: 아래로
+        - button "광고 제거"
+        - text: 클릭 목적지 URL
+        - textbox "클릭 목적지 URL":
+          - /placeholder: 선택 사항
+        - link "클릭 목적지 URL 도움말":
+          - /url: "#/help/click-through-url"
+          - text: "?"
+        - text: 이 광고의 스킵
+        - combobox "이 광고의 스킵":
+          - option "스킵 불가" [selected]
+          - option "N초 후 현재 광고만 스킵"
+        - link "이 광고의 스킵 도움말":
+          - /url: "#/help/ad-skip"
+          - text: "?"
+        - text: 이미지 · GIF 표시 (초)
+        - spinbutton "이미지 · GIF 표시 (초)": "5"
+        - link "이미지 · GIF 표시 시간 도움말":
+          - /url: "#/help/image-display-time"
+          - text: "?"
+      - text: 추가할 소재
+      - combobox "추가할 소재":
+        - option "소재 버전을 선택해 주세요"
+        - option "QA 오류 뒤 유효 쓰기 · v1 · 영상"
+        - option "QA 이어버드 프리롤 · v1 · 영상"
+        - option "QA 포스트롤 이미지 · v1 · 이미지" [selected]
+        - option "QA 커피 프리롤 v2 · v2 · 영상"
+        - option "QA 생수 미드롤 · v1 · 영상"
+      - link "광고 항목과 순서 도움말":
+        - /url: "#/help/ad-item"
+        - text: "?"
+      - button "광고 추가"
+    - article "미드롤 · 재생 중":
+      - heading "미드롤 · 재생 중" [level=3]
+      - button "구간 삭제"
+      - text: 본편 재생 위치 (초)
+      - spinbutton "본편 재생 위치 (초)": "10"
+      - link "미드롤 도움말":
+        - /url: "#/help/mid-roll"
+        - text: "?"
+      - paragraph: 구간에 광고를 추가해 주세요. 빈 구간은 저장할 수 없어요.
+      - text: 추가할 소재
+      - combobox "추가할 소재":
+        - option "소재 버전을 선택해 주세요" [selected]
+        - option "QA 오류 뒤 유효 쓰기 · v1 · 영상"
+        - option "QA 이어버드 프리롤 · v1 · 영상"
+        - option "QA 포스트롤 이미지 · v1 · 이미지"
+        - option "QA 커피 프리롤 v2 · v2 · 영상"
+        - option "QA 생수 미드롤 · v1 · 영상"
+      - link "광고 항목과 순서 도움말":
+        - /url: "#/help/ad-item"
+        - text: "?"
+      - button "광고 추가"
+  - text: 변경 내용을 저장한 뒤 게시해 주세요.
+  - link "초안 도움말":
+    - /url: "#/help/draft"
+    - text: "?"
+  - button "초안 저장"
+  - button "저장한 초안 게시" [disabled]
+  - text: 먼저 초안을 저장해 주세요.
+  - link "게시 도움말":
+    - /url: "#/help/publish"
+    - text: "?"
+  - status

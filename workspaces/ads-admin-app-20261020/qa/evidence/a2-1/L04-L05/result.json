@@ -1,0 +1,714 @@
+{
+  "L04-autoplay": {
+    "ready": [
+      {
+        "at": 629,
+        "target": "a1-qa-video-1",
+        "presetId": "p-aiw4nv0npm",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [
+      "start@0.000844",
+      "complete@0.000844",
+      "start@0.000844"
+    ],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": true,
+      "mutedAttr": true,
+      "mutedProp": true,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": true,
+        "paused": true,
+        "t": 0,
+        "autoplay": true
+      },
+      {
+        "src": "/media/bb8ad12843b9fa0eafabdbd31e1cabd7.mp4",
+        "muted": true,
+        "paused": false,
+        "t": 1.4,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:09",
+      "설정",
+      "광고 2/2",
+      "2초 후 건너뛰기",
+      "0:01 / 0:12"
+    ],
+    "buttons": [
+      "닫기",
+      "일시중지",
+      "음소거 해제",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 9초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면",
+      "2초 후 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  },
+  "L05-a-preset-autoplay+data-autoplay-false": {
+    "ready": [
+      {
+        "at": 193,
+        "target": "a1-qa-video-1",
+        "presetId": "p-aiw4nv0npm",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": false,
+      "mutedProp": false,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": false,
+        "paused": true,
+        "t": 0,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정"
+    ],
+    "buttons": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "solad": [],
+    "console": []
+  },
+  "L05-b-preset-autoplay-muted+data-autoplay-false": {
+    "ready": [
+      {
+        "at": 285,
+        "target": "a1-qa-video-1",
+        "presetId": "p-tbxfsls2it",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": true,
+      "mutedProp": true,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": true,
+        "paused": true,
+        "t": 0,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정"
+    ],
+    "buttons": [
+      "닫기",
+      "재생",
+      "음소거 해제",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "solad": [],
+    "console": []
+  },
+  "L05-c-preset-autoplay+data-muted-false": {
+    "ready": [
+      {
+        "at": 210,
+        "target": "a1-qa-video-1",
+        "presetId": "p-aiw4nv0npm",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [
+      "start@0.001",
+      "complete@0.001",
+      "start@0.001"
+    ],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": true,
+      "mutedAttr": true,
+      "mutedProp": true,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": true,
+        "paused": true,
+        "t": 0,
+        "autoplay": true
+      },
+      {
+        "src": "/media/bb8ad12843b9fa0eafabdbd31e1cabd7.mp4",
+        "muted": true,
+        "paused": false,
+        "t": 1.9,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:09",
+      "설정",
+      "광고 2/2",
+      "2초 후 건너뛰기",
+      "0:01 / 0:12"
+    ],
+    "buttons": [
+      "닫기",
+      "일시중지",
+      "음소거 해제",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 9초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면",
+      "2초 후 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": [
+      {
+        "type": "warning",
+        "text": "[solad] 자동재생은 음소거로 시작해야 해서 muted를 켭니다."
+      }
+    ],
+    "console": [
+      {
+        "type": "warning",
+        "text": "[solad] 자동재생은 음소거로 시작해야 해서 muted를 켭니다."
+      }
+    ]
+  },
+  "L05-d-overrides-beat-data": {
+    "ready": [
+      {
+        "at": 183,
+        "target": "m",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [
+      "start@0.002376",
+      "complete@0.002376",
+      "start@0.002376"
+    ],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": true,
+      "mutedAttr": true,
+      "mutedProp": true,
+      "loop": true,
+      "preload": "auto",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": true,
+        "paused": true,
+        "t": 0,
+        "autoplay": true
+      },
+      {
+        "src": "/media/bb8ad12843b9fa0eafabdbd31e1cabd7.mp4",
+        "muted": true,
+        "paused": false,
+        "t": 1.9,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:09",
+      "설정",
+      "광고 2/2",
+      "2초 후 건너뛰기",
+      "0:01 / 0:12"
+    ],
+    "buttons": [
+      "닫기",
+      "일시중지",
+      "음소거 해제",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 9초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면",
+      "2초 후 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "mount": {
+      "errors": [],
+      "handle": {
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      },
+      "threw": null
+    },
+    "solad": [],
+    "console": []
+  },
+  "L05-e-bad-overrides-dropped": {
+    "ready": [
+      {
+        "at": 186,
+        "target": "m",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": false,
+      "mutedProp": false,
+      "loop": false,
+      "preload": "none",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": false,
+        "paused": true,
+        "t": 0,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "0:00",
+      "설정"
+    ],
+    "buttons": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "미디어를 불러오지 못했습니다. 재생 시간을 확인할 수 없습니다.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "mount": {
+      "errors": [
+        {
+          "code": "invalid_overrides",
+          "message": "overrides 값이 올바르지 않아 모두 무시합니다(playback.autoplay)."
+        }
+      ],
+      "handle": {
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      },
+      "threw": null
+    },
+    "solad": [],
+    "console": []
+  },
+  "L05-e2-overrides-with-id": {
+    "ready": [
+      {
+        "at": 211,
+        "target": "m",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": false,
+      "mutedProp": false,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": false,
+        "paused": true,
+        "t": 0,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정"
+    ],
+    "buttons": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "mount": {
+      "errors": [
+        {
+          "code": "invalid_overrides",
+          "message": "overrides 값이 올바르지 않아 모두 무시합니다(id)."
+        }
+      ],
+      "handle": {
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      },
+      "threw": null
+    },
+    "solad": [],
+    "console": []
+  },
+  "L05-f-one-bad-data-attr": {
+    "ready": [
+      {
+        "at": 198,
+        "target": "a1-qa-video-1",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": false,
+      "mutedProp": false,
+      "loop": true,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": false,
+        "paused": true,
+        "t": 0,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정"
+    ],
+    "buttons": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "solad": [
+      {
+        "type": "warning",
+        "text": "[solad] data-muted=\"yes\" 값은 쓸 수 없어 무시합니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-preload=\"bogus\" 값은 쓸 수 없어 무시합니다."
+      }
+    ],
+    "console": [
+      {
+        "type": "warning",
+        "text": "[solad] data-muted=\"yes\" 값은 쓸 수 없어 무시합니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-preload=\"bogus\" 값은 쓸 수 없어 무시합니다."
+      }
+    ]
+  },
+  "L04-autoplay-blocked": {
+    "ready": [
+      {
+        "at": 198,
+        "target": "a1-qa-video-1",
+        "presetId": "p-aiw4nv0npm",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "adEvents": [
+      "start@0.000804",
+      "complete@0.000804",
+      "start@0.000804"
+    ],
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": true,
+      "mutedAttr": true,
+      "mutedProp": true,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "videos": [
+      {
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "muted": true,
+        "paused": true,
+        "t": 0,
+        "autoplay": true
+      },
+      {
+        "src": "/media/bb8ad12843b9fa0eafabdbd31e1cabd7.mp4",
+        "muted": true,
+        "paused": false,
+        "t": 1.6,
+        "autoplay": false
+      }
+    ],
+    "visibleText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:09",
+      "설정",
+      "광고 2/2",
+      "2초 후 건너뛰기",
+      "0:01 / 0:12"
+    ],
+    "buttons": [
+      "닫기",
+      "일시중지",
+      "음소거 해제",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 9초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면",
+      "2초 후 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ],
+    "playButtonVisible": [
+      {
+        "label": "광고 재생 / 일시정지",
+        "w": 36,
+        "opacity": "1"
+      }
+    ],
+    "afterClick": {
+      "adEvents": [
+        "start@0.000804",
+        "complete@0.000804",
+        "start@0.000804"
+      ],
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "muted": true,
+          "paused": true,
+          "t": 0,
+          "autoplay": true
+        },
+        {
+          "src": "/media/bb8ad12843b9fa0eafabdbd31e1cabd7.mp4",
+          "muted": true,
+          "paused": true,
+          "t": 2.1,
+          "autoplay": false
+        }
+      ]
+    }
+  },
+  "blockedBrowserVersion": "155.0.8059.85"
+}

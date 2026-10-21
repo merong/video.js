@@ -1,0 +1,49 @@
+- main "플레이어":
+  - region "플레이어":
+    - heading "플레이어" [level=1]
+    - paragraph: 플레이어 종류, 스킨 테마, 광고 화면 설정을 프리셋으로 저장하고, 설치 방법과 옵션을 확인해요.
+    - navigation "플레이어 화면":
+      - link "프리셋 목록":
+        - /url: "#/players"
+      - link "초기 설정 방법":
+        - /url: "#/players/setup"
+      - link "옵션 설명":
+        - /url: "#/players/options"
+    - heading "프리셋 목록" [level=2]
+    - button "새 프리셋 만들기"
+    - region "플레이어 프리셋":
+      - table "플레이어 프리셋":
+        - caption: 플레이어 프리셋
+        - rowgroup:
+          - row "이름 플레이어 종류 스킨 기본 수정 시각 작업":
+            - columnheader "이름"
+            - columnheader "플레이어 종류"
+            - columnheader "스킨"
+            - columnheader "기본"
+            - columnheader "수정 시각"
+            - columnheader "작업"
+        - rowgroup:
+          - row "기본 Video.js 기본 기본 프리셋 패키지 기본값 기본 수정 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 기본 복제 기본 삭제 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 기본 기본으로 지정 이미 기본 프리셋이에요.":
+            - cell "기본"
+            - cell "Video.js"
+            - cell "기본"
+            - cell "기본 프리셋"
+            - cell "패키지 기본값"
+            - cell "기본 수정 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 기본 복제 기본 삭제 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 기본 기본으로 지정 이미 기본 프리셋이에요.":
+              - button "기본 수정" [disabled]: 수정
+              - text: 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.
+              - button "기본 복제": 복제
+              - button "기본 삭제" [disabled]: 삭제
+              - text: 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.
+              - button "기본 기본으로 지정" [disabled]: 기본으로 지정
+              - text: 이미 기본 프리셋이에요.
+    - paragraph:
+      - text: 저장 프리셋 0/20개.
+      - link "프리셋 도움말":
+        - /url: "#/help/player-preset"
+        - text: "?"
+      - text: 기본 프리셋은 설치 코드 생성기와 재생 테스트에서 먼저 선택되는 프리셋이에요.
+      - link "기본 프리셋 도움말":
+        - /url: "#/help/player-default-preset"
+        - text: "?"
+    - status

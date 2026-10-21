@@ -1,0 +1,985 @@
+{
+  "url": "/examples/player.html?video=a1-qa-help-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+  "runs": [
+    {
+      "label": "session-1",
+      "skipLabels": [
+        {
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "label": "N초 후 건너뛰기",
+          "adT": 0
+        },
+        {
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "label": "광고 건너뛰기",
+          "adT": 3.1
+        },
+        {
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "label": "N초 후 건너뛰기",
+          "adT": 0
+        },
+        {
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "label": "광고 건너뛰기",
+          "adT": 3
+        }
+      ],
+      "order": [
+        {
+          "at": 1792504973177,
+          "media": "content",
+          "contentT": 0
+        },
+        {
+          "at": 1792504973490,
+          "media": "ad-coffee-6s.mp4",
+          "contentT": 0
+        },
+        {
+          "at": 1792504979943,
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "contentT": 0
+        },
+        {
+          "at": 1792504992363,
+          "media": "content",
+          "contentT": 0
+        },
+        {
+          "at": 1792504997817,
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "contentT": 5.2
+        },
+        {
+          "at": 1792505006293,
+          "media": "content",
+          "contentT": 5.5
+        },
+        {
+          "at": 1792505011137,
+          "media": "ad.png",
+          "contentT": 10
+        },
+        {
+          "at": 1792505014075,
+          "media": "content",
+          "contentT": 10
+        }
+      ],
+      "clicks": {
+        "video": {
+          "kind": "video",
+          "before": {
+            "media": [
+              {
+                "tag": "VIDEO",
+                "src": "ad-coffee-6s.mp4",
+                "paused": false,
+                "ended": false,
+                "t": 1.7
+              }
+            ],
+            "overlay": "광고 1/2 | 광고주 사이트 | 0:01 / 0:06"
+          },
+          "linkFound": 1,
+          "popup": "",
+          "originalAfterClick": [
+            {
+              "visibility": "visible",
+              "focused": true,
+              "media": [
+                {
+                  "tag": "VIDEO",
+                  "src": "ad-coffee-6s.mp4",
+                  "paused": false,
+                  "ended": false,
+                  "t": 2
+                }
+              ],
+              "overlay": "광고 1/2 | 광고주 사이트 | 0:01 / 0:06"
+            },
+            {
+              "visibility": "visible",
+              "focused": true,
+              "media": [
+                {
+                  "tag": "VIDEO",
+                  "src": "ad-coffee-6s.mp4",
+                  "paused": false,
+                  "ended": false,
+                  "t": 4
+                }
+              ],
+              "overlay": "광고 1/2 | 광고주 사이트 | 0:03 / 0:06"
+            }
+          ],
+          "popupVisibility": "visible",
+          "afterReturn": {
+            "media": [
+              {
+                "tag": "VIDEO",
+                "src": "ad-coffee-6s.mp4",
+                "paused": false,
+                "ended": false,
+                "t": 5.5
+              }
+            ],
+            "overlay": "광고 1/2 | 광고주 사이트 | 0:05 / 0:06"
+          }
+        },
+        "image": {
+          "kind": "image",
+          "before": {
+            "media": [
+              {
+                "tag": "IMG",
+                "src": "ad.png",
+                "paused": null,
+                "ended": null,
+                "t": 0
+              }
+            ],
+            "overlay": "광고 1/1 | 0:00 / 0:03"
+          },
+          "linkFound": 0
+        }
+      },
+      "ended": true,
+      "events": []
+    },
+    {
+      "label": "session-1-replay",
+      "skipLabels": [
+        {
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "label": "N초 후 건너뛰기",
+          "adT": 0
+        },
+        {
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "label": "광고 건너뛰기",
+          "adT": 3.1
+        },
+        {
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "label": "N초 후 건너뛰기",
+          "adT": 0
+        },
+        {
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "label": "광고 건너뛰기",
+          "adT": 3.1
+        }
+      ],
+      "order": [
+        {
+          "at": 1792505017183,
+          "media": "content",
+          "contentT": 0
+        },
+        {
+          "at": 1792505017491,
+          "media": "ad-coffee-6s.mp4",
+          "contentT": 0
+        },
+        {
+          "at": 1792505023873,
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "contentT": 0
+        },
+        {
+          "at": 1792505036308,
+          "media": "content",
+          "contentT": 0
+        },
+        {
+          "at": 1792505041750,
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "contentT": 5.2
+        },
+        {
+          "at": 1792505050278,
+          "media": "content",
+          "contentT": 5.5
+        },
+        {
+          "at": 1792505055115,
+          "media": "ad.png",
+          "contentT": 10
+        },
+        {
+          "at": 1792505058140,
+          "media": "content",
+          "contentT": 10
+        }
+      ],
+      "clicks": {},
+      "ended": true,
+      "events": [
+        "200 complete",
+        "200 start",
+        "200 click",
+        "200 complete",
+        "200 start",
+        "200 complete",
+        "200 complete+start",
+        "200 start"
+      ]
+    },
+    {
+      "label": "session-2",
+      "skipLabels": [
+        {
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "label": "N초 후 건너뛰기",
+          "adT": 0
+        },
+        {
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "label": "광고 건너뛰기",
+          "adT": 3.3
+        },
+        {
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "label": "N초 후 건너뛰기",
+          "adT": 0
+        },
+        {
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "label": "광고 건너뛰기",
+          "adT": 3.3
+        }
+      ],
+      "order": [
+        {
+          "at": 1792505061851,
+          "media": "content",
+          "contentT": 0
+        },
+        {
+          "at": 1792505062159,
+          "media": "ad-coffee-6s.mp4",
+          "contentT": 0
+        },
+        {
+          "at": 1792505068827,
+          "media": "ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "contentT": 0
+        },
+        {
+          "at": 1792505080949,
+          "media": "content",
+          "contentT": 0
+        },
+        {
+          "at": 1792505086705,
+          "media": "dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "contentT": 5.3
+        },
+        {
+          "at": 1792505094886,
+          "media": "content",
+          "contentT": 5.5
+        },
+        {
+          "at": 1792505099743,
+          "media": "ad.png",
+          "contentT": 10
+        },
+        {
+          "at": 1792505102803,
+          "media": "content",
+          "contentT": 10
+        }
+      ],
+      "clicks": {},
+      "ended": true,
+      "events": []
+    }
+  ],
+  "statsBefore": {
+    "filters": {
+      "영상 ID": "a1-qa-help-1"
+    },
+    "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-20&to=2026-10-20&videoId=a1-qa-help-1",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "totals": {
+          "starts": 0,
+          "completes": 0,
+          "skips": 0,
+          "clicks": 0,
+          "clickedStarts": 0,
+          "errors": 0,
+          "completionRate": null,
+          "clickRate": null
+        },
+        "rows": [],
+        "timeZone": "Asia/Seoul",
+        "asOf": "2026-10-20T14:02:49Z"
+      }
+    },
+    "tables": [
+      [
+        [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "image/png",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "video/mp4",
+          "v2",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "video/mp4",
+          "v1",
+          "보관",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ]
+      ],
+      [
+        [
+          "광고 ID",
+          "영상 ID",
+          "게시판",
+          "시작",
+          "완료",
+          "스킵",
+          "클릭",
+          "오류",
+          "완료율",
+          "클릭률"
+        ],
+        [
+          "수집된 기록이 없어요.기간이나 ID 조건을 바꿔 보세요."
+        ]
+      ]
+    ],
+    "formStatus": "이 조건에 수집된 기록이 없어요. 기간과 광고·영상·게시판 ID를 확인해 주세요."
+  },
+  "statsAfterSession1": {
+    "filters": {
+      "영상 ID": "a1-qa-help-1"
+    },
+    "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-20&to=2026-10-20&videoId=a1-qa-help-1",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "totals": {
+          "starts": 4,
+          "completes": 4,
+          "skips": 0,
+          "clicks": 1,
+          "clickedStarts": 1,
+          "errors": 0,
+          "completionRate": 1,
+          "clickRate": 0.25
+        },
+        "rows": [
+          {
+            "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 1,
+            "completes": 1,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          },
+          {
+            "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 1,
+            "completes": 1,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          },
+          {
+            "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 1,
+            "completes": 1,
+            "skips": 0,
+            "clicks": 1,
+            "clickedStarts": 1,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 1
+          },
+          {
+            "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 1,
+            "completes": 1,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          }
+        ],
+        "timeZone": "Asia/Seoul",
+        "asOf": "2026-10-20T14:03:34Z"
+      }
+    },
+    "tables": [
+      [
+        [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "image/png",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "video/mp4",
+          "v2",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "video/mp4",
+          "v1",
+          "보관",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ]
+      ],
+      [
+        [
+          "광고 ID",
+          "영상 ID",
+          "게시판",
+          "시작",
+          "완료",
+          "스킵",
+          "클릭",
+          "오류",
+          "완료율",
+          "클릭률"
+        ],
+        [
+          "creative-0afaf3d354178e48df2623e0265cf10f",
+          "a1-qa-help-1",
+          "—",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ],
+        [
+          "creative-4f7176309eef79c367f79a8fb2baadba",
+          "a1-qa-help-1",
+          "—",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ],
+        [
+          "creative-56f8787f880150925a4ccd6e062fdadf",
+          "a1-qa-help-1",
+          "—",
+          "1",
+          "1",
+          "0",
+          "1",
+          "0",
+          "100%",
+          "100%"
+        ],
+        [
+          "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "a1-qa-help-1",
+          "—",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ]
+      ]
+    ],
+    "formStatus": "4개 조합의 결과예요."
+  },
+  "replayButton": 1,
+  "scheduleRequestsSession1": [
+    "GET 200",
+    "GET 200"
+  ],
+  "consoleSession1": [],
+  "statsAfterReplay": {
+    "filters": {
+      "영상 ID": "a1-qa-help-1"
+    },
+    "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-20&to=2026-10-20&videoId=a1-qa-help-1",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "totals": {
+          "starts": 8,
+          "completes": 8,
+          "skips": 0,
+          "clicks": 1,
+          "clickedStarts": 1,
+          "errors": 0,
+          "completionRate": 1,
+          "clickRate": 0.125
+        },
+        "rows": [
+          {
+            "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 2,
+            "completes": 2,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          },
+          {
+            "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 2,
+            "completes": 2,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          },
+          {
+            "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 2,
+            "completes": 2,
+            "skips": 0,
+            "clicks": 1,
+            "clickedStarts": 1,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0.5
+          },
+          {
+            "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 2,
+            "completes": 2,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          }
+        ],
+        "timeZone": "Asia/Seoul",
+        "asOf": "2026-10-20T14:04:18Z"
+      }
+    },
+    "tables": [
+      [
+        [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "image/png",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "video/mp4",
+          "v2",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "video/mp4",
+          "v1",
+          "보관",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ]
+      ],
+      [
+        [
+          "광고 ID",
+          "영상 ID",
+          "게시판",
+          "시작",
+          "완료",
+          "스킵",
+          "클릭",
+          "오류",
+          "완료율",
+          "클릭률"
+        ],
+        [
+          "creative-0afaf3d354178e48df2623e0265cf10f",
+          "a1-qa-help-1",
+          "—",
+          "2",
+          "2",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ],
+        [
+          "creative-4f7176309eef79c367f79a8fb2baadba",
+          "a1-qa-help-1",
+          "—",
+          "2",
+          "2",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ],
+        [
+          "creative-56f8787f880150925a4ccd6e062fdadf",
+          "a1-qa-help-1",
+          "—",
+          "2",
+          "2",
+          "0",
+          "1",
+          "0",
+          "100%",
+          "50%"
+        ],
+        [
+          "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "a1-qa-help-1",
+          "—",
+          "2",
+          "2",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ]
+      ]
+    ],
+    "formStatus": "4개 조합의 결과예요."
+  },
+  "statsAfterSession2": {
+    "filters": {
+      "영상 ID": "a1-qa-help-1"
+    },
+    "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-20&to=2026-10-20&videoId=a1-qa-help-1",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "totals": {
+          "starts": 12,
+          "completes": 12,
+          "skips": 0,
+          "clicks": 1,
+          "clickedStarts": 1,
+          "errors": 0,
+          "completionRate": 1,
+          "clickRate": 0.08333333333333333
+        },
+        "rows": [
+          {
+            "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 3,
+            "completes": 3,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          },
+          {
+            "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 3,
+            "completes": 3,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          },
+          {
+            "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 3,
+            "completes": 3,
+            "skips": 0,
+            "clicks": 1,
+            "clickedStarts": 1,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0.3333333333333333
+          },
+          {
+            "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+            "videoId": "a1-qa-help-1",
+            "boardId": null,
+            "starts": 3,
+            "completes": 3,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 1,
+            "clickRate": 0
+          }
+        ],
+        "timeZone": "Asia/Seoul",
+        "asOf": "2026-10-20T14:05:02Z"
+      }
+    },
+    "tables": [
+      [
+        [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "image/png",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "video/mp4",
+          "v2",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "video/mp4",
+          "v1",
+          "보관",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ]
+      ],
+      [
+        [
+          "광고 ID",
+          "영상 ID",
+          "게시판",
+          "시작",
+          "완료",
+          "스킵",
+          "클릭",
+          "오류",
+          "완료율",
+          "클릭률"
+        ],
+        [
+          "creative-0afaf3d354178e48df2623e0265cf10f",
+          "a1-qa-help-1",
+          "—",
+          "3",
+          "3",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ],
+        [
+          "creative-4f7176309eef79c367f79a8fb2baadba",
+          "a1-qa-help-1",
+          "—",
+          "3",
+          "3",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ],
+        [
+          "creative-56f8787f880150925a4ccd6e062fdadf",
+          "a1-qa-help-1",
+          "—",
+          "3",
+          "3",
+          "0",
+          "1",
+          "0",
+          "100%",
+          "33.3%"
+        ],
+        [
+          "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "a1-qa-help-1",
+          "—",
+          "3",
+          "3",
+          "0",
+          "0",
+          "0",
+          "100%",
+          "0%"
+        ]
+      ]
+    ],
+    "formStatus": "4개 조합의 결과예요."
+  }
+}

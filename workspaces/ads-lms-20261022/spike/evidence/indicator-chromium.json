@@ -1,0 +1,63 @@
+{
+ "scenario": "indicator",
+ "engine": "chromium",
+ "startedAt": "2026-10-21T17:22:08.380Z",
+ "steps": [
+  {
+   "indicator": "on",
+   "seen": {
+    "attrs": {
+     "class": "media-seek-indicator",
+     "data-open": "",
+     "data-direction": "forward"
+    },
+    "value": "10초",
+    "display": "grid"
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 2,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "shot": "item7-indicator-on-chromium.png"
+  },
+  {
+   "indicator": "off",
+   "seen": null,
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 2,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "shot": "item7-indicator-off-chromium.png"
+  }
+ ]
+}

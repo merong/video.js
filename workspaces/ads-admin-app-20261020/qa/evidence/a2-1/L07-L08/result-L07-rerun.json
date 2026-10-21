@@ -1,0 +1,110 @@
+{
+  "L07": {
+    "errors": [
+      {
+        "at": 11,
+        "target": "no-id",
+        "code": "missing_video_id",
+        "message": "data-video-id가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "at": 12,
+        "target": "no-src",
+        "code": "missing_src",
+        "message": "data-src가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "at": 12,
+        "target": "js-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "at": 12,
+        "target": "relative-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "at": 12,
+        "target": "ftp-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      }
+    ],
+    "ready": [
+      {
+        "at": 215,
+        "target": "ok",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "placeholders": [
+      {
+        "id": "no-id",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "no-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "js-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "relative-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "ftp-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "ok",
+        "children": 1,
+        "text": "",
+        "height": 711
+      }
+    ],
+    "bodyText": "QA 본문 문단",
+    "okAdEvents": [
+      "ok:start"
+    ],
+    "solad": [
+      {
+        "type": "warning",
+        "text": "[solad] data-video-id가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-src가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      }
+    ],
+    "nativeDialogs": []
+  }
+}

@@ -1,0 +1,533 @@
+{
+  "390": {
+    "picks": [
+      {
+        "pick": "재생 동작",
+        "at700": {
+          "current": "재생 동작",
+          "focus": "H2 재생 동작",
+          "inBand": "테마",
+          "scrollY": 1204,
+          "maxScroll": 2579,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "재생 동작",
+          "focus": "H2 재생 동작",
+          "inBand": "테마",
+          "scrollY": 1204,
+          "maxScroll": 2579,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      },
+      {
+        "pick": "언어",
+        "at700": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "inBand": "재생 동작",
+          "scrollY": 1878,
+          "maxScroll": 2579,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "inBand": "재생 동작",
+          "scrollY": 1878,
+          "maxScroll": 2579,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      },
+      {
+        "pick": "광고 화면",
+        "at700": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "inBand": "재생 동작",
+          "scrollY": 1878,
+          "maxScroll": 2579,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "inBand": "재생 동작",
+          "scrollY": 1878,
+          "maxScroll": 2579,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      }
+    ],
+    "wheel": [
+      {
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "inBand": "재생 동작",
+        "scrollY": 1528,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 1178,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 828,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 478,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 128,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      }
+    ],
+    "keys": [
+      {
+        "key": "PageUp",
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "PageUp",
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "Home",
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "PageDown",
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 860,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "End",
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "inBand": "광고 화면",
+        "scrollY": 2579,
+        "maxScroll": 2579,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      }
+    ],
+    "editorClass": "aa-editor is-narrow",
+    "navKind": "select",
+    "start": {
+      "current": "기본",
+      "focus": "H1 aa-title-players",
+      "inBand": null,
+      "scrollY": 0,
+      "maxScroll": 2579,
+      "hash": "#/players/edit/p-lbelw4d2xx"
+    },
+    "keysStart": {
+      "current": "광고 화면",
+      "focus": "H2 광고 화면",
+      "inBand": null,
+      "scrollY": 0,
+      "maxScroll": 2579,
+      "hash": "#/players/edit/p-lbelw4d2xx"
+    },
+    "console": []
+  },
+  "768": {
+    "picks": [
+      {
+        "pick": "재생 동작",
+        "at700": {
+          "current": "재생 동작",
+          "focus": "H2 재생 동작",
+          "inBand": "테마",
+          "scrollY": 687,
+          "maxScroll": 1538,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "재생 동작",
+          "focus": "H2 재생 동작",
+          "inBand": "테마",
+          "scrollY": 687,
+          "maxScroll": 1538,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      },
+      {
+        "pick": "언어",
+        "at700": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "inBand": "재생 동작",
+          "scrollY": 1285,
+          "maxScroll": 1538,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "inBand": "재생 동작",
+          "scrollY": 1285,
+          "maxScroll": 1538,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      },
+      {
+        "pick": "광고 화면",
+        "at700": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "inBand": "재생 동작",
+          "scrollY": 1285,
+          "maxScroll": 1538,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "inBand": "재생 동작",
+          "scrollY": 1285,
+          "maxScroll": 1538,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      }
+    ],
+    "wheel": [
+      {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 935,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 585,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 235,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      }
+    ],
+    "keys": [
+      {
+        "key": "PageUp",
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 651,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "Home",
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": null,
+        "scrollY": 0,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "PageDown",
+        "current": "재생 동작",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 860,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "End",
+        "current": "언어",
+        "focus": "H2 광고 화면",
+        "inBand": "재생 동작",
+        "scrollY": 1538,
+        "maxScroll": 1538,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      }
+    ],
+    "editorClass": "aa-editor is-medium",
+    "navKind": "sa-secnav is-row",
+    "start": {
+      "current": "기본",
+      "focus": "H1 aa-title-players",
+      "inBand": null,
+      "scrollY": 0,
+      "maxScroll": 1538,
+      "hash": "#/players/edit/p-lbelw4d2xx"
+    },
+    "keysStart": {
+      "current": "광고 화면",
+      "focus": "H2 광고 화면",
+      "inBand": "재생 동작",
+      "scrollY": 1511,
+      "maxScroll": 1538,
+      "hash": "#/players/edit/p-lbelw4d2xx"
+    },
+    "console": []
+  },
+  "1280": {
+    "picks": [
+      {
+        "pick": "재생 동작",
+        "at700": {
+          "current": "재생 동작",
+          "focus": "H2 재생 동작",
+          "inBand": "테마",
+          "scrollY": 543,
+          "maxScroll": 1490,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "재생 동작",
+          "focus": "H2 재생 동작",
+          "inBand": "테마",
+          "scrollY": 543,
+          "maxScroll": 1490,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      },
+      {
+        "pick": "언어",
+        "at700": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "inBand": "재생 동작",
+          "scrollY": 1141,
+          "maxScroll": 1490,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "inBand": "재생 동작",
+          "scrollY": 1141,
+          "maxScroll": 1490,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      },
+      {
+        "pick": "광고 화면",
+        "at700": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "inBand": "재생 동작",
+          "scrollY": 1141,
+          "maxScroll": 1490,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        },
+        "at2200": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "inBand": "재생 동작",
+          "scrollY": 1141,
+          "maxScroll": 1490,
+          "hash": "#/players/edit/p-lbelw4d2xx"
+        }
+      }
+    ],
+    "wheel": [
+      {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 791,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 441,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 91,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 0,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 0,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 0,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      }
+    ],
+    "keys": [
+      {
+        "key": "PageUp",
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "inBand": "테마",
+        "scrollY": 507,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 0,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "Home",
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "inBand": "기본",
+        "scrollY": 0,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "PageDown",
+        "current": "재생 동작",
+        "focus": "H2 광고 화면",
+        "inBand": "재생 동작",
+        "scrollY": 860,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      },
+      {
+        "key": "End",
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "inBand": "언어",
+        "scrollY": 1490,
+        "maxScroll": 1490,
+        "hash": "#/players/edit/p-lbelw4d2xx"
+      }
+    ],
+    "editorClass": "aa-editor is-wide",
+    "navKind": "sa-secnav",
+    "start": {
+      "current": "기본",
+      "focus": "H1 aa-title-players",
+      "inBand": "기본",
+      "scrollY": 0,
+      "maxScroll": 1490,
+      "hash": "#/players/edit/p-lbelw4d2xx"
+    },
+    "keysStart": {
+      "current": "광고 화면",
+      "focus": "H2 광고 화면",
+      "inBand": "재생 동작",
+      "scrollY": 1367,
+      "maxScroll": 1490,
+      "hash": "#/players/edit/p-lbelw4d2xx"
+    },
+    "console": []
+  }
+}

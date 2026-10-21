@@ -1,0 +1,21 @@
+{
+  "hits": [
+    {
+      "name": null,
+      "ariaLabelledby": "aa-preset-theme-accentColor-label aa-preset-theme-accentColor-pick-name",
+      "title": "",
+      "focusVisible": true,
+      "input": "none 3px / shadow none / opacity 1",
+      "swatch": "solid 2px / shadow rgb(212, 212, 216) 0px 0px 0px 1px inset / border rgb(24, 24, 26) 0px"
+    },
+    {
+      "name": null,
+      "ariaLabelledby": "aa-preset-theme-accentTextColor-label aa-preset-theme-accentTextColor-pick-name",
+      "title": "",
+      "focusVisible": true,
+      "input": "none 3px / shadow none / opacity 1",
+      "swatch": "solid 2px / shadow rgb(212, 212, 216) 0px 0px 0px 1px inset / border rgb(24, 24, 26) 0px"
+    }
+  ],
+  "swatchUnfocused": "none 3px / shadow rgb(212, 212, 216) 0px 0px 0px 1px inset / border rgb(24, 24, 26) 0px"
+}

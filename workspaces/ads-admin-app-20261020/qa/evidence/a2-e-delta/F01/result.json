@@ -1,0 +1,944 @@
+{
+  "sizes": {
+    "1280x800": {
+      "cases": {
+        "builtin-default note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 768,
+            "maxH": "768px"
+          },
+          "body": {
+            "scrollH": 638,
+            "clientH": 638,
+            "scrolls": false
+          },
+          "room": {
+            "w": 640,
+            "left": 49,
+            "fitVar": "640px"
+          },
+          "frame": {
+            "w": 640,
+            "h": 360,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 640px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 768,
+            "maxH": "768px"
+          },
+          "body": {
+            "scrollH": 638,
+            "clientH": 638,
+            "scrolls": false
+          },
+          "room": {
+            "w": 640,
+            "left": 49,
+            "fitVar": "640px"
+          },
+          "frame": {
+            "w": 640,
+            "h": 360,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 640px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-on": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 768,
+            "maxH": "768px"
+          },
+          "body": {
+            "scrollH": 638,
+            "clientH": 638,
+            "scrolls": false
+          },
+          "room": {
+            "w": 551,
+            "left": 94,
+            "fitVar": "551px"
+          },
+          "frame": {
+            "w": 551,
+            "h": 309.9,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 551px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 707,
+            "maxH": "768px"
+          },
+          "body": {
+            "scrollH": 577,
+            "clientH": 577,
+            "scrolls": false
+          },
+          "room": {
+            "w": 702,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 702,
+            "h": 394.9,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 702px · 실제 크기예요",
+          "note": null,
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-on": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 757,
+            "maxH": "768px"
+          },
+          "body": {
+            "scrollH": 627,
+            "clientH": 627,
+            "scrolls": false
+          },
+          "room": {
+            "w": 702,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 702,
+            "h": 394.9,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 702px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        }
+      },
+      "resize": [
+        {
+          "at": "800",
+          "room": {
+            "w": 640,
+            "left": 49,
+            "fitVar": "640px"
+          },
+          "body": {
+            "scrollH": 638,
+            "clientH": 638,
+            "scrolls": false
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 640px · 실제 크기예요",
+          "ratio": 1.778
+        },
+        {
+          "at": "720",
+          "room": {
+            "w": 512,
+            "left": 113,
+            "fitVar": "512px"
+          },
+          "body": {
+            "scrollH": 566,
+            "clientH": 558,
+            "scrolls": true
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 512px · 실제 크기예요",
+          "ratio": 1.778
+        },
+        {
+          "at": "800 again",
+          "room": {
+            "w": 640,
+            "left": 49,
+            "fitVar": "640px"
+          },
+          "body": {
+            "scrollH": 638,
+            "clientH": 638,
+            "scrolls": false
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 640px · 실제 크기예요",
+          "ratio": 1.778
+        }
+      ],
+      "editorRoom": {
+        "w": 322,
+        "fitVar": null,
+        "note": "자리 폭 322px · 실제 크기예요"
+      },
+      "builtinRoom": {
+        "w": 442,
+        "fitVar": null,
+        "note": "자리 폭 442px · 실제 크기예요"
+      },
+      "listOverflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "POST login"
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    "1280x768": {
+      "cases": {
+        "builtin-default note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 736,
+            "maxH": "736px"
+          },
+          "body": {
+            "scrollH": 606,
+            "clientH": 606,
+            "scrolls": false
+          },
+          "room": {
+            "w": 583,
+            "left": 78,
+            "fitVar": "583px"
+          },
+          "frame": {
+            "w": 583,
+            "h": 327.9,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 583px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 736,
+            "maxH": "736px"
+          },
+          "body": {
+            "scrollH": 606,
+            "clientH": 606,
+            "scrolls": false
+          },
+          "room": {
+            "w": 583,
+            "left": 78,
+            "fitVar": "583px"
+          },
+          "frame": {
+            "w": 583,
+            "h": 327.9,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 583px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-on": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 736,
+            "maxH": "736px"
+          },
+          "body": {
+            "scrollH": 616,
+            "clientH": 606,
+            "scrolls": true
+          },
+          "room": {
+            "w": 512,
+            "left": 113,
+            "fitVar": "512px"
+          },
+          "frame": {
+            "w": 512,
+            "h": 288,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 512px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 707,
+            "maxH": "736px"
+          },
+          "body": {
+            "scrollH": 577,
+            "clientH": 577,
+            "scrolls": false
+          },
+          "room": {
+            "w": 702,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 702,
+            "h": 394.9,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 702px · 실제 크기예요",
+          "note": null,
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-on": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 736,
+            "maxH": "736px"
+          },
+          "body": {
+            "scrollH": 606,
+            "clientH": 606,
+            "scrolls": false
+          },
+          "room": {
+            "w": 664,
+            "left": 37,
+            "fitVar": "664px"
+          },
+          "frame": {
+            "w": 664,
+            "h": 373.5,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 664px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        }
+      },
+      "listOverflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "POST login"
+      ],
+      "console": []
+    },
+    "1280x720": {
+      "cases": {
+        "builtin-default note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 688,
+            "maxH": "688px"
+          },
+          "body": {
+            "scrollH": 566,
+            "clientH": 558,
+            "scrolls": true
+          },
+          "room": {
+            "w": 512,
+            "left": 113,
+            "fitVar": "512px"
+          },
+          "frame": {
+            "w": 512,
+            "h": 288,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 512px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 688,
+            "maxH": "688px"
+          },
+          "body": {
+            "scrollH": 566,
+            "clientH": 558,
+            "scrolls": true
+          },
+          "room": {
+            "w": 512,
+            "left": 113,
+            "fitVar": "512px"
+          },
+          "frame": {
+            "w": 512,
+            "h": 288,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 512px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-on": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 688,
+            "maxH": "688px"
+          },
+          "body": {
+            "scrollH": 616,
+            "clientH": 558,
+            "scrolls": true
+          },
+          "room": {
+            "w": 512,
+            "left": 113,
+            "fitVar": "512px"
+          },
+          "frame": {
+            "w": 512,
+            "h": 288,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 512px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-off": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 688,
+            "maxH": "688px"
+          },
+          "body": {
+            "scrollH": 558,
+            "clientH": 558,
+            "scrolls": false
+          },
+          "room": {
+            "w": 668,
+            "left": 35,
+            "fitVar": "668px"
+          },
+          "frame": {
+            "w": 668,
+            "h": 375.8,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 668px · 실제 크기예요",
+          "note": null,
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-on": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 688,
+            "maxH": "688px"
+          },
+          "body": {
+            "scrollH": 558,
+            "clientH": 558,
+            "scrolls": false
+          },
+          "room": {
+            "w": 579,
+            "left": 80,
+            "fitVar": "579px"
+          },
+          "frame": {
+            "w": 579,
+            "h": 325.7,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 579px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        }
+      },
+      "narrow": {
+        "facts": {
+          "open": true,
+          "dialog": {
+            "w": 740,
+            "h": 688,
+            "maxH": "688px"
+          },
+          "body": {
+            "scrollH": 566,
+            "clientH": 558,
+            "scrolls": true
+          },
+          "room": {
+            "w": 512,
+            "left": 113,
+            "fitVar": "512px"
+          },
+          "frame": {
+            "w": 512,
+            "h": 288,
+            "ratio": 1.778
+          },
+          "scaleNote": "높이에 맞춘 자리 폭 512px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "captions": {
+          "label": "자막 없음",
+          "display": "grid",
+          "shown": true,
+          "containerW": 512
+        },
+        "scenes": [
+          {
+            "step": "미드롤 앞",
+            "scene": "before-midroll",
+            "enabledAfterMs": 3321,
+            "lineBefore": "최근 광고 진행아직 광고가 나오지 않았어요",
+            "tagged": true,
+            "newPlayer": true,
+            "player": {
+              "tag": null,
+              "autoplayAttr": false,
+              "videoAutoplay": false,
+              "t": 5.1
+            },
+            "msToInitial": null,
+            "msToTarget": 2616,
+            "lines": [
+              "2616ms 최근 광고 진행미드롤 1/1 재생 중00:54:22"
+            ],
+            "preroll": false,
+            "error": false
+          },
+          {
+            "step": "끝 직전(미드롤 재생 중)",
+            "scene": "before-end",
+            "enabledAfterMs": 2977,
+            "lineBefore": "최근 광고 진행미드롤 1/1 재생 중00:54:22",
+            "tagged": true,
+            "newPlayer": true,
+            "player": {
+              "tag": null,
+              "autoplayAttr": false,
+              "videoAutoplay": false,
+              "t": 10
+            },
+            "msToInitial": 5,
+            "msToTarget": 2337,
+            "lines": [
+              "5ms 최근 광고 진행아직 광고가 나오지 않았어요",
+              "2337ms 최근 광고 진행포스트롤 1/1 재생 중00:54:25"
+            ],
+            "preroll": false,
+            "error": false
+          }
+        ],
+        "captionsAfter": {
+          "label": "자막 없음",
+          "display": "grid",
+          "shown": true,
+          "containerW": 512
+        }
+      },
+      "close": {
+        "esc": {
+          "open": false,
+          "iframes": 0,
+          "focus": "BUTTON QA 테두리 8자리 미리보기"
+        },
+        "head": {
+          "open": false,
+          "iframes": 0,
+          "focus": "BUTTON QA 테두리 8자리 미리보기"
+        },
+        "foot": {
+          "open": false,
+          "iframes": 0,
+          "focus": "BUTTON QA 테두리 8자리 미리보기"
+        }
+      },
+      "listOverflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "POST login"
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    "768x1024": {
+      "cases": {
+        "builtin-default note-off": {
+          "open": true,
+          "dialog": {
+            "w": 736,
+            "h": 801,
+            "maxH": "992px"
+          },
+          "body": {
+            "scrollH": 671,
+            "clientH": 671,
+            "scrolls": false
+          },
+          "room": {
+            "w": 698,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 698,
+            "h": 392.6,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 698px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-off": {
+          "open": true,
+          "dialog": {
+            "w": 736,
+            "h": 801,
+            "maxH": "992px"
+          },
+          "body": {
+            "scrollH": 671,
+            "clientH": 671,
+            "scrolls": false
+          },
+          "room": {
+            "w": 698,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 698,
+            "h": 392.6,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 698px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-on": {
+          "open": true,
+          "dialog": {
+            "w": 736,
+            "h": 851,
+            "maxH": "992px"
+          },
+          "body": {
+            "scrollH": 721,
+            "clientH": 721,
+            "scrolls": false
+          },
+          "room": {
+            "w": 698,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 698,
+            "h": 392.6,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 698px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-off": {
+          "open": true,
+          "dialog": {
+            "w": 736,
+            "h": 705,
+            "maxH": "992px"
+          },
+          "body": {
+            "scrollH": 575,
+            "clientH": 575,
+            "scrolls": false
+          },
+          "room": {
+            "w": 698,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 698,
+            "h": 392.6,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 698px · 실제 크기예요",
+          "note": null,
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-on": {
+          "open": true,
+          "dialog": {
+            "w": 736,
+            "h": 755,
+            "maxH": "992px"
+          },
+          "body": {
+            "scrollH": 625,
+            "clientH": 625,
+            "scrolls": false
+          },
+          "room": {
+            "w": 698,
+            "left": 18,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 698,
+            "h": 392.6,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 698px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        }
+      },
+      "listOverflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "POST login"
+      ],
+      "console": []
+    },
+    "390x844": {
+      "cases": {
+        "builtin-default note-off": {
+          "open": true,
+          "dialog": {
+            "w": 374,
+            "h": 674,
+            "maxH": "828px"
+          },
+          "body": {
+            "scrollH": 544,
+            "clientH": 544,
+            "scrolls": false
+          },
+          "room": {
+            "w": 348,
+            "left": 12,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 348,
+            "h": 195.8,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 348px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-off": {
+          "open": true,
+          "dialog": {
+            "w": 374,
+            "h": 684,
+            "maxH": "828px"
+          },
+          "body": {
+            "scrollH": 544,
+            "clientH": 544,
+            "scrolls": false
+          },
+          "room": {
+            "w": 348,
+            "left": 12,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 348,
+            "h": 195.8,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 348px · 실제 크기예요",
+          "note": null,
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-8 note-on": {
+          "open": true,
+          "dialog": {
+            "w": 374,
+            "h": 752,
+            "maxH": "828px"
+          },
+          "body": {
+            "scrollH": 612,
+            "clientH": 612,
+            "scrolls": false
+          },
+          "room": {
+            "w": 348,
+            "left": 12,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 348,
+            "h": 195.8,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 348px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": true,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-off": {
+          "open": true,
+          "dialog": {
+            "w": 374,
+            "h": 570,
+            "maxH": "828px"
+          },
+          "body": {
+            "scrollH": 430,
+            "clientH": 430,
+            "scrolls": false
+          },
+          "room": {
+            "w": 348,
+            "left": 12,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 348,
+            "h": 195.8,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 348px · 실제 크기예요",
+          "note": null,
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        },
+        "saved-lang note-on": {
+          "open": true,
+          "dialog": {
+            "w": 374,
+            "h": 638,
+            "maxH": "828px"
+          },
+          "body": {
+            "scrollH": 498,
+            "clientH": 498,
+            "scrolls": false
+          },
+          "room": {
+            "w": 348,
+            "left": 12,
+            "fitVar": null
+          },
+          "frame": {
+            "w": 348,
+            "h": 195.8,
+            "ratio": 1.778
+          },
+          "scaleNote": "자리 폭 348px · 실제 크기예요",
+          "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+          "pageLang": false,
+          "iframes": 1,
+          "docOverflowX": 0
+        }
+      },
+      "listOverflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "POST login"
+      ],
+      "console": []
+    }
+  },
+  "langPreset": {
+    "status": "existing",
+    "id": "p-a7p2mbpngr",
+    "language": "ko"
+  }
+}

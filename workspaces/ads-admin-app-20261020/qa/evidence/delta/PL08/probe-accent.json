@@ -1,0 +1,38 @@
+{
+  "atOpen": {
+    "disabled": false,
+    "reason": [
+      null
+    ]
+  },
+  "accentControls": [
+    {
+      "type": "text",
+      "id": "aa-preset-theme-accentColor",
+      "label": "강조색",
+      "aria": null,
+      "value": "#111111"
+    },
+    {
+      "type": "text",
+      "id": "aa-preset-theme-accentTextColor",
+      "label": "강조 글자색",
+      "aria": null,
+      "value": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "aa-preset-ads-accentColor",
+      "label": "광고 음량 막대 색",
+      "aria": null,
+      "value": ""
+    }
+  ],
+  "afterFill": {
+    "disabled": false,
+    "reason": [
+      null
+    ]
+  },
+  "accentAfter": "#111111"
+}

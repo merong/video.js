@@ -1,0 +1,200 @@
+{
+  "hash": "#/players",
+  "apiAfterMenu": [
+    {
+      "t": 1194,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "text": "플레이어\n\n플레이어 종류, 스킨 테마, 광고 화면 설정을 프리셋으로 저장하고, 설치 방법과 옵션을 확인해요.\n\n프리셋 목록\n초기 설정 방법\n옵션 설명\n프리셋 목록\n새 프리셋 만들기\n플레이어 프리셋\n이름\t플레이어 종류\t스킨\t기본\t수정 시각\t작업\n기본\tVideo.js\t기본\t기본 프리셋\t패키지 기본값\t\n수정\n내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.\n복제\n삭제\n내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.\n기본으로 지정\n이미 기본 프리셋이에요.\n\n저장 프리셋 0/20개. ? 기본 프리셋은 설치 코드 생성기와 재생 테스트에서 먼저 선택되는 프리셋이에요. ?",
+  "buttons": [
+    {
+      "tag": "A",
+      "name": "프리셋 목록",
+      "disabled": null,
+      "ariaDisabled": null,
+      "href": "#/players",
+      "reason": null
+    },
+    {
+      "tag": "A",
+      "name": "초기 설정 방법",
+      "disabled": null,
+      "ariaDisabled": null,
+      "href": "#/players/setup",
+      "reason": null
+    },
+    {
+      "tag": "A",
+      "name": "옵션 설명",
+      "disabled": null,
+      "ariaDisabled": null,
+      "href": "#/players/options",
+      "reason": null
+    },
+    {
+      "tag": "BUTTON",
+      "name": "새 프리셋 만들기",
+      "disabled": false,
+      "ariaDisabled": null,
+      "href": null,
+      "reason": null
+    },
+    {
+      "tag": "BUTTON",
+      "name": "기본 수정",
+      "disabled": true,
+      "ariaDisabled": null,
+      "href": null,
+      "reason": "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+    },
+    {
+      "tag": "BUTTON",
+      "name": "기본 복제",
+      "disabled": false,
+      "ariaDisabled": null,
+      "href": null,
+      "reason": null
+    },
+    {
+      "tag": "BUTTON",
+      "name": "기본 삭제",
+      "disabled": true,
+      "ariaDisabled": null,
+      "href": null,
+      "reason": "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+    },
+    {
+      "tag": "BUTTON",
+      "name": "기본 기본으로 지정",
+      "disabled": true,
+      "ariaDisabled": null,
+      "href": null,
+      "reason": "이미 기본 프리셋이에요."
+    },
+    {
+      "tag": "A",
+      "name": "프리셋 도움말",
+      "disabled": null,
+      "ariaDisabled": null,
+      "href": "#/help/player-preset",
+      "reason": null
+    },
+    {
+      "tag": "A",
+      "name": "기본 프리셋 도움말",
+      "disabled": null,
+      "ariaDisabled": null,
+      "href": "#/help/player-default-preset",
+      "reason": null
+    }
+  ],
+  "apiAfterReload": [
+    {
+      "t": 3108,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 3123,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "textAfterReload": "플레이어\n\n플레이어 종류, 스킨 테마, 광고 화면 설정을 프리셋으로 저장하고, 설치 방법과 옵션을 확인해요.\n\n프리셋 목록\n초기 설정 방법\n옵션 설명\n프리셋 목록\n새 프리셋 만들기\n플레이어 프리셋\n이름\t플레이어 종류\t스킨\t기본\t수정 시각\t작업\n기본\tVideo.js\t기본\t기본 프리셋\t패키지 기본값\t\n수정\n내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.\n복제\n삭제\n내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.\n기본으로 지정\n이미 기본 프리셋이에요.\n\n저장 프리셋 0/20개. ? 기본 프리셋은 설치 코드 생성기와 재생 테스트에서 먼저 선택되는 프리셋이에요. ?",
+  "playerPresetBodies": [],
+  "allApi": [
+    {
+      "t": 704,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": false
+    },
+    {
+      "t": 823,
+      "method": "POST",
+      "action": "login",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": false,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1092,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1126,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1194,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 3108,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 3123,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

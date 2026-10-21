@@ -1,0 +1,475 @@
+{
+  "preset-ja/page-ko": {
+    "page": "qa/fixtures/paste/a2-1-l06-preset-ja-page-ko.html",
+    "htmlLang": "ko",
+    "expectI18n": "ja",
+    "ready": [
+      {
+        "at": 209,
+        "target": "a1-qa-video-1",
+        "presetId": "p-04uhxwffri",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "ja",
+    "adsLang": "ko",
+    "playerLabels": [
+      "閉じる",
+      "再生",
+      "ミュート",
+      "音量",
+      "シーク",
+      "再生時間を表示、残り 10 秒。",
+      "字幕を表示",
+      "設定",
+      "キャスト開始",
+      "AirPlayを開始",
+      "ピクチャー イン ピクチャー",
+      "全画面表示"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "設定",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "一時停止",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-ko": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-ko.html",
+    "htmlLang": "ko",
+    "expectI18n": "ko",
+    "ready": [
+      {
+        "at": 162,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "ko",
+    "adsLang": "ko",
+    "playerLabels": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:09",
+      "설정",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "일시중지",
+      "재생 시간 표시, 9초 남음.",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-en-US": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-en-us.html",
+    "htmlLang": "en-US",
+    "expectI18n": "en",
+    "ready": [
+      {
+        "at": 144,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "en",
+    "adsLang": "ko",
+    "playerLabels": [
+      "OK",
+      "Play",
+      "Mute",
+      "Volume",
+      "Seek",
+      "Show duration, 10 seconds remaining.",
+      "Enable captions",
+      "Settings",
+      "Start casting",
+      "Start AirPlay",
+      "Enter picture-in-picture",
+      "Enter fullscreen"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "Settings",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "Pause",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-ja-JP": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-ja-jp.html",
+    "htmlLang": "ja-JP",
+    "expectI18n": "ja",
+    "ready": [
+      {
+        "at": 151,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "ja",
+    "adsLang": "ko",
+    "playerLabels": [
+      "閉じる",
+      "再生",
+      "ミュート",
+      "音量",
+      "シーク",
+      "再生時間を表示、残り 10 秒。",
+      "字幕を表示",
+      "設定",
+      "キャスト開始",
+      "AirPlayを開始",
+      "ピクチャー イン ピクチャー",
+      "全画面表示"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "設定",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "一時停止",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-zh-Hant-TW": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-zh-hant-tw.html",
+    "htmlLang": "zh-Hant-TW",
+    "expectI18n": "en",
+    "ready": [
+      {
+        "at": 143,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "en",
+    "adsLang": "ko",
+    "playerLabels": [
+      "OK",
+      "Play",
+      "Mute",
+      "Volume",
+      "Seek",
+      "Show duration, 10 seconds remaining.",
+      "Enable captions",
+      "Settings",
+      "Start casting",
+      "Start AirPlay",
+      "Enter picture-in-picture",
+      "Enter fullscreen"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "Settings",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "Pause",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-zh-SG": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-zh-sg.html",
+    "htmlLang": "zh-SG",
+    "expectI18n": "zh-CN",
+    "ready": [
+      {
+        "at": 181,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=zh-CN] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "zh-CN",
+    "adsLang": "ko",
+    "playerLabels": [
+      "关闭",
+      "播放",
+      "静音",
+      "音量",
+      "定位",
+      "显示时长，剩余 10秒钟。",
+      "开启字幕",
+      "设置",
+      "开始投屏",
+      "启动 AirPlay",
+      "画中画",
+      "全屏"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "设置",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "暂停",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-fr": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-fr.html",
+    "htmlLang": "fr",
+    "expectI18n": "en",
+    "ready": [
+      {
+        "at": 157,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "en",
+    "adsLang": "ko",
+    "playerLabels": [
+      "OK",
+      "Play",
+      "Mute",
+      "Volume",
+      "Seek",
+      "Show duration, 10 seconds remaining.",
+      "Enable captions",
+      "Settings",
+      "Start casting",
+      "Start AirPlay",
+      "Enter picture-in-picture",
+      "Enter fullscreen"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "Settings",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "Pause",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "empty/page-none": {
+    "page": "qa/fixtures/paste/a2-1-l06-empty-page-none.html",
+    "htmlLang": null,
+    "expectI18n": "en",
+    "ready": [
+      {
+        "at": 146,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "en",
+    "adsLang": "ko",
+    "playerLabels": [
+      "OK",
+      "Play",
+      "Mute",
+      "Volume",
+      "Seek",
+      "Show duration, 10 seconds remaining.",
+      "Enable captions",
+      "Settings",
+      "Start casting",
+      "Start AirPlay",
+      "Enter picture-in-picture",
+      "Enter fullscreen"
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "Settings",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "Pause",
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "native/page-en": {
+    "page": "qa/fixtures/paste/a2-1-l06-native-page-en.html",
+    "htmlLang": "en",
+    "expectI18n": null,
+    "ready": [
+      {
+        "at": 16,
+        "target": "a1-qa-video-1",
+        "presetId": "p-dz06hj5w17",
+        "fallback": false,
+        "player": "VIDEO"
+      }
+    ],
+    "tree": "DIV > VIDEO",
+    "i18nLang": null,
+    "adsLang": null,
+    "playerLabels": [],
+    "adStarted": true,
+    "adText": [
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  },
+  "native-ja/page-en": {
+    "page": "qa/fixtures/paste/a2-1-l06-native-ja-page-en.html",
+    "htmlLang": "en",
+    "expectI18n": null,
+    "ready": [
+      {
+        "at": 24,
+        "target": "a1-qa-video-1",
+        "presetId": "p-qpmllkxi62",
+        "fallback": false,
+        "player": "VIDEO"
+      }
+    ],
+    "tree": "DIV > VIDEO",
+    "i18nLang": null,
+    "adsLang": null,
+    "playerLabels": [],
+    "adStarted": true,
+    "adText": [
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "adLabels": [
+      "광고 건너뛰기",
+      "광고 재생 / 일시정지",
+      "광고 음소거",
+      "광고 음량",
+      "전체화면 시작"
+    ],
+    "solad": []
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "beforeSave": {
+    "이름": "QA Video.js 중립",
+    "플레이어 종류": "videojs|Video.js",
+    "스킨": "neutral|뉴트럴 (모서리 12px)",
+    "강조색": "#0a3d91",
+    "강조 글자색": "#ffffff",
+    "테두리 색": "",
+    "모서리 둥글기 (px)": "12",
+    "글꼴": "|스킨 기본 (Inter 우선)",
+    "화면 채우기": "|스킨 기본 (맞춤)",
+    "크기 기준": "|스킨 기본 (16px)",
+    "광고 문구 언어": "en|English",
+    "건너뛰기 문구": "Skip ad",
+    "건너뛰기 대기 문구": "",
+    "광고 시간 문구": "",
+    "광고 음량 막대 색": "",
+    "건너뛰기 버튼 모서리 (px)": "",
+    "광고 글자 크기 (px)": "15"
+  },
+  "notice": 1,
+  "saveApi": [
+    {
+      "t": 2877,
+      "method": "POST",
+      "action": "player-preset-save",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": true,
+      "respCsrfHeader": true
+    }
+  ],
+  "afterSave": {
+    "hash": "#/players/edit/p-vym1rjw052",
+    "live": {
+      "status": [
+        "미리보기가 준비됐어요.",
+        "\"QA Video.js 중립\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "alert": [],
+      "pageStatus": [
+        "미리보기가 준비됐어요.",
+        "\"QA Video.js 중립\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ]
+    }
+  },
+  "id": "p-vym1rjw052",
+  "idPattern": true,
+  "listRows": [
+    [
+      "기본",
+      "Video.js",
+      "기본",
+      "기본 프리셋",
+      "패키지 기본값"
+    ],
+    [
+      "QA Video.js 중립",
+      "Video.js",
+      "뉴트럴",
+      "—",
+      "2026. 10. 21. 오전 1:13"
+    ]
+  ],
+  "listRowsAfterReload": [
+    [
+      "기본",
+      "Video.js",
+      "기본",
+      "기본 프리셋",
+      "패키지 기본값"
+    ],
+    [
+      "QA Video.js 중립",
+      "Video.js",
+      "뉴트럴",
+      "—",
+      "2026. 10. 21. 오전 1:13"
+    ]
+  ],
+  "error": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main form').filter({ visible: true }).first() to be visible\u001b[22m\n",
+  "bodies": [
+    {
+      "at": 1792512827883,
+      "method": "POST",
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": null,
+          "name": "QA Video.js 중립",
+          "playerType": "videojs",
+          "skin": "neutral",
+          "theme": {
+            "accentColor": "#0a3d91",
+            "accentTextColor": "#ffffff",
+            "borderColor": null,
+            "borderRadius": 12,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": "en",
+            "labels": {
+              "skip": "Skip ad",
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": 15,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 0
+      },
+      "body": {
+        "ok": true,
+        "data": {
+          "revision": 1,
+          "defaultPresetId": "default",
+          "presets": [
+            {
+              "id": "default",
+              "name": "기본",
+              "playerType": "videojs",
+              "skin": "default",
+              "theme": {
+                "accentColor": null,
+                "accentTextColor": null,
+                "borderColor": null,
+                "borderRadius": null,
+                "fontFamily": null,
+                "objectFit": null,
+                "scaleUnit": null
+              },
+              "ads": {
+                "locale": null,
+                "labels": {
+                  "skip": null,
+                  "skipCountdown": null,
+                  "timer": null
+                },
+                "accentColor": null,
+                "skipRadius": null,
+                "fontSize": null,
+                "timeouts": {
+                  "loadSeconds": null,
+                  "stallSeconds": null
+                }
+              },
+              "createdAt": null,
+              "updatedAt": null,
+              "builtIn": true
+            },
+            {
+              "id": "p-vym1rjw052",
+              "name": "QA Video.js 중립",
+              "playerType": "videojs",
+              "skin": "neutral",
+              "theme": {
+                "accentColor": "#0a3d91",
+                "accentTextColor": "#ffffff",
+                "borderColor": null,
+                "borderRadius": 12,
+                "fontFamily": null,
+                "objectFit": null,
+                "scaleUnit": null
+              },
+              "ads": {
+                "locale": "en",
+                "labels": {
+                  "skip": "Skip ad",
+                  "skipCountdown": null,
+                  "timer": null
+                },
+                "accentColor": null,
+                "skipRadius": null,
+                "fontSize": 15,
+                "timeouts": {
+                  "loadSeconds": null,
+                  "stallSeconds": null
+                }
+              },
+              "createdAt": "2026-10-20T16:13:47Z",
+              "updatedAt": "2026-10-20T16:13:47Z",
+              "builtIn": false
+            }
+          ],
+          "preset": {
+            "id": "p-vym1rjw052",
+            "name": "QA Video.js 중립",
+            "playerType": "videojs",
+            "skin": "neutral",
+            "theme": {
+              "accentColor": "#0a3d91",
+              "accentTextColor": "#ffffff",
+              "borderColor": null,
+              "borderRadius": 12,
+              "fontFamily": null,
+              "objectFit": null,
+              "scaleUnit": null
+            },
+            "ads": {
+              "locale": "en",
+              "labels": {
+                "skip": "Skip ad",
+                "skipCountdown": null,
+                "timer": null
+              },
+              "accentColor": null,
+              "skipRadius": null,
+              "fontSize": 15,
+              "timeouts": {
+                "loadSeconds": null,
+                "stallSeconds": null
+              }
+            },
+            "createdAt": "2026-10-20T16:13:47Z",
+            "updatedAt": "2026-10-20T16:13:47Z",
+            "builtIn": false
+          }
+        }
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

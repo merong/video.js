@@ -1,0 +1,8 @@
+2026-10-20 22:15:20 KST
+# ads_meta names after PL01 list+reload
+schema_version
+signing_key
+site_id
+write_lock
+# player_presets rows
+0

@@ -1,0 +1,5 @@
+schema_version
+signing_key
+site_id
+write_lock
+(player_presets 행 없음: 이번 회차는 프리셋을 만들지 않았다)

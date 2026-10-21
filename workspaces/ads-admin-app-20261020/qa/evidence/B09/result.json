@@ -1,0 +1,414 @@
+{
+  "statsBefore": {
+    "filters": {},
+    "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-20&to=2026-10-20",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "totals": {
+          "starts": 0,
+          "completes": 0,
+          "skips": 0,
+          "clicks": 0,
+          "clickedStarts": 0,
+          "errors": 0,
+          "completionRate": null,
+          "clickRate": null
+        },
+        "rows": [],
+        "timeZone": "Asia/Seoul",
+        "asOf": "2026-10-20T13:00:06Z"
+      }
+    },
+    "tables": [
+      [
+        [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "image/png",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "video/mp4",
+          "v2",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "video/mp4",
+          "v1",
+          "보관",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ]
+      ],
+      [
+        [
+          "광고 ID",
+          "영상 ID",
+          "게시판",
+          "시작",
+          "완료",
+          "스킵",
+          "클릭",
+          "오류",
+          "완료율",
+          "클릭률"
+        ],
+        [
+          "수집된 기록이 없어요.기간이나 ID 조건을 바꿔 보세요."
+        ]
+      ]
+    ],
+    "formStatus": "이 조건에 수집된 기록이 없어요. 기간과 광고·영상·게시판 ID를 확인해 주세요."
+  },
+  "prepared": "운영 통계에는 기록되지 않아요. 게시 전 편성을 실제 광고 모듈로 재생해요.\n\n영상 a1-qa-video-1 · 광고 3개 구간 · 게시 전 미리보기\n\n재생 대기\n\n재생 버튼을 눌러 본편과 광고를 확인해 주세요.\n\n재생 종료",
+  "anyMediaPlayingAfterClick": [
+    {
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "paused": true,
+      "t": 0
+    },
+    {
+      "src": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "paused": false,
+      "t": 1.080937
+    }
+  ],
+  "timeline": [
+    {
+      "at": 1792501211663,
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "t": 0,
+          "paused": true,
+          "ended": false,
+          "hidden": false
+        },
+        {
+          "src": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "t": 1.1,
+          "paused": false,
+          "ended": false,
+          "hidden": false
+        }
+      ],
+      "images": [],
+      "status": [
+        "프리롤 · 광고 1/2 진행 중"
+      ],
+      "log": ""
+    },
+    {
+      "at": 1792501216794,
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "t": 0,
+          "paused": true,
+          "ended": false,
+          "hidden": false
+        },
+        {
+          "src": "/media/ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "t": 0.1,
+          "paused": false,
+          "ended": false,
+          "hidden": false
+        }
+      ],
+      "images": [],
+      "status": [
+        "프리롤 · 광고 2/2 진행 중"
+      ],
+      "log": ""
+    },
+    {
+      "at": 1792501228760,
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "t": 0,
+          "paused": false,
+          "ended": false,
+          "hidden": false
+        }
+      ],
+      "images": [],
+      "status": [
+        "광고 후 본편을 재생하고 있어요."
+      ],
+      "log": ""
+    },
+    {
+      "at": 1792501234163,
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "t": 5.2,
+          "paused": true,
+          "ended": false,
+          "hidden": false
+        },
+        {
+          "src": "/media/dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "t": 0.1,
+          "paused": false,
+          "ended": false,
+          "hidden": false
+        }
+      ],
+      "images": [],
+      "status": [
+        "미드롤 · 광고 1/1 진행 중"
+      ],
+      "log": ""
+    },
+    {
+      "at": 1792501242409,
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "t": 5.5,
+          "paused": false,
+          "ended": false,
+          "hidden": false
+        }
+      ],
+      "images": [],
+      "status": [
+        "광고 후 본편을 재생하고 있어요."
+      ],
+      "log": ""
+    },
+    {
+      "at": 1792501246993,
+      "videos": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "t": 10,
+          "paused": true,
+          "ended": true,
+          "hidden": false
+        }
+      ],
+      "images": [],
+      "status": [
+        "포스트롤 · 광고 1/1 진행 중"
+      ],
+      "log": ""
+    }
+  ],
+  "final": "운영 통계에는 기록되지 않아요. 게시 전 편성을 실제 광고 모듈로 재생해요.\n\n영상 a1-qa-video-1 · 광고 3개 구간 · 게시 전 미리보기\n\n종료\n\n포스트롤 · 광고 1/1 완료 · 재생이 끝났어요.\n\n재생 종료\n\n이번 미리보기 기록\n프리롤 · 광고 1/2 · 시작\n프리롤 · 광고 1/2 · 완료\n프리롤 · 광고 2/2 · 시작\n프리롤 · 광고 2/2 · 완료\n본편 복귀\n미드롤 · 광고 1/1 · 시작\n미드롤 · 광고 1/1 · 완료\n본편 복귀\n포스트롤 · 광고 1/1 · 시작\n포스트롤 · 광고 1/1 · 완료",
+  "requestsDuringPreview": [
+    {
+      "method": "POST",
+      "action": "schedule-preview",
+      "url": null,
+      "status": 200,
+      "type": "fetch",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/assets/ads.js",
+      "status": 200,
+      "type": "script",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+      "status": 206,
+      "type": "media",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+      "status": 206,
+      "type": "media",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "status": 206,
+      "type": "media",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/media/ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+      "status": 206,
+      "type": "media",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/media/dbee26d5e6a9725df501fa0cc245025d.mp4",
+      "status": 206,
+      "type": "media",
+      "sameOrigin": true
+    },
+    {
+      "method": "GET",
+      "action": null,
+      "url": "http://127.0.0.1:18781/demo-media/ad.png",
+      "status": 200,
+      "type": "image",
+      "sameOrigin": true
+    }
+  ],
+  "collectionCounts": {
+    "events": 0,
+    "publicSchedule": 0,
+    "schedulePreview": 1
+  },
+  "afterLeave": {
+    "requests": [],
+    "mediaElements": []
+  },
+  "statsAfter": {
+    "filters": {},
+    "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-20&to=2026-10-20",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "totals": {
+          "starts": 0,
+          "completes": 0,
+          "skips": 0,
+          "clicks": 0,
+          "clickedStarts": 0,
+          "errors": 0,
+          "completionRate": null,
+          "clickRate": null
+        },
+        "rows": [],
+        "timeZone": "Asia/Seoul",
+        "asOf": "2026-10-20T13:00:55Z"
+      }
+    },
+    "tables": [
+      [
+        [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "image/png",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "video/mp4",
+          "v2",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "video/mp4",
+          "v1",
+          "보관",
+          "미리보기새 버전으로 수정보관"
+        ],
+        [
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9",
+          "video/mp4",
+          "v1",
+          "사용 가능",
+          "미리보기새 버전으로 수정보관"
+        ]
+      ],
+      [
+        [
+          "광고 ID",
+          "영상 ID",
+          "게시판",
+          "시작",
+          "완료",
+          "스킵",
+          "클릭",
+          "오류",
+          "완료율",
+          "클릭률"
+        ],
+        [
+          "수집된 기록이 없어요.기간이나 ID 조건을 바꿔 보세요."
+        ]
+      ]
+    ],
+    "formStatus": "이 조건에 수집된 기록이 없어요. 기간과 광고·영상·게시판 ID를 확인해 주세요."
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

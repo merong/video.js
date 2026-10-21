@@ -1,0 +1,843 @@
+{
+  "codes": {
+    "videojs-mp4": {
+      "preset": "QA Video.js 중립 v2 (기본 프리셋)",
+      "length": 813,
+      "sha256": "da7b4aeda40f77fb6430279caacac57c9bca6ebeb72f9abdc060f2c48c5f51b0",
+      "containedUnmodified": true
+    },
+    "native-mp4": {
+      "preset": "QA 기본 video",
+      "length": 1204,
+      "sha256": "9e1102ec450084e274d4dd3aa5cf15460c50b45c14028655745d4682e8b85298",
+      "containedUnmodified": true
+    }
+  },
+  "plays": [
+    {
+      "label": "videojs-mp4",
+      "start": 167,
+      "url": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+      "contentEndedAt": 1792504251954,
+      "timeline": [
+        {
+          "at": 1792504214337,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            }
+          ],
+          "overlay": "0:00 | / | 0:10 | 0:00 | Settings"
+        },
+        {
+          "at": 1792504214948,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0.1
+            }
+          ],
+          "overlay": "0:00 | / | 0:10 | 0:00 | Settings | Playing | Advertisement 1 of 2 | Visit advertiser | 0:00 / 0:06"
+        },
+        {
+          "at": 1792504220879,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "VIDEO",
+              "src": "/media/ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": "0:00 | / | 0:10 | 0:00 | Settings | Advertisement 2 of 2 | Skip in 3s | 0:00 / 0:12"
+        },
+        {
+          "at": 1792504233151,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            }
+          ],
+          "overlay": "0:00 | / | 0:10 | 0:00 | Settings"
+        },
+        {
+          "at": 1792504238994,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 5.2
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "VIDEO",
+              "src": "/media/dbee26d5e6a9725df501fa0cc245025d.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": "0:05 | / | 0:10 | 0:00 | Settings | Advertisement 1 of 1 | Skip in 3s | 0:00 / 0:08"
+        },
+        {
+          "at": 1792504247237,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 5.5
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            }
+          ],
+          "overlay": "0:05 | / | 0:10 | 0:00 | Settings"
+        },
+        {
+          "at": 1792504251917,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": true,
+              "t": 10
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "/demo-media/ad.png",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            }
+          ],
+          "overlay": "0:10 | / | 0:10 | 0:00 | Settings | Playing | Advertisement 1 of 1 | 0:00 / 0:03"
+        },
+        {
+          "at": 1792504255246,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": true,
+              "t": 10
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            },
+            {
+              "tag": "IMG",
+              "src": "",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            }
+          ],
+          "overlay": "0:10 | / | 0:10 | 0:00 | Settings | Paused"
+        }
+      ],
+      "overlayTexts": [
+        "#:# | / | #:# | #:# | Settings",
+        "#:# | / | #:# | #:# | Settings | Playing | Advertisement # of # | Visit advertiser | #:# / #:#",
+        "#:# | / | #:# | #:# | Settings | Advertisement # of # | Visit advertiser | #:# / #:#",
+        "#:# | / | #:# | #:# | Settings | Advertisement # of # | Skip in #s | #:# / #:#",
+        "#:# | / | #:# | #:# | Settings | Advertisement # of # | Skip ad | #:# / #:#",
+        "#:# | / | #:# | #:# | Settings | Playing | Advertisement # of # | #:# / #:#",
+        "#:# | / | #:# | #:# | Settings | Advertisement # of # | #:# / #:#",
+        "#:# | / | #:# | #:# | Settings | Paused"
+      ],
+      "contentEnded": true,
+      "requests": [
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/media/ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/media/dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/demo-media/ad.png",
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        }
+      ],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "events": [
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "start",
+              "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+              "videoId": null
+            },
+            {
+              "type": "start",
+              "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "start",
+              "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "start",
+              "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504258894,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-videojs-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+              "videoId": null
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        "GET 200"
+      ],
+      "non2xx": [
+        "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+      ]
+    },
+    {
+      "label": "native-mp4",
+      "start": 4,
+      "url": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+      "contentEndedAt": 1792504299811,
+      "timeline": [
+        {
+          "at": 1792504261845,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": ""
+        },
+        {
+          "at": 1792504262415,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 0
+            },
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": "광고 1/2 | 광고주 사이트 | 0:00 / 0:06"
+        },
+        {
+          "at": 1792504268653,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 0
+            },
+            {
+              "tag": "VIDEO",
+              "src": "/media/ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": "광고 2/2 | 3초 후 건너뛰기 | 0:00 / 0:12"
+        },
+        {
+          "at": 1792504280925,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": ""
+        },
+        {
+          "at": 1792504286719,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": false,
+              "t": 5.3
+            },
+            {
+              "tag": "VIDEO",
+              "src": "/media/dbee26d5e6a9725df501fa0cc245025d.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 0
+            }
+          ],
+          "overlay": "광고 1/1 | 3초 후 건너뛰기 | 0:00 / 0:08"
+        },
+        {
+          "at": 1792504295086,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": false,
+              "ended": false,
+              "t": 5.6
+            }
+          ],
+          "overlay": ""
+        },
+        {
+          "at": 1792504299772,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": true,
+              "t": 10
+            },
+            {
+              "tag": "IMG",
+              "src": "/demo-media/ad.png",
+              "paused": null,
+              "ended": null,
+              "t": 0
+            }
+          ],
+          "overlay": "광고 1/1 | 0:00 / 0:03"
+        },
+        {
+          "at": 1792504302628,
+          "media": [
+            {
+              "tag": "VIDEO",
+              "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+              "paused": true,
+              "ended": true,
+              "t": 10
+            }
+          ],
+          "overlay": ""
+        }
+      ],
+      "overlayTexts": [
+        "광고 #/# | 광고주 사이트 | #:# / #:#",
+        "광고 #/# | #초 후 건너뛰기 | #:# / #:#",
+        "광고 #/# | 광고 건너뛰기 | #:# / #:#",
+        "광고 #/# | #:# / #:#"
+      ],
+      "contentEnded": true,
+      "requests": [
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/media/ff5dd8ada3e7ae112cb3edab007c850f.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/media/dbee26d5e6a9725df501fa0cc245025d.mp4",
+          "status": 206,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "GET",
+          "action": null,
+          "url": "/demo-media/ad.png",
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        },
+        {
+          "method": "POST",
+          "action": "events",
+          "url": null,
+          "status": 200,
+          "failed": null
+        }
+      ],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "events": [
+        {
+          "at": 1792504305855,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "start",
+              "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504305855,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-56f8787f880150925a4ccd6e062fdadf",
+              "videoId": null
+            },
+            {
+              "type": "start",
+              "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504305855,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-0afaf3d354178e48df2623e0265cf10f",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504305855,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "start",
+              "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504305856,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504305856,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "start",
+              "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+              "videoId": null
+            }
+          ]
+        },
+        {
+          "at": 1792504305856,
+          "resourceType": "fetch",
+          "page": "http://127.0.0.1:18781/__qa/paste/pl16-native-mp4.html",
+          "status": 200,
+          "body": null,
+          "items": [
+            {
+              "type": "complete",
+              "adId": "creative-4f7176309eef79c367f79a8fb2baadba",
+              "videoId": null
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        "GET 200"
+      ],
+      "non2xx": [
+        "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+      ]
+    }
+  ],
+  "theme": {
+    "skinDefined": true,
+    "accent": "#0f5132",
+    "radius": "12px",
+    "adsFont": "15px",
+    "css": [
+      "http://127.0.0.1:18781/assets/videojs/video-neutral.css"
+    ]
+  }
+}

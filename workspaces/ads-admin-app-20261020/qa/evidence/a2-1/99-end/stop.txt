@@ -1,0 +1,15 @@
+2026-10-21 15:24:40
+kill 2299 (php -S 127.0.0.1:18781, this run only)
+ 2299 php -d display_errors=0 -d upload_max_filesize=100M -d post_max_size=101M -S 127.0.0.1:18781 -t integrations/ads-manager/public workspaces/ads-admin-app-20261020/qa/fixtures/qa-router.php
+stopped
+18781 not listening
+admin-password deleted
+total 6928
+drwx------@   8 brian  wheel      256 10월 21 15:24 .
+drwxrwxrwt  145 root   wheel     4640 10월 21 15:24 ..
+-rw-r--r--@   1 brian  wheel   360448 10월 21 15:23 ads.sqlite
+-rw-------@   1 brian  wheel      574 10월 21 14:46 config.php
+-rw-r--r--@   1 brian  wheel     1036 10월 21 15:12 l10-v1-value.json
+-rw-r--r--@   1 brian  wheel  2545392 10월 21 15:23 server.log
+-rw-r--r--@   1 brian  wheel        5 10월 21 14:46 server.pid
+drwx------@   4 brian  wheel      128 10월 21 14:47 uploads

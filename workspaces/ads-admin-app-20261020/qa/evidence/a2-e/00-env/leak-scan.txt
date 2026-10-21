@@ -1,0 +1,7 @@
+leak scan 2026-10-22 00:10:49 KST over evidence/a2-e and fixtures/paste/a2d-a2e-*
+password hits: 0
+signing_key hits: 0
+password-hash hits (5 hashes): 0
+session-token hits (54 values): 0
+cookie/csrf patterns: 0
+DSN patterns: 0

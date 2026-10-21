@@ -1,0 +1,77 @@
+{
+  "B16": {
+    "offline": {
+      "alerts": [
+        "서버에 연결하지 못했어요. 입력은 그대로 남아 있어요."
+      ],
+      "statuses": [
+        "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+      ],
+      "inputKept": "https://example.com/qa-coffee-offline",
+      "saveRequests": 1
+    },
+    "afterOnlineNoAction": {
+      "saveRequests": 0,
+      "inputKept": "https://example.com/qa-coffee-offline"
+    },
+    "manualRetry": {
+      "saveRequests": 1,
+      "status": "초안 r4을 저장했어요. 현재 게시본은 바뀌지 않았어요.",
+      "api": [
+        {
+          "t": 2149,
+          "method": "POST",
+          "action": "schedule-save",
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true
+        },
+        {
+          "t": 12499,
+          "method": "POST",
+          "action": "schedule-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+      }
+    ]
+  },
+  "B18": {
+    "title": "광고 운영실 · 광고 관리자",
+    "assets": [
+      "/assets/admin/admin.css",
+      "/assets/admin/admin.js",
+      "/assets/admin/api.js",
+      "/assets/admin/model.js",
+      "/assets/admin/preview.js"
+    ],
+    "afterLogin": "본문으로 이동\n▶\nVIDEO / AD OPERATIONS\n광고 운영실\nsite-local · Asia/Seoul\n로그아웃\n소재 보관함\n광고 편성\n성과 통계\n소재 보관함\n하나의 소재, 여러 편성.\n\n파일을 교체해도 기존 게시본과 기록은 유지됩니다.\n\n새 소재 등록\n등록한 소재\n새로고침\n6개 소재를 불러왔습니다.\nQA 오류 뒤 유효 쓰기\n\ncreative-0443f3c2309264d81f999bd136e2a127 · v1 · video/mp4 · 사용 가능\n\n소재 미리보기\n새 버전으로 수정\n보관\nQA 이어버드 프리롤\n\ncreative-0afaf3d354178e48df2623e0265cf10f · v1 · video/mp4 · 사용 가능\n\n소재 미리보기\n새 버전으로 수정\n보관\nQA 포스트롤 이미지\n\ncreative-4f7176309eef79c367f79a8fb2baadba · v1 · image/png · 사용 가능\n\n소재 미리보기\n새 버전으로 수정\n보관\nQA 커피 프리롤 v2\n\ncreative-56f8787f880150925a4ccd6e062fdadf · v2 · video/mp4 · 사용 가능\n\n소재 미리보기\n새 버전으로 수정\n보관\nQA 보관 테스트\n\ncreative-8df64506f9e82341dc391e8f3accb7ba · v1 · video/mp4 · 보관됨\n\n소재 미리보기\n새 버전으로 수정\n보관\nQA 생수 미드롤\n\ncreative-c0e45eddb3d3820b1d733e9aac8766e9 · v1 · video/mp4 · 사용 가능\n\n소재 미리보기\n새 버전으로 수정\n보관\n새 소재 등록\n\n영상과 이미지 · GIF를 지원합니다.\n\n소재 정보\n소재 이름\n등록 방식\n외부 URL\n파일 업로드\n소재 URL\n파일 형식\nMP4 영상\nWebM 영상\nJPEG 이미지\nPNG 이미지\nWebP 이미지\nGIF 이미지\n대체텍스트\n이미지 광고의 내용을 짧게 설명하세요.\n소재 저장\n입력 소재 미리보기",
+    "creativesVisible": 1,
+    "api": [
+      "GET bootstrap 200",
+      "POST login 200",
+      "GET bootstrap 200",
+      "GET creatives 200"
+    ],
+    "url": "http://127.0.0.1:18781/?ui=v1",
+    "newAppAfterV1": {
+      "h1": [
+        "소재"
+      ],
+      "assets": 2
+    },
+    "console": []
+  }
+}

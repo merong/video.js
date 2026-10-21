@@ -1,0 +1,47 @@
+- form "재생 확인":
+  - heading "재생 확인" [level=2]
+  - paragraph: 본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.
+  - text: 본편 영상 URL
+  - textbox "본편 영상 URL":
+    - /placeholder: https://…/content.mp4 또는 /media/content.mp4
+    - text: /demo-media/grok-20261018/content-scene-01.mp4
+  - text: 기본값은 데모 본편이에요. 실제 서비스 영상 주소로 바꿀 수 있어요. 고정 영상 ID
+  - textbox "고정 영상 ID": a1-qa-video-1
+  - text: 편집 중인 영상 대상의 ID를 써요.
+  - link "고정 영상 ID 도움말":
+    - /url: "#/help/fixed-video-id"
+    - text: "?"
+  - group "게시 전 미리보기":
+    - heading "게시 전 미리보기" [level=3]
+    - link "게시 전 미리보기 도움말":
+      - /url: "#/help/preview"
+      - text: "?"
+    - button "미리보기 준비"
+    - button "미리보기 닫기"
+    - status
+    - region "광고 편성 미리보기":
+      - note: 운영 통계에는 기록되지 않아요. 게시 전 편성을 실제 광고 모듈로 재생해요.
+      - paragraph: 영상 a1-qa-video-1 · 광고 3개 구간 · 게시 전 미리보기
+      - text: 재생 대기
+      - status: 재생 버튼을 눌러 본편과 광고를 확인해 주세요.
+      - button "재생 종료"
+      - alert
+    - paragraph: 본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요.
+  - group "게시본 재생 테스트":
+    - heading "게시본 재생 테스트" [level=3]
+    - link "게시본 재생 테스트 도움말":
+      - /url: "#/help/play-test"
+      - text: "?"
+    - paragraph: 저장·게시하지 않은 변경은 반영되지 않아요.
+    - text: 플레이어 프리셋
+    - combobox "플레이어 프리셋":
+      - option "기본 (기본 프리셋)" [selected]
+    - text: 플레이어 메뉴에서 저장한 프리셋으로 재생해요. 처음에는 기본 프리셋이 선택돼요.
+    - link "프리셋 도움말":
+      - /url: "#/help/player-preset"
+      - text: "?"
+    - note: 통계에 기록돼요 · 게시한 편성을 실제 수집 경로로 재생해요. 기록 없이 확인하려면 미리보기를 이용해 주세요.
+    - link "기본 video로 재생 (새 탭)":
+      - /url: http://127.0.0.1:18781/examples/player.html?video=a1-qa-video-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4
+    - link "Video.js로 재생 (새 탭)":
+      - /url: http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-video-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4

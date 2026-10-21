@@ -1,0 +1,503 @@
+{
+  "screens": [
+    {
+      "width": 768,
+      "id": "default",
+      "note": "기본 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "duplicate": 1,
+      "asideLine": "내장 프리셋 모습이에요",
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowFolded": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "frame": {
+        "type": "videojs",
+        "built": true,
+        "lang": "ko"
+      },
+      "frameBox": {
+        "w": 698,
+        "h": 393
+      },
+      "nativeNote": 0,
+      "widthRadios": [
+        "narrow",
+        "medium",
+        "wide*"
+      ],
+      "widthViews": [
+        {
+          "value": "narrow",
+          "scale": "보이는 폭 390px · 실제 크기예요",
+          "frameW": 390
+        },
+        {
+          "value": "medium",
+          "scale": "보이는 폭 768px · 실제의 91%로 줄여 보여요",
+          "frameW": 698
+        },
+        {
+          "value": "wide",
+          "scale": "자리 폭 698px · 실제 크기예요",
+          "frameW": 698
+        }
+      ],
+      "pageLang": {
+        "value": "ko",
+        "options": [
+          "한국어 (ko)",
+          "영어 (en)",
+          "일본어 (ja)",
+          "중국어 간체 (zh-CN)",
+          "그 밖의 언어 (fr)"
+        ],
+        "frameAfter": {
+          "type": "videojs",
+          "built": true,
+          "lang": "en"
+        }
+      },
+      "demo": {
+        "count": 1,
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=default",
+        "target": "_blank",
+        "ariaDisabled": null,
+        "text": "데모에서 열기\n(새 창)"
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "width": 768,
+      "id": "rounded",
+      "note": "둥근 테두리 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "duplicate": 1,
+      "asideLine": "내장 프리셋 모습이에요",
+      "opener": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "overflowFolded": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "frame": {
+        "type": "videojs",
+        "built": true,
+        "lang": "ko"
+      },
+      "frameBox": {
+        "w": 698,
+        "h": 393
+      },
+      "nativeNote": 0,
+      "widthRadios": [
+        "narrow",
+        "medium",
+        "wide*"
+      ],
+      "widthViews": [
+        {
+          "value": "narrow",
+          "scale": "보이는 폭 390px · 실제 크기예요",
+          "frameW": 390
+        },
+        {
+          "value": "medium",
+          "scale": "보이는 폭 768px · 실제의 91%로 줄여 보여요",
+          "frameW": 698
+        },
+        {
+          "value": "wide",
+          "scale": "자리 폭 698px · 실제 크기예요",
+          "frameW": 698
+        }
+      ],
+      "pageLang": {
+        "value": "ko",
+        "options": [
+          "한국어 (ko)",
+          "영어 (en)",
+          "일본어 (ja)",
+          "중국어 간체 (zh-CN)",
+          "그 밖의 언어 (fr)"
+        ],
+        "frameAfter": {
+          "type": "videojs",
+          "built": true,
+          "lang": "en"
+        }
+      },
+      "scenes": {
+        "buttons": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "mid": "최근 광고 진행 미드롤 1/1 재생 중 20:07:44",
+        "end": "최근 광고 진행 포스트롤 1/1 재생 중 20:07:54"
+      },
+      "demo": {
+        "count": 1,
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=rounded",
+        "target": "_blank",
+        "ariaDisabled": null,
+        "text": "데모에서 열기\n(새 창)"
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "width": 768,
+      "id": "accent",
+      "note": "강조색 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "duplicate": 1,
+      "asideLine": "내장 프리셋 모습이에요",
+      "opener": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "overflowFolded": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "frame": {
+        "type": "videojs",
+        "built": true,
+        "lang": "ko"
+      },
+      "frameBox": {
+        "w": 698,
+        "h": 393
+      },
+      "nativeNote": 0,
+      "widthRadios": [
+        "narrow",
+        "medium",
+        "wide*"
+      ],
+      "widthViews": [
+        {
+          "value": "narrow",
+          "scale": "보이는 폭 390px · 실제 크기예요",
+          "frameW": 390
+        },
+        {
+          "value": "medium",
+          "scale": "보이는 폭 768px · 실제의 91%로 줄여 보여요",
+          "frameW": 698
+        },
+        {
+          "value": "wide",
+          "scale": "자리 폭 698px · 실제 크기예요",
+          "frameW": 698
+        }
+      ],
+      "pageLang": {
+        "value": "ko",
+        "options": [
+          "한국어 (ko)",
+          "영어 (en)",
+          "일본어 (ja)",
+          "중국어 간체 (zh-CN)",
+          "그 밖의 언어 (fr)"
+        ],
+        "frameAfter": {
+          "type": "videojs",
+          "built": true,
+          "lang": "en"
+        }
+      },
+      "demo": {
+        "count": 1,
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=accent",
+        "target": "_blank",
+        "ariaDisabled": null,
+        "text": "데모에서 열기\n(새 창)"
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "width": 390,
+      "id": "default",
+      "note": "기본 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "duplicate": 1,
+      "asideLine": "내장 프리셋 모습이에요",
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowFolded": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "frame": {
+        "type": "videojs",
+        "built": true,
+        "lang": "ko"
+      },
+      "frameBox": {
+        "w": 320,
+        "h": 180
+      },
+      "nativeNote": 0,
+      "widthRadios": [
+        "narrow",
+        "medium",
+        "wide*"
+      ],
+      "widthViews": [
+        {
+          "value": "narrow",
+          "scale": "보이는 폭 390px · 실제의 82%로 줄여 보여요",
+          "frameW": 320
+        },
+        {
+          "value": "medium",
+          "scale": "보이는 폭 768px · 실제의 42%로 줄여 보여요",
+          "frameW": 320
+        },
+        {
+          "value": "wide",
+          "scale": "자리 폭 320px · 실제 크기예요",
+          "frameW": 320
+        }
+      ],
+      "pageLang": {
+        "value": "ko",
+        "options": [
+          "한국어 (ko)",
+          "영어 (en)",
+          "일본어 (ja)",
+          "중국어 간체 (zh-CN)",
+          "그 밖의 언어 (fr)"
+        ],
+        "frameAfter": {
+          "type": "videojs",
+          "built": true,
+          "lang": "en"
+        }
+      },
+      "demo": {
+        "count": 1,
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=default",
+        "target": "_blank",
+        "ariaDisabled": null,
+        "text": "데모에서 열기\n(새 창)"
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "width": 390,
+      "id": "rounded",
+      "note": "둥근 테두리 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "duplicate": 1,
+      "asideLine": "내장 프리셋 모습이에요",
+      "opener": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "overflowFolded": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "frame": {
+        "type": "videojs",
+        "built": true,
+        "lang": "ko"
+      },
+      "frameBox": {
+        "w": 320,
+        "h": 180
+      },
+      "nativeNote": 0,
+      "widthRadios": [
+        "narrow",
+        "medium",
+        "wide*"
+      ],
+      "widthViews": [
+        {
+          "value": "narrow",
+          "scale": "보이는 폭 390px · 실제의 82%로 줄여 보여요",
+          "frameW": 320
+        },
+        {
+          "value": "medium",
+          "scale": "보이는 폭 768px · 실제의 42%로 줄여 보여요",
+          "frameW": 320
+        },
+        {
+          "value": "wide",
+          "scale": "자리 폭 320px · 실제 크기예요",
+          "frameW": 320
+        }
+      ],
+      "pageLang": {
+        "value": "ko",
+        "options": [
+          "한국어 (ko)",
+          "영어 (en)",
+          "일본어 (ja)",
+          "중국어 간체 (zh-CN)",
+          "그 밖의 언어 (fr)"
+        ],
+        "frameAfter": {
+          "type": "videojs",
+          "built": true,
+          "lang": "en"
+        }
+      },
+      "scenes": {
+        "buttons": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "mid": "최근 광고 진행 미드롤 1/1 재생 중 20:09:02",
+        "end": "최근 광고 진행 포스트롤 1/1 재생 중 20:09:13"
+      },
+      "demo": {
+        "count": 1,
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=rounded",
+        "target": "_blank",
+        "ariaDisabled": null,
+        "text": "데모에서 열기\n(새 창)"
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "width": 390,
+      "id": "accent",
+      "note": "강조색 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "duplicate": 1,
+      "asideLine": "내장 프리셋 모습이에요",
+      "opener": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "overflowFolded": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "frame": {
+        "type": "videojs",
+        "built": true,
+        "lang": "ko"
+      },
+      "frameBox": {
+        "w": 320,
+        "h": 180
+      },
+      "nativeNote": 0,
+      "widthRadios": [
+        "narrow",
+        "medium",
+        "wide*"
+      ],
+      "widthViews": [
+        {
+          "value": "narrow",
+          "scale": "보이는 폭 390px · 실제의 82%로 줄여 보여요",
+          "frameW": 320
+        },
+        {
+          "value": "medium",
+          "scale": "보이는 폭 768px · 실제의 42%로 줄여 보여요",
+          "frameW": 320
+        },
+        {
+          "value": "wide",
+          "scale": "자리 폭 320px · 실제 크기예요",
+          "frameW": 320
+        }
+      ],
+      "pageLang": {
+        "value": "ko",
+        "options": [
+          "한국어 (ko)",
+          "영어 (en)",
+          "일본어 (ja)",
+          "중국어 간체 (zh-CN)",
+          "그 밖의 언어 (fr)"
+        ],
+        "frameAfter": {
+          "type": "videojs",
+          "built": true,
+          "lang": "en"
+        }
+      },
+      "demo": {
+        "count": 1,
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=accent",
+        "target": "_blank",
+        "ariaDisabled": null,
+        "text": "데모에서 열기\n(새 창)"
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    }
+  ],
+  "compare": {},
+  "keys": {},
+  "error768": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main h1, main h2').first()\u001b[22m\n\u001b[2m    - locator resolved to <h1 tabindex=\"-1\" class=\"sa-page-title\" id=\"aa-title-creatives\">소재</h1>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "events768": 0,
+  "console768": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "error390": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main h1, main h2').first()\u001b[22m\n\u001b[2m    - locator resolved to <h1 tabindex=\"-1\" class=\"sa-page-title\" id=\"aa-title-creatives\">소재</h1>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "events390": 0,
+  "console390": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

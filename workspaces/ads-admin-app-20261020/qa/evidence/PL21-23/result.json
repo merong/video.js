@@ -1,0 +1,225 @@
+{
+  "PL21": {
+    "subnav": [
+      "프리셋 목록 #/players [aria-current=page]",
+      "초기 설정 방법 #/players/setup",
+      "옵션 설명 #/players/options"
+    ],
+    "hash": "#/players/options",
+    "api": [],
+    "tables": [
+      {
+        "caption": "등록한 소재 목록",
+        "columns": [
+          "소재",
+          "형식",
+          "버전",
+          "상태 ?",
+          "동작"
+        ],
+        "rows": 6,
+        "names": [
+          "QA 오류 뒤 유효 쓰기creative-0443f3c2309264d81f999bd136e2a127",
+          "QA 이어버드 프리롤creative-0afaf3d354178e48df2623e0265cf10f",
+          "QA 포스트롤 이미지creative-4f7176309eef79c367f79a8fb2baadba",
+          "QA 커피 프리롤 v2creative-56f8787f880150925a4ccd6e062fdadf",
+          "QA 보관 테스트creative-8df64506f9e82341dc391e8f3accb7ba",
+          "QA 생수 미드롤creative-c0e45eddb3d3820b1d733e9aac8766e9"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": false
+        }
+      },
+      {
+        "caption": "<media-ads> 속성",
+        "columns": [
+          "이름",
+          "형식",
+          "기본값",
+          "설명",
+          "프리셋 설정"
+        ],
+        "rows": 8,
+        "names": [
+          "for",
+          "src",
+          "video-id",
+          "lang",
+          "skip-label",
+          "skip-countdown-label",
+          "timer-label",
+          "media-alt"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": true
+        }
+      },
+      {
+        "caption": "createAdsController 옵션",
+        "columns": [
+          "이름",
+          "형식",
+          "기본값",
+          "설명",
+          "프리셋 설정"
+        ],
+        "rows": 10,
+        "names": [
+          "media",
+          "container",
+          "schedule",
+          "tracking",
+          "preview",
+          "onEvent",
+          "timeouts.loadSeconds",
+          "timeouts.stallSeconds",
+          "ui.locale",
+          "ui.labels"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": true
+        }
+      },
+      {
+        "caption": "createAdsController 반환 메서드",
+        "columns": [
+          "이름",
+          "형식",
+          "기본값",
+          "설명",
+          "프리셋 설정"
+        ],
+        "rows": 2,
+        "names": [
+          "destroy()",
+          "updateUI(ui)"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": false
+        }
+      },
+      {
+        "caption": "스킨 CSS 속성",
+        "columns": [
+          "이름",
+          "형식",
+          "기본값",
+          "설명",
+          "프리셋 설정"
+        ],
+        "rows": 8,
+        "names": [
+          "--media-accent-color",
+          "--media-accent-text-color",
+          "--media-border-color",
+          "--media-border-radius",
+          "--media-font-family",
+          "--media-object-fit",
+          "--media-object-position",
+          "--media-scale-unit"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": true
+        }
+      },
+      {
+        "caption": "광고 화면 CSS 속성",
+        "columns": [
+          "이름",
+          "형식",
+          "기본값",
+          "설명",
+          "프리셋 설정"
+        ],
+        "rows": 14,
+        "names": [
+          "--ads-accent-color",
+          "--ads-skip-radius",
+          "--ads-font-size",
+          "--ads-font-family",
+          "--ads-color",
+          "--ads-background",
+          "--ads-radius",
+          "--ads-inset",
+          "--ads-scrim",
+          "--ads-control-size",
+          "--ads-control-radius",
+          "--ads-button-background",
+          "--ads-hover-background",
+          "--ads-focus-color"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": true
+        }
+      },
+      {
+        "caption": "예제 페이지 쿼리",
+        "columns": [
+          "이름",
+          "형식",
+          "기본값",
+          "설명",
+          "프리셋 설정"
+        ],
+        "rows": 5,
+        "names": [
+          "video",
+          "content",
+          "media",
+          "engine",
+          "preset"
+        ],
+        "scroller": {
+          "overflowX": "auto",
+          "scrollable": true
+        }
+      }
+    ],
+    "mediaAlt": [
+      "media-alt\t글자\t소재의 대체 텍스트, 없으면 광고 / Advertisement\t모든 광고 소재의 대체 텍스트를 이 값으로 덮어써요. 소재마다 입력한 대체 텍스트가 가려지므로 프리셋에서는 설정하지 않아요.\t프리셋에서 설정 안 함"
+    ],
+    "notes": {
+      "adsDirect": [],
+      "small280": [
+        "--ads-font-size\t길이\t13px\t광고 화면 글자 크기예요. 컨테이너 폭 280px 이하에서는 11px로 고정돼요.\t광고 글자 크기 (px) ?"
+      ],
+      "timeout5": [
+        "src\tURL\t없음(필수)\t편성 주소예요. raw 편성 JSON이나 관리자 API 응답({ok, data})을 받아요. http(s):// 주소나 /로 시작하는 경로만 받고 상대 경로는 거부해요. 편성 요청 시간 제한은 5초로 고정돼요.\t프리셋에서 설정 안 함"
+      ]
+    }
+  },
+  "PL23": {
+    "list": [],
+    "options": [],
+    "setup": [],
+    "edit": [
+      {
+        "tag": "SPAN",
+        "text": "스킨기본 (모서리 28px)뉴트럴 (모서리 12px)compat·scaffold 스킨은 준비 중이에요. 기본 컨트롤이나 직접 만들 스킨이라 같은 테마 설정으로 설명할 수 없어요. ?",
+        "control": "SELECT"
+      },
+      {
+        "tag": "B",
+        "text": "광고 시간 제한 · 준비 중 · Video.js의 광고 요소에는 아직 시간 제한 속성이 없어요. 편성 요청 시간 제한은 5초로 고정돼요. 시간 제한은 기본 video 프리셋에서 정할 수 있어요.",
+        "control": null
+      }
+    ],
+    "skinOptions": [
+      "기본 (모서리 28px)",
+      "뉴트럴 (모서리 12px)"
+    ],
+    "writes": []
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

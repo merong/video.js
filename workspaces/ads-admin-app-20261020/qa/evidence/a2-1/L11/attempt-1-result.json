@@ -1,0 +1,100 @@
+{
+  "legacy": {
+    "pl16-videojs-mp4.html": {
+      "before": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        }
+      ],
+      "error": "TypeError: Cannot read properties of null (reading 'x')"
+    },
+    "pl16-native-mp4.html": {
+      "before": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        }
+      ],
+      "adEvents": [],
+      "during": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        },
+        {
+          "src": "/media/bb8ad12843b9fa0eafabdbd31e1cabd7.mp4",
+          "paused": false,
+          "t": 8.2
+        }
+      ],
+      "text": [
+        "광고 2/2",
+        "광고 건너뛰기",
+        "0:08 / 0:12"
+      ],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "pl16d-videojs-mp4.html": {
+      "before": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        }
+      ],
+      "error": "TypeError: Cannot read properties of null (reading 'x')"
+    },
+    "pl16d-native-mp4.html": {
+      "before": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        }
+      ],
+      "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('video-player, #ads-player').first()\u001b[22m\n"
+    }
+  },
+  "disclosure": {
+    "openBefore": false,
+    "openAfterEnter": true,
+    "openAfterSpace": false,
+    "openAfterSecondSpace": true,
+    "note": [
+      "프리셋을 바꿔도 이 코드는 따라 바뀌지 않아요 · 이미 붙인 페이지는 그대로 동작해요. 새로 붙이는 페이지에는 위 설치 코드를 써 주세요."
+    ],
+    "selected": "p-qrgzuc8ste",
+    "videojs": {
+      "codeLines": 12,
+      "before": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        }
+      ],
+      "error": "TypeError: Cannot read properties of null (reading 'x')"
+    },
+    "native": {
+      "codeLines": 30,
+      "before": [
+        {
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        }
+      ],
+      "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('video-player, #ads-player').first()\u001b[22m\n"
+    }
+  },
+  "adminConsole": []
+}

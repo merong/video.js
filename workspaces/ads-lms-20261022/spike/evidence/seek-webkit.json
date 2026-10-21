@@ -1,0 +1,1183 @@
+{
+ "scenario": "seek",
+ "engine": "webkit",
+ "startedAt": "2026-10-21T17:01:20.317Z",
+ "steps": [
+  {
+   "name": "store.seek(30)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1185,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 1219,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(3)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 3,
+    "store": 3,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 8.329,
+    "expectPct": 8.333,
+    "fillVar": "8.333%",
+    "counts": {
+     "setter": 2,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2433,
+     "type": "media:seeking",
+     "time": 3
+    },
+    {
+     "t": 2446,
+     "type": "media:seeked",
+     "time": 3
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "slider drag 10%→80%",
+   "before": {
+    "media": 3,
+    "store": 3,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 8.329,
+    "expectPct": 8.333,
+    "fillVar": "8.333%",
+    "counts": {
+     "setter": 2,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 4,
+     "clamped": 2,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 3884,
+     "type": "media:seeking",
+     "time": 6.106
+    },
+    {
+     "t": 3893,
+     "type": "media:seeked",
+     "time": 6.106
+    },
+    {
+     "t": 3916,
+     "type": "seek-blocked",
+     "requested": 28.734,
+     "allowed": 11
+    },
+    {
+     "t": 3919,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 3933,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "slider click 90%",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 4,
+     "clamped": 2,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 5,
+     "clamped": 3,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 5200,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 5201,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(2)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 5,
+     "clamped": 3,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 2,
+    "store": 2,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 5.556,
+    "expectPct": 5.556,
+    "fillVar": "5.556%",
+    "counts": {
+     "setter": 6,
+     "clamped": 3,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 6414,
+     "type": "media:seeking",
+     "time": 2
+    },
+    {
+     "t": 6421,
+     "type": "media:seeked",
+     "time": 2
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key 8 (80%)",
+   "before": {
+    "media": 2,
+    "store": 2,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 5.556,
+    "expectPct": 5.556,
+    "fillVar": "5.556%",
+    "counts": {
+     "setter": 6,
+     "clamped": 3,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 7,
+     "clamped": 4,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "events": [
+    {
+     "t": 7661,
+     "type": "seek-blocked",
+     "requested": 28.8,
+     "allowed": 11
+    },
+    {
+     "t": 7664,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 7689,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key Home",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 7,
+     "clamped": 4,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 8,
+     "clamped": 4,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "events": [
+    {
+     "t": 8874,
+     "type": "media:seeking",
+     "time": 0
+    },
+    {
+     "t": 8878,
+     "type": "media:seeked",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key End",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 8,
+     "clamped": 4,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 9,
+     "clamped": 5,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 10082,
+     "type": "seek-blocked",
+     "requested": 36,
+     "allowed": 11
+    },
+    {
+     "t": 10086,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 10112,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key ArrowRight",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 9,
+     "clamped": 5,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 10,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 11313,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 11315,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key ArrowLeft",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 10,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.778,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 11,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 12523,
+     "type": "media:seeking",
+     "time": 1
+    },
+    {
+     "t": 12529,
+     "type": "media:seeked",
+     "time": 1
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key l (+10)",
+   "before": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.778,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 11,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 12,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 13733,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 13771,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "seek button +10",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 12,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 13,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 14981,
+     "type": "seek-blocked",
+     "requested": 21,
+     "allowed": 11
+    },
+    {
+     "t": 14984,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 14986,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "seek button -10",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 13,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.778,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 14,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 16271,
+     "type": "media:seeking",
+     "time": 1
+    },
+    {
+     "t": 16276,
+     "type": "media:seeked",
+     "time": 1
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "doubletap right (mouse dblclick)",
+   "before": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.778,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 14,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 15,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 17489,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 17519,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(0)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 15,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 18697,
+     "type": "media:seeking",
+     "time": 0
+    },
+    {
+     "t": 18701,
+     "type": "media:seeked",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct media.currentTime=30 (safety net)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "events": [
+    {
+     "t": 19911,
+     "type": "media:seeking",
+     "time": 30
+    },
+    {
+     "t": 19911,
+     "type": "seek-blocked",
+     "requested": 30,
+     "allowed": 11
+    },
+    {
+     "t": 19916,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 19959,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct media.currentTime=5 (inside)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.556,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "after": {
+    "media": 5,
+    "store": 5,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 13.889,
+    "expectPct": 13.889,
+    "fillVar": "13.889%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "events": [
+    {
+     "t": 21119,
+     "type": "media:seeking",
+     "time": 5
+    },
+    {
+     "t": 21135,
+     "type": "media:seeked",
+     "time": 5
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "play",
+   "before": {
+    "media": 5,
+    "store": 5,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 13.889,
+    "expectPct": 13.889,
+    "fillVar": "13.889%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "after": {
+    "media": 6.507,
+    "store": 6.504,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 18.066,
+    "expectPct": 18.074,
+    "fillVar": "18.068%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "events": [],
+   "error": null
+  },
+  {
+   "name": "store.seek(30) while playing",
+   "before": {
+    "media": 6.509,
+    "store": 6.504,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 18.066,
+    "expectPct": 18.082,
+    "fillVar": "18.068%",
+    "counts": {
+     "setter": 16,
+     "clamped": 7,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "after": {
+    "media": 12.503,
+    "store": 12.496,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 13.461,
+    "thumbPct": 34.707,
+    "expectPct": 34.732,
+    "fillVar": "34.711%",
+    "counts": {
+     "setter": 17,
+     "clamped": 8,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "events": [
+    {
+     "t": 23840,
+     "type": "seek-blocked",
+     "requested": 30,
+     "allowed": 11
+    },
+    {
+     "t": 23841,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 23872,
+     "type": "media:seeked",
+     "time": 11.001
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct =33 while playing",
+   "before": {
+    "media": 12.506,
+    "store": 12.496,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 13.461,
+    "thumbPct": 34.707,
+    "expectPct": 34.74,
+    "fillVar": "34.711%",
+    "counts": {
+     "setter": 17,
+     "clamped": 8,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "after": {
+    "media": 14.899,
+    "store": 14.886,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 15.854,
+    "thumbPct": 41.346,
+    "expectPct": 41.387,
+    "fillVar": "41.35%",
+    "counts": {
+     "setter": 17,
+     "clamped": 8,
+     "safetyNet": 2,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "events": [
+    {
+     "t": 25378,
+     "type": "media:seeking",
+     "time": 33
+    },
+    {
+     "t": 25380,
+     "type": "media:seeking",
+     "time": 13.461
+    },
+    {
+     "t": 25443,
+     "type": "media:seeked",
+     "time": 13.462
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "pause",
+   "before": {
+    "media": 14.905,
+    "store": 14.902,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 15.854,
+    "thumbPct": 41.393,
+    "expectPct": 41.403,
+    "fillVar": "41.394%",
+    "counts": {
+     "setter": 17,
+     "clamped": 8,
+     "safetyNet": 2,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "after": {
+    "media": 14.905,
+    "store": 14.905,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15.854,
+    "thumbPct": 41.401,
+    "expectPct": 41.403,
+    "fillVar": "41.403%",
+    "counts": {
+     "setter": 17,
+     "clamped": 8,
+     "safetyNet": 2,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "events": [],
+   "error": null
+  }
+ ],
+ "registered": true,
+ "facade": {
+  "storeMediaIsReal": false,
+  "overrideNow": true
+ },
+ "seekingEvents": 22,
+ "seekedEvents": 20,
+ "errors": []
+}

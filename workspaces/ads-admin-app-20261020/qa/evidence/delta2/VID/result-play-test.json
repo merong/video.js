@@ -1,0 +1,202 @@
+{
+  "rlo": {
+    "api": [],
+    "invalid": null,
+    "describedBy": [
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+    ],
+    "links": [
+      {
+        "text": "?",
+        "href": "#/help/play-test",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "?",
+        "href": "#/help/player-preset",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "기본 video로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/player.html?video=a1%E2%80%AEqa&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": [
+          "U+202E"
+        ]
+      },
+      {
+        "text": "Video.js로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1%E2%80%AEqa&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-qrgzuc8ste",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": [
+          "U+202E"
+        ]
+      }
+    ],
+    "previewButton": {
+      "text": "미리보기 준비",
+      "disabled": true
+    },
+    "sectionText": [
+      "고정 대상 ID",
+      "사이트 기본 편성은 이 사이트 ID로 고정돼요.",
+      "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+      "고정 영상 ID",
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요.",
+      "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+    ],
+    "alerts": []
+  },
+  "ideographic-space-only": {
+    "api": [],
+    "invalid": null,
+    "describedBy": [
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+    ],
+    "links": [
+      {
+        "text": "?",
+        "href": "#/help/play-test",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "?",
+        "href": "#/help/player-preset",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      }
+    ],
+    "previewButton": {
+      "text": "미리보기 준비",
+      "disabled": true
+    },
+    "sectionText": [
+      "고정 대상 ID",
+      "사이트 기본 편성은 이 사이트 ID로 고정돼요.",
+      "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+      "고정 영상 ID",
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요.",
+      "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+    ],
+    "alerts": []
+  },
+  "c1-nel": {
+    "api": [],
+    "invalid": null,
+    "describedBy": [
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+    ],
+    "links": [
+      {
+        "text": "?",
+        "href": "#/help/play-test",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "?",
+        "href": "#/help/player-preset",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "기본 video로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/player.html?video=a1%C2%85qa&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": [
+          "U+0085"
+        ]
+      },
+      {
+        "text": "Video.js로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1%C2%85qa&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-qrgzuc8ste",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": [
+          "U+0085"
+        ]
+      }
+    ],
+    "previewButton": {
+      "text": "미리보기 준비",
+      "disabled": true
+    },
+    "sectionText": [
+      "고정 대상 ID",
+      "사이트 기본 편성은 이 사이트 ID로 고정돼요.",
+      "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+      "고정 영상 ID",
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요.",
+      "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+    ],
+    "alerts": []
+  },
+  "valid": {
+    "api": [],
+    "invalid": null,
+    "describedBy": [
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+    ],
+    "links": [
+      {
+        "text": "?",
+        "href": "#/help/play-test",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "?",
+        "href": "#/help/player-preset",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "기본 video로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-video-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      },
+      {
+        "text": "Video.js로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-video-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-qrgzuc8ste",
+        "ariaDisabled": null,
+        "hidden": false,
+        "hrefDecodedCodepoints": []
+      }
+    ],
+    "previewButton": {
+      "text": "미리보기 준비",
+      "disabled": true
+    },
+    "sectionText": [
+      "고정 대상 ID",
+      "사이트 기본 편성은 이 사이트 ID로 고정돼요.",
+      "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+      "고정 영상 ID",
+      "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요.",
+      "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+    ],
+    "alerts": []
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

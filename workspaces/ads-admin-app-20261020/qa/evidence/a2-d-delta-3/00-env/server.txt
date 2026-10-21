@@ -1,0 +1,10 @@
+2026-10-21 21:34:46
+parent pid 59338, PHP_CLI_SERVER_WORKERS=4
+children: 59341 59342 59343 59344 
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+php     59338 brian    5u  IPv4 0xb4a069ff9b17f3a1      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     59341 brian    5u  IPv4 0xb4a069ff9b17f3a1      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     59342 brian    5u  IPv4 0xb4a069ff9b17f3a1      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     59343 brian    5u  IPv4 0xb4a069ff9b17f3a1      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     59344 brian    5u  IPv4 0xb4a069ff9b17f3a1      0t0  TCP 127.0.0.1:18781 (LISTEN)
+examples/index.html 200

@@ -1,0 +1,245 @@
+{
+  "sw": 560,
+  "hits": [
+    {
+      "tag": "A",
+      "cls": "",
+      "left": 484,
+      "right": 532,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "NAV.sa-nav:auto:static",
+        "HEADER.sa-top:visible:static",
+        "DIV.aa-workspace:visible:static",
+        "DIV.aa-app:visible:static",
+        "DIV.:visible:static",
+        "BODY.:visible:static"
+      ]
+    },
+    {
+      "tag": "TABLE",
+      "cls": "sa-table",
+      "left": 17,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static",
+        "DIV.aa-split:visible:static",
+        "SECTION.aa-stack:visible:static",
+        "MAIN.sa-main:visible:static"
+      ]
+    },
+    {
+      "tag": "THEAD",
+      "cls": "",
+      "left": 17,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static",
+        "DIV.aa-split:visible:static",
+        "SECTION.aa-stack:visible:static"
+      ]
+    },
+    {
+      "tag": "TR",
+      "cls": "",
+      "left": 17,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "THEAD.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static",
+        "DIV.aa-split:visible:static"
+      ]
+    },
+    {
+      "tag": "TH",
+      "cls": "",
+      "left": 451,
+      "right": 547,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TR.:visible:static",
+        "THEAD.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static"
+      ]
+    },
+    {
+      "tag": "TH",
+      "cls": "",
+      "left": 547,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TR.:visible:static",
+        "THEAD.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "cls": "sa-sr",
+      "left": 559,
+      "right": 560,
+      "pos": "absolute",
+      "ovx": "hidden",
+      "chain": [
+        "TH.:visible:static",
+        "TR.:visible:static",
+        "THEAD.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static"
+      ]
+    },
+    {
+      "tag": "TBODY",
+      "cls": "",
+      "left": 17,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static",
+        "DIV.aa-split:visible:static",
+        "SECTION.aa-stack:visible:static"
+      ]
+    },
+    {
+      "tag": "TR",
+      "cls": "",
+      "left": 17,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static",
+        "DIV.aa-split:visible:static"
+      ]
+    },
+    {
+      "tag": "TD",
+      "cls": "",
+      "left": 451,
+      "right": 547,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TR.:visible:static",
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static"
+      ]
+    },
+    {
+      "tag": "SPAN",
+      "cls": "sa-badge",
+      "left": 463,
+      "right": 535,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TD.:visible:static",
+        "TR.:visible:static",
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static"
+      ]
+    },
+    {
+      "tag": "TD",
+      "cls": "",
+      "left": 547,
+      "right": 684,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TR.:visible:static",
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static",
+        "DIV.aa-stack:visible:static"
+      ]
+    },
+    {
+      "tag": "DIV",
+      "cls": "sa-row",
+      "left": 559,
+      "right": 672,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "TD.:visible:static",
+        "TR.:visible:static",
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static",
+        "DIV.sa-card:hidden:static"
+      ]
+    },
+    {
+      "tag": "BUTTON",
+      "cls": "sa-btn is-sm",
+      "left": 559,
+      "right": 629,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "DIV.sa-row:visible:static",
+        "TD.:visible:static",
+        "TR.:visible:static",
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static"
+      ]
+    },
+    {
+      "tag": "BUTTON",
+      "cls": "sa-btn is-sm",
+      "left": 559,
+      "right": 672,
+      "pos": "static",
+      "ovx": "visible",
+      "chain": [
+        "DIV.sa-row:visible:static",
+        "TD.:visible:static",
+        "TR.:visible:static",
+        "TBODY.:visible:static",
+        "TABLE.sa-table:visible:static",
+        "DIV.sa-scroll:auto:static"
+      ]
+    }
+  ]
+}

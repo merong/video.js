@@ -1,0 +1,96 @@
+{
+  "clicks": [
+    {
+      "n": 1,
+      "via": "click",
+      "focus": "code region (pre)",
+      "preDescribedBy": [
+        "복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      ],
+      "selectionLength": 857,
+      "codeLength": 857,
+      "status": {
+        "role": "status",
+        "live": "polite",
+        "text": "복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      },
+      "added": [
+        "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      ],
+      "clipboardCalls": 1
+    },
+    {
+      "n": 2,
+      "via": "click",
+      "focus": "code region (pre)",
+      "preDescribedBy": [
+        "복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      ],
+      "selectionLength": 857,
+      "codeLength": 857,
+      "status": {
+        "role": "status",
+        "live": "polite",
+        "text": "복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      },
+      "added": [
+        "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.",
+        "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      ],
+      "clipboardCalls": 2
+    },
+    {
+      "n": 3,
+      "via": "keyboard Enter",
+      "focus": "code region (pre)",
+      "preDescribedBy": [
+        "복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      ],
+      "selectionLength": 857,
+      "codeLength": 857,
+      "status": {
+        "role": "status",
+        "live": "polite",
+        "text": "복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      },
+      "added": [
+        "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.",
+        "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.",
+        "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+      ],
+      "clipboardCalls": 3
+    }
+  ],
+  "copyButtonName": "설치 코드 복사",
+  "afterCodeChange": {
+    "focus": "INPUT ",
+    "preDescribedBy": [],
+    "selectionLength": 0,
+    "codeLength": 857,
+    "status": {
+      "role": "status",
+      "live": "polite",
+      "text": ""
+    },
+    "added": [
+      "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.",
+      "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요.",
+      "SPAN:복사하지 못했어요. 코드를 직접 선택해 복사해 주세요."
+    ],
+    "clipboardCalls": 3
+  },
+  "repeatAnnounced": true,
+  "api": [
+    "GET bootstrap 200",
+    "POST login 200",
+    "GET bootstrap 200",
+    "GET creatives 200",
+    "GET player-presets 200"
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+87273
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+php     87273 brian    5u  IPv4 0xc0367c9b2c66c85b      0t0  TCP 127.0.0.1:18781 (LISTEN)

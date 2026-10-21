@@ -1,0 +1,15 @@
+- form "편집할 대상":
+  - heading "편집할 대상" [level=2]
+  - text: 적용 단위
+  - combobox "적용 단위":
+    - option "사이트 기본"
+    - option "게시판" [selected]
+    - option "분류"
+    - option "개별 영상"
+  - link "적용 단위 도움말":
+    - /url: "#/help/target-scope"
+    - text: "?"
+  - text: 고정 대상 ID
+  - textbox "고정 대상 ID"
+  - status
+  - button "편성 불러오기"

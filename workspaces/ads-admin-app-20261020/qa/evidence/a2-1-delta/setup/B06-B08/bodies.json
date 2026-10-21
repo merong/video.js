@@ -1,0 +1,1021 @@
+[
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "disabled",
+          "revision": 0,
+          "breaks": []
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-save",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 1,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 1,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 1,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 1,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-save",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 2,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee-a",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-save",
+    "method": "POST",
+    "status": 409,
+    "body": {
+      "ok": false,
+      "error": {
+        "code": "revision_conflict",
+        "message": "다른 변경이 저장되었습니다. 다시 불러와 주세요."
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 2,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee-a",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 2,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee-a",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": null,
+        "resolvedFrom": null
+      }
+    }
+  },
+  {
+    "action": "schedule-publish",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "site",
+            "id": "site-local"
+          },
+          "mode": "replace",
+          "revision": 2,
+          "breaks": [
+            {
+              "breakId": "break-9f58fd9a-bc07-44a0-8d05-2787a8e3e358",
+              "position": "pre",
+              "ads": [
+                {
+                  "itemId": "item-5e7ba22b-dbac-48e6-bb98-6fe23a87f675",
+                  "adId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeId": "creative-8882f62ab32e3e3816606aaa1c14da32",
+                  "creativeVersion": 2,
+                  "kind": "video",
+                  "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": "https://example.com/qa-coffee-a",
+                  "skipAfterSeconds": null
+                },
+                {
+                  "itemId": "item-791d437b-6ed3-4c07-b925-cca67c9437ca",
+                  "adId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeId": "creative-17db6fd5df99421260f6c2cf1aeacde2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/fe6bd432b7350017dbfd2c4a3d940a2e.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-ace1babe-694c-4b98-b40c-8e91a6e483ac",
+              "position": "mid",
+              "atSeconds": 5,
+              "ads": [
+                {
+                  "itemId": "item-402b4a25-2ec4-43ea-bbc3-013f87a87a98",
+                  "adId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeId": "creative-1ef2440400cdf5e047e6a324a02a8ef2",
+                  "creativeVersion": 1,
+                  "kind": "video",
+                  "url": "/media/a9dfd75d48b7f3e376ea5640d05d1e51.mp4",
+                  "mime": "video/mp4",
+                  "alt": "",
+                  "clickUrl": null,
+                  "skipAfterSeconds": 3
+                }
+              ]
+            },
+            {
+              "breakId": "break-b0430be0-fbbb-495b-9993-cd60884ff778",
+              "position": "post",
+              "ads": [
+                {
+                  "itemId": "item-71dc84ca-9033-4ca6-85d9-44216fb7dcec",
+                  "adId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeId": "creative-16b740d8ebe10878ef97b3999198fcc6",
+                  "creativeVersion": 1,
+                  "kind": "image",
+                  "url": "/demo-media/ad.png",
+                  "mime": "image/png",
+                  "alt": "QA 포스트롤 이미지 광고",
+                  "clickUrl": null,
+                  "skipAfterSeconds": null,
+                  "displaySeconds": 3
+                }
+              ]
+            }
+          ]
+        },
+        "publishedVersion": 1,
+        "resolvedFrom": {
+          "type": "site",
+          "id": "site-local"
+        }
+      }
+    }
+  },
+  {
+    "action": "video-context-save",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "saved": true
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "video",
+            "id": "a1-qa-video-1"
+          },
+          "mode": "inherit",
+          "revision": 0,
+          "breaks": []
+        },
+        "publishedVersion": null,
+        "resolvedFrom": {
+          "type": "site",
+          "id": "site-local"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "board",
+            "id": "notice"
+          },
+          "mode": "inherit",
+          "revision": 0,
+          "breaks": []
+        },
+        "publishedVersion": null,
+        "resolvedFrom": {
+          "type": "site",
+          "id": "site-local"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-save",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "board",
+            "id": "notice"
+          },
+          "mode": "disabled",
+          "revision": 1,
+          "breaks": []
+        },
+        "publishedVersion": null,
+        "resolvedFrom": {
+          "type": "site",
+          "id": "site-local"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-publish",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "scheduleId": "schedule-33ab9e3c8c101157c4a176efdcd7efa0d4849a29591edd3dca377c3baf79091f",
+        "scheduleVersion": 1
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "board",
+            "id": "notice"
+          },
+          "mode": "disabled",
+          "revision": 1,
+          "breaks": []
+        },
+        "publishedVersion": 1,
+        "resolvedFrom": {
+          "type": "board",
+          "id": "notice"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "video",
+            "id": "a1-qa-video-1"
+          },
+          "mode": "inherit",
+          "revision": 0,
+          "breaks": []
+        },
+        "publishedVersion": null,
+        "resolvedFrom": {
+          "type": "board",
+          "id": "notice"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "board",
+            "id": "notice"
+          },
+          "mode": "disabled",
+          "revision": 1,
+          "breaks": []
+        },
+        "publishedVersion": 1,
+        "resolvedFrom": {
+          "type": "board",
+          "id": "notice"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-save",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "board",
+            "id": "notice"
+          },
+          "mode": "inherit",
+          "revision": 2,
+          "breaks": []
+        },
+        "publishedVersion": 1,
+        "resolvedFrom": {
+          "type": "board",
+          "id": "notice"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-publish",
+    "method": "POST",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "scheduleId": "schedule-33ab9e3c8c101157c4a176efdcd7efa0d4849a29591edd3dca377c3baf79091f",
+        "scheduleVersion": 2
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "board",
+            "id": "notice"
+          },
+          "mode": "inherit",
+          "revision": 2,
+          "breaks": []
+        },
+        "publishedVersion": 2,
+        "resolvedFrom": {
+          "type": "site",
+          "id": "site-local"
+        }
+      }
+    }
+  },
+  {
+    "action": "schedule-draft",
+    "method": "GET",
+    "status": 200,
+    "body": {
+      "ok": true,
+      "data": {
+        "draft": {
+          "target": {
+            "type": "video",
+            "id": "a1-qa-video-1"
+          },
+          "mode": "inherit",
+          "revision": 0,
+          "breaks": []
+        },
+        "publishedVersion": null,
+        "resolvedFrom": {
+          "type": "site",
+          "id": "site-local"
+        }
+      }
+    }
+  }
+]

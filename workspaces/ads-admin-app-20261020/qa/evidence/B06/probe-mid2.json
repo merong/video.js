@@ -1,0 +1,44 @@
+{
+  "afterTypePos": {
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5"
+    },
+    "pos": "5"
+  },
+  "afterAddClick": {
+    "tag": "INPUT",
+    "label": "본편 재생 위치 (초)",
+    "value": "5"
+  },
+  "afterAddClick500": {
+    "tag": "INPUT",
+    "label": "본편 재생 위치 (초)",
+    "value": "5"
+  },
+  "afterSelect": {
+    "tag": "INPUT",
+    "label": "본편 재생 위치 (초)",
+    "value": "5"
+  },
+  "afterWaitClick": {
+    "tag": "INPUT",
+    "label": "본편 재생 위치 (초)",
+    "value": "5"
+  },
+  "afterWaitClick300": {
+    "tag": "INPUT",
+    "label": "본편 재생 위치 (초)",
+    "value": "5"
+  },
+  "afterTypeWait": {
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "3"
+    },
+    "pos": "3",
+    "wait": "1"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "case": "filter hides target → same link",
+      "filter": "광고가 나오는 자리5",
+      "before": {
+        "hash": "#/help/creative",
+        "focus": "BUTTON",
+        "headingFocused": false,
+        "headingInView": false,
+        "pressed": [
+          "광고가 나오는 자리5"
+        ],
+        "visibleTerms": 5,
+        "targetVisible": false
+      },
+      "after": {
+        "hash": "#/help/creative",
+        "focus": "sa-help-creative",
+        "headingFocused": true,
+        "headingInView": true,
+        "pressed": [
+          "전체49"
+        ],
+        "visibleTerms": 49,
+        "targetVisible": true
+      }
+    },
+    {
+      "case": "filter shows target → same link",
+      "filter": "소재6",
+      "before": {
+        "hash": "#/help/creative",
+        "focus": "A",
+        "headingFocused": false,
+        "headingInView": true,
+        "pressed": [
+          "소재6"
+        ],
+        "visibleTerms": 6,
+        "targetVisible": true
+      },
+      "after": {
+        "hash": "#/help/creative",
+        "focus": "sa-help-creative",
+        "headingFocused": true,
+        "headingInView": true,
+        "pressed": [
+          "소재6"
+        ],
+        "visibleTerms": 6,
+        "targetVisible": true
+      }
+    },
+    {
+      "case": "no filter → same link",
+      "before": {
+        "hash": "#/help/creative",
+        "focus": "A",
+        "headingFocused": false,
+        "headingInView": false,
+        "pressed": [
+          "전체49"
+        ],
+        "visibleTerms": 49,
+        "targetVisible": true
+      },
+      "after": {
+        "hash": "#/help/creative",
+        "focus": "sa-help-creative",
+        "headingFocused": true,
+        "headingInView": true,
+        "pressed": [
+          "전체49"
+        ],
+        "visibleTerms": 49,
+        "targetVisible": true
+      }
+    }
+  ],
+  "termId": "creative",
+  "opened": {
+    "hash": "#/help/creative",
+    "focus": "sa-help-creative",
+    "headingFocused": true,
+    "headingInView": true,
+    "pressed": [
+      "전체49"
+    ],
+    "visibleTerms": 49,
+    "targetVisible": true
+  },
+  "chips": [
+    "전체49",
+    "광고가 나오는 자리5",
+    "소재6",
+    "스킵2",
+    "편성 대상과 상속6",
+    "초안과 게시5",
+    "미리보기와 재생 테스트2",
+    "플레이어11",
+    "통계5",
+    "캠페인과 승인7"
+  ],
+  "pass": true,
+  "api": [
+    "GET bootstrap 200",
+    "POST login 200",
+    "GET bootstrap 200",
+    "GET creatives 200"
+  ]
+}

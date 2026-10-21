@@ -1,0 +1,1886 @@
+{
+  "390": {
+    "wheelAfterPick": {
+      "언어": {
+        "afterPick": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "scrollY": 1878,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1387,
+              "bottom": -1113,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -1097,
+              "bottom": -269,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -253,
+              "bottom": 405,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 421,
+              "bottom": 649,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 665,
+              "bottom": 1447,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "scrollY": 1528,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1037,
+              "bottom": -763,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -747,
+              "bottom": 81,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 97,
+              "bottom": 755,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 771,
+              "bottom": 999,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 1015,
+              "bottom": 1797,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        },
+        "notch1Later": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "scrollY": 1528,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1037,
+              "bottom": -763,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -747,
+              "bottom": 81,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 97,
+              "bottom": 755,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 771,
+              "bottom": 999,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 1015,
+              "bottom": 1797,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        },
+        "notch2": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 1178,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -687,
+              "bottom": -413,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -397,
+              "bottom": 431,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 447,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 1121,
+              "bottom": 1349,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "광고 화면",
+              "top": 1365,
+              "bottom": 2147,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        }
+      },
+      "광고 화면": {
+        "afterPick": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 2122,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작",
+            "언어"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1631,
+              "bottom": -1357,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -1341,
+              "bottom": -513,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -497,
+              "bottom": 161,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 177,
+              "bottom": 405,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 421,
+              "bottom": 1203,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1772,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1281,
+              "bottom": -1007,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -991,
+              "bottom": -163,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -147,
+              "bottom": 511,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 527,
+              "bottom": 755,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 771,
+              "bottom": 1553,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1Later": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1772,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1281,
+              "bottom": -1007,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -991,
+              "bottom": -163,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -147,
+              "bottom": 511,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 527,
+              "bottom": 755,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 771,
+              "bottom": 1553,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch2": {
+          "current": "테마",
+          "focus": "H2 광고 화면",
+          "scrollY": 1422,
+          "maxScroll": 2579,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -931,
+              "bottom": -657,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -641,
+              "bottom": 187,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 203,
+              "bottom": 861,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 877,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 1121,
+              "bottom": 1903,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        }
+      }
+    },
+    "repick": {
+      "before": {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "scrollY": 0,
+        "maxScroll": 2579,
+        "zone": [
+          135,
+          360
+        ],
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "sections": [
+          {
+            "label": "기본",
+            "top": 491,
+            "bottom": 765,
+            "inZone": false,
+            "onScreen": true
+          },
+          {
+            "label": "테마",
+            "top": 781,
+            "bottom": 1609,
+            "inZone": false,
+            "onScreen": true
+          },
+          {
+            "label": "재생 동작",
+            "top": 1625,
+            "bottom": 2283,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "언어",
+            "top": 2299,
+            "bottom": 2527,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "광고 화면",
+            "top": 2543,
+            "bottom": 3325,
+            "inZone": false,
+            "onScreen": false
+          }
+        ]
+      },
+      "after": {
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "scrollY": 2122,
+        "maxScroll": 2579,
+        "zone": [
+          135,
+          360
+        ],
+        "inZone": [
+          "재생 동작",
+          "언어"
+        ],
+        "onScreen": [
+          "재생 동작",
+          "언어",
+          "광고 화면"
+        ],
+        "sections": [
+          {
+            "label": "기본",
+            "top": -1631,
+            "bottom": -1357,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "테마",
+            "top": -1341,
+            "bottom": -513,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "재생 동작",
+            "top": -497,
+            "bottom": 161,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "언어",
+            "top": 177,
+            "bottom": 405,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "광고 화면",
+            "top": 421,
+            "bottom": 1203,
+            "inZone": false,
+            "onScreen": true
+          }
+        ]
+      }
+    },
+    "keys": [
+      {
+        "key": "PageUp",
+        "current": "테마",
+        "scrollY": 1262,
+        "inZone": [
+          "테마"
+        ],
+        "onScreen": [
+          "테마",
+          "재생 동작"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "scrollY": 402,
+        "inZone": [
+          "기본"
+        ],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "Home",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "End",
+        "current": "광고 화면",
+        "scrollY": 2579,
+        "inZone": [
+          "광고 화면"
+        ],
+        "onScreen": [
+          "광고 화면"
+        ],
+        "focus": "H2 광고 화면"
+      }
+    ],
+    "kind": "select",
+    "console": []
+  },
+  "768": {
+    "wheelAfterPick": {
+      "언어": {
+        "afterPick": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "scrollY": 1285,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -863,
+              "bottom": -687,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -671,
+              "bottom": -193,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -177,
+              "bottom": 405,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 421,
+              "bottom": 631,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 647,
+              "bottom": 1047,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 935,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -513,
+              "bottom": -337,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -321,
+              "bottom": 157,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 173,
+              "bottom": 755,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 771,
+              "bottom": 981,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 997,
+              "bottom": 1397,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        },
+        "notch1Later": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 935,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -513,
+              "bottom": -337,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -321,
+              "bottom": 157,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 173,
+              "bottom": 755,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 771,
+              "bottom": 981,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 997,
+              "bottom": 1397,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        },
+        "notch2": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 585,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마"
+          ],
+          "onScreen": [
+            "기본",
+            "테마",
+            "재생 동작"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -163,
+              "bottom": 13,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "테마",
+              "top": 29,
+              "bottom": 507,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 523,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 1121,
+              "bottom": 1331,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "광고 화면",
+              "top": 1347,
+              "bottom": 1747,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        }
+      },
+      "광고 화면": {
+        "afterPick": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1511,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작",
+            "언어"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1089,
+              "bottom": -913,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -897,
+              "bottom": -419,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -403,
+              "bottom": 179,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 195,
+              "bottom": 405,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 421,
+              "bottom": 821,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1161,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -739,
+              "bottom": -563,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -547,
+              "bottom": -69,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -53,
+              "bottom": 529,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 545,
+              "bottom": 755,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 771,
+              "bottom": 1171,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1Later": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1161,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -739,
+              "bottom": -563,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -547,
+              "bottom": -69,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -53,
+              "bottom": 529,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 545,
+              "bottom": 755,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 771,
+              "bottom": 1171,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch2": {
+          "current": "테마",
+          "focus": "H2 광고 화면",
+          "scrollY": 811,
+          "maxScroll": 1538,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -389,
+              "bottom": -213,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -197,
+              "bottom": 281,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 297,
+              "bottom": 879,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 895,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 1121,
+              "bottom": 1521,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        }
+      }
+    },
+    "repick": {
+      "before": {
+        "current": "테마",
+        "focus": "H2 광고 화면",
+        "scrollY": 0,
+        "maxScroll": 1538,
+        "zone": [
+          135,
+          360
+        ],
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "sections": [
+          {
+            "label": "기본",
+            "top": 422,
+            "bottom": 598,
+            "inZone": false,
+            "onScreen": true
+          },
+          {
+            "label": "테마",
+            "top": 614,
+            "bottom": 1092,
+            "inZone": false,
+            "onScreen": true
+          },
+          {
+            "label": "재생 동작",
+            "top": 1108,
+            "bottom": 1690,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "언어",
+            "top": 1706,
+            "bottom": 1916,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "광고 화면",
+            "top": 1932,
+            "bottom": 2332,
+            "inZone": false,
+            "onScreen": false
+          }
+        ]
+      },
+      "after": {
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "scrollY": 1511,
+        "maxScroll": 1538,
+        "zone": [
+          135,
+          360
+        ],
+        "inZone": [
+          "재생 동작",
+          "언어"
+        ],
+        "onScreen": [
+          "재생 동작",
+          "언어",
+          "광고 화면"
+        ],
+        "sections": [
+          {
+            "label": "기본",
+            "top": -1089,
+            "bottom": -913,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "테마",
+            "top": -897,
+            "bottom": -419,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "재생 동작",
+            "top": -403,
+            "bottom": 179,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "언어",
+            "top": 195,
+            "bottom": 405,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "광고 화면",
+            "top": 421,
+            "bottom": 821,
+            "inZone": false,
+            "onScreen": true
+          }
+        ]
+      }
+    },
+    "keys": [
+      {
+        "key": "PageUp",
+        "current": "테마",
+        "scrollY": 651,
+        "inZone": [
+          "테마"
+        ],
+        "onScreen": [
+          "테마",
+          "재생 동작"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "Home",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "End",
+        "current": "언어",
+        "scrollY": 1538,
+        "inZone": [
+          "재생 동작",
+          "언어"
+        ],
+        "onScreen": [
+          "재생 동작",
+          "언어",
+          "광고 화면"
+        ],
+        "focus": "H2 광고 화면"
+      }
+    ],
+    "kind": "links",
+    "console": []
+  },
+  "1280": {
+    "wheelAfterPick": {
+      "언어": {
+        "afterPick": {
+          "current": "언어",
+          "focus": "H2 언어",
+          "scrollY": 1141,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -905,
+              "bottom": -711,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -695,
+              "bottom": -193,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -177,
+              "bottom": 405,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 421,
+              "bottom": 631,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 647,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 791,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -555,
+              "bottom": -361,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -345,
+              "bottom": 157,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 173,
+              "bottom": 755,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 771,
+              "bottom": 981,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 997,
+              "bottom": 1455,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        },
+        "notch1Later": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 791,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -555,
+              "bottom": -361,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -345,
+              "bottom": 157,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 173,
+              "bottom": 755,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 771,
+              "bottom": 981,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 997,
+              "bottom": 1455,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        },
+        "notch2": {
+          "current": "테마",
+          "focus": "H2 언어",
+          "scrollY": 441,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -205,
+              "bottom": -11,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": 5,
+              "bottom": 507,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 523,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 1121,
+              "bottom": 1331,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "광고 화면",
+              "top": 1347,
+              "bottom": 1805,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        }
+      },
+      "광고 화면": {
+        "afterPick": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1367,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작",
+            "언어"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -1131,
+              "bottom": -937,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -921,
+              "bottom": -419,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -403,
+              "bottom": 179,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 195,
+              "bottom": 405,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 421,
+              "bottom": 879,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1017,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -781,
+              "bottom": -587,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -571,
+              "bottom": -69,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -53,
+              "bottom": 529,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 545,
+              "bottom": 755,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 771,
+              "bottom": 1229,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch1Later": {
+          "current": "광고 화면",
+          "focus": "H2 광고 화면",
+          "scrollY": 1017,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "재생 동작"
+          ],
+          "onScreen": [
+            "재생 동작",
+            "언어",
+            "광고 화면"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -781,
+              "bottom": -587,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -571,
+              "bottom": -69,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "재생 동작",
+              "top": -53,
+              "bottom": 529,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 545,
+              "bottom": 755,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 771,
+              "bottom": 1229,
+              "inZone": false,
+              "onScreen": true
+            }
+          ]
+        },
+        "notch2": {
+          "current": "테마",
+          "focus": "H2 광고 화면",
+          "scrollY": 667,
+          "maxScroll": 1490,
+          "zone": [
+            135,
+            360
+          ],
+          "inZone": [
+            "테마",
+            "재생 동작"
+          ],
+          "onScreen": [
+            "테마",
+            "재생 동작",
+            "언어"
+          ],
+          "sections": [
+            {
+              "label": "기본",
+              "top": -431,
+              "bottom": -237,
+              "inZone": false,
+              "onScreen": false
+            },
+            {
+              "label": "테마",
+              "top": -221,
+              "bottom": 281,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "재생 동작",
+              "top": 297,
+              "bottom": 879,
+              "inZone": true,
+              "onScreen": true
+            },
+            {
+              "label": "언어",
+              "top": 895,
+              "bottom": 1105,
+              "inZone": false,
+              "onScreen": true
+            },
+            {
+              "label": "광고 화면",
+              "top": 1121,
+              "bottom": 1579,
+              "inZone": false,
+              "onScreen": false
+            }
+          ]
+        }
+      }
+    },
+    "repick": {
+      "before": {
+        "current": "기본",
+        "focus": "H2 광고 화면",
+        "scrollY": 0,
+        "maxScroll": 1490,
+        "zone": [
+          135,
+          360
+        ],
+        "inZone": [
+          "기본"
+        ],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "sections": [
+          {
+            "label": "기본",
+            "top": 236,
+            "bottom": 430,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "테마",
+            "top": 446,
+            "bottom": 948,
+            "inZone": false,
+            "onScreen": true
+          },
+          {
+            "label": "재생 동작",
+            "top": 964,
+            "bottom": 1546,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "언어",
+            "top": 1562,
+            "bottom": 1772,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "광고 화면",
+            "top": 1788,
+            "bottom": 2246,
+            "inZone": false,
+            "onScreen": false
+          }
+        ]
+      },
+      "after": {
+        "current": "광고 화면",
+        "focus": "H2 광고 화면",
+        "scrollY": 1367,
+        "maxScroll": 1490,
+        "zone": [
+          135,
+          360
+        ],
+        "inZone": [
+          "재생 동작",
+          "언어"
+        ],
+        "onScreen": [
+          "재생 동작",
+          "언어",
+          "광고 화면"
+        ],
+        "sections": [
+          {
+            "label": "기본",
+            "top": -1131,
+            "bottom": -937,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "테마",
+            "top": -921,
+            "bottom": -419,
+            "inZone": false,
+            "onScreen": false
+          },
+          {
+            "label": "재생 동작",
+            "top": -403,
+            "bottom": 179,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "언어",
+            "top": 195,
+            "bottom": 405,
+            "inZone": true,
+            "onScreen": true
+          },
+          {
+            "label": "광고 화면",
+            "top": 421,
+            "bottom": 879,
+            "inZone": false,
+            "onScreen": true
+          }
+        ]
+      }
+    },
+    "keys": [
+      {
+        "key": "PageUp",
+        "current": "테마",
+        "scrollY": 507,
+        "inZone": [
+          "테마"
+        ],
+        "onScreen": [
+          "테마",
+          "재생 동작"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [
+          "기본"
+        ],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "PageUp",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [
+          "기본"
+        ],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "Home",
+        "current": "기본",
+        "scrollY": 0,
+        "inZone": [
+          "기본"
+        ],
+        "onScreen": [
+          "기본",
+          "테마"
+        ],
+        "focus": "H2 광고 화면"
+      },
+      {
+        "key": "End",
+        "current": "광고 화면",
+        "scrollY": 1490,
+        "inZone": [
+          "언어",
+          "광고 화면"
+        ],
+        "onScreen": [
+          "재생 동작",
+          "언어",
+          "광고 화면"
+        ],
+        "focus": "H2 광고 화면"
+      }
+    ],
+    "kind": "links",
+    "console": []
+  }
+}

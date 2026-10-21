@@ -1,0 +1,1161 @@
+{
+ "scenario": "rate",
+ "engine": "chromium",
+ "startedAt": "2026-10-21T17:15:21.066Z",
+ "steps": [
+  {
+   "name": "key > #1",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1311,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key > #2",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1561,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key > #3",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 1,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1817,
+     "type": "media:ratechange",
+     "time": 0
+    },
+    {
+     "t": 1817,
+     "type": "rate-reverted",
+     "from": 1.7,
+     "to": 1.5
+    },
+    {
+     "t": 1817,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key > #4",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 1,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 2,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2073,
+     "type": "media:ratechange",
+     "time": 0
+    },
+    {
+     "t": 2073,
+     "type": "rate-reverted",
+     "from": 1.7,
+     "to": 1.5
+    },
+    {
+     "t": 2073,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key > #5",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 2,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2331,
+     "type": "media:ratechange",
+     "time": 0
+    },
+    {
+     "t": 2331,
+     "type": "rate-reverted",
+     "from": 1.7,
+     "to": 1.5
+    },
+    {
+     "t": 2331,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #1",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2599,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #2",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2857,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #3",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.7,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 3118,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #4",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.7,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 3374,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #5",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 3631,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #6",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 3,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 3888,
+     "type": "media:ratechange",
+     "time": 0
+    },
+    {
+     "t": 3888,
+     "type": "rate-reverted",
+     "from": 2,
+     "to": 1.5
+    },
+    {
+     "t": 3890,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #7",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 4146,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #8",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.2,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 4403,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key < #9",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.7,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 4659,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "set rate 1",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 0.7,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 4916,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct playbackRate=2",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 4,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 5,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 5170,
+     "type": "media:ratechange",
+     "time": 0
+    },
+    {
+     "t": 5170,
+     "type": "rate-reverted",
+     "from": 2,
+     "to": 1.5
+    },
+    {
+     "t": 5171,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.setPlaybackRate(1.7)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 5,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 5575,
+     "type": "media:ratechange",
+     "time": 0
+    },
+    {
+     "t": 5575,
+     "type": "rate-reverted",
+     "from": 1.7,
+     "to": 1.5
+    },
+    {
+     "t": 5575,
+     "type": "media:ratechange",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key ArrowLeft (still seeks)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 6199,
+     "type": "media:seeking",
+     "time": 0
+    },
+    {
+     "t": 6199,
+     "type": "media:seeked",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key k (toggle play)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0.907,
+    "store": 0.901,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1.5,
+    "allowed": 1.782,
+    "thumbPct": 2.504,
+    "expectPct": 2.519,
+    "fillVar": "2.504%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "events": [],
+   "error": null
+  },
+  {
+   "name": "key b (bookmark)",
+   "before": {
+    "media": 0.91,
+    "store": 0.91,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1.782,
+    "thumbPct": 2.504,
+    "expectPct": 2.527,
+    "fillVar": "2.504%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0.91,
+    "store": 0.91,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1.782,
+    "thumbPct": 2.525,
+    "expectPct": 2.527,
+    "fillVar": "2.527%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 7408,
+     "type": "bookmark",
+     "time": 0.91
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key > in input (ignored)",
+   "before": {
+    "media": 0.91,
+    "store": 0.91,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1.782,
+    "thumbPct": 2.525,
+    "expectPct": 2.527,
+    "fillVar": "2.527%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0.91,
+    "store": 0.91,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1.5,
+    "allowed": 1.782,
+    "thumbPct": 2.525,
+    "expectPct": 2.527,
+    "fillVar": "2.527%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 6,
+     "blockedNotes": 0
+    }
+   },
+   "events": [],
+   "error": null
+  }
+ ],
+ "query": "maxRate=1.5&rateKeys=on",
+ "items": [
+  {
+   "rate": null,
+   "value": null,
+   "display": "flex",
+   "label": "자동"
+  },
+  {
+   "rate": "0.2",
+   "value": null,
+   "display": "flex",
+   "label": "0.2×"
+  },
+  {
+   "rate": "0.5",
+   "value": null,
+   "display": "flex",
+   "label": "0.5×"
+  },
+  {
+   "rate": "0.7",
+   "value": null,
+   "display": "flex",
+   "label": "0.7×"
+  },
+  {
+   "rate": "1",
+   "value": null,
+   "display": "flex",
+   "label": "1×"
+  },
+  {
+   "rate": "1.2",
+   "value": null,
+   "display": "flex",
+   "label": "1.2×"
+  },
+  {
+   "rate": "1.5",
+   "value": null,
+   "display": "flex",
+   "label": "1.5×"
+  },
+  {
+   "rate": "1.7",
+   "value": null,
+   "display": "none",
+   "label": "1.7×"
+  },
+  {
+   "rate": "2",
+   "value": null,
+   "display": "none",
+   "label": "2×"
+  },
+  {
+   "rate": null,
+   "value": null,
+   "display": "flex",
+   "label": "끄기"
+  }
+ ],
+ "mToggledMute": true,
+ "inputValue": ">",
+ "errors": []
+}

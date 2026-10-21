@@ -1,0 +1,490 @@
+{
+  "storedAtStart": {
+    "row": "1028||18|p-qrgzuc8ste|2",
+    "sha": "152c566c1faaad07"
+  },
+  "list": {
+    "revision": 18,
+    "defaultPresetId": "p-qrgzuc8ste",
+    "migratedNeutral": [
+      "p-qrgzuc8ste"
+    ],
+    "saved": [
+      {
+        "id": "p-qrgzuc8ste",
+        "name": "QA Video.js 중립 v2",
+        "playerType": "videojs",
+        "language": "en",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "playback": {
+          "autoplay": null,
+          "muted": null,
+          "loop": null,
+          "preload": null
+        },
+        "display": {
+          "poster": null,
+          "title": null
+        },
+        "input": {
+          "hotkeys": null,
+          "gestures": null
+        },
+        "controls": {
+          "captions": null,
+          "quality": null,
+          "audioTrack": null,
+          "playbackRate": null,
+          "pip": null,
+          "fullscreen": null,
+          "thumbnails": null,
+          "seekButtons": null
+        },
+        "logo": {
+          "assetId": null,
+          "position": null,
+          "margin": null,
+          "width": null,
+          "opacity": null,
+          "href": null,
+          "alt": null,
+          "hideDuringAds": null,
+          "hideWithControls": null
+        },
+        "ads": {
+          "labels": {
+            "advertisement": null,
+            "sequence": null,
+            "playPause": null,
+            "mute": null,
+            "volume": null,
+            "advertiser": null,
+            "newWindow": null,
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null,
+            "loading": null,
+            "paused": null,
+            "blocked": null,
+            "enterFullscreen": null,
+            "exitFullscreen": null,
+            "fullscreenError": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "progress": {
+            "sequence": null,
+            "timer": null,
+            "bar": null
+          },
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T18:20:29Z",
+        "updatedAt": "2026-10-20T18:29:23Z",
+        "builtIn": false
+      },
+      {
+        "id": "p-6aiokv34yw",
+        "name": "QA 기본 video",
+        "playerType": "native",
+        "language": "ko",
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": null,
+          "borderRadius": null,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "playback": {
+          "autoplay": null,
+          "muted": null,
+          "loop": null,
+          "preload": null
+        },
+        "display": {
+          "poster": null,
+          "title": null
+        },
+        "input": {
+          "hotkeys": null,
+          "gestures": null
+        },
+        "controls": {
+          "captions": null,
+          "quality": null,
+          "audioTrack": null,
+          "playbackRate": null,
+          "pip": null,
+          "fullscreen": null,
+          "thumbnails": null,
+          "seekButtons": null
+        },
+        "logo": {
+          "assetId": null,
+          "position": null,
+          "margin": null,
+          "width": null,
+          "opacity": null,
+          "href": null,
+          "alt": null,
+          "hideDuringAds": null,
+          "hideWithControls": null
+        },
+        "ads": {
+          "labels": {
+            "advertisement": null,
+            "sequence": null,
+            "playPause": null,
+            "mute": null,
+            "volume": null,
+            "advertiser": null,
+            "newWindow": null,
+            "skip": null,
+            "skipCountdown": null,
+            "timer": null,
+            "loading": null,
+            "paused": null,
+            "blocked": null,
+            "enterFullscreen": null,
+            "exitFullscreen": null,
+            "fullscreenError": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": null,
+          "progress": {
+            "sequence": null,
+            "timer": null,
+            "bar": null
+          },
+          "timeouts": {
+            "loadSeconds": 8,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T18:22:36Z",
+        "updatedAt": "2026-10-20T18:22:36Z",
+        "builtIn": false
+      }
+    ]
+  },
+  "listScreen": {
+    "notice": [
+      "모양이 조금 달라질 수 있어요 · 스킨 선택이 없어져서, 중립 스킨을 쓰던 프리셋 1개(QA Video.js 중립 v2)를 기본 스킨으로 옮겼어요. 비슷한 모양이 되도록 모서리 12px를 넣었어요. 재생 테스트로 한 번 확인해 주세요. ?",
+      "QA Video.js 중립 v2",
+      "중립 스킨에서 옮김"
+    ],
+    "neutralRow": "QA Video.js 중립 v2 중립 스킨에서 옮김 p-qrgzuc8ste Video.js 플레이어 영어 사이트 적용 2026. 10. 21. 오전 3:29 수정 복제 삭제 사이트에 적용 이미 사이트에 적용된 프리셋이에요.",
+    "nativeRow": "QA 기본 video p-6aiokv34yw 기본 video 한국어 — 2026. 10. 21. 오전 3:22 수정 복제 삭제 사이트에 적용"
+  },
+  "editScreen": {
+    "name": "QA Video.js 중립 v2",
+    "language": "en",
+    "radius": "12",
+    "accent": "#0f5132",
+    "savebar": "사이트 적용 프리셋이에요. 저장하면 로더를 넣은 모든 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장"
+  },
+  "render": {
+    "site": {
+      "status": 200,
+      "data": {
+        "id": "p-qrgzuc8ste",
+        "revision": 18,
+        "playerType": "videojs",
+        "language": "en",
+        "playback": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata"
+        },
+        "display": {
+          "poster": true,
+          "title": true
+        },
+        "input": {
+          "hotkeys": true,
+          "gestures": true
+        },
+        "controls": {
+          "captions": true,
+          "quality": true,
+          "audioTrack": true,
+          "playbackRate": true,
+          "pip": true,
+          "fullscreen": true,
+          "thumbnails": true,
+          "seekButtons": null
+        },
+        "logo": null,
+        "progress": {
+          "sequence": true,
+          "timer": true,
+          "bar": false
+        },
+        "labels": {
+          "skip": "Skip ad"
+        },
+        "skinTag": "video-skin",
+        "styles": {
+          "css": "video.css",
+          "js": "video.js"
+        },
+        "css": {
+          "--media-accent-color": "#0f5132",
+          "--media-accent-text-color": "#ffffff",
+          "--media-border-radius": "12px",
+          "--ads-font-size": "15px"
+        },
+        "attributes": {
+          "lang": "ko",
+          "skip-label": "Skip ad"
+        }
+      }
+    },
+    "p-qrgzuc8ste": {
+      "status": 200,
+      "data": {
+        "id": "p-qrgzuc8ste",
+        "revision": 18,
+        "playerType": "videojs",
+        "language": "en",
+        "playback": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata"
+        },
+        "display": {
+          "poster": true,
+          "title": true
+        },
+        "input": {
+          "hotkeys": true,
+          "gestures": true
+        },
+        "controls": {
+          "captions": true,
+          "quality": true,
+          "audioTrack": true,
+          "playbackRate": true,
+          "pip": true,
+          "fullscreen": true,
+          "thumbnails": true,
+          "seekButtons": null
+        },
+        "logo": null,
+        "progress": {
+          "sequence": true,
+          "timer": true,
+          "bar": false
+        },
+        "labels": {
+          "skip": "Skip ad"
+        },
+        "skinTag": "video-skin",
+        "styles": {
+          "css": "video.css",
+          "js": "video.js"
+        },
+        "css": {
+          "--media-accent-color": "#0f5132",
+          "--media-accent-text-color": "#ffffff",
+          "--media-border-radius": "12px",
+          "--ads-font-size": "15px"
+        },
+        "attributes": {
+          "lang": "ko",
+          "skip-label": "Skip ad"
+        }
+      }
+    },
+    "p-6aiokv34yw": {
+      "status": 200,
+      "data": {
+        "id": "p-6aiokv34yw",
+        "revision": 18,
+        "playerType": "native",
+        "language": "ko",
+        "playback": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata"
+        },
+        "display": {
+          "poster": true
+        },
+        "progress": {
+          "sequence": true,
+          "timer": true,
+          "bar": false
+        },
+        "labels": {},
+        "skinTag": null,
+        "styles": null,
+        "css": {},
+        "ui": {
+          "locale": "ko"
+        },
+        "timeouts": {
+          "loadSeconds": 8
+        }
+      }
+    }
+  },
+  "loader": {
+    "ready": [
+      {
+        "at": 175,
+        "target": "a1-qa-video-1",
+        "presetId": "p-qrgzuc8ste",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18n": "en",
+    "adsLang": "ko",
+    "radius": "12px",
+    "fill": "rgb(15, 81, 50)",
+    "labels": [
+      "OK",
+      "Play",
+      "Mute",
+      "Volume",
+      "Seek",
+      "Show duration, 10 seconds remaining."
+    ],
+    "adStarted": true,
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "Settings",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "solad": []
+  },
+  "storedAfterReads": {
+    "row": "1028||18|p-qrgzuc8ste|2",
+    "sha": "152c566c1faaad07"
+  },
+  "firstSave": {
+    "status": [
+      "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+      "미리보기가 준비됐어요."
+    ]
+  },
+  "storedAfterSave": {
+    "row": "2468|2|19|p-qrgzuc8ste|2",
+    "sha": "8a072473c57aa330"
+  },
+  "storedPresetKeys": {
+    "id": "p-qrgzuc8ste",
+    "name": "QA Video.js 중립 v2",
+    "playerType": "videojs",
+    "language": "en",
+    "theme": {
+      "accentColor": "#0f5132",
+      "accentTextColor": "#ffffff",
+      "borderColor": null,
+      "borderRadius": 12,
+      "fontFamily": null,
+      "objectFit": null,
+      "scaleUnit": null
+    },
+    "playback": {
+      "autoplay": null,
+      "muted": null,
+      "loop": null,
+      "preload": null
+    },
+    "display": {
+      "poster": null,
+      "title": null
+    },
+    "input": {
+      "hotkeys": null,
+      "gestures": null
+    },
+    "controls": {
+      "captions": null,
+      "quality": null,
+      "audioTrack": null,
+      "playbackRate": null,
+      "pip": null,
+      "fullscreen": null,
+      "thumbnails": null,
+      "seekButtons": null
+    },
+    "logo": {
+      "assetId": null,
+      "position": null,
+      "margin": null,
+      "width": null,
+      "opacity": null,
+      "href": null,
+      "alt": null,
+      "hideDuringAds": null,
+      "hideWithControls": null
+    },
+    "ads": {
+      "labels": {
+        "advertisement": null,
+        "sequence": null,
+        "playPause": null,
+        "mute": null,
+        "volume": null,
+        "advertiser": null,
+        "newWindow": null,
+        "skip": "Skip ad",
+        "skipCountdown": null,
+        "timer": null,
+        "loading": null,
+        "paused": null,
+        "blocked": null,
+        "enterFullscreen": null,
+        "exitFullscreen": null,
+        "fullscreenError": null
+      },
+      "accentColor": null,
+      "skipRadius": null,
+      "fontSize": 15,
+      "progress": {
+        "sequence": null,
+        "timer": null,
+        "bar": null
+      },
+      "timeouts": {
+        "loadSeconds": null,
+        "stallSeconds": null
+      }
+    },
+    "createdAt": "2026-10-20T18:20:29Z",
+    "updatedAt": "2026-10-21T06:12:48Z"
+  },
+  "listAfterSave": {
+    "revision": 19,
+    "migratedNeutral": []
+  },
+  "noticeAfterSave": [],
+  "console": []
+}

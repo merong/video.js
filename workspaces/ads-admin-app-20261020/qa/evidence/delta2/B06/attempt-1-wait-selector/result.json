@@ -1,0 +1,394 @@
+{
+  "click": {
+    "afterTypePos": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+    },
+    "afterSelect": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+    },
+    "afterWaitClick": {
+      "tag": "INPUT",
+      "label": "스킵 대기 (초)",
+      "value": "1",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+    },
+    "afterTypeWait": {
+      "active": {
+        "tag": "INPUT",
+        "label": "스킵 대기 (초)",
+        "value": "3",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+      },
+      "position": "5",
+      "wait": "3"
+    },
+    "afterAddClick": {
+      "tag": "INPUT",
+      "label": "클릭 목적지 URL",
+      "value": "",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+    },
+    "pass": true
+  },
+  "keyboard": {
+    "tab": [
+      {
+        "tag": "BUTTON",
+        "label": "1번 광고 아래로 이동",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "광고 제거",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+      },
+      {
+        "tag": "A",
+        "label": "클릭 목적지 URL 도움말",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+      }
+    ],
+    "shiftTab": [
+      {
+        "tag": "A",
+        "label": "미드롤 도움말",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "구간 삭제",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "소재 목록 새로고침",
+        "value": "",
+        "card": null,
+        "cardIndex": null,
+        "breakId": null
+      }
+    ],
+    "tabLeft": true,
+    "shiftTabLeft": true,
+    "positionAfter": "5"
+  },
+  "resort": {
+    "beforeSort": [
+      {
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab",
+        "at": "5"
+      },
+      {
+        "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694",
+        "at": "2"
+      }
+    ],
+    "afterSort": [
+      {
+        "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694",
+        "at": "2"
+      },
+      {
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab",
+        "at": "5"
+      }
+    ],
+    "clickedBreakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab",
+    "focusAfterSort": {
+      "tag": "INPUT",
+      "label": "스킵 대기 (초)",
+      "value": "3",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 1,
+      "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab"
+    },
+    "focusStayedOnClickedControl": true,
+    "afterTyping": [
+      {
+        "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694",
+        "at": "2"
+      },
+      {
+        "breakId": "break-8d00d52b-4de8-4eb5-a76e-0702ccb93bab",
+        "at": "5"
+      }
+    ],
+    "clickedWaitValue": "4"
+  },
+  "invalid": [
+    {
+      "value": "",
+      "typed": "",
+      "blur": {
+        "api": [],
+        "field": {
+          "value": "",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "이 입력란을 작성하세요.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "BUTTON",
+          "label": "광고 제거",
+          "value": "",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        },
+        "alerts": []
+      },
+      "save": {
+        "api": [],
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "field": {
+          "value": "",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "이 입력란을 작성하세요.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "INPUT",
+          "label": "본편 재생 위치 (초)",
+          "value": "",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        }
+      }
+    },
+    {
+      "value": "0",
+      "typed": "0",
+      "blur": {
+        "api": [],
+        "field": {
+          "value": "0",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "값은 0.01 이상이어야 합니다.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "BUTTON",
+          "label": "광고 제거",
+          "value": "",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        },
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ]
+      },
+      "save": {
+        "api": [],
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "field": {
+          "value": "0",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "값은 0.01 이상이어야 합니다.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "INPUT",
+          "label": "본편 재생 위치 (초)",
+          "value": "0",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        }
+      }
+    },
+    {
+      "value": "-3",
+      "typed": "-3",
+      "blur": {
+        "api": [],
+        "field": {
+          "value": "-3",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "값은 0.01 이상이어야 합니다.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "BUTTON",
+          "label": "광고 제거",
+          "value": "",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        },
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ]
+      },
+      "save": {
+        "api": [],
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "field": {
+          "value": "-3",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "값은 0.01 이상이어야 합니다.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "INPUT",
+          "label": "본편 재생 위치 (초)",
+          "value": "-3",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        }
+      }
+    },
+    {
+      "value": "abc",
+      "typed": "",
+      "blur": {
+        "api": [],
+        "field": {
+          "value": "",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "이 입력란을 작성하세요.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "BUTTON",
+          "label": "광고 제거",
+          "value": "",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        },
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ]
+      },
+      "save": {
+        "api": [],
+        "alerts": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "field": {
+          "value": "",
+          "invalid": "true",
+          "describedBy": [
+            {
+              "id": "_r_2h_-error",
+              "text": "0.01 이상의 초를 숫자로 입력해 주세요. 예: 30",
+              "hidden": false
+            }
+          ],
+          "nativeValidation": "이 입력란을 작성하세요.",
+          "required": true,
+          "min": "0.01"
+        },
+        "focus": {
+          "tag": "INPUT",
+          "label": "본편 재생 위치 (초)",
+          "value": "",
+          "card": "미드롤 · 재생 중",
+          "cardIndex": 0,
+          "breakId": "break-3c834891-4778-4c93-b4ac-8acaaf9a8694"
+        }
+      }
+    }
+  ],
+  "error": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('form', { name: '광고 편성 편집' }).getByRole('article', { name: /미드롤/ }).first().getByLabel('스킵 대기 (초)', { exact: true })\u001b[22m\n",
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

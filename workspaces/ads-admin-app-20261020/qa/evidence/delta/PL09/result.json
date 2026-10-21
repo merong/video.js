@@ -1,0 +1,274 @@
+{
+  "labelNames": {
+    "이름": [
+      {
+        "role": "textbox",
+        "description": "목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요.",
+        "invalid": "false"
+      }
+    ],
+    "스킨": [
+      {
+        "role": "combobox",
+        "description": "compat·scaffold 스킨은 준비 중이에요. 기본 컨트롤이나 직접 만들 스킨이라 같은 테마 설정으로 설명할 수 없어요.",
+        "invalid": "false"
+      }
+    ],
+    "강조색 색 고르기": [
+      {
+        "role": "ColorWell",
+        "description": "스킨 기본 (흰색) 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요.",
+        "invalid": "false"
+      }
+    ],
+    "강조색": [
+      {
+        "role": "textbox",
+        "description": "스킨 기본 (흰색) 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요.",
+        "invalid": "false"
+      }
+    ],
+    "강조 글자색 색 고르기": [
+      {
+        "role": "ColorWell",
+        "description": "자동 대비 비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.",
+        "invalid": "false"
+      }
+    ],
+    "강조 글자색": [
+      {
+        "role": "textbox",
+        "description": "자동 대비 비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.",
+        "invalid": "false"
+      }
+    ],
+    "테두리 색 색 고르기": [
+      {
+        "role": "ColorWell",
+        "description": "스킨 기본 (반투명 검정) 플레이어 둘레의 가는 선 색이에요.",
+        "invalid": "false"
+      }
+    ],
+    "테두리 색": [
+      {
+        "role": "textbox",
+        "description": "스킨 기본 (반투명 검정) 플레이어 둘레의 가는 선 색이에요.",
+        "invalid": "false"
+      }
+    ],
+    "모서리 둥글기 (px)": [
+      {
+        "role": "spinbutton",
+        "description": "0–32 정수예요. 광고 화면 모서리도 따라가요.",
+        "invalid": "false"
+      }
+    ],
+    "광고 음량 막대 색 색 고르기": [
+      {
+        "role": "ColorWell",
+        "description": "흰색 (강조색이 있으면 그 색) 광고 음량 막대 색만 바뀌어요. 건너뛰기 버튼과 초점 테두리는 그대로예요.",
+        "invalid": "false"
+      }
+    ],
+    "광고 음량 막대 색": [
+      {
+        "role": "textbox",
+        "description": "흰색 (강조색이 있으면 그 색) 광고 음량 막대 색만 바뀌어요. 건너뛰기 버튼과 초점 테두리는 그대로예요.",
+        "invalid": "false"
+      }
+    ],
+    "광고 글자 크기 (px)": [
+      {
+        "role": "spinbutton",
+        "description": "11–18 정수예요. 플레이어 폭이 280px 이하이면 글자가 11px로 고정돼요.",
+        "invalid": "false"
+      }
+    ]
+  },
+  "namesWithHelp": [],
+  "colorEmpty": {
+    "text": {
+      "tag": "INPUT",
+      "type": null,
+      "labelledBy": [],
+      "describedBy": [
+        "스킨 기본 (흰색)",
+        "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+      ],
+      "invalid": null,
+      "labels": [
+        "강조색"
+      ]
+    },
+    "picker": {
+      "tag": "INPUT",
+      "type": "color",
+      "labelledBy": [
+        "강조색",
+        "색 고르기 [hidden]"
+      ],
+      "describedBy": [
+        "스킨 기본 (흰색)",
+        "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+      ],
+      "invalid": null,
+      "labels": []
+    },
+    "snapshot": "- text: 강조색\n- link \"강조색 도움말\":\n  - /url: \"#/help/player-accent-color\"\n  - text: \"?\"\n- textbox \"강조색 색 고르기\": \"#ffffff\"\n- textbox \"강조색\":\n  - /placeholder: \"#rrggbb\"\n- text: 스킨 기본 (흰색) 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+  },
+  "colorInvalid": {
+    "text": {
+      "tag": "INPUT",
+      "type": null,
+      "labelledBy": [],
+      "describedBy": [
+        "#과 16진수 6자리로 입력해 주세요. 예: #cdf352",
+        "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+      ],
+      "invalid": "true",
+      "labels": [
+        "강조색"
+      ]
+    },
+    "picker": {
+      "tag": "INPUT",
+      "type": "color",
+      "labelledBy": [
+        "강조색",
+        "색 고르기 [hidden]"
+      ],
+      "describedBy": [
+        "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+      ],
+      "invalid": null,
+      "labels": []
+    },
+    "snapshot": "- text: 강조색\n- link \"강조색 도움말\":\n  - /url: \"#/help/player-accent-color\"\n  - text: \"?\"\n- textbox \"강조색 색 고르기\": \"#ffffff\"\n- textbox \"강조색\":\n  - /placeholder: \"#rrggbb\"\n  - text: \"#GGG\"\n- button \"강조색 지우기\": 지우기\n- text: \"#과 16진수 6자리로 입력해 주세요. 예: #cdf352 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요.\""
+  },
+  "namesAfterInvalid": {
+    "강조색 색 고르기": [
+      {
+        "role": "ColorWell",
+        "description": "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요.",
+        "invalid": "false"
+      }
+    ],
+    "강조색": [
+      {
+        "role": "textbox",
+        "description": "#과 16진수 6자리로 입력해 주세요. 예: #cdf352 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요.",
+        "invalid": "true"
+      }
+    ],
+    "강조색 지우기": [
+      {
+        "role": "button",
+        "description": null,
+        "invalid": "false"
+      }
+    ]
+  },
+  "saveClick": {
+    "api": [],
+    "live": {
+      "status": [
+        "미리보기가 준비됐어요."
+      ],
+      "alert": [
+        "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+      ],
+      "pageStatus": [
+        "미리보기가 준비됐어요."
+      ]
+    },
+    "focus": {
+      "tag": "INPUT",
+      "id": "aa-preset-theme-accentColor",
+      "text": "",
+      "role": null
+    },
+    "value": "#GGG"
+  },
+  "enter": {
+    "api": [],
+    "live": {
+      "status": [
+        "미리보기가 준비됐어요."
+      ],
+      "alert": [
+        "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+      ],
+      "pageStatus": [
+        "미리보기가 준비됐어요."
+      ]
+    },
+    "focus": {
+      "tag": "INPUT",
+      "id": "aa-preset-theme-accentColor",
+      "text": "",
+      "role": null
+    },
+    "value": "#GGG"
+  },
+  "enterOtherField": {
+    "api": [],
+    "live": {
+      "status": [
+        "미리보기가 준비됐어요."
+      ],
+      "alert": [
+        "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+      ],
+      "pageStatus": [
+        "미리보기가 준비됐어요."
+      ]
+    },
+    "focus": {
+      "tag": "INPUT",
+      "id": "aa-preset-theme-accentColor",
+      "text": "",
+      "role": null
+    },
+    "accent": "#GGG"
+  },
+  "upper": {
+    "value": "#abcdef",
+    "field": {
+      "text": {
+        "tag": "INPUT",
+        "type": null,
+        "labelledBy": [],
+        "describedBy": [
+          "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+        ],
+        "invalid": null,
+        "labels": [
+          "강조색"
+        ]
+      },
+      "picker": {
+        "tag": "INPUT",
+        "type": "color",
+        "labelledBy": [
+          "강조색",
+          "색 고르기 [hidden]"
+        ],
+        "describedBy": [
+          "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+        ],
+        "invalid": null,
+        "labels": []
+      },
+      "snapshot": "- text: 강조색\n- link \"강조색 도움말\":\n  - /url: \"#/help/player-accent-color\"\n  - text: \"?\"\n- textbox \"강조색 색 고르기\": \"#abcdef\"\n- textbox \"강조색\":\n  - /placeholder: \"#rrggbb\"\n  - text: \"#abcdef\"\n- button \"강조색 지우기\": 지우기\n- text: 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+    }
+  },
+  "allApi": [
+    "POST login 200"
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

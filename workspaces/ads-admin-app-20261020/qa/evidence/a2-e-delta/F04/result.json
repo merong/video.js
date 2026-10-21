@@ -1,0 +1,614 @@
+{
+  "help": {
+    "rows": {
+      "field-logo-href": {
+        "tag": "tr",
+        "text": "logo.href#‘logo.href’ 항목 주소받는 값http(s):// 주소기본값비움설명로고 링크예요. 새 탭에서 열려요.적용 단계준비 중(A2-3)"
+      },
+      "field-ads-labels-newWindow": {
+        "tag": "tr",
+        "text": "ads.labels.newWindow#‘ads.labels.newWindow’ 항목 주소받는 값40자 이하기본값새 탭에서 열림설명새 탭 안내 글자예요. 기본 video 플레이어에는 지금도 적용돼요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logohref": {
+        "tag": "tr",
+        "text": "logoHref#‘logoHref’ 항목 주소받는 값'' | http(s):// 주소기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고 링크예요. 빈 값이면 링크를 비워요. 대체 텍스트(logoAlt나 프리셋 값)가 없으면 링크 없이 이미지만 보여요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      }
+    },
+    "mentions": [
+      {
+        "word": "새 탭",
+        "text": "로고 링크예요. 새 탭에서 열려요.",
+        "context": "설명로고 링크예요. 새 탭에서 열려요.",
+        "visible": true,
+        "cls": null
+      },
+      {
+        "word": "새 탭",
+        "text": "새 탭에서 열림",
+        "context": "기본값새 탭에서 열림",
+        "visible": true,
+        "cls": null
+      },
+      {
+        "word": "새 탭",
+        "text": "새 탭 안내 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+        "context": "설명새 탭 안내 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+        "visible": true,
+        "cls": null
+      }
+    ]
+  },
+  "demo": {
+    "tables": 0,
+    "rows": {
+      "field-logo-href": null,
+      "field-ads-labels-newWindow": null,
+      "opt-query-logohref": null
+    },
+    "mentions": [
+      {
+        "word": "새 탭",
+        "text": "누르면 새 탭에서 열려요. 비우면 누를 수 없는 그림이에요.",
+        "context": "링크 주소 누르면 새 탭에서 열려요. 비우면 누를 수 없는 그림이에요.",
+        "visible": true,
+        "cls": "sa-help"
+      },
+      {
+        "word": "새 탭",
+        "text": "링크가 있으면 꼭 넣어요. 링크 이름으로 읽히고 뒤에 ‘(새 탭에서 열림)’이 붙어요.",
+        "context": "대체 텍스트 링크가 있으면 꼭 넣어요. 링크 이름으로 읽히고 뒤에 ‘(새 탭에서 열림)’이 붙어요.",
+        "visible": true,
+        "cls": "sa-help"
+      }
+    ]
+  },
+  "admin": {
+    "rows": [
+      {
+        "href": "/examples/help.html#opt-query-logohref",
+        "aria": "‘logoHref’ 도움말 (새 창)",
+        "visible": true,
+        "row": "logoHref'' | http(s):// 주소프리셋 값데모에서 프리셋 대신 쓸 로고 링크예요. 빈 값이면 링크를 비워요. 대체 텍스트(logoAlt나 프리셋 값)가 없으면 링크 없이 이미지만 보여요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.href"
+      }
+    ],
+    "mentions": [
+      {
+        "word": "새 창",
+        "text": "(새 창)",
+        "context": "데모 열기 (새 창)",
+        "visible": true,
+        "cls": "sa-sr"
+      },
+      {
+        "word": "새 창",
+        "text": "(새 창)",
+        "context": "설명서 (새 창)",
+        "visible": true,
+        "cls": "sa-sr"
+      },
+      {
+        "word": "새 창",
+        "text": "(새 창)",
+        "context": "도움말 (새 창)",
+        "visible": true,
+        "cls": "sa-sr"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-solad-player’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-solad-player"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-video-id’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-video-id"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-src’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-src"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-poster’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-poster"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-title’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-title"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-thumbnails’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-thumbnails"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-captions’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-captions"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-autoplay’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-autoplay"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-muted’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-muted"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-loop’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-loop"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-preload’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-preload"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-lang’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-lang"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-engine’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-engine"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘data-solad-manual’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-data-solad-manual"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘for’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-for"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘src’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-src"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘video-id’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-video-id"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘lang’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-lang"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘skip-label’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-skip-label"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘skip-countdown-label’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-skip-countdown-label"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘timer-label’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-timer-label"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘media-alt’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-alt"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘media’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘container’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-container"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘schedule’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-schedule"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘tracking’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-tracking"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘preview’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-preview"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘onEvent’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-onevent"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘timeouts.loadSeconds’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-timeoutsloadseconds"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘timeouts.stallSeconds’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-timeoutsstallseconds"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘ui.locale’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-uilocale"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘ui.labels’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-uilabels"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘destroy()’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-destroy"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘updateUI(ui)’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-updateuiui"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-accent-color’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-accent-color"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-accent-text-color’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-accent-text-color"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-border-color’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-border-color"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-border-radius’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-border-radius"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-font-family’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-font-family"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-object-fit’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-object-fit"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-object-position’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-object-position"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--media-scale-unit’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-media-scale-unit"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-accent-color’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-accent-color"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-skip-radius’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-skip-radius"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-font-size’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-font-size"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-font-family’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-font-family"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-color’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-color"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-background’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-background"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-radius’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-radius"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-inset’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-inset"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-scrim’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-scrim"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-control-size’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-control-size"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-control-radius’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-control-radius"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-button-background’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-button-background"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-hover-background’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-hover-background"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘--ads-focus-color’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-ads-focus-color"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘preset’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-preset"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘video’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-video"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘type’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-type"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘content’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-content"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘media’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-media"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘engine’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-engine"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘autoplay’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-autoplay"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘muted’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-muted"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘loop’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-loop"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘preload’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-preload"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘language’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-language"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘pageLang’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-pagelang"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘poster’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-poster"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘posterUrl’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-posterurl"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘title’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-title"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘titleText’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-titletext"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘thumbnails’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-thumbnails"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘seekButtons’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-seekbuttons"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘captions’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-captions"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘captionsUrl’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-captionsurl"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logo’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logo"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoPosition’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logoposition"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoWidth’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logowidth"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoOpacity’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logoopacity"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoMargin’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logomargin"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoHref’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logohref"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoAlt’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logoalt"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoHideDuringAds’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logohideduringads"
+      },
+      {
+        "word": "새 창",
+        "ariaLabel": "‘logoHideWithControls’ 도움말 (새 창)",
+        "tag": "a",
+        "href": "/examples/help.html#opt-query-logohidewithcontrols"
+      }
+    ]
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

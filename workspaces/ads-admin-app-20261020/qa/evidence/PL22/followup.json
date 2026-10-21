@@ -1,0 +1,58 @@
+{
+  "overlapWithIframe": [],
+  "unnamedInputs": [
+    {
+      "type": "color",
+      "outline": "none 3px",
+      "boxShadow": "none",
+      "opacity": "1",
+      "size": [
+        36,
+        36
+      ],
+      "parentClass": "sa-color-swatch"
+    },
+    {
+      "type": "color",
+      "outline": "none 3px",
+      "boxShadow": "none",
+      "opacity": "1",
+      "size": [
+        36,
+        36
+      ],
+      "parentClass": "sa-color-swatch"
+    },
+    {
+      "type": "color",
+      "outline": "none 3px",
+      "boxShadow": "none",
+      "opacity": "0",
+      "size": [
+        36,
+        36
+      ],
+      "parentClass": "sa-color-swatch"
+    },
+    {
+      "type": "color",
+      "outline": "none 3px",
+      "boxShadow": "none",
+      "opacity": "0",
+      "size": [
+        36,
+        36
+      ],
+      "parentClass": "sa-color-swatch"
+    }
+  ],
+  "colorTabFocus": {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "광고 음량 막대 색",
+    "outline": "solid 2px rgb(24, 24, 26)",
+    "parentOutline": "none 3px",
+    "parentShadow": "none",
+    "matchesFocusVisible": true
+  }
+}

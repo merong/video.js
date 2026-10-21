@@ -1,0 +1,425 @@
+{
+  "groups": [
+    {
+      "id": "loaderData",
+      "admin": 14,
+      "public": 14,
+      "publicHelpOnly": 1
+    },
+    {
+      "id": "element",
+      "admin": 8,
+      "public": 8,
+      "publicHelpOnly": 0
+    },
+    {
+      "id": "controller",
+      "admin": 10,
+      "public": 10,
+      "publicHelpOnly": 0
+    },
+    {
+      "id": "controllerMethods",
+      "admin": 2,
+      "public": 2,
+      "publicHelpOnly": 0
+    },
+    {
+      "id": "skinCss",
+      "admin": 8,
+      "public": 8,
+      "publicHelpOnly": 0
+    },
+    {
+      "id": "adsCss",
+      "admin": 14,
+      "public": 14,
+      "publicHelpOnly": 0
+    },
+    {
+      "id": "exampleQuery",
+      "admin": 29,
+      "public": 29,
+      "publicHelpOnly": 0
+    }
+  ],
+  "diffs": [],
+  "a2e": {
+    "loaderData:data-captions": {
+      "anchor": "opt-data-captions",
+      "type": "WebVTT 주소",
+      "defaultValue": "없음",
+      "presetField": null,
+      "help": false
+    },
+    "mount:captions": {
+      "anchor": "opt-mount-captions",
+      "type": "WebVTT 주소",
+      "defaultValue": "data-captions",
+      "presetField": null,
+      "help": false
+    },
+    "mount:preview": {
+      "anchor": "opt-mount-preview",
+      "type": "{ schedule, preset?, scene?, logo? }",
+      "defaultValue": "없음",
+      "presetField": null,
+      "help": false
+    },
+    "mount:preview.logo": {
+      "anchor": "opt-mount-previewlogo",
+      "type": "/경로 또는 http(s):// 이미지 주소",
+      "defaultValue": "없음(로고 없음)",
+      "presetField": null,
+      "help": false
+    },
+    "mount:handle.seek(target)": {
+      "anchor": "opt-mount-handleseektarget",
+      "type": "'start' | 'before-midroll' | 'before-end'",
+      "defaultValue": "",
+      "presetField": null,
+      "help": false
+    },
+    "controller:preview": {
+      "anchor": "opt-preview",
+      "type": "boolean",
+      "defaultValue": "false",
+      "presetField": null,
+      "help": false
+    },
+    "exampleQuery:seekButtons": {
+      "anchor": "opt-query-seekbuttons",
+      "type": "'' | 5 | 10 | 15 | 30",
+      "defaultValue": "프리셋 값",
+      "presetField": "controls.seekButtons",
+      "help": false
+    },
+    "exampleQuery:captions": {
+      "anchor": "opt-query-captions",
+      "type": "true | false",
+      "defaultValue": "프리셋 값",
+      "presetField": "controls.captions",
+      "help": false
+    },
+    "exampleQuery:captionsUrl": {
+      "anchor": "opt-query-captionsurl",
+      "type": "WebVTT 주소",
+      "defaultValue": "없음",
+      "presetField": null,
+      "help": false
+    },
+    "exampleQuery:logo": {
+      "anchor": "opt-query-logo",
+      "type": "sample-svg | sample-png | custom | /경로 또는 http(s):// 주소",
+      "defaultValue": "없음",
+      "presetField": null,
+      "help": false
+    },
+    "exampleQuery:logoPosition": {
+      "anchor": "opt-query-logoposition",
+      "type": "top-left | top-right | bottom-left | bottom-right",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.position",
+      "help": false
+    },
+    "exampleQuery:logoWidth": {
+      "anchor": "opt-query-logowidth",
+      "type": "px(24 이상 240 이하 정수)",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.width",
+      "help": false
+    },
+    "exampleQuery:logoOpacity": {
+      "anchor": "opt-query-logoopacity",
+      "type": "%(10 이상 100 이하 정수)",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.opacity",
+      "help": false
+    },
+    "exampleQuery:logoMargin": {
+      "anchor": "opt-query-logomargin",
+      "type": "px(0 이상 48 이하 정수)",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.margin",
+      "help": false
+    },
+    "exampleQuery:logoHref": {
+      "anchor": "opt-query-logohref",
+      "type": "'' | http(s):// 주소",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.href",
+      "help": false
+    },
+    "exampleQuery:logoAlt": {
+      "anchor": "opt-query-logoalt",
+      "type": "'' | 글자, 80자 이하",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.alt",
+      "help": false
+    },
+    "exampleQuery:logoHideDuringAds": {
+      "anchor": "opt-query-logohideduringads",
+      "type": "true | false",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.hideDuringAds",
+      "help": false
+    },
+    "exampleQuery:logoHideWithControls": {
+      "anchor": "opt-query-logohidewithcontrols",
+      "type": "true | false",
+      "defaultValue": "프리셋 값",
+      "presetField": "logo.hideWithControls",
+      "help": false
+    }
+  },
+  "publicOnlyGroups": [
+    "mount(21)",
+    "events(3)"
+  ],
+  "presetFields": [
+    {
+      "path": "controls.captions",
+      "anchor": "field-controls-captions",
+      "stage": "A2-E",
+      "stageText": "적용",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.quality",
+      "anchor": "field-controls-quality",
+      "stage": "A2-2",
+      "stageText": "준비 중(A2-2)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.audioTrack",
+      "anchor": "field-controls-audioTrack",
+      "stage": "A2-2",
+      "stageText": "준비 중(A2-2)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.playbackRate",
+      "anchor": "field-controls-playbackRate",
+      "stage": "A2-2",
+      "stageText": "준비 중(A2-2)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.pip",
+      "anchor": "field-controls-pip",
+      "stage": "A2-2",
+      "stageText": "준비 중(A2-2)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.fullscreen",
+      "anchor": "field-controls-fullscreen",
+      "stage": "A2-2",
+      "stageText": "준비 중(A2-2)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.thumbnails",
+      "anchor": "field-controls-thumbnails",
+      "stage": "A2-2",
+      "stageText": "준비 중(A2-2)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "controls.seekButtons",
+      "anchor": "field-controls-seekButtons",
+      "stage": "A2-E",
+      "stageText": "적용",
+      "accepts": {
+        "kind": "step",
+        "values": [
+          5,
+          10,
+          15,
+          30
+        ],
+        "unit": "초"
+      },
+      "defaultText": "비움(숨김)",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.assetId",
+      "anchor": "field-logo-assetId",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "unavailable"
+      },
+      "defaultText": "비움(로고 없음)",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.position",
+      "anchor": "field-logo-position",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "enum",
+        "values": [
+          "top-left",
+          "top-right",
+          "bottom-left",
+          "bottom-right"
+        ]
+      },
+      "defaultText": "top-right",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.margin",
+      "anchor": "field-logo-margin",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "integer",
+        "min": 0,
+        "max": 48,
+        "unit": "px"
+      },
+      "defaultText": "12",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.width",
+      "anchor": "field-logo-width",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "integer",
+        "min": 24,
+        "max": 240,
+        "unit": "px"
+      },
+      "defaultText": "80",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.opacity",
+      "anchor": "field-logo-opacity",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "integer",
+        "min": 10,
+        "max": 100,
+        "unit": "%"
+      },
+      "defaultText": "80",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.href",
+      "anchor": "field-logo-href",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "url"
+      },
+      "defaultText": "비움",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.alt",
+      "anchor": "field-logo-alt",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "text",
+        "max": 80
+      },
+      "defaultText": "비움",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.hideDuringAds",
+      "anchor": "field-logo-hideDuringAds",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "true",
+      "players": [
+        "videojs"
+      ]
+    },
+    {
+      "path": "logo.hideWithControls",
+      "anchor": "field-logo-hideWithControls",
+      "stage": "A2-3",
+      "stageText": "준비 중(A2-3)",
+      "accepts": {
+        "kind": "boolean"
+      },
+      "defaultText": "false",
+      "players": [
+        "videojs"
+      ]
+    }
+  ]
+}

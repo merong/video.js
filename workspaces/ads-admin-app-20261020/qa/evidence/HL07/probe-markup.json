@@ -1,0 +1,20 @@
+{
+  "termTag": "ARTICLE",
+  "termClass": "sa-term",
+  "adBreak": "<article class=\"sa-term\" aria-labelledby=\"sa-help-ad-break\"><div class=\"sa-term-h\"><h4 id=\"sa-help-ad-break\" tabindex=\"-1\">광고 구간</h4><span class=\"sa-badge\" data-st=\"active\">지금 동작</span></div><p class=\"sa-body\">본편 시작 전, 재생 중 정한 초, 본편이 끝난 뒤 가운데 한 시점에 끼어드는 광고 묶음이에요. 한 구간에 광고를 1~20개 넣으면 차례로 재생돼요.</p><p class=\"sa-small\">편성 하나에 구간은 100개까지 둘 수 있고, 광고가 없는 빈 구간은 저장할 수 없어요. 프리롤과 포스트롤은 하나씩, 미드롤은 같은 초에 하나만 둘 수 있어요.</p><figure class=\"sa-motion\"><div class=\"sa-motion-stage\" role=\"img\" aria-label=\"본편 앞에 프리롤, 본편 중간에 미드롤, 본편이 끝난 뒤 포스트롤이 차례로 재생되는 그림이에요.\"><div class=\"sa-mo\"><div class=\"sa-mo-segs\"><div class=\"sa-mo-seg is-ad\"><span class=\"sa-mo-bar\"><i class=\"sa-mo-fill1\"></i></span><span class=\"sa-mo-cap\">프리롤</span></div><div class=\"sa-mo-seg is-content\"><span class=\"sa-mo-bar\"><i class=\"sa-mo-fill2\"></i></span><span class=\"sa-mo-cap\">본편</span></div><div class=\"sa-mo-seg is-ad\"><span class=\"sa-mo-bar\"><i class=\"sa-mo-fill3\"></i></span><span class=\"sa-mo-cap\">미드롤</span></div><div class=\"sa-mo-seg is-content\"><span class=\"sa-mo-bar\"><i class=\"sa-mo-fill4\"></i></span><span class=\"sa-mo-cap\">본편</span></div><div class=\"sa-mo-seg is-ad\"><span class=\"sa-mo-bar\"><i class=\"sa-mo-fill5\"></i></span><span class=\"sa-mo-cap\">포스트롤</span></div></div></div></div><div class=\"sa-motion-ctrl\" role=\"group\" aria-label=\"광고 구간 그림 조작\"><button aria-pressed=\"false\" type=\"button\" class=\"sa-btn is-sm\">일시정지</button><button type=\"button\" class=\"sa-btn is-sm\">다시 보기</button></div></figure><p class=\"sa-small\">관련 화면 · 지면 편성 › 광고 구간</p></article>",
+  "once": "<article class=\"sa-term\" aria-labelledby=\"sa-help-creative-source\"><div class=\"sa-term-h\"><h4 id=\"sa-help-creative-source\" tabindex=\"-1\">등록 방식</h4><span class=\"sa-badge\" data-st=\"active\">지금 동작</span></div><p class=\"sa-body\">외부 URL은 이미 공개된 파일 주소를 소재로 기록하고, 파일 업로드는 파일을 서버에 저장해요. 업로드한 파일의 형식은 서버가 파일 내용으로 판정해요.</p><p class=\"sa-small\">URL은 http(s)://로 시작하는 주소나 /로 시작하는 경로만 받아요. 업로드 한도는 기본 100 MiB이고, 업로드를 쓸 수 없는 설치에서는 파일 업로드를 고를 수 없어요.</p><figure class=\"sa-motion is-once is-offscreen\"><div class=\"sa-motion-stage\" role=\"img\" aria-label=\"두 줄 그림이에요. 외부 URL은 주소만 소재로 기록되고, 파일 업로드는 서버에 저장되어 형식을 확인한 뒤 소재가 돼요.\"><div class=\"sa-mo\"><div class=\"sa-mo-flow\"><span class=\"sa-mo-box sa-mo-in1\">외부 URL</span><svg class=\"sa-ico sa-mo-in2\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"></path></svg><span class=\"sa-mo-box sa-mo-in2\">주소만 기록</span><svg class=\"sa-ico sa-mo-in3\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"></path></svg><span class=\"sa-mo-box is-ad sa-mo-in3\">소재</span></div><div class=\"sa-mo-flow\"><span class=\"sa-mo-box sa-mo-in1\">파일 업로드</span><svg class=\"sa-ico sa-mo-in2\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"></path></svg><span class=\"sa-mo-box sa-mo-in2\">서버에 저장<small>형식 확인</small></span><svg class=\"sa-ico sa-mo-in3\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"></path></svg><span class=\"sa-mo-box is-ad sa-mo-in3\">소재</span></div></div></div><div class=\"sa-motion-ctrl\" role=\"group\" aria-label=\"등록 방식 그림 조작\"><button type=\"button\" class=\"sa-btn is-sm\">다시 보기</button></div></figure><p class=\"sa-small\">관련 화면 · 소재 › 등록 방식</p></article>",
+  "figures": 49,
+  "anims": 254,
+  "filters": [
+    "전체49",
+    "광고가 나오는 자리5",
+    "소재6",
+    "스킵2",
+    "편성 대상과 상속6",
+    "초안과 게시5",
+    "미리보기와 재생 테스트2",
+    "플레이어11",
+    "통계5",
+    "캠페인과 승인7"
+  ]
+}

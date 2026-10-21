@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LMS spike</title>
+    <style>
+      body { margin: 0; padding: 16px; background: #111; color: #eee; font: 14px system-ui, sans-serif; }
+      #player { width: 800px; max-width: 100%; }
+      #player video-player, #player solad-video-skin, #player spike-lms-skin { display: block; aspect-ratio: 16 / 9; }
+      #outside { margin-top: 12px; }
+    </style>
+  </head>
+  <body>
+    <div id="player"></div>
+    <div id="outside"><input id="note" placeholder="메모 (편집 가능한 대상 확인용)" /></div>
+    <script type="module" src="./page.js"></script>
+  </body>
+</html>

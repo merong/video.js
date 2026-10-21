@@ -1,0 +1,320 @@
+{
+ "scenario": "layers",
+ "engine": "webkit",
+ "startedAt": "2026-10-21T17:21:22.658Z",
+ "steps": [
+  {
+   "name": "slider click 25% (through layers)",
+   "before": {
+    "media": 6,
+    "store": 6,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 16.667,
+    "expectPct": 16.667,
+    "fillVar": "16.667%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 8.923,
+    "store": 8.923,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 24.781,
+    "expectPct": 24.785,
+    "fillVar": "24.785%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2809,
+     "type": "media:seeking",
+     "time": 8.923
+    },
+    {
+     "t": 2817,
+     "type": "media:seeked",
+     "time": 8.923
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "slider focused ArrowLeft",
+   "before": {
+    "media": 8.923,
+    "store": 8.923,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 24.781,
+    "expectPct": 24.785,
+    "fillVar": "24.785%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 8,
+    "store": 8,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 22.218,
+    "expectPct": 22.222,
+    "fillVar": "22.222%",
+    "counts": {
+     "setter": 2,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 4029,
+     "type": "media:seeking",
+     "time": 8
+    },
+    {
+     "t": 4056,
+     "type": "media:seeked",
+     "time": 8
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "slider focused ArrowRight x5",
+   "before": {
+    "media": 8,
+    "store": 8,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 22.218,
+    "expectPct": 22.222,
+    "fillVar": "22.222%",
+    "counts": {
+     "setter": 2,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 12,
+    "store": 12,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 33.329,
+    "expectPct": 33.333,
+    "fillVar": "33.333%",
+    "counts": {
+     "setter": 7,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 5245,
+     "type": "media:seeking",
+     "time": 9
+    },
+    {
+     "t": 5255,
+     "type": "media:seeking",
+     "time": 10
+    },
+    {
+     "t": 5258,
+     "type": "media:seeked",
+     "time": 10
+    },
+    {
+     "t": 5264,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 5270,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 5272,
+     "type": "media:seeked",
+     "time": 11
+    },
+    {
+     "t": 5277,
+     "type": "media:seeking",
+     "time": 12
+    },
+    {
+     "t": 5280,
+     "type": "media:seeked",
+     "time": 12
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "play 2s (fill/buffer over layer)",
+   "before": {
+    "media": 12,
+    "store": 12,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15,
+    "thumbPct": 33.329,
+    "expectPct": 33.333,
+    "fillVar": "33.333%",
+    "counts": {
+     "setter": 7,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 14.205,
+    "store": 14.194,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 15.008,
+    "thumbPct": 39.428,
+    "expectPct": 39.459,
+    "fillVar": "39.429%",
+    "counts": {
+     "setter": 7,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [],
+   "error": null
+  }
+ ],
+ "geometry": {
+  "slider": {
+   "x": 227,
+   "y": 419,
+   "w": 371,
+   "h": 32
+  },
+  "layers": {
+   "x": 227,
+   "y": 433,
+   "w": 371,
+   "h": 4
+  },
+  "tracks": [
+   {
+    "x": 227,
+    "y": 433,
+    "w": 371,
+    "h": 4
+   },
+   {
+    "x": 227,
+    "y": 433,
+    "w": 371,
+    "h": 4
+   },
+   {
+    "x": 227,
+    "y": 433,
+    "w": 371,
+    "h": 4
+   },
+   {
+    "x": 227,
+    "y": 433,
+    "w": 371,
+    "h": 4
+   }
+  ],
+  "parts": [
+   {
+    "x": 227,
+    "y": 433,
+    "w": 144,
+    "h": 4
+   },
+   {
+    "x": 454,
+    "y": 433,
+    "w": 41,
+    "h": 4
+   }
+  ],
+  "limit": {
+   "x": 381,
+   "y": 430,
+   "w": 2,
+   "h": 10
+  },
+  "hitAt30pct": "media-slider-track.media-slider-track media-time-slider-chapter-track",
+  "chapters": 4,
+  "sliderAria": {
+   "role": null,
+   "valuetext": null
+  }
+ },
+ "previewTitle": "3장 실습",
+ "segmentsAfter": [
+  [
+   0,
+   14.008086983712836
+  ],
+  [
+   22,
+   26
+  ]
+ ],
+ "errors": []
+}

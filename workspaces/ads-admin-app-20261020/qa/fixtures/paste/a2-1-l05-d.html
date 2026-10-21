@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A2-1-QA l05-d</title>
+</head>
+<body>
+<div id="m" data-solad-player data-video-id="a1-qa-video-1" data-src="/demo-media/grok-20261018/content-scene-01.mp4" data-solad-manual data-autoplay="false" data-loop="false" data-preload="none"></div>
+<script type="module">
+  import { mount } from '/player/loader.js';
+  window.__mount = { errors: [], handle: null, threw: null };
+  const options = { overrides: { playback: { autoplay: true, loop: true, preload: 'auto' } } };
+  try {
+    const handle = await mount(document.getElementById('m'), { ...options, onError: (e) => window.__mount.errors.push(e) });
+    window.__mount.handle = { presetId: handle.presetId, fallback: handle.fallback, player: handle.player?.tagName };
+  } catch (error) {
+    window.__mount.threw = String(error);
+  }
+</script>
+</body>
+</html>

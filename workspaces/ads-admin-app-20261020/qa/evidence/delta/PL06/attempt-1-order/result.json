@@ -1,0 +1,36 @@
+{
+  "steps": [
+    {
+      "label": "(1) 기본 복사본 삭제 → Esc",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '기본 복사본 삭제', exact: true })\u001b[22m\n",
+      "api": []
+    },
+    {
+      "label": "(2) 기본 복사본 삭제 → 취소",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '기본 복사본 삭제', exact: true })\u001b[22m\n",
+      "api": []
+    },
+    {
+      "label": "(3) 기본 복사본 삭제 → 확인",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '기본 복사본 삭제', exact: true })\u001b[22m\n",
+      "api": []
+    },
+    {
+      "label": "(4) P-A 복제본 기본 지정 → 삭제 → 새로고침",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'QA Video.js 중립 v2 복사본 기본으로 지정', exact: true })\u001b[22m\n",
+      "api": []
+    },
+    {
+      "label": "(5) P-A 다시 기본 지정",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'QA Video.js 중립 v2 기본으로 지정', exact: true })\u001b[22m\n",
+      "api": []
+    }
+  ],
+  "bodies": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

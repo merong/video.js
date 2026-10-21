@@ -1,0 +1,268 @@
+{
+  "a": {
+    "label": "pre+mid",
+    "duplicateIds": [],
+    "labels": [
+      {
+        "text": "소재 이름",
+        "for": "aa-title-creatives-name",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "등록 방식",
+        "for": "_r_b_",
+        "targetTag": "SELECT",
+        "targetValue": "url"
+      },
+      {
+        "text": "소재 URL",
+        "for": "_r_c_",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "파일 형식",
+        "for": "_r_d_",
+        "targetTag": "SELECT",
+        "targetValue": "video/mp4"
+      },
+      {
+        "text": "대체텍스트",
+        "for": "_r_e_",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "적용 단위",
+        "for": "_r_14_",
+        "targetTag": "SELECT",
+        "targetValue": "site"
+      },
+      {
+        "text": "고정 대상 ID",
+        "for": "_r_15_",
+        "targetTag": "INPUT",
+        "targetValue": "site-local"
+      },
+      {
+        "text": "이 대상의 광고",
+        "for": "_r_1e_",
+        "targetTag": "SELECT",
+        "targetValue": "replace"
+      },
+      {
+        "text": "클릭 목적지 URL",
+        "for": "_r_1s_",
+        "targetTag": "INPUT",
+        "targetValue": "",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "이 광고의 스킵",
+        "for": "_r_1t_",
+        "targetTag": "SELECT",
+        "targetValue": "after",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "스킵 대기 (초)",
+        "for": "_r_1u_",
+        "targetTag": "INPUT",
+        "targetValue": "1",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "추가할 소재",
+        "for": "_r_1n_",
+        "targetTag": "SELECT",
+        "targetValue": "creative-0afaf3d354178e48df2623e0265cf10f",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "본편 재생 위치 (초)",
+        "for": "_r_21_",
+        "targetTag": "INPUT",
+        "targetValue": "10",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "추가할 소재",
+        "for": "_r_22_",
+        "targetTag": "SELECT",
+        "targetValue": "",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "본편 영상 URL",
+        "for": "_r_18_",
+        "targetTag": "INPUT",
+        "targetValue": "/demo-media/grok-20261018/content-scene-01.mp4"
+      },
+      {
+        "text": "고정 영상 ID",
+        "for": "_r_19_",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "플레이어 프리셋",
+        "for": "_r_1c_",
+        "targetTag": "SELECT",
+        "targetValue": "default"
+      }
+    ]
+  },
+  "b": {
+    "label": "mid item skip",
+    "duplicateIds": [],
+    "labels": [
+      {
+        "text": "소재 이름",
+        "for": "aa-title-creatives-name",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "등록 방식",
+        "for": "_r_b_",
+        "targetTag": "SELECT",
+        "targetValue": "url"
+      },
+      {
+        "text": "소재 URL",
+        "for": "_r_c_",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "파일 형식",
+        "for": "_r_d_",
+        "targetTag": "SELECT",
+        "targetValue": "video/mp4"
+      },
+      {
+        "text": "대체텍스트",
+        "for": "_r_e_",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "적용 단위",
+        "for": "_r_14_",
+        "targetTag": "SELECT",
+        "targetValue": "site"
+      },
+      {
+        "text": "고정 대상 ID",
+        "for": "_r_15_",
+        "targetTag": "INPUT",
+        "targetValue": "site-local"
+      },
+      {
+        "text": "이 대상의 광고",
+        "for": "_r_1e_",
+        "targetTag": "SELECT",
+        "targetValue": "replace"
+      },
+      {
+        "text": "클릭 목적지 URL",
+        "for": "_r_1s_",
+        "targetTag": "INPUT",
+        "targetValue": "",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "이 광고의 스킵",
+        "for": "_r_1t_",
+        "targetTag": "SELECT",
+        "targetValue": "after",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "스킵 대기 (초)",
+        "for": "_r_1u_",
+        "targetTag": "INPUT",
+        "targetValue": "1",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "추가할 소재",
+        "for": "_r_1n_",
+        "targetTag": "SELECT",
+        "targetValue": "creative-0afaf3d354178e48df2623e0265cf10f",
+        "article": "프리롤 · 시작 전"
+      },
+      {
+        "text": "본편 재생 위치 (초)",
+        "for": "_r_21_",
+        "targetTag": "INPUT",
+        "targetValue": "10",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "클릭 목적지 URL",
+        "for": "_r_27_",
+        "targetTag": "INPUT",
+        "targetValue": "",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "이 광고의 스킵",
+        "for": "_r_28_",
+        "targetTag": "SELECT",
+        "targetValue": "after",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "스킵 대기 (초)",
+        "for": "_r_29_",
+        "targetTag": "INPUT",
+        "targetValue": "1",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "추가할 소재",
+        "for": "_r_22_",
+        "targetTag": "SELECT",
+        "targetValue": "creative-c0e45eddb3d3820b1d733e9aac8766e9",
+        "article": "미드롤 · 재생 중"
+      },
+      {
+        "text": "본편 영상 URL",
+        "for": "_r_18_",
+        "targetTag": "INPUT",
+        "targetValue": "/demo-media/grok-20261018/content-scene-01.mp4"
+      },
+      {
+        "text": "고정 영상 ID",
+        "for": "_r_19_",
+        "targetTag": "INPUT",
+        "targetValue": ""
+      },
+      {
+        "text": "플레이어 프리셋",
+        "for": "_r_1c_",
+        "targetTag": "SELECT",
+        "targetValue": "default"
+      }
+    ]
+  },
+  "c": {
+    "postArticles": [
+      "프리롤 · 시작 전\n?\n구간 삭제\n1. QA 이어버드 ",
+      "미드롤 · 재생 중\n구간 삭제\n본편 재생 위치 (초)\n",
+      "포스트롤 · 종료 후\n?\n구간 삭제\n\n구간에 광고를 추"
+    ],
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요.",
+      "",
+      ""
+    ],
+    "addButtons": [
+      "프리롤",
+      "미드롤",
+      "포스트롤"
+    ]
+  }
+}

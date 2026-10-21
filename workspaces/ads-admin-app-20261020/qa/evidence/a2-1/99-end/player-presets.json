@@ -1,0 +1,175 @@
+{
+    "schema": 2,
+    "revision": 19,
+    "defaultPresetId": "p-qrgzuc8ste",
+    "presets": [
+        {
+            "id": "p-qrgzuc8ste",
+            "name": "QA Video.js 중립 v2",
+            "playerType": "videojs",
+            "language": "en",
+            "theme": {
+                "accentColor": "#0f5132",
+                "accentTextColor": "#ffffff",
+                "borderColor": null,
+                "borderRadius": 12,
+                "fontFamily": null,
+                "objectFit": null,
+                "scaleUnit": null
+            },
+            "playback": {
+                "autoplay": null,
+                "muted": null,
+                "loop": null,
+                "preload": null
+            },
+            "display": {
+                "poster": null,
+                "title": null
+            },
+            "input": {
+                "hotkeys": null,
+                "gestures": null
+            },
+            "controls": {
+                "captions": null,
+                "quality": null,
+                "audioTrack": null,
+                "playbackRate": null,
+                "pip": null,
+                "fullscreen": null,
+                "thumbnails": null,
+                "seekButtons": null
+            },
+            "logo": {
+                "assetId": null,
+                "position": null,
+                "margin": null,
+                "width": null,
+                "opacity": null,
+                "href": null,
+                "alt": null,
+                "hideDuringAds": null,
+                "hideWithControls": null
+            },
+            "ads": {
+                "labels": {
+                    "advertisement": null,
+                    "sequence": null,
+                    "playPause": null,
+                    "mute": null,
+                    "volume": null,
+                    "advertiser": null,
+                    "newWindow": null,
+                    "skip": "Skip ad",
+                    "skipCountdown": null,
+                    "timer": null,
+                    "loading": null,
+                    "paused": null,
+                    "blocked": null,
+                    "enterFullscreen": null,
+                    "exitFullscreen": null,
+                    "fullscreenError": null
+                },
+                "accentColor": null,
+                "skipRadius": null,
+                "fontSize": 15,
+                "progress": {
+                    "sequence": null,
+                    "timer": null,
+                    "bar": null
+                },
+                "timeouts": {
+                    "loadSeconds": null,
+                    "stallSeconds": null
+                }
+            },
+            "createdAt": "2026-10-20T18:20:29Z",
+            "updatedAt": "2026-10-21T06:12:48Z"
+        },
+        {
+            "id": "p-6aiokv34yw",
+            "name": "QA 기본 video",
+            "playerType": "native",
+            "language": "ko",
+            "theme": {
+                "accentColor": null,
+                "accentTextColor": null,
+                "borderColor": null,
+                "borderRadius": null,
+                "fontFamily": null,
+                "objectFit": null,
+                "scaleUnit": null
+            },
+            "playback": {
+                "autoplay": null,
+                "muted": null,
+                "loop": null,
+                "preload": null
+            },
+            "display": {
+                "poster": null,
+                "title": null
+            },
+            "input": {
+                "hotkeys": null,
+                "gestures": null
+            },
+            "controls": {
+                "captions": null,
+                "quality": null,
+                "audioTrack": null,
+                "playbackRate": null,
+                "pip": null,
+                "fullscreen": null,
+                "thumbnails": null,
+                "seekButtons": null
+            },
+            "logo": {
+                "assetId": null,
+                "position": null,
+                "margin": null,
+                "width": null,
+                "opacity": null,
+                "href": null,
+                "alt": null,
+                "hideDuringAds": null,
+                "hideWithControls": null
+            },
+            "ads": {
+                "labels": {
+                    "advertisement": null,
+                    "sequence": null,
+                    "playPause": null,
+                    "mute": null,
+                    "volume": null,
+                    "advertiser": null,
+                    "newWindow": null,
+                    "skip": null,
+                    "skipCountdown": null,
+                    "timer": null,
+                    "loading": null,
+                    "paused": null,
+                    "blocked": null,
+                    "enterFullscreen": null,
+                    "exitFullscreen": null,
+                    "fullscreenError": null
+                },
+                "accentColor": null,
+                "skipRadius": null,
+                "fontSize": null,
+                "progress": {
+                    "sequence": null,
+                    "timer": null,
+                    "bar": null
+                },
+                "timeouts": {
+                    "loadSeconds": 8,
+                    "stallSeconds": null
+                }
+            },
+            "createdAt": "2026-10-20T18:22:36Z",
+            "updatedAt": "2026-10-20T18:22:36Z"
+        }
+    ]
+}

@@ -1,0 +1,305 @@
+{
+  "size": "1280x900",
+  "steps": [
+    {
+      "label": "custom chosen (empty address)",
+      "after": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      },
+      "query": "?logo=custom",
+      "img": "custom",
+      "imgDisabled": false,
+      "offReason": null,
+      "nativeReason": null,
+      "urlShown": true,
+      "url": "",
+      "slot": null,
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "1 wrong address",
+      "change": {
+        "before": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "sameTask": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "ms": 2
+      },
+      "failed": {
+        "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+        "warn": true,
+        "waitedMs": 12
+      },
+      "after": {
+        "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+        "warn": true
+      },
+      "query": "?logo=%2Fexamples%2Fno-such-logo.png",
+      "img": "custom",
+      "imgDisabled": false,
+      "offReason": null,
+      "nativeReason": null,
+      "urlShown": true,
+      "url": "/examples/no-such-logo.png",
+      "slot": {
+        "hidden": true,
+        "src": "http://127.0.0.1:18781/examples/no-such-logo.png",
+        "complete": true,
+        "natural": "0x0"
+      },
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "2 right address",
+      "change": {
+        "before": {
+          "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+          "warn": true
+        },
+        "sameTask": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "ms": 2.9
+      },
+      "after": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      },
+      "query": "?logo=%2Fexamples%2Fsample-logo.png",
+      "img": "custom",
+      "imgDisabled": false,
+      "offReason": null,
+      "nativeReason": null,
+      "urlShown": true,
+      "url": "/examples/sample-logo.png",
+      "slot": {
+        "hidden": false,
+        "src": "http://127.0.0.1:18781/examples/sample-logo.png",
+        "complete": true,
+        "natural": "512x512"
+      },
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "3 wrong again",
+      "change": {
+        "before": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "sameTask": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "ms": 2.3
+      },
+      "failed": {
+        "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+        "warn": true,
+        "waitedMs": 9
+      },
+      "after": {
+        "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+        "warn": true
+      },
+      "query": "?logo=%2Fexamples%2Fno-such-logo.png",
+      "img": "custom",
+      "imgDisabled": false,
+      "offReason": null,
+      "nativeReason": null,
+      "urlShown": true,
+      "url": "/examples/no-such-logo.png",
+      "slot": {
+        "hidden": true,
+        "src": "http://127.0.0.1:18781/examples/no-such-logo.png",
+        "complete": true,
+        "natural": "0x0"
+      },
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "4 없음",
+      "change": {
+        "before": {
+          "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+          "warn": true
+        },
+        "sameTask": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        }
+      },
+      "after": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      },
+      "query": "",
+      "img": "",
+      "imgDisabled": false,
+      "offReason": "로고 이미지를 고르면 나머지 칸을 쓸 수 있어요. 지금은 플레이어에 로고가 없어요.",
+      "nativeReason": null,
+      "urlShown": false,
+      "url": "",
+      "slot": null,
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "5 sample PNG",
+      "change": {
+        "before": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "sameTask": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        }
+      },
+      "after": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      },
+      "query": "?logo=sample-png",
+      "img": "sample-png",
+      "imgDisabled": false,
+      "offReason": null,
+      "nativeReason": null,
+      "urlShown": false,
+      "url": "",
+      "slot": {
+        "hidden": false,
+        "src": "http://127.0.0.1:18781/examples/sample-logo.png",
+        "complete": true,
+        "natural": "512x512"
+      },
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "6 custom again (last address)",
+      "change": {
+        "before": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        },
+        "sameTask": {
+          "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+          "warn": false
+        }
+      },
+      "failed": {
+        "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+        "warn": true,
+        "waitedMs": 11
+      },
+      "after": {
+        "text": "이미지를 불러오지 못해 플레이어에 로고를 숨겼어요. 주소와 파일을 확인해 주세요.",
+        "warn": true
+      },
+      "query": "?logo=%2Fexamples%2Fno-such-logo.png",
+      "img": "custom",
+      "imgDisabled": false,
+      "offReason": null,
+      "nativeReason": null,
+      "urlShown": true,
+      "url": "/examples/no-such-logo.png",
+      "slot": {
+        "hidden": true,
+        "src": "http://127.0.0.1:18781/examples/no-such-logo.png",
+        "complete": true,
+        "natural": "0x0"
+      },
+      "skin": "solad-video-skin"
+    },
+    {
+      "label": "7 native preset",
+      "after": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      },
+      "query": "?preset=p-pchm59hhyv&logo=%2Fexamples%2Fno-such-logo.png",
+      "img": "custom",
+      "imgDisabled": true,
+      "offReason": null,
+      "nativeReason": "기본 video 프리셋에서는 로고를 쓸 수 없어요. Video.js 프리셋을 고르면 쓸 수 있어요.",
+      "urlShown": true,
+      "url": "/examples/no-such-logo.png",
+      "slot": null,
+      "skin": null
+    }
+  ],
+  "late": {
+    "aTypedFocused": "logo-url",
+    "aActiveAfterSelect": "",
+    "a": {
+      "img": "",
+      "query": "",
+      "offReason": "로고 이미지를 고르면 나머지 칸을 쓸 수 있어요. 지금은 플레이어에 로고가 없어요.",
+      "urlShown": false,
+      "help": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      },
+      "slot": "none"
+    },
+    "bAfterBlur": "?logo=%2Fexamples%2Fsample-logo.png",
+    "b": {
+      "img": "",
+      "query": "",
+      "offReason": "로고 이미지를 고르면 나머지 칸을 쓸 수 있어요. 지금은 플레이어에 로고가 없어요.",
+      "urlShown": false,
+      "help": {
+        "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+        "warn": false
+      }
+    },
+    "c": {
+      "img": "",
+      "query": "",
+      "offReason": "로고 이미지를 고르면 나머지 칸을 쓸 수 있어요. 지금은 플레이어에 로고가 없어요.",
+      "urlShown": false
+    }
+  },
+  "originalHelp": {
+    "text": "미리보기 전용이라 저장하지 않아요. 로고 올리기(준비 중)는 PNG, JPEG, WebP만 받아요.",
+    "warn": false
+  },
+  "overflow": {
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "horizontalOverflow": false
+  },
+  "events": 0,
+  "api": [
+    "GET bootstrap",
+    "POST login",
+    "GET creatives",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/index.html"
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

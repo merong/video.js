@@ -1,0 +1,71 @@
+{
+  "api": [
+    {
+      "t": 762,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": false
+    },
+    {
+      "t": 876,
+      "method": "POST",
+      "action": "login",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": false,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1135,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1160,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1246,
+      "method": "POST",
+      "action": "creative-upload",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": true,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1289,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "bad": [],
+  "logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

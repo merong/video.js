@@ -1,0 +1,695 @@
+{
+  "schedule": {
+    "rlo": {
+      "group": "block",
+      "codepoints": [
+        "U+202E"
+      ],
+      "length": 5,
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요."
+      ],
+      "errormessage": null,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-schedule-target-id",
+        "text": "",
+        "role": null
+      },
+      "alerts": [
+        "편성을 불러오지 못했어요. 고정 대상 ID를 확인해 주세요."
+      ],
+      "repeatedSentence": false,
+      "editorShown": 0,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "valueLength": 13,
+        "maxLength": 128,
+        "readOnly": false,
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "c1-nel": {
+      "group": "block",
+      "codepoints": [
+        "U+0085"
+      ],
+      "length": 5,
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요."
+      ],
+      "errormessage": null,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-schedule-target-id",
+        "text": "",
+        "role": null
+      },
+      "alerts": [
+        "편성을 불러오지 못했어요. 고정 대상 ID를 확인해 주세요."
+      ],
+      "repeatedSentence": false,
+      "editorShown": 0,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "valueLength": 13,
+        "maxLength": 128,
+        "readOnly": false,
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "ideographic-space-only": {
+      "group": "block",
+      "codepoints": [
+        "U+3000"
+      ],
+      "length": 1,
+      "api": [],
+      "valueLength": 1,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID를 입력해 주세요."
+      ],
+      "errormessage": null,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-schedule-target-id",
+        "text": "",
+        "role": null
+      },
+      "alerts": [
+        "편성을 불러오지 못했어요. 고정 대상 ID를 확인해 주세요."
+      ],
+      "repeatedSentence": false,
+      "editorShown": 0,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "valueLength": 13,
+        "maxLength": 128,
+        "readOnly": false,
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "too-long-129": {
+      "group": "block",
+      "codepoints": [],
+      "length": 129,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "valueLength": 128,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "valueLength": 13,
+        "maxLength": 128,
+        "readOnly": false,
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "lrm": {
+      "group": "observe",
+      "codepoints": [
+        "U+200E"
+      ],
+      "length": 5,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    },
+    "alm": {
+      "group": "observe",
+      "codepoints": [
+        "U+061C"
+      ],
+      "length": 5,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    },
+    "zwsp-only": {
+      "group": "observe",
+      "codepoints": [
+        "U+200B"
+      ],
+      "length": 1,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "valueLength": 1,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    },
+    "valid": {
+      "group": "valid",
+      "codepoints": [],
+      "length": 13,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "valueLength": 13,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    }
+  },
+  "setup": {
+    "rlo": {
+      "group": "block",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [
+        "영상 ID를 고치면 설치 코드를 만들어요."
+      ],
+      "codeShown": false,
+      "copyButtons": [],
+      "videoIdLine": null
+    },
+    "c1-nel": {
+      "group": "block",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [
+        "영상 ID를 고치면 설치 코드를 만들어요."
+      ],
+      "codeShown": false,
+      "copyButtons": [],
+      "videoIdLine": null
+    },
+    "ideographic-space-only": {
+      "group": "block",
+      "api": [],
+      "valueLength": 1,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID를 입력해 주세요.",
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [
+        "영상 ID를 고치면 설치 코드를 만들어요."
+      ],
+      "codeShown": false,
+      "copyButtons": [],
+      "videoIdLine": null
+    },
+    "too-long-129": {
+      "group": "block",
+      "api": [],
+      "valueLength": 128,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-aaaaaaaaaaaaaaaaaaaaaaaa-1508eo5\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "lrm": {
+      "group": "observe",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-a1-qa-1jbiu9p\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1%E2%80%8Eqa\" video-id=\"a1<U+200E>qa\"></media-ads>"
+    },
+    "alm": {
+      "group": "observe",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-a1-qa-1cxj3pf\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1%D8%9Cqa\" video-id=\"a1<U+61C>qa\"></media-ads>"
+    },
+    "zwsp-only": {
+      "group": "observe",
+      "api": [],
+      "valueLength": 1,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-3yaiq2\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=%E2%80%8B\" video-id=\"<U+200B>\"></media-ads>"
+    },
+    "valid": {
+      "group": "valid",
+      "api": [],
+      "valueLength": 13,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-a1-qa-video-1-1swdj1c\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1-qa-video-1\" video-id=\"a1-qa-video-1\"></media-ads>"
+    }
+  },
+  "playTest": {
+    "rlo": {
+      "group": "block",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요.",
+        "고정 영상 ID를 고치면 재생 테스트 링크를 만들어요."
+      ]
+    },
+    "c1-nel": {
+      "group": "block",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요.",
+        "고정 영상 ID를 고치면 재생 테스트 링크를 만들어요."
+      ]
+    },
+    "ideographic-space-only": {
+      "group": "block",
+      "api": [],
+      "valueLength": 1,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID를 입력해 주세요.",
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "영상 ID를 입력해 주세요.",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요.",
+        "고정 영상 ID를 고치면 재생 테스트 링크를 만들어요."
+      ]
+    },
+    "too-long-129": {
+      "group": "block",
+      "api": [],
+      "valueLength": 128,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [
+        {
+          "text": "기본 video로 재생 (새 탭)",
+          "videoParamCodepoints": [],
+          "videoParamAscii": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        {
+          "text": "Video.js로 재생 (새 탭)",
+          "videoParamCodepoints": [],
+          "videoParamAscii": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+      ]
+    },
+    "lrm": {
+      "group": "observe",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [
+        {
+          "text": "기본 video로 재생 (새 탭)",
+          "videoParamCodepoints": [
+            "U+200E"
+          ],
+          "videoParamAscii": "a1?qa"
+        },
+        {
+          "text": "Video.js로 재생 (새 탭)",
+          "videoParamCodepoints": [
+            "U+200E"
+          ],
+          "videoParamAscii": "a1?qa"
+        }
+      ],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+      ]
+    },
+    "alm": {
+      "group": "observe",
+      "api": [],
+      "valueLength": 5,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [
+        {
+          "text": "기본 video로 재생 (새 탭)",
+          "videoParamCodepoints": [
+            "U+061C"
+          ],
+          "videoParamAscii": "a1?qa"
+        },
+        {
+          "text": "Video.js로 재생 (새 탭)",
+          "videoParamCodepoints": [
+            "U+061C"
+          ],
+          "videoParamAscii": "a1?qa"
+        }
+      ],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+      ]
+    },
+    "zwsp-only": {
+      "group": "observe",
+      "api": [],
+      "valueLength": 1,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [
+        {
+          "text": "기본 video로 재생 (새 탭)",
+          "videoParamCodepoints": [
+            "U+200B"
+          ],
+          "videoParamAscii": "?"
+        },
+        {
+          "text": "Video.js로 재생 (새 탭)",
+          "videoParamCodepoints": [
+            "U+200B"
+          ],
+          "videoParamAscii": "?"
+        }
+      ],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+      ]
+    },
+    "valid": {
+      "group": "valid",
+      "api": [],
+      "valueLength": 13,
+      "maxLength": 128,
+      "readOnly": false,
+      "invalid": null,
+      "describedBy": [
+        "재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요."
+      ],
+      "errormessage": null,
+      "playLinks": [
+        {
+          "text": "기본 video로 재생 (새 탭)",
+          "videoParamCodepoints": [],
+          "videoParamAscii": "a1-qa-video-1"
+        },
+        {
+          "text": "Video.js로 재생 (새 탭)",
+          "videoParamCodepoints": [],
+          "videoParamAscii": "a1-qa-video-1"
+        }
+      ],
+      "previewButton": {
+        "text": "미리보기 준비",
+        "disabled": true
+      },
+      "alerts": [],
+      "notes": [
+        "본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.",
+        "고정 영상 ID",
+        "본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요. 도움말이나 다른 메뉴를 열면 미리보기가 멈춰요."
+      ]
+    }
+  },
+  "focus": {
+    "api": [
+      "POST schedule-save 200"
+    ],
+    "focus": {
+      "tag": "BUTTON",
+      "id": null,
+      "text": "초안 저장",
+      "role": null
+    },
+    "starterDisabled": false,
+    "status": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요.",
+      "초안 r3을 저장했어요. 현재 게시본은 바뀌지 않았어요."
+    ]
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "before": {
+    "accent": "#0f5132",
+    "adsAccent": null,
+    "font": 15,
+    "radius": 12,
+    "updatedAt": "2026-10-20T18:28:18Z"
+  },
+  "original": {
+    "accent": "#0f5132",
+    "adsAccent": null,
+    "font": 15,
+    "radius": 12
+  },
+  "sameField": {
+    "aSave": [
+      "POST player-preset-save 200"
+    ],
+    "serverAfterA": {
+      "accent": "#111111",
+      "adsAccent": null,
+      "font": 15,
+      "radius": 12,
+      "updatedAt": "2026-10-20T18:28:23Z"
+    },
+    "bFirst": {
+      "api": [
+        "POST player-preset-save 409 revision_conflict"
+      ],
+      "live": {
+        "status": [
+          "미리보기가 준비됐어요."
+        ],
+        "alert": [
+          "다른 곳에서 먼저 바뀌었어요. 입력은 그대로 두었어요. 다시 불러온 뒤 저장해 주세요."
+        ],
+        "pageStatus": [
+          "미리보기가 준비됐어요."
+        ]
+      }
+    },
+    "bReload": {
+      "focusAfterReload": {
+        "tag": "H2",
+        "type": null,
+        "name": "프리셋 수정",
+        "focusVisible": false
+      },
+      "formButtonsAt409": [
+        "지우기",
+        "지우기",
+        "프리셋 저장",
+        "프리셋 목록 다시 불러오기"
+      ],
+      "reloadButtons": [
+        "프리셋 목록 다시 불러오기"
+      ],
+      "dialogText": null,
+      "api": [
+        "GET player-presets 200"
+      ],
+      "live": {
+        "status": [
+          "미리보기가 준비됐어요.",
+          "프리셋 목록을 다시 불러왔어요. 다른 곳에서 이 프리셋을 먼저 저장했어요. 양쪽에서 바꾼 항목(강조색)은 어느 값을 쓸지 골라 주세요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "미리보기가 준비됐어요.",
+          "프리셋 목록을 다시 불러왔어요. 다른 곳에서 이 프리셋을 먼저 저장했어요. 양쪽에서 바꾼 항목(강조색)은 어느 값을 쓸지 골라 주세요."
+        ]
+      },
+      "form": {
+        "강조색": "#222222",
+        "광고 음량 막대 색": "",
+        "광고 글자 크기 (px)": "15",
+        "모서리 둥글기 (px)": "12"
+      },
+      "fieldStates": {
+        "강조색": {
+          "invalid": null,
+          "described": [
+            "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+          ]
+        },
+        "광고 음량 막대 색": {
+          "invalid": null,
+          "described": [
+            "흰색 (강조색이 있으면 그 색)",
+            "광고 음량 막대 색만 바뀌어요. 건너뛰기 버튼과 초점 테두리는 그대로예요."
+          ]
+        },
+        "광고 글자 크기 (px)": {
+          "invalid": null,
+          "described": [
+            "11–18 정수예요. 플레이어 폭이 280px 이하이면 글자가 11px로 고정돼요."
+          ]
+        },
+        "모서리 둥글기 (px)": {
+          "invalid": null,
+          "described": [
+            "0–32 정수예요. 광고 화면 모서리도 따라가요."
+          ]
+        }
+      }
+    },
+    "conflictUi": {
+      "noteText": null,
+      "saveDisabled": {
+        "disabled": true,
+        "reason": [
+          "다른 곳에서도 바꾼 항목이 있어요. 어느 값을 쓸지 먼저 골라 주세요."
+        ]
+      },
+      "choices": [
+        "다른 곳에서 저장한 값 쓰기",
+        "내 입력 유지"
+      ]
+    },
+    "choice": "내 입력 유지",
+    "afterChoice": {
+      "live": {
+        "status": [
+          "미리보기가 준비됐어요.",
+          "내 입력을 쓰기로 했어요. 저장하면 다른 곳에서 바꾼 값을 덮어써요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "미리보기가 준비됐어요.",
+          "내 입력을 쓰기로 했어요. 저장하면 다른 곳에서 바꾼 값을 덮어써요."
+        ]
+      },
+      "form": {
+        "강조색": "#222222",
+        "광고 음량 막대 색": "",
+        "광고 글자 크기 (px)": "15",
+        "모서리 둥글기 (px)": "12"
+      },
+      "saveDisabled": false,
+      "focus": {
+        "tag": "INPUT",
+        "type": null,
+        "name": "강조색",
+        "value": "#222222",
+        "focusVisible": true
+      },
+      "choiceButtonsLeft": 0
+    },
+    "bSecond": {
+      "api": [
+        "POST player-preset-save 200"
+      ],
+      "live": {
+        "status": [
+          "미리보기가 준비됐어요.",
+          "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "미리보기가 준비됐어요.",
+          "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ]
+      }
+    },
+    "serverAfterB": {
+      "accent": "#222222",
+      "adsAccent": null,
+      "font": 15,
+      "radius": 12,
+      "updatedAt": "2026-10-20T18:28:29Z"
+    }
+  },
+  "restore": {
+    "api": [
+      "POST player-preset-save 200"
+    ],
+    "server": {
+      "accent": "#0f5132",
+      "adsAccent": null,
+      "font": 15,
+      "radius": 12,
+      "updatedAt": "2026-10-20T18:28:33Z"
+    }
+  },
+  "console": {
+    "a": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ],
+    "b": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      }
+    ]
+  }
+}

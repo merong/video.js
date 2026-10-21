@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-20T13:15:22.493Z",
+  "list": {
+    "ok": true,
+    "data": {
+      "revision": 0,
+      "defaultPresetId": "default",
+      "presets": [
+        {
+          "id": "default",
+          "name": "기본",
+          "playerType": "videojs",
+          "skin": "default",
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": null,
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "createdAt": null,
+          "updatedAt": null,
+          "builtIn": true
+        }
+      ]
+    }
+  },
+  "public": {
+    "status": 200,
+    "headers": {
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "content-type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "ok": true,
+      "data": {
+        "id": "default",
+        "revision": 0,
+        "playerType": "videojs",
+        "skin": "default",
+        "skinTag": "video-skin",
+        "styles": {
+          "css": "video.css",
+          "js": "video.js"
+        },
+        "css": {},
+        "attributes": {}
+      }
+    }
+  }
+}

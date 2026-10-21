@@ -1,0 +1,429 @@
+{
+  "help": {
+    "rows": {
+      "opt-data-captions": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-data-captions",
+        "text": "data-captions#‘data-captions’ 항목 주소받는 값WebVTT 주소기본값없음설명자막 파일이에요. 플레이어 화면 언어의 자막으로 붙이고 처음에는 꺼 둬요. 자막 버튼은 프리셋의 자막이 정하고, Video.js 플레이어에서만 써요.적용 단계적용"
+      },
+      "opt-mount-captions": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-mount-captions",
+        "text": "captions#‘captions’ 항목 주소받는 값WebVTT 주소기본값data-captions설명자막 파일 하나예요.적용 단계적용"
+      },
+      "opt-mount-previewlogo": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-mount-previewlogo",
+        "text": "preview.logo#‘preview.logo’ 항목 주소받는 값/경로 또는 http(s):// 이미지 주소기본값없음(로고 없음)설명미리보기 전용 로고 이미지예요. thumbnails와 같은 주소 규칙을 쓰고, 틀리면 그 값만 버리고 onError로 알려요. 위치·폭 같은 값은 프리셋의 logo나 overrides.logo가 정하고, 기본 video에서는 쓰지 않아요. data-* 속성과 설치 코드에는 없어요.적용 단계적용"
+      },
+      "opt-query-seekbuttons": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-seekbuttons",
+        "text": "seekButtons#‘seekButtons’ 항목 주소받는 값'' | 5 | 10 | 15 | 30기본값프리셋 값설명데모에서 프리셋 대신 쓸 이전·이후 버튼의 건너뛰는 폭(초)이에요. 빈 값이면 버튼을 숨겨요. 기본 video에서는 쓰지 않아요.적용 단계적용"
+      },
+      "opt-query-captions": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-captions",
+        "text": "captions#‘captions’ 항목 주소받는 값true | false기본값프리셋 값설명데모에서 프리셋 대신 쓸 자막 버튼이에요. 끄면 단축키 c도 꺼져요. 기본 video에서는 쓰지 않아요.적용 단계적용"
+      },
+      "opt-query-captionsurl": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-captionsurl",
+        "text": "captionsUrl#‘captionsUrl’ 항목 주소받는 값WebVTT 주소기본값없음설명데모 플레이어의 자막 파일이에요. 설치 코드에는 data-captions로 들어가요. Video.js 플레이어에서만 써요.적용 단계적용"
+      },
+      "opt-query-logo": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logo",
+        "text": "logo#‘logo’ 항목 주소받는 값sample-svg | sample-png | custom | /경로 또는 http(s):// 주소기본값없음설명데모에서 미리 볼 로고 이미지예요. 프리셋 값이 아닌 미리보기 전용 입력(preview.logo)이라 설치 코드에는 들어가지 않아요. custom은 주소를 넣기 전이라 이미지가 없어요. 기본 video에서는 쓰지 않아요.적용 단계적용"
+      },
+      "opt-query-logoposition": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logoposition",
+        "text": "logoPosition#‘logoPosition’ 항목 주소받는 값top-left | top-right | bottom-left | bottom-right기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고 위치예요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logowidth": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logowidth",
+        "text": "logoWidth#‘logoWidth’ 항목 주소받는 값px(24 이상 240 이하 정수)기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고 너비예요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logoopacity": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logoopacity",
+        "text": "logoOpacity#‘logoOpacity’ 항목 주소받는 값%(10 이상 100 이하 정수)기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고 불투명도예요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logomargin": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logomargin",
+        "text": "logoMargin#‘logoMargin’ 항목 주소받는 값px(0 이상 48 이하 정수)기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고와 가장자리 사이 간격이에요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logohref": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logohref",
+        "text": "logoHref#‘logoHref’ 항목 주소받는 값'' | http(s):// 주소기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고 링크예요. 빈 값이면 링크를 비워요. 대체 텍스트(logoAlt나 프리셋 값)가 없으면 링크 없이 이미지만 보여요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logoalt": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logoalt",
+        "text": "logoAlt#‘logoAlt’ 항목 주소받는 값'' | 글자, 80자 이하기본값프리셋 값설명데모에서 프리셋 대신 쓸 로고 대체 텍스트예요. 빈 값이면 비워요. 로고 링크는 대체 텍스트가 있어야 쓰여요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logohideduringads": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logohideduringads",
+        "text": "logoHideDuringAds#‘logoHideDuringAds’ 항목 주소받는 값true | false기본값프리셋 값설명데모에서 프리셋 대신 쓸 광고 중 로고 숨김이에요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "opt-query-logohidewithcontrols": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#opt-query-logohidewithcontrols",
+        "text": "logoHideWithControls#‘logoHideWithControls’ 항목 주소받는 값true | false기본값프리셋 값설명데모에서 프리셋 대신 쓸 컨트롤과 함께 로고 숨김이에요. 컨트롤이 숨을 때 로고도 숨겨요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요.적용 단계준비 중(A2-3)"
+      },
+      "field-controls-seekButtons": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#field-controls-seekButtons",
+        "text": "controls.seekButtons#‘controls.seekButtons’ 항목 주소받는 값5초 | 10초 | 15초 | 30초기본값비움(숨김)설명재생 버튼 뒤에 붙는 뒤로·앞으로 건너뛰기 버튼의 초예요. 화면 양쪽 두 번 탭도 같은 초만큼 움직여요. 좁은 화면(28rem 미만)에서는 아이콘 안 숫자를 빼요.적용 단계적용"
+      },
+      "field-controls-captions": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#field-controls-captions",
+        "text": "controls.captions#‘controls.captions’ 항목 주소받는 값true | false기본값true설명자막 버튼, 설정의 자막 항목, C 단축키예요. 끄면 셋 다 없어요. 켜도 자막 트랙이 없으면 버튼이 \"자막 없음\"으로 흐리게 보이고 눌러도 아무 일이 없어요. 좁은 화면(32rem 미만)에서는 자막 버튼이 숨어요.적용 단계적용"
+      },
+      "field-logo-position": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#field-logo-position",
+        "text": "logo.position#‘logo.position’ 항목 주소받는 값top-left | top-right | bottom-left | bottom-right기본값top-right설명로고 위치예요.적용 단계준비 중(A2-3)"
+      },
+      "field-logo-assetId": {
+        "found": true,
+        "tag": "TR",
+        "target": true,
+        "inView": true,
+        "href": "#field-logo-assetId",
+        "text": "logo.assetId#‘logo.assetId’ 항목 주소받는 값아직 받지 않음기본값비움(로고 없음)설명업로드한 로고 이미지예요. 업로드가 준비될 때까지 값을 받지 않아요. 지금은 예제 데모에서 샘플 로고로 미리 볼 수 있어요.적용 단계준비 중(A2-3)"
+      }
+    },
+    "invalidPreviewLogo": [
+      "invalid_preview_logo onError(미리보기 전용) 미리보기 로고 주소가 틀려요. 로고 없이 재생해요."
+    ],
+    "errorCodes": [
+      "missing_video_id",
+      "missing_src",
+      "invalid_src",
+      "preset_not_found",
+      "preset_unavailable",
+      "preset_invalid",
+      "invalid_overrides",
+      "schedule_unavailable",
+      "load_failed",
+      "player_type",
+      "invalid_preview_preset",
+      "invalid_preview_schedule",
+      "invalid_preview_logo",
+      "preview_schedule_unavailable"
+    ],
+    "ids": {
+      "now": 200,
+      "a2d": 185,
+      "missing": [],
+      "added": [
+        "opt-query-seekbuttons",
+        "opt-query-captions",
+        "opt-query-captionsurl",
+        "opt-query-logo",
+        "opt-query-logoposition",
+        "opt-query-logowidth",
+        "opt-query-logoopacity",
+        "opt-query-logomargin",
+        "opt-query-logohref",
+        "opt-query-logoalt",
+        "opt-query-logohideduringads",
+        "opt-query-logohidewithcontrols",
+        "opt-data-captions",
+        "opt-mount-captions",
+        "opt-mount-previewlogo"
+      ]
+    },
+    "overflow": 0
+  },
+  "adminOptions": {
+    "layout": {
+      "tables": 8,
+      "visibleTables": 7,
+      "helpLinks": 85
+    },
+    "rows": [
+      {
+        "link": "/examples/help.html#opt-data-captions",
+        "name": "‘data-captions’ 도움말 (새 창)",
+        "row": "data-captionsWebVTT 주소없음자막 파일이에요. 플레이어 화면 언어의 자막으로 붙이고 처음에는 꺼 둬요. 자막 버튼은 프리셋의 자막이 정하고, Video.js 플레이어에서만 써요. ?프리셋에서 설정 안 함"
+      },
+      {
+        "link": "/examples/help.html#opt-preview",
+        "name": "‘preview’ 도움말 (새 창)",
+        "row": "previewbooleanfalsetrue면 수집 요청을 보내지 않아요. 관리자 미리보기에서 써요. ?프리셋에서 설정 안 함"
+      },
+      {
+        "link": "/examples/help.html#opt-query-seekbuttons",
+        "name": "‘seekButtons’ 도움말 (새 창)",
+        "row": "seekButtons'' | 5 | 10 | 15 | 30프리셋 값데모에서 프리셋 대신 쓸 이전·이후 버튼의 건너뛰는 폭(초)이에요. 빈 값이면 버튼을 숨겨요. 기본 video에서는 쓰지 않아요. ?이전·이후 버튼"
+      },
+      {
+        "link": "/examples/help.html#opt-query-captions",
+        "name": "‘captions’ 도움말 (새 창)",
+        "row": "captionstrue | false프리셋 값데모에서 프리셋 대신 쓸 자막 버튼이에요. 끄면 단축키 c도 꺼져요. 기본 video에서는 쓰지 않아요. ?자막"
+      },
+      {
+        "link": "/examples/help.html#opt-query-captionsurl",
+        "name": "‘captionsUrl’ 도움말 (새 창)",
+        "row": "captionsUrlWebVTT 주소없음데모 플레이어의 자막 파일이에요. 설치 코드에는 data-captions로 들어가요. Video.js 플레이어에서만 써요. ?프리셋에서 설정 안 함"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logo",
+        "name": "‘logo’ 도움말 (새 창)",
+        "row": "logosample-svg | sample-png | custom | /경로 또는 http(s):// 주소없음데모에서 미리 볼 로고 이미지예요. 프리셋 값이 아닌 미리보기 전용 입력(preview.logo)이라 설치 코드에는 들어가지 않아요. custom은 주소를 넣기 전이라 이미지가 "
+      },
+      {
+        "link": "/examples/help.html#opt-query-logoposition",
+        "name": "‘logoPosition’ 도움말 (새 창)",
+        "row": "logoPositiontop-left | top-right | bottom-left | bottom-right프리셋 값데모에서 프리셋 대신 쓸 로고 위치예요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.position"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logowidth",
+        "name": "‘logoWidth’ 도움말 (새 창)",
+        "row": "logoWidthpx(24 이상 240 이하 정수)프리셋 값데모에서 프리셋 대신 쓸 로고 너비예요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.width"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logoopacity",
+        "name": "‘logoOpacity’ 도움말 (새 창)",
+        "row": "logoOpacity%(10 이상 100 이하 정수)프리셋 값데모에서 프리셋 대신 쓸 로고 불투명도예요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.opacity"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logomargin",
+        "name": "‘logoMargin’ 도움말 (새 창)",
+        "row": "logoMarginpx(0 이상 48 이하 정수)프리셋 값데모에서 프리셋 대신 쓸 로고와 가장자리 사이 간격이에요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.margin"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logohref",
+        "name": "‘logoHref’ 도움말 (새 창)",
+        "row": "logoHref'' | http(s):// 주소프리셋 값데모에서 프리셋 대신 쓸 로고 링크예요. 빈 값이면 링크를 비워요. 대체 텍스트(logoAlt나 프리셋 값)가 없으면 링크 없이 이미지만 보여요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.href"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logoalt",
+        "name": "‘logoAlt’ 도움말 (새 창)",
+        "row": "logoAlt'' | 글자, 80자 이하프리셋 값데모에서 프리셋 대신 쓸 로고 대체 텍스트예요. 빈 값이면 비워요. 로고 링크는 대체 텍스트가 있어야 쓰여요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.alt"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logohideduringads",
+        "name": "‘logoHideDuringAds’ 도움말 (새 창)",
+        "row": "logoHideDuringAdstrue | false프리셋 값데모에서 프리셋 대신 쓸 광고 중 로고 숨김이에요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.hideDuringAds"
+      },
+      {
+        "link": "/examples/help.html#opt-query-logohidewithcontrols",
+        "name": "‘logoHideWithControls’ 도움말 (새 창)",
+        "row": "logoHideWithControlstrue | false프리셋 값데모에서 프리셋 대신 쓸 컨트롤과 함께 로고 숨김이에요. 컨트롤이 숨을 때 로고도 숨겨요. logo를 골랐을 때만 쓰고, 기본 video에서는 쓰지 않아요. ?logo.hideWithControls"
+      }
+    ],
+    "linksMissing": []
+  },
+  "cast": {
+    "demo": {
+      "skin": "solad-video-skin",
+      "cast": 0,
+      "airplay": 0,
+      "buttons": [
+        "미디어 플레이어",
+        "재생",
+        "음소거",
+        "볼륨",
+        "현재 시간",
+        "탐색",
+        "재생 시간 표시, 10초 남음.",
+        "자막 없음",
+        "화질",
+        "오디오",
+        "재생 속도",
+        "캡션",
+        "화면 속 화면",
+        "전체 화면"
+      ]
+    },
+    "scheduleFrame": {
+      "skin": "solad-video-skin",
+      "cast": 0,
+      "airplay": 0,
+      "buttons": [
+        "미디어 플레이어",
+        "재생",
+        "음소거",
+        "볼륨",
+        "현재 시간",
+        "탐색",
+        "재생 시간 표시, 10초 남음.",
+        "자막 없음",
+        "화질",
+        "오디오",
+        "재생 속도",
+        "캡션",
+        "화면 속 화면",
+        "전체 화면"
+      ]
+    },
+    "playTest": {
+      "skin": "solad-video-skin",
+      "cast": 0,
+      "airplay": 0,
+      "buttons": [
+        "미디어 플레이어",
+        "재생",
+        "음소거",
+        "볼륨",
+        "현재 시간",
+        "탐색",
+        "재생 시간 표시, 36초 남음.",
+        "자막 없음",
+        "화질",
+        "오디오",
+        "재생 속도",
+        "캡션",
+        "화면 속 화면",
+        "전체 화면"
+      ]
+    }
+  },
+  "schedule": {
+    "frame": {
+      "query": "?type=videojs",
+      "skin": "solad-video-skin",
+      "mediaAds": 0
+    },
+    "initialLine": "최근 광고 진행아직 광고가 나오지 않았어요",
+    "steps": [
+      {
+        "step": "미드롤 앞",
+        "scene": "before-midroll",
+        "enabledAfterMs": 3404,
+        "lineBefore": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "tagged": true,
+        "newPlayer": true,
+        "player": {
+          "tag": null,
+          "autoplayAttr": false,
+          "videoAutoplay": false,
+          "t": 5.1
+        },
+        "msToInitial": null,
+        "msToTarget": 2712,
+        "lines": [
+          "2712ms 최근 광고 진행미드롤 1/1 재생 중00:09:21"
+        ],
+        "preroll": false,
+        "error": false
+      },
+      {
+        "step": "끝 직전(미드롤 재생 중)",
+        "scene": "before-end",
+        "enabledAfterMs": 2991,
+        "lineBefore": "최근 광고 진행미드롤 1/1 재생 중00:09:21",
+        "tagged": true,
+        "newPlayer": true,
+        "player": {
+          "tag": null,
+          "autoplayAttr": false,
+          "videoAutoplay": false,
+          "t": 10
+        },
+        "msToInitial": 5,
+        "msToTarget": 2335,
+        "lines": [
+          "5ms 최근 광고 진행아직 광고가 나오지 않았어요",
+          "2335ms 최근 광고 진행포스트롤 1/1 재생 중00:09:24"
+        ],
+        "preroll": false,
+        "error": false
+      }
+    ],
+    "saveCalls": [
+      "GET schedule-draft&targetType=site&targetId=site-local"
+    ]
+  },
+  "playTest": {
+    "now": "최근 광고 진행 프리롤 1/2 재생 중 00:09:29",
+    "events": [
+      "POST events"
+    ]
+  },
+  "bad": [],
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found) @/favicon.ico page /examples/help.html#opt-data-captions",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found) @/favicon.ico page /#/schedule",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found) @/favicon.ico page /examples/play-test.html?video=grok-demo-scene-01&type=videojs"
+  ],
+  "api": [
+    "POST login",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-presets",
+    "GET schedule-draft&targetType=site&targetId=site-local",
+    "POST schedule-preview",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "POST events @/examples/play-test.html"
+  ]
+}

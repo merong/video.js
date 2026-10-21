@@ -1,0 +1,36 @@
+{
+  "point": {
+    "x": 115,
+    "y": 774
+  },
+  "decorativeLogo": {
+    "reached": true,
+    "before": {
+      "t": 5.4,
+      "paused": false,
+      "ads": false,
+      "logo": true,
+      "alt": "",
+      "pointerEvents": "none"
+    },
+    "after": {
+      "t": 5.42,
+      "paused": true
+    }
+  },
+  "noLogo": {
+    "reached": true,
+    "before": {
+      "t": 5.4,
+      "paused": false,
+      "ads": false,
+      "logo": false,
+      "alt": null,
+      "pointerEvents": null
+    },
+    "after": {
+      "t": 5.4,
+      "paused": true
+    }
+  }
+}

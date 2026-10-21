@@ -1,0 +1,13 @@
+/examples/player.html 404
+/examples/videojs.html 404
+/examples/grok.html 404
+/examples/player-preview.html 404
+/examples/context.js 404
+/examples/example.js 404
+/examples/example.css 404
+/examples/README.md 404
+/examples/index.html 200
+/examples/guide.html 200
+/examples/help.html 200
+/examples/play-test.html 200
+/examples/preview.html 200

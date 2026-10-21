@@ -1,0 +1,18 @@
+{
+  "siteId": "site-local",
+  "creative": {
+    "status": 200,
+    "creativeId": "creative-6645b604dbd3b89f7a5beaac428a1c2f"
+  },
+  "save": {
+    "status": 200,
+    "error": null
+  },
+  "publish": {
+    "status": 200,
+    "data": {
+      "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+      "scheduleVersion": 1
+    }
+  }
+}

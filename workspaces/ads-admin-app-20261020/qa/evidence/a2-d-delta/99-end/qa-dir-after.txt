@@ -1,0 +1,8 @@
+total 6712
+drwx------@   7 brian  wheel      224 10월 21 20:17 .
+drwxrwxrwt  155 root   wheel     4960 10월 21 20:17 ..
+-rw-------@   1 brian  wheel   225280 10월 21 20:15 ads.sqlite
+-rw-------@   1 brian  wheel      578 10월 21 19:41 config.php
+-rw-r--r--@   1 brian  wheel  2333799 10월 21 20:16 server.log
+-rw-r--r--@   1 brian  wheel        6 10월 21 19:50 server.pid
+drwx------@   4 brian  wheel      128 10월 21 19:41 uploads

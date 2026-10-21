@@ -1,0 +1,487 @@
+- main "플레이어":
+  - region "플레이어":
+    - heading "플레이어" [level=1]
+    - paragraph: 플레이어 종류, 스킨 테마, 광고 화면 설정을 프리셋으로 저장하고, 설치 방법과 옵션을 확인해요.
+    - navigation "플레이어 화면":
+      - link "프리셋 목록":
+        - /url: "#/players"
+      - link "초기 설정 방법":
+        - /url: "#/players/setup"
+      - link "옵션 설명":
+        - /url: "#/players/options"
+    - heading "옵션 설명" [level=2]
+    - paragraph: 광고 모듈과 예제의 설정이에요. 광고 모듈은 통합 기간 동안 내부 API라 바뀔 수 있어요. 스킨 CSS 속성만 Video.js 문서에 공개된 설정이에요.
+    - region "<media-ads> 속성":
+      - region "<media-ads> 속성":
+        - table "<media-ads> 속성":
+          - caption: <media-ads> 속성
+          - rowgroup:
+            - row "이름 형식 기본값 설명 프리셋 설정":
+              - columnheader "이름"
+              - columnheader "형식"
+              - columnheader "기본값"
+              - columnheader "설명"
+              - columnheader "프리셋 설정"
+          - rowgroup:
+            - row "for 요소 id 없음(필수) 광고를 붙일 본편 미디어 요소의 id예요. 같은 플레이어 안의 요소를 가리켜야 해요. 프리셋에서 설정 안 함":
+              - cell "for":
+                - code: for
+              - cell "요소 id"
+              - cell "없음(필수)"
+              - cell "광고를 붙일 본편 미디어 요소의 id예요. 같은 플레이어 안의 요소를 가리켜야 해요."
+              - cell "프리셋에서 설정 안 함"
+            - 'row "src URL 없음(필수) 편성 주소예요. raw 편성 JSON이나 관리자 API 응답({ok, data})을 받아요. http(s):// 주소나 /로 시작하는 경로만 받고 상대 경로는 거부해요. 편성 요청 시간 제한은 5초로 고정돼요. 프리셋에서 설정 안 함"':
+              - cell "src":
+                - code: src
+              - cell "URL"
+              - cell "없음(필수)"
+              - 'cell "편성 주소예요. raw 편성 JSON이나 관리자 API 응답({ok, data})을 받아요. http(s):// 주소나 /로 시작하는 경로만 받고 상대 경로는 거부해요. 편성 요청 시간 제한은 5초로 고정돼요."'
+              - cell "프리셋에서 설정 안 함"
+            - row "video-id 문자열 없음(필수) 편성과 통계에 쓰는 고정 영상 ID예요. 편성의 videoId와 같아야 광고가 붙어요. 프리셋에서 설정 안 함":
+              - cell "video-id":
+                - code: video-id
+              - cell "문자열"
+              - cell "없음(필수)"
+              - cell "편성과 통계에 쓰는 고정 영상 ID예요. 편성의 videoId와 같아야 광고가 붙어요."
+              - cell "프리셋에서 설정 안 함"
+            - row "lang ko | en <media-ads>부터 위로 찾은 lang, 없으면 영어 광고 화면 문구 언어예요. ko로 시작하면 한국어, 그 밖에는 영어로 보여요. 비우면 페이지 lang을 따르니 <html lang>을 확인해 주세요. 광고 문구 언어 광고 문구 언어 도움말":
+              - cell "lang":
+                - code: lang
+              - cell "ko | en"
+              - cell "<media-ads>부터 위로 찾은 lang, 없으면 영어"
+              - cell "광고 화면 문구 언어예요. ko로 시작하면 한국어, 그 밖에는 영어로 보여요. 비우면 페이지 lang을 따르니 <html lang>을 확인해 주세요."
+              - cell "광고 문구 언어 광고 문구 언어 도움말":
+                - text: 광고 문구 언어
+                - link "광고 문구 언어 도움말":
+                  - /url: "#/help/player-ad-language"
+                  - text: "?"
+            - row "skip-label 글자 광고 건너뛰기 / Skip ad 건너뛰기 버튼 문구예요. 건너뛰기 문구 광고 화면 도움말":
+              - cell "skip-label":
+                - code: skip-label
+              - cell "글자"
+              - cell "광고 건너뛰기 / Skip ad"
+              - cell "건너뛰기 버튼 문구예요."
+              - cell "건너뛰기 문구 광고 화면 도움말":
+                - text: 건너뛰기 문구
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+            - 'row "skip-countdown-label 글자, {seconds} {seconds}초 후 건너뛰기 / Skip in {seconds}s 건너뛰기를 기다리는 동안 보이는 문구예요. {seconds}에 남은 초가 들어가요. 건너뛰기 대기 문구 광고 화면 도움말"':
+              - cell "skip-countdown-label":
+                - code: skip-countdown-label
+              - 'cell "글자, {seconds}"'
+              - 'cell "{seconds}초 후 건너뛰기 / Skip in {seconds}s"'
+              - 'cell "건너뛰기를 기다리는 동안 보이는 문구예요. {seconds}에 남은 초가 들어가요."'
+              - cell "건너뛰기 대기 문구 광고 화면 도움말":
+                - text: 건너뛰기 대기 문구
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+            - 'row "timer-label 글자, {elapsed} {duration} {remaining} {elapsed} / {duration} 광고 시간 표시 문구예요. {elapsed}(지난 시간), {duration}(길이), {remaining}(남은 시간)을 쓸 수 있어요. 광고 시간 문구 광고 화면 도움말"':
+              - cell "timer-label":
+                - code: timer-label
+              - 'cell "글자, {elapsed} {duration} {remaining}"'
+              - 'cell "{elapsed} / {duration}"'
+              - 'cell "광고 시간 표시 문구예요. {elapsed}(지난 시간), {duration}(길이), {remaining}(남은 시간)을 쓸 수 있어요."'
+              - cell "광고 시간 문구 광고 화면 도움말":
+                - text: 광고 시간 문구
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+            - row "media-alt 글자 소재의 대체 텍스트, 없으면 광고 / Advertisement 모든 광고 소재의 대체 텍스트를 이 값으로 덮어써요. 소재마다 입력한 대체 텍스트가 가려지므로 프리셋에서는 설정하지 않아요. 프리셋에서 설정 안 함":
+              - cell "media-alt":
+                - code: media-alt
+              - cell "글자"
+              - cell "소재의 대체 텍스트, 없으면 광고 / Advertisement"
+              - cell "모든 광고 소재의 대체 텍스트를 이 값으로 덮어써요. 소재마다 입력한 대체 텍스트가 가려지므로 프리셋에서는 설정하지 않아요."
+              - cell "프리셋에서 설정 안 함"
+    - region "createAdsController 옵션":
+      - region "createAdsController 옵션":
+        - table "createAdsController 옵션":
+          - caption: createAdsController 옵션
+          - rowgroup:
+            - row "이름 형식 기본값 설명 프리셋 설정":
+              - columnheader "이름"
+              - columnheader "형식"
+              - columnheader "기본값"
+              - columnheader "설명"
+              - columnheader "프리셋 설정"
+          - rowgroup:
+            - row "media HTMLMediaElement 없음(필수) 광고를 붙일 본편 미디어 요소예요. 프리셋에서 설정 안 함":
+              - cell "media":
+                - code: media
+              - cell "HTMLMediaElement"
+              - cell "없음(필수)"
+              - cell "광고를 붙일 본편 미디어 요소예요."
+              - cell "프리셋에서 설정 안 함"
+            - row "container HTMLElement 없음(필수) 광고 화면을 올릴 요소예요. 본편을 감싸고 position이 지정된 요소를 넘겨요. 프리셋에서 설정 안 함":
+              - cell "container":
+                - code: container
+              - cell "HTMLElement"
+              - cell "없음(필수)"
+              - cell "광고 화면을 올릴 요소예요. 본편을 감싸고 position이 지정된 요소를 넘겨요."
+              - cell "프리셋에서 설정 안 함"
+            - row "schedule 편성 객체 없음(필수) 편성 API 응답의 schedule이에요. 형식이 맞지 않으면 광고 없이 본편만 재생해요. 프리셋에서 설정 안 함":
+              - cell "schedule":
+                - code: schedule
+              - cell "편성 객체"
+              - cell "없음(필수)"
+              - cell "편성 API 응답의 schedule이에요. 형식이 맞지 않으면 광고 없이 본편만 재생해요."
+              - cell "프리셋에서 설정 안 함"
+            - row "tracking 추적 정보 객체 없음 편성 응답에서 schedule을 뺀 나머지예요. 있으면 광고 이벤트를 수집 API로 보내요. 프리셋에서 설정 안 함":
+              - cell "tracking":
+                - code: tracking
+              - cell "추적 정보 객체"
+              - cell "없음"
+              - cell "편성 응답에서 schedule을 뺀 나머지예요. 있으면 광고 이벤트를 수집 API로 보내요."
+              - cell "프리셋에서 설정 안 함"
+            - row "preview boolean false true면 수집 요청을 보내지 않아요. 관리자 미리보기에서 써요. 프리셋에서 설정 안 함":
+              - cell "preview":
+                - code: preview
+              - cell "boolean"
+              - cell "false"
+              - cell "true면 수집 요청을 보내지 않아요. 관리자 미리보기에서 써요."
+              - cell "프리셋에서 설정 안 함"
+            - row "onEvent (event) => void 없음 광고 시작·완료·건너뜀·클릭·오류·중단을 관측할 때마다 불려요. 프리셋에서 설정 안 함":
+              - cell "onEvent":
+                - code: onEvent
+              - cell "(event) => void"
+              - cell "없음"
+              - cell "광고 시작·완료·건너뜀·클릭·오류·중단을 관측할 때마다 불려요."
+              - cell "프리셋에서 설정 안 함"
+            - row "timeouts.loadSeconds 초(0 초과 60 이하) 5 광고 소재를 불러오고 재생을 시작하기까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–60초 정수로 정해요. <media-ads>에는 이 옵션이 없어요. 광고 로드 시간 제한 (초) 플레이어 종류 도움말":
+              - cell "timeouts.loadSeconds":
+                - code: timeouts.loadSeconds
+              - cell "초(0 초과 60 이하)"
+              - cell "5"
+              - cell "광고 소재를 불러오고 재생을 시작하기까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–60초 정수로 정해요. <media-ads>에는 이 옵션이 없어요."
+              - cell "광고 로드 시간 제한 (초) 플레이어 종류 도움말":
+                - text: 광고 로드 시간 제한 (초)
+                - link "플레이어 종류 도움말":
+                  - /url: "#/help/player-type"
+                  - text: "?"
+            - row "timeouts.stallSeconds 초(0 초과 120 이하) 10 광고 영상이 멈췄을 때 다음 순서로 넘어가기 전까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–120초 정수로 정해요. 광고 멈춤 시간 제한 (초) 플레이어 종류 도움말":
+              - cell "timeouts.stallSeconds":
+                - code: timeouts.stallSeconds
+              - cell "초(0 초과 120 이하)"
+              - cell "10"
+              - cell "광고 영상이 멈췄을 때 다음 순서로 넘어가기 전까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–120초 정수로 정해요."
+              - cell "광고 멈춤 시간 제한 (초) 플레이어 종류 도움말":
+                - text: 광고 멈춤 시간 제한 (초)
+                - link "플레이어 종류 도움말":
+                  - /url: "#/help/player-type"
+                  - text: "?"
+            - row "ui.locale 언어 코드 container부터 위로 찾은 lang, 없으면 영어 광고 화면 문구 언어예요. ko로 시작하면 한국어예요. 광고 문구 언어 광고 문구 언어 도움말":
+              - cell "ui.locale":
+                - code: ui.locale
+              - cell "언어 코드"
+              - cell "container부터 위로 찾은 lang, 없으면 영어"
+              - cell "광고 화면 문구 언어예요. ko로 시작하면 한국어예요."
+              - cell "광고 문구 언어 광고 문구 언어 도움말":
+                - text: 광고 문구 언어
+                - link "광고 문구 언어 도움말":
+                  - /url: "#/help/player-ad-language"
+                  - text: "?"
+            - row "ui.labels 문구 객체 패키지 문구 광고 화면 문구를 바꿔요. 프리셋에서는 skip, skipCountdown, timer를 정해요. mediaAlt는 소재 대체 텍스트를 덮어써서 프리셋에서 정하지 않아요. 건너뛰기 문구 · 건너뛰기 대기 문구 · 광고 시간 문구 광고 화면 도움말":
+              - cell "ui.labels":
+                - code: ui.labels
+              - cell "문구 객체"
+              - cell "패키지 문구"
+              - cell "광고 화면 문구를 바꿔요. 프리셋에서는 skip, skipCountdown, timer를 정해요. mediaAlt는 소재 대체 텍스트를 덮어써서 프리셋에서 정하지 않아요."
+              - cell "건너뛰기 문구 · 건너뛰기 대기 문구 · 광고 시간 문구 광고 화면 도움말":
+                - text: 건너뛰기 문구 · 건너뛰기 대기 문구 · 광고 시간 문구
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+    - region "createAdsController 반환 메서드":
+      - region "createAdsController 반환 메서드":
+        - table "createAdsController 반환 메서드":
+          - caption: createAdsController 반환 메서드
+          - rowgroup:
+            - row "이름 형식 기본값 설명 프리셋 설정":
+              - columnheader "이름"
+              - columnheader "형식"
+              - columnheader "기본값"
+              - columnheader "설명"
+              - columnheader "프리셋 설정"
+          - rowgroup:
+            - row "destroy() () => void — 광고를 끝내고 화면과 이벤트 연결을 정리해요. 페이지를 떠날 때(pagehide) 불러 주세요. 프리셋에서 설정 안 함":
+              - cell "destroy()":
+                - code: destroy()
+              - cell "() => void"
+              - cell "—"
+              - cell "광고를 끝내고 화면과 이벤트 연결을 정리해요. 페이지를 떠날 때(pagehide) 불러 주세요."
+              - cell "프리셋에서 설정 안 함"
+            - row "updateUI(ui) (ui) => void — 편성을 다시 받지 않고 광고 화면 언어와 문구를 바꿔요. 빈 객체를 넘기면 기본값으로 돌아가요. 프리셋에서 설정 안 함":
+              - cell "updateUI(ui)":
+                - code: updateUI(ui)
+              - cell "(ui) => void"
+              - cell "—"
+              - cell "편성을 다시 받지 않고 광고 화면 언어와 문구를 바꿔요. 빈 객체를 넘기면 기본값으로 돌아가요."
+              - cell "프리셋에서 설정 안 함"
+    - region "스킨 CSS 속성":
+      - region "스킨 CSS 속성":
+        - table "스킨 CSS 속성":
+          - caption: 스킨 CSS 속성
+          - rowgroup:
+            - row "이름 형식 기본값 설명 프리셋 설정":
+              - columnheader "이름"
+              - columnheader "형식"
+              - columnheader "기본값"
+              - columnheader "설명"
+              - columnheader "프리셋 설정"
+          - rowgroup:
+            - row "--media-accent-color 색 흰색 oklch(1 0 0) 슬라이더 채움, 강조된 컨트롤과 메뉴, 주요 동작의 색이에요. 광고 화면의 음량 막대도 이 색을 이어받아요. 초점 테두리는 Video.js 스킨 안에서 흰색(--media-ring)으로 고정돼 바뀌지 않아요. 강조색 강조색 도움말":
+              - cell "--media-accent-color":
+                - code: "--media-accent-color"
+              - cell "색"
+              - cell "흰색 oklch(1 0 0)"
+              - cell "슬라이더 채움, 강조된 컨트롤과 메뉴, 주요 동작의 색이에요. 광고 화면의 음량 막대도 이 색을 이어받아요. 초점 테두리는 Video.js 스킨 안에서 흰색(--media-ring)으로 고정돼 바뀌지 않아요."
+              - cell "강조색 강조색 도움말":
+                - text: 강조색
+                - link "강조색 도움말":
+                  - /url: "#/help/player-accent-color"
+                  - text: "?"
+            - row "--media-accent-text-color 색 자동 대비, contrast-color() 미지원 브라우저는 검정 강조색 위 글자와 아이콘 색이에요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정되니 어두운 강조색이면 함께 정해 주세요. 강조 글자색 강조색 도움말":
+              - cell "--media-accent-text-color":
+                - code: "--media-accent-text-color"
+              - cell "색"
+              - cell "자동 대비, contrast-color() 미지원 브라우저는 검정"
+              - cell "강조색 위 글자와 아이콘 색이에요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정되니 어두운 강조색이면 함께 정해 주세요."
+              - cell "강조 글자색 강조색 도움말":
+                - text: 강조 글자색
+                - link "강조색 도움말":
+                  - /url: "#/help/player-accent-color"
+                  - text: "?"
+            - row "--media-border-color 색 default rgb(0 0 0 / .1), neutral rgb(0 0 0 / .15) 플레이어 둘레의 가는 선 색이에요. 테두리 색 테마 속성 도움말":
+              - cell "--media-border-color":
+                - code: "--media-border-color"
+              - cell "색"
+              - cell "default rgb(0 0 0 / .1), neutral rgb(0 0 0 / .15)"
+              - cell "플레이어 둘레의 가는 선 색이에요."
+              - cell "테두리 색 테마 속성 도움말":
+                - text: 테두리 색
+                - link "테마 속성 도움말":
+                  - /url: "#/help/player-theme-property"
+                  - text: "?"
+            - row "--media-border-radius 길이 default 28px, neutral 12px 플레이어 모서리 둥글기예요. 광고 화면 모서리도 따라가요. 모서리 둥글기 (px) 테마 속성 도움말":
+              - cell "--media-border-radius":
+                - code: "--media-border-radius"
+              - cell "길이"
+              - cell "default 28px, neutral 12px"
+              - cell "플레이어 모서리 둥글기예요. 광고 화면 모서리도 따라가요."
+              - cell "모서리 둥글기 (px) 테마 속성 도움말":
+                - text: 모서리 둥글기 (px)
+                - link "테마 속성 도움말":
+                  - /url: "#/help/player-theme-property"
+                  - text: "?"
+            - row "--media-font-family 글꼴 목록 \"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif 플레이어 글꼴이에요. 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요. 프리셋에서는 시스템 글꼴만 고를 수 있어요. 글꼴 테마 속성 도움말":
+              - cell "--media-font-family":
+                - code: "--media-font-family"
+              - cell "글꼴 목록"
+              - cell "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif"
+              - cell "플레이어 글꼴이에요. 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요. 프리셋에서는 시스템 글꼴만 고를 수 있어요."
+              - cell "글꼴 테마 속성 도움말":
+                - text: 글꼴
+                - link "테마 속성 도움말":
+                  - /url: "#/help/player-theme-property"
+                  - text: "?"
+            - row "--media-object-fit object-fit contain 영상과 포스터를 플레이어에 채우는 방식이에요. 전체화면에서는 항상 contain이에요. 광고 소재는 이 값과 상관없이 contain이에요. 화면 채우기 화면 채우기 도움말":
+              - cell "--media-object-fit":
+                - code: "--media-object-fit"
+              - cell "object-fit"
+              - cell "contain"
+              - cell "영상과 포스터를 플레이어에 채우는 방식이에요. 전체화면에서는 항상 contain이에요. 광고 소재는 이 값과 상관없이 contain이에요."
+              - cell "화면 채우기 화면 채우기 도움말":
+                - text: 화면 채우기
+                - link "화면 채우기 도움말":
+                  - /url: "#/help/player-object-fit"
+                  - text: "?"
+            - row "--media-object-position object-position center 영상과 포스터가 다 채우지 않을 때의 위치예요. 프리셋에서는 설정하지 않아요. 프리셋에서 설정 안 함":
+              - cell "--media-object-position":
+                - code: "--media-object-position"
+              - cell "object-position"
+              - cell "center"
+              - cell "영상과 포스터가 다 채우지 않을 때의 위치예요. 프리셋에서는 설정하지 않아요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--media-scale-unit 길이 16px 컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 1rem이면 문서 글자 크기를 따라요. 광고 화면에는 영향이 없어요. 크기 기준 테마 속성 도움말":
+              - cell "--media-scale-unit":
+                - code: "--media-scale-unit"
+              - cell "길이"
+              - cell "16px"
+              - cell "컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 1rem이면 문서 글자 크기를 따라요. 광고 화면에는 영향이 없어요."
+              - cell "크기 기준 테마 속성 도움말":
+                - text: 크기 기준
+                - link "테마 속성 도움말":
+                  - /url: "#/help/player-theme-property"
+                  - text: "?"
+    - region "광고 화면 CSS 속성":
+      - note: 광고 패키지 내부 속성이라 바뀔 수 있어요. 스킨 요소나 광고 컨테이너에 넣어요. <media-ads>에 직접 넣으면 효과가 없어요.
+      - region "광고 화면 CSS 속성":
+        - table "광고 화면 CSS 속성":
+          - caption: 광고 화면 CSS 속성
+          - rowgroup:
+            - row "이름 형식 기본값 설명 프리셋 설정":
+              - columnheader "이름"
+              - columnheader "형식"
+              - columnheader "기본값"
+              - columnheader "설명"
+              - columnheader "프리셋 설정"
+          - rowgroup:
+            - 'row "--ads-accent-color 색 --media-accent-color, 없으면 #fff 광고 음량 막대 색만 바꿔요. 건너뛰기 버튼과 초점 테두리는 바뀌지 않아요. 광고 음량 막대 색 광고 화면 도움말"':
+              - cell "--ads-accent-color":
+                - code: "--ads-accent-color"
+              - cell "색"
+              - 'cell "--media-accent-color, 없으면 #fff"'
+              - cell "광고 음량 막대 색만 바꿔요. 건너뛰기 버튼과 초점 테두리는 바뀌지 않아요."
+              - cell "광고 음량 막대 색 광고 화면 도움말":
+                - text: 광고 음량 막대 색
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+            - row "--ads-skip-radius 길이 6px 건너뛰기 버튼 모서리 둥글기예요. 건너뛰기 버튼 모서리 (px) 광고 화면 도움말":
+              - cell "--ads-skip-radius":
+                - code: "--ads-skip-radius"
+              - cell "길이"
+              - cell "6px"
+              - cell "건너뛰기 버튼 모서리 둥글기예요."
+              - cell "건너뛰기 버튼 모서리 (px) 광고 화면 도움말":
+                - text: 건너뛰기 버튼 모서리 (px)
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+            - row "--ads-font-size 길이 13px 광고 화면 글자 크기예요. 컨테이너 폭 280px 이하에서는 11px로 고정돼요. 광고 글자 크기 (px) 광고 화면 도움말":
+              - cell "--ads-font-size":
+                - code: "--ads-font-size"
+              - cell "길이"
+              - cell "13px"
+              - cell "광고 화면 글자 크기예요. 컨테이너 폭 280px 이하에서는 11px로 고정돼요."
+              - cell "광고 글자 크기 (px) 광고 화면 도움말":
+                - text: 광고 글자 크기 (px)
+                - link "광고 화면 도움말":
+                  - /url: "#/help/player-ad-overlay"
+                  - text: "?"
+            - row "--ads-font-family 글꼴 목록 --media-font-family, 없으면 system-ui 광고 화면 글꼴이에요. 플레이어 글꼴(--media-font-family)을 지정했으면 그것을 따라가요. 둘 다 비우면 플레이어는 스킨 글꼴(Inter 우선)을, 광고 화면은 system-ui를 써요. 프리셋에서 설정 안 함":
+              - cell "--ads-font-family":
+                - code: "--ads-font-family"
+              - cell "글꼴 목록"
+              - cell "--media-font-family, 없으면 system-ui"
+              - cell "광고 화면 글꼴이에요. 플레이어 글꼴(--media-font-family)을 지정했으면 그것을 따라가요. 둘 다 비우면 플레이어는 스킨 글꼴(Inter 우선)을, 광고 화면은 system-ui를 써요."
+              - cell "프리셋에서 설정 안 함"
+            - 'row "--ads-color 색 --media-foreground, 없으면 #fff 광고 화면 글자와 아이콘 색이에요. 프리셋에서 설정 안 함"':
+              - cell "--ads-color":
+                - code: "--ads-color"
+              - cell "색"
+              - 'cell "--media-foreground, 없으면 #fff"'
+              - cell "광고 화면 글자와 아이콘 색이에요."
+              - cell "프리셋에서 설정 안 함"
+            - 'row "--ads-background 색 #000 광고 소재 뒤 바탕색이에요. 프리셋에서 설정 안 함"':
+              - cell "--ads-background":
+                - code: "--ads-background"
+              - cell "색"
+              - cell "#000"
+              - cell "광고 소재 뒤 바탕색이에요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--ads-radius 길이 스킨 모서리(default 28px, neutral 12px), 스킨 밖이면 0 광고 화면 모서리 둥글기예요. 프리셋에서 설정 안 함":
+              - cell "--ads-radius":
+                - code: "--ads-radius"
+              - cell "길이"
+              - cell "스킨 모서리(default 28px, neutral 12px), 스킨 밖이면 0"
+              - cell "광고 화면 모서리 둥글기예요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--ads-inset 길이 12px 광고 표시와 컨트롤의 바깥 여백이에요. 프리셋에서 설정 안 함":
+              - cell "--ads-inset":
+                - code: "--ads-inset"
+              - cell "길이"
+              - cell "12px"
+              - cell "광고 표시와 컨트롤의 바깥 여백이에요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--ads-scrim 배경 아래쪽 어두운 그러데이션 컨트롤 뒤 어둡게 깔리는 배경이에요. 프리셋에서 설정 안 함":
+              - cell "--ads-scrim":
+                - code: "--ads-scrim"
+              - cell "배경"
+              - cell "아래쪽 어두운 그러데이션"
+              - cell "컨트롤 뒤 어둡게 깔리는 배경이에요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--ads-control-size 길이 --media-control-size, 없으면 36px 광고 컨트롤 버튼의 최소 크기예요. 프리셋에서 설정 안 함":
+              - cell "--ads-control-size":
+                - code: "--ads-control-size"
+              - cell "길이"
+              - cell "--media-control-size, 없으면 36px"
+              - cell "광고 컨트롤 버튼의 최소 크기예요."
+              - cell "프리셋에서 설정 안 함"
+            - 'row "--ads-control-radius 길이 --media-control-radius: default 스킨 99px(알약 모양), neutral 스킨 --media-spacing × 2(기본 크기에서 8px, 플레이어가 커지면 함께 커져요). 스킨 밖에서는 8px 광고 컨트롤 버튼 모서리 둥글기예요. 프리셋에서 설정 안 함"':
+              - cell "--ads-control-radius":
+                - code: "--ads-control-radius"
+              - cell "길이"
+              - 'cell "--media-control-radius: default 스킨 99px(알약 모양), neutral 스킨 --media-spacing × 2(기본 크기에서 8px, 플레이어가 커지면 함께 커져요). 스킨 밖에서는 8px"'
+              - cell "광고 컨트롤 버튼 모서리 둥글기예요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--ads-button-background 색 반투명 검정(#0005) 광고 컨트롤 버튼 바탕색이에요. 프리셋에서 설정 안 함":
+              - cell "--ads-button-background":
+                - code: "--ads-button-background"
+              - cell "색"
+              - cell "반투명 검정(#0005)"
+              - cell "광고 컨트롤 버튼 바탕색이에요."
+              - cell "프리셋에서 설정 안 함"
+            - row "--ads-hover-background 색 반투명 흰색(#ffffff26) 포인터를 올렸을 때 버튼과 링크 바탕색이에요. 프리셋에서 설정 안 함":
+              - cell "--ads-hover-background":
+                - code: "--ads-hover-background"
+              - cell "색"
+              - cell "반투명 흰색(#ffffff26)"
+              - cell "포인터를 올렸을 때 버튼과 링크 바탕색이에요."
+              - cell "프리셋에서 설정 안 함"
+            - 'row "--ads-focus-color 색 --media-ring(Video.js 스킨은 흰색 oklch(1 0 0)) → --media-accent-color, 없으면 #fff 키보드 초점 테두리 색이에요. Video.js 스킨 안에서는 --media-ring이 있어서 강조색을 바꿔도 흰색이에요. 프리셋에서 설정 안 함"':
+              - cell "--ads-focus-color":
+                - code: "--ads-focus-color"
+              - cell "색"
+              - 'cell "--media-ring(Video.js 스킨은 흰색 oklch(1 0 0)) → --media-accent-color, 없으면 #fff"'
+              - cell "키보드 초점 테두리 색이에요. Video.js 스킨 안에서는 --media-ring이 있어서 강조색을 바꿔도 흰색이에요."
+              - cell "프리셋에서 설정 안 함"
+    - region "예제 페이지 쿼리":
+      - region "예제 페이지 쿼리":
+        - table "예제 페이지 쿼리":
+          - caption: 예제 페이지 쿼리
+          - rowgroup:
+            - row "이름 형식 기본값 설명 프리셋 설정":
+              - columnheader "이름"
+              - columnheader "형식"
+              - columnheader "기본값"
+              - columnheader "설명"
+              - columnheader "프리셋 설정"
+          - rowgroup:
+            - row "video 문자열 video-1 재생할 고정 영상 ID예요. 그누보드에서는 게시판:글번호:영상키 형식이에요. 프리셋에서 설정 안 함":
+              - cell "video":
+                - code: video
+              - cell "문자열"
+              - cell "video-1"
+              - cell "재생할 고정 영상 ID예요. 그누보드에서는 게시판:글번호:영상키 형식이에요."
+              - cell "프리셋에서 설정 안 함"
+            - row "content URL ../demo-media/content.mp4(HLS는 content-master.m3u8) 본편 주소예요. 예제 페이지 기준으로 해석하니 절대 주소로 넘겨 주세요. 프리셋에서 설정 안 함":
+              - cell "content":
+                - code: content
+              - cell "URL"
+              - cell "../demo-media/content.mp4(HLS는 content-master.m3u8)"
+              - cell "본편 주소예요. 예제 페이지 기준으로 해석하니 절대 주소로 넘겨 주세요."
+              - cell "프리셋에서 설정 안 함"
+            - row "media mp4 | hls mp4 본편 형식이에요. 기본 video의 HLS 지원은 브라우저마다 달라요. 프리셋에서 설정 안 함":
+              - cell "media":
+                - code: media
+              - cell "mp4 | hls"
+              - cell "mp4"
+              - cell "본편 형식이에요. 기본 video의 HLS 지원은 브라우저마다 달라요."
+              - cell "프리셋에서 설정 안 함"
+            - row "engine spf | hlsjs spf Video.js 예제에서 HLS를 재생할 엔진이에요. media=hls일 때만 써요. 프리셋에서 설정 안 함":
+              - cell "engine":
+                - code: engine
+              - cell "spf | hlsjs"
+              - cell "spf"
+              - cell "Video.js 예제에서 HLS를 재생할 엔진이에요. media=hls일 때만 써요."
+              - cell "프리셋에서 설정 안 함"
+            - row "preset 프리셋 id 없음(패키지 기본값) 적용할 플레이어 프리셋이에요. 불러오지 못하면 이유를 보여 주고 패키지 기본값으로 재생해요. 프리셋에서 설정 안 함":
+              - cell "preset":
+                - code: preset
+              - cell "프리셋 id"
+              - cell "없음(패키지 기본값)"
+              - cell "적용할 플레이어 프리셋이에요. 불러오지 못하면 이유를 보여 주고 패키지 기본값으로 재생해요."
+              - cell "프리셋에서 설정 안 함"

@@ -1,0 +1,277 @@
+{
+  "B06": {
+    "before": "사이트 · site-local\n게시본 없음\n?\n저장 전 초안\n?\n\n현재 적용되는 게시 편성이 없어요.\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n이 대상의 광고를 끄고 상위 편성으로의 대체도 중단해요. 게시해야 적용돼요.",
+    "preOrder": [
+      "1. QA 커피 프리롤 v2",
+      "2. QA 이어버드 프리롤"
+    ],
+    "valuesBeforeSave": {
+      "position": "5",
+      "midWait": "3",
+      "preWait": "3",
+      "postSeconds": "3"
+    },
+    "save": {
+      "label": "B06 첫 저장",
+      "status": "초안 r1을 저장했어요. 현재 게시본은 바뀌지 않았어요.",
+      "api": [
+        {
+          "t": 4188,
+          "method": "POST",
+          "action": "schedule-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "afterSave": "사이트 · site-local\n게시본 없음\n?\n저장된 초안 r1\n?\n\n현재 적용되는 게시 편성이 없어요.\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n상위 편성과 합치지 않고 아래 편성 전체로 대체해요.",
+    "afterReloadRegion": "사이트 · site-local\n게시본 없음\n?\n저장된 초안 r1\n?\n\n현재 적용되는 게시 편성이 없어요.\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n상위 편성과 합치지 않고 아래 편성 전체로 대체해요."
+  },
+  "B07": {
+    "saveA": {
+      "label": "B07 탭 A 저장",
+      "status": "초안 r2을 저장했어요. 현재 게시본은 바뀌지 않았어요.",
+      "api": [
+        {
+          "t": 11683,
+          "method": "POST",
+          "action": "schedule-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "saveB": {
+      "label": "B07 탭 B 저장",
+      "status": "(status 없음)",
+      "api": [
+        {
+          "t": 13237,
+          "method": "POST",
+          "action": "schedule-save",
+          "status": 409,
+          "ok": false,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true,
+          "error": {
+            "code": "revision_conflict",
+            "message": "다른 변경이 저장되었습니다. 다시 불러와 주세요."
+          }
+        }
+      ]
+    },
+    "tabBRequestsAfterSave": [
+      {
+        "method": "POST",
+        "action": "schedule-save"
+      }
+    ],
+    "tabBStatuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요.",
+      ""
+    ],
+    "tabBAlerts": [
+      "다른 곳에서 초안이 변경됐어요. 현재 입력은 그대로 두었어요. 내용을 확인한 뒤 서버 초안을 다시 불러와 주세요."
+    ],
+    "tabBInputKept": "https://example.com/qa-coffee-b",
+    "tabBButtons": [
+      "프리롤",
+      "미드롤",
+      "포스트롤",
+      "소재 목록 새로고침",
+      "구간 삭제",
+      "위로",
+      "아래로",
+      "광고 제거",
+      "위로",
+      "아래로",
+      "광고 제거",
+      "광고 추가",
+      "구간 삭제",
+      "위로",
+      "아래로",
+      "광고 제거",
+      "광고 추가",
+      "구간 삭제",
+      "위로",
+      "아래로",
+      "광고 제거",
+      "광고 추가",
+      "초안 저장",
+      "저장한 초안 게시",
+      "서버 초안 다시 불러오기"
+    ],
+    "tabBAfterReloadValue": "https://example.com/qa-coffee-a",
+    "tabBAfterReloadStatus": "서버 초안을 다시 불러왔어요.",
+    "consoleB": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      }
+    ]
+  },
+  "B08": {
+    "publishSite": {
+      "label": "B08 사이트 기본 게시",
+      "status": "게시 v1이 적용됐어요. 이미 재생 중인 세션은 기존 편성을 유지해요.",
+      "api": [
+        {
+          "t": 52219,
+          "method": "POST",
+          "action": "schedule-publish",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        },
+        {
+          "t": 52220,
+          "method": "GET",
+          "action": "schedule-draft",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": false,
+          "csrfMatchesLastResponse": null,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "siteRegionAfterPublish": "사이트 · site-local\n게시 v1\n?\n저장된 초안 r2\n?\n\n현재 게시 설정 출처: 사이트 site-local\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n상위 편성과 합치지 않고 아래 편성 전체로 대체해요.",
+    "videoContext": {
+      "status": "영상 소속을 저장했어요. 새 재생 세션부터 이 소속으로 편성을 찾아요.",
+      "api": [
+        {
+          "t": 54035,
+          "method": "POST",
+          "action": "video-context-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "videoInherit1": "영상 · a1-qa-video-1\n게시본 없음\n?\n저장 전 초안\n?\n\n현재 게시 설정 출처: 사이트 site-local\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n이 대상의 직접 편성 대신 상위 게시 설정을 따라요.",
+    "boardBefore": "게시판 · notice\n게시본 없음\n?\n저장 전 초안\n?\n\n현재 게시 설정 출처: 사이트 site-local\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n이 대상의 직접 편성 대신 상위 게시 설정을 따라요.",
+    "boardDisableSave": {
+      "label": "B08 게시판 disabled 저장",
+      "status": "초안 r1을 저장했어요. 현재 게시본은 바뀌지 않았어요.",
+      "api": [
+        {
+          "t": 57615,
+          "method": "POST",
+          "action": "schedule-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "boardDisablePublish": {
+      "label": "B08 게시판 disabled 게시",
+      "status": "게시 v1이 적용됐어요. 이미 재생 중인 세션은 기존 편성을 유지해요.",
+      "api": [
+        {
+          "t": 59188,
+          "method": "POST",
+          "action": "schedule-publish",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        },
+        {
+          "t": 59188,
+          "method": "GET",
+          "action": "schedule-draft",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": false,
+          "csrfMatchesLastResponse": null,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "videoInheritDisabled": "영상 · a1-qa-video-1\n게시본 없음\n?\n저장 전 초안\n?\n\n현재 게시 설정 출처: 게시판 notice\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n이 대상의 직접 편성 대신 상위 게시 설정을 따라요.",
+    "boardInheritSave": {
+      "label": "B08 게시판 inherit 저장",
+      "status": "초안 r2을 저장했어요. 현재 게시본은 바뀌지 않았어요.",
+      "api": [
+        {
+          "t": 62598,
+          "method": "POST",
+          "action": "schedule-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "boardInheritPublish": {
+      "label": "B08 게시판 inherit 게시",
+      "status": "게시 v2이 적용됐어요. 이미 재생 중인 세션은 기존 편성을 유지해요.",
+      "api": [
+        {
+          "t": 64163,
+          "method": "POST",
+          "action": "schedule-publish",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        },
+        {
+          "t": 64170,
+          "method": "GET",
+          "action": "schedule-draft",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": false,
+          "csrfMatchesLastResponse": null,
+          "respCsrfHeader": true
+        }
+      ]
+    },
+    "videoInheritRestored": "영상 · a1-qa-video-1\n게시본 없음\n?\n저장 전 초안\n?\n\n현재 게시 설정 출처: 사이트 site-local\n\n이 대상의 광고\n?\n상위 설정 상속\n직접 편성 · 전체 대체\n광고 비활성화 · 상속 중단\n이 대상의 직접 편성 대신 상위 게시 설정을 따라요.",
+    "targetSearchAvailable": 0
+  },
+  "dialogs": [
+    {
+      "label": "B07 서버 초안 다시 불러오기",
+      "text": "편집 내용을 버릴까요?\n\n저장하지 않은 편집 내용이 있어요. 편성을 다시 불러오면 지금 입력이 사라져요.\n\n취소\n불러오기"
+    },
+    {
+      "label": "B08 사이트 기본 게시",
+      "text": "초안 r2을 게시할까요?\n\n게시하면 새 재생 세션부터 이 편성이 적용돼요. 이미 재생 중인 세션은 기존 편성을 유지해요.\n\n취소\n게시"
+    },
+    {
+      "label": "B08 게시판 disabled 게시",
+      "text": "초안 r1을 게시할까요?\n\n게시하면 새 재생 세션부터 이 편성이 적용돼요. 이미 재생 중인 세션은 기존 편성을 유지해요.\n\n취소\n게시"
+    },
+    {
+      "label": "B08 게시판 inherit 게시",
+      "text": "초안 r2을 게시할까요?\n\n게시하면 새 재생 세션부터 이 편성이 적용돼요. 이미 재생 중인 세션은 기존 편성을 유지해요.\n\n취소\n게시"
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

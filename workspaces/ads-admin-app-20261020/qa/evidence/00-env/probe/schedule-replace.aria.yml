@@ -1,0 +1,42 @@
+- form "광고 편성 편집":
+  - region "사이트 · site-local":
+    - heading "사이트 · site-local" [level=2]
+    - text: 게시본 없음
+    - link "게시본과 게시 버전 도움말":
+      - /url: "#/help/publish-version"
+      - text: "?"
+    - text: 저장하지 않은 변경
+    - link "초안 revision 도움말":
+      - /url: "#/help/draft-revision"
+      - text: "?"
+    - paragraph: 현재 적용되는 게시 편성이 없어요.
+    - text: 이 대상의 광고
+    - combobox "이 대상의 광고":
+      - option "상위 설정 상속" [disabled]
+      - option "직접 편성 · 전체 대체" [selected]
+      - option "광고 비활성화 · 상속 중단"
+    - text: 상위 편성과 합치지 않고 아래 편성 전체로 대체해요.
+    - link "직접 편성 · 전체 대체 도움말":
+      - /url: "#/help/replace"
+      - text: "?"
+  - region "광고 구간 0개":
+    - heading "광고 구간 0개" [level=2]
+    - link "광고 구간 도움말":
+      - /url: "#/help/ad-break"
+      - text: "?"
+    - group "광고 구간 추가":
+      - button "프리롤"
+      - button "미드롤"
+      - button "포스트롤"
+    - paragraph: 직접 편성이 비어 있어요. 그대로 게시하면 상위 설정 대신 광고 없는 편성이 적용돼요. 광고 구간을 추가하거나 광고 비활성화를 선택해 주세요.
+  - text: 변경 내용을 저장한 뒤 게시해 주세요.
+  - link "초안 도움말":
+    - /url: "#/help/draft"
+    - text: "?"
+  - button "초안 저장"
+  - button "저장한 초안 게시" [disabled]
+  - text: 먼저 초안을 저장해 주세요.
+  - link "게시 도움말":
+    - /url: "#/help/publish"
+    - text: "?"
+  - status

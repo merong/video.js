@@ -1,0 +1,1193 @@
+{
+ "scenario": "seek",
+ "engine": "firefox",
+ "startedAt": "2026-10-21T17:11:37.394Z",
+ "steps": [
+  {
+   "name": "store.seek(30)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1113,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 1276,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(3)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 3,
+    "store": 3,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 8.33,
+    "expectPct": 8.333,
+    "fillVar": "8.333%",
+    "counts": {
+     "setter": 2,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2499,
+     "type": "media:seeking",
+     "time": 3
+    },
+    {
+     "t": 2543,
+     "type": "media:seeked",
+     "time": 3
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "slider drag 10%→80%",
+   "before": {
+    "media": 3,
+    "store": 3,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 8.33,
+    "expectPct": 8.333,
+    "fillVar": "8.333%",
+    "counts": {
+     "setter": 2,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 7,
+     "clamped": 5,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 4047,
+     "type": "media:seeking",
+     "time": 6.084
+    },
+    {
+     "t": 4148,
+     "type": "seek-blocked",
+     "requested": 11.116,
+     "allowed": 11
+    },
+    {
+     "t": 4157,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 4255,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 4359,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 4465,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 5006,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "slider click 90%",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 7,
+     "clamped": 5,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 8,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 5762,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 5906,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(2)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 8,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 2,
+    "store": 2,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 5.554,
+    "expectPct": 5.556,
+    "fillVar": "5.556%",
+    "counts": {
+     "setter": 9,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 6991,
+     "type": "media:seeking",
+     "time": 2
+    },
+    {
+     "t": 7054,
+     "type": "media:seeked",
+     "time": 2
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key 8 (80%)",
+   "before": {
+    "media": 2,
+    "store": 2,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 5.554,
+    "expectPct": 5.556,
+    "fillVar": "5.556%",
+    "counts": {
+     "setter": 9,
+     "clamped": 6,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 10,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "events": [
+    {
+     "t": 8318,
+     "type": "seek-blocked",
+     "requested": 28.8,
+     "allowed": 11
+    },
+    {
+     "t": 8320,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 8555,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key Home",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 10,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 11,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "events": [
+    {
+     "t": 9563,
+     "type": "media:seeking",
+     "time": 0
+    },
+    {
+     "t": 9564,
+     "type": "media:seeked",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key End",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 11,
+     "clamped": 7,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 2
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 12,
+     "clamped": 8,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 10774,
+     "type": "seek-blocked",
+     "requested": 36,
+     "allowed": 11
+    },
+    {
+     "t": 10780,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 10894,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key ArrowRight",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 12,
+     "clamped": 8,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 13,
+     "clamped": 9,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 12001,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 12154,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key ArrowLeft",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 13,
+     "clamped": 9,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.775,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 14,
+     "clamped": 9,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 13227,
+     "type": "media:seeking",
+     "time": 1
+    },
+    {
+     "t": 13270,
+     "type": "media:seeked",
+     "time": 1
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key l (+10)",
+   "before": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.775,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 14,
+     "clamped": 9,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 15,
+     "clamped": 9,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "events": [
+    {
+     "t": 14443,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 14580,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "seek button +10",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 15,
+     "clamped": 9,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 3
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 16,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 15704,
+     "type": "seek-blocked",
+     "requested": 21,
+     "allowed": 11
+    },
+    {
+     "t": 15706,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 15855,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "seek button -10",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 16,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.775,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 17,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 16947,
+     "type": "media:seeking",
+     "time": 1
+    },
+    {
+     "t": 16958,
+     "type": "media:seeked",
+     "time": 1
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "doubletap right (mouse dblclick)",
+   "before": {
+    "media": 1,
+    "store": 1,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 2.775,
+    "expectPct": 2.778,
+    "fillVar": "2.778%",
+    "counts": {
+     "setter": 17,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 18,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 18163,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 18298,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(0)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 18,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "events": [
+    {
+     "t": 19375,
+     "type": "media:seeking",
+     "time": 0
+    },
+    {
+     "t": 19377,
+     "type": "media:seeked",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct media.currentTime=30 (safety net)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 4
+    }
+   },
+   "after": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "events": [
+    {
+     "t": 20585,
+     "type": "media:seeking",
+     "time": 30
+    },
+    {
+     "t": 20585,
+     "type": "seek-blocked",
+     "requested": 30,
+     "allowed": 11
+    },
+    {
+     "t": 20590,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 20698,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct media.currentTime=5 (inside)",
+   "before": {
+    "media": 11,
+    "store": 11,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 30.555,
+    "expectPct": 30.556,
+    "fillVar": "30.556%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "after": {
+    "media": 5,
+    "store": 5,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 13.888,
+    "expectPct": 13.889,
+    "fillVar": "13.889%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "events": [
+    {
+     "t": 21792,
+     "type": "media:seeking",
+     "time": 5
+    },
+    {
+     "t": 21838,
+     "type": "media:seeked",
+     "time": 5
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "play",
+   "before": {
+    "media": 5,
+    "store": 5,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 13.888,
+    "expectPct": 13.889,
+    "fillVar": "13.889%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "after": {
+    "media": 6.549,
+    "store": 6.5,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 18.05,
+    "expectPct": 18.193,
+    "fillVar": "18.056%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "events": [],
+   "error": null
+  },
+  {
+   "name": "store.seek(30) while playing",
+   "before": {
+    "media": 6.549,
+    "store": 6.5,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 18.05,
+    "expectPct": 18.193,
+    "fillVar": "18.056%",
+    "counts": {
+     "setter": 19,
+     "clamped": 10,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 5
+    }
+   },
+   "after": {
+    "media": 12.481,
+    "store": 12.481,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 13.312,
+    "thumbPct": 34.665,
+    "expectPct": 34.668,
+    "fillVar": "34.668%",
+    "counts": {
+     "setter": 20,
+     "clamped": 11,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "events": [
+    {
+     "t": 24587,
+     "type": "seek-blocked",
+     "requested": 30,
+     "allowed": 11
+    },
+    {
+     "t": 24591,
+     "type": "media:seeking",
+     "time": 11
+    },
+    {
+     "t": 24778,
+     "type": "media:seeked",
+     "time": 11
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct =33 while playing",
+   "before": {
+    "media": 12.481,
+    "store": 12.481,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 13.312,
+    "thumbPct": 34.665,
+    "expectPct": 34.668,
+    "fillVar": "34.668%",
+    "counts": {
+     "setter": 20,
+     "clamped": 11,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "after": {
+    "media": 14.603,
+    "store": 14.603,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 15.603,
+    "thumbPct": 40.559,
+    "expectPct": 40.564,
+    "fillVar": "40.564%",
+    "counts": {
+     "setter": 20,
+     "clamped": 11,
+     "safetyNet": 2,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "events": [
+    {
+     "t": 26286,
+     "type": "media:seeking",
+     "time": 33
+    },
+    {
+     "t": 26288,
+     "type": "media:seeking",
+     "time": 13.312
+    },
+    {
+     "t": 26475,
+     "type": "media:seeked",
+     "time": 13.312
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "pause",
+   "before": {
+    "media": 14.719,
+    "store": 14.667,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 15.603,
+    "thumbPct": 40.74,
+    "expectPct": 40.887,
+    "fillVar": "40.741%",
+    "counts": {
+     "setter": 20,
+     "clamped": 11,
+     "safetyNet": 2,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "after": {
+    "media": 14.719,
+    "store": 14.719,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 15.603,
+    "thumbPct": 40.884,
+    "expectPct": 40.887,
+    "fillVar": "40.887%",
+    "counts": {
+     "setter": 20,
+     "clamped": 11,
+     "safetyNet": 2,
+     "rateReverted": 0,
+     "blockedNotes": 6
+    }
+   },
+   "events": [],
+   "error": null
+  }
+ ],
+ "registered": true,
+ "facade": {
+  "storeMediaIsReal": false,
+  "overrideNow": true
+ },
+ "seekingEvents": 25,
+ "seekedEvents": 19,
+ "errors": []
+}

@@ -1,0 +1,230 @@
+{
+  "cases": [
+    {
+      "key": "accent-GGG",
+      "label": "강조색",
+      "input": "#GGG",
+      "api": [
+        "POST player-preset-save 200"
+      ],
+      "field": {
+        "value": "#GGG",
+        "maxLength": -1,
+        "ariaInvalid": "true",
+        "describedBy": [
+          {
+            "id": "aa-preset-theme-accentColor-error",
+            "text": "#과 16진수 6자리로 입력해 주세요. 예: #cdf352"
+          },
+          {
+            "id": "aa-preset-theme-accentColor-help",
+            "text": "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대와 초점 테두리도 이 색을 따라요. ?"
+          }
+        ],
+        "validationMessage": null
+      },
+      "live": {
+        "status": [
+          "\"QA PL09 검증\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "\"QA PL09 검증\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ]
+      },
+      "invalidFields": [
+        "강조색"
+      ],
+      "activeAfter": "H2",
+      "hash": "#/players/edit/p-41e4r1nub9"
+    },
+    {
+      "key": "accent-upper",
+      "label": "강조색",
+      "input": "#ABCDEF",
+      "api": [
+        "POST player-preset-save 200"
+      ],
+      "field": {
+        "value": "#abcdef",
+        "maxLength": -1,
+        "ariaInvalid": null,
+        "describedBy": [
+          {
+            "id": "aa-preset-theme-accentColor-help",
+            "text": "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대와 초점 테두리도 이 색을 따라요. ?"
+          }
+        ],
+        "validationMessage": null
+      },
+      "live": {
+        "status": [
+          "\"QA PL09 검증\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "\"QA PL09 검증\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ]
+      },
+      "invalidFields": [],
+      "activeAfter": "H2",
+      "hash": "#/players/edit/p-eridy139v8"
+    },
+    {
+      "key": "radius-33",
+      "label": "모서리 둥글기 (px)",
+      "input": "33",
+      "api": [],
+      "field": {
+        "value": "33",
+        "maxLength": -1,
+        "ariaInvalid": "true",
+        "describedBy": [
+          {
+            "id": "aa-preset-theme-borderRadius-error",
+            "text": "0–32 사이의 정수로 입력해 주세요."
+          },
+          {
+            "id": "aa-preset-theme-borderRadius-help",
+            "text": "0–32 정수예요. 광고 화면 모서리도 따라가요."
+          }
+        ],
+        "validationMessage": "값은 32 이하여야 합니다."
+      },
+      "live": {
+        "status": [],
+        "alert": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "pageStatus": []
+      },
+      "invalidFields": [
+        "모서리 둥글기 (px)"
+      ],
+      "activeAfter": "모서리 둥글기 (px)",
+      "hash": "#/players/new"
+    },
+    {
+      "key": "timer-foo",
+      "label": "광고 시간 문구",
+      "input": "{foo}",
+      "api": [],
+      "field": {
+        "value": "{foo}",
+        "maxLength": -1,
+        "ariaInvalid": "true",
+        "describedBy": [
+          {
+            "id": "aa-preset-ads-labels-timer-error",
+            "text": "40자 이내로 입력해 주세요. 줄바꿈 같은 제어 문자는 쓸 수 없어요. 자리표시자는 {elapsed} {duration} {remaining}만 쓸 수 있어요."
+          },
+          {
+            "id": "aa-preset-ads-labels-timer-help",
+            "text": "{elapsed} 지난 시간, {duration} 광고 길이, {remaining} 남은 시간을 쓸 수 있어요."
+          }
+        ],
+        "validationMessage": null
+      },
+      "live": {
+        "status": [],
+        "alert": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "pageStatus": []
+      },
+      "invalidFields": [
+        "광고 시간 문구"
+      ],
+      "activeAfter": "광고 시간 문구",
+      "hash": "#/players/new"
+    }
+  ],
+  "storedAfter": [
+    "default 기본",
+    "p-wkepup6b7d QA Video.js 중립 v2",
+    "p-41e4r1nub9 QA PL09 검증",
+    "p-eridy139v8 QA PL09 검증"
+  ],
+  "bodies": [
+    {
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": null,
+          "name": "QA PL09 검증",
+          "playerType": "videojs",
+          "skin": "default",
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": null,
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 14
+      }
+    },
+    {
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": null,
+          "name": "QA PL09 검증",
+          "playerType": "videojs",
+          "skin": "default",
+          "theme": {
+            "accentColor": "#abcdef",
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": null,
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 15
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

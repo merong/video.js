@@ -1,0 +1,1059 @@
+{
+  "HL06": {
+    "filterPressed": [
+      {
+        "label": "광고가 나오는 자리5",
+        "pressed": "true",
+        "visibleTerms": 5
+      },
+      {
+        "label": "소재6",
+        "pressed": "true",
+        "visibleTerms": 6
+      },
+      {
+        "label": "스킵2",
+        "pressed": "true",
+        "visibleTerms": 2
+      },
+      {
+        "label": "편성 대상과 상속6",
+        "pressed": "true",
+        "visibleTerms": 6
+      },
+      {
+        "label": "초안과 게시5",
+        "pressed": "true",
+        "visibleTerms": 5
+      },
+      {
+        "label": "미리보기와 재생 테스트2",
+        "pressed": "true",
+        "visibleTerms": 2
+      },
+      {
+        "label": "플레이어11",
+        "pressed": "true",
+        "visibleTerms": 11
+      },
+      {
+        "label": "통계5",
+        "pressed": "true",
+        "visibleTerms": 5
+      },
+      {
+        "label": "캠페인과 승인7",
+        "pressed": "true",
+        "visibleTerms": 7
+      }
+    ],
+    "hashAfterLinks": "#/help/publish",
+    "apiAfterMenuEntry": [],
+    "apiAfterReload": [
+      "GET bootstrap 200"
+    ],
+    "focusAfterReload": "sa-help-ad-break"
+  },
+  "HL07": {
+    "ad-break": {
+      "group": "광고 구간 그림 조작",
+      "running": {
+        "cls": "sa-motion",
+        "n": 6,
+        "states": [
+          "running"
+        ],
+        "t": [
+          1750,
+          1750,
+          1750
+        ]
+      },
+      "pressedAfterPause": "true",
+      "pausedLabel": "일시정지",
+      "paused1": {
+        "cls": "sa-motion is-paused",
+        "n": 6,
+        "states": [
+          "paused"
+        ],
+        "t": [
+          1800,
+          1800,
+          1800
+        ]
+      },
+      "paused2": {
+        "cls": "sa-motion is-paused",
+        "n": 6,
+        "states": [
+          "paused"
+        ],
+        "t": [
+          1800,
+          1800,
+          1800
+        ]
+      },
+      "pressedAfterResume": "false",
+      "resumed": {
+        "cls": "sa-motion",
+        "n": 6,
+        "states": [
+          "running"
+        ],
+        "t": [
+          2783,
+          2783,
+          2783
+        ]
+      },
+      "beforeReplay": {
+        "cls": "sa-motion",
+        "n": 6,
+        "states": [
+          "running"
+        ],
+        "t": [
+          4283,
+          4283,
+          4283
+        ]
+      },
+      "afterReplay": {
+        "cls": "sa-motion",
+        "n": 8,
+        "states": [
+          "running"
+        ],
+        "t": [
+          33,
+          33,
+          33
+        ]
+      }
+    },
+    "mid-roll": {
+      "group": "미드롤 그림 조작",
+      "running": {
+        "cls": "sa-motion",
+        "n": 4,
+        "states": [
+          "running"
+        ],
+        "t": [
+          7600,
+          7600,
+          7600
+        ]
+      },
+      "pressedAfterPause": "true",
+      "pausedLabel": "일시정지",
+      "paused1": {
+        "cls": "sa-motion is-paused",
+        "n": 4,
+        "states": [
+          "paused"
+        ],
+        "t": [
+          7750,
+          7750,
+          7750
+        ]
+      },
+      "paused2": {
+        "cls": "sa-motion is-paused",
+        "n": 4,
+        "states": [
+          "paused"
+        ],
+        "t": [
+          7750,
+          7750,
+          7750
+        ]
+      },
+      "pressedAfterResume": "false",
+      "resumed": {
+        "cls": "sa-motion",
+        "n": 4,
+        "states": [
+          "running"
+        ],
+        "t": [
+          8750,
+          8750,
+          8750
+        ]
+      },
+      "beforeReplay": {
+        "cls": "sa-motion",
+        "n": 4,
+        "states": [
+          "running"
+        ],
+        "t": [
+          10250,
+          10250,
+          10250
+        ]
+      },
+      "afterReplay": {
+        "cls": "sa-motion",
+        "n": 6,
+        "states": [
+          "running"
+        ],
+        "t": [
+          33,
+          33,
+          33
+        ]
+      }
+    },
+    "skip-offset": {
+      "group": "스킵 대기 그림 조작",
+      "running": {
+        "cls": "sa-motion",
+        "n": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          550,
+          550,
+          550
+        ]
+      },
+      "pressedAfterPause": "true",
+      "pausedLabel": "일시정지",
+      "paused1": {
+        "cls": "sa-motion is-paused",
+        "n": 5,
+        "states": [
+          "paused"
+        ],
+        "t": [
+          617,
+          617,
+          617
+        ]
+      },
+      "paused2": {
+        "cls": "sa-motion is-paused",
+        "n": 5,
+        "states": [
+          "paused"
+        ],
+        "t": [
+          617,
+          617,
+          617
+        ]
+      },
+      "pressedAfterResume": "false",
+      "resumed": {
+        "cls": "sa-motion",
+        "n": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          1600,
+          1600,
+          1600
+        ]
+      },
+      "beforeReplay": {
+        "cls": "sa-motion",
+        "n": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          3117,
+          3117,
+          3117
+        ]
+      },
+      "afterReplay": {
+        "cls": "sa-motion",
+        "n": 7,
+        "states": [
+          "running"
+        ],
+        "t": [
+          50,
+          50,
+          50
+        ]
+      }
+    },
+    "onceControls": [
+      {
+        "group": "등록 방식 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "대체텍스트 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "보관 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "고정 영상 ID 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "영상 소속 연결 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "초안 충돌 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "기본 프리셋 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "설치 코드 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "조회 조건과 CSV 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "광고주 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "캠페인 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "집행 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "승인과 승인함 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "등급 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "집행 상태 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "노출 그림 조작",
+        "buttons": [
+          "다시 보기"
+        ]
+      }
+    ],
+    "loopControls": [
+      {
+        "group": "광고 구간 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "프리롤 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "미드롤 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "포스트롤 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "광고 항목과 순서 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "소재 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "클릭 목적지 URL 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "이미지 · GIF 표시 시간 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "스킵 대기 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "이 광고의 스킵 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "적용 단위 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "상위 설정 상속 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "직접 편성 · 전체 대체 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "광고 비활성화 · 상속 중단 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "초안 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "초안 revision 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "게시 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "게시본과 게시 버전 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "게시 전 미리보기 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "게시본 재생 테스트 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "프리셋 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "플레이어 종류 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "스킨 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "테마 속성 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "강조색 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "화면 채우기 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "광고 화면 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "광고 문구 언어 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "미디어 형식 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "시작 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "완료와 완료율 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "클릭 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      },
+      {
+        "group": "클릭률 그림 조작",
+        "buttons": [
+          "일시정지",
+          "다시 보기"
+        ]
+      }
+    ],
+    "animDurations": [
+      {
+        "term": "ad-break",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "pre-roll",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "mid-roll",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "post-roll",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "ad-item",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "creative",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "creative-source",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "alt-text",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "click-through-url",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "image-display-time",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "archive",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "skip-offset",
+        "once": false,
+        "iterations": 1,
+        "durationMs": 150,
+        "endTime": 150
+      },
+      {
+        "term": "ad-skip",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "target-scope",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "inherit",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "replace",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "disabled",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "fixed-video-id",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "video-context",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "draft",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "draft-revision",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "revision-conflict",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "publish",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "publish-version",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "preview",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "play-test",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-preset",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-default-preset",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "player-type",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-skin",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-theme-property",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-accent-color",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-object-fit",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-ad-overlay",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-ad-language",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "player-install-snippet",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "player-media-engine",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "start",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "completion",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "click",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "click-through-rate",
+        "once": false,
+        "iterations": null,
+        "durationMs": 8000,
+        "endTime": null
+      },
+      {
+        "term": "stats-csv",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "advertiser",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "campaign",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "line-item",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "approval",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "tier",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "delivery-status",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      },
+      {
+        "term": "impression",
+        "once": true,
+        "iterations": 1,
+        "durationMs": 5000,
+        "endTime": 5000
+      }
+    ]
+  },
+  "HL08": {
+    "visible": {
+      "cls": "sa-motion",
+      "n": 6,
+      "states": [
+        "running"
+      ],
+      "t": [
+        7783,
+        7783,
+        7783
+      ]
+    },
+    "off1": {
+      "cls": "sa-motion is-offscreen",
+      "n": 6,
+      "states": [
+        "paused"
+      ],
+      "t": [
+        7816,
+        7816,
+        7816
+      ]
+    },
+    "off2": {
+      "cls": "sa-motion is-offscreen",
+      "n": 6,
+      "states": [
+        "paused"
+      ],
+      "t": [
+        7816,
+        7816,
+        7816
+      ]
+    },
+    "back1": {
+      "cls": "sa-motion",
+      "n": 6,
+      "states": [
+        "running"
+      ],
+      "t": [
+        8083,
+        8083,
+        8083
+      ]
+    },
+    "back2": {
+      "cls": "sa-motion",
+      "n": 6,
+      "states": [
+        "running"
+      ],
+      "t": [
+        9283,
+        9283,
+        9283
+      ]
+    }
+  },
+  "HL09": {
+    "reduce": {
+      "matches": true,
+      "figures": 49,
+      "running": 0,
+      "allAnims": 0,
+      "controls": 0,
+      "emptyStages": 0,
+      "bodies": 49,
+      "sampleFill": "none / 44.1719px"
+    },
+    "switchedToNoPreference": {
+      "matches": false,
+      "figures": 49,
+      "running": 48,
+      "allAnims": 254,
+      "controls": 82,
+      "emptyStages": 0,
+      "bodies": 49,
+      "sampleFill": "matrix(0, 0, 0, 1, 0, 0) / 44.1719px"
+    }
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

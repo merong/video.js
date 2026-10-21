@@ -1,0 +1,84 @@
+{
+  "PL03": {
+    "before": {
+      "revision": 1,
+      "others": [
+        {
+          "id": "default",
+          "name": "기본",
+          "playerType": "videojs",
+          "skin": "default",
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": null,
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "createdAt": null,
+          "updatedAt": null,
+          "builtIn": true
+        },
+        {
+          "id": "p-vym1rjw052",
+          "name": "QA Video.js 중립",
+          "playerType": "videojs",
+          "skin": "neutral",
+          "theme": {
+            "accentColor": "#0a3d91",
+            "accentTextColor": "#ffffff",
+            "borderColor": null,
+            "borderRadius": 12,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": "en",
+            "labels": {
+              "skip": "Skip ad",
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": 15,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "createdAt": "2026-10-20T16:13:47Z",
+          "updatedAt": "2026-10-20T16:13:47Z",
+          "builtIn": false
+        }
+      ]
+    }
+  },
+  "PL04": {},
+  "error": "TypeError: Cannot read properties of undefined (reading 'name')",
+  "bodies": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

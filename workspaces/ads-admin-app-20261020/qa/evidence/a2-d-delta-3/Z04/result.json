@@ -1,0 +1,342 @@
+{
+  "screens": [
+    {
+      "size": "1280x800",
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 736,
+        "h": 38,
+        "bottom": 274,
+        "right": 760
+      },
+      "card": {
+        "x": 776,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1256
+      },
+      "twoColumns": true,
+      "stacked": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "overflowOpen": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "steps": [
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110,
+          "demo": {
+            "x": 795,
+            "y": 721,
+            "w": 131,
+            "h": 36,
+            "bottom": 757,
+            "right": 926
+          },
+          "demoInView": true
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110,
+          "demo": {
+            "x": 795,
+            "y": 721,
+            "w": 131,
+            "h": 36,
+            "bottom": 757,
+            "right": 926
+          },
+          "demoInView": true
+        }
+      ],
+      "focusDemo": {
+        "demo": {
+          "x": 795,
+          "y": 721,
+          "w": 131,
+          "h": 36,
+          "bottom": 757,
+          "right": 926
+        },
+        "inView": true
+      },
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "editorAside": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "events": 0,
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "size": "768x1024",
+      "layoutClass": "aa-builtin is-medium",
+      "note": {
+        "x": 16,
+        "y": 263,
+        "w": 736,
+        "h": 38,
+        "bottom": 301,
+        "right": 752
+      },
+      "card": {
+        "x": 16,
+        "y": 369,
+        "w": 736,
+        "h": 68,
+        "bottom": 437,
+        "right": 752
+      },
+      "twoColumns": false,
+      "stacked": true,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "overflowOpen": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "scroll": {
+        "scrollHeight": 1161,
+        "innerHeight": 1024
+      },
+      "steps": [
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126,
+          "demo": {
+            "x": 35,
+            "y": 953,
+            "w": 131,
+            "h": 36,
+            "bottom": 989,
+            "right": 166
+          },
+          "demoInView": true
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126,
+          "demo": {
+            "x": 35,
+            "y": 953,
+            "w": 131,
+            "h": 36,
+            "bottom": 989,
+            "right": 166
+          },
+          "demoInView": true
+        }
+      ],
+      "focusDemo": {
+        "demo": {
+          "x": 35,
+          "y": 953,
+          "w": 131,
+          "h": 36,
+          "bottom": 989,
+          "right": 166
+        },
+        "inView": true
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": []
+    },
+    {
+      "size": "1280x600",
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 736,
+        "h": 38,
+        "bottom": 274,
+        "right": 760
+      },
+      "card": {
+        "x": 776,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1256
+      },
+      "twoColumns": true,
+      "stacked": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "overflowOpen": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 600
+      },
+      "steps": [
+        {
+          "scrollY": 150,
+          "cardTop": 86,
+          "noteTop": 86,
+          "demo": {
+            "x": 795,
+            "y": 697,
+            "w": 131,
+            "h": 36,
+            "bottom": 733,
+            "right": 926
+          },
+          "demoInView": false
+        },
+        {
+          "scrollY": 326,
+          "cardTop": -90,
+          "noteTop": -90,
+          "demo": {
+            "x": 795,
+            "y": 521,
+            "w": 131,
+            "h": 36,
+            "bottom": 557,
+            "right": 926
+          },
+          "demoInView": true
+        }
+      ],
+      "focusDemo": {
+        "demo": {
+          "x": 795,
+          "y": 521,
+          "w": 131,
+          "h": 36,
+          "bottom": 557,
+          "right": 926
+        },
+        "inView": true
+      },
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": []
+    },
+    {
+      "size": "768x600",
+      "layoutClass": "aa-builtin is-medium",
+      "note": {
+        "x": 16,
+        "y": 263,
+        "w": 736,
+        "h": 38,
+        "bottom": 301,
+        "right": 752
+      },
+      "card": {
+        "x": 16,
+        "y": 369,
+        "w": 736,
+        "h": 68,
+        "bottom": 437,
+        "right": 752
+      },
+      "twoColumns": false,
+      "stacked": true,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "overflowOpen": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "scroll": {
+        "scrollHeight": 1161,
+        "innerHeight": 600
+      },
+      "steps": [
+        {
+          "scrollY": 150,
+          "cardTop": 219,
+          "noteTop": 113,
+          "demo": {
+            "x": 35,
+            "y": 940,
+            "w": 131,
+            "h": 36,
+            "bottom": 976,
+            "right": 166
+          },
+          "demoInView": false
+        },
+        {
+          "scrollY": 561,
+          "cardTop": -192,
+          "noteTop": -298,
+          "demo": {
+            "x": 35,
+            "y": 529,
+            "w": 131,
+            "h": 36,
+            "bottom": 565,
+            "right": 166
+          },
+          "demoInView": true
+        }
+      ],
+      "focusDemo": {
+        "demo": {
+          "x": 35,
+          "y": 529,
+          "w": 131,
+          "h": 36,
+          "bottom": 565,
+          "right": 166
+        },
+        "inView": true
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": []
+    }
+  ]
+}

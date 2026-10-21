@@ -1,0 +1,30 @@
+{
+  "before": {
+    "accent": "#0f5132",
+    "adsAccent": null,
+    "font": 15,
+    "radius": 12,
+    "updatedAt": "2026-10-20T16:21:24Z"
+  },
+  "original": {
+    "accent": "#0f5132",
+    "adsAccent": null,
+    "font": 15,
+    "radius": 12
+  },
+  "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main form').filter({ visible: true }).first().getByRole('button', { name: '프리셋 저장' })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" class=\"sa-btn is-primary\" aria-describedby=\"_r_17_\">프리셋 저장</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "console": {
+    "a": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ],
+    "b": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      }
+    ]
+  }
+}

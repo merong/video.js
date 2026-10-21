@@ -1,0 +1,377 @@
+{
+  "B01": {
+    "failStatus": null,
+    "failUsernameKept": "a1-qa-admin",
+    "failPasswordCleared": "kept",
+    "failApi": [
+      {
+        "t": 954,
+        "method": "POST",
+        "action": "login",
+        "status": 401,
+        "ok": false,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": false,
+        "respCsrfHeader": false,
+        "error": {
+          "code": "invalid_login",
+          "message": "아이디 또는 비밀번호를 확인해 주세요."
+        }
+      }
+    ],
+    "displayName": "솔애드\n관리자\n대시보드\n캠페인\n소재\n지면 편성\n플레이어\n승인함\n리포트\n설정\n도움말\n집행 만들기\na\n로그아웃",
+    "hashBeforeReload": "#/creatives",
+    "hashAfterReload": "#/creatives",
+    "headingAfterReload": "소재",
+    "afterLogoutLoginVisible": true,
+    "afterLogoutProtected": 0,
+    "logoutApi": [
+      {
+        "t": 34150,
+        "method": "POST",
+        "action": "logout",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": true,
+        "respCsrfHeader": false
+      },
+      {
+        "t": 34163,
+        "method": "GET",
+        "action": "bootstrap",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": false
+      },
+      {
+        "t": 34197,
+        "method": "GET",
+        "action": "bootstrap",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": false
+      }
+    ]
+  },
+  "B02": {
+    "items": [
+      {
+        "name": "QA 커피 프리롤",
+        "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+        "preview": {
+          "found": true,
+          "tag": "VIDEO",
+          "src": "http://127.0.0.1:18781/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "readyState": 4,
+          "duration": 6,
+          "error": null
+        },
+        "status": "소재 v1을 저장했어요. 편성에서 사용할 버전을 선택해 주세요.",
+        "api": [
+          {
+            "t": 38053,
+            "method": "POST",
+            "action": "creative-save",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": true,
+            "csrfMatchesLastResponse": true,
+            "respCsrfHeader": true
+          },
+          {
+            "t": 38065,
+            "method": "GET",
+            "action": "creatives",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": false,
+            "csrfMatchesLastResponse": null,
+            "respCsrfHeader": true
+          }
+        ]
+      },
+      {
+        "name": "QA 포스트롤 이미지",
+        "url": "/demo-media/ad.png",
+        "preview": {
+          "found": true,
+          "tag": "IMG",
+          "src": "http://127.0.0.1:18781/demo-media/ad.png",
+          "naturalWidth": 480,
+          "alt": "QA 포스트롤 이미지 광고"
+        },
+        "status": "소재 v1을 저장했어요. 편성에서 사용할 버전을 선택해 주세요.",
+        "api": [
+          {
+            "t": 41900,
+            "method": "POST",
+            "action": "creative-save",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": true,
+            "csrfMatchesLastResponse": true,
+            "respCsrfHeader": true
+          },
+          {
+            "t": 41911,
+            "method": "GET",
+            "action": "creatives",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": false,
+            "csrfMatchesLastResponse": null,
+            "respCsrfHeader": true
+          }
+        ]
+      }
+    ],
+    "listHeading": "등록한 소재 2개"
+  },
+  "B03": {
+    "items": [
+      {
+        "name": "QA 이어버드 프리롤",
+        "status": "소재 v1을 저장했어요. 편성에서 사용할 버전을 선택해 주세요.",
+        "upload": [
+          {
+            "method": "POST",
+            "status": 200,
+            "ok": true,
+            "type": "fetch",
+            "csrfHeader": true
+          }
+        ],
+        "api": [
+          {
+            "t": 44917,
+            "method": "POST",
+            "action": "creative-upload",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": true,
+            "csrfMatchesLastResponse": true,
+            "respCsrfHeader": true
+          },
+          {
+            "t": 44991,
+            "method": "GET",
+            "action": "creatives",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": false,
+            "csrfMatchesLastResponse": null,
+            "respCsrfHeader": true
+          }
+        ]
+      },
+      {
+        "name": "QA 생수 미드롤",
+        "status": "소재 v1을 저장했어요. 편성에서 사용할 버전을 선택해 주세요.",
+        "upload": [
+          {
+            "method": "POST",
+            "status": 200,
+            "ok": true,
+            "type": "fetch",
+            "csrfHeader": true
+          }
+        ],
+        "api": [
+          {
+            "t": 47866,
+            "method": "POST",
+            "action": "creative-upload",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": true,
+            "csrfMatchesLastResponse": true,
+            "respCsrfHeader": true
+          },
+          {
+            "t": 47924,
+            "method": "GET",
+            "action": "creatives",
+            "status": 200,
+            "ok": true,
+            "csrfHeader": false,
+            "csrfMatchesLastResponse": null,
+            "respCsrfHeader": true
+          }
+        ]
+      }
+    ],
+    "creatives": [
+      {
+        "creativeId": "creative-267101fb797012e881497f982d14d614",
+        "name": "QA 생수 미드롤",
+        "version": 1,
+        "kind": "video",
+        "mime": "video/mp4",
+        "url": "/media/68c61716c58ea8d754c6ef6197778d87.mp4",
+        "archived": false,
+        "range": {
+          "full": "200 10602955 video/mp4",
+          "range": "206 1024 video/mp4",
+          "bad": "416 0 video/mp4"
+        },
+        "urlPattern": true
+      },
+      {
+        "creativeId": "creative-875bd60a31c5ae33e483d934d9c0884f",
+        "name": "QA 이어버드 프리롤",
+        "version": 1,
+        "kind": "video",
+        "mime": "video/mp4",
+        "url": "/media/76dc74ae90d428bd2e8d06c7beaa5f6a.mp4",
+        "archived": false,
+        "range": {
+          "full": "200 9365072 video/mp4",
+          "range": "206 1024 video/mp4",
+          "bad": "416 0 video/mp4"
+        },
+        "urlPattern": true
+      },
+      {
+        "creativeId": "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+        "name": "QA 포스트롤 이미지",
+        "version": 1,
+        "kind": "image",
+        "mime": "image/png",
+        "url": "/demo-media/ad.png",
+        "archived": false
+      },
+      {
+        "creativeId": "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+        "name": "QA 커피 프리롤",
+        "version": 1,
+        "kind": "video",
+        "mime": "video/mp4",
+        "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+        "archived": false
+      }
+    ]
+  },
+  "B04": {
+    "editStatus": "소재 v2을 저장했어요. 편성에서 사용할 버전을 선택해 주세요.",
+    "editApi": [
+      {
+        "t": 50453,
+        "method": "POST",
+        "action": "creative-save",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": true,
+        "respCsrfHeader": true
+      },
+      {
+        "t": 50464,
+        "method": "GET",
+        "action": "creatives",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": true
+      }
+    ],
+    "editRow": "QA 커피 프리롤 v2\ncreative-dd69a86f19eb54f49ce49ac3b31250b8\n\tvideo/mp4\tv2\t사용 가능\t\n미리보기\n새 버전으로 수정\n보관",
+    "dialogText": "“QA 보관 테스트” 소재를 보관할까요?\n\n보관한 소재는 새 편성과 게시에 쓸 수 없어요. 이미 게시된 편성은 그대로 유지돼요.\n\n취소\n보관",
+    "archiveApi": [
+      {
+        "t": 55013,
+        "method": "POST",
+        "action": "creative-archive",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": true,
+        "respCsrfHeader": true
+      },
+      {
+        "t": 55014,
+        "method": "GET",
+        "action": "creatives",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": true
+      }
+    ],
+    "archivedRow": "QA 보관 테스트\ncreative-997e6e5a4ab834055629c4b219ff9355\n\tvideo/mp4\tv1\t보관\t\n미리보기\n새 버전으로 수정\n보관",
+    "archivedButtons": true
+  },
+  "B05": {
+    "cases": [
+      {
+        "url": "javascript:alert(1)",
+        "status": "(status 없음)",
+        "keptUrl": "javascript:alert(1)",
+        "keptName": "QA 잘못된 URL java",
+        "before": "등록한 소재 5개",
+        "after": "등록한 소재 5개",
+        "api": []
+      },
+      {
+        "url": "ftp://x/a.mp4",
+        "status": "(status 없음)",
+        "keptUrl": "ftp://x/a.mp4",
+        "keptName": "QA 잘못된 URL ftp:",
+        "before": "등록한 소재 5개",
+        "after": "등록한 소재 5개",
+        "api": []
+      }
+    ],
+    "validAfter": {
+      "status": "소재 v1을 저장했어요. 편성에서 사용할 버전을 선택해 주세요.",
+      "api": [
+        {
+          "t": 71777,
+          "method": "POST",
+          "action": "creative-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        },
+        {
+          "t": 71783,
+          "method": "GET",
+          "action": "creatives",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": false,
+          "csrfMatchesLastResponse": null,
+          "respCsrfHeader": true
+        }
+      ]
+    }
+  },
+  "discardDialogs": [
+    "입력을 버릴까요?\n\n현재 소재에 저장하지 않은 입력이 있어요. 버리면 되돌릴 수 없어요.\n\n취소\n버리기"
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ],
+  "allRequests404": [
+    {
+      "url": "http://127.0.0.1:18781/api/index.php?action=login",
+      "status": 401,
+      "action": "login"
+    }
+  ]
+}

@@ -1,0 +1,1236 @@
+{
+  "PL17": {
+    "videojsPA": {
+      "path": "/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-vym1rjw052",
+      "page": {
+        "skinTag": "video-neutral-skin",
+        "css": [
+          "http://127.0.0.1:18781/assets/videojs/video-neutral.css"
+        ],
+        "accent": "#0f5132",
+        "radius": "12px",
+        "adsAttrs": {
+          "lang": "en",
+          "skip-label": "Skip ad",
+          "video-id": "a1-qa-preset-1"
+        },
+        "heading": [
+          "본편과 광고를 하나의 흐름으로."
+        ],
+        "notice": [
+          "재생 버튼을 눌러 본편과 광고를 확인하세요."
+        ],
+        "inlineScripts": 0,
+        "bodyHasScriptText": false,
+        "switchLinks": [
+          {
+            "text": "Video.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "기본 video",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "MP4",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "HLS",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "SPF",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-vym1rjw052&engine=spf"
+          },
+          {
+            "text": "hls.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-vym1rjw052&engine=hlsjs"
+          }
+        ]
+      },
+      "contentEnded": true,
+      "overlayTexts": [
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 재생 대기 | 재생 버튼을 눌러 본편과 광고를 확인하세요. | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 아직 관측된 광고가 없습니다. | #:# | / | #:# | #:# | Settings",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 광고 | 광고 creative-#d#c#e#e#fe#c#e#a 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | #:# | / | #:# | #:#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 광고 | 광고 creative-ccebb#c#fe#d#cd# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 creative-#d#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 전환 중 | 광고 creative-ccebb#c#fe#d#cd# 완료 · 다음 재생을 기다립니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 cr",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 본편 | 광고 후 본편을 재생하고 있습니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 creative-#d#c#e#e#fe#c#e#a · 완료 |",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 일시정지 | 본편이 일시정지되었습니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 creative-#d#c#e#e#fe#c#e#a · 완료 | 광고",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 광고 | 광고 creative-#aab#b#d#a#ac#a#ce#ee# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 creative-#d#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 광고 | 광고 creative-#e#cc#b#d#bacd 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 creative-#d#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | Video.js 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | SPF | hls.js | Grok Imagine 예제 | 종료 | 광고 creative-#e#cc#b#d#bacd 완료 · 본편은 종료되었습니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-vym#rjw# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 광고 creative-#d#c#e#e#fe#c#e#a · 시작 | 광고 creat"
+      ],
+      "sequence": [
+        "",
+        "ad-coffee-6s.mp4",
+        "c21ffd8f6db80bead47b39958086a372.mp4",
+        "content-scene-01.mp4",
+        "5d1e434c33ffa83a16bb067dbb9e93ae.mp4",
+        "content-scene-01.mp4",
+        "ad.png",
+        ""
+      ],
+      "presetRequests": [
+        "GET 200"
+      ],
+      "presetBodies": [
+        {
+          "status": 200,
+          "body": {
+            "ok": true,
+            "data": {
+              "id": "p-vym1rjw052",
+              "revision": 26,
+              "playerType": "videojs",
+              "skin": "neutral",
+              "skinTag": "video-neutral-skin",
+              "styles": {
+                "css": "video-neutral.css",
+                "js": "video-neutral.js"
+              },
+              "css": {
+                "--media-accent-color": "#0f5132",
+                "--media-accent-text-color": "#ffffff",
+                "--media-border-radius": "12px",
+                "--ads-font-size": "15px"
+              },
+              "attributes": {
+                "lang": "en",
+                "skip-label": "Skip ad"
+              }
+            }
+          }
+        }
+      ],
+      "assetStatuses": [
+        "200 /assets/videojs/video.css",
+        "200 /assets/admin/preview.js",
+        "200 /assets/admin/model.js",
+        "200 /assets/videojs/video-neutral.css",
+        "200 /assets/videojs/video-neutral.js",
+        "200 /assets/videojs/i18n-BfZDJOyu.js",
+        "200 /assets/videojs/shadow-styles-9eM0EVFC.js",
+        "200 /assets/videojs/template-BKUlUXWF.js",
+        "200 /assets/videojs/safe-define-DXxmf7BV.js",
+        "200 /assets/videojs/player-BdRyYiuB.js",
+        "200 /assets/videojs/register-Jh8czhUI.js",
+        "200 /assets/videojs/ui/container.js",
+        "200 /assets/videojs/ui/poster.js",
+        "200 /assets/videojs/ui/buffering-indicator.js",
+        "200 /assets/videojs/ui/error-dialog.js",
+        "200 /assets/videojs/ui/dialog-backdrop.js",
+        "200 /assets/videojs/ui/dialog-popup.js",
+        "200 /assets/videojs/ui/dialog-title.js",
+        "200 /assets/videojs/ui/dialog-description.js",
+        "200 /assets/videojs/ui/dialog-close.js",
+        "200 /assets/videojs/ui/title.js",
+        "200 /assets/videojs/ui/controls.js",
+        "200 /assets/videojs/ui/controls-backdrop.js",
+        "200 /assets/videojs/ui/controls-content.js",
+        "200 /assets/videojs/ui/tooltip-group.js",
+        "200 /assets/videojs/ui/controls-group.js",
+        "200 /assets/videojs/ui/airplay-button.js",
+        "200 /assets/videojs/ui/tooltip.js",
+        "200 /assets/videojs/ui/tooltip-label.js",
+        "200 /assets/videojs/ui/tooltip-shortcut.js",
+        "200 /assets/videojs/ui/cast-button.js",
+        "200 /assets/videojs/ui/pip-button.js",
+        "200 /assets/videojs/ui/fullscreen-button.js",
+        "200 /assets/videojs/ui/play-button.js",
+        "200 /assets/videojs/ui/time-slider.js",
+        "200 /assets/videojs/ui/time-slider-chapters.js",
+        "200 /assets/videojs/ui/slider-track.js",
+        "200 /assets/videojs/ui/slider-buffer.js",
+        "200 /assets/videojs/ui/slider-fill.js",
+        "200 /assets/videojs/ui/slider-thumb.js",
+        "200 /assets/videojs/ui/slider-preview.js",
+        "200 /assets/videojs/ui/slider-thumbnail.js",
+        "200 /assets/videojs/ui/slider-value.js",
+        "200 /assets/videojs/ui/time-slider-chapter-title.js",
+        "200 /assets/videojs/ui/mute-button.js",
+        "200 /assets/videojs/ui/volume-popover.js",
+        "200 /assets/videojs/ui/volume-slider.js",
+        "200 /assets/videojs/ui/time.js",
+        "200 /assets/videojs/ui/captions-button.js",
+        "200 /assets/videojs/ui/menu.js",
+        "200 /assets/videojs/ui/menu-content.js",
+        "200 /assets/videojs/ui/menu-item.js",
+        "200 /assets/videojs/ui/menu-separator.js",
+        "200 /assets/videojs/ui/quality-radio-group.js",
+        "200 /assets/videojs/ui/menu-radio-item.js",
+        "200 /assets/videojs/ui/menu-item-indicator.js",
+        "200 /assets/videojs/ui/audio-track-radio-group.js",
+        "200 /assets/videojs/ui/playback-rate-radio-group.js",
+        "200 /assets/videojs/ui/captions-radio-group.js",
+        "200 /assets/videojs/ui/hotkey.js",
+        "200 /assets/videojs/ui/gesture.js",
+        "200 /assets/videojs/ui/status-announcer.js",
+        "200 /assets/videojs/ui/volume-indicator.js",
+        "200 /assets/videojs/ui/volume-indicator-fill.js",
+        "200 /assets/videojs/ui/volume-indicator-value.js",
+        "200 /assets/videojs/ui/status-indicator.js",
+        "200 /assets/videojs/ui/status-indicator-value.js",
+        "200 /assets/videojs/ui/seek-indicator.js",
+        "200 /assets/videojs/ui/seek-indicator-value.js",
+        "200 /assets/videojs/pip-exit-wXVCkapy.js",
+        "200 /assets/videojs/check-_o7LYBK4.js",
+        "200 /assets/videojs/volume-off-CKsC9Abr.js",
+        "200 /assets/videojs/ui/time-group.js",
+        "200 /assets/videojs/ui/time-separator.js",
+        "200 /assets/videojs/supports-BQAP6C3n.js",
+        "200 /assets/videojs/predicate-DSCS8XT4.js",
+        "200 /assets/videojs/context-provider-ivCWVZbp.js",
+        "200 /assets/videojs/controller-DyVV6rgW.js",
+        "200 /assets/videojs/focus-AxQnuRrV.js",
+        "200 /assets/videojs/ui-element-CUMzLga1.js",
+        "200 /assets/videojs/i18n.js",
+        "200 /assets/videojs/create-player-B5Xsr_sp.js",
+        "200 /assets/videojs/context-consumer-BGkzZG3G.js",
+        "200 /assets/videojs/listen-4VrUltMW.js",
+        "200 /assets/videojs/tree-Db6JWG7V.js",
+        "200 /assets/videojs/context-BEwcGq-j.js",
+        "200 /assets/videojs/controller-4KIPcUJn.js",
+        "200 /assets/videojs/selectors-DMVJijlA.js",
+        "200 /assets/videojs/state-data-attrs-CjNZtRJA.js",
+        "200 /assets/videojs/popup-group-context-DtGmevFv.js",
+        "200 /assets/videojs/children-DNUcmoz9.js",
+        "200 /assets/videojs/predicates-DfMqV1aQ.js",
+        "200 /assets/videojs/defaults-BMkSdEzN.js",
+        "200 /assets/videojs/state-CABM1wUm.js",
+        "200 /assets/videojs/snapshot-controller-D07v57w-.js",
+        "200 /assets/videojs/media-error-CtsbOTR1.js",
+        "200 /assets/videojs/data-Cz5r0Nes.js",
+        "200 /assets/videojs/transition-5K1eXmzl.js",
+        "200 /assets/videojs/core-B4FV2Ph-.js",
+        "200 /assets/videojs/context-DCVCwG6E.js",
+        "200 /assets/videojs/context-part-element-Dy5xX1HE.js",
+        "200 /assets/videojs/element-props-B1KSgbJ9.js",
+        "200 /assets/videojs/button-Y55WuR0m.js",
+        "200 /assets/videojs/host-Dt6eACiu.js",
+        "200 /assets/videojs/context-Cm3sdWHb.js",
+        "200 /assets/videojs/context-ZgjZBeDe.js",
+        "200 /assets/videojs/resolve-text-lYzRwXIu.js",
+        "200 /assets/videojs/webkit-DljEkldb.js",
+        "200 /assets/videojs/cast-CUbA_g6v.js",
+        "200 /assets/videojs/resolve-label-Csj4NyOQ.js",
+        "200 /assets/videojs/media-button-element-Ch1MLKNP.js",
+        "200 /assets/videojs/position-controller-CT-BWhPM.js",
+        "200 /assets/videojs/vars-BODRO2lw.js",
+        "200 /assets/videojs/hotkey-events-8krRcXxl.js",
+        "200 /assets/videojs/transition-BH2ZEksS.js",
+        "200 /assets/videojs/popover-DcrJe5Yz.js",
+        "200 /assets/videojs/label-2G4qnSHe.js",
+        "200 /assets/videojs/shortcut-BnVcWwm4.js",
+        "200 /assets/videojs/fullscreen-sMHMAZ5s.js",
+        "200 /assets/videojs/buttons-CUtb8x8R.js",
+        "200 /assets/videojs/volume-cOW73aoK.js",
+        "200 /assets/videojs/style-iIgYFplF.js",
+        "200 /assets/videojs/data-JRMbnaJJ.js",
+        "200 /assets/videojs/predicate-C1YKBF75.js",
+        "200 /assets/videojs/number-CWlYxwN1.js",
+        "200 /assets/videojs/css-vars-7FASVoTa.js",
+        "200 /assets/videojs/format-YaJWnevo.js",
+        "200 /assets/videojs/time-DYSdevo1.js",
+        "200 /assets/videojs/context-D_k9hQ7P.js",
+        "200 /assets/videojs/core-BnAIN1wg.js",
+        "200 /assets/videojs/observe-elements-DVlFNzIr.js",
+        "200 /assets/videojs/element-jgHrdlL0.js",
+        "200 /assets/videojs/element-DQJXP66E.js",
+        "200 /assets/videojs/volume-bLkHAx2V.js",
+        "200 /assets/videojs/text-track-aC_8Gh6M.js",
+        "200 /assets/videojs/attributes-DrTKm-Cs.js",
+        "200 /assets/videojs/layout-DqqwqjPS.js",
+        "200 /assets/videojs/menu-CjZbj8QZ.js",
+        "200 /assets/videojs/core-CeogC59h.js",
+        "200 /assets/videojs/context-DT97QSHp.js",
+        "200 /assets/videojs/controller-B28y1Jgb.js",
+        "200 /assets/videojs/radio-group-C-nW9-GW.js",
+        "200 /assets/videojs/radio-item-eEPMG8cU.js",
+        "200 /assets/videojs/item-indicator-BnS2rwGG.js",
+        "200 /assets/videojs/hotkey-BsoOdVau.js",
+        "200 /assets/videojs/media-actions-CUKyjQLw.js",
+        "200 /assets/videojs/i18n-BdP2ANgX.js",
+        "200 /assets/videojs/translate-text-BRTkqA4G.js",
+        "200 /assets/videojs/input-action-DJhFSRIp.js",
+        "200 /assets/videojs/status-20V35ipg.js",
+        "200 /assets/videojs/playback-Cz8W46mL.js",
+        "200 /assets/videojs/live-indicator-Eovkn70q.js",
+        "200 /assets/videojs/create-context--NqP-Eqb.js",
+        "200 /assets/videojs/casing-CxqC0yQL.js",
+        "200 /assets/videojs/registered-media-BTb9nUxf.js",
+        "200 /assets/videojs/noop-Ch0IHcOP.js",
+        "200 /assets/videojs/pick-66qBhPHR.js",
+        "200 /assets/videojs/types-HOYOipK7.js",
+        "200 /assets/videojs/shallow-equal-KV1zFqZi.js",
+        "200 /assets/videojs/interaction-lock-DKc9gO7E.js",
+        "200 /assets/videojs/dismiss-layer-BeqFpH_J.js",
+        "200 /assets/videojs/abort-CDkm8-HH.js",
+        "200 /assets/videojs/constants-B4LD5zrj.js",
+        "200 /assets/videojs/find-last-at-or-before-DOvXla8-.js",
+        "200 /assets/videojs/device-pixel-ratio-BHQMoAGQ.js",
+        "200 /assets/videojs/group-controller-BDZx_W5u.js",
+        "200 /assets/ads.js"
+      ],
+      "non2xx": [],
+      "events": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "playerPB": {
+      "path": "/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-obxpj5v9m9",
+      "page": {
+        "skinTag": null,
+        "css": [],
+        "accent": null,
+        "radius": "8px",
+        "adsAttrs": null,
+        "heading": [
+          "본편과 광고를 하나의 흐름으로."
+        ],
+        "notice": [
+          "재생 버튼을 눌러 본편과 광고를 확인하세요."
+        ],
+        "inlineScripts": 0,
+        "bodyHasScriptText": false,
+        "switchLinks": [
+          {
+            "text": "Video.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-obxpj5v9m9"
+          },
+          {
+            "text": "기본 video",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-obxpj5v9m9"
+          },
+          {
+            "text": "MP4",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-obxpj5v9m9"
+          },
+          {
+            "text": "HLS",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-obxpj5v9m9"
+          }
+        ]
+      },
+      "contentEnded": true,
+      "overlayTexts": [
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 재생 대기 | 재생 버튼을 눌러 본편과 광고를 확인하세요. | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 아직 관측된 광고가 없습니다.",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 광고 | 프리롤 · 광고 #/# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 광고 #/# | 광고주 사이트 | #:# / #:#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 광고 | 프리롤 · 광고 #/# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 광고 #/# | #초 후 건너뛰기 | #:# / #:#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 광고 | 프리롤 · 광고 #/# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 광고 #/# | 광고 건너뛰기 | #:# / #:#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 본편 | 광고 후 본편을 재생하고 있습니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 본편 복귀",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 광고 | 미드롤 · 광고 #/# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 본편 복귀 | 미드롤 · 광고 #/# · 시작 | 광고 #/# | #초 후",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 광고 | 미드롤 · 광고 #/# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 본편 복귀 | 미드롤 · 광고 #/# · 시작 | 광고 #/# | 광고 건",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 본편 | 광고 후 본편을 재생하고 있습니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 본편 복귀 | 미드롤 · 광고 #/# · 시작 | 미드롤 · 광고 #/",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 광고 | 포스트롤 · 광고 #/# 진행 중 | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 본편 복귀 | 미드롤 · 광고 #/# · 시작 | 미드롤 · 광고 #/#",
+        "광고 관리자 | 광고 연동 예제 | 본편과 광고를 하나의 흐름으로. | 브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다. | Video.js | 기본 video | MP# | HLS | Grok Imagine 예제 | 종료 | 포스트롤 · 광고 #/# 완료 · 재생이 끝났습니다. | 영상 a#-qa-preset-# · MP# · 프리셋 p-obxpj#v#m# | 처음부터 다시 확인 | 이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요. | 이번 재생 기록 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 프리롤 · 광고 #/# · 시작 | 프리롤 · 광고 #/# · 완료 | 본편 복귀 | 미드롤 · 광고 #/# · 시작 | 미"
+      ],
+      "sequence": [
+        "",
+        "ad-coffee-6s.mp4",
+        "c21ffd8f6db80bead47b39958086a372.mp4",
+        "content-scene-01.mp4",
+        "5d1e434c33ffa83a16bb067dbb9e93ae.mp4",
+        "content-scene-01.mp4",
+        "ad.png",
+        ""
+      ],
+      "presetRequests": [
+        "GET 200"
+      ],
+      "presetBodies": [
+        {
+          "status": 200,
+          "body": {
+            "ok": true,
+            "data": {
+              "id": "p-obxpj5v9m9",
+              "revision": 26,
+              "playerType": "native",
+              "skin": null,
+              "skinTag": null,
+              "styles": null,
+              "css": {},
+              "ui": {
+                "locale": "ko"
+              },
+              "timeouts": {
+                "loadSeconds": 8
+              }
+            }
+          }
+        }
+      ],
+      "assetStatuses": [
+        "200 /assets/admin/preview.js",
+        "200 /assets/admin/model.js",
+        "200 /assets/ads.js"
+      ],
+      "non2xx": [],
+      "events": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "playerPA": {
+      "path": "/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-vym1rjw052",
+      "page": {
+        "skinTag": null,
+        "css": [],
+        "accent": null,
+        "radius": "8px",
+        "adsAttrs": null,
+        "heading": [
+          "본편과 광고를 하나의 흐름으로."
+        ],
+        "notice": [
+          "재생 버튼을 눌러 본편과 광고를 확인하세요.",
+          "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 이 프리셋은 Video.js 플레이어용입니다. 맞는 예제 페이지에서 여세요."
+        ],
+        "inlineScripts": 0,
+        "bodyHasScriptText": false,
+        "switchLinks": [
+          {
+            "text": "Video.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "기본 video",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "MP4",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-vym1rjw052"
+          },
+          {
+            "text": "HLS",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-vym1rjw052"
+          }
+        ]
+      },
+      "playingAfter": [
+        {
+          "src": "content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        },
+        {
+          "src": "c21ffd8f6db80bead47b39958086a372.mp4",
+          "paused": false,
+          "t": 1
+        }
+      ],
+      "presetRequests": [
+        "GET 200"
+      ],
+      "presetBodies": [
+        {
+          "status": 200,
+          "body": {
+            "ok": true,
+            "data": {
+              "id": "p-vym1rjw052",
+              "revision": 26,
+              "playerType": "videojs",
+              "skin": "neutral",
+              "skinTag": "video-neutral-skin",
+              "styles": {
+                "css": "video-neutral.css",
+                "js": "video-neutral.js"
+              },
+              "css": {
+                "--media-accent-color": "#0f5132",
+                "--media-accent-text-color": "#ffffff",
+                "--media-border-radius": "12px",
+                "--ads-font-size": "15px"
+              },
+              "attributes": {
+                "lang": "en",
+                "skip-label": "Skip ad"
+              }
+            }
+          }
+        }
+      ],
+      "assetStatuses": [
+        "200 /assets/admin/preview.js",
+        "200 /assets/admin/model.js",
+        "200 /assets/ads.js"
+      ],
+      "non2xx": [],
+      "events": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    }
+  },
+  "PL18": {
+    "notFound": {
+      "path": "/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-zzzzzzzzzz",
+      "page": {
+        "skinTag": null,
+        "css": [
+          "http://127.0.0.1:18781/assets/videojs/video.css"
+        ],
+        "accent": null,
+        "radius": "8px",
+        "adsAttrs": {
+          "video-id": "a1-qa-preset-1"
+        },
+        "heading": [
+          "본편과 광고를 하나의 흐름으로."
+        ],
+        "notice": [
+          "재생 버튼을 눌러 본편과 광고를 확인하세요.",
+          "프리셋 p-zzzzzzzzzz을 적용하지 못해 기본값으로 재생합니다. 플레이어 프리셋을 찾을 수 없습니다."
+        ],
+        "inlineScripts": 0,
+        "bodyHasScriptText": false,
+        "switchLinks": [
+          {
+            "text": "Video.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-zzzzzzzzzz"
+          },
+          {
+            "text": "기본 video",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=p-zzzzzzzzzz"
+          },
+          {
+            "text": "MP4",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-zzzzzzzzzz"
+          },
+          {
+            "text": "HLS",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-zzzzzzzzzz"
+          },
+          {
+            "text": "SPF",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-zzzzzzzzzz&engine=spf"
+          },
+          {
+            "text": "hls.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-zzzzzzzzzz&engine=hlsjs"
+          }
+        ]
+      },
+      "playingAfter": [
+        {
+          "src": "content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        },
+        {
+          "src": "c21ffd8f6db80bead47b39958086a372.mp4",
+          "paused": false,
+          "t": 1
+        }
+      ],
+      "presetRequests": [
+        "GET 404"
+      ],
+      "presetBodies": [
+        {
+          "status": 404,
+          "body": {
+            "ok": false,
+            "error": {
+              "code": "preset_not_found",
+              "message": "플레이어 프리셋을 찾을 수 없습니다."
+            }
+          }
+        }
+      ],
+      "assetStatuses": [
+        "200 /assets/videojs/video.css",
+        "200 /assets/admin/preview.js",
+        "200 /assets/admin/model.js",
+        "200 /assets/videojs/video.css",
+        "200 /assets/videojs/video.js",
+        "200 /assets/videojs/i18n-BfZDJOyu.js",
+        "200 /assets/videojs/shadow-styles-9eM0EVFC.js",
+        "200 /assets/videojs/template-BKUlUXWF.js",
+        "200 /assets/videojs/safe-define-DXxmf7BV.js",
+        "200 /assets/videojs/player-BdRyYiuB.js",
+        "200 /assets/videojs/register-Jh8czhUI.js",
+        "200 /assets/videojs/pip-exit-C2ty4mGY.js",
+        "200 /assets/videojs/check-CTc_yBQ2.js",
+        "200 /assets/videojs/volume-off-qYa3p0c5.js",
+        "200 /assets/videojs/ui/container.js",
+        "200 /assets/videojs/ui/poster.js",
+        "200 /assets/videojs/ui/buffering-indicator.js",
+        "200 /assets/videojs/ui/error-dialog.js",
+        "200 /assets/videojs/ui/dialog-backdrop.js",
+        "200 /assets/videojs/ui/dialog-popup.js",
+        "200 /assets/videojs/ui/dialog-title.js",
+        "200 /assets/videojs/ui/dialog-description.js",
+        "200 /assets/videojs/ui/dialog-close.js",
+        "200 /assets/videojs/ui/title.js",
+        "200 /assets/videojs/ui/controls.js",
+        "200 /assets/videojs/ui/controls-backdrop.js",
+        "200 /assets/videojs/ui/controls-content.js",
+        "200 /assets/videojs/ui/tooltip-group.js",
+        "200 /assets/videojs/ui/controls-group.js",
+        "200 /assets/videojs/ui/airplay-button.js",
+        "200 /assets/videojs/ui/tooltip.js",
+        "200 /assets/videojs/ui/tooltip-label.js",
+        "200 /assets/videojs/ui/tooltip-shortcut.js",
+        "200 /assets/videojs/ui/cast-button.js",
+        "200 /assets/videojs/ui/pip-button.js",
+        "200 /assets/videojs/ui/fullscreen-button.js",
+        "200 /assets/videojs/ui/play-button.js",
+        "200 /assets/videojs/ui/time-slider.js",
+        "200 /assets/videojs/ui/time-slider-chapters.js",
+        "200 /assets/videojs/ui/slider-track.js",
+        "200 /assets/videojs/ui/slider-buffer.js",
+        "200 /assets/videojs/ui/slider-fill.js",
+        "200 /assets/videojs/ui/slider-thumb.js",
+        "200 /assets/videojs/ui/slider-preview.js",
+        "200 /assets/videojs/ui/slider-thumbnail.js",
+        "200 /assets/videojs/ui/slider-value.js",
+        "200 /assets/videojs/ui/time-slider-chapter-title.js",
+        "200 /assets/videojs/ui/mute-button.js",
+        "200 /assets/videojs/ui/volume-popover.js",
+        "200 /assets/videojs/ui/volume-slider.js",
+        "200 /assets/videojs/ui/time.js",
+        "200 /assets/videojs/ui/captions-button.js",
+        "200 /assets/videojs/ui/menu.js",
+        "200 /assets/videojs/ui/menu-content.js",
+        "200 /assets/videojs/ui/menu-item.js",
+        "200 /assets/videojs/ui/menu-separator.js",
+        "200 /assets/videojs/ui/quality-radio-group.js",
+        "200 /assets/videojs/ui/menu-radio-item.js",
+        "200 /assets/videojs/ui/menu-item-indicator.js",
+        "200 /assets/videojs/ui/audio-track-radio-group.js",
+        "200 /assets/videojs/ui/playback-rate-radio-group.js",
+        "200 /assets/videojs/ui/captions-radio-group.js",
+        "200 /assets/videojs/ui/hotkey.js",
+        "200 /assets/videojs/ui/gesture.js",
+        "200 /assets/videojs/ui/status-announcer.js",
+        "200 /assets/videojs/ui/volume-indicator.js",
+        "200 /assets/videojs/ui/volume-indicator-fill.js",
+        "200 /assets/videojs/ui/volume-indicator-value.js",
+        "200 /assets/videojs/ui/status-indicator.js",
+        "200 /assets/videojs/ui/status-indicator-value.js",
+        "200 /assets/videojs/ui/seek-indicator.js",
+        "200 /assets/videojs/ui/seek-indicator-value.js",
+        "200 /assets/videojs/i18n.js",
+        "200 /assets/videojs/predicate-DSCS8XT4.js",
+        "200 /assets/videojs/context-provider-ivCWVZbp.js",
+        "200 /assets/videojs/controller-DyVV6rgW.js",
+        "200 /assets/videojs/focus-AxQnuRrV.js",
+        "200 /assets/videojs/ui-element-CUMzLga1.js",
+        "200 /assets/videojs/supports-BQAP6C3n.js",
+        "200 /assets/videojs/create-player-B5Xsr_sp.js",
+        "200 /assets/videojs/context-consumer-BGkzZG3G.js",
+        "200 /assets/videojs/listen-4VrUltMW.js",
+        "200 /assets/videojs/tree-Db6JWG7V.js",
+        "200 /assets/videojs/context-BEwcGq-j.js",
+        "200 /assets/videojs/controller-4KIPcUJn.js",
+        "200 /assets/videojs/selectors-DMVJijlA.js",
+        "200 /assets/videojs/state-data-attrs-CjNZtRJA.js",
+        "200 /assets/videojs/popup-group-context-DtGmevFv.js",
+        "200 /assets/videojs/children-DNUcmoz9.js",
+        "200 /assets/videojs/predicates-DfMqV1aQ.js",
+        "200 /assets/videojs/defaults-BMkSdEzN.js",
+        "200 /assets/videojs/state-CABM1wUm.js",
+        "200 /assets/videojs/snapshot-controller-D07v57w-.js",
+        "200 /assets/videojs/media-error-CtsbOTR1.js",
+        "200 /assets/videojs/data-Cz5r0Nes.js",
+        "200 /assets/videojs/transition-5K1eXmzl.js",
+        "200 /assets/videojs/core-B4FV2Ph-.js",
+        "200 /assets/videojs/context-DCVCwG6E.js",
+        "200 /assets/videojs/context-part-element-Dy5xX1HE.js",
+        "200 /assets/videojs/element-props-B1KSgbJ9.js",
+        "200 /assets/videojs/button-Y55WuR0m.js",
+        "200 /assets/videojs/host-Dt6eACiu.js",
+        "200 /assets/videojs/context-Cm3sdWHb.js",
+        "200 /assets/videojs/context-ZgjZBeDe.js",
+        "200 /assets/videojs/resolve-text-lYzRwXIu.js",
+        "200 /assets/videojs/webkit-DljEkldb.js",
+        "200 /assets/videojs/cast-CUbA_g6v.js",
+        "200 /assets/videojs/resolve-label-Csj4NyOQ.js",
+        "200 /assets/videojs/media-button-element-Ch1MLKNP.js",
+        "200 /assets/videojs/position-controller-CT-BWhPM.js",
+        "200 /assets/videojs/vars-BODRO2lw.js",
+        "200 /assets/videojs/hotkey-events-8krRcXxl.js",
+        "200 /assets/videojs/transition-BH2ZEksS.js",
+        "200 /assets/videojs/popover-DcrJe5Yz.js",
+        "200 /assets/videojs/label-2G4qnSHe.js",
+        "200 /assets/videojs/shortcut-BnVcWwm4.js",
+        "200 /assets/videojs/fullscreen-sMHMAZ5s.js",
+        "200 /assets/videojs/buttons-CUtb8x8R.js",
+        "200 /assets/videojs/volume-cOW73aoK.js",
+        "200 /assets/videojs/style-iIgYFplF.js",
+        "200 /assets/videojs/data-JRMbnaJJ.js",
+        "200 /assets/videojs/predicate-C1YKBF75.js",
+        "200 /assets/videojs/number-CWlYxwN1.js",
+        "200 /assets/videojs/css-vars-7FASVoTa.js",
+        "200 /assets/videojs/format-YaJWnevo.js",
+        "200 /assets/videojs/time-DYSdevo1.js",
+        "200 /assets/videojs/context-D_k9hQ7P.js",
+        "200 /assets/videojs/core-BnAIN1wg.js",
+        "200 /assets/videojs/observe-elements-DVlFNzIr.js",
+        "200 /assets/videojs/element-jgHrdlL0.js",
+        "200 /assets/videojs/element-DQJXP66E.js",
+        "200 /assets/videojs/volume-bLkHAx2V.js",
+        "200 /assets/videojs/text-track-aC_8Gh6M.js",
+        "200 /assets/videojs/attributes-DrTKm-Cs.js",
+        "200 /assets/videojs/layout-DqqwqjPS.js",
+        "200 /assets/videojs/menu-CjZbj8QZ.js",
+        "200 /assets/videojs/core-CeogC59h.js",
+        "200 /assets/videojs/context-DT97QSHp.js",
+        "200 /assets/videojs/controller-B28y1Jgb.js",
+        "200 /assets/videojs/radio-group-C-nW9-GW.js",
+        "200 /assets/videojs/radio-item-eEPMG8cU.js",
+        "200 /assets/videojs/item-indicator-BnS2rwGG.js",
+        "200 /assets/videojs/hotkey-BsoOdVau.js",
+        "200 /assets/videojs/media-actions-CUKyjQLw.js",
+        "200 /assets/videojs/i18n-BdP2ANgX.js",
+        "200 /assets/videojs/translate-text-BRTkqA4G.js",
+        "200 /assets/videojs/input-action-DJhFSRIp.js",
+        "200 /assets/videojs/status-20V35ipg.js",
+        "200 /assets/videojs/playback-Cz8W46mL.js",
+        "200 /assets/videojs/live-indicator-Eovkn70q.js",
+        "200 /assets/videojs/create-context--NqP-Eqb.js",
+        "200 /assets/videojs/casing-CxqC0yQL.js",
+        "200 /assets/videojs/registered-media-BTb9nUxf.js",
+        "200 /assets/videojs/noop-Ch0IHcOP.js",
+        "200 /assets/videojs/pick-66qBhPHR.js",
+        "200 /assets/videojs/types-HOYOipK7.js",
+        "200 /assets/videojs/shallow-equal-KV1zFqZi.js",
+        "200 /assets/videojs/interaction-lock-DKc9gO7E.js",
+        "200 /assets/videojs/dismiss-layer-BeqFpH_J.js",
+        "200 /assets/videojs/abort-CDkm8-HH.js",
+        "200 /assets/videojs/constants-B4LD5zrj.js",
+        "200 /assets/videojs/find-last-at-or-before-DOvXla8-.js",
+        "200 /assets/videojs/device-pixel-ratio-BHQMoAGQ.js",
+        "200 /assets/videojs/group-controller-BDZx_W5u.js",
+        "200 /assets/ads.js"
+      ],
+      "non2xx": [
+        "GET /api/index.php?action=player-preset&id=p-zzzzzzzzzz 404 "
+      ],
+      "events": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "invalid": {
+      "path": "/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=%3Cscript%3Ealert(1)%3C/script%3E",
+      "page": {
+        "skinTag": null,
+        "css": [
+          "http://127.0.0.1:18781/assets/videojs/video.css"
+        ],
+        "accent": null,
+        "radius": "8px",
+        "adsAttrs": {
+          "video-id": "a1-qa-preset-1"
+        },
+        "heading": [
+          "본편과 광고를 하나의 흐름으로."
+        ],
+        "notice": [
+          "재생 버튼을 눌러 본편과 광고를 확인하세요.",
+          "프리셋 <script>alert(1)</script>을 적용하지 못해 기본값으로 재생합니다. 플레이어 프리셋 ID를 확인해 주세요."
+        ],
+        "inlineScripts": 0,
+        "bodyHasScriptText": false,
+        "switchLinks": [
+          {
+            "text": "Video.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=%3Cscript%3Ealert(1)%3C/script%3E"
+          },
+          {
+            "text": "기본 video",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4&preset=%3Cscript%3Ealert(1)%3C/script%3E"
+          },
+          {
+            "text": "MP4",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=%3Cscript%3Ealert%281%29%3C%2Fscript%3E"
+          },
+          {
+            "text": "HLS",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=%3Cscript%3Ealert%281%29%3C%2Fscript%3E"
+          },
+          {
+            "text": "SPF",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=%3Cscript%3Ealert%281%29%3C%2Fscript%3E&engine=spf"
+          },
+          {
+            "text": "hls.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=%3Cscript%3Ealert%281%29%3C%2Fscript%3E&engine=hlsjs"
+          }
+        ]
+      },
+      "playingAfter": [
+        {
+          "src": "content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        },
+        {
+          "src": "c21ffd8f6db80bead47b39958086a372.mp4",
+          "paused": false,
+          "t": 1
+        }
+      ],
+      "presetRequests": [
+        "GET 400"
+      ],
+      "presetBodies": [
+        {
+          "status": 400,
+          "body": {
+            "ok": false,
+            "error": {
+              "code": "invalid_preset_id",
+              "message": "플레이어 프리셋 ID를 확인해 주세요.",
+              "fields": {
+                "id": "플레이어 프리셋 ID를 확인해 주세요."
+              }
+            }
+          }
+        }
+      ],
+      "assetStatuses": [
+        "200 /assets/videojs/video.css",
+        "200 /assets/admin/preview.js",
+        "200 /assets/admin/model.js",
+        "200 /assets/videojs/video.css",
+        "200 /assets/videojs/video.js",
+        "200 /assets/videojs/i18n-BfZDJOyu.js",
+        "200 /assets/videojs/shadow-styles-9eM0EVFC.js",
+        "200 /assets/videojs/template-BKUlUXWF.js",
+        "200 /assets/videojs/safe-define-DXxmf7BV.js",
+        "200 /assets/videojs/player-BdRyYiuB.js",
+        "200 /assets/videojs/register-Jh8czhUI.js",
+        "200 /assets/videojs/pip-exit-C2ty4mGY.js",
+        "200 /assets/videojs/check-CTc_yBQ2.js",
+        "200 /assets/videojs/volume-off-qYa3p0c5.js",
+        "200 /assets/videojs/ui/container.js",
+        "200 /assets/videojs/ui/poster.js",
+        "200 /assets/videojs/ui/buffering-indicator.js",
+        "200 /assets/videojs/ui/error-dialog.js",
+        "200 /assets/videojs/ui/dialog-backdrop.js",
+        "200 /assets/videojs/ui/dialog-popup.js",
+        "200 /assets/videojs/ui/dialog-title.js",
+        "200 /assets/videojs/ui/dialog-description.js",
+        "200 /assets/videojs/ui/dialog-close.js",
+        "200 /assets/videojs/ui/title.js",
+        "200 /assets/videojs/ui/controls.js",
+        "200 /assets/videojs/ui/controls-backdrop.js",
+        "200 /assets/videojs/ui/controls-content.js",
+        "200 /assets/videojs/ui/tooltip-group.js",
+        "200 /assets/videojs/ui/controls-group.js",
+        "200 /assets/videojs/ui/airplay-button.js",
+        "200 /assets/videojs/ui/tooltip.js",
+        "200 /assets/videojs/ui/tooltip-label.js",
+        "200 /assets/videojs/ui/tooltip-shortcut.js",
+        "200 /assets/videojs/ui/cast-button.js",
+        "200 /assets/videojs/ui/pip-button.js",
+        "200 /assets/videojs/ui/fullscreen-button.js",
+        "200 /assets/videojs/ui/play-button.js",
+        "200 /assets/videojs/ui/time-slider.js",
+        "200 /assets/videojs/ui/time-slider-chapters.js",
+        "200 /assets/videojs/ui/slider-track.js",
+        "200 /assets/videojs/ui/slider-buffer.js",
+        "200 /assets/videojs/ui/slider-fill.js",
+        "200 /assets/videojs/ui/slider-thumb.js",
+        "200 /assets/videojs/ui/slider-preview.js",
+        "200 /assets/videojs/ui/slider-thumbnail.js",
+        "200 /assets/videojs/ui/slider-value.js",
+        "200 /assets/videojs/ui/time-slider-chapter-title.js",
+        "200 /assets/videojs/ui/mute-button.js",
+        "200 /assets/videojs/ui/volume-popover.js",
+        "200 /assets/videojs/ui/volume-slider.js",
+        "200 /assets/videojs/ui/time.js",
+        "200 /assets/videojs/ui/captions-button.js",
+        "200 /assets/videojs/ui/menu.js",
+        "200 /assets/videojs/ui/menu-content.js",
+        "200 /assets/videojs/ui/menu-item.js",
+        "200 /assets/videojs/ui/menu-separator.js",
+        "200 /assets/videojs/ui/quality-radio-group.js",
+        "200 /assets/videojs/ui/menu-radio-item.js",
+        "200 /assets/videojs/ui/menu-item-indicator.js",
+        "200 /assets/videojs/ui/audio-track-radio-group.js",
+        "200 /assets/videojs/ui/playback-rate-radio-group.js",
+        "200 /assets/videojs/ui/captions-radio-group.js",
+        "200 /assets/videojs/ui/hotkey.js",
+        "200 /assets/videojs/ui/gesture.js",
+        "200 /assets/videojs/ui/status-announcer.js",
+        "200 /assets/videojs/ui/volume-indicator.js",
+        "200 /assets/videojs/ui/volume-indicator-fill.js",
+        "200 /assets/videojs/ui/volume-indicator-value.js",
+        "200 /assets/videojs/ui/status-indicator.js",
+        "200 /assets/videojs/ui/status-indicator-value.js",
+        "200 /assets/videojs/ui/seek-indicator.js",
+        "200 /assets/videojs/ui/seek-indicator-value.js",
+        "200 /assets/videojs/i18n.js",
+        "200 /assets/videojs/predicate-DSCS8XT4.js",
+        "200 /assets/videojs/context-provider-ivCWVZbp.js",
+        "200 /assets/videojs/controller-DyVV6rgW.js",
+        "200 /assets/videojs/focus-AxQnuRrV.js",
+        "200 /assets/videojs/ui-element-CUMzLga1.js",
+        "200 /assets/videojs/supports-BQAP6C3n.js",
+        "200 /assets/videojs/create-player-B5Xsr_sp.js",
+        "200 /assets/videojs/context-consumer-BGkzZG3G.js",
+        "200 /assets/videojs/listen-4VrUltMW.js",
+        "200 /assets/videojs/tree-Db6JWG7V.js",
+        "200 /assets/videojs/context-BEwcGq-j.js",
+        "200 /assets/videojs/controller-4KIPcUJn.js",
+        "200 /assets/videojs/selectors-DMVJijlA.js",
+        "200 /assets/videojs/state-data-attrs-CjNZtRJA.js",
+        "200 /assets/videojs/popup-group-context-DtGmevFv.js",
+        "200 /assets/videojs/children-DNUcmoz9.js",
+        "200 /assets/videojs/predicates-DfMqV1aQ.js",
+        "200 /assets/videojs/defaults-BMkSdEzN.js",
+        "200 /assets/videojs/state-CABM1wUm.js",
+        "200 /assets/videojs/snapshot-controller-D07v57w-.js",
+        "200 /assets/videojs/media-error-CtsbOTR1.js",
+        "200 /assets/videojs/data-Cz5r0Nes.js",
+        "200 /assets/videojs/transition-5K1eXmzl.js",
+        "200 /assets/videojs/core-B4FV2Ph-.js",
+        "200 /assets/videojs/context-DCVCwG6E.js",
+        "200 /assets/videojs/context-part-element-Dy5xX1HE.js",
+        "200 /assets/videojs/element-props-B1KSgbJ9.js",
+        "200 /assets/videojs/button-Y55WuR0m.js",
+        "200 /assets/videojs/context-Cm3sdWHb.js",
+        "200 /assets/videojs/host-Dt6eACiu.js",
+        "200 /assets/videojs/context-ZgjZBeDe.js",
+        "200 /assets/videojs/resolve-text-lYzRwXIu.js",
+        "200 /assets/videojs/webkit-DljEkldb.js",
+        "200 /assets/videojs/cast-CUbA_g6v.js",
+        "200 /assets/videojs/resolve-label-Csj4NyOQ.js",
+        "200 /assets/videojs/media-button-element-Ch1MLKNP.js",
+        "200 /assets/videojs/position-controller-CT-BWhPM.js",
+        "200 /assets/videojs/vars-BODRO2lw.js",
+        "200 /assets/videojs/hotkey-events-8krRcXxl.js",
+        "200 /assets/videojs/transition-BH2ZEksS.js",
+        "200 /assets/videojs/popover-DcrJe5Yz.js",
+        "200 /assets/videojs/label-2G4qnSHe.js",
+        "200 /assets/videojs/shortcut-BnVcWwm4.js",
+        "200 /assets/videojs/fullscreen-sMHMAZ5s.js",
+        "200 /assets/videojs/buttons-CUtb8x8R.js",
+        "200 /assets/videojs/volume-cOW73aoK.js",
+        "200 /assets/videojs/style-iIgYFplF.js",
+        "200 /assets/videojs/data-JRMbnaJJ.js",
+        "200 /assets/videojs/predicate-C1YKBF75.js",
+        "200 /assets/videojs/number-CWlYxwN1.js",
+        "200 /assets/videojs/css-vars-7FASVoTa.js",
+        "200 /assets/videojs/format-YaJWnevo.js",
+        "200 /assets/videojs/time-DYSdevo1.js",
+        "200 /assets/videojs/context-D_k9hQ7P.js",
+        "200 /assets/videojs/core-BnAIN1wg.js",
+        "200 /assets/videojs/observe-elements-DVlFNzIr.js",
+        "200 /assets/videojs/element-jgHrdlL0.js",
+        "200 /assets/videojs/element-DQJXP66E.js",
+        "200 /assets/videojs/volume-bLkHAx2V.js",
+        "200 /assets/videojs/text-track-aC_8Gh6M.js",
+        "200 /assets/videojs/attributes-DrTKm-Cs.js",
+        "200 /assets/videojs/layout-DqqwqjPS.js",
+        "200 /assets/videojs/menu-CjZbj8QZ.js",
+        "200 /assets/videojs/core-CeogC59h.js",
+        "200 /assets/videojs/context-DT97QSHp.js",
+        "200 /assets/videojs/controller-B28y1Jgb.js",
+        "200 /assets/videojs/radio-group-C-nW9-GW.js",
+        "200 /assets/videojs/radio-item-eEPMG8cU.js",
+        "200 /assets/videojs/item-indicator-BnS2rwGG.js",
+        "200 /assets/videojs/hotkey-BsoOdVau.js",
+        "200 /assets/videojs/media-actions-CUKyjQLw.js",
+        "200 /assets/videojs/i18n-BdP2ANgX.js",
+        "200 /assets/videojs/translate-text-BRTkqA4G.js",
+        "200 /assets/videojs/input-action-DJhFSRIp.js",
+        "200 /assets/videojs/status-20V35ipg.js",
+        "200 /assets/videojs/playback-Cz8W46mL.js",
+        "200 /assets/videojs/live-indicator-Eovkn70q.js",
+        "200 /assets/videojs/create-context--NqP-Eqb.js",
+        "200 /assets/videojs/casing-CxqC0yQL.js",
+        "200 /assets/videojs/registered-media-BTb9nUxf.js",
+        "200 /assets/videojs/noop-Ch0IHcOP.js",
+        "200 /assets/videojs/pick-66qBhPHR.js",
+        "200 /assets/videojs/types-HOYOipK7.js",
+        "200 /assets/videojs/shallow-equal-KV1zFqZi.js",
+        "200 /assets/videojs/interaction-lock-DKc9gO7E.js",
+        "200 /assets/videojs/dismiss-layer-BeqFpH_J.js",
+        "200 /assets/videojs/abort-CDkm8-HH.js",
+        "200 /assets/videojs/constants-B4LD5zrj.js",
+        "200 /assets/videojs/find-last-at-or-before-DOvXla8-.js",
+        "200 /assets/videojs/device-pixel-ratio-BHQMoAGQ.js",
+        "200 /assets/videojs/group-controller-BDZx_W5u.js",
+        "200 /assets/ads.js"
+      ],
+      "non2xx": [
+        "GET /api/index.php?action=player-preset&id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E 400 "
+      ],
+      "events": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    },
+    "none": {
+      "path": "/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4",
+      "page": {
+        "skinTag": null,
+        "css": [
+          "http://127.0.0.1:18781/assets/videojs/video.css"
+        ],
+        "accent": null,
+        "radius": "8px",
+        "adsAttrs": {
+          "video-id": "a1-qa-preset-1"
+        },
+        "heading": [
+          "본편과 광고를 하나의 흐름으로."
+        ],
+        "notice": [
+          "재생 버튼을 눌러 본편과 광고를 확인하세요."
+        ],
+        "inlineScripts": 0,
+        "bodyHasScriptText": false,
+        "switchLinks": [
+          {
+            "text": "Video.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4"
+          },
+          {
+            "text": "기본 video",
+            "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&media=mp4&content=/demo-media/grok-20261018/content-scene-01.mp4"
+          },
+          {
+            "text": "MP4",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4"
+          },
+          {
+            "text": "HLS",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4"
+          },
+          {
+            "text": "SPF",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&engine=spf"
+          },
+          {
+            "text": "hls.js",
+            "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=hls&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&engine=hlsjs"
+          }
+        ]
+      },
+      "playingAfter": [
+        {
+          "src": "content-scene-01.mp4",
+          "paused": true,
+          "t": 0
+        },
+        {
+          "src": "ad-coffee-6s.mp4",
+          "paused": false,
+          "t": 4
+        }
+      ],
+      "presetRequests": [],
+      "presetBodies": [],
+      "assetStatuses": [
+        "200 /assets/videojs/video.css",
+        "200 /assets/admin/preview.js",
+        "200 /assets/admin/model.js",
+        "200 /assets/videojs/video.js",
+        "200 /assets/videojs/i18n-BfZDJOyu.js",
+        "200 /assets/videojs/shadow-styles-9eM0EVFC.js",
+        "200 /assets/videojs/template-BKUlUXWF.js",
+        "200 /assets/videojs/safe-define-DXxmf7BV.js",
+        "200 /assets/videojs/player-BdRyYiuB.js",
+        "200 /assets/videojs/register-Jh8czhUI.js",
+        "200 /assets/videojs/pip-exit-C2ty4mGY.js",
+        "200 /assets/videojs/check-CTc_yBQ2.js",
+        "200 /assets/videojs/volume-off-qYa3p0c5.js",
+        "200 /assets/videojs/ui/container.js",
+        "200 /assets/videojs/ui/poster.js",
+        "200 /assets/videojs/ui/buffering-indicator.js",
+        "200 /assets/videojs/ui/error-dialog.js",
+        "200 /assets/videojs/ui/dialog-backdrop.js",
+        "200 /assets/videojs/ui/dialog-popup.js",
+        "200 /assets/videojs/ui/dialog-title.js",
+        "200 /assets/videojs/ui/dialog-description.js",
+        "200 /assets/videojs/ui/dialog-close.js",
+        "200 /assets/videojs/ui/title.js",
+        "200 /assets/videojs/ui/controls.js",
+        "200 /assets/videojs/ui/controls-backdrop.js",
+        "200 /assets/videojs/ui/controls-content.js",
+        "200 /assets/videojs/ui/tooltip-group.js",
+        "200 /assets/videojs/ui/controls-group.js",
+        "200 /assets/videojs/ui/airplay-button.js",
+        "200 /assets/videojs/ui/tooltip.js",
+        "200 /assets/videojs/ui/tooltip-label.js",
+        "200 /assets/videojs/ui/tooltip-shortcut.js",
+        "200 /assets/videojs/ui/cast-button.js",
+        "200 /assets/videojs/ui/pip-button.js",
+        "200 /assets/videojs/ui/fullscreen-button.js",
+        "200 /assets/videojs/ui/play-button.js",
+        "200 /assets/videojs/ui/time-slider.js",
+        "200 /assets/videojs/ui/time-slider-chapters.js",
+        "200 /assets/videojs/ui/slider-track.js",
+        "200 /assets/videojs/ui/slider-buffer.js",
+        "200 /assets/videojs/ui/slider-fill.js",
+        "200 /assets/videojs/ui/slider-thumb.js",
+        "200 /assets/videojs/ui/slider-preview.js",
+        "200 /assets/videojs/ui/slider-thumbnail.js",
+        "200 /assets/videojs/ui/slider-value.js",
+        "200 /assets/videojs/ui/time-slider-chapter-title.js",
+        "200 /assets/videojs/ui/mute-button.js",
+        "200 /assets/videojs/ui/volume-popover.js",
+        "200 /assets/videojs/ui/volume-slider.js",
+        "200 /assets/videojs/ui/time.js",
+        "200 /assets/videojs/ui/captions-button.js",
+        "200 /assets/videojs/ui/menu.js",
+        "200 /assets/videojs/ui/menu-content.js",
+        "200 /assets/videojs/ui/menu-item.js",
+        "200 /assets/videojs/ui/menu-separator.js",
+        "200 /assets/videojs/ui/quality-radio-group.js",
+        "200 /assets/videojs/ui/menu-radio-item.js",
+        "200 /assets/videojs/ui/menu-item-indicator.js",
+        "200 /assets/videojs/ui/audio-track-radio-group.js",
+        "200 /assets/videojs/ui/playback-rate-radio-group.js",
+        "200 /assets/videojs/ui/captions-radio-group.js",
+        "200 /assets/videojs/ui/hotkey.js",
+        "200 /assets/videojs/ui/gesture.js",
+        "200 /assets/videojs/ui/status-announcer.js",
+        "200 /assets/videojs/ui/volume-indicator.js",
+        "200 /assets/videojs/ui/volume-indicator-fill.js",
+        "200 /assets/videojs/ui/volume-indicator-value.js",
+        "200 /assets/videojs/ui/status-indicator.js",
+        "200 /assets/videojs/ui/status-indicator-value.js",
+        "200 /assets/videojs/ui/seek-indicator.js",
+        "200 /assets/videojs/ui/seek-indicator-value.js",
+        "200 /assets/videojs/i18n.js",
+        "200 /assets/videojs/predicate-DSCS8XT4.js",
+        "200 /assets/videojs/context-provider-ivCWVZbp.js",
+        "200 /assets/videojs/controller-DyVV6rgW.js",
+        "200 /assets/videojs/focus-AxQnuRrV.js",
+        "200 /assets/videojs/ui-element-CUMzLga1.js",
+        "200 /assets/videojs/supports-BQAP6C3n.js",
+        "200 /assets/videojs/create-player-B5Xsr_sp.js",
+        "200 /assets/videojs/context-consumer-BGkzZG3G.js",
+        "200 /assets/videojs/listen-4VrUltMW.js",
+        "200 /assets/videojs/tree-Db6JWG7V.js",
+        "200 /assets/videojs/context-BEwcGq-j.js",
+        "200 /assets/videojs/controller-4KIPcUJn.js",
+        "200 /assets/videojs/selectors-DMVJijlA.js",
+        "200 /assets/videojs/state-data-attrs-CjNZtRJA.js",
+        "200 /assets/videojs/popup-group-context-DtGmevFv.js",
+        "200 /assets/videojs/children-DNUcmoz9.js",
+        "200 /assets/videojs/predicates-DfMqV1aQ.js",
+        "200 /assets/videojs/defaults-BMkSdEzN.js",
+        "200 /assets/videojs/state-CABM1wUm.js",
+        "200 /assets/videojs/snapshot-controller-D07v57w-.js",
+        "200 /assets/videojs/media-error-CtsbOTR1.js",
+        "200 /assets/videojs/data-Cz5r0Nes.js",
+        "200 /assets/videojs/transition-5K1eXmzl.js",
+        "200 /assets/videojs/core-B4FV2Ph-.js",
+        "200 /assets/videojs/context-DCVCwG6E.js",
+        "200 /assets/videojs/context-part-element-Dy5xX1HE.js",
+        "200 /assets/videojs/element-props-B1KSgbJ9.js",
+        "200 /assets/videojs/button-Y55WuR0m.js",
+        "200 /assets/videojs/host-Dt6eACiu.js",
+        "200 /assets/videojs/context-Cm3sdWHb.js",
+        "200 /assets/videojs/context-ZgjZBeDe.js",
+        "200 /assets/videojs/resolve-text-lYzRwXIu.js",
+        "200 /assets/videojs/webkit-DljEkldb.js",
+        "200 /assets/videojs/cast-CUbA_g6v.js",
+        "200 /assets/videojs/resolve-label-Csj4NyOQ.js",
+        "200 /assets/videojs/media-button-element-Ch1MLKNP.js",
+        "200 /assets/videojs/position-controller-CT-BWhPM.js",
+        "200 /assets/videojs/vars-BODRO2lw.js",
+        "200 /assets/videojs/hotkey-events-8krRcXxl.js",
+        "200 /assets/videojs/transition-BH2ZEksS.js",
+        "200 /assets/videojs/popover-DcrJe5Yz.js",
+        "200 /assets/videojs/label-2G4qnSHe.js",
+        "200 /assets/videojs/shortcut-BnVcWwm4.js",
+        "200 /assets/videojs/fullscreen-sMHMAZ5s.js",
+        "200 /assets/videojs/buttons-CUtb8x8R.js",
+        "200 /assets/videojs/volume-cOW73aoK.js",
+        "200 /assets/videojs/style-iIgYFplF.js",
+        "200 /assets/videojs/data-JRMbnaJJ.js",
+        "200 /assets/videojs/predicate-C1YKBF75.js",
+        "200 /assets/videojs/number-CWlYxwN1.js",
+        "200 /assets/videojs/css-vars-7FASVoTa.js",
+        "200 /assets/videojs/format-YaJWnevo.js",
+        "200 /assets/videojs/time-DYSdevo1.js",
+        "200 /assets/videojs/context-D_k9hQ7P.js",
+        "200 /assets/videojs/core-BnAIN1wg.js",
+        "200 /assets/videojs/observe-elements-DVlFNzIr.js",
+        "200 /assets/videojs/element-jgHrdlL0.js",
+        "200 /assets/videojs/element-DQJXP66E.js",
+        "200 /assets/videojs/volume-bLkHAx2V.js",
+        "200 /assets/videojs/text-track-aC_8Gh6M.js",
+        "200 /assets/videojs/attributes-DrTKm-Cs.js",
+        "200 /assets/videojs/layout-DqqwqjPS.js",
+        "200 /assets/videojs/menu-CjZbj8QZ.js",
+        "200 /assets/videojs/core-CeogC59h.js",
+        "200 /assets/videojs/context-DT97QSHp.js",
+        "200 /assets/videojs/controller-B28y1Jgb.js",
+        "200 /assets/videojs/radio-group-C-nW9-GW.js",
+        "200 /assets/videojs/radio-item-eEPMG8cU.js",
+        "200 /assets/videojs/item-indicator-BnS2rwGG.js",
+        "200 /assets/videojs/hotkey-BsoOdVau.js",
+        "200 /assets/videojs/media-actions-CUKyjQLw.js",
+        "200 /assets/videojs/i18n-BdP2ANgX.js",
+        "200 /assets/videojs/translate-text-BRTkqA4G.js",
+        "200 /assets/videojs/input-action-DJhFSRIp.js",
+        "200 /assets/videojs/status-20V35ipg.js",
+        "200 /assets/videojs/playback-Cz8W46mL.js",
+        "200 /assets/videojs/live-indicator-Eovkn70q.js",
+        "200 /assets/videojs/create-context--NqP-Eqb.js",
+        "200 /assets/videojs/casing-CxqC0yQL.js",
+        "200 /assets/videojs/registered-media-BTb9nUxf.js",
+        "200 /assets/videojs/noop-Ch0IHcOP.js",
+        "200 /assets/videojs/pick-66qBhPHR.js",
+        "200 /assets/videojs/types-HOYOipK7.js",
+        "200 /assets/videojs/shallow-equal-KV1zFqZi.js",
+        "200 /assets/videojs/interaction-lock-DKc9gO7E.js",
+        "200 /assets/videojs/dismiss-layer-BeqFpH_J.js",
+        "200 /assets/videojs/abort-CDkm8-HH.js",
+        "200 /assets/videojs/constants-B4LD5zrj.js",
+        "200 /assets/videojs/find-last-at-or-before-DOvXla8-.js",
+        "200 /assets/videojs/device-pixel-ratio-BHQMoAGQ.js",
+        "200 /assets/videojs/group-controller-BDZx_W5u.js",
+        "200 /assets/ads.js"
+      ],
+      "non2xx": [],
+      "events": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    }
+  }
+}

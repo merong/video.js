@@ -1,0 +1,46 @@
+{
+  "bannerControls": [
+    "A:대시보드 (#/dashboard)",
+    "A:캠페인 (#/campaigns)",
+    "A:소재 (#/creatives)",
+    "A:지면 편성 (#/schedule)",
+    "A:플레이어 (#/players)",
+    "A:승인함 (#/approvals)",
+    "A:리포트 (#/reports)",
+    "A:설정 (#/settings)",
+    "A:도움말 (#/help)",
+    "A:집행 만들기 (#/new-line-item)",
+    "BUTTON:로그아웃"
+  ],
+  "menuLinks": [
+    "대시보드",
+    "캠페인",
+    "소재",
+    "지면 편성",
+    "플레이어",
+    "승인함",
+    "리포트",
+    "설정"
+  ],
+  "menuHasHelp": false,
+  "hash": "#/help",
+  "active": {
+    "tag": "H1",
+    "id": "aa-title-help",
+    "text": "도움말",
+    "role": null
+  },
+  "activeHeading": {
+    "tag": "H1",
+    "level": "1",
+    "text": "도움말",
+    "tabindex": "-1"
+  },
+  "apiAfterClick": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

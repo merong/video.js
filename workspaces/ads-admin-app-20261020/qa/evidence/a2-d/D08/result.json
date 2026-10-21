@@ -1,0 +1,1331 @@
+{
+  "steps": [
+    {
+      "label": "saved-start",
+      "ui": {
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": "http://127.0.0.1:18781/examples/index.html?preset=p-i0aecb28w3",
+          "disabled": null,
+          "why": null
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "width-narrow",
+      "ui": {
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "scale": "보이는 폭 390px · 실제의 83%로 줄여 보여요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 390px; --_s: 0.8256410256410256;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": "http://127.0.0.1:18781/examples/index.html?preset=p-i0aecb28w3",
+          "disabled": null,
+          "why": null
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "width-medium",
+      "ui": {
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "scale": "보이는 폭 768px · 실제의 42%로 줄여 보여요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 768px; --_s: 0.4192708333333333;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": "http://127.0.0.1:18781/examples/index.html?preset=p-i0aecb28w3",
+          "disabled": null,
+          "why": null
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음."
+        ],
+        "text": [
+          "0:00",
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "width-wide",
+      "ui": {
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": "http://127.0.0.1:18781/examples/index.html?preset=p-i0aecb28w3",
+          "disabled": null,
+          "why": null
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "accent-red",
+      "ui": {
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "autoplay-on",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:08",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-2",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "일시중지",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 9초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정",
+          "광고 1/2",
+          "0:04 / 0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "loop-on",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:14",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-3",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "일시중지",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 9초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정",
+          "광고 1/2",
+          "0:02 / 0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "lang-ja",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:17",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-4",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 1/2",
+          "0:04 / 0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "poster-on",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:22",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-5",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 1/2",
+          "0:02 / 0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "title-toggle",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:25",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-6",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 1/2",
+          "0:02 / 0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "timer-label",
+      "ui": {
+        "now": "최근 광고 진행프리롤 2/2 재생 중18:39:31",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-6",
+          "video-id": "grok-demo-scene-01",
+          "timer-label": "QA {elapsed}/{duration}"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 2/2",
+          "3초 후 건너뛰기",
+          "QA 0:00/0:12"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "scene-midroll",
+      "ui": {
+        "now": "최근 광고 진행프리롤 2/2 재생 중18:39:31",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-6",
+          "video-id": "grok-demo-scene-01",
+          "timer-label": "QA {elapsed}/{duration}"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 2/2 — 광고 불러오는 중…",
+          "광고 건너뛰기",
+          "QA 0:05/0:12"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "scene-end",
+      "ui": {
+        "now": "최근 광고 진행미드롤 1/1 재생 중18:39:37",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 8
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-6",
+          "video-id": "grok-demo-scene-01",
+          "timer-label": "QA {elapsed}/{duration}"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 1 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 1/1",
+          "광고 건너뛰기",
+          "QA 0:05/0:08"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "scene-start",
+      "ui": {
+        "now": "최근 광고 진행미드롤 1/1 · 끝남18:39:45",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": false,
+          "t": 9.7
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-6",
+          "video-id": "grok-demo-scene-01",
+          "timer-label": "QA {elapsed}/{duration}"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 0 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "lang-empty",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:47",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "timer-label": "QA {elapsed}/{duration}",
+          "for": "solad-media-7",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "일시중지",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 9초 남음."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "설정",
+          "광고 1/2",
+          "QA 0:02/0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "page-lang-en",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:51",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "en",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "timer-label": "QA {elapsed}/{duration}",
+          "for": "solad-media-8",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "Pause",
+          "Unmute",
+          "Volume",
+          "Seek",
+          "Show duration, 10 seconds remaining."
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "Settings",
+          "광고 1/2",
+          "QA 0:02/0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "page-lang-ja",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:54",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(220, 38, 38)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "timer-label": "QA {elapsed}/{duration}",
+          "for": "solad-media-9",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 1/2",
+          "QA 0:02/0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "new-start",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:39:54",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "새 프리셋은 저장한 뒤 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-10",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "再生",
+          "ミュート",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "new-autoplay",
+      "ui": {
+        "now": "최근 광고 진행프리롤 1/2 재생 중18:40:02",
+        "scale": "자리 폭 322px · 실제 크기예요",
+        "frameBox": {
+          "w": 322,
+          "h": 181
+        },
+        "view": {
+          "w": 322,
+          "h": 181
+        },
+        "frameStyle": "--_w: 322px; --_s: 1;",
+        "scenes": [
+          "처음부터:on",
+          "미드롤 앞:on",
+          "끝 직전:on",
+          "다시 불러오기:on"
+        ],
+        "sceneHelp": null,
+        "demo": {
+          "href": null,
+          "disabled": "true",
+          "why": "새 프리셋은 저장한 뒤 데모에서 열 수 있어요."
+        },
+        "pageLangShown": true,
+        "status": []
+      },
+      "frame": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "paused": true,
+          "t": 0
+        },
+        "contentTitle": null,
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-11",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。"
+        ],
+        "text": [
+          "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+          "0:00",
+          "設定",
+          "광고 1/2",
+          "0:03 / 0:06"
+        ]
+      },
+      "frameNotice": null
+    },
+    {
+      "label": "built-in",
+      "ui": {
+        "now": null,
+        "scale": null,
+        "scenes": [],
+        "sceneHelp": null,
+        "demo": null,
+        "pageLangShown": false,
+        "status": []
+      },
+      "frame": null
+    }
+  ],
+  "accentRebuilt": false,
+  "labelRebuilt": false,
+  "builtInRow": [
+    {
+      "tag": "BUTTON",
+      "name": "둥근 테두리 수정",
+      "disabled": true,
+      "href": null,
+      "why": [
+        "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+      ]
+    },
+    {
+      "tag": "BUTTON",
+      "name": "둥근 테두리 복제",
+      "disabled": false,
+      "href": null,
+      "why": []
+    },
+    {
+      "tag": "BUTTON",
+      "name": "둥근 테두리 삭제",
+      "disabled": true,
+      "href": null,
+      "why": [
+        "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+      ]
+    },
+    {
+      "tag": "BUTTON",
+      "name": "둥근 테두리 사이트에 적용",
+      "disabled": false,
+      "href": null,
+      "why": []
+    }
+  ],
+  "builtIn": {
+    "url": "/#/players",
+    "headings": [
+      "소재",
+      "등록한 소재 6개",
+      "새 소재 등록",
+      "플레이어",
+      "프리셋 목록"
+    ],
+    "editable": 6,
+    "readonlyNote": [
+      "준비 중인 기능 ·\n프리셋 변경 이력과 되돌리기 · 준비 중. 저장하면 이전 값은 남지 않아요. 바꾸기 전 값을 지키려면 먼저 복제해 두세요."
+    ]
+  },
+  "api": [
+    "POST login",
+    "GET player-presets"
+  ],
+  "events": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

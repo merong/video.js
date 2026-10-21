@@ -1,0 +1,335 @@
+{
+  "terms": {
+    "ad-break": {
+      "justRestarted": {
+        "cls": "sa-motion",
+        "anims": 7,
+        "states": [
+          "running"
+        ],
+        "t": [
+          67,
+          67,
+          67
+        ],
+        "shownElements": 17,
+        "totalElements": 22,
+        "pressed": "false"
+      },
+      "pausedEarly": {
+        "cls": "is-paused",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          117,
+          117,
+          117
+        ],
+        "shownElements": 22,
+        "totalElements": 22,
+        "pressed": "true"
+      },
+      "pausedLater": {
+        "cls": "is-paused",
+        "anims": 0,
+        "states": [],
+        "t": [],
+        "shownElements": 22,
+        "totalElements": 22,
+        "pressed": "true"
+      },
+      "resumed": {
+        "cls": "sa-motion",
+        "anims": 11,
+        "states": [
+          "running"
+        ],
+        "t": [
+          83,
+          83,
+          83
+        ],
+        "shownElements": 17,
+        "totalElements": 22,
+        "pressed": "false"
+      },
+      "resumedLater": {
+        "cls": "sa-motion",
+        "anims": 6,
+        "states": [
+          "running"
+        ],
+        "t": [
+          2583,
+          2583,
+          2583
+        ],
+        "shownElements": 19,
+        "totalElements": 22,
+        "pressed": "false"
+      },
+      "pausedMid": {
+        "cls": "is-paused",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          133,
+          133,
+          133
+        ],
+        "shownElements": 22,
+        "totalElements": 22,
+        "pressed": "true"
+      }
+    },
+    "mid-roll": {
+      "justRestarted": {
+        "cls": "sa-motion",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          67,
+          67,
+          67
+        ],
+        "shownElements": 11,
+        "totalElements": 14,
+        "pressed": "false"
+      },
+      "pausedEarly": {
+        "cls": "is-paused",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          117,
+          117,
+          117
+        ],
+        "shownElements": 14,
+        "totalElements": 14,
+        "pressed": "true"
+      },
+      "pausedLater": {
+        "cls": "is-paused",
+        "anims": 0,
+        "states": [],
+        "t": [],
+        "shownElements": 14,
+        "totalElements": 14,
+        "pressed": "true"
+      },
+      "resumed": {
+        "cls": "sa-motion",
+        "anims": 9,
+        "states": [
+          "running"
+        ],
+        "t": [
+          83,
+          83,
+          83
+        ],
+        "shownElements": 11,
+        "totalElements": 14,
+        "pressed": "false"
+      },
+      "resumedLater": {
+        "cls": "sa-motion",
+        "anims": 4,
+        "states": [
+          "running"
+        ],
+        "t": [
+          2583,
+          2583,
+          2583
+        ],
+        "shownElements": 13,
+        "totalElements": 14,
+        "pressed": "false"
+      },
+      "pausedMid": {
+        "cls": "is-paused",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          133,
+          133,
+          133
+        ],
+        "shownElements": 14,
+        "totalElements": 14,
+        "pressed": "true"
+      }
+    },
+    "skip-offset": {
+      "justRestarted": {
+        "cls": "sa-motion",
+        "anims": 6,
+        "states": [
+          "running"
+        ],
+        "t": [
+          67,
+          67,
+          67
+        ],
+        "shownElements": 14,
+        "totalElements": 16,
+        "pressed": "false"
+      },
+      "pausedEarly": {
+        "cls": "is-paused",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          117,
+          117,
+          117
+        ],
+        "shownElements": 15,
+        "totalElements": 16,
+        "pressed": "true"
+      },
+      "pausedLater": {
+        "cls": "is-paused",
+        "anims": 0,
+        "states": [],
+        "t": [],
+        "shownElements": 15,
+        "totalElements": 16,
+        "pressed": "true"
+      },
+      "resumed": {
+        "cls": "sa-motion",
+        "anims": 10,
+        "states": [
+          "running"
+        ],
+        "t": [
+          83,
+          83,
+          83
+        ],
+        "shownElements": 14,
+        "totalElements": 16,
+        "pressed": "false"
+      },
+      "resumedLater": {
+        "cls": "sa-motion",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          2583,
+          2583,
+          2583
+        ],
+        "shownElements": 15,
+        "totalElements": 16,
+        "pressed": "false"
+      },
+      "pausedMid": {
+        "cls": "is-paused",
+        "anims": 5,
+        "states": [
+          "running"
+        ],
+        "t": [
+          133,
+          133,
+          133
+        ],
+        "shownElements": 15,
+        "totalElements": 16,
+        "pressed": "true"
+      }
+    }
+  },
+  "offscreen": {
+    "visible": {
+      "cls": "sa-motion",
+      "anims": 6,
+      "states": [
+        "running"
+      ],
+      "t": [
+        6050,
+        6050,
+        6050
+      ],
+      "shownElements": 22,
+      "totalElements": 22,
+      "pressed": "false"
+    },
+    "off1": {
+      "cls": "is-offscreen",
+      "anims": 6,
+      "states": [
+        "paused"
+      ],
+      "t": [
+        6083,
+        6083,
+        6083
+      ],
+      "shownElements": 22,
+      "totalElements": 22,
+      "pressed": "false"
+    },
+    "off2": {
+      "cls": "is-offscreen",
+      "anims": 6,
+      "states": [
+        "paused"
+      ],
+      "t": [
+        6083,
+        6083,
+        6083
+      ],
+      "shownElements": 22,
+      "totalElements": 22,
+      "pressed": "false"
+    },
+    "back": {
+      "cls": "sa-motion",
+      "anims": 6,
+      "states": [
+        "running"
+      ],
+      "t": [
+        6350,
+        6350,
+        6350
+      ],
+      "shownElements": 22,
+      "totalElements": 22,
+      "pressed": "false"
+    }
+  },
+  "forcedColors": {
+    "matches": true,
+    "before": {
+      "pressed": "false",
+      "outline": "none 3px rgb(0, 0, 0)"
+    },
+    "pressed": {
+      "pressed": "true",
+      "outline": "solid 2px rgba(5, 0, 73, 0.8)"
+    }
+  }
+}

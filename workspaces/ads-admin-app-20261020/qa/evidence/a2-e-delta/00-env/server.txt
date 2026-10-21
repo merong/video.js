@@ -1,0 +1,13 @@
+2026-10-22 00:47:54
+parent pid 30092, PHP_CLI_SERVER_WORKERS=4
+children: 30094 30095 30096 30097 
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+php     30092 brian    5u  IPv4 0x7e6b6eca22dde72a      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     30094 brian    5u  IPv4 0x7e6b6eca22dde72a      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     30095 brian    5u  IPv4 0x7e6b6eca22dde72a      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     30096 brian    5u  IPv4 0x7e6b6eca22dde72a      0t0  TCP 127.0.0.1:18781 (LISTEN)
+php     30097 brian    5u  IPv4 0x7e6b6eca22dde72a      0t0  TCP 127.0.0.1:18781 (LISTEN)
+examples/index.html 200 text/html; charset=UTF-8 23674
+examples/sample-logo.png 200 image/png 32890
+player/solad-video-skin.js 200 application/javascript 14767
+examples/demo.js 200 application/javascript 28532

@@ -1,0 +1,224 @@
+{
+ "scenario": "chapters",
+ "engine": "firefox",
+ "startedAt": "2026-10-21T17:20:23.582Z",
+ "steps": [],
+ "runs": [
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "showing",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "mp4",
+    "as": "blob",
+    "at": "before"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "showing",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "mp4",
+    "as": "blob",
+    "at": "after"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "showing",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "mp4",
+    "as": "data",
+    "at": "before"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "showing",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "mp4",
+    "as": "data",
+    "at": "after"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hls",
+    "as": "blob",
+    "at": "before"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hls",
+    "as": "blob",
+    "at": "after"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hls",
+    "as": "data",
+    "at": "before"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hls",
+    "as": "data",
+    "at": "after"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hlsjs",
+    "as": "blob",
+    "at": "before"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hlsjs",
+    "as": "blob",
+    "at": "after"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hlsjs",
+    "as": "data",
+    "at": "before"
+   },
+   "errors": []
+  },
+  {
+   "tracks": [
+    {
+     "kind": "chapters",
+     "mode": "hidden",
+     "cues": 4
+    }
+   ],
+   "storeCues": 4,
+   "chapterEls": 4,
+   "title": "2장 본론",
+   "query": {
+    "media": "hlsjs",
+    "as": "data",
+    "at": "after"
+   },
+   "errors": []
+  }
+ ]
+}

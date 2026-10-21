@@ -1,0 +1,14 @@
+isolated DB read-only after run (2026-10-22 01:24:59 KST)
+ads_meta names: player_presets, schema_version, signing_key, site_id, write_lock
+ads_admins rows 6
+ads_drafts rows 2
+ads_publications rows 3
+ads_events rows 43
+ads_creatives rows 6
+player_presets:
+  revision 28 default p-i0aecb28w3
+   p-i0aecb28w3 QA 강조색 복제 videojs
+   p-lc3i8eidb4 QA 자동재생 videojs
+   p-pchm59hhyv QA 기본 video native
+   p-wgqz3x31a5 QA 테두리 8자리 videojs
+   p-46sx1n57gw QA 테두리 투명색 videojs

@@ -1,0 +1,504 @@
+ ✓ tests/components.test.tsx > TopNav > marks the current item and shows waiting counts
+ ✓ tests/components.test.tsx > TopNav > shows only the tag as plain text without a brand
+ ✓ tests/components.test.tsx > TopNav > renders the actions area and hands plain clicks to onNavigate
+ ✓ tests/components.test.tsx > Button > maps variants and the small size to sa-btn classes
+ ✓ tests/components.test.tsx > Button > disables the button and describes it with the reason
+ ✓ tests/components.test.tsx > ButtonLink > renders a link with button classes
+ ✓ tests/components.test.tsx > Field > puts labelAside after the label, out of the control name and description
+ ✓ tests/components.test.tsx > Field > links the label and help to an input
+ ✓ tests/components.test.tsx > Field > marks errors invalid and lists the error before the help
+ ✓ tests/components.test.tsx > Field > shows a warning only while there is no error
+ ✓ tests/components.test.tsx > Field > wires select, textarea and file controls the same way
+ ✓ tests/components.test.tsx > Check > labels a checkbox or radio
+ ✓ tests/components.test.tsx > Fieldset > puts legendAside after the legend, out of the group name and description
+ ✓ tests/components.test.tsx > Fieldset > leaves the plain layout without legendAside
+ ✓ tests/player.test.tsx > PreviewPlayer > connects one video and its container with preview true and no tracking
+ ✓ tests/mocks.test.tsx > mockScreens > keeps the contract keys
+ ✓ tests/components.test.tsx > Toggle > is a switch that flips from the button and its label
+ ✓ tests/components.test.tsx > Toggle > does not change while disabled
+ ✓ tests/components.test.tsx > Chip > reports its pressed state and count
+ ✓ tests/components.test.tsx > ChipGroup > adds the weekday shape
+ ✓ tests/components.test.tsx > ChipLink > marks the current tab
+ ✓ tests/components.test.tsx > StatusBadge > names all nine statuses
+ ✓ tests/components.test.tsx > StatusBadge > accepts a host-specific label on the same color
+ ✓ tests/components.test.tsx > TierTag > renders the tier class and name
+ ✓ tests/components.test.tsx > bundle.css > shrinks .sa-sr to a clipped 1px box with no margin, padding or border
+ ✓ tests/components.test.tsx > bundle.css > makes every horizontal scroll area the containing block of what it scrolls
+ ✓ tests/components.test.tsx > DataTable > names the table and its scroll area with the caption
+ ✓ tests/components.test.tsx > DataTable > pins the last column with pinEnd
+ ✓ tests/player-theme.test.tsx > ThemePreview > opens the same-origin preview page with only the player type and skin in its address
+ ✓ tests/player-theme.test.tsx > ThemePreview > says native timeouts are checked in the playback test, not the preview
+ ✓ tests/player-theme.test.tsx > ThemePreview > sends the preset after load and every edit without reloading
+ ✓ tests/player-theme.test.tsx > ThemePreview > waits for the frame load before sending
+ ✓ tests/player.test.tsx > PreviewPlayer > records controller observations with the v1 wording
+ ✓ tests/player.test.tsx > PreviewPlayer > shows controller diagnostics as an alert
+ ✓ tests/player.test.tsx > PreviewPlayer > destroys the controller on unmount
+ ✓ tests/player.test.tsx > PreviewPlayer > replaces the controller when schedule or content changes
+ ✓ tests/player.test.tsx > PreviewPlayer > replaces the controller and reloads when the module URL changes
+ ✓ tests/mocks.test.tsx > mockScreens > standalone.dashboard shows the mock badge, calls no API, and disables writes
+ ✓ tests/components.test.tsx > DataTable > shows one full-width row when there are no rows
+ ✓ tests/components.test.tsx > KpiRow > sets the column count and hero size
+ ✓ tests/components.test.tsx > KpiStat > shows the delta with its comparison
+ ✓ tests/components.test.tsx > Progress > describes delivery against the expected pace
+ ✓ tests/components.test.tsx > Progress > turns red when behind and drops the marker without an expected value
+ ✓ tests/components.test.tsx > Stepper > marks done, current and error steps
+ ✓ tests/components.test.tsx > Stepper > renders the one-line flow
+ ✓ tests/player-theme.test.tsx > ThemePreview > reloads the frame when the skin changes
+ ✓ tests/player-theme.test.tsx > ThemePreview > reloads the frame when the player type changes
+ ✓ tests/player-theme.test.tsx > ThemePreview > shows the frame status and ignores messages from other windows
+ ✓ tests/player-theme.test.tsx > ThemePreview > explains a missing preview page when the loaded frame stays silent
+ ✓ tests/help.test.tsx > helpTerms > has no duplicate ids and a term and motion for each
+ ✓ tests/player.test.tsx > PreviewPlayer > sends no collector requests of its own during preview
+ ✓ tests/player.test.tsx > PreviewPlayer > ignores a module load that finishes after unmount
+ ✓ tests/player.test.tsx > PreviewPlayer > ignores a replaced run whose module load finishes late
+ ✓ tests/player.test.tsx > PreviewPlayer > stops on request and can restart
+ ✓ tests/player.test.tsx > PreviewPlayer > explains a missing player module without loading anything
+ ✓ tests/player.test.tsx > PreviewPlayer > rejects unsafe content addresses
+ ✓ tests/player.test.tsx > PreviewPlayer > reports a module without createAdsController
+ ✓ tests/player.test.tsx > PreviewPlayer > reports a module that fails to load
+ ✓ tests/player.test.tsx > PlayerTestLinks > opens both examples in a new tab with video and content
+ ✓ tests/player.test.tsx > PlayerTestLinks > passes presetId "p-abc123def4" to both examples except the built-in default
+ ✓ tests/player.test.tsx > PlayerTestLinks > passes presetId "default" to both examples except the built-in default
+ ✓ tests/player.test.tsx > PlayerTestLinks > passes presetId null to both examples except the built-in default
+ ✓ tests/player.test.tsx > PlayerTestLinks > passes a videojs preset only to its own example
+ ✓ tests/player.test.tsx > PlayerTestLinks > passes a native preset only to its own example
+ ✓ tests/components.test.tsx > TodoBanner > lists to-dos with counts and marks failures
+ ✓ tests/components.test.tsx > Card > is a section named by its title
+ ✓ tests/components.test.tsx > Card > puts a flush card title in a toolbar
+ ✓ tests/components.test.tsx > Panel > becomes a named form when it handles submit
+ ✓ tests/components.test.tsx > Dialog > opens from a button and returns focus to it on close
+ ✓ tests/components.test.tsx > Dialog > closes once on Esc (cancel) and returns focus
+ ✓ tests/components.test.tsx > Dialog > returns focus to the opener without onClose when unmounted while open
+ ✓ tests/player-theme.test.tsx > ThemePreview > times out when a later load of the same frame stays silent
+ ✓ tests/player-theme.test.tsx > ThemePreview > counts only the loading message as a new document speaking
+ ✓ tests/player-theme.test.tsx > ThemePreview > does not time out once the frame has spoken
+ ✓ tests/player-theme.test.tsx > ThemePreview > cleans up its listener and timer on unmount
+ ✓ tests/player-theme.test.tsx > ThemePreview > shows why there is no frame for examplesUrl "https://other.example/examples/"
+ ✓ tests/player-theme.test.tsx > ThemePreview > shows why there is no frame for examplesUrl ""
+ ✓ tests/player.test.tsx > PlayerTestLinks > adds no player note without a saved preset ("default")
+ ✓ tests/player.test.tsx > PlayerTestLinks > adds no player note without a saved preset (null)
+ ✓ tests/player.test.tsx > PlayerTestLinks > omits content when none is given
+ ✓ tests/player.test.tsx > PlayerTestLinks > resolves a relative content address against the admin page, not the examples
+ ✓ tests/player.test.tsx > PlayerTestLinks > makes no links for the non-HTTP(S) content ftp://media.example/content.mp4
+ ✓ tests/player.test.tsx > PlayerTestLinks > makes no links for the non-HTTP(S) content javascript:alert(1)
+ ✓ tests/player.test.tsx > PlayerTestLinks > makes no links for the non-HTTP(S) content data:video/mp4;base64,AA
+ ✓ tests/player.test.tsx > PlayerTestLinks > makes no links for the non-HTTP(S) content //cdn.example/a.mp4
+ ✓ tests/player.test.tsx > PlayerTestLinks > explains why links are unavailable
+ ✓ tests/player.test.tsx > configureExampleLinks > keeps the preset query when switching player or media
+ ✓ tests/mocks.test.tsx > mockScreens > standalone.campaigns shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > standalone.approvals shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > standalone.reportV2 shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > standalone.settings shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > standalone.newLineItem shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > gnuboard.requests shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > gnuboard.settings shows the mock badge, calls no API, and disables writes
+ ✓ tests/mocks.test.tsx > mockScreens > titles 집행 만들기 like the other unbuilt mock screens
+ ✓ tests/mocks.test.tsx > mockScreens > treats 승인함 열기 as a write, not a view switch
+ ✓ tests/mocks.test.tsx > mockScreens > captions the dashboard table
+ ✓ tests/components.test.tsx > StatusMessage > announces results politely and errors at once
+ ✓ tests/components.test.tsx > StatusMessage > keeps the empty live region in place for the first message
+ ✓ tests/components.test.tsx > MockBadge > uses the fixed mock wording
+ ✓ tests/components.test.tsx > UnimplementedCard > says what the screen is for and where the plan lives
+ ✓ tests/components.test.tsx > UnimplementedCard > uses an h3 under a section heading
+ ✓ tests/components.test.tsx > Note > renders a toned note with a bold lead
+ ✓ tests/components.test.tsx > KeyValue > pairs row headers with values
+ ✓ tests/components.test.tsx > ActivityLog > lists entries with machine-readable times
+ ✓ tests/components.test.tsx > ColorField > names the picker and the text input from one label
+ ✓ tests/components.test.tsx > ColorField > keeps the picker and the text in step, lowercased
+ ✓ tests/components.test.tsx > ColorField > holds back invalid text and links the format error
+ ✓ tests/help.test.tsx > HelpScreen > renders the guide and dictionary on standalone without requests
+ ✓ tests/components.test.tsx > ColorField > shows the format error on Enter as well
+ ✓ tests/components.test.tsx > ColorField > shows the default state for null and clears back to it
+ ✓ tests/components.test.tsx > ColorField > links outside help, warning and error to both inputs, but the format error to the text only
+ ✓ tests/components.test.tsx > ColorField > reports the format error and blocks Enter from submitting while it shows
+ ✓ tests/components.test.tsx > CodeBlock > shows the code in a named, focusable region
+ ✓ tests/components.test.tsx > CodeBlock > copies with the clipboard and says so politely
+ ✓ tests/components.test.tsx > CodeBlock > selects the code and asks for a manual copy when the clipboard rejects
+ ✓ tests/components.test.tsx > CodeBlock > selects the code and asks for a manual copy when the clipboard is missing
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads ""
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "new"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "setup"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "options"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "edit/default"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "edit/p-abc1234567"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "edit/../x"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "edit/P-ABC1234567"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "edit"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "new/extra"
+ ✓ tests/admin-players.test.tsx > parsePlayerPath > reads "unknown"
+ ✓ tests/admin-players.test.tsx > locationFromHash > keeps canonical player sub paths and drops sub paths of other menus
+ ✓ tests/app.test.tsx > routesFor > lists the canvas menus for each host
+ ✓ tests/app.test.tsx > routesFor > falls back to the default route for an unknown hash
+ ✓ tests/app.test.tsx > publicBase > keeps the installation prefix
+ ✓ tests/app.test.tsx > readConfig > accepts the shell config and rejects unsafe API URLs
+ ✓ tests/app.test.tsx > describeError > separates conflicts and authentication failures and appends field messages
+ ✓ tests/app.test.tsx > siteToday > uses the site time zone
+ ✓ tests/admin-help.test.tsx > locationFromHash > keeps a known help term and drops anything else
+ ✓ tests/admin-help.test.tsx > locationFromHash > ignores a query and one trailing slash
+ ✓ tests/admin-help.test.tsx > locationFromHash > drops a term standalone hides (house-ad)
+ ✓ tests/admin-help.test.tsx > locationFromHash > drops a term standalone hides (ad-request)
+ ✓ tests/admin-help.test.tsx > locationFromHash > drops a term gnuboard hides (advertiser)
+ ✓ tests/admin-help.test.tsx > locationFromHash > drops a term gnuboard hides (video-context)
+ ✓ tests/admin-help.test.tsx > locationFromHash > keeps a term the host shows
+ ✓ tests/admin-help.test.tsx > locationFromHash > keeps help out of the menu on both hosts
+ ✓ tests/components.test.tsx > CodeBlock > announces a repeated result again with a new text node
+ ✓ tests/components.test.tsx > CodeBlock > drops the copy result when the code changes
+ ✓ tests/mocks.test.tsx > mockScreens > opens a campaign detail in place and goes back to the list
+ ✓ tests/mocks.test.tsx > mockScreens > filters campaigns by status without leaving the list
+ ✓ tests/mocks.test.tsx > mockScreens > labels GnuBoard request stages and filters by them
+ ✓ tests/components.test.tsx > CodeBlock > can keep the label for screen readers only
+ ✓ tests/components.test.tsx > SubNav > is a named group of plain links with the current page marked
+ ✓ tests/components.test.tsx > SubNav > hands plain clicks to onNavigate and leaves modified clicks to the browser
+ ✓ tests/app.test.tsx > App > shows the standalone login form when signed out
+ ✓ tests/mocks.test.tsx > mockScreens > opens a request detail in place with its actions disabled
+ ✓ tests/mocks.test.tsx > mockScreens > renders the v2 report as a section without a page title
+ ✓ tests/mocks.test.tsx > mockScreens > names the planning document on every unimplemented screen
+ ✓ tests/mocks.test.tsx > mockScreens > keeps API code out of the mock sources
+ ✓ tests/admin-help.test.tsx > App help > puts 도움말 before 집행 만들기 in the standalone top bar
+ ✓ tests/admin-players.test.tsx > PlayersScreen > sits right after 지면 편성 on standalone
+ ✓ tests/app.test.tsx > App > says the username or password is wrong for a rejected login (QA B01)
+ ✓ tests/app.test.tsx > App > links to the site login on GnuBoard instead of asking for a password
+ ✓ tests/admin-players.test.tsx > PlayersScreen > sits right after 지면 편성 on gnuboard
+ ✓ tests/admin-players.test.tsx > PlayersScreen > lists presets with built-in actions blocked
+ ✓ tests/app.test.tsx > App > renders the GnuBoard menu, lands on house ads and keeps mocks off the API
+ ✓ tests/help.test.tsx > HelpScreen > renders the guide and dictionary on gnuboard without requests
+ ✓ tests/admin-help.test.tsx > App help > puts 도움말 before 사이트 보기 in the gnuboard top bar
+ ✓ tests/app.test.tsx > App > opens 집행 만들기 from the top bar as a mock screen without API requests (QA B12)
+ ✓ tests/app.test.tsx > App > offers 광고 관리 창 닫기 on GnuBoard only when an opener window exists (QA U06)
+ ✓ tests/admin-players.test.tsx > PlayersScreen > blocks new presets and duplicates at 20 saved presets
+ ✓ tests/help.test.tsx > HelpScreen > uses each host’s menus and terms
+ ✓ tests/player-snippet.test.tsx > installSnippet > mirrors examples/videojs.html: video-player > skin > video + media-ads
+ ✓ tests/player-snippet.test.tsx > installSnippet > omits options the preset leaves empty
+ ✓ tests/player-snippet.test.tsx > installSnippet > uses the hls-spf media element and module like the examples
+ ✓ tests/player-snippet.test.tsx > installSnippet > uses the hls-hlsjs media element and module like the examples
+ ✓ tests/player-snippet.test.tsx > installSnippet > escapes attribute values
+ ✓ tests/player-snippet.test.tsx > installSnippet > builds the native controller like examples/player.html
+ ✓ tests/player-snippet.test.tsx > installSnippet > reads the schedule JSON only after a successful response
+ ✓ tests/player-snippet.test.tsx > installSnippet > gives each video its own Video.js element ids so two snippets can share a page
+ ✓ tests/player-snippet.test.tsx > installSnippet > gives each video its own native element ids so two snippets can share a page
+ ✓ tests/player-snippet.test.tsx > installSnippet > escapes script values so they cannot close the script
+ ✓ tests/player-snippet.test.tsx > installSnippet > notes the gnuboard video ID format
+ ✓ tests/player-snippet.test.tsx > installSnippet > notes the page lang only when the preset leaves the ad language empty
+ ✓ tests/player-snippet.test.tsx > installSnippet > accepts /-rooted paths, which <media-ads src> allows
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects contentUrl = "content.mp4": relative or unsafe addresses
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects contentUrl = "https://media.example/a\"b<c>&d'e</script>\nf": relative or unsafe addresses
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects assetsUrl = "../assets/": relative or unsafe addresses
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects assetsUrl = "//cdn.example/assets/": relative or unsafe addresses
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects apiUrl = "api/index.php": relative or unsafe addresses
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects apiUrl = "javascript:alert(1)": relative or unsafe addresses
+ ✓ tests/player-snippet.test.tsx > installSnippet > rejects HLS for the native player and empty required values
+ ✓ tests/admin-creatives-load.test.tsx > Workspace > reads creatives only once a screen that uses them opens
+ ✓ tests/admin-help.test.tsx > App help > opens help without API requests besides bootstrap (standalone)
+ ✓ tests/help.test.tsx > HelpScreen > lists the player menu after 지면 편성 and the player terms on standalone
+ ✓ tests/admin-players.test.tsx > PlayersScreen > duplicates into a new form with copied values
+ ✓ tests/app.test.tsx > App > keeps the editor and offers a reload after a 409 on save
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts every field and trims the name and labels
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > reads the confirmed admin list item default back as itself without stored metadata
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > reads the confirmed admin list item p-p8vgwgghjw back as itself without stored metadata
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > reads the confirmed admin list item p-xfvg5u3twr back as itself without stored metadata
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > matches the confirmed built-in preset
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > reads absent groups and fields as empty and defaults the Video.js skin
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > reads '' in text fields as empty
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > ignores stored metadata and accepts the built-in id
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects unknown keys at every level with their paths
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > requires a name and a player type
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"id":"p-ABC123DEF4"} at id (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"id":"p-abc"} at id (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"id":""} at id (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"id":3} at id (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"name":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"} at name (length)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"name":"이름\n둘"} at name (control)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"name":"이름\n"} at name (control)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"name":3} at name (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"playerType":"flash"} at playerType (enum)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"skin":"compat"} at skin (enum)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"theme":[]} at theme (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects {"theme":""} at theme (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts names at the 40 character limit
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.accentColor = "#F5C518" (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.accentColor = "#fff" (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.accentColor = "red" (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.accentColor = 3 (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.borderRadius = -1 (range)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.borderRadius = 33 (range)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.borderRadius = 1.5 (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.borderRadius = "4" (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.borderRadius = "" (type)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.fontFamily = "serif" (enum)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.objectFit = "fill" (enum)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects theme.scaleUnit = "px" (enum)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts theme.borderRadius = 0
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts theme.borderRadius = 32
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.skipRadius = -1 (range)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.skipRadius = 25 (range)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.fontSize = 10 (range)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.fontSize = 19 (range)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.accentColor = "#00FF88" (format)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.locale = "ja" (enum)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts ads.skipRadius = 0
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts ads.skipRadius = 24
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts ads.fontSize = 11
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts ads.fontSize = 18
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.timeouts.loadSeconds = 0
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.timeouts.loadSeconds = 61
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.timeouts.stallSeconds = 0
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.timeouts.stallSeconds = 121
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts ads.timeouts.loadSeconds = 60
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts ads.timeouts.stallSeconds = 120
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.skip = "{seconds}초" (placeholder)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.skip = "건너\t뛰기" (control)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.skipCountdown = "{elapsed}" (placeholder)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.skipCountdown = "{seconds" (placeholder)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.timer = "{left}" (placeholder)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.skip = "광고}" (placeholder)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects ads.labels.timer = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" (length)
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > trims NBSP like String.prototype.trim
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > trims U+3000 like String.prototype.trim
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > trims U+FEFF like String.prototype.trim
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects the bidirectional control RLO U+202E in the name and labels
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects the bidirectional control LRE U+202A in the name and labels
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects the bidirectional control LRI U+2066 in the name and labels
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects the bidirectional control PDI U+2069 in the name and labels
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > keeps bidirectional marks that only set direction
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > accepts every timer placeholder and rejects the removed mediaAlt label
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects values the selected player cannot apply
+ ✓ tests/player-preset.test.tsx > parsePlayerPreset > rejects non-object input
+ ✓ tests/player-preset.test.tsx > presetRender > matches the confirmed public Video.js render: attributes, no ui or timeouts
+ ✓ tests/player-preset.test.tsx > presetRender > matches the confirmed public native render: null skin and styles, no attributes
+ ✓ tests/player-preset.test.tsx > presetRender > renders every Video.js field in table order
+ ✓ tests/player-preset.test.tsx > presetRender > renders native labels, locale and both timeouts
+ ✓ tests/player-preset.test.tsx > presetRender > emits nothing for empty values
+ ✓ tests/player-preset.test.tsx > presetRender (examples/preset.js) > renders the full Video.js preset like presetRender
+ ✓ tests/player-preset.test.tsx > presetRender (examples/preset.js) > renders the full native preset like presetRender
+ ✓ tests/player-preset.test.tsx > presetRender (examples/preset.js) > renders the confirmed Video.js preset like presetRender
+ ✓ tests/player-preset.test.tsx > presetRender (examples/preset.js) > renders the confirmed native preset like presetRender
+ ✓ tests/player-preset.test.tsx > presetRender (examples/preset.js) > renders the built-in preset like presetRender
+ ✓ tests/player-preset.test.tsx > presetRender (examples/preset.js) > shares the CSS property table
+ ✓ tests/player-preset.test.tsx > readPresetRender > accepts the confirmed public Video.js render as itself
+ ✓ tests/player-preset.test.tsx > readPresetRender > accepts the confirmed public native render as itself
+ ✓ tests/player-preset.test.tsx > readPresetRender > accepts the full Video.js render presetRender makes
+ ✓ tests/player-preset.test.tsx > readPresetRender > accepts the full native render presetRender makes
+ ✓ tests/player-preset.test.tsx > readPresetRender > accepts the built-in render presetRender makes
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects an unknown CSS property
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a non-table font
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a non-pixel radius
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a bad color
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects an unknown attribute
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the removed media-alt
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a stray label brace
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a removed ui label
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects Video.js timeouts
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects an out-of-range timeout
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a native theme
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a missing revision
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a render whose skin tag does not match its preset
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a render whose skin script does not match its preset
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a render whose native styles does not match its preset
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects a render whose extra key does not match its preset
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name constructor as a CSS property or attribute without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name toString as a CSS property or attribute without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name __proto__ as a CSS property or attribute without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name hasOwnProperty as a CSS property or attribute without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name constructor as a native label or timeout without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name toString as a native label or timeout without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name __proto__ as a native label or timeout without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects the inherited name hasOwnProperty as a native label or timeout without throwing
+ ✓ tests/player-preset.test.tsx > readPresetRender > rejects non-object input
+ ✓ tests/player-preset.test.tsx > applyPresetCss > sets only table properties and clears stale ones
+ ✓ tests/player-preset.test.tsx > applyMediaAdsAttributes > sets only table attributes and clears stale ones
+ ✓ tests/admin-players.test.tsx > PlayersScreen > deletes only after the confirmation is accepted
+ ✓ tests/app.test.tsx > App > keeps unsaved edits and returns focus when the discard dialog is cancelled
+ ✓ tests/app.test.tsx > App > treats Esc on the discard dialog as cancel
+ ✓ tests/help.test.tsx > HelpScreen > lists the player menu after 지면 편성 and the player terms on gnuboard
+ ✓ tests/model.test.ts > safeUrl > accepts HTTP(S) URLs and root paths only
+ ✓ tests/model.test.ts > makeItem > pins the creative version and gives images a display time
+ ✓ tests/model.test.ts > editorPayload > sorts breaks chronologically and drops positions that do not apply
+ ✓ tests/model.test.ts > editorPayload > clears breaks unless the mode replaces the schedule
+ ✓ tests/model.test.ts > editorPayload > does not change the editor record
+ ✓ tests/model.test.ts > editorPayload > rejects site inherit
+ ✓ tests/model.test.ts > editorPayload > rejects category without board
+ ✓ tests/model.test.ts > editorPayload > rejects empty break
+ ✓ tests/model.test.ts > editorPayload > rejects mid without position
+ ✓ tests/model.test.ts > editorPayload > rejects duplicate mid position
+ ✓ tests/model.test.ts > editorPayload > rejects duplicate item ID
+ ✓ tests/model.test.ts > editorPayload > rejects unsafe click URL
+ ✓ tests/model.test.ts > editorPayload > rejects fractional skip
+ ✓ tests/model.test.ts > editorPayload > rejects image skip not shorter than display
+ ✓ tests/model.test.ts > breakRank > orders pre, mid by time, then post; an unfinished mid sorts first among mids
+ ✓ tests/model.test.ts > statsFilters > keeps trimmed optional filters
+ ✓ tests/model.test.ts > statsFilters > rejects impossible or reversed dates
+ ✓ tests/model.test.ts > formatRate > formats ratios as percentages and hides missing values
+ ✓ tests/admin-creatives-load.test.tsx > Workspace > shows loading instead of an empty list until the creatives arrive
+ ✓ tests/admin-players.test.tsx > PlayersScreen > sets the default preset with the list revision
+ ✓ tests/admin-help.test.tsx > App help > opens help without API requests besides bootstrap (gnuboard)
+ ✓ tests/admin-help.test.tsx > App help > focuses the term heading on direct entry (standalone)
+ ✓ tests/app.test.tsx > App > reloads the draft after the discard dialog is confirmed with the danger action
+ ✓ tests/app.test.tsx > App flows > keeps unsaved input across menu changes
+ ✓ tests/app.test.tsx > App flows > opens the default menu and rewrites an unknown hash
+ ✓ tests/help.test.tsx > HelpScreen > links related terms, such as the video id and the install code
+ ✓ tests/admin-creatives-load.test.tsx > Workspace > shows a failed load with a retry on the creative screens only
+ ✓ tests/admin-help.test.tsx > App help > focuses the term heading on direct entry (gnuboard)
+ ✓ tests/help.test.tsx > HelpScreen > has one card per term across both hosts and no duplicate element ids
+ ✓ tests/confirm.test.tsx > ConfirmProvider > keeps an accepted choice when a new request arrives before the close event
+ ✓ tests/confirm.test.tsx > ConfirmProvider > ignores a late close event from an earlier dialog
+ ✓ tests/confirm.test.tsx > ConfirmProvider > cancels a pending request when the provider unmounts
+ ✓ tests/app.test.tsx > App flows > asks before signing out with unsaved input, and cancel keeps everything
+ ✓ tests/admin-creatives-load.test.tsx > Workspace > offers to reconnect after a 401 and reads the list again once connected
+ ✓ tests/help.test.tsx > HelpScreen > marks mock and unbuilt terms with their state
+ ✓ tests/admin-help.test.tsx > App help > opens an unknown term as the help start page
+ ✓ tests/app.test.tsx > App flows > disables sign-out while an operation is running
+ ✓ tests/admin-players.test.tsx > PlayersScreen > sends values the selected player cannot use as null
+ ✓ tests/app.test.tsx > App flows > publishes after confirmation and reports a failed reload of the new draft
+ ✓ tests/api.test.ts > AdminApi > rejects an unsafe API URL
+ ✓ tests/api.test.ts > AdminApi > reads with GET, no token and no body, skipping empty query values
+ ✓ tests/api.test.ts > AdminApi > sends a JSON write once with the current token and adopts the rotated token
+ ✓ tests/api.test.ts > AdminApi > adopts a rotated token from an error response
+ ✓ tests/api.test.ts > AdminApi > reports 409 as a conflict status without retrying
+ ✓ tests/api.test.ts > AdminApi > does not retry a write after a network failure
+ ✓ tests/api.test.ts > AdminApi > adds the token as a multipart field without changing the caller’s FormData
+ ✓ tests/api.test.ts > AdminApi > returns CSV as a Blob
+ ✓ tests/api.test.ts > AdminApi > turns an unreadable body into an ApiError with the HTTP status
+ ✓ tests/api.test.ts > AdminApi > reports a timeout once and does not retry the write
+ ✓ tests/admin-creatives-load.test.tsx > Workspace > keeps a newer list when an older response arrives last
+ ✓ tests/help.test.tsx > HelpScreen > focuses the requested term heading
+ ✓ tests/admin-help.test.tsx > App help > focuses the page title for a term the host does not show
+ ✓ tests/admin-players.test.tsx > PlayersScreen > sends timeouts as null after switching back to Video.js
+ ✓ tests/admin-help.test.tsx > App help > rewrites a gnuboard-hidden term to the start page
+ ✓ tests/admin-creatives-load.test.tsx > Workspace > keeps the failed banner off when a newer read succeeded
+ ✓ tests/presets.test.ts > presetList > keeps list metadata beside the parsed preset
+ ✓ tests/presets.test.ts > presetList > rejects a non-integer revision
+ ✓ tests/presets.test.ts > presetList > rejects a preset failing the schema
+ ✓ tests/presets.test.ts > presetList > rejects a preset without id
+ ✓ tests/presets.test.ts > presetList > rejects an unknown default id
+ ✓ tests/presets.test.ts > playerPresets > reads the list with a GET
+ ✓ tests/presets.test.ts > savePlayerPreset > sends the preset and revision and returns the saved entry
+ ✓ tests/presets.test.ts > savePlayerPreset > rejects a response without the saved preset
+ ✓ tests/presets.test.ts > deletePlayerPreset > sends the id and revision
+ ✓ tests/presets.test.ts > setDefaultPlayerPreset > sends the id and revision
+ ✓ tests/admin-players.test.tsx > PlayersScreen > marks local schema errors without a request
+ ✓ tests/admin-creatives-load.test.tsx > BreakEditor > names items by creative and warns about archived ones
+ ✓ tests/help.test.tsx > HelpScreen > ignores unknown terms and terms of the other host
+ ✓ tests/preset-form.test.ts > formFromPreset > round-trips through presetInput
+ ✓ tests/preset-form.test.ts > duplicateForm > copies every value into a new preset named "<name> 복사본"
+ ✓ tests/preset-form.test.ts > updateForm > sets flat ads controls by their schema path
+ ✓ tests/preset-form.test.ts > presetInput > sends skin and theme as null after switching to native video, and restores them on switching back
+ ✓ tests/preset-form.test.ts > presetInput > sends timeouts as null for Video.js
+ ✓ tests/preset-form.test.ts > presetInput > turns blank text into null and bad numbers into schema errors
+ ✓ tests/preset-form.test.ts > previewPreset > previews a nameless form and refuses an invalid one
+ ✓ tests/preset-form.test.ts > fieldErrors > maps schema paths to field messages and flags paths the form does not show
+ ✓ tests/preset-form.test.ts > contrastWarning > warns below 4.5:1 between accent and accent text colors
+ ✓ tests/preset-form.test.ts > contrastWarning > compares with black when the accent text color is empty
+ ✓ tests/preset-form.test.ts > contrastWarning > stays quiet for native video, invalid colors and an empty theme
+ ✓ tests/preset-form.test.ts > contrastWarning > uses the WCAG ratio
+ ✓ tests/preset-form.test.ts > presetError > keeps 422 field paths with local wording
+ ✓ tests/preset-form.test.ts > presetError > rewrites preset_limit
+ ✓ tests/preset-form.test.ts > presetError > rewrites preset_builtin
+ ✓ tests/preset-form.test.ts > presetError > rewrites preset_not_found
+ ✓ tests/preset-form.test.ts > presetError > rewrites invalid_preset_id
+ ✓ tests/preset-form.test.ts > presetError > passes other errors through
+ ✓ tests/preset-form.test.ts > assetsUrlFrom > is the absolute directory of the player module
+ ✓ tests/preset-form.test.ts > assetsUrlFrom > is null without a usable module URL
+ ✓ tests/preset-form.test.ts > initialSetupForm > starts with the default preset and the absolute demo content URL
+ ✓ tests/preset-form.test.ts > presetFieldLabel > names the editor field for an option row
+ ✓ tests/admin-players.test.tsx > PlayersScreen > keeps malformed colors out of the form and warns about contrast
+ ✓ tests/help.test.tsx > HelpScreen > clears a category filter that hides the requested term
+ ✓ tests/admin-creatives-load.test.tsx > BreakEditor > reads the creative list again on request and says when that fails
+ ✓ tests/admin-creatives-load.test.tsx > CreativesScreen > reports an archive as done even when the list reload after it fails
+ ✓ tests/admin-players.test.tsx > PlayersScreen > shows 422 fields on their controls
+ ✓ tests/player-options.test.tsx > playerOptions > lists every <media-ads> property attribute plus the inherited lang
+ ✓ tests/player-options.test.tsx > playerOptions > lists every createAdsController option key
+ ✓ tests/player-options.test.tsx > playerOptions > lists every AdsController method
+ ✓ tests/player-options.test.tsx > playerOptions > lists exactly the public --media-* skin properties from the skin guide
+ ✓ tests/player-options.test.tsx > playerOptions > lists exactly the --ads-* properties the overlay reads
+ ✓ tests/player-options.test.tsx > playerOptions > states the skin values the overlay inherits for radius, focus ring and font
+ ✓ tests/player-options.test.tsx > playerOptions > lists the example queries the example pages read
+ ✓ tests/player-options.test.tsx > playerOptions > maps preset fields only to rows a preset sets, and every preset CSS property has a row
+ ✓ tests/player-options.test.tsx > playerOptions > points presetField only at preset schema paths, leaving out mediaAlt and object-position
+ ✓ tests/admin-help.test.tsx > App help > opens a term behind a query or a trailing slash
+ ✓ tests/admin-players.test.tsx > PlayersScreen > keeps input after a 409 and reloads the list on request
+ ✓ tests/help.test.tsx > HelpScreen > a link to the open term > scrolls back and focuses the term heading
+ ✓ tests/admin-help.test.tsx > App help > keeps the players page and preset input across a help visit
+ ✓ tests/admin-players.test.tsx > PlayersScreen > keeps the new preset input after the server refuses a 21st preset (QA PL07)
+ ✓ tests/admin-players.test.tsx > PlayersScreen > opens the built-in preset read-only with a duplicate action
+ ✓ tests/admin-players.test.tsx > PlayersScreen > unmounts the live preview while another menu is shown and keeps the form
+ ✓ tests/help.test.tsx > HelpScreen > a link to the open term > drops a category filter that hides the term
+ ✓ tests/help.test.tsx > HelpScreen > filters the dictionary by category
+ ✓ tests/admin-help.test.tsx > App help > moves focus to the same term again after leaving help
+ ✓ tests/admin-help.test.tsx > App help > moves focus between terms inside help and back to the title for the start page
+ ✓ tests/admin-players.test.tsx > PlayersScreen > keeps the last valid preview while the form is invalid
+ ✓ tests/admin-players.test.tsx > PlayerSetup > builds install code with absolute URLs and reports input errors
+ ✓ tests/admin-players.test.tsx > PlayerSetup > disables HLS for a native video preset
+ ✓ tests/admin-players.test.tsx > PlayerSetup > explains why there is no generator without a player module URL
+ ✓ tests/admin-players.test.tsx > PlayerSetup > gives the GnuBoard install steps: /ads/ on the same origin, video IDs and read permission (QA PL24)
+ ✓ tests/admin-players.test.tsx > PlayerSetup > keeps the GnuBoard video ID format out of the standalone install steps
+ ✓ tests/admin-players.test.tsx > PlayerSetup > marks Gnuboard auto insertion as not built yet
+ ✓ tests/admin-players.test.tsx > PlayerOptions > renders one captioned table per group without API requests
+ ✓ tests/admin-help.test.tsx > App help > follows a field HelpLink to its term
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links the creative fields
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links 하우스 광고 only on gnuboard
+ ✓ tests/app.test.tsx > App flows > saves the statistics CSV as a Blob with a dated file name and revokes its URL
+ ✓ tests/app.test.tsx > App flows > sends the editor schedule to schedule-preview and lets the player announce it
+ ✓ tests/help.test.tsx > HelpScreen > offers pause and replay for looping motions and replay only for one-shot motions
+ ✓ tests/help.test.tsx > HelpScreen > pauses with aria-pressed and replays from the start
+ ✓ tests/help.test.tsx > HelpScreen > drops the motion controls when reduced motion is requested
+ ✓ tests/admin-players.test.tsx > PlaybackPanel > passes the selected preset to the test links, default preset first
+ ✓ tests/help.test.tsx > HelpMotion > follows a reduced-motion change made while the screen is open
+ ✓ tests/help.test.tsx > HelpMotion > pauses a motion scrolled out of view and resumes it on return
+ ✓ tests/help.test.tsx > HelpLink > leaves links to another term to the browser
+ ✓ tests/help.test.tsx > HelpLink > links to the term as a named "?"
+ ✓ tests/help.test.tsx > HelpLink > uses its children as the name when given
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links every schedule, break and playback position
+ ✓ tests/app.test.tsx > App flows > unmounts the preview player when its menu is left and asks for a new preview on return
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > offers a list reload after a 404 and keeps a deleted preset input as a new preset
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links the draft conflict reload
+ ✓ tests/admin-help.test.tsx > HelpLink placement > has no video context link on gnuboard
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links the stats terms beside the CSV button, not in the start date description
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links the standalone report stats
+ ✓ tests/app.test.tsx > App flows > hides manual target IDs and the video-context form when the host lists targets
+ ✓ tests/app.test.tsx > App flows > shows manual target IDs and the video-context form on a standalone install
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links every preset editor, list and setup position
+ ✓ tests/admin-help.test.tsx > HelpLink placement > links each option row to the term for its preset field
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > drops a deleted preset input after confirming, which clears the leave warning
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > offers a list reload after a 404 on the list page, with list-page wording for a 409
+ ✓ tests/app.test.tsx > App flows > sends each write with the token from the latest response
+ ✓ tests/app.test.tsx > App flows > moves focus by server IDs that are not valid in a CSS selector
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > warns that a new preset with the same name appeared after a 409
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > clears the unsaved mark when a value goes back to the saved one
+ ✓ tests/app.test.tsx > App flows > lets focus leave a mid-roll position for the next field (Tab or a click)
+ ✓ tests/app.test.tsx > App flows > lets focus leave a mid-roll position for the previous control (Shift+Tab)
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > says a delete also drops unsaved edits of that preset
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > cuts a long name so the copy fits 40 characters
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > refuses to save while a color field shows a format error
+ ✓ tests/app.test.tsx > App flows > keeps focus on the control it moved to when the mid-roll card re-sorts
+ ✓ tests/app.test.tsx > App flows > marks a mid-roll position of "" on its field and sends no save (QA B06)
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > keeps focus in the field while the workspace re-renders, and returns it to the page title after a save
+ ✓ tests/app.test.tsx > App flows > marks a mid-roll position of "0" on its field and sends no save (QA B06)
+ ✓ tests/app.test.tsx > App flows > marks a mid-roll position of "-3" on its field and sends no save (QA B06)
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > marks 프리셋 목록 as current on the editor pages
+ ✓ tests/admin-players.test.tsx > PlayersScreen review fixes > reads the list again on a later visit and keeps the old list when that fails
+ ✓ tests/admin-players.test.tsx > PlayerSetup review fixes > shows a failed list as an error with a retry
+ ✓ tests/app.test.tsx > App flows > marks an empty mid-roll position once focus leaves it (QA B06)
+ ✓ tests/app.test.tsx > App flows > returns focus to the publish button after publishing (QA B15)
+ ✓ tests/admin-players.test.tsx > PlayerSetup review fixes > falls back to the default preset when the chosen one was deleted elsewhere
+ ✓ tests/admin-players.test.tsx > PlaybackPanel review fixes > adds the preset only to the link of the preset player type
+ ✓ tests/admin-players.test.tsx > PlaybackPanel review fixes > says the list may be old when a later read fails, and that help stops the preview
+ ✓ tests/app.test.tsx > App flows > moves focus to the page title when the control that started a write is gone
+ ✓ tests/app.test.tsx > App flows > keeps the schedule input and shows the error after a 422 on save (QA U04)
+ ✓ tests/admin-players.test.tsx > PlayersScreen with a save made elsewhere > takes the other save into the draft after a 409 and the reload, and saves both changes
+ ✓ tests/app.test.tsx > App flows > keeps the schedule input and shows the error after a network failure on save (QA U04)
+ ✓ tests/app.test.tsx > App flows > keeps the creative input and shows the error after a 422 on URL save (QA U04)
+ ✓ tests/app.test.tsx > App flows > keeps the creative input and shows the error after a network failure on URL save (QA U04)
+ ✓ tests/app.test.tsx > App flows > keeps the chosen file and shows the error after a 422 on upload (QA U04)
+ ✓ tests/app.test.tsx > App flows > keeps the chosen file and shows the error after a network failure on upload (QA U04)
+ ✓ tests/app.test.tsx > App flows > links GnuBoard site and admin only from safe capability URLs
+ ✓ tests/app.test.tsx > App flows > shows a whole first character in the avatar
+ ✓ tests/admin-players.test.tsx > PlayersScreen with a save made elsewhere > asks which value to keep when both sides changed a field (다른 곳에서 저장한 값 쓰기)
+ ✓ tests/admin-players.test.tsx > PlayersScreen with a save made elsewhere > asks which value to keep when both sides changed a field (내 입력 유지)
+ ✓ tests/admin-players.test.tsx > PlayersScreen with a save made elsewhere > does not save over a change it learned about from a later list read
+ ✓ tests/admin-players.test.tsx > PresetEditor color format errors > sends nothing for #GGG (QA PL09) on clicking 프리셋 저장
+ ✓ tests/admin-players.test.tsx > PresetEditor color format errors > sends nothing for #GGG (QA PL09) on Enter in the color field
+ ✓ tests/admin-players.test.tsx > PresetEditor color format errors > sends nothing for #GGG (QA PL09) on Enter in another field
+ ✓ tests/admin-players.test.tsx > PlannedNote > marks the contract 3.2 features that are not built yet on #/players/setup (QA PL23)
+ ✓ tests/admin-players.test.tsx > PlannedNote > marks the contract 3.2 features that are not built yet on #/players (QA PL23)
+ ✓ tests/admin-players.test.tsx > PlannedNote > marks the contract 3.2 features that are not built yet on #/players/new (QA PL23)
+ ✓ tests/admin-players.test.tsx > PlannedNote > keeps the earlier 준비 중 marks

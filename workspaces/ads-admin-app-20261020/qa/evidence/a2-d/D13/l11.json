@@ -1,0 +1,47 @@
+{
+  "a2-1-l11-legacy-videojs": {
+    "box": {
+      "w": 1264,
+      "h": 711
+    },
+    "fallbackPlay": "played",
+    "videos": [
+      "content-scene-01.mp4:paused@0.0",
+      "ad-coffee-6s.mp4:playing@2.5"
+    ],
+    "ads": [
+      "start@0"
+    ],
+    "text": [
+      "광고 1/2 — 광고 불러오는 중…",
+      "광고주 사이트"
+    ],
+    "solad": []
+  },
+  "a2-1-l11-legacy-native": {
+    "box": {
+      "w": 1264,
+      "h": 711
+    },
+    "fallbackPlay": "played",
+    "videos": [
+      "content-scene-01.mp4:playing@3.6"
+    ],
+    "ads": [],
+    "text": [],
+    "solad": []
+  },
+  "pl16-native-mp4": {
+    "box": {
+      "w": 1264,
+      "h": 711
+    },
+    "fallbackPlay": "played",
+    "videos": [
+      "content-scene-01.mp4:playing@3.5"
+    ],
+    "ads": [],
+    "text": [],
+    "solad": []
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "setDefaultApi": [
+    {
+      "t": 1725,
+      "method": "POST",
+      "action": "player-preset-default",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": true,
+      "respCsrfHeader": true
+    }
+  ],
+  "live": [
+    "\"QA Video.js 중립 v2\" 프리셋을 기본으로 지정했어요. 설치 코드 생성기와 재생 테스트에서 먼저 선택돼요."
+  ],
+  "dialog": 0,
+  "rowsAfter": [
+    [
+      "기본",
+      "Video.js",
+      "기본",
+      "—",
+      "패키지 기본값"
+    ],
+    [
+      "QA Video.js 중립 v2",
+      "Video.js",
+      "뉴트럴",
+      "기본 프리셋",
+      "2026. 10. 21. 오전 1:18"
+    ],
+    [
+      "기본 복사본",
+      "Video.js",
+      "기본",
+      "—",
+      "2026. 10. 21. 오전 1:18"
+    ],
+    [
+      "QA Video.js 중립 v2 복사본",
+      "Video.js",
+      "뉴트럴",
+      "—",
+      "2026. 10. 21. 오전 1:18"
+    ]
+  ],
+  "rowsAfterReload": [
+    [
+      "기본",
+      "Video.js",
+      "기본",
+      "—",
+      "패키지 기본값"
+    ],
+    [
+      "QA Video.js 중립 v2",
+      "Video.js",
+      "뉴트럴",
+      "기본 프리셋",
+      "2026. 10. 21. 오전 1:18"
+    ],
+    [
+      "기본 복사본",
+      "Video.js",
+      "기본",
+      "—",
+      "2026. 10. 21. 오전 1:18"
+    ],
+    [
+      "QA Video.js 중립 v2 복사본",
+      "Video.js",
+      "뉴트럴",
+      "—",
+      "2026. 10. 21. 오전 1:18"
+    ]
+  ],
+  "defaultButtons": [
+    {
+      "name": "기본 기본으로 지정",
+      "disabled": false
+    },
+    {
+      "name": "QA Video.js 중립 v2 기본으로 지정",
+      "disabled": true
+    },
+    {
+      "name": "기본 복사본 기본으로 지정",
+      "disabled": false
+    },
+    {
+      "name": "QA Video.js 중립 v2 복사본 기본으로 지정",
+      "disabled": false
+    }
+  ],
+  "listDefault": "p-vym1rjw052",
+  "publicNoCookie": {
+    "status": 200,
+    "cookieHeaderSent": false,
+    "body": {
+      "ok": true,
+      "data": {
+        "id": "p-vym1rjw052",
+        "revision": 5,
+        "playerType": "videojs",
+        "skin": "neutral",
+        "skinTag": "video-neutral-skin",
+        "styles": {
+          "css": "video-neutral.css",
+          "js": "video-neutral.js"
+        },
+        "css": {
+          "--media-accent-color": "#0f5132",
+          "--media-accent-text-color": "#ffffff",
+          "--media-border-radius": "12px",
+          "--ads-font-size": "15px"
+        },
+        "attributes": {
+          "lang": "en",
+          "skip-label": "Skip ad"
+        }
+      }
+    }
+  },
+  "setup": {
+    "hash": "#/players/setup",
+    "selects": [
+      {
+        "label": "프리셋",
+        "value": "p-vym1rjw052",
+        "selected": "QA Video.js 중립 v2 (기본 프리셋)",
+        "options": [
+          "default|기본",
+          "p-vym1rjw052|QA Video.js 중립 v2 (기본 프리셋)",
+          "p-z3h9nv39q2|기본 복사본",
+          "p-fpp9gh1ed8|QA Video.js 중립 v2 복사본"
+        ]
+      }
+    ]
+  },
+  "scheduleTest": {
+    "visible": true,
+    "selects": [
+      {
+        "label": "플레이어 프리셋",
+        "value": "p-vym1rjw052",
+        "selected": "QA Video.js 중립 v2 (기본 프리셋)",
+        "options": [
+          "default|기본",
+          "p-vym1rjw052|QA Video.js 중립 v2 (기본 프리셋)",
+          "p-z3h9nv39q2|기본 복사본",
+          "p-fpp9gh1ed8|QA Video.js 중립 v2 복사본"
+        ]
+      }
+    ]
+  },
+  "bodies": [
+    {
+      "action": "player-preset-default",
+      "status": 200,
+      "sent": {
+        "id": "p-vym1rjw052",
+        "revision": 4
+      },
+      "defaultPresetId": "p-vym1rjw052",
+      "revision": 5
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

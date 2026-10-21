@@ -1,0 +1,557 @@
+{
+  "a-500": {
+    "readyAfterMs": 363,
+    "ready": [
+      {
+        "at": 282,
+        "target": "l03-500-b",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      },
+      {
+        "at": 302,
+        "target": "l03-500-a",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "id": "l03-500-a",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      {
+        "id": "l03-500-b",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    ],
+    "adEvents": [
+      "l03-500-a:start@0"
+    ],
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "routed": [
+      "/api/index.php?action=player-preset"
+    ],
+    "presetRequests": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792562400834,
+        "status": 500,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ],
+    "scheduleRequests": [
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      },
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      }
+    ],
+    "httpErrors": [
+      "500 /api/index.php?action=player-preset"
+    ],
+    "soladWarnings": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 응답이 500입니다. 기본 설정으로 재생합니다."
+      }
+    ],
+    "soladWarningCount": 1,
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      },
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 응답이 500입니다. 기본 설정으로 재생합니다."
+      }
+    ]
+  },
+  "b-disconnect": {
+    "readyAfterMs": 337,
+    "ready": [
+      {
+        "at": 202,
+        "target": "l03-disconnect-b",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      },
+      {
+        "at": 222,
+        "target": "l03-disconnect-a",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "id": "l03-disconnect-a",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      {
+        "id": "l03-disconnect-b",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    ],
+    "adEvents": [
+      "l03-disconnect-a:start@0"
+    ],
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "routed": [
+      "/api/index.php?action=player-preset"
+    ],
+    "presetRequests": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792562404726,
+        "failed": "net::ERR_CONNECTION_RESET"
+      }
+    ],
+    "scheduleRequests": [
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      },
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      }
+    ],
+    "httpErrors": [],
+    "soladWarnings": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋을 받지 못했습니다. 기본 설정으로 재생합니다."
+      }
+    ],
+    "soladWarningCount": 1,
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CONNECTION_RESET"
+      },
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋을 받지 못했습니다. 기본 설정으로 재생합니다."
+      }
+    ]
+  },
+  "c-delay-4s": {
+    "readyAfterMs": 3384,
+    "ready": [
+      {
+        "at": 3327,
+        "target": "l03-delay-a",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      },
+      {
+        "at": 3350,
+        "target": "l03-delay-b",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "id": "l03-delay-a",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      {
+        "id": "l03-delay-b",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    ],
+    "adEvents": [
+      "l03-delay-a:start@0"
+    ],
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "routed": [
+      "/api/index.php?action=player-preset"
+    ],
+    "presetRequests": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792562408564,
+        "failed": "net::ERR_ABORTED"
+      }
+    ],
+    "scheduleRequests": [
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      },
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      }
+    ],
+    "httpErrors": [],
+    "soladWarnings": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 응답이 3초 안에 오지 않았습니다. 기본 설정으로 재생합니다."
+      }
+    ],
+    "soladWarningCount": 1,
+    "console": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 응답이 3초 안에 오지 않았습니다. 기본 설정으로 재생합니다."
+      }
+    ]
+  },
+  "d-invalid-body": {
+    "readyAfterMs": 339,
+    "ready": [
+      {
+        "at": 205,
+        "target": "l03-invalid-b",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      },
+      {
+        "at": 225,
+        "target": "l03-invalid-a",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "id": "l03-invalid-a",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      {
+        "id": "l03-invalid-b",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    ],
+    "adEvents": [
+      "l03-invalid-a:start@0"
+    ],
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "routed": [
+      "/api/index.php?action=player-preset"
+    ],
+    "presetRequests": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792562415796,
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ],
+    "scheduleRequests": [
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      },
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      }
+    ],
+    "httpErrors": [],
+    "soladWarnings": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 값이 올바르지 않습니다. 기본 설정으로 재생합니다."
+      }
+    ],
+    "soladWarningCount": 1,
+    "console": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 값이 올바르지 않습니다. 기본 설정으로 재생합니다."
+      }
+    ]
+  },
+  "e-missing-id-404": {
+    "readyAfterMs": 336,
+    "ready": [
+      {
+        "at": 164,
+        "target": "l03-missing-a",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      },
+      {
+        "at": 186,
+        "target": "l03-missing-b",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "id": "l03-missing-a",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      },
+      {
+        "id": "l03-missing-b",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "accentVar": "",
+        "radius": "28px",
+        "i18n": "ko",
+        "adsLang": "ko",
+        "visibleText": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    ],
+    "adEvents": [
+      "l03-missing-a:start@0"
+    ],
+    "adText": [
+      "0:00",
+      "0:00",
+      "-",
+      "0:10",
+      "설정",
+      "광고 1/2",
+      "광고주 사이트",
+      "0:01 / 0:06"
+    ],
+    "routed": [],
+    "presetRequests": [
+      {
+        "url": "/api/index.php?action=player-preset&id=p-zzzzzzzzzz",
+        "method": "GET",
+        "at": 1792562419640,
+        "ifNoneMatch": null,
+        "cacheControlSent": null,
+        "wireStatus": 404,
+        "etag": null,
+        "cacheControl": "no-store",
+        "status": 404,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ],
+    "scheduleRequests": [
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      },
+      {
+        "url": "/api/index.php?action=schedule&videoId=…",
+        "status": 200,
+        "wireStatus": 200
+      }
+    ],
+    "httpErrors": [
+      "404 /api/index.php?action=player-preset&id=p-zzzzzzzzzz",
+      "404 /favicon.ico",
+      "404 /favicon.ico"
+    ],
+    "soladWarnings": [
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 p-zzzzzzzzzz이 없습니다. 기본 설정으로 재생합니다."
+      }
+    ],
+    "soladWarningCount": 1,
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
+        "type": "warning",
+        "text": "[solad] 프리셋 p-zzzzzzzzzz이 없습니다. 기본 설정으로 재생합니다."
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  }
+}

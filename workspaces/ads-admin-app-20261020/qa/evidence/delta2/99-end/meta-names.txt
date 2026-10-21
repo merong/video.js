@@ -1,0 +1,5 @@
+player_presets
+schema_version
+signing_key
+site_id
+write_lock

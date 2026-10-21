@@ -1,0 +1,32 @@
+- form "광고 편성 편집":
+  - region "영상 · a1-qa-video-1":
+    - heading "영상 · a1-qa-video-1" [level=2]
+    - text: 게시본 없음
+    - link "게시본과 게시 버전 도움말":
+      - /url: "#/help/publish-version"
+      - text: "?"
+    - text: 저장 전 초안
+    - link "초안 revision 도움말":
+      - /url: "#/help/draft-revision"
+      - text: "?"
+    - paragraph: "현재 게시 설정 출처: 게시판 notice"
+    - text: 이 대상의 광고
+    - combobox "이 대상의 광고":
+      - option "상위 설정 상속" [selected]
+      - option "직접 편성 · 전체 대체"
+      - option "광고 비활성화 · 상속 중단"
+    - text: 이 대상의 직접 편성 대신 상위 게시 설정을 따라요.
+    - link "상위 설정 상속 도움말":
+      - /url: "#/help/inherit"
+      - text: "?"
+  - text: 초안 저장만으로는 노출이 바뀌지 않아요.
+  - link "초안 도움말":
+    - /url: "#/help/draft"
+    - text: "?"
+  - button "초안 저장"
+  - button "저장한 초안 게시" [disabled]
+  - text: 저장한 초안이 없어요.
+  - link "게시 도움말":
+    - /url: "#/help/publish"
+    - text: "?"
+  - status

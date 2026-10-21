@@ -1,0 +1,12 @@
+21:44:24
+ads_meta names:
+player_presets
+schema_version
+signing_key
+site_id
+write_lock
+defaultPresetId p-i0aecb28w3 revision 14 presets [('p-i0aecb28w3', 'QA 강조색 복제', 'videojs'), ('p-lc3i8eidb4', 'QA 자동재생', 'videojs'), ('p-pchm59hhyv', 'QA 기본 video', 'native')]
+video_contexts (video_id):
+a1-qa-video-1
+qa-x02-named
+events rows: 40

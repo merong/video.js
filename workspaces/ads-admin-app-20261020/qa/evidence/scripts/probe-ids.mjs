@@ -1,0 +1,42 @@
+// Read-only: rebuild the B06 draft in memory (no save) and inspect label/for/id pairs and duplicate ids.
+import { BASE, launch, newContext, login, save, sleep } from './lib.mjs';
+const browser = await launch();
+const context = await newContext(browser, { height: 1000 });
+const page = await context.newPage();
+await login(page);
+await page.goto(`${BASE}/#/schedule`);
+await page.getByRole('button', { name: '편성 불러오기' }).click();
+await sleep(1000);
+const editor = page.getByRole('form', { name: '광고 편성 편집' });
+await editor.getByLabel('이 대상의 광고', { exact: true }).selectOption({ label: '직접 편성 · 전체 대체' });
+const add = editor.getByRole('group', { name: '광고 구간 추가' });
+await add.getByRole('button', { name: '프리롤' }).click();
+const pre = editor.getByRole('article', { name: /프리롤/ });
+await pre.getByLabel('추가할 소재', { exact: true }).selectOption({ label: 'QA 이어버드 프리롤 · v1 · 영상' });
+await pre.getByRole('button', { name: '광고 추가' }).click();
+await pre.getByLabel('이 광고의 스킵', { exact: true }).selectOption({ label: 'N초 후 현재 광고만 스킵' });
+await add.getByRole('button', { name: '미드롤' }).click();
+await sleep(200);
+const dump = async (label) => page.evaluate((label) => {
+  const ids = [...document.querySelectorAll('[id]')].map((e) => e.id);
+  const dup = ids.filter((id, i) => ids.indexOf(id) !== i);
+  const labels = [...document.querySelectorAll('main label')].map((l) => {
+    const target = l.htmlFor ? document.getElementById(l.htmlFor) : l.querySelector('input,select,textarea');
+    return { text: l.textContent.trim().slice(0, 40), for: l.htmlFor, targetTag: target?.tagName, targetValue: target?.value, article: l.closest('article')?.querySelector('h3')?.textContent };
+  });
+  return { label, duplicateIds: [...new Set(dup)], labels };
+}, label);
+const a = await dump('pre+mid');
+const mid = editor.getByRole('article', { name: /미드롤/ });
+await mid.getByLabel('추가할 소재', { exact: true }).selectOption({ label: 'QA 생수 미드롤 · v1 · 영상' });
+await mid.getByRole('button', { name: '광고 추가' }).click();
+await mid.getByLabel('이 광고의 스킵', { exact: true }).selectOption({ label: 'N초 후 현재 광고만 스킵' });
+const b = await dump('mid item skip');
+const before = await add.getByRole('button').allInnerTexts();
+await add.getByRole('button', { name: '포스트롤' }).click();
+await sleep(300);
+const c = { postArticles: await editor.getByRole('article').allInnerTexts().then((x) => x.map((t) => t.slice(0, 30))), statuses: await page.getByRole('status').allInnerTexts(), addButtons: before };
+save('B06/probe-ids.json', { a, b, c });
+console.log(JSON.stringify({ dupA: a.duplicateIds, dupB: b.duplicateIds, c }, null, 1));
+console.log(JSON.stringify(b.labels.filter((l) => /스킵|위치/.test(l.text)), null, 1));
+await browser.close();

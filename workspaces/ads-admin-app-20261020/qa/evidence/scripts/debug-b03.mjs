@@ -1,0 +1,24 @@
+// Debug only: one file upload through the form, capture statuses and 404 URLs.
+import { BASE, launch, newContext, login, recordNetwork, consoleCollector, save, shot, apiCalls, sleep } from './lib.mjs';
+const MEDIA = '/Users/brian/works/tools/videojs/video.js/integrations/ads-manager/public/demo-media';
+const browser = await launch();
+const context = await newContext(browser);
+const net = recordNetwork(context);
+const page = await context.newPage();
+const logs = consoleCollector(page);
+await login(page);
+await page.goto(`${BASE}/#/creatives`);
+await page.getByRole('heading', { name: '소재', level: 1 }).waitFor();
+const form = page.locator('form', { has: page.getByRole('button', { name: '소재 저장' }) });
+await form.getByLabel('소재 이름', { exact: true }).fill('QA 이어버드 프리롤');
+await form.getByLabel('등록 방식', { exact: true }).selectOption({ label: '파일 업로드' });
+console.log('file inputs', await form.locator('input[type=file]').count(), await form.getByLabel('소재 파일', { exact: true }).count());
+await form.getByLabel('소재 파일', { exact: true }).setInputFiles(`${MEDIA}/grok-20261018/ad-earbuds-12s.mp4`);
+await form.getByRole('button', { name: '소재 저장' }).click();
+await sleep(4000);
+console.log('statuses', await page.getByRole('status').allInnerTexts());
+await shot(page, 'B03/debug-upload.png', { fullPage: true });
+const bad = net.filter((e) => e.status >= 400);
+console.log(JSON.stringify(apiCalls(net).slice(-4)), JSON.stringify(bad), JSON.stringify(logs));
+save('B03/debug-upload.json', { api: apiCalls(net), bad, logs });
+await browser.close();

@@ -1,0 +1,82 @@
+{
+  "runs": [
+    {
+      "label": "메뉴 소재",
+      "playingBeforeLeave": [
+        {
+          "src": "content-scene-01.mp4",
+          "t": 0,
+          "paused": true
+        },
+        {
+          "src": "ad-coffee-6s.mp4",
+          "t": 3.7,
+          "paused": false
+        }
+      ],
+      "afterLeave": {
+        "hash": "#/creatives",
+        "iframeElements": 0,
+        "previewFrames": []
+      },
+      "requestsFromPreviewAfterLeave": [],
+      "afterReturn": {
+        "previewFrames": [
+          "/examples/player-preview.html?type=videojs&skin=neutral"
+        ],
+        "newDocRequests": 1,
+        "videos": [
+          {
+            "src": "content-scene-01.mp4",
+            "t": 0,
+            "paused": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "하위 탐색 옵션 설명",
+      "playingBeforeLeave": [
+        {
+          "src": "content-scene-01.mp4",
+          "t": 0,
+          "paused": true
+        },
+        {
+          "src": "ad-coffee-6s.mp4",
+          "t": 3.7,
+          "paused": false
+        }
+      ],
+      "afterLeave": {
+        "hash": "#/players/options",
+        "iframeElements": 0,
+        "previewFrames": []
+      },
+      "requestsFromPreviewAfterLeave": [],
+      "afterReturn": {
+        "previewFrames": [
+          "/examples/player-preview.html?type=videojs&skin=neutral"
+        ],
+        "newDocRequests": 1,
+        "videos": [
+          {
+            "src": "content-scene-01.mp4",
+            "t": 0,
+            "paused": true
+          }
+        ]
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

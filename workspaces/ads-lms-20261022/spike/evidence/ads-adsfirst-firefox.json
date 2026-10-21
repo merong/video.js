@@ -1,0 +1,317 @@
+{
+ "scenario": "ads",
+ "engine": "firefox",
+ "startedAt": "2026-10-21T17:14:00.661Z",
+ "steps": [
+  {
+   "name": "play (preroll starts)",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": -0.002,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1229,
+     "type": "ads-event",
+     "adType": "start"
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(20) during ad",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": -0.002,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 20,
+    "seeking": true,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 55.552,
+    "expectPct": 0,
+    "fillVar": "55.556%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [],
+   "error": null
+  },
+  {
+   "name": "direct media.currentTime=20 during ad",
+   "before": {
+    "media": 0,
+    "store": 20,
+    "seeking": true,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": 55.552,
+    "expectPct": 0,
+    "fillVar": "55.556%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 1,
+    "thumbPct": -0.002,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 4915,
+     "type": "media:seeking",
+     "time": 20
+    },
+    {
+     "t": 4916,
+     "type": "media:seeking",
+     "time": 0
+    },
+    {
+     "t": 4922,
+     "type": "media:seeked",
+     "time": 0
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "store.seek(30) after ad",
+   "before": {
+    "media": 2.506,
+    "store": 2.506,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 3.339,
+    "thumbPct": 6.959,
+    "expectPct": 6.962,
+    "fillVar": "6.962%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 4.833,
+    "store": 4.791,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 5.613,
+    "thumbPct": 13.305,
+    "expectPct": 13.426,
+    "fillVar": "13.309%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 9786,
+     "type": "seek-blocked",
+     "requested": 30,
+     "allowed": 3.339
+    },
+    {
+     "t": 9788,
+     "type": "media:seeking",
+     "time": 3.339
+    },
+    {
+     "t": 9845,
+     "type": "media:seeked",
+     "time": 3.339
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "direct =33 after ad",
+   "before": {
+    "media": 4.833,
+    "store": 4.833,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 5.613,
+    "thumbPct": 13.421,
+    "expectPct": 13.426,
+    "fillVar": "13.426%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "after": {
+    "media": 7.013,
+    "store": 7.013,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 7.889,
+    "thumbPct": 19.478,
+    "expectPct": 19.48,
+    "fillVar": "19.48%",
+    "counts": {
+     "setter": 1,
+     "clamped": 1,
+     "safetyNet": 1,
+     "rateReverted": 0,
+     "blockedNotes": 1
+    }
+   },
+   "events": [
+    {
+     "t": 11357,
+     "type": "media:seeking",
+     "time": 5.613
+    },
+    {
+     "t": 11357,
+     "type": "media:seeking",
+     "time": 5.613
+    },
+    {
+     "t": 11414,
+     "type": "media:seeked",
+     "time": 5.613
+    }
+   ],
+   "error": null
+  }
+ ],
+ "query": "ads=preroll&order=ads-first&yield=0",
+ "duringAd": {
+  "overlay": true,
+  "lmsOverride": true
+ },
+ "afterAd": {
+  "overlay": false,
+  "lmsOverride": true,
+  "maxWatched": 2.339343,
+  "adsEvents": [
+   "start",
+   "complete"
+  ]
+ },
+ "seekResults": [
+  0
+ ],
+ "adsLog": [
+  {
+   "t": 550,
+   "type": "attached",
+   "tag": "video"
+  },
+  {
+   "t": 551,
+   "type": "lms-registered",
+   "ok": true
+  },
+  {
+   "t": 1229,
+   "type": "ads-event",
+   "adType": "start"
+  },
+  {
+   "t": 7257,
+   "type": "ads-event",
+   "adType": "complete"
+  }
+ ],
+ "errors": []
+}

@@ -1,0 +1,279 @@
+{
+  "loader-e-404": {
+    "url": "/__qa/paste/a2-1d-msg-404.html",
+    "routed": [],
+    "ready": [
+      {
+        "at": 645,
+        "target": "msg-404",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video-player",
+      "video-skin",
+      "video"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋을 찾지 못했습니다(p-zzzzzzzzzz). 기본 설정으로 재생합니다."
+    ],
+    "otherConsole": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  "loader-500": {
+    "url": "/__qa/paste/a2-1d-msg-500.html",
+    "routed": [
+      "/api/index.php?action=player-preset"
+    ],
+    "ready": [
+      {
+        "at": 499,
+        "target": "msg-500",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video-player",
+      "video-skin",
+      "video"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋을 받지 못했습니다(HTTP 500). 기본 설정으로 재생합니다."
+    ],
+    "otherConsole": [
+      "error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    ]
+  },
+  "loader-native-data-preset": {
+    "url": "/__qa/paste/a2-1d-msg-native.html",
+    "routed": [],
+    "ready": [
+      {
+        "at": 19,
+        "target": "msg-native",
+        "presetId": "p-i22c0n5b8p",
+        "fallback": false,
+        "player": "VIDEO"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video"
+    ],
+    "soladWarnings": [],
+    "otherConsole": []
+  },
+  "mount-playerType-videojs-native-preset": {
+    "url": "/__qa/paste/a2-1d-msg-mount-videojs.html",
+    "routed": [],
+    "ready": [
+      {
+        "at": 198,
+        "target": "m",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": {
+        "presetId": "default",
+        "fallback": true,
+        "media": "video"
+      },
+      "errors": [
+        {
+          "code": "player_type",
+          "message": "프리셋이 다른 플레이어용입니다(p-i22c0n5b8p: native 플레이어용)."
+        }
+      ]
+    },
+    "media": [
+      "video-player",
+      "video-skin",
+      "video"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋이 다른 플레이어용이라 기본 설정으로 재생합니다(p-i22c0n5b8p: native 플레이어용)."
+    ],
+    "otherConsole": []
+  },
+  "example-player-accent": {
+    "url": "/examples/player.html?video=a1-qa-video-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=accent",
+    "routed": [],
+    "ready": [
+      {
+        "at": 84,
+        "target": "mount",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video"
+    ],
+    "pageText": [
+      "프리셋을 적용하지 못해 기본값으로 재생합니다(accent). 프리셋이 다른 플레이어용입니다(accent: videojs 플레이어용).",
+      "영상 a1-qa-video-1 · MP4 · 프리셋 default(기본값)"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋이 다른 플레이어용이라 기본 설정으로 재생합니다(accent: videojs 플레이어용)."
+    ],
+    "otherConsole": []
+  },
+  "example-player-site-videojs-preset": {
+    "url": "/examples/player.html?video=a1-qa-video-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-lbelw4d2xx",
+    "routed": [],
+    "ready": [
+      {
+        "at": 35,
+        "target": "mount",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video"
+    ],
+    "pageText": [
+      "프리셋을 적용하지 못해 기본값으로 재생합니다(p-lbelw4d2xx). 프리셋이 다른 플레이어용입니다(p-lbelw4d2xx: videojs 플레이어용).",
+      "영상 a1-qa-video-1 · MP4 · 프리셋 default(기본값)"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋이 다른 플레이어용이라 기본 설정으로 재생합니다(p-lbelw4d2xx: videojs 플레이어용)."
+    ],
+    "otherConsole": []
+  },
+  "example-videojs-missing": {
+    "url": "/examples/videojs.html?video=a1-qa-video-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-zzzzzzzzzz",
+    "routed": [],
+    "ready": [
+      {
+        "at": 224,
+        "target": "mount",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video-player",
+      "video-skin",
+      "video"
+    ],
+    "pageText": [
+      "프리셋을 적용하지 못해 기본값으로 재생합니다(p-zzzzzzzzzz). 프리셋을 찾지 못했습니다(p-zzzzzzzzzz).",
+      "영상 a1-qa-video-1 · MP4 · 프리셋 default(기본값)"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋을 찾지 못했습니다(p-zzzzzzzzzz). 기본 설정으로 재생합니다."
+    ],
+    "otherConsole": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  "example-player-missing": {
+    "url": "/examples/player.html?video=a1-qa-video-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-zzzzzzzzzz",
+    "routed": [],
+    "ready": [
+      {
+        "at": 79,
+        "target": "mount",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video"
+    ],
+    "pageText": [
+      "프리셋을 적용하지 못해 기본값으로 재생합니다(p-zzzzzzzzzz). 프리셋을 찾지 못했습니다(p-zzzzzzzzzz).",
+      "영상 a1-qa-video-1 · MP4 · 프리셋 default(기본값)"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋을 찾지 못했습니다(p-zzzzzzzzzz). 기본 설정으로 재생합니다."
+    ],
+    "otherConsole": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  "example-videojs-500": {
+    "url": "/examples/videojs.html?video=a1-qa-video-1&media=mp4&content=%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+    "routed": [
+      "/api/index.php?action=player-preset"
+    ],
+    "ready": [
+      {
+        "at": 215,
+        "target": "mount",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "soladErrors": [],
+    "mount": {
+      "result": null,
+      "errors": null
+    },
+    "media": [
+      "video-player",
+      "video-skin",
+      "video"
+    ],
+    "pageText": [
+      "프리셋을 적용하지 못해 기본값으로 재생합니다(사이트 적용). 프리셋을 받지 못했습니다(HTTP 500).",
+      "영상 a1-qa-video-1 · MP4 · 프리셋 default(기본값)"
+    ],
+    "soladWarnings": [
+      "warning: [solad] 프리셋을 받지 못했습니다(HTTP 500). 기본 설정으로 재생합니다."
+    ],
+    "otherConsole": [
+      "error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    ]
+  }
+}

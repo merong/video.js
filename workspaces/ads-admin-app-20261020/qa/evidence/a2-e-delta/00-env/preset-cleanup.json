@@ -1,0 +1,38 @@
+{
+  "id": "p-a7p2mbpngr",
+  "before": {
+    "revision": 27,
+    "presets": [
+      "default 기본",
+      "flat 플랫",
+      "rounded 둥근 테두리",
+      "accent 강조색",
+      "p-i0aecb28w3 QA 강조색 복제",
+      "p-lc3i8eidb4 QA 자동재생",
+      "p-pchm59hhyv QA 기본 video",
+      "p-wgqz3x31a5 QA 테두리 8자리",
+      "p-46sx1n57gw QA 테두리 투명색",
+      "p-a7p2mbpngr QA 언어 ko"
+    ]
+  },
+  "delete": {
+    "status": 200,
+    "ok": true,
+    "code": null,
+    "message": null
+  },
+  "after": {
+    "revision": 28,
+    "presets": [
+      "default 기본",
+      "flat 플랫",
+      "rounded 둥근 테두리",
+      "accent 강조색",
+      "p-i0aecb28w3 QA 강조색 복제",
+      "p-lc3i8eidb4 QA 자동재생",
+      "p-pchm59hhyv QA 기본 video",
+      "p-wgqz3x31a5 QA 테두리 8자리",
+      "p-46sx1n57gw QA 테두리 투명색"
+    ]
+  }
+}

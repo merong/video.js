@@ -1,0 +1,16 @@
+{
+  "statuses": [
+    "200 GET action=player-preset",
+    "401 GET action=player-presets",
+    "200 GET action=player-preset&id=p-i0aecb28w3"
+  ],
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized) @/api/index.php?action=player-presets",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found) @/favicon.ico"
+  ],
+  "facts": {
+    "skin": "solad-video-skin",
+    "presetNote": null,
+    "presetOptions": 5
+  }
+}

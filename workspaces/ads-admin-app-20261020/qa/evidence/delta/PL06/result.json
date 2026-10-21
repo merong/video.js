@@ -1,0 +1,246 @@
+{
+  "steps": [
+    {
+      "label": "(1) 기본 복사본 삭제 → Esc",
+      "dialog": {
+        "count": 1,
+        "tag": "DIALOG",
+        "modal": "true",
+        "name": "\"기본 복사본\" 프리셋을 삭제할까요?",
+        "text": "\"기본 복사본\" 프리셋을 삭제할까요?\n\npreset=p-z3h9nv39q2로 불러오는 페이지는 이 프리셋을 찾지 못해 패키지 기본값으로 재생돼요. 삭제는 되돌릴 수 없어요.\n\n취소\n삭제",
+        "buttons": [
+          "",
+          "취소",
+          "삭제"
+        ],
+        "focusInside": true,
+        "active": {
+          "tag": "BUTTON",
+          "id": null,
+          "text": "닫기",
+          "role": null
+        }
+      },
+      "dialogAfter": 0,
+      "focusAfter": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "기본 복사본 삭제",
+        "role": null
+      },
+      "rows": [
+        "기본",
+        "QA Video.js 중립 v2",
+        "기본 복사본",
+        "QA Video.js 중립 v2 복사본"
+      ],
+      "api": []
+    },
+    {
+      "label": "(2) 기본 복사본 삭제 → 취소",
+      "dialog": {
+        "count": 1,
+        "tag": "DIALOG",
+        "modal": "true",
+        "name": "\"기본 복사본\" 프리셋을 삭제할까요?",
+        "text": "\"기본 복사본\" 프리셋을 삭제할까요?\n\npreset=p-z3h9nv39q2로 불러오는 페이지는 이 프리셋을 찾지 못해 패키지 기본값으로 재생돼요. 삭제는 되돌릴 수 없어요.\n\n취소\n삭제",
+        "buttons": [
+          "",
+          "취소",
+          "삭제"
+        ],
+        "focusInside": true,
+        "active": {
+          "tag": "BUTTON",
+          "id": null,
+          "text": "닫기",
+          "role": null
+        }
+      },
+      "dialogAfter": 0,
+      "focusAfter": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "기본 복사본 삭제",
+        "role": null
+      },
+      "rows": [
+        "기본",
+        "QA Video.js 중립 v2",
+        "기본 복사본",
+        "QA Video.js 중립 v2 복사본"
+      ],
+      "api": []
+    },
+    {
+      "label": "(3) 기본 복사본 삭제 → 확인",
+      "dialog": {
+        "count": 1,
+        "tag": "DIALOG",
+        "modal": "true",
+        "name": "\"기본 복사본\" 프리셋을 삭제할까요?",
+        "text": "\"기본 복사본\" 프리셋을 삭제할까요?\n\npreset=p-z3h9nv39q2로 불러오는 페이지는 이 프리셋을 찾지 못해 패키지 기본값으로 재생돼요. 삭제는 되돌릴 수 없어요.\n\n취소\n삭제",
+        "buttons": [
+          "",
+          "취소",
+          "삭제"
+        ],
+        "focusInside": true,
+        "active": {
+          "tag": "BUTTON",
+          "id": null,
+          "text": "닫기",
+          "role": null
+        }
+      },
+      "confirmLabel": "삭제",
+      "dialogAfter": 0,
+      "focusAfter": {
+        "tag": "H2",
+        "id": "aa-title-players-page",
+        "text": "프리셋 목록",
+        "role": null
+      },
+      "live": [
+        "\"기본 복사본\" 프리셋을 삭제했어요."
+      ],
+      "rows": [
+        "기본",
+        "QA Video.js 중립 v2",
+        "QA Video.js 중립 v2 복사본"
+      ],
+      "rowsAfterReload": [
+        "기본",
+        "QA Video.js 중립 v2",
+        "QA Video.js 중립 v2 복사본"
+      ],
+      "api": [
+        "POST player-preset-delete 200",
+        "GET bootstrap 200",
+        "GET player-presets 200"
+      ]
+    },
+    {
+      "label": "(4) P-A 복제본 기본 지정 → 삭제 → 새로고침",
+      "defaultBefore": "p-fpp9gh1ed8",
+      "dialogText": {
+        "count": 1,
+        "tag": "DIALOG",
+        "modal": "true",
+        "name": "\"QA Video.js 중립 v2 복사본\" 프리셋을 삭제할까요?",
+        "text": "\"QA Video.js 중립 v2 복사본\" 프리셋을 삭제할까요?\n\npreset=p-fpp9gh1ed8로 불러오는 페이지는 이 프리셋을 찾지 못해 패키지 기본값으로 재생돼요. 기본 프리셋이라 지우면 내장 \"기본\"이 기본 프리셋이 돼요. 삭제는 되돌릴 수 없어요.\n\n취소\n삭제",
+        "buttons": [
+          "",
+          "취소",
+          "삭제"
+        ],
+        "focusInside": true,
+        "active": {
+          "tag": "BUTTON",
+          "id": null,
+          "text": "닫기",
+          "role": null
+        }
+      },
+      "live": [
+        "\"QA Video.js 중립 v2 복사본\" 프리셋을 삭제했어요."
+      ],
+      "rowsAfterReload": [
+        [
+          "기본",
+          "Video.js",
+          "기본",
+          "기본 프리셋",
+          "패키지 기본값"
+        ],
+        [
+          "QA Video.js 중립 v2",
+          "Video.js",
+          "뉴트럴",
+          "—",
+          "2026. 10. 21. 오전 1:18"
+        ]
+      ],
+      "defaultAfter": "default",
+      "api": [
+        "POST player-preset-default 200",
+        "POST player-preset-delete 200",
+        "GET bootstrap 200",
+        "GET player-presets 200"
+      ]
+    },
+    {
+      "label": "(5) P-A 다시 기본 지정",
+      "rows": [
+        [
+          "기본",
+          "Video.js",
+          "기본",
+          "—",
+          "패키지 기본값"
+        ],
+        [
+          "QA Video.js 중립 v2",
+          "Video.js",
+          "뉴트럴",
+          "기본 프리셋",
+          "2026. 10. 21. 오전 1:18"
+        ]
+      ],
+      "defaultAfter": "p-vym1rjw052",
+      "api": [
+        "POST player-preset-default 200",
+        "GET bootstrap 200",
+        "GET player-presets 200"
+      ]
+    }
+  ],
+  "bodies": [
+    {
+      "action": "player-preset-delete",
+      "status": 200,
+      "sent": {
+        "id": "p-z3h9nv39q2",
+        "revision": 5
+      },
+      "defaultPresetId": "p-vym1rjw052",
+      "revision": 6
+    },
+    {
+      "action": "player-preset-default",
+      "status": 200,
+      "sent": {
+        "id": "p-fpp9gh1ed8",
+        "revision": 6
+      },
+      "defaultPresetId": "p-fpp9gh1ed8",
+      "revision": 7
+    },
+    {
+      "action": "player-preset-delete",
+      "status": 200,
+      "sent": {
+        "id": "p-fpp9gh1ed8",
+        "revision": 7
+      },
+      "defaultPresetId": "default",
+      "revision": 8
+    },
+    {
+      "action": "player-preset-default",
+      "status": 200,
+      "sent": {
+        "id": "p-vym1rjw052",
+        "revision": 8
+      },
+      "defaultPresetId": "p-vym1rjw052",
+      "revision": 9
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

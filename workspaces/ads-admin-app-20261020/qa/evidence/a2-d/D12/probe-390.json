@@ -1,0 +1,56 @@
+{
+  "390": [
+    [
+      "DIV.sa-stage d=grid v=visible 0x0",
+      "DIV.sa-ppv[hidden] d=none v=visible 0x0",
+      "ASIDE.sa-card sa-ppv aa-editor-previ d=grid v=visible 358x68",
+      "FORM.aa-editor is-narrow d=grid v=visible 358x3141",
+      "SECTION.aa-stack d=grid v=visible 358x3315",
+      "MAIN.sa-main aa-main d=grid v=visible 390x3347",
+      "DIV.aa-workspace d=flex v=visible 390x3465",
+      "DIV.aa-app d=flex v=visible 390x3465"
+    ]
+  ],
+  "768": [
+    [
+      "DIV.sa-stage d=grid v=visible 0x0",
+      "DIV.sa-ppv[hidden] d=none v=visible 0x0",
+      "ASIDE.sa-card sa-ppv aa-editor-previ d=grid v=visible 736x68",
+      "FORM.aa-editor is-medium d=grid v=visible 736x2145",
+      "SECTION.aa-stack d=grid v=visible 736x2301",
+      "MAIN.sa-main aa-main d=grid v=visible 768x2333",
+      "DIV.aa-workspace d=flex v=visible 768x2424",
+      "DIV.aa-app d=flex v=visible 768x2424"
+    ]
+  ],
+  "390-headings": [
+    "프리셋 수정",
+    "기본",
+    "테마",
+    "재생 동작",
+    "언어",
+    "광고 화면",
+    "플레이어 미리보기"
+  ],
+  "390-overflow": {
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "horizontalOverflow": false
+  },
+  "390-toggles": [],
+  "768-headings": [
+    "프리셋 수정",
+    "기본",
+    "테마",
+    "재생 동작",
+    "언어",
+    "광고 화면",
+    "플레이어 미리보기"
+  ],
+  "768-overflow": {
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "horizontalOverflow": false
+  },
+  "768-toggles": []
+}

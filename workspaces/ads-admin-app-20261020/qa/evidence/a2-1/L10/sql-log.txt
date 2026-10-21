@@ -1,0 +1,7 @@
+## SELECT before (2026-10-21 15:12:03)
+player_presets|9620|2|14|p-4yy9hmbhus|8
+## SQL shape: UPDATE ads_meta SET value='<v1 JSON from qa/evidence/delta2/99-end/player-presets.json, compact, sha256 152c566c1faaad07…>' WHERE name='player_presets';
+changes|1
+## SELECT after (2026-10-21 15:12:03)
+player_presets|1028||18|p-qrgzuc8ste|2
+value sha256: 152c566c1faaad07

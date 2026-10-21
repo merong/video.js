@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "text": "속도 1×",
+      "visible": true,
+      "box": {
+        "x": 171,
+        "y": 404,
+        "width": 168,
+        "height": 31.5
+      },
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "topElementAtCenter": "media-menu-item.media-menu-trigger-item «속도 1×»"
+    },
+    {
+      "text": "캡션 없음",
+      "visible": true,
+      "box": {
+        "x": 171,
+        "y": 437.5,
+        "width": 168,
+        "height": 31.5
+      },
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "0.5"
+      },
+      "topElementAtCenter": "media-time-slider-chapters.media-time-slider-chapters «»"
+    }
+  ],
+  "menuBox": {
+    "x": 171,
+    "y": 404,
+    "width": 168,
+    "height": 65
+  },
+  "playerBox": {
+    "x": 35,
+    "y": 318,
+    "width": 320,
+    "height": 180
+  }
+}

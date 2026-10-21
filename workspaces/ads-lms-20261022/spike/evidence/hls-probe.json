@@ -1,0 +1,170 @@
+[
+ {
+  "engine": "chromium",
+  "tag": "hls-video",
+  "src": "/demo-media/content-fmp4.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "chromium",
+  "tag": "hls-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-fmp4.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "chromium",
+  "tag": "hls-video",
+  "src": "/demo-media/content-master.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "chromium",
+  "tag": "hls-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "chromium",
+  "tag": "hlsjs-video",
+  "src": "/demo-media/content-fmp4.m3u8",
+  "duration": 35.999999,
+  "readyState": 4
+ },
+ {
+  "engine": "chromium",
+  "tag": "hlsjs-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-fmp4.m3u8",
+  "duration": 35.999999,
+  "readyState": 4
+ },
+ {
+  "engine": "chromium",
+  "tag": "hlsjs-video",
+  "src": "/demo-media/content-master.m3u8",
+  "duration": 35.999999,
+  "readyState": 4
+ },
+ {
+  "engine": "chromium",
+  "tag": "hlsjs-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-master.m3u8",
+  "duration": 35.999999,
+  "readyState": 4
+ },
+ {
+  "engine": "webkit",
+  "tag": "hls-video",
+  "src": "/demo-media/content-fmp4.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "webkit",
+  "tag": "hls-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-fmp4.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "webkit",
+  "tag": "hls-video",
+  "src": "/demo-media/content-master.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "webkit",
+  "tag": "hls-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "webkit",
+  "tag": "hlsjs-video",
+  "src": "/demo-media/content-fmp4.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "webkit",
+  "tag": "hlsjs-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-fmp4.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "webkit",
+  "tag": "hlsjs-video",
+  "src": "/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "webkit",
+  "tag": "hlsjs-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "firefox",
+  "tag": "hls-video",
+  "src": "/demo-media/content-fmp4.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "firefox",
+  "tag": "hls-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-fmp4.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "firefox",
+  "tag": "hls-video",
+  "src": "/demo-media/content-master.m3u8",
+  "duration": null,
+  "readyState": 0
+ },
+ {
+  "engine": "firefox",
+  "tag": "hls-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "firefox",
+  "tag": "hlsjs-video",
+  "src": "/demo-media/content-fmp4.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "firefox",
+  "tag": "hlsjs-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-fmp4.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "firefox",
+  "tag": "hlsjs-video",
+  "src": "/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ },
+ {
+  "engine": "firefox",
+  "tag": "hlsjs-video",
+  "src": "http://127.0.0.1:18791/demo-media/content-master.m3u8",
+  "duration": 36,
+  "readyState": 4
+ }
+]

@@ -1,0 +1,12 @@
+{
+  "track": {
+    "mode": "showing",
+    "cue": "자막 버튼이나 C 키로 켜고 끌 수 있어요.",
+    "time": 3.501748
+  },
+  "button": "자막 끄기",
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found) @/favicon.ico",
+    "Failed to load resource: the server responded with a status of 404 (Not Found) @/favicon.ico"
+  ]
+}

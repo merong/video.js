@@ -1,0 +1,21 @@
+## sample-logo.svg
+    4925 sample-logo.svg
+0
+<!--
+  Sample player logo (ads-a2e-spec 5.5): a made-up store, not a real brand. "SAMPLE LOGO" marks it as test art.
+  Built by design/assets/sample-logo/outline.py; letters are outline paths, so no font is needed.
+  Colors are design/tokens.json light values, raw because an image cannot read CSS variables:
+  on-dark (letters), dark (outline that keeps the letters visible on light scenes), accent 
+## sample-logo.png
+   32890 sample-logo.png
+sample-logo.png: PNG image data, 512 x 512, 8-bit/color RGBA, non-interlaced
+ihdr 512 512 bitdepth 8 colortype 6
+alpha levels 61 min 0 max 255 partial 59
+text elements: 0
+path elements: 3
+fills:    1 fill="#18181A";   1 fill="#CDF352";   2 fill="#F4F4F5";   1 stroke="#18181A";
+has SAMPLE comment/paths: 1
+design source:
+outline.py
+README.md
+sample-logo-emblem.svg

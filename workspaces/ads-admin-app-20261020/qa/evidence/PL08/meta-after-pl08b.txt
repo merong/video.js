@@ -1,0 +1,4 @@
+2026-10-20 22:23:19 KST
+# D13 sqlite3 -readonly ads_meta player_presets (summary fields only) after pl08b
+revision 11 default p-wkepup6b7d
+p-wkepup6b7d QA Video.js 중립 v2 borderRadius 12 skipRadius None

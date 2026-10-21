@@ -1,0 +1,196 @@
+{
+  "HL03": [
+    {
+      "step": "(1) new tab #/help/mid-roll",
+      "hash": "#/help/mid-roll",
+      "activeId": "sa-help-mid-roll",
+      "activeTag": "H4",
+      "activeText": "미드롤",
+      "activeRect": {
+        "top": 73,
+        "bottom": 93
+      },
+      "inViewport": true,
+      "scrollY": 695,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": []
+    },
+    {
+      "step": "(1) reload",
+      "hash": "#/help/mid-roll",
+      "activeId": "sa-help-mid-roll",
+      "activeTag": "H4",
+      "activeText": "미드롤",
+      "activeRect": {
+        "top": 72,
+        "bottom": 92
+      },
+      "inViewport": true,
+      "scrollY": 696,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": []
+    },
+    {
+      "step": "(2) filter 통계",
+      "hash": "#/help/mid-roll",
+      "activeId": null,
+      "activeTag": "BUTTON",
+      "activeText": "통계5",
+      "activeRect": {
+        "top": 0,
+        "bottom": 30
+      },
+      "inViewport": true,
+      "scrollY": 676,
+      "pressedFilter": [
+        "통계5"
+      ],
+      "highlighted": [],
+      "visibleArticles": [
+        "시작",
+        "완료와 완료율",
+        "클릭",
+        "클릭률",
+        "조회 조건과 CSV"
+      ]
+    },
+    {
+      "step": "(2) hash → pre-roll",
+      "hash": "#/help/pre-roll",
+      "activeId": "sa-help-pre-roll",
+      "activeTag": "H4",
+      "activeText": "프리롤",
+      "activeRect": {
+        "top": 72,
+        "bottom": 92
+      },
+      "inViewport": true,
+      "scrollY": 696,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": []
+    },
+    {
+      "step": "(3) hash → stats-csv",
+      "hash": "#/help/stats-csv",
+      "activeId": "sa-help-stats-csv",
+      "activeTag": "H4",
+      "activeText": "조회 조건과 CSV",
+      "activeRect": {
+        "top": 72,
+        "bottom": 92
+      },
+      "inViewport": true,
+      "scrollY": 7357,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": []
+    }
+  ],
+  "HL04": [
+    {
+      "key": "not-a-term",
+      "hash": "#/help",
+      "activeId": "aa-title-help",
+      "activeTag": "H1",
+      "activeText": "도움말",
+      "activeRect": {
+        "top": 80,
+        "bottom": 110
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": [],
+      "h1": [
+        "도움말"
+      ],
+      "mainTextStart": "도움말\n\n메뉴마다 하는 일과 화면에 나오는 광고 용어를 설명해요.\n\n기능 안내\n기본 작업 순서\n소재 등록\n지면 편성\n미리보기\n초안 저장\n게시\n재생 테스트\n통계\n미리보기와 재생 테스트 · 미리보기는 게시 전에 편집 중",
+      "imgFromHash": 0,
+      "xssCalls": 0,
+      "houseAdHeading": 0
+    },
+    {
+      "key": "house-ad",
+      "hash": "#/help/house-ad",
+      "activeId": "aa-title-help",
+      "activeTag": "H1",
+      "activeText": "도움말",
+      "activeRect": {
+        "top": 80,
+        "bottom": 110
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": [],
+      "h1": [
+        "도움말"
+      ],
+      "mainTextStart": "도움말\n\n메뉴마다 하는 일과 화면에 나오는 광고 용어를 설명해요.\n\n기능 안내\n기본 작업 순서\n소재 등록\n지면 편성\n미리보기\n초안 저장\n게시\n재생 테스트\n통계\n미리보기와 재생 테스트 · 미리보기는 게시 전에 편집 중",
+      "imgFromHash": 0,
+      "xssCalls": 0,
+      "houseAdHeading": 0
+    },
+    {
+      "key": "empty",
+      "hash": "#/help",
+      "activeId": "aa-title-help",
+      "activeTag": "H1",
+      "activeText": "도움말",
+      "activeRect": {
+        "top": 80,
+        "bottom": 110
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": [],
+      "h1": [
+        "도움말"
+      ],
+      "mainTextStart": "도움말\n\n메뉴마다 하는 일과 화면에 나오는 광고 용어를 설명해요.\n\n기능 안내\n기본 작업 순서\n소재 등록\n지면 편성\n미리보기\n초안 저장\n게시\n재생 테스트\n통계\n미리보기와 재생 테스트 · 미리보기는 게시 전에 편집 중",
+      "imgFromHash": 0,
+      "xssCalls": 0,
+      "houseAdHeading": 0
+    },
+    {
+      "key": "xss",
+      "hash": "#/help",
+      "activeId": "aa-title-help",
+      "activeTag": "H1",
+      "activeText": "도움말",
+      "activeRect": {
+        "top": 80,
+        "bottom": 110
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "pressedFilter": [
+        "전체49"
+      ],
+      "highlighted": [],
+      "h1": [
+        "도움말"
+      ],
+      "mainTextStart": "도움말\n\n메뉴마다 하는 일과 화면에 나오는 광고 용어를 설명해요.\n\n기능 안내\n기본 작업 순서\n소재 등록\n지면 편성\n미리보기\n초안 저장\n게시\n재생 테스트\n통계\n미리보기와 재생 테스트 · 미리보기는 게시 전에 편집 중",
+      "imgFromHash": 0,
+      "xssCalls": 0,
+      "houseAdHeading": 0
+    }
+  ],
+  "HL03console": [],
+  "HL04console": []
+}

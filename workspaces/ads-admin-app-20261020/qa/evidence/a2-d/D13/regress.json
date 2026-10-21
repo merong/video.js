@@ -1,0 +1,597 @@
+{
+  "L01": {
+    "ready": [
+      {
+        "at": 223,
+        "target": "a1-qa-video-1",
+        "presetId": "p-i0aecb28w3",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0"
+    ],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": []
+  },
+  "L02": {
+    "first": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792577492674,
+        "ifNoneMatch": null,
+        "cacheControlSent": null,
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false,
+        "wireStatus": 200,
+        "etag": "\"b66af8a6424d249f16db856d4c88184c\"",
+        "cacheControl": "no-cache"
+      }
+    ],
+    "reloads": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792577493026,
+        "ifNoneMatch": "\"b66af8a6424d249f16db856d4c88184c\"",
+        "cacheControlSent": null,
+        "wireStatus": 304,
+        "etag": "\"b66af8a6424d249f16db856d4c88184c\"",
+        "cacheControl": "no-cache",
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      },
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792577494150,
+        "ifNoneMatch": "\"b66af8a6424d249f16db856d4c88184c\"",
+        "cacheControlSent": null,
+        "wireStatus": 304,
+        "etag": "\"b66af8a6424d249f16db856d4c88184c\"",
+        "cacheControl": "no-cache",
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ],
+    "fill": "rgb(37, 99, 235)"
+  },
+  "L03-500": {
+    "ready": [
+      {
+        "at": 218,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0"
+    ],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": [
+      "warning: [solad] 프리셋을 받지 못했습니다(HTTP 500). 기본 설정으로 재생합니다."
+    ]
+  },
+  "L03-delay": {
+    "ready": [
+      {
+        "at": 3284,
+        "target": "a1-qa-video-1",
+        "presetId": "default",
+        "fallback": true,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0"
+    ],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": [
+      "warning: [solad] 프리셋 응답이 3초 안에 오지 않았습니다. 기본 설정으로 재생합니다."
+    ]
+  },
+  "L04": {
+    "ready": [
+      {
+        "at": 406,
+        "target": "a1-qa-video-1",
+        "presetId": "p-lc3i8eidb4",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0.001136"
+    ],
+    "adMuted": [
+      "solad-media-1:true"
+    ],
+    "solad": []
+  },
+  "L05-off": {
+    "ready": [
+      {
+        "at": 217,
+        "target": "a1-qa-video-1",
+        "presetId": "p-lc3i8eidb4",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "adsWithoutClick": [],
+    "solad": []
+  },
+  "L05-muted": {
+    "ready": [
+      {
+        "at": 229,
+        "target": "a1-qa-video-1",
+        "presetId": "p-lc3i8eidb4",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0.000197"
+    ],
+    "adMuted": [
+      "solad-media-1:true"
+    ],
+    "solad": [
+      "warning: [solad] 자동재생은 음소거로 시작해야 해서 muted를 켭니다."
+    ]
+  },
+  "L05-overrides": {
+    "ready": [
+      {
+        "at": 408,
+        "target": "m",
+        "presetId": "p-i0aecb28w3",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "preload": "auto",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "m:start@0.001555"
+    ],
+    "adMuted": [
+      "solad-media-1:true"
+    ],
+    "after": {
+      "errors": [],
+      "handle": {
+        "presetId": "p-i0aecb28w3",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      },
+      "threw": null
+    },
+    "solad": []
+  },
+  "L06-page-en": {
+    "ready": [
+      {
+        "at": 362,
+        "target": "a1-qa-video-1",
+        "presetId": "p-i0aecb28w3",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0"
+    ],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": []
+  },
+  "L06-native": {
+    "ready": [
+      {
+        "at": 17,
+        "target": "a1-qa-video-1",
+        "presetId": "p-pchm59hhyv",
+        "fallback": false,
+        "player": "VIDEO"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "DIV > VIDEO",
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [
+      "a1-qa-video-1:start@0"
+    ],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": []
+  },
+  "L07": {
+    "ready": [],
+    "errors": [
+      {
+        "at": 234,
+        "target": "no-id",
+        "code": "missing_video_id",
+        "message": "data-video-id가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "at": 234,
+        "target": "no-src",
+        "code": "missing_src",
+        "message": "data-src가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "at": 234,
+        "target": "js-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "at": 234,
+        "target": "relative-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "at": 234,
+        "target": "ftp-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      }
+    ],
+    "players": [
+      {
+        "tree": null,
+        "media": null
+      },
+      {
+        "tree": null,
+        "media": null
+      },
+      {
+        "tree": null,
+        "media": null
+      },
+      {
+        "tree": null,
+        "media": null
+      },
+      {
+        "tree": null,
+        "media": null
+      },
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "after": [
+      "no-id:children=0:h=0",
+      "no-src:children=0:h=0",
+      "js-src:children=0:h=0",
+      "relative-src:children=0:h=0",
+      "ftp-src:children=0:h=0",
+      "ok:children=1:h=711"
+    ],
+    "solad": [
+      "warning: [solad] data-video-id가 없어 플레이어를 만들지 않았습니다.",
+      "warning: [solad] data-src가 없어 플레이어를 만들지 않았습니다.",
+      "warning: [solad] data-src는 /경로 또는 http(s):// 주소여야 합니다.",
+      "warning: [solad] data-src는 /경로 또는 http(s):// 주소여야 합니다.",
+      "warning: [solad] data-src는 /경로 또는 http(s):// 주소여야 합니다."
+    ]
+  },
+  "L08": {
+    "ready": [
+      {
+        "at": 589,
+        "target": "first",
+        "presetId": "p-i0aecb28w3",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": null,
+        "poster": null,
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      },
+      {
+        "tree": null,
+        "media": null
+      }
+    ],
+    "ads": [],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "after": {
+      "manualBefore": 0,
+      "afterTwoMounts": 1,
+      "afterDestroy": 0,
+      "destroyAgain": "ok",
+      "first": 1,
+      "aDetached": true
+    },
+    "solad": []
+  },
+  "L09-site": {
+    "ready": [
+      {
+        "at": 209,
+        "target": "a1-qa-video-1",
+        "presetId": "p-i0aecb28w3",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "lang": "ko",
+        "title": "QA 제목 표시",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": []
+  },
+  "L09-native": {
+    "ready": [
+      {
+        "at": 38,
+        "target": "a1-qa-video-1",
+        "presetId": "p-pchm59hhyv",
+        "fallback": false,
+        "player": "VIDEO"
+      }
+    ],
+    "errors": [],
+    "players": [
+      {
+        "tree": "DIV > VIDEO",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "media": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata",
+          "paused": true
+        }
+      }
+    ],
+    "ads": [],
+    "adMuted": [
+      "solad-media-1:false"
+    ],
+    "solad": []
+  },
+  "L11-legacy-videojs": {
+    "ready": [],
+    "errors": [],
+    "players": [],
+    "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-solad-player]').first()\u001b[22m\n"
+  },
+  "L11-legacy-native": {
+    "ready": [],
+    "errors": [],
+    "players": [],
+    "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-solad-player]').first()\u001b[22m\n"
+  },
+  "L11-pl16-native": {
+    "ready": [],
+    "errors": [],
+    "players": [],
+    "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-solad-player]').first()\u001b[22m\n"
+  }
+}

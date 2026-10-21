@@ -1,0 +1,88 @@
+- button "본문으로 이동"
+- banner:
+  - text: 솔애드
+  - emphasis: 관리자
+  - navigation "주 메뉴":
+    - link "대시보드":
+      - /url: "#/dashboard"
+    - link "캠페인":
+      - /url: "#/campaigns"
+    - link "소재":
+      - /url: "#/creatives"
+    - link "지면 편성":
+      - /url: "#/schedule"
+    - link "플레이어":
+      - /url: "#/players"
+    - link "승인함":
+      - /url: "#/approvals"
+    - link "리포트":
+      - /url: "#/reports"
+    - link "설정":
+      - /url: "#/settings"
+  - link "도움말":
+    - /url: "#/help"
+  - link "집행 만들기":
+    - /url: "#/new-line-item"
+  - img "a1-qa-admin · 관리자": a
+  - button "로그아웃"
+- main "소재":
+  - region "소재":
+    - heading "소재" [level=1]
+    - paragraph: 파일을 바꾸면 새 버전이 생겨요. 기존 게시본과 기록은 그대로 유지돼요.
+    - button "새 소재 등록"
+    - status
+    - heading "등록한 소재 0개" [level=2]
+    - button "새로고침"
+    - region "등록한 소재 목록":
+      - table "등록한 소재 목록":
+        - caption: 등록한 소재 목록
+        - rowgroup:
+          - row "소재 형식 버전 상태 보관 도움말 동작":
+            - columnheader "소재"
+            - columnheader "형식"
+            - columnheader "버전"
+            - columnheader "상태 보관 도움말":
+              - text: 상태
+              - link "보관 도움말":
+                - /url: "#/help/archive"
+                - text: "?"
+            - columnheader "동작"
+        - rowgroup:
+          - row "아직 등록한 소재가 없어요.URL 또는 파일로 첫 소재를 등록해 주세요.":
+            - cell "아직 등록한 소재가 없어요.URL 또는 파일로 첫 소재를 등록해 주세요."
+    - form "새 소재 등록":
+      - heading "새 소재 등록" [level=2]
+      - paragraph:
+        - text: 영상과 이미지 · GIF를 등록할 수 있어요.
+        - link "소재 도움말":
+          - /url: "#/help/creative"
+          - text: "?"
+      - text: 소재 이름
+      - textbox "소재 이름"
+      - text: 등록 방식
+      - combobox "등록 방식":
+        - option "외부 URL" [selected]
+        - option "파일 업로드"
+      - link "등록 방식 도움말":
+        - /url: "#/help/creative-source"
+        - text: "?"
+      - text: 소재 URL
+      - textbox "소재 URL":
+        - /placeholder: https://… 또는 /media/…
+      - text: 파일 형식
+      - combobox "파일 형식":
+        - option "MP4 영상" [selected]
+        - option "WebM 영상"
+        - option "JPEG 이미지"
+        - option "PNG 이미지"
+        - option "WebP 이미지"
+        - option "GIF 이미지"
+      - text: 대체텍스트
+      - textbox "대체텍스트"
+      - text: 이미지 광고의 내용을 짧게 설명해 주세요.
+      - link "대체텍스트 도움말":
+        - /url: "#/help/alt-text"
+        - text: "?"
+      - status
+      - button "입력 소재 미리보기"
+      - button "소재 저장"

@@ -1,0 +1,2200 @@
+{
+  "steps": [
+    {
+      "label": "start",
+      "query": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "metadata",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    },
+    {
+      "label": "autoplay-on",
+      "query": "?autoplay=true",
+      "reset": {
+        "text": "프리셋과 다른 값 1개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": true,
+          "describedBy": [
+            "자동재생을 켜면 음소거로 시작해요. 브라우저가 소리 나는 자동재생을 막기 때문이에요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "metadata",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-autoplay=\"true\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-2",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "일시중지",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 9초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:09",
+          "설정",
+          "광고 1/2",
+          "0:04 / 0:06"
+        ]
+      }
+    },
+    {
+      "label": "autoplay-off",
+      "query": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "metadata",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-3",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "재생",
+          "음소거",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    },
+    {
+      "label": "muted-on",
+      "query": "?muted=true",
+      "reset": {
+        "text": "프리셋과 다른 값 1개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "metadata",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": true,
+          "loop": false,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-4",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "재생",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    },
+    {
+      "label": "loop-on",
+      "query": "?muted=true&loop=true",
+      "reset": {
+        "text": "프리셋과 다른 값 2개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "metadata",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-5",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "재생",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    },
+    {
+      "label": "preload-none",
+      "query": "?muted=true&loop=true&preload=none",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "none",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"none\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "none",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-6",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "재생",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "미디어를 불러오지 못했습니다. 재생 시간을 확인할 수 없습니다.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "0:00",
+          "설정"
+        ]
+      }
+    },
+    {
+      "label": "preload-auto",
+      "query": "?muted=true&loop=true&preload=auto",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ko",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-7",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "닫기",
+          "재생",
+          "음소거 해제",
+          "볼륨",
+          "탐색",
+          "재생 시간 표시, 10초 남음.",
+          "자막 켜기",
+          "설정",
+          "전송 시작",
+          "AirPlay 시작",
+          "화면 속 화면",
+          "전체 화면"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "설정"
+        ]
+      }
+    },
+    {
+      "label": "lang-ja",
+      "query": "?muted=true&loop=true&preload=auto&language=ja",
+      "reset": {
+        "text": "프리셋과 다른 값 4개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "ja",
+      "pageLang": "ko",
+      "pageLangShown": false,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:31",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"\n     data-lang=\"ja\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-8",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "lang-ja-ad",
+      "query": "?muted=true&loop=true&preload=auto&language=ja",
+      "reset": {
+        "text": "프리셋과 다른 값 4개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "ja",
+      "pageLang": "ko",
+      "pageLangShown": false,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"\n     data-lang=\"ja\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-8",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "一時停止",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 9 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:09",
+          "設定",
+          "광고 1/2",
+          "0:04 / 0:06"
+        ]
+      }
+    },
+    {
+      "label": "lang-empty-page-en",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=en",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "en",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "en",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-10",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "OK",
+          "Play",
+          "Unmute",
+          "Volume",
+          "Seek",
+          "Show duration, 10 seconds remaining.",
+          "Enable captions",
+          "Settings",
+          "Start casting",
+          "Start AirPlay",
+          "Enter picture-in-picture",
+          "Enter fullscreen"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "Settings"
+        ]
+      }
+    },
+    {
+      "label": "page-fr",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=fr",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "fr",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=en] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "en",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-11",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "OK",
+          "Play",
+          "Unmute",
+          "Volume",
+          "Seek",
+          "Show duration, 10 seconds remaining.",
+          "Enable captions",
+          "Settings",
+          "Start casting",
+          "Start AirPlay",
+          "Enter picture-in-picture",
+          "Enter fullscreen"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "Settings"
+        ]
+      }
+    },
+    {
+      "label": "page-ja",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-12",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "poster-url",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-13",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "poster-off",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&poster=false&posterUrl=%2Fdemo-media%2Fad.png",
+      "reset": {
+        "text": "프리셋과 다른 값 4개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-14",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "poster-bad-url",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&poster=false&posterUrl=%2Fdemo-media%2Fad.png",
+      "reset": {
+        "text": "프리셋과 다른 값 4개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": "/로 시작하는 경로나 http(s):// 주소로 입력해 주세요. 상대 경로는 받지 않아요.",
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-14",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "poster-on",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-15",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "Grok 해안 도시 장면",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "title-text",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "QA 데모 제목",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-16",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "QA 데모 제목",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "title-off",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&title=false&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9",
+      "reset": {
+        "text": "프리셋과 다른 값 4개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-poster=\"/demo-media/ad.png\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": null,
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-17",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "title-on",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": []
+        },
+        "contentTitle": "QA 데모 제목",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-18",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "QA 데모 제목",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "thumbnails",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9&thumbnails=%2Fdemo-media%2Fqa-a2d-thumbs.vtt",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "mp4",
+      "engine": "spf",
+      "engineShown": false,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-thumbnails=\"/demo-media/qa-a2d-thumbs.vtt\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": [
+            {
+              "kind": "metadata",
+              "label": "thumbnails",
+              "src": "http://127.0.0.1:18781/demo-media/qa-a2d-thumbs.vtt"
+            }
+          ]
+        },
+        "contentTitle": "QA 데모 제목",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-19",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 10 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "QA 데모 제목",
+          "0:00",
+          "0:00",
+          "-",
+          "0:10",
+          "設定"
+        ]
+      },
+      "extra": {
+        "thumbs": [
+          {
+            "tag": "IMG",
+            "cls": "media-poster-image",
+            "src": "/demo-media/ad.png",
+            "w": 818
+          },
+          {
+            "tag": "MEDIA-SLIDER-THUMBNAIL",
+            "cls": "media-slider-preview-content media-popup",
+            "src": "",
+            "w": 152
+          },
+          {
+            "tag": "IMG",
+            "cls": "media-slider-thumbnail-image",
+            "src": "/demo-media/ad.png",
+            "w": 461
+          },
+          {
+            "tag": "MEDIA-ICON",
+            "cls": "media-slider-thumbnail-spinner-icon",
+            "src": "",
+            "w": 14
+          }
+        ]
+      }
+    },
+    {
+      "label": "media-hls",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9&thumbnails=%2Fdemo-media%2Fqa-a2d-thumbs.vtt&media=hls",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "hls",
+      "engine": "spf",
+      "engineShown": true,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/content-master.m3u8\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-thumbnails=\"/demo-media/qa-a2d-thumbs.vtt\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLS-VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "HLS-VIDEO",
+          "src": "/demo-media/content-master.m3u8",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": [
+            {
+              "kind": "metadata",
+              "label": "thumbnails",
+              "src": "http://127.0.0.1:18781/demo-media/qa-a2d-thumbs.vtt"
+            }
+          ]
+        },
+        "contentTitle": "QA 데모 제목",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-20",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 36 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "QA 데모 제목",
+          "0:00",
+          "0:00",
+          "-",
+          "0:36",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "engine-hlsjs",
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9&thumbnails=%2Fdemo-media%2Fqa-a2d-thumbs.vtt&media=hls&engine=hlsjs",
+      "reset": {
+        "text": "프리셋과 다른 값 3개",
+        "disabled": false
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "hls",
+      "engine": "hlsjs",
+      "engineShown": true,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/content-master.m3u8\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-thumbnails=\"/demo-media/qa-a2d-thumbs.vtt\"\n     data-engine=\"hlsjs\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLSJS-VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "HLSJS-VIDEO",
+          "src": "/demo-media/content-master.m3u8",
+          "preload": "auto",
+          "autoplay": false,
+          "muted": true,
+          "loop": true,
+          "paused": true,
+          "tracks": [
+            {
+              "kind": "metadata",
+              "label": "thumbnails",
+              "src": "http://127.0.0.1:18781/demo-media/qa-a2d-thumbs.vtt"
+            }
+          ]
+        },
+        "contentTitle": "QA 데모 제목",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-21",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート解除",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 35 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "QA 데모 제목",
+          "0:00",
+          "0:00",
+          "-",
+          "0:35",
+          "設定"
+        ]
+      }
+    },
+    {
+      "label": "reset",
+      "query": "?pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9&thumbnails=%2Fdemo-media%2Fqa-a2d-thumbs.vtt&media=hls&engine=hlsjs",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "preload": "metadata",
+      "lang": "",
+      "pageLang": "ja",
+      "pageLangShown": true,
+      "media": "hls",
+      "engine": "hlsjs",
+      "engineShown": true,
+      "posterHelp": null,
+      "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+      "status": "",
+      "now": "최근 광고 진행프리롤 1/2 재생 중18:31:52",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/content-master.m3u8\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-thumbnails=\"/demo-media/qa-a2d-thumbs.vtt\"\n     data-engine=\"hlsjs\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLSJS-VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "HLSJS-VIDEO",
+          "src": "/demo-media/content-master.m3u8",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "paused": true,
+          "tracks": [
+            {
+              "kind": "metadata",
+              "label": "thumbnails",
+              "src": "http://127.0.0.1:18781/demo-media/qa-a2d-thumbs.vtt"
+            }
+          ]
+        },
+        "contentTitle": "QA 데모 제목",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-22",
+          "video-id": "grok-demo-scene-01"
+        },
+        "buttons": [
+          "閉じる",
+          "再生",
+          "ミュート",
+          "音量",
+          "シーク",
+          "再生時間を表示、残り 36 秒。",
+          "字幕を表示",
+          "設定",
+          "キャスト開始",
+          "AirPlayを開始",
+          "ピクチャー イン ピクチャー",
+          "全画面表示"
+        ],
+        "text": [
+          "QA 데모 제목",
+          "0:00",
+          "0:00",
+          "-",
+          "0:36",
+          "設定"
+        ]
+      }
+    }
+  ],
+  "address": {
+    "before": {
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9&thumbnails=%2Fdemo-media%2Fqa-a2d-thumbs.vtt&media=hls&engine=hlsjs",
+      "preset": "p-i0aecb28w3",
+      "toggles": {
+        "autoplay": "false",
+        "muted": "true",
+        "loop": "true"
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "poster": true,
+      "posterUrl": "/demo-media/ad.png",
+      "title": true,
+      "titleText": "QA 데모 제목",
+      "vtt": "/demo-media/qa-a2d-thumbs.vtt",
+      "media": "hls",
+      "engine": "hlsjs",
+      "reset": "프리셋과 다른 값 3개",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/content-master.m3u8\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-thumbnails=\"/demo-media/qa-a2d-thumbs.vtt\"\n     data-engine=\"hlsjs\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>"
+    },
+    "after": {
+      "query": "?muted=true&loop=true&preload=auto&pageLang=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%8D%B0%EB%AA%A8+%EC%A0%9C%EB%AA%A9&thumbnails=%2Fdemo-media%2Fqa-a2d-thumbs.vtt&media=hls&engine=hlsjs",
+      "preset": "p-i0aecb28w3",
+      "toggles": {
+        "autoplay": "false",
+        "muted": "true",
+        "loop": "true"
+      },
+      "preload": "auto",
+      "lang": "",
+      "pageLang": "ja",
+      "poster": true,
+      "posterUrl": "/demo-media/ad.png",
+      "title": true,
+      "titleText": "QA 데모 제목",
+      "vtt": "/demo-media/qa-a2d-thumbs.vtt",
+      "media": "hls",
+      "engine": "hlsjs",
+      "reset": "프리셋과 다른 값 3개",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/content-master.m3u8\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 데모 제목\"\n     data-thumbnails=\"/demo-media/qa-a2d-thumbs.vtt\"\n     data-engine=\"hlsjs\"\n     data-muted=\"true\"\n     data-loop=\"true\"\n     data-preload=\"auto\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>"
+    },
+    "sameState": true,
+    "samePlayer": false,
+    "beforePlayer": {
+      "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLSJS-VIDEO+MEDIA-ADS",
+      "lang": "ja",
+      "fill": "rgb(37, 99, 235)",
+      "radius": "28px",
+      "media": {
+        "tag": "HLSJS-VIDEO",
+        "src": "/demo-media/content-master.m3u8",
+        "preload": "auto",
+        "autoplay": false,
+        "muted": true,
+        "loop": true,
+        "tracks": [
+          {
+            "kind": "metadata",
+            "label": "thumbnails",
+            "src": "http://127.0.0.1:18781/demo-media/qa-a2d-thumbs.vtt"
+          }
+        ]
+      },
+      "contentTitle": "QA 데모 제목",
+      "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+      "ads": {
+        "lang": "ko",
+        "for": "solad-media-21",
+        "video-id": "grok-demo-scene-01"
+      }
+    },
+    "afterPlayer": {
+      "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLSJS-VIDEO+MEDIA-ADS",
+      "lang": "ja",
+      "fill": "rgb(37, 99, 235)",
+      "radius": "28px",
+      "media": {
+        "tag": "HLSJS-VIDEO",
+        "src": "/demo-media/content-master.m3u8",
+        "preload": "auto",
+        "autoplay": false,
+        "muted": true,
+        "loop": true,
+        "tracks": [
+          {
+            "kind": "metadata",
+            "label": "thumbnails",
+            "src": "http://127.0.0.1:18781/demo-media/qa-a2d-thumbs.vtt"
+          }
+        ]
+      },
+      "contentTitle": "QA 데모 제목",
+      "poster": "http://127.0.0.1:18781/demo-media/ad.png",
+      "ads": {
+        "lang": "ko",
+        "for": "solad-media-1",
+        "video-id": "grok-demo-scene-01"
+      }
+    }
+  },
+  "resetFocus": "preset",
+  "api": [
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html"
+  ],
+  "events": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ]
+}

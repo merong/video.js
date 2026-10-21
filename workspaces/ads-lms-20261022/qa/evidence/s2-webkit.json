@@ -1,0 +1,76 @@
+{
+  "engine": "webkit",
+  "steps": {
+    "rate menu has no value above 1.5 and \">\" stops at 1.5": {
+      "ok": true,
+      "detail": {
+        "rates": [
+          "0.2×",
+          "0.5×",
+          "0.7×",
+          "1×",
+          "1.2×",
+          "1.5×"
+        ],
+        "seen": [
+          1.2,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ]
+      }
+    },
+    "seek past watched stops at the limit (slider, →, +10s) with a notice and event": {
+      "ok": true,
+      "detail": [
+        {
+          "label": "slider click 85%",
+          "before": 11.037001874537967,
+          "after": 13.529707651349856,
+          "jump": 2.5,
+          "event": {
+            "requested": 67.833,
+            "allowed": 12.793
+          },
+          "toast": 2
+        },
+        {
+          "label": "→ key",
+          "before": 17.24055527512181,
+          "after": 19.472362288190638,
+          "jump": 2.2,
+          "event": {
+            "requested": 27.857,
+            "allowed": 18.702
+          },
+          "toast": 2
+        },
+        {
+          "label": "+10s button",
+          "before": 22.787909787454886,
+          "after": 25.063767550645697,
+          "jump": 2.3,
+          "event": {
+            "requested": 33.444,
+            "allowed": 24.309
+          },
+          "toast": 2
+        }
+      ],
+      "rejudged": "판정 기준을 jump<2.5에서 (멈춘 시각 − allowed) ≤ 1.5초로 바꿔 같은 측정값으로 다시 판정(재실행 없음). 막힌 뒤에도 0.5초 대기 동안 1.5배로 재생된다."
+    },
+    "limit lifts after completion": {
+      "ok": true,
+      "detail": {
+        "head": "진도 51% | 완료 기준 50% | 완료 · 10월 22일 03:28 | ",
+        "afterSliderTo90pct": 73.0531658389833,
+        "blockedEventsAfterCompletion": 0
+      }
+    }
+  },
+  "consoleErrors": []
+}

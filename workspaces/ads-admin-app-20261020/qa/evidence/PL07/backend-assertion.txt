@@ -1,0 +1,31 @@
+# run.php preset_limit assertion (source excerpt, 2026-10-20 22:20:48 KST)
+integrations/ads-manager/tests/backend/run.php:406:rejects(fn () => $app->dispatch('POST', 'player-preset-save', ['preset' => $base, 'revision' => $revision], $host->csrfToken()), 400, 'preset_limit', null, '21st stored preset rejected');
+integrations/ads-manager/src/PlayerPresets.php:40:                    throw new ApiError(400, 'preset_limit', '플레이어 프리셋은 ' . self::LIMIT . '개까지 저장할 수 있습니다.');
+
+same(array_key_exists('name', $vjsRender) || array_key_exists('name', $nativeRender), false, 'public render omits name', 'presets');
+same($app->dispatch('GET', 'player-preset', ['id' => 'default'])['id'], 'default', 'built-in remains addressable', 'presets');
+rejects(fn () => $app->dispatch('GET', 'player-preset', ['id' => 'p-zzzzzzzzzz']), 404, 'preset_not_found', null, 'unknown public preset');
+rejects(fn () => $app->dispatch('GET', 'player-preset', ['id' => '../x']), 400, 'invalid_preset_id', 'id', 'malformed public preset ID');
+$afterDelete = $app->dispatch('POST', 'player-preset-delete', ['id' => $vjs['id'], 'revision' => 5], $host->csrfToken());
+same([$afterDelete['revision'], $afterDelete['defaultPresetId'], in_array($vjs['id'], array_column($afterDelete['presets'], 'id'), true)], [6, 'default', false], 'deleting the default falls back to built-in', 'presets');
+same($app->dispatch('GET', 'player-preset', [])['id'], 'default', 'public default follows fallback', 'presets');
+
+// The limit counts stored presets only; the 21st create fails without changing the document.
+$revision = 6;
+for ($count = count($afterDelete['presets']) - 1; $count < PlayerPresets::LIMIT; $count++) {
+    $revision = $app->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'name' => '한도 ' . $count], 'revision' => $revision], $host->csrfToken())['revision'];
+}
+same(count($app->dispatch('GET', 'player-presets', [])['presets']), PlayerPresets::LIMIT + 1, '20 stored presets plus built-in', 'presets');
+rejects(fn () => $app->dispatch('POST', 'player-preset-save', ['preset' => $base, 'revision' => $revision], $host->csrfToken()), 400, 'preset_limit', null, '21st stored preset rejected');
+same(Value::decode($db->meta('player_presets'))['revision'], $revision, 'limit failure keeps revision', 'presets');
+
+// A document stored before mediaAlt left the schema: dropped on read, gone after the next write.
+$legacy = Value::decode($db->meta('player_presets'));
+
+# U10 backend-run.log tail
+PASS 70 persistence/authorization/publication/collector/statistics assertions (sqlite).
+PASS 7 A1 bootstrap user/capability assertions (counted separately).
+PASS 95 A1-API-4 player preset assertions (counted separately).
+Isolated test prefix: ads_; SQLite/test files: /private/var/folders/wh/rrdr8vl512q19t1pf933hb980000gn/T/ads-backend-d757a300c73f
+php integrations/ads-manager/tests/backend/run.php  0.60s user 0.06s system 90% cpu 0.727 total
+3:PASS 95 A1-API-4 player preset assertions (counted separately).

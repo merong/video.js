@@ -1,0 +1,86 @@
+{
+  "390": [
+    {
+      "label": "fresh load rounded",
+      "url": "/#/players/edit/rounded",
+      "expanded": "false",
+      "text": "열기"
+    },
+    {
+      "label": "rounded after 열기",
+      "url": "/#/players/edit/rounded",
+      "expanded": "true",
+      "text": "접기"
+    },
+    {
+      "label": "hash nav rounded(open) → accent",
+      "url": "/#/players/edit/accent",
+      "expanded": "true",
+      "text": "접기"
+    },
+    {
+      "label": "hash nav accent(open) → list → default",
+      "url": "/#/players/edit/default",
+      "expanded": "false",
+      "text": "열기"
+    },
+    {
+      "label": "list link count",
+      "count": 0
+    },
+    {
+      "label": "hash nav → editor p-i0aecb28w3",
+      "url": "/#/players/edit/p-i0aecb28w3",
+      "expanded": "false",
+      "text": "열기"
+    },
+    {
+      "label": "reload accent",
+      "url": "/#/players/edit/accent",
+      "expanded": "false",
+      "text": "열기"
+    }
+  ],
+  "768": [
+    {
+      "label": "fresh load rounded",
+      "url": "/#/players/edit/rounded",
+      "expanded": "false",
+      "text": "열기"
+    },
+    {
+      "label": "rounded after 열기",
+      "url": "/#/players/edit/rounded",
+      "expanded": "true",
+      "text": "접기"
+    },
+    {
+      "label": "hash nav rounded(open) → accent",
+      "url": "/#/players/edit/accent",
+      "expanded": "true",
+      "text": "접기"
+    },
+    {
+      "label": "hash nav accent(open) → list → default",
+      "url": "/#/players/edit/default",
+      "expanded": "false",
+      "text": "열기"
+    },
+    {
+      "label": "list link count",
+      "count": 0
+    },
+    {
+      "label": "hash nav → editor p-i0aecb28w3",
+      "url": "/#/players/edit/p-i0aecb28w3",
+      "expanded": "false",
+      "text": "열기"
+    },
+    {
+      "label": "reload accent",
+      "url": "/#/players/edit/accent",
+      "expanded": "false",
+      "text": "열기"
+    }
+  ]
+}

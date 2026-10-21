@@ -1,0 +1,11 @@
+- main "설정":
+  - region "설정":
+    - heading "설정" [level=1]
+    - text: 목업 · 아직 동작하지 않아요
+    - region "설정":
+      - text: 아직 만들지 않은 화면
+      - heading "설정" [level=2]
+      - paragraph: 노출로 인정하는 시간(영상·이미지), 자기 승인 허용 여부, 광고주 리포트 링크의 기본 만료일을 정해요.
+      - paragraph:
+        - text: 기획 문서
+        - code: .agents/plans/ads-admin-v2-spec.md §8.9

@@ -1,0 +1,22 @@
+{
+  "video-skin": {
+    "controlsVisible": true,
+    "translate": "none",
+    "transform": "none",
+    "varY": "calc(calc(16px * 1 / 4) * -16)",
+    "mode": "showing",
+    "cue": "자막 버튼이나 C 키로 켜고 끌 수 있어요.",
+    "t": 3.5,
+    "errors": []
+  },
+  "solad-video-skin": {
+    "controlsVisible": true,
+    "translate": "none",
+    "transform": "none",
+    "varY": "calc(calc(16px * 1 / 4) * -16)",
+    "mode": "showing",
+    "cue": "자막 버튼이나 C 키로 켜고 끌 수 있어요.",
+    "t": 3.5,
+    "errors": []
+  }
+}

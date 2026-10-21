@@ -1,0 +1,59 @@
+{
+  "hash": "#/players/new",
+  "api": [
+    {
+      "t": 788,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": false
+    },
+    {
+      "t": 897,
+      "method": "POST",
+      "action": "login",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": false,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1146,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1175,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1276,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "frames": [
+    "http://127.0.0.1:18781/#/players/new",
+    "http://127.0.0.1:18781/examples/player-preview.html?type=videojs&skin=default"
+  ]
+}

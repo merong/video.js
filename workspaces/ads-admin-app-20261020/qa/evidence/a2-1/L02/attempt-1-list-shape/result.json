@@ -1,0 +1,29 @@
+{
+  "steps": [],
+  "duplicateStatus": [
+    "\"강조색\" 값을 복사했어요. 이름을 확인하고 저장해 주세요.",
+    "미리보기를 준비하고 있어요…"
+  ],
+  "duplicateForm": {
+    "name": "강조색 복사본",
+    "accent": "#2563eb",
+    "adsAccent": "#2563eb"
+  },
+  "saveStatus": [
+    "\"QA L02 강조색 복제\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+    "미리보기가 준비됐어요."
+  ],
+  "afterSaveUrl": "#/players/edit/p-4yy9hmbhus",
+  "error": "TypeError: Cannot read properties of undefined (reading 'name')",
+  "adminApi": [
+    "GET player-presets 200",
+    "POST player-preset-save 200",
+    "GET player-presets 200"
+  ],
+  "adminConsole": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

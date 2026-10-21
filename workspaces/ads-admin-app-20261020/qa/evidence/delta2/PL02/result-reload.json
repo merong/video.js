@@ -1,0 +1,28 @@
+{
+  "editHash": "#/players/edit/p-qrgzuc8ste",
+  "values": {
+    "이름": "QA Video.js 중립",
+    "플레이어 종류": "videojs|Video.js",
+    "스킨": "neutral|뉴트럴 (모서리 12px)",
+    "강조색": "#0a3d91",
+    "강조 글자색": "#ffffff",
+    "테두리 색": "",
+    "모서리 둥글기 (px)": "12",
+    "글꼴": "|스킨 기본 (Inter 우선)",
+    "화면 채우기": "|스킨 기본 (맞춤)",
+    "크기 기준": "|스킨 기본 (16px)",
+    "광고 문구 언어": "en|English",
+    "건너뛰기 문구": "Skip ad",
+    "건너뛰기 대기 문구": "",
+    "광고 시간 문구": "",
+    "광고 음량 막대 색": "",
+    "건너뛰기 버튼 모서리 (px)": "",
+    "광고 글자 크기 (px)": "15"
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

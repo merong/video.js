@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "data": {
+    "authenticated": true,
+    "csrfToken": "<redacted>",
+    "apiUrl": "/api/index.php",
+    "capabilities": {
+      "host": "standalone",
+      "manualTargets": true,
+      "uploads": true,
+      "loginUrl": null,
+      "siteUrl": null,
+      "adminUrl": null,
+      "playerPresets": true
+    },
+    "user": {
+      "displayName": "a1-qa-admin"
+    },
+    "site": {
+      "siteId": "site-local",
+      "timeZone": "Asia/Seoul"
+    },
+    "playerModuleUrl": "/assets/ads.js",
+    "limits": {
+      "uploadBytes": 104857600
+    }
+  }
+}

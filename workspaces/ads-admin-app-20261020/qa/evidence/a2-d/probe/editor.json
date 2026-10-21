@@ -1,0 +1,941 @@
+{
+  "edit": [
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 소재 등록",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "보관 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/archive",
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-title-creatives-reload",
+      "name": "새로고침",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 버전으로 수정",
+      "value": "",
+      "disabled": true,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "보관",
+      "value": "",
+      "disabled": true,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 버전으로 수정",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "보관",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 버전으로 수정",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "보관",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 버전으로 수정",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "보관",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 버전으로 수정",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "보관",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "새 버전으로 수정",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "보관",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "소재 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/creative",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-title-creatives-name",
+      "name": "소재 이름",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "등록 방식 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/creative-source",
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "_r_b_",
+      "name": "등록 방식",
+      "value": "url",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "_r_c_",
+      "name": "소재 URL",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "_r_d_",
+      "name": "파일 형식",
+      "value": "video/mp4",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "대체텍스트 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/alt-text",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "_r_e_",
+      "name": "대체텍스트",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "입력 소재 미리보기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "submit",
+      "id": null,
+      "name": "소재 저장",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "프리셋 목록",
+      "value": null,
+      "disabled": false,
+      "href": "#/players",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "초기 설정 방법",
+      "value": null,
+      "disabled": false,
+      "href": "#/players/setup",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "옵션 설명",
+      "value": null,
+      "disabled": false,
+      "href": "#/players/options",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "기본",
+      "value": null,
+      "disabled": false,
+      "href": "#aa-preset-section-basic",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "테마",
+      "value": null,
+      "disabled": false,
+      "href": "#aa-preset-section-theme",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "재생 동작",
+      "value": null,
+      "disabled": false,
+      "href": "#aa-preset-section-playback",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "언어",
+      "value": null,
+      "disabled": false,
+      "href": "#aa-preset-section-language",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "광고 화면",
+      "value": null,
+      "disabled": false,
+      "href": "#aa-preset-section-ads",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "프리셋 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-preset",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-name",
+      "name": "이름",
+      "value": "QA 강조색 복제",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "플레이어 종류 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-type",
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "aa-preset-playerType",
+      "name": "플레이어 종류",
+      "value": "videojs",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "테마 속성 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-theme-property",
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "강조색 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-accent-color",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "color",
+      "id": null,
+      "name": "강조색 색 고르기",
+      "value": "#2563eb",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-theme-accentColor",
+      "name": "강조색",
+      "value": "#2563eb",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-theme-accentColor-clear",
+      "name": "강조색 지우기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "강조색 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-accent-color",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "color",
+      "id": null,
+      "name": "강조 글자색 색 고르기",
+      "value": "#ffffff",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-theme-accentTextColor",
+      "name": "강조 글자색",
+      "value": "#ffffff",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-theme-accentTextColor-clear",
+      "name": "강조 글자색 지우기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "color",
+      "id": null,
+      "name": "테두리 색 색 고르기",
+      "value": "#ffffff",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-theme-borderColor",
+      "name": "테두리 색",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "id": "aa-preset-theme-borderRadius",
+      "name": "모서리 둥글기 (px)",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "aa-preset-theme-fontFamily",
+      "name": "글꼴",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "화면 채우기 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-object-fit",
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "aa-preset-theme-objectFit",
+      "name": "화면 채우기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "aa-preset-theme-scaleUnit",
+      "name": "크기 기준",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-playback-autoplay",
+      "name": "자동 재생",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-playback-muted",
+      "name": "음소거로 시작",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-playback-loop",
+      "name": "반복 재생",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": null,
+      "name": "누를 때",
+      "value": "none",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": "aa-preset-playback-preload",
+      "name": "정보만 (기본)",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": null,
+      "name": "미리 받기",
+      "value": "auto",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-display-poster",
+      "name": "포스터 표시",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-display-title",
+      "name": "제목 표시",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "플레이어 화면 언어 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-ad-language",
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "aa-preset-language",
+      "name": "플레이어 화면 언어",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "광고 화면 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-ad-overlay",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-ads-labels-skip",
+      "name": "건너뛰기 문구",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-ads-labels-skipCountdown",
+      "name": "건너뛰기 대기 문구",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-ads-labels-timer",
+      "name": "광고 시간 문구",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "광고 화면 도움말",
+      "value": null,
+      "disabled": false,
+      "href": "#/help/player-ad-overlay",
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "color",
+      "id": null,
+      "name": "광고 강조색 색 고르기",
+      "value": "#2563eb",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "aa-preset-ads-accentColor",
+      "name": "광고 강조색",
+      "value": "#2563eb",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": "aa-preset-ads-accentColor-clear",
+      "name": "광고 강조색 지우기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "id": "aa-preset-ads-skipRadius",
+      "name": "건너뛰기 버튼 모서리 (px)",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "id": "aa-preset-ads-fontSize",
+      "name": "광고 글자 크기 (px)",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "submit",
+      "id": null,
+      "name": "프리셋 저장",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": null,
+      "name": "좁게 · 390",
+      "value": "narrow",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": null,
+      "name": "보통 · 768",
+      "value": "medium",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": null,
+      "name": "넓게 · 자리 폭",
+      "value": "wide",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "IFRAME",
+      "type": null,
+      "id": null,
+      "name": "",
+      "value": null,
+      "disabled": false,
+      "href": null,
+      "src": "http://127.0.0.1:18781/examples/preview.html?type=videojs"
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "처음부터",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "미드롤 앞",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "끝 직전",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": "button",
+      "id": null,
+      "name": "다시 불러오기",
+      "value": "",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "_r_2b_",
+      "name": "페이지 언어",
+      "value": "ko",
+      "disabled": false,
+      "href": null,
+      "src": null
+    },
+    {
+      "tag": "A",
+      "type": null,
+      "id": null,
+      "name": "데모에서 열기 (새 창)",
+      "value": null,
+      "disabled": false,
+      "href": "http://127.0.0.1:18781/examples/index.html?preset=p-i0aecb28w3",
+      "src": null
+    }
+  ],
+  "headings": [
+    "소재",
+    "등록한 소재 6개",
+    "새 소재 등록",
+    "플레이어",
+    "프리셋 수정",
+    "기본",
+    "테마",
+    "재생 동작",
+    "언어",
+    "광고 화면",
+    "플레이어 미리보기"
+  ],
+  "frames": [
+    "/#/players/edit/p-i0aecb28w3",
+    "/examples/preview.html?type=videojs"
+  ],
+  "newHeadings": [
+    "소재",
+    "등록한 소재 6개",
+    "새 소재 등록",
+    "플레이어",
+    "새 프리셋",
+    "기본",
+    "테마",
+    "재생 동작",
+    "언어",
+    "광고 화면",
+    "플레이어 미리보기"
+  ],
+  "newDemo": "데모에서 열기\n(새 창)\n새 프리셋은 저장한 뒤 데모에서 열 수 있어요.",
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

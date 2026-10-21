@@ -1,0 +1,210 @@
+{
+  "disabled": [
+    {
+      "label": "list 기본 수정",
+      "tag": "BUTTON",
+      "text": "수정",
+      "disabled": true,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "color": "rgb(154, 154, 160)",
+      "bg": "rgb(247, 247, 247)",
+      "opacity": "1",
+      "cursor": "not-allowed",
+      "contrast": 2.61,
+      "reason": [
+        "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+      ],
+      "title": null,
+      "ring": {
+        "focused": false,
+        "outline": "none 3px",
+        "shadow": null
+      }
+    },
+    {
+      "label": "list 기본 삭제",
+      "tag": "BUTTON",
+      "text": "삭제",
+      "disabled": true,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "color": "rgb(154, 154, 160)",
+      "bg": "rgb(247, 247, 247)",
+      "opacity": "1",
+      "cursor": "not-allowed",
+      "contrast": 2.61,
+      "reason": [
+        "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+      ],
+      "title": null,
+      "ring": {
+        "focused": false,
+        "outline": "none 3px",
+        "shadow": null
+      }
+    },
+    {
+      "label": "list 둥근 테두리 수정",
+      "tag": "BUTTON",
+      "text": "수정",
+      "disabled": true,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "color": "rgb(154, 154, 160)",
+      "bg": "rgb(247, 247, 247)",
+      "opacity": "1",
+      "cursor": "not-allowed",
+      "contrast": 2.61,
+      "reason": [
+        "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+      ],
+      "title": null,
+      "ring": {
+        "focused": false,
+        "outline": "none 3px",
+        "shadow": null
+      }
+    },
+    {
+      "label": "list 둥근 테두리 삭제",
+      "tag": "BUTTON",
+      "text": "삭제",
+      "disabled": true,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "color": "rgb(154, 154, 160)",
+      "bg": "rgb(247, 247, 247)",
+      "opacity": "1",
+      "cursor": "not-allowed",
+      "contrast": 2.61,
+      "reason": [
+        "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+      ],
+      "title": null,
+      "ring": {
+        "focused": false,
+        "outline": "none 3px",
+        "shadow": null
+      }
+    },
+    {
+      "label": "editor 데모에서 열기 after edit",
+      "tag": "A",
+      "text": "데모에서 열기 (새 창)",
+      "disabled": null,
+      "ariaDisabled": "true",
+      "tabindex": "0",
+      "color": "rgb(154, 154, 160)",
+      "bg": "rgb(247, 247, 247)",
+      "opacity": "1",
+      "cursor": "not-allowed",
+      "contrast": 2.61,
+      "reason": [
+        "저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요."
+      ],
+      "title": null,
+      "ring": {
+        "focused": true,
+        "outline": "none 3px",
+        "shadow": null
+      }
+    },
+    {
+      "label": "schedule 광고 추가",
+      "tag": "BUTTON",
+      "text": "광고 추가",
+      "disabled": false,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "color": "rgb(24, 24, 26)",
+      "bg": "rgb(255, 255, 255)",
+      "opacity": "1",
+      "cursor": "pointer",
+      "contrast": 17.73,
+      "reason": [],
+      "title": null,
+      "ring": {
+        "focused": true,
+        "outline": "none 3px",
+        "shadow": null
+      }
+    }
+  ],
+  "smoke": {
+    "list": {
+      "rows": 7,
+      "heading": "소재"
+    },
+    "editor": {
+      "form": 1,
+      "name": "QA 강조색 복제"
+    },
+    "setup": {
+      "codeBlocks": 1,
+      "headings": [
+        "등록한 소재 6개",
+        "새 소재 등록",
+        "초기 설정 방법",
+        "설치 순서",
+        "설치 코드",
+        "자리 요소 속성 (data-*)",
+        "JS로 직접 만들기 · 개발자용",
+        ""
+      ]
+    },
+    "options": {
+      "tables": 7
+    },
+    "schedule": {
+      "buttons": [
+        "편성 불러오기",
+        "프리롤",
+        "미드롤",
+        "포스트롤",
+        "소재 목록 새로고침",
+        "구간 삭제",
+        "위로[disabled]",
+        "아래로",
+        "광고 제거",
+        "위로",
+        "아래로[disabled]",
+        "광고 제거",
+        "광고 추가",
+        "구간 삭제",
+        "위로[disabled]",
+        "아래로[disabled]",
+        "광고 제거",
+        "광고 추가",
+        "구간 삭제",
+        "위로[disabled]",
+        "아래로[disabled]",
+        "광고 제거",
+        "광고 추가",
+        "초안 저장",
+        "저장한 초안 게시",
+        "미리보기 준비",
+        "미리보기 닫기[disabled]"
+      ]
+    }
+  },
+  "enabledRef": {
+    "label": "list QA 강조색 복제 삭제 (enabled reference)",
+    "tag": "BUTTON",
+    "text": "삭제",
+    "disabled": false,
+    "ariaDisabled": null,
+    "tabindex": null,
+    "color": "rgb(217, 54, 62)",
+    "bg": "rgb(255, 255, 255)",
+    "opacity": "1",
+    "cursor": "pointer",
+    "contrast": 4.62,
+    "reason": [],
+    "title": null
+  },
+  "bad": [],
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

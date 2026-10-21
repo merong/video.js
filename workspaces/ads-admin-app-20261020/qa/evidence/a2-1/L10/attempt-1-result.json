@@ -1,0 +1,196 @@
+{
+  "storedAtStart": {
+    "row": "1028||18|p-qrgzuc8ste|2",
+    "sha": "152c566c1faaad07"
+  },
+  "list": {
+    "revision": 18,
+    "defaultPresetId": "p-qrgzuc8ste",
+    "migratedNeutral": [
+      "p-qrgzuc8ste"
+    ],
+    "saved": [
+      {
+        "id": "p-qrgzuc8ste",
+        "name": "QA Video.js 중립 v2",
+        "playerType": "videojs",
+        "language": "en",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "playback": {
+          "autoplay": null,
+          "muted": null,
+          "loop": null,
+          "preload": null
+        },
+        "display": {
+          "poster": null,
+          "title": null
+        },
+        "input": {
+          "hotkeys": null,
+          "gestures": null
+        },
+        "controls": {
+          "captions": null,
+          "quality": null,
+          "audioTrack": null,
+          "playbackRate": null,
+          "pip": null,
+          "fullscreen": null,
+          "thumbnails": null,
+          "seekButtons": null
+        },
+        "logo": {
+          "assetId": null,
+          "position": null,
+          "margin": null,
+          "width": null,
+          "opacity": null,
+          "href": null,
+          "alt": null,
+          "hideDuringAds": null,
+          "hideWithControls": null
+        },
+        "ads": {
+          "labels": {
+            "advertisement": null,
+            "sequence": null,
+            "playPause": null,
+            "mute": null,
+            "volume": null,
+            "advertiser": null,
+            "newWindow": null,
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null,
+            "loading": null,
+            "paused": null,
+            "blocked": null,
+            "enterFullscreen": null,
+            "exitFullscreen": null,
+            "fullscreenError": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "progress": {
+            "sequence": null,
+            "timer": null,
+            "bar": null
+          },
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T18:20:29Z",
+        "updatedAt": "2026-10-20T18:29:23Z",
+        "builtIn": false
+      },
+      {
+        "id": "p-6aiokv34yw",
+        "name": "QA 기본 video",
+        "playerType": "native",
+        "language": "ko",
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": null,
+          "borderRadius": null,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "playback": {
+          "autoplay": null,
+          "muted": null,
+          "loop": null,
+          "preload": null
+        },
+        "display": {
+          "poster": null,
+          "title": null
+        },
+        "input": {
+          "hotkeys": null,
+          "gestures": null
+        },
+        "controls": {
+          "captions": null,
+          "quality": null,
+          "audioTrack": null,
+          "playbackRate": null,
+          "pip": null,
+          "fullscreen": null,
+          "thumbnails": null,
+          "seekButtons": null
+        },
+        "logo": {
+          "assetId": null,
+          "position": null,
+          "margin": null,
+          "width": null,
+          "opacity": null,
+          "href": null,
+          "alt": null,
+          "hideDuringAds": null,
+          "hideWithControls": null
+        },
+        "ads": {
+          "labels": {
+            "advertisement": null,
+            "sequence": null,
+            "playPause": null,
+            "mute": null,
+            "volume": null,
+            "advertiser": null,
+            "newWindow": null,
+            "skip": null,
+            "skipCountdown": null,
+            "timer": null,
+            "loading": null,
+            "paused": null,
+            "blocked": null,
+            "enterFullscreen": null,
+            "exitFullscreen": null,
+            "fullscreenError": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": null,
+          "progress": {
+            "sequence": null,
+            "timer": null,
+            "bar": null
+          },
+          "timeouts": {
+            "loadSeconds": 8,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T18:22:36Z",
+        "updatedAt": "2026-10-20T18:22:36Z",
+        "builtIn": false
+      }
+    ]
+  },
+  "listScreen": {
+    "notice": [
+      "모양이 조금 달라질 수 있어요 · 스킨 선택이 없어져서, 중립 스킨을 쓰던 프리셋 1개(QA Video.js 중립 v2)를 기본 스킨으로 옮겼어요. 비슷한 모양이 되도록 모서리 12px를 넣었어요. 재생 테스트로 한 번 확인해 주세요. ?",
+      "QA Video.js 중립 v2",
+      "중립 스킨에서 옮김"
+    ],
+    "neutralRow": "QA Video.js 중립 v2 중립 스킨에서 옮김 p-qrgzuc8ste Video.js 플레이어 영어 사이트 적용 2026. 10. 21. 오전 3:29 수정 복제 삭제 사이트에 적용 이미 사이트에 적용된 프리셋이에요.",
+    "nativeRow": "QA 기본 video p-6aiokv34yw 기본 video 한국어 — 2026. 10. 21. 오전 3:22 수정 복제 삭제 사이트에 적용"
+  },
+  "error": "Error: locator.evaluate: Error: strict mode violation: getByLabel('플레이어 화면 언어') resolved to 2 elements:\n    1) <a class=\"sa-help-link\" aria-label=\"플레이어 화면 언어 도움말\" href=\"#/help/player-ad-language\">?</a> aka getByRole('link', { name: '플레이어 화면 언어 도움말' })\n    2) <select class=\"sa-input\" id=\"aa-preset-language\" aria-describedby=\"aa-preset-language-help\">…</select> aka getByLabel('플레이어 화면 언어', { exact: true })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('플레이어 화면 언어')\u001b[22m\n",
+  "console": []
+}

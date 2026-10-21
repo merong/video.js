@@ -1,0 +1,46 @@
+{
+  "1280x900": {
+    "now": "최근 광고 진행 프리롤 1/2 재생 중 01:23:50",
+    "skin": "solad-video-skin",
+    "events": [
+      "POST 200 ok=undefined"
+    ],
+    "bad": [],
+    "aborted": 1,
+    "overflow": {
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "horizontalOverflow": false
+    },
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  },
+  "390x844": {
+    "now": "최근 광고 진행 프리롤 1/2 재생 중 01:23:59",
+    "skin": "solad-video-skin",
+    "events": [
+      "POST 200 ok=undefined"
+    ],
+    "bad": [],
+    "aborted": 1,
+    "overflow": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "horizontalOverflow": false
+    },
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  }
+}

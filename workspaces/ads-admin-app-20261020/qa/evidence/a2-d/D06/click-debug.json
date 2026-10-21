@@ -1,0 +1,23 @@
+{
+  "tries": [
+    {
+      "index": 45,
+      "href": null,
+      "box": {
+        "x": 1170,
+        "y": 490,
+        "w": 20,
+        "h": 20
+      },
+      "hit": "A.sa-help-link #/help/player-theme-property",
+      "popups": [],
+      "mainUrl": "/#/help/player-theme-property"
+    }
+  ],
+  "count": 90,
+  "targets": [
+    "_blank",
+    null
+  ],
+  "error": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main a.sa-help-link:visible').nth(87)\u001b[22m\n"
+}

@@ -1,0 +1,7 @@
+GET action=schedule&videoId=a1-qa-video-1 status=200 set-cookie-lines=0
+GET action=schedule&videoId=%3Cbad%3E status=200 set-cookie-lines=0
+GET action=player-preset status=200 set-cookie-lines=0
+GET action=player-preset&id=p-zzzzzzzzzz status=404 set-cookie-lines=0
+GET action=player-preset&id=BAD! status=400 set-cookie-lines=0
+POST action=events status=403 set-cookie-lines=0
+GET action=bootstrap status=200 set-cookie-lines=1

@@ -1,0 +1,907 @@
+{
+  "runs": [
+    {
+      "run": "A accent direct",
+      "initial": "최근 광고 진행 아직 광고가 나오지 않았어요",
+      "mid": {
+        "label": "미드롤 앞",
+        "last": "최근 광고 진행 미드롤 1/1 재생 중 20:41:24",
+        "steps": 22,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 아직 광고가 나오지 않았어요",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 프리롤 1/2 재생 중 20:41:03",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 프리롤 1/2 재생 중 20:41:03",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 프리롤 2/2 재생 중 20:41:09",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 12,
+            "now": "최근 광고 진행 프리롤 2/2 재생 중 20:41:09",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 15,
+            "now": "최근 광고 진행 프리롤 2/2 재생 중 20:41:09",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 18,
+            "now": "최근 광고 진행 프리롤 2/2 재생 중 20:41:09",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 3,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 21,
+            "now": "최근 광고 진행 미드롤 1/1 재생 중 20:41:24",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 5.1,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      },
+      "end": {
+        "label": "끝 직전",
+        "last": "최근 광고 진행 포스트롤 1/1 재생 중 20:41:34",
+        "steps": 12,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 미드롤 1/1 재생 중 20:41:24",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 5.1,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 미드롤 1/1 재생 중 20:41:24",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 5.1,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 미드롤 1/1 · 오류 20:41:29",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 5.9,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 미드롤 1/1 · 오류 20:41:29",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 8.9,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 11,
+            "now": "최근 광고 진행 포스트롤 1/1 재생 중 20:41:34",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      }
+    },
+    {
+      "run": "B rounded → popup → accent (goto)",
+      "initial": "최근 광고 진행 포스트롤 1/1 재생 중 20:41:34",
+      "roundedMid": {
+        "label": "rounded 미드롤 앞",
+        "last": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+        "steps": 40,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 포스트롤 1/1 재생 중 20:41:34",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 포스트롤 1/1 재생 중 20:41:34",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 12,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 15,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 18,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 21,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 24,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 27,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 30,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 33,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 36,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 39,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      },
+      "roundedEnd": {
+        "label": "rounded 끝 직전",
+        "last": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+        "steps": 40,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 8,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 12,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 15,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 18,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 21,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 24,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 27,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 30,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 33,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 36,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 39,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      },
+      "accentInitial": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+      "accentMid": {
+        "label": "accent 미드롤 앞",
+        "last": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+        "steps": 40,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 5.6,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 8.6,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 12,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 15,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 18,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 21,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 24,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 27,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 30,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 33,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 36,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 39,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      }
+    },
+    {
+      "run": "C rounded 끝 직전 → accent (hash)",
+      "roundedEnd": {
+        "label": "rounded 끝 직전",
+        "last": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+        "steps": 40,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 12,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 15,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 18,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 21,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 24,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 27,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 30,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 33,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 36,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 39,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      },
+      "accentInitial": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+      "accentMid": {
+        "label": "accent 미드롤 앞",
+        "last": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+        "steps": 40,
+        "trace": [
+          {
+            "s": 0,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 3,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 4.9,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 6,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 8,
+              "paused": false,
+              "dur": 10
+            }
+          },
+          {
+            "s": 9,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 12,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 15,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 18,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 21,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 24,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 27,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 30,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 33,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 36,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          },
+          {
+            "s": 39,
+            "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:41:41",
+            "frame": {
+              "q": "?type=videojs",
+              "t": 10,
+              "paused": true,
+              "dur": 10
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "console": [
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "/favicon.ico"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "/favicon.ico"
+    }
+  ],
+  "events": 0
+}

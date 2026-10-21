@@ -1,0 +1,40 @@
+# server 422 field-path assertions used for PL09 (2) (2026-10-20 22:26:43 KST); U10 run.php PASS 95 preset assertions, H05 http_test PASS
+8:// Schema boundaries: every field has at least one accepted and one rejected value.
+12:$reject = function (array $preset, string $field, string $message) use ($accept): void {
+13:    rejects(fn () => $accept($preset), 422, 'validation', $field, $message);
+18:$reject([...$base, 'name' => '   '], 'name', 'blank name rejected');
+19:$reject([...$base, 'name' => str_repeat('가', 41)], 'name', '41-character name rejected');
+20:$reject([...$base, 'name' => "탭\t이름"], 'name', 'control character in name rejected');
+21:$reject([...$base, 'name' => "C1\u{0085}"], 'name', 'C1 control character in name rejected');
+22:$reject(['name' => 'x'], 'playerType', 'player type required');
+23:$reject([...$base, 'playerType' => 'flash'], 'playerType', 'unknown player type rejected');
+24:$reject([...$base, 'unknown' => 1], 'unknown', 'unknown top-level key rejected');
+27:$reject([...$base, 'skin' => 'compat'], 'skin', 'unsupported skin rejected');
+29:$reject([...$nativeBase, 'skin' => 'default'], 'skin', 'native skin rejected');
+32:    $reject([...$base, 'theme' => [$field => '#0A1B2C']], "theme.$field", "theme.$field rejects uppercase");
+35:$reject([...$base, 'theme' => ['borderColor' => '#abc']], 'theme.borderColor', 'short hex rejected');
+37:$reject([...$base, 'theme' => ['borderRadius' => 33]], 'theme.borderRadius', 'border radius above 32 rejected');
+38:$reject([...$base, 'theme' => ['borderRadius' => '12']], 'theme.borderRadius', 'string radius rejected');
+39:$reject([...$base, 'theme' => ['borderRadius' => 12.0]], 'theme.borderRadius', 'float radius rejected');
+41:$reject([...$base, 'theme' => ['fontFamily' => 'serif']], 'theme.fontFamily', 'unknown font family rejected');
+42:$reject([...$base, 'theme' => ['objectFit' => 'fill']], 'theme.objectFit', 'unknown object fit rejected');
+43:$reject([...$base, 'theme' => ['scaleUnit' => 'px']], 'theme.scaleUnit', 'unknown scale unit rejected');
+44:$reject([...$base, 'theme' => ['shadow' => 1]], 'theme.shadow', 'unknown theme key rejected');
+45:$reject([...$base, 'theme' => 'dark'], 'theme', 'non-object theme rejected');
+46:$reject([...$nativeBase, 'theme' => ['accentColor' => '#112233']], 'theme.accentColor', 'native theme value rejected');
+48:$reject($ads(['locale' => 'ja']), 'ads.locale', 'unknown locale rejected');
+51:$reject($ads(['labels' => ['skip' => str_repeat('a', 41)]]), 'ads.labels.skip', '41-character label rejected');
+52:$reject($ads(['labels' => ['skip' => "건너\u{0007}뛰기"]]), 'ads.labels.skip', 'control character label rejected');
+53:$reject($ads(['labels' => ['skip' => '{seconds}']]), 'ads.labels.skip', 'skip label rejects placeholders');
+54:$reject($ads(['labels' => ['mediaAlt' => '광고 영상']]), 'ads.labels.mediaAlt', 'mediaAlt is not part of the schema');
+56:$reject($ads(['labels' => ['skipCountdown' => '{elapsed}초']]), 'ads.labels.skipCountdown', 'countdown rejects other placeholders');
+57:$reject($ads(['labels' => ['skipCountdown' => '{seconds']]), 'ads.labels.skipCountdown', 'countdown rejects broken placeholder');
+59:$reject($ads(['labels' => ['timer' => '{seconds}']]), 'ads.labels.timer', 'timer rejects seconds');
+62:$reject($ads(['labels' => ['timer' => '{remain}초']]), 'ads.labels.timer', 'timer still rejects unknown placeholders');
+63:$reject($ads(['labels' => ['title' => '광고']]), 'ads.labels.title', 'unknown label rejected');
+65:$reject($ads(['accentColor' => '#gg6600']), 'ads.accentColor', 'invalid ads accent rejected');
+67:$reject($ads(['skipRadius' => 25]), 'ads.skipRadius', 'skip radius above 24 rejected');
+        status, invalid, _ = call("player-preset-save", {"preset": {**preset_input, "theme": {"borderRadius": 40}}, "revision": 1})
+        check(status == 422 and list(invalid["error"]["fields"]) == ["theme.borderRadius"], "preset validation returns field path", "presets")
+        status, invalid, _ = call("player-preset-save", {"preset": {**preset_input, "ads": {"labels": {"mediaAlt": "광고 영상"}}}, "revision": 1})
+        check(status == 422 and list(invalid["error"]["fields"]) == ["ads.labels.mediaAlt"], "mediaAlt label is rejected as unknown", "presets")

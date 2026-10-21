@@ -1,0 +1,25 @@
+// Debug only: open creatives, try image URL save and one upload, capture statuses (writes may occur, recorded).
+import { BASE, launch, newContext, login, recordNetwork, consoleCollector, save, shot, apiCalls, sleep } from './lib.mjs';
+const browser = await launch();
+const context = await newContext(browser);
+const net = recordNetwork(context);
+const page = await context.newPage();
+const logs = consoleCollector(page);
+await login(page);
+await page.goto(`${BASE}/#/creatives`);
+await page.getByRole('heading', { name: '소재', level: 1 }).waitFor();
+const form = page.locator('form', { has: page.getByRole('button', { name: '소재 저장' }) });
+console.log('forms', await form.count());
+await form.getByLabel('소재 이름', { exact: true }).fill('QA 포스트롤 이미지');
+await form.getByLabel('등록 방식', { exact: true }).selectOption({ label: '외부 URL' });
+await form.getByLabel('소재 URL', { exact: true }).fill('/demo-media/ad.png');
+await form.getByLabel('파일 형식', { exact: true }).selectOption({ label: 'PNG 이미지' });
+await form.getByLabel('대체텍스트', { exact: true }).fill('QA 포스트롤 이미지 광고');
+await form.getByRole('button', { name: '소재 저장' }).click();
+await sleep(2000);
+console.log('statuses', await page.getByRole('status').allInnerTexts());
+console.log('alerts', await page.getByRole('alert').allInnerTexts());
+await shot(page, 'B02/debug-image-save.png', { fullPage: true });
+console.log(JSON.stringify(apiCalls(net)), JSON.stringify(logs));
+save('B02/debug-image-save.json', { api: apiCalls(net), logs });
+await browser.close();

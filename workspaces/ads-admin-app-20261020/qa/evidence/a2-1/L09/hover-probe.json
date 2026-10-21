@@ -1,0 +1,42 @@
+{
+  "sliders": [
+    {
+      "tag": "MEDIA-SLIDER-THUMB",
+      "label": "볼륨",
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "tag": "MEDIA-SLIDER-THUMB",
+      "label": "탐색",
+      "x": 142.3249969482422,
+      "y": 680.2000122070312,
+      "w": 9.600006103515625,
+      "h": 9.5999755859375
+    }
+  ],
+  "popup": [
+    {
+      "tag": "MEDIA-SLIDER-THUMBNAIL",
+      "w": 190,
+      "h": 106,
+      "opacity": "1",
+      "visibility": "visible",
+      "src": "",
+      "complete": null,
+      "natural": null
+    },
+    {
+      "tag": "IMG",
+      "w": 576,
+      "h": 324,
+      "opacity": "1",
+      "visibility": "visible",
+      "src": "/demo-media/ad.png",
+      "complete": true,
+      "natural": 480
+    }
+  ]
+}

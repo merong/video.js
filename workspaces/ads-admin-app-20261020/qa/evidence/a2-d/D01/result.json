@@ -1,0 +1,660 @@
+{
+  "D01": {
+    "start": {
+      "query": "",
+      "preset": "p-i0aecb28w3",
+      "selected": "사이트 적용 프리셋",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "options": [
+        {
+          "value": "p-i0aecb28w3",
+          "label": "사이트 적용 프리셋",
+          "group": null,
+          "selected": true
+        },
+        {
+          "value": "default",
+          "label": "기본",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "rounded",
+          "label": "둥근 테두리",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "accent",
+          "label": "강조색",
+          "group": "내장",
+          "selected": false
+        }
+      ],
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "accent": "#2563eb",
+        "radius": "28px",
+        "radiusVar": "",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    },
+    "switch": [
+      {
+        "to": "rounded",
+        "query": "?preset=rounded",
+        "preset": "rounded",
+        "selected": "둥근 테두리",
+        "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+        "notes": {
+          "query": null,
+          "preset": null,
+          "adsRoot": null
+        },
+        "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+        "status": "",
+        "reset": {
+          "text": "프리셋 값 그대로예요",
+          "disabled": true
+        },
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "oklch(1 0 0)",
+          "accent": "",
+          "radius": "12px",
+          "radiusVar": "12px",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": false,
+            "muted": false,
+            "loop": false,
+            "poster": null
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null,
+          "ads": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "grok-demo-scene-01"
+          }
+        }
+      },
+      {
+        "to": "accent",
+        "query": "?preset=accent",
+        "preset": "accent",
+        "selected": "강조색",
+        "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+        "notes": {
+          "query": null,
+          "preset": null,
+          "adsRoot": null
+        },
+        "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+        "status": "",
+        "reset": {
+          "text": "프리셋 값 그대로예요",
+          "disabled": true
+        },
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "rgb(37, 99, 235)",
+          "accent": "#2563eb",
+          "radius": "28px",
+          "radiusVar": "",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": false,
+            "muted": false,
+            "loop": false,
+            "poster": null
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null,
+          "ads": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "grok-demo-scene-01"
+          }
+        }
+      },
+      {
+        "to": "default",
+        "query": "?preset=default",
+        "preset": "default",
+        "selected": "기본",
+        "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+        "notes": {
+          "query": null,
+          "preset": null,
+          "adsRoot": null
+        },
+        "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+        "status": "",
+        "reset": {
+          "text": "프리셋 값 그대로예요",
+          "disabled": true
+        },
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "oklch(1 0 0)",
+          "accent": "",
+          "radius": "28px",
+          "radiusVar": "",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": false,
+            "muted": false,
+            "loop": false,
+            "poster": null
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null,
+          "ads": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "grok-demo-scene-01"
+          }
+        }
+      },
+      {
+        "to": "p-i0aecb28w3",
+        "query": "",
+        "preset": "p-i0aecb28w3",
+        "selected": "사이트 적용 프리셋",
+        "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+        "notes": {
+          "query": null,
+          "preset": null,
+          "adsRoot": null
+        },
+        "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+        "status": "",
+        "reset": {
+          "text": "프리셋 값 그대로예요",
+          "disabled": true
+        },
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "rgb(37, 99, 235)",
+          "accent": "#2563eb",
+          "radius": "28px",
+          "radiusVar": "",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": false,
+            "muted": false,
+            "loop": false,
+            "poster": null
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null,
+          "ads": {
+            "lang": "ko",
+            "for": "solad-media-1",
+            "video-id": "grok-demo-scene-01"
+          }
+        }
+      }
+    ],
+    "?preset=rounded": {
+      "query": "?preset=rounded",
+      "preset": "rounded",
+      "selected": "둥근 테두리",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "oklch(1 0 0)",
+        "accent": "",
+        "radius": "12px",
+        "radiusVar": "12px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    },
+    "?preset=accent": {
+      "query": "?preset=accent",
+      "preset": "accent",
+      "selected": "강조색",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "accent": "#2563eb",
+        "radius": "28px",
+        "radiusVar": "",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    },
+    "?preset=p-zzzzzzzzzz": {
+      "query": "",
+      "preset": "p-i0aecb28w3",
+      "selected": "사이트 적용 프리셋",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": null,
+        "preset": "주소의 프리셋을 찾지 못했어요. preset=p-zzzzzzzzzz · 사이트 적용 프리셋으로 보여요.",
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "accent": "#2563eb",
+        "radius": "28px",
+        "radiusVar": "",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    },
+    "?preset=NOPE": {
+      "query": "",
+      "preset": "p-i0aecb28w3",
+      "selected": "사이트 적용 프리셋",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": "주소의 값 1개를 무시했어요. preset=NOPE · 지금은 프리셋 값으로 보여요.",
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "accent": "#2563eb",
+        "radius": "28px",
+        "radiusVar": "",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    },
+    "?autoplay=maybe&language=xx&preload=fast&posterUrl=javascript:alert(1)&media=avi": {
+      "query": "",
+      "preset": "p-i0aecb28w3",
+      "selected": "사이트 적용 프리셋",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": "주소의 값 5개를 무시했어요. autoplay=maybe, preload=fast, language=xx, posterUrl=javascript:alert(1), media=avi · 지금은 프리셋 값으로 보여요.",
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "rgb(37, 99, 235)",
+        "accent": "#2563eb",
+        "radius": "28px",
+        "radiusVar": "",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    },
+    "?preset=rounded&loop=yes&pageLang=de": {
+      "query": "?preset=rounded",
+      "preset": "rounded",
+      "selected": "둥근 테두리",
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요.",
+      "notes": {
+        "query": "주소의 값 2개를 무시했어요. loop=yes, pageLang=de · 지금은 프리셋 값으로 보여요.",
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "oklch(1 0 0)",
+        "accent": "",
+        "radius": "12px",
+        "radiusVar": "12px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    }
+  },
+  "D02": {
+    "signedIn": {
+      "query": "",
+      "preset": "p-i0aecb28w3",
+      "selected": "QA 강조색 복제 (사이트 적용)",
+      "help": "관리자로 로그인해 있어서 저장 프리셋도 보여요.",
+      "notes": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "options": [
+        {
+          "value": "default",
+          "label": "기본",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "rounded",
+          "label": "둥근 테두리",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "accent",
+          "label": "강조색",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "p-i0aecb28w3",
+          "label": "QA 강조색 복제 (사이트 적용)",
+          "group": "저장 프리셋",
+          "selected": true
+        },
+        {
+          "value": "p-lc3i8eidb4",
+          "label": "QA 자동재생",
+          "group": "저장 프리셋",
+          "selected": false
+        },
+        {
+          "value": "p-pchm59hhyv",
+          "label": "QA 기본 video",
+          "group": "저장 프리셋",
+          "selected": false
+        }
+      ]
+    },
+    "pickSaved": {
+      "query": "?preset=p-lc3i8eidb4",
+      "preset": "p-lc3i8eidb4",
+      "selected": "QA 자동재생",
+      "help": "관리자로 로그인해 있어서 저장 프리셋도 보여요.",
+      "notes": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "status": "",
+      "reset": {
+        "text": "프리셋 값 그대로예요",
+        "disabled": true
+      },
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "oklch(1 0 0)",
+        "accent": "",
+        "radius": "28px",
+        "radiusVar": "",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "poster": null
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "ads": {
+          "lang": "ko",
+          "for": "solad-media-2",
+          "video-id": "grok-demo-scene-01"
+        }
+      }
+    }
+  },
+  "api": [
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset&id=rounded @/examples/index.html",
+    "GET player-preset&id=accent @/examples/index.html",
+    "GET player-preset&id=default @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=rounded @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=accent @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=rounded @/examples/index.html",
+    "GET bootstrap",
+    "POST login",
+    "GET bootstrap",
+    "GET creatives",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-preset&id=p-lc3i8eidb4 @/examples/index.html"
+  ],
+  "events": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ]
+}

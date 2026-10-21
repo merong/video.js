@@ -1,0 +1,165 @@
+{
+ "scenario": "overlay",
+ "engine": "chromium",
+ "startedAt": "2026-10-21T17:24:31.443Z",
+ "steps": [
+  {
+   "name": "key Space on overlay button",
+   "before": {
+    "media": 0,
+    "store": 0,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": true,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 0,
+    "expectPct": 0,
+    "fillVar": "0%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 0.404,
+    "store": 0.402,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 1.117,
+    "expectPct": 1.123,
+    "fillVar": "1.118%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [],
+   "error": null
+  },
+  {
+   "name": "key ArrowRight on overlay button",
+   "before": {
+    "media": 0.408,
+    "store": 0.402,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11,
+    "thumbPct": 1.117,
+    "expectPct": 1.132,
+    "fillVar": "1.118%",
+    "counts": {
+     "setter": 0,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 10.986,
+    "store": 10.984,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11.92,
+    "thumbPct": 30.509,
+    "expectPct": 30.518,
+    "fillVar": "30.51%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 1533,
+     "type": "media:seeking",
+     "time": 10.402
+    },
+    {
+     "t": 1551,
+     "type": "media:seeked",
+     "time": 10.403
+    }
+   ],
+   "error": null
+  },
+  {
+   "name": "key b on overlay button",
+   "before": {
+    "media": 10.989,
+    "store": 10.984,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 11.92,
+    "thumbPct": 30.509,
+    "expectPct": 30.525,
+    "fillVar": "30.51%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "after": {
+    "media": 11.193,
+    "store": 11.191,
+    "seeking": false,
+    "mediaSeeking": false,
+    "paused": false,
+    "rate": 1,
+    "allowed": 12.185,
+    "thumbPct": 31.087,
+    "expectPct": 31.092,
+    "fillVar": "31.087%",
+    "counts": {
+     "setter": 1,
+     "clamped": 0,
+     "safetyNet": 0,
+     "rateReverted": 0,
+     "blockedNotes": 0
+    }
+   },
+   "events": [
+    {
+     "t": 2138,
+     "type": "bookmark",
+     "time": 10.99
+    }
+   ],
+   "error": null
+  }
+ ],
+ "before": {
+  "controlsTag": "media-controls"
+ },
+ "focusPath": [
+  "spike-lms-skin > button#resume-yes",
+  "spike-lms-skin > button#resume-no",
+  "input#note",
+  "body",
+  "spike-lms-skin > media-container",
+  "spike-lms-skin > button#resume-yes"
+ ],
+ "errors": []
+}

@@ -1,0 +1,190 @@
+{
+  "L01": {
+    "ready": [
+      {
+        "at": 188,
+        "target": "a1-qa-video-1",
+        "presetId": "p-lbelw4d2xx",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "fill": "rgb(37, 99, 235)",
+    "accentVar": "#2563eb",
+    "adEvents": [
+      "start@0"
+    ],
+    "solad": []
+  },
+  "L02": {
+    "first": [
+      {
+        "ifNoneMatch": null,
+        "cacheControlSent": null,
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792565226102,
+        "wireStatus": 200,
+        "etag": "\"69175241c87c23954d4e262ce4aa4ecf\"",
+        "cacheControl": "no-cache",
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ],
+    "reloads": [
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792565230160,
+        "ifNoneMatch": "\"69175241c87c23954d4e262ce4aa4ecf\"",
+        "cacheControlSent": null,
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false,
+        "wireStatus": 304,
+        "etag": "\"69175241c87c23954d4e262ce4aa4ecf\"",
+        "cacheControl": "no-cache"
+      },
+      {
+        "url": "/api/index.php?action=player-preset",
+        "method": "GET",
+        "at": 1792565231691,
+        "ifNoneMatch": "\"69175241c87c23954d4e262ce4aa4ecf\"",
+        "cacheControlSent": null,
+        "wireStatus": 304,
+        "etag": "\"69175241c87c23954d4e262ce4aa4ecf\"",
+        "cacheControl": "no-cache",
+        "status": 200,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ],
+    "fillAfter": "rgb(37, 99, 235)",
+    "errors": [
+      {
+        "url": "/favicon.ico",
+        "method": "GET",
+        "at": 1792565226103,
+        "ifNoneMatch": null,
+        "cacheControlSent": null,
+        "wireStatus": 404,
+        "etag": null,
+        "cacheControl": null,
+        "status": 404,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      },
+      {
+        "url": "/favicon.ico",
+        "method": "GET",
+        "at": 1792565228013,
+        "ifNoneMatch": null,
+        "cacheControlSent": null,
+        "wireStatus": 404,
+        "etag": null,
+        "cacheControl": null,
+        "status": 404,
+        "fromDiskCache": false,
+        "fromServiceWorker": false
+      }
+    ]
+  },
+  "P01": {
+    "default": {
+      "mark": 1,
+      "edit": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "duplicate": {
+        "disabled": false,
+        "reason": []
+      },
+      "delete": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "apply": {
+        "disabled": false,
+        "reason": []
+      }
+    },
+    "rounded": {
+      "mark": 1,
+      "edit": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "duplicate": {
+        "disabled": false,
+        "reason": []
+      },
+      "delete": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "apply": {
+        "disabled": false,
+        "reason": []
+      }
+    },
+    "accent": {
+      "mark": 1,
+      "edit": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "duplicate": {
+        "disabled": false,
+        "reason": []
+      },
+      "delete": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "apply": {
+        "disabled": false,
+        "reason": []
+      }
+    },
+    "site": "p-lbelw4d2xx"
+  },
+  "P03": {
+    "firstFocus": {
+      "tag": "BUTTON",
+      "label": "취소"
+    },
+    "afterEsc": {
+      "open": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "label": "둥근 테두리 사이트에 적용"
+      }
+    },
+    "siteAfter": "p-lbelw4d2xx",
+    "nativeDialogs": [],
+    "console": []
+  },
+  "R01": {
+    "editor390": {
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "ok": true
+    },
+    "nativeDialogs": [],
+    "console": []
+  }
+}

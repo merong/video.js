@@ -1,0 +1,22 @@
+// A1-QA-DELTA probe (no save): why 프리셋 저장 is disabled after filling 강조색 on P-A.
+import { launch, newContext, login, save, sleep, shot } from './lib.mjs';
+import { gotoList, presetForm, field, fill } from './presets.mjs';
+const browser = await launch();
+const context = await newContext(browser, { height: 1300 });
+const page = await context.newPage();
+await login(page);
+await gotoList(page);
+await page.getByRole('button', { name: 'QA Video.js 중립 v2 수정', exact: true }).click();
+await presetForm(page).waitFor();
+await sleep(1000);
+const state = async () => presetForm(page).getByRole('button', { name: '프리셋 저장' }).evaluate((b) => ({ disabled: b.disabled, reason: (b.getAttribute('aria-describedby') || '').split(' ').map((id) => document.getElementById(id)?.textContent?.trim()) }));
+const out = { atOpen: await state() };
+out.accentControls = await presetForm(page).locator('input').evaluateAll((els) => els.filter((e) => /accent/i.test(e.id + e.name) || (e.labels?.[0]?.textContent ?? '').includes('강조색')).map((e) => ({ type: e.type, id: e.id, label: e.labels?.[0]?.textContent?.trim(), aria: e.getAttribute('aria-label'), value: e.value })));
+await fill(page, { 강조색: '#111111' });
+await sleep(500);
+out.afterFill = await state();
+out.accentAfter = await field(page, '강조색').inputValue();
+await shot(page, 'PL08/probe-accent.png', { fullPage: true });
+save('PL08/probe-accent.json', out);
+console.log(JSON.stringify(out, null, 1));
+await browser.close();

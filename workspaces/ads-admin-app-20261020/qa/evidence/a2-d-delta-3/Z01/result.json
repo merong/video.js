@@ -1,0 +1,483 @@
+{
+  "runs": [
+    {
+      "label": "videojs default",
+      "query": "?preset=default",
+      "selected": "default",
+      "type": "videojs",
+      "initialAutoplay": {
+        "vp": false,
+        "video": false,
+        "t": 0
+      },
+      "initialLine": "최근 광고 진행아직 광고가 나오지 않았어요",
+      "steps": [
+        {
+          "step": "미드롤 앞",
+          "scene": "before-midroll",
+          "enabledAfterMs": 3217,
+          "lineBefore": "최근 광고 진행아직 광고가 나오지 않았어요",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 5.1
+          },
+          "msToInitial": null,
+          "msToTarget": 2540,
+          "lines": [
+            "2540ms 최근 광고 진행미드롤 1/1 재생 중21:36:23"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 1,
+          "logError": 0,
+          "logHead": [
+            "21:36:23 미드롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "끝 직전(미드롤 재생 중)",
+          "scene": "before-end",
+          "enabledAfterMs": 3010,
+          "lineBefore": "최근 광고 진행미드롤 1/1 재생 중21:36:23",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 10
+          },
+          "msToInitial": 3,
+          "msToTarget": 2367,
+          "lines": [
+            "3ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2367ms 최근 광고 진행포스트롤 1/1 재생 중21:36:26"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 2,
+          "logError": 0,
+          "logHead": [
+            "21:36:26 포스트롤 1/1 · 시작",
+            "21:36:23 미드롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "미드롤 앞(포스트롤 뒤)",
+          "scene": "before-midroll",
+          "enabledAfterMs": 8876,
+          "lineBefore": "최근 광고 진행포스트롤 1/1 · 끝남21:36:33",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 5.1
+          },
+          "msToInitial": 6,
+          "msToTarget": 2547,
+          "lines": [
+            "6ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2547ms 최근 광고 진행미드롤 1/1 재생 중21:36:35"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 4,
+          "logError": 0,
+          "logHead": [
+            "21:36:35 미드롤 1/1 · 시작",
+            "21:36:33 포스트롤 1/1 · 끝남",
+            "21:36:26 포스트롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "처음부터",
+          "scene": "start",
+          "enabledAfterMs": 726,
+          "lineBefore": "최근 광고 진행미드롤 1/1 재생 중21:36:35",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 0
+          },
+          "msToInitial": 3,
+          "msToTarget": 73,
+          "lines": [
+            "3ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "73ms 최근 광고 진행프리롤 1/2 재생 중21:36:36"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 5,
+          "logError": 0,
+          "logHead": [
+            "21:36:36 프리롤 1/2 · 시작",
+            "21:36:35 미드롤 1/1 · 시작",
+            "21:36:33 포스트롤 1/1 · 끝남"
+          ]
+        },
+        {
+          "step": "끝 직전",
+          "scene": "before-end",
+          "enabledAfterMs": 2988,
+          "lineBefore": "최근 광고 진행프리롤 1/2 재생 중21:36:36",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 10
+          },
+          "msToInitial": 3,
+          "msToTarget": 2348,
+          "lines": [
+            "3ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2348ms 최근 광고 진행포스트롤 1/1 재생 중21:36:39"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 6,
+          "logError": 0,
+          "logHead": [
+            "21:36:39 포스트롤 1/1 · 시작",
+            "21:36:36 프리롤 1/2 · 시작",
+            "21:36:35 미드롤 1/1 · 시작"
+          ]
+        }
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "events": 0
+    },
+    {
+      "label": "native p-pchm59hhyv",
+      "query": "?preset=p-pchm59hhyv",
+      "selected": "p-pchm59hhyv",
+      "type": "native",
+      "initialAutoplay": {
+        "vp": null,
+        "video": false,
+        "t": 0
+      },
+      "initialLine": "최근 광고 진행아직 광고가 나오지 않았어요",
+      "steps": [
+        {
+          "step": "미드롤 앞",
+          "scene": "before-midroll",
+          "enabledAfterMs": 3117,
+          "lineBefore": "최근 광고 진행아직 광고가 나오지 않았어요",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 5.1
+          },
+          "msToInitial": null,
+          "msToTarget": 2486,
+          "lines": [
+            "2486ms 최근 광고 진행미드롤 1/1 재생 중21:36:43"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 1,
+          "logError": 0,
+          "logHead": [
+            "21:36:43 미드롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "끝 직전(미드롤 재생 중)",
+          "scene": "before-end",
+          "enabledAfterMs": 3084,
+          "lineBefore": "최근 광고 진행미드롤 1/1 재생 중21:36:43",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 10
+          },
+          "msToInitial": 1,
+          "msToTarget": 2387,
+          "lines": [
+            "1ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2387ms 최근 광고 진행포스트롤 1/1 재생 중21:36:46"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 2,
+          "logError": 0,
+          "logHead": [
+            "21:36:46 포스트롤 1/1 · 시작",
+            "21:36:43 미드롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "미드롤 앞(포스트롤 뒤)",
+          "scene": "before-midroll",
+          "enabledAfterMs": 8877,
+          "lineBefore": "최근 광고 진행포스트롤 1/1 · 끝남21:36:53",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 5.1
+          },
+          "msToInitial": 1,
+          "msToTarget": 2549,
+          "lines": [
+            "1ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2549ms 최근 광고 진행미드롤 1/1 재생 중21:36:55"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 4,
+          "logError": 0,
+          "logHead": [
+            "21:36:55 미드롤 1/1 · 시작",
+            "21:36:53 포스트롤 1/1 · 끝남",
+            "21:36:46 포스트롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "처음부터",
+          "scene": "start",
+          "enabledAfterMs": 754,
+          "lineBefore": "최근 광고 진행미드롤 1/1 재생 중21:36:55",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 0
+          },
+          "msToInitial": 1,
+          "msToTarget": 93,
+          "lines": [
+            "1ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "93ms 최근 광고 진행프리롤 1/2 재생 중21:36:56"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 5,
+          "logError": 0,
+          "logHead": [
+            "21:36:56 프리롤 1/2 · 시작",
+            "21:36:55 미드롤 1/1 · 시작",
+            "21:36:53 포스트롤 1/1 · 끝남"
+          ]
+        },
+        {
+          "step": "끝 직전",
+          "scene": "before-end",
+          "enabledAfterMs": 2983,
+          "lineBefore": "최근 광고 진행프리롤 1/2 재생 중21:36:56",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 10
+          },
+          "msToInitial": 1,
+          "msToTarget": 2339,
+          "lines": [
+            "1ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2339ms 최근 광고 진행포스트롤 1/1 재생 중21:36:59"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 6,
+          "logError": 0,
+          "logHead": [
+            "21:36:59 포스트롤 1/1 · 시작",
+            "21:36:56 프리롤 1/2 · 시작",
+            "21:36:55 미드롤 1/1 · 시작"
+          ]
+        }
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "events": 0
+    },
+    {
+      "label": "autoplay p-lc3i8eidb4",
+      "query": "?preset=p-lc3i8eidb4",
+      "selected": "p-lc3i8eidb4",
+      "type": "videojs",
+      "initialAutoplay": {
+        "vp": false,
+        "video": true,
+        "t": 0
+      },
+      "initialLine": "최근 광고 진행프리롤 1/2 재생 중21:37:00",
+      "steps": [
+        {
+          "step": "미드롤 앞",
+          "scene": "before-midroll",
+          "enabledAfterMs": 2881,
+          "lineBefore": "최근 광고 진행프리롤 1/2 재생 중21:37:00",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 5.1
+          },
+          "msToInitial": 3,
+          "msToTarget": 2237,
+          "lines": [
+            "3ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2237ms 최근 광고 진행미드롤 1/1 재생 중21:37:03"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 2,
+          "logError": 0,
+          "logHead": [
+            "21:37:03 미드롤 1/1 · 시작",
+            "21:37:00 프리롤 1/2 · 시작"
+          ]
+        },
+        {
+          "step": "끝 직전(미드롤 재생 중)",
+          "scene": "before-end",
+          "enabledAfterMs": 2787,
+          "lineBefore": "최근 광고 진행미드롤 1/1 재생 중21:37:03",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 10
+          },
+          "msToInitial": 2,
+          "msToTarget": 2123,
+          "lines": [
+            "2ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2123ms 최근 광고 진행포스트롤 1/1 재생 중21:37:06"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 3,
+          "logError": 0,
+          "logHead": [
+            "21:37:06 포스트롤 1/1 · 시작",
+            "21:37:03 미드롤 1/1 · 시작",
+            "21:37:00 프리롤 1/2 · 시작"
+          ]
+        },
+        {
+          "step": "미드롤 앞(포스트롤 뒤)",
+          "scene": "before-midroll",
+          "enabledAfterMs": 8397,
+          "lineBefore": "최근 광고 진행포스트롤 1/1 · 끝남21:37:12",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 5.1
+          },
+          "msToInitial": 3,
+          "msToTarget": 2278,
+          "lines": [
+            "3ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2278ms 최근 광고 진행미드롤 1/1 재생 중21:37:14"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 5,
+          "logError": 0,
+          "logHead": [
+            "21:37:14 미드롤 1/1 · 시작",
+            "21:37:12 포스트롤 1/1 · 끝남",
+            "21:37:06 포스트롤 1/1 · 시작"
+          ]
+        },
+        {
+          "step": "처음부터",
+          "scene": "start",
+          "enabledAfterMs": 716,
+          "lineBefore": "최근 광고 진행미드롤 1/1 재생 중21:37:14",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 0
+          },
+          "msToInitial": 2,
+          "msToTarget": 70,
+          "lines": [
+            "2ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "70ms 최근 광고 진행프리롤 1/2 재생 중21:37:15"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 6,
+          "logError": 0,
+          "logHead": [
+            "21:37:15 프리롤 1/2 · 시작",
+            "21:37:14 미드롤 1/1 · 시작",
+            "21:37:12 포스트롤 1/1 · 끝남"
+          ]
+        },
+        {
+          "step": "끝 직전",
+          "scene": "before-end",
+          "enabledAfterMs": 2759,
+          "lineBefore": "최근 광고 진행프리롤 1/2 재생 중21:37:15",
+          "tagged": true,
+          "newPlayer": true,
+          "player": {
+            "tag": null,
+            "autoplayAttr": false,
+            "videoAutoplay": false,
+            "t": 10
+          },
+          "msToInitial": 2,
+          "msToTarget": 2111,
+          "lines": [
+            "2ms 최근 광고 진행아직 광고가 나오지 않았어요",
+            "2111ms 최근 광고 진행포스트롤 1/1 재생 중21:37:18"
+          ],
+          "preroll": false,
+          "error": false,
+          "logRows": 7,
+          "logError": 0,
+          "logHead": [
+            "21:37:18 포스트롤 1/1 · 시작",
+            "21:37:15 프리롤 1/2 · 시작",
+            "21:37:14 미드롤 1/1 · 시작"
+          ]
+        }
+      ],
+      "console": [],
+      "events": 0
+    }
+  ],
+  "eventsTotal": 0
+}

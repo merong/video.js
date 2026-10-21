@@ -1,0 +1,935 @@
+{
+  "runs": [
+    {
+      "size": "1280x800",
+      "rows": [
+        {
+          "name": "QA 보관 테스트",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 이어버드 프리롤",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 포스트롤 이미지",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 커피 프리롤 v2",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 생수 미드롤",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 오류 뒤 유효 쓰기",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "기본 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "플랫 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "둥근 테두리 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "강조색 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 강조색 복제 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 자동재생 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 기본 video 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 테두리 8자리 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 테두리 투명색 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        }
+      ],
+      "overflowList": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "flatOpen": {
+        "present": true,
+        "open": true,
+        "modal": true,
+        "cls": "sa-dialog is-wide",
+        "label": "플랫 미리보기",
+        "describedBy": [],
+        "width": 740,
+        "height": 768,
+        "aside": "저장된 값 · 통계에 남기지 않아요",
+        "bodyScroll": {
+          "overflowY": "auto",
+          "scrollH": 673,
+          "clientH": 638
+        },
+        "footer": [
+          {
+            "tag": "A",
+            "text": "데모에서 열기 (새 창)",
+            "href": "http://127.0.0.1:18781/examples/index.html?preset=flat",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "닫기",
+            "href": null,
+            "target": null,
+            "rel": null
+          }
+        ],
+        "headClose": "닫기",
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "닫기",
+          "text": ""
+        },
+        "iframes": 1,
+        "stageTools": [
+          "처음부터",
+          "미드롤 앞",
+          "끝 직전",
+          "다시 불러오기"
+        ],
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "seg": "폭 보기좁게 · 390보통 · 768넓게 · 자리 폭자리 폭 702px · 실제 크기예요",
+        "frameQuery": "?type=videojs",
+        "shape": {
+          "kind": "solad-video-skin",
+          "radius": "0px",
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-4px",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "borderWidth": "0px",
+          "borderColor": "rgb(24, 24, 26)",
+          "varBorderColor": "#00000000",
+          "varRadius": "0px",
+          "overflow": "clip",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 702,
+            "h": 394.9
+          }
+        },
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        },
+        "mediaWhileOpen": 1,
+        "secondTab": {
+          "tag": "INPUT",
+          "id": null,
+          "text": "",
+          "role": null
+        },
+        "nowAfterStart": "최근 광고 진행프리롤 1/2 재생 중23:35:01"
+      },
+      "afterEsc": {
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "플랫 미리보기",
+          "text": "미리보기"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0,
+        "frames": 1
+      },
+      "reopen": {
+        "iframes": 1,
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요"
+      },
+      "afterHeadClose": {
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "플랫 미리보기",
+          "text": "미리보기"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0
+      },
+      "saved8": {
+        "present": true,
+        "open": true,
+        "modal": true,
+        "cls": "sa-dialog is-wide",
+        "label": "QA 테두리 8자리 미리보기",
+        "describedBy": [],
+        "width": 740,
+        "height": 768,
+        "aside": "저장된 값 · 통계에 남기지 않아요",
+        "bodyScroll": {
+          "overflowY": "auto",
+          "scrollH": 673,
+          "clientH": 638
+        },
+        "footer": [
+          {
+            "tag": "A",
+            "text": "데모에서 열기 (새 창)",
+            "href": "http://127.0.0.1:18781/examples/index.html?preset=p-wgqz3x31a5",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "닫기",
+            "href": null,
+            "target": null,
+            "rel": null
+          }
+        ],
+        "headClose": "닫기",
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "닫기",
+          "text": ""
+        },
+        "iframes": 1,
+        "stageTools": [
+          "처음부터",
+          "미드롤 앞",
+          "끝 직전",
+          "다시 불러오기"
+        ],
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "seg": "폭 보기좁게 · 390보통 · 768넓게 · 자리 폭자리 폭 702px · 실제 크기예요",
+        "shape": {
+          "kind": "solad-video-skin",
+          "radius": "28px",
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-4px",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "borderWidth": "0px",
+          "borderColor": "rgb(24, 24, 26)",
+          "varBorderColor": "#00000026",
+          "varRadius": "",
+          "overflow": "clip",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 702,
+            "h": 394.9
+          }
+        }
+      },
+      "afterFootClose": {
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "QA 테두리 8자리 미리보기",
+          "text": "미리보기"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0
+      },
+      "demoLink": {
+        "url": "",
+        "stillOpen": true
+      },
+      "otherMenu": {
+        "hash": "#/schedule",
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "H1",
+          "label": null,
+          "text": "지면 편성"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0
+      },
+      "unsavedListName": [],
+      "unsaved": {
+        "present": true,
+        "open": true,
+        "modal": true,
+        "cls": "sa-dialog is-wide",
+        "label": "QA 테두리 8자리 미리보기",
+        "describedBy": [
+          "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요."
+        ],
+        "width": 740,
+        "height": 768,
+        "aside": "저장된 값 · 통계에 남기지 않아요",
+        "bodyScroll": {
+          "overflowY": "auto",
+          "scrollH": 723,
+          "clientH": 638
+        },
+        "footer": [
+          {
+            "tag": "A",
+            "text": "데모에서 열기 (새 창)",
+            "href": "http://127.0.0.1:18781/examples/index.html?preset=p-wgqz3x31a5",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "닫기",
+            "href": null,
+            "target": null,
+            "rel": null
+          }
+        ],
+        "headClose": "닫기",
+        "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+        "active": {
+          "tag": "BUTTON",
+          "label": "닫기",
+          "text": ""
+        },
+        "iframes": 1,
+        "stageTools": [
+          "처음부터",
+          "미드롤 앞",
+          "끝 직전",
+          "다시 불러오기"
+        ],
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "seg": "폭 보기좁게 · 390보통 · 768넓게 · 자리 폭자리 폭 702px · 실제 크기예요",
+        "frameQuery": "?type=videojs"
+      },
+      "unsavedClosedFocus": {
+        "tag": "BUTTON",
+        "label": "QA 테두리 8자리 미리보기",
+        "text": "미리보기"
+      },
+      "savedNoNote": {
+        "note": null,
+        "describedBy": []
+      },
+      "api": [
+        "POST login",
+        "GET player-presets",
+        "GET player-presets",
+        "GET player-presets"
+      ],
+      "events": 0,
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "size": "390x844",
+      "rows": [
+        {
+          "name": "QA 보관 테스트",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 이어버드 프리롤",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 포스트롤 이미지",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 커피 프리롤 v2",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 생수 미드롤",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "name": "QA 오류 뒤 유효 쓰기",
+          "first": {
+            "text": "미리보기",
+            "label": null
+          },
+          "count": 3,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "기본 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "플랫 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "둥근 테두리 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "강조색 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 강조색 복제 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 자동재생 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 기본 video 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 테두리 8자리 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        },
+        {
+          "first": {
+            "text": "미리보기",
+            "label": "QA 테두리 투명색 미리보기"
+          },
+          "count": 5,
+          "pinned": ""
+        }
+      ],
+      "overflowList": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "flatOpen": {
+        "present": true,
+        "open": true,
+        "modal": true,
+        "cls": "sa-dialog is-wide",
+        "label": "플랫 미리보기",
+        "describedBy": [],
+        "width": 374,
+        "height": 674,
+        "aside": "저장된 값 · 통계에 남기지 않아요",
+        "bodyScroll": {
+          "overflowY": "auto",
+          "scrollH": 544,
+          "clientH": 544
+        },
+        "footer": [
+          {
+            "tag": "A",
+            "text": "데모에서 열기 (새 창)",
+            "href": "http://127.0.0.1:18781/examples/index.html?preset=flat",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "닫기",
+            "href": null,
+            "target": null,
+            "rel": null
+          }
+        ],
+        "headClose": "닫기",
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "닫기",
+          "text": ""
+        },
+        "iframes": 1,
+        "stageTools": [
+          "처음부터",
+          "미드롤 앞",
+          "끝 직전",
+          "다시 불러오기"
+        ],
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "seg": "폭 보기좁게 · 390보통 · 768넓게 · 자리 폭자리 폭 348px · 실제 크기예요",
+        "frameQuery": "?type=videojs",
+        "shape": {
+          "kind": "solad-video-skin",
+          "radius": "0px",
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-4px",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "borderWidth": "0px",
+          "borderColor": "rgb(24, 24, 26)",
+          "varBorderColor": "#00000000",
+          "varRadius": "0px",
+          "overflow": "clip",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 348,
+            "h": 195.8
+          }
+        },
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        },
+        "mediaWhileOpen": 1,
+        "secondTab": {
+          "tag": "INPUT",
+          "id": null,
+          "text": "",
+          "role": null
+        },
+        "nowAfterStart": "최근 광고 진행프리롤 1/2 재생 중23:35:19"
+      },
+      "afterEsc": {
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "플랫 미리보기",
+          "text": "미리보기"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0,
+        "frames": 1
+      },
+      "reopen": {
+        "iframes": 1,
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요"
+      },
+      "afterHeadClose": {
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "플랫 미리보기",
+          "text": "미리보기"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0
+      },
+      "saved8": {
+        "present": true,
+        "open": true,
+        "modal": true,
+        "cls": "sa-dialog is-wide",
+        "label": "QA 테두리 8자리 미리보기",
+        "describedBy": [],
+        "width": 374,
+        "height": 684,
+        "aside": "저장된 값 · 통계에 남기지 않아요",
+        "bodyScroll": {
+          "overflowY": "auto",
+          "scrollH": 544,
+          "clientH": 544
+        },
+        "footer": [
+          {
+            "tag": "A",
+            "text": "데모에서 열기 (새 창)",
+            "href": "http://127.0.0.1:18781/examples/index.html?preset=p-wgqz3x31a5",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "닫기",
+            "href": null,
+            "target": null,
+            "rel": null
+          }
+        ],
+        "headClose": "닫기",
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "닫기",
+          "text": ""
+        },
+        "iframes": 1,
+        "stageTools": [
+          "처음부터",
+          "미드롤 앞",
+          "끝 직전",
+          "다시 불러오기"
+        ],
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "seg": "폭 보기좁게 · 390보통 · 768넓게 · 자리 폭자리 폭 348px · 실제 크기예요",
+        "shape": {
+          "kind": "solad-video-skin",
+          "radius": "28px",
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-4px",
+          "outlineColor": "rgba(0, 0, 0, 0)",
+          "borderWidth": "0px",
+          "borderColor": "rgb(24, 24, 26)",
+          "varBorderColor": "#00000026",
+          "varRadius": "",
+          "overflow": "clip",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 348,
+            "h": 195.8
+          }
+        }
+      },
+      "afterFootClose": {
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "BUTTON",
+          "label": "QA 테두리 8자리 미리보기",
+          "text": "미리보기"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0
+      },
+      "demoLink": {
+        "url": "",
+        "stillOpen": true
+      },
+      "otherMenu": {
+        "hash": "#/schedule",
+        "present": false,
+        "open": false,
+        "modal": false,
+        "cls": null,
+        "label": "",
+        "describedBy": [],
+        "width": null,
+        "height": null,
+        "aside": null,
+        "bodyScroll": null,
+        "footer": [],
+        "headClose": null,
+        "note": null,
+        "active": {
+          "tag": "H1",
+          "label": null,
+          "text": "지면 편성"
+        },
+        "iframes": 0,
+        "stageTools": [],
+        "now": null,
+        "seg": null,
+        "media": 0
+      },
+      "unsavedListName": [],
+      "unsaved": {
+        "present": true,
+        "open": true,
+        "modal": true,
+        "cls": "sa-dialog is-wide",
+        "label": "QA 테두리 8자리 미리보기",
+        "describedBy": [
+          "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요."
+        ],
+        "width": 374,
+        "height": 752,
+        "aside": "저장된 값 · 통계에 남기지 않아요",
+        "bodyScroll": {
+          "overflowY": "auto",
+          "scrollH": 612,
+          "clientH": 612
+        },
+        "footer": [
+          {
+            "tag": "A",
+            "text": "데모에서 열기 (새 창)",
+            "href": "http://127.0.0.1:18781/examples/index.html?preset=p-wgqz3x31a5",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "닫기",
+            "href": null,
+            "target": null,
+            "rel": null
+          }
+        ],
+        "headClose": "닫기",
+        "note": "저장된 값으로 보여요. 이 프리셋에는 저장하지 않은 입력이 있어요. 편집 화면에서 저장하면 여기에도 보여요.",
+        "active": {
+          "tag": "BUTTON",
+          "label": "닫기",
+          "text": ""
+        },
+        "iframes": 1,
+        "stageTools": [
+          "처음부터",
+          "미드롤 앞",
+          "끝 직전",
+          "다시 불러오기"
+        ],
+        "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+        "seg": "폭 보기좁게 · 390보통 · 768넓게 · 자리 폭자리 폭 348px · 실제 크기예요",
+        "frameQuery": "?type=videojs"
+      },
+      "unsavedClosedFocus": {
+        "tag": "BUTTON",
+        "label": "QA 테두리 8자리 미리보기",
+        "text": "미리보기"
+      },
+      "savedNoNote": {
+        "note": null,
+        "describedBy": []
+      },
+      "api": [
+        "POST login",
+        "GET player-presets",
+        "GET player-presets",
+        "GET player-presets"
+      ],
+      "events": 0,
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    }
+  ]
+}

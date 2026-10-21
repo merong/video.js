@@ -1,0 +1,147 @@
+{
+  "code": [
+    {
+      "label": "videojs default",
+      "poster": true,
+      "title": true,
+      "titleText": "",
+      "posterUrl": "",
+      "html": {
+        "title": true,
+        "poster": false,
+        "dataTitle": true,
+        "dataPoster": false
+      },
+      "js": {
+        "title": true,
+        "poster": false,
+        "dataTitle": true,
+        "dataPoster": false
+      }
+    },
+    {
+      "label": "videojs poster+title on",
+      "poster": true,
+      "title": true,
+      "titleText": "",
+      "posterUrl": "",
+      "html": {
+        "title": true,
+        "poster": false,
+        "dataTitle": true,
+        "dataPoster": false
+      },
+      "js": {
+        "title": true,
+        "poster": false,
+        "dataTitle": true,
+        "dataPoster": false
+      },
+      "htmlSample": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>"
+    },
+    {
+      "label": "demo stage player attributes (poster+title on)",
+      "frameAttrs": {
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null
+      }
+    },
+    {
+      "label": "native default",
+      "poster": true,
+      "posterUrl": "",
+      "html": {
+        "title": true,
+        "poster": false,
+        "dataTitle": true,
+        "dataPoster": false
+      },
+      "js": {
+        "title": true,
+        "poster": false,
+        "dataTitle": true,
+        "dataPoster": false
+      }
+    }
+  ],
+  "pages": [
+    {
+      "label": "demo videojs (install code)",
+      "bad": [
+        "401 /api/index.php?action=player-presets @/examples/index.html"
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+        "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "events": 0
+    },
+    {
+      "label": "demo native (install code)",
+      "bad": [
+        "401 /api/index.php?action=player-presets @/examples/index.html"
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      ],
+      "events": 0
+    },
+    {
+      "label": "play-test",
+      "bad": [
+        "401 /api/index.php?action=player-presets @/examples/play-test.html"
+      ],
+      "console": [
+        "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      ],
+      "events": 0
+    },
+    {
+      "label": "guide + help",
+      "bad": [],
+      "console": [],
+      "events": 0
+    },
+    {
+      "label": "admin login",
+      "bad": [],
+      "console": [],
+      "events": 0
+    },
+    {
+      "label": "editor p-i0aecb28w3",
+      "bad": [],
+      "console": [],
+      "events": 0
+    },
+    {
+      "label": "editor native p-pchm59hhyv",
+      "bad": [],
+      "console": [],
+      "events": 0
+    },
+    {
+      "label": "built-in rounded",
+      "bad": [],
+      "console": [],
+      "events": 0
+    },
+    {
+      "label": "schedule preview",
+      "bad": [],
+      "console": [],
+      "events": 0
+    },
+    {
+      "label": "demo while logged in",
+      "bad": [],
+      "console": [],
+      "events": 0
+    }
+  ],
+  "allBad": [
+    "401 /api/index.php?action=player-presets @/examples/index.html",
+    "401 /api/index.php?action=player-presets @/examples/play-test.html"
+  ],
+  "eventsTotal": 0
+}

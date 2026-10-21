@@ -1,0 +1,51 @@
+{
+  "accent": {
+    "status": [
+      "\"QA 강조색 복제\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ],
+    "id": "p-i0aecb28w3"
+  },
+  "autoplay": {
+    "status": [
+      "\"QA 자동재생\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ],
+    "id": "p-lc3i8eidb4"
+  },
+  "native": {
+    "status": [
+      "\"QA 기본 video\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ],
+    "id": "p-pchm59hhyv"
+  },
+  "apply": {
+    "dialogText": "\"QA 강조색 복제\" 프리셋을 사이트에 적용할까요?\n\n로더를 넣은 사이트의 모든 플레이어가 이 프리셋으로 바뀌어요. 방문자가 페이지를 새로고침하면 바로 보여요.\n\n지금 사이트 적용\t기본 · Video.js 플레이어 · 페이지 언어\n바꿀 프리셋\tQA 강조색 복제 · Video.js 플레이어 · 페이지 언어\n\n취소\n사이트에 적용",
+    "status": [
+      "\"QA 강조색 복제\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ]
+  },
+  "list": {
+    "revision": 4,
+    "defaultPresetId": "p-i0aecb28w3",
+    "saved": [
+      {
+        "id": "p-i0aecb28w3",
+        "name": "QA 강조색 복제",
+        "playerType": "videojs",
+        "autoplay": null
+      },
+      {
+        "id": "p-lc3i8eidb4",
+        "name": "QA 자동재생",
+        "playerType": "videojs",
+        "autoplay": true
+      },
+      {
+        "id": "p-pchm59hhyv",
+        "name": "QA 기본 video",
+        "playerType": "native",
+        "autoplay": null
+      }
+    ]
+  },
+  "console": []
+}

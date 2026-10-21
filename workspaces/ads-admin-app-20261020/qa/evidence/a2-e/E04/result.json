@@ -1,0 +1,840 @@
+{
+  "runs": [
+    {
+      "size": "1280x900",
+      "noTrack": {
+        "facts": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 818,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": true,
+              "availability": "unavailable",
+              "ariaDisabled": "true",
+              "ariaLabel": "자막 없음",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "grid",
+              "w": 36,
+              "tipLabel": "자막 없음",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "none"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [],
+          "textTracks": [],
+          "t": 0
+        },
+        "group": {
+          "checked": "true",
+          "url": ""
+        },
+        "tab": [
+          "재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거",
+          "media-slider-thumb 볼륨",
+          "media-slider-thumb 탐색",
+          "media-time 재생 시간 표시, 10초 남음.",
+          "media-captions-button#vjs-t8h5QXcn-0-3-trigger 자막 없음",
+          "button#vjs-t8h5QXcn-0-4-trigger",
+          "media-pip-button#vjs-t8h5QXcn-0-7-trigger 화면 속 화면",
+          "media-fullscreen-button#vjs-t8h5QXcn-0-8-trigger 전체 화면"
+        ],
+        "tooltipShown": {
+          "open": true,
+          "text": "자막 없음 C"
+        },
+        "afterClick": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 818,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": true,
+              "availability": "unavailable",
+              "ariaDisabled": "true",
+              "ariaLabel": "자막 없음",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "grid",
+              "w": 36,
+              "tipLabel": "자막 없음",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "none"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [],
+          "textTracks": [],
+          "t": 0
+        },
+        "afterEnter": [
+          {
+            "id": "vjs-t8h5QXcn-0-3-trigger",
+            "hiddenAttr": true,
+            "availability": "unavailable",
+            "ariaDisabled": "true",
+            "ariaLabel": "자막 없음",
+            "ariaPressed": null,
+            "tabIndex": 0,
+            "display": "grid",
+            "w": 36,
+            "tipLabel": "자막 없음",
+            "tipShortcut": "C",
+            "tipShortcutDisplay": "none"
+          }
+        ],
+        "afterC": [
+          {
+            "id": "vjs-t8h5QXcn-0-3-trigger",
+            "hiddenAttr": true,
+            "availability": "unavailable",
+            "ariaDisabled": "true",
+            "ariaLabel": "자막 없음",
+            "ariaPressed": null,
+            "tabIndex": 0,
+            "display": "grid",
+            "w": 36,
+            "tipLabel": "자막 없음",
+            "tipShortcut": "C",
+            "tipShortcutDisplay": "none"
+          }
+        ],
+        "langs": {
+          "en": {
+            "lang": "en",
+            "button": [
+              "No captions | tip No captions | shortcut \"C\" none"
+            ]
+          },
+          "ja": {
+            "lang": "ja",
+            "button": [
+              "字幕なし | tip 字幕なし | shortcut \"C\" none"
+            ]
+          },
+          "zh-CN": {
+            "lang": "zh-CN",
+            "button": [
+              "无字幕 | tip 无字幕 | shortcut \"C\" none"
+            ]
+          },
+          "ko": {
+            "lang": "ko",
+            "button": [
+              "자막 없음 | tip 자막 없음 | shortcut \"C\" none"
+            ]
+          }
+        }
+      },
+      "off": {
+        "query": "?captions=false",
+        "facts": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": "off",
+          "containerWidth": 818,
+          "buttons": [],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "화질",
+            "오디오",
+            "속도"
+          ],
+          "menuCaptionTokens": 0,
+          "captionsHotkeys": [],
+          "tracks": [],
+          "textTracks": [],
+          "t": 0
+        },
+        "tab": [
+          "재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거",
+          "media-slider-thumb 볼륨",
+          "media-slider-thumb 탐색",
+          "media-time 재생 시간 표시, 10초 남음.",
+          "button#vjs-t8h5QXcn-0-4-trigger",
+          "media-pip-button#vjs-t8h5QXcn-0-7-trigger 화면 속 화면",
+          "media-fullscreen-button#vjs-t8h5QXcn-0-8-trigger 전체 화면",
+          "button"
+        ],
+        "afterC": [],
+        "settingsButton": 1,
+        "menuOpen": [
+          "속도 1×"
+        ]
+      },
+      "sample": {
+        "onMenu": [
+          "화질 자동",
+          "오디오",
+          "속도 1×",
+          "캡션 끄기",
+          "화질",
+          "오디오",
+          "속도",
+          "캡션"
+        ],
+        "frameLog": [
+          "0ms 자막 없음|unavailable|grid",
+          "41ms no skin",
+          "68ms 자막 켜기|available|grid"
+        ],
+        "url": "/examples/sample-captions.vtt",
+        "query": "?captionsUrl=%2Fexamples%2Fsample-captions.vtt",
+        "facts": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 818,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": false,
+              "availability": "available",
+              "ariaDisabled": null,
+              "ariaLabel": "자막 켜기",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "grid",
+              "w": 36,
+              "tipLabel": "자막 켜기",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "inline"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 0
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "disabled",
+              "activeCue": null
+            }
+          ],
+          "t": 0
+        },
+        "code": {
+          "html": [
+            "     data-captions=\"/examples/sample-captions.vtt\"></div>"
+          ],
+          "js": [
+            "  captions: \"/examples/sample-captions.vtt\","
+          ]
+        },
+        "tab": [
+          "재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거",
+          "media-slider-thumb 볼륨",
+          "media-slider-thumb 탐색",
+          "media-time 재생 시간 표시, 10초 남음.",
+          "media-captions-button#vjs-t8h5QXcn-0-3-trigger 자막 켜기",
+          "button#vjs-t8h5QXcn-0-4-trigger",
+          "media-pip-button#vjs-t8h5QXcn-0-7-trigger 화면 속 화면",
+          "media-fullscreen-button#vjs-t8h5QXcn-0-8-trigger 전체 화면"
+        ],
+        "afterClickOn": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 818,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": false,
+              "availability": "available",
+              "ariaDisabled": null,
+              "ariaLabel": "자막 끄기",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "grid",
+              "w": 36,
+              "tipLabel": "자막 끄기",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "inline"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 한국어",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 2
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "showing",
+              "activeCue": null
+            }
+          ],
+          "t": 0
+        },
+        "afterClickOff": [
+          {
+            "kind": "subtitles",
+            "label": "한국어",
+            "language": "ko",
+            "mode": "disabled",
+            "activeCue": null
+          }
+        ],
+        "afterCOn": [
+          {
+            "kind": "subtitles",
+            "label": "한국어",
+            "language": "ko",
+            "mode": "showing",
+            "activeCue": null
+          }
+        ],
+        "playing": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 818,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": false,
+              "availability": "available",
+              "ariaDisabled": null,
+              "ariaLabel": "자막 켜기",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "grid",
+              "w": 36,
+              "tipLabel": "자막 켜기",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "inline"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 0
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "disabled",
+              "activeCue": null
+            }
+          ],
+          "t": 3.53
+        },
+        "afterCOff": [
+          {
+            "kind": "subtitles",
+            "label": "한국어",
+            "language": "ko",
+            "mode": "showing",
+            "activeCue": "자막 버튼이나 C 키로 켜고 끌 수 있어요."
+          }
+        ],
+        "offWithUrl": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": "off",
+          "containerWidth": 818,
+          "buttons": [],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "화질",
+            "오디오",
+            "속도"
+          ],
+          "menuCaptionTokens": 0,
+          "captionsHotkeys": [],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 0
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "disabled",
+              "activeCue": null
+            }
+          ],
+          "t": 0
+        },
+        "offWithUrlCode": [
+          "     data-captions=\"/examples/sample-captions.vtt\"></div>"
+        ]
+      },
+      "vtt": {
+        "status": 200,
+        "type": "text/vtt; charset=UTF-8",
+        "firstLine": "WEBVTT",
+        "cues": 3
+      },
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "size": "390x844",
+      "noTrack": {
+        "facts": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 320,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": true,
+              "availability": "unavailable",
+              "ariaDisabled": "true",
+              "ariaLabel": "자막 없음",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "none",
+              "w": 0,
+              "tipLabel": "자막 없음",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "none"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [],
+          "textTracks": [],
+          "t": 0
+        },
+        "group": {
+          "checked": "true",
+          "url": ""
+        },
+        "tab": [
+          "재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거",
+          "media-slider-thumb 볼륨",
+          "media-slider-thumb 탐색",
+          "button#vjs-t8h5QXcn-0-4-trigger",
+          "media-pip-button#vjs-t8h5QXcn-0-7-trigger 화면 속 화면",
+          "media-fullscreen-button#vjs-t8h5QXcn-0-8-trigger 전체 화면",
+          "button",
+          "button"
+        ],
+        "afterC": [
+          {
+            "id": "vjs-t8h5QXcn-0-3-trigger",
+            "hiddenAttr": true,
+            "availability": "unavailable",
+            "ariaDisabled": "true",
+            "ariaLabel": "자막 없음",
+            "ariaPressed": null,
+            "tabIndex": 0,
+            "display": "none",
+            "w": 0,
+            "tipLabel": "자막 없음",
+            "tipShortcut": "C",
+            "tipShortcutDisplay": "none"
+          }
+        ]
+      },
+      "off": {
+        "query": "?captions=false",
+        "facts": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": "off",
+          "containerWidth": 320,
+          "buttons": [],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "화질",
+            "오디오",
+            "속도"
+          ],
+          "menuCaptionTokens": 0,
+          "captionsHotkeys": [],
+          "tracks": [],
+          "textTracks": [],
+          "t": 0
+        },
+        "tab": [
+          "재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거",
+          "media-slider-thumb 볼륨",
+          "media-slider-thumb 탐색",
+          "button#vjs-t8h5QXcn-0-4-trigger",
+          "media-pip-button#vjs-t8h5QXcn-0-7-trigger 화면 속 화면",
+          "media-fullscreen-button#vjs-t8h5QXcn-0-8-trigger 전체 화면",
+          "button",
+          "button"
+        ],
+        "afterC": [],
+        "settingsButton": 1,
+        "menuOpen": [
+          "속도 1×"
+        ]
+      },
+      "sample": {
+        "onMenu": [
+          "화질 자동",
+          "오디오",
+          "속도 1×",
+          "캡션 끄기",
+          "화질",
+          "오디오",
+          "속도",
+          "캡션"
+        ],
+        "frameLog": [
+          "0ms 자막 없음|unavailable|none",
+          "45ms no skin",
+          "72ms 자막 켜기|available|none"
+        ],
+        "url": "/examples/sample-captions.vtt",
+        "query": "?captionsUrl=%2Fexamples%2Fsample-captions.vtt",
+        "facts": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 320,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": false,
+              "availability": "available",
+              "ariaDisabled": null,
+              "ariaLabel": "자막 켜기",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "none",
+              "w": 0,
+              "tipLabel": "자막 켜기",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "inline"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 0
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "disabled",
+              "activeCue": null
+            }
+          ],
+          "t": 0
+        },
+        "code": {
+          "html": [
+            "     data-captions=\"/examples/sample-captions.vtt\"></div>"
+          ],
+          "js": [
+            "  captions: \"/examples/sample-captions.vtt\","
+          ]
+        },
+        "tab": [
+          "재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거",
+          "media-slider-thumb 볼륨",
+          "media-slider-thumb 탐색",
+          "button#vjs-t8h5QXcn-0-4-trigger",
+          "media-pip-button#vjs-t8h5QXcn-0-7-trigger 화면 속 화면",
+          "media-fullscreen-button#vjs-t8h5QXcn-0-8-trigger 전체 화면",
+          "button",
+          "button"
+        ],
+        "afterCOn": [
+          {
+            "kind": "subtitles",
+            "label": "한국어",
+            "language": "ko",
+            "mode": "showing",
+            "activeCue": null
+          }
+        ],
+        "playing": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": null,
+          "containerWidth": 320,
+          "buttons": [
+            {
+              "id": "vjs-t8h5QXcn-0-3-trigger",
+              "hiddenAttr": false,
+              "availability": "available",
+              "ariaDisabled": null,
+              "ariaLabel": "자막 켜기",
+              "ariaPressed": null,
+              "tabIndex": 0,
+              "display": "none",
+              "w": 0,
+              "tipLabel": "자막 켜기",
+              "tipShortcut": "C",
+              "tipShortcutDisplay": "inline"
+            }
+          ],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "캡션 끄기",
+            "화질",
+            "오디오",
+            "속도",
+            "캡션"
+          ],
+          "menuCaptionTokens": 2,
+          "captionsHotkeys": [
+            "c:toggleSubtitles"
+          ],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 0
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "disabled",
+              "activeCue": null
+            }
+          ],
+          "t": 3.58
+        },
+        "afterCOff": [
+          {
+            "kind": "subtitles",
+            "label": "한국어",
+            "language": "ko",
+            "mode": "showing",
+            "activeCue": "자막 버튼이나 C 키로 켜고 끌 수 있어요."
+          }
+        ],
+        "offWithUrl": {
+          "skin": "solad-video-skin",
+          "lang": "ko",
+          "captionsAttr": "off",
+          "containerWidth": 320,
+          "buttons": [],
+          "menuItems": [
+            "화질 자동",
+            "오디오",
+            "속도 1×",
+            "화질",
+            "오디오",
+            "속도"
+          ],
+          "menuCaptionTokens": 0,
+          "captionsHotkeys": [],
+          "tracks": [
+            {
+              "kind": "subtitles",
+              "srclang": "ko",
+              "label": "한국어",
+              "src": "http://127.0.0.1:18781/examples/sample-captions.vtt",
+              "default": false,
+              "readyState": 0
+            }
+          ],
+          "textTracks": [
+            {
+              "kind": "subtitles",
+              "label": "한국어",
+              "language": "ko",
+              "mode": "disabled",
+              "activeCue": null
+            }
+          ],
+          "t": 0
+        },
+        "offWithUrlCode": [
+          "     data-captions=\"/examples/sample-captions.vtt\"></div>"
+        ]
+      },
+      "vtt": {
+        "status": 200,
+        "type": "text/vtt; charset=UTF-8",
+        "firstLine": "WEBVTT",
+        "cues": 3
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "bad": []
+    }
+  ]
+}

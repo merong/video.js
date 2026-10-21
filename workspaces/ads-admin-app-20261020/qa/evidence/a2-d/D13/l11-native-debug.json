@@ -1,0 +1,43 @@
+{
+  "a2-1-l11-legacy-native": {
+    "beforeClick": [
+      "content-scene-01.mp4:true"
+    ],
+    "after": [
+      "content-scene-01.mp4:paused@0.0"
+    ],
+    "dom": " <video id=\"ads-content-a1-qa-video-1-1swdj1c\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4\" controls=\"\" playsinline=\"\" preload=\"metadata\" style=\"width: 100%; height: 100%\" inert=\"\"></video> <div data-ads-overlay=\"\" tabindex=\"-1\" lang=\"ko\" data-ad-state=\"playing\"></div>",
+    "console": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "requests": [
+      "GET /demo-media/grok-20261018/content-scene-01.mp4 206",
+      "GET /assets/ads.js 200",
+      "GET /api/index.php?action=schedule&videoId=a1-qa-video-1 200 {\"ok\":true,\"data\":{\"schedule\":{\"schemaVersion\":1,\"siteId\":\"site-local\",\"videoId\":\"a1-qa-video-1\",\"boardId\":\"notice\",\"categoryId\":\"1\",\"scheduleId\":\"schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051\",\"scheduleVersion\":1,\"breaks\":[{\"breakId\":\"break-4428729b-fbdd-4b15-94dd-610d9b",
+      "GET /demo-media/grok-20261018/content-scene-01.mp4 206",
+      "GET /demo-media/grok-20261018/ad-coffee-6s.mp4 206",
+      "POST /api/index.php?action=events 200"
+    ]
+  },
+  "pl16-native-mp4": {
+    "beforeClick": [
+      "content-scene-01.mp4:true"
+    ],
+    "after": [
+      "content-scene-01.mp4:paused@0.0"
+    ],
+    "dom": " <video id=\"ads-content\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4\" controls=\"\" playsinline=\"\" preload=\"metadata\" style=\"width: 100%; height: 100%\" inert=\"\"></video> <div data-ads-overlay=\"\" tabindex=\"-1\" lang=\"ko\" data-ad-state=\"playing\"></div>",
+    "console": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "requests": [
+      "GET /demo-media/grok-20261018/content-scene-01.mp4 206",
+      "GET /assets/ads.js 200",
+      "GET /api/index.php?action=schedule&videoId=a1-qa-preset-1 200 {\"ok\":true,\"data\":{\"schedule\":{\"schemaVersion\":1,\"siteId\":\"site-local\",\"videoId\":\"a1-qa-preset-1\",\"boardId\":null,\"categoryId\":null,\"scheduleId\":\"schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051\",\"scheduleVersion\":1,\"breaks\":[{\"breakId\":\"break-4428729b-fbdd-4b15-94dd-610d9be8",
+      "GET /demo-media/grok-20261018/content-scene-01.mp4 206",
+      "GET /demo-media/grok-20261018/ad-coffee-6s.mp4 206",
+      "POST /api/index.php?action=events 200"
+    ]
+  }
+}

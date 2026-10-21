@@ -1,0 +1,27 @@
+{
+ "scenario": "rate-menu",
+ "engine": "chromium",
+ "startedAt": "2026-10-21T17:17:12.189Z",
+ "steps": [],
+ "triggers": [
+  "media-mute-button.media-button media-mute-button video-controls-volume-button",
+  "button.media-button media-settings-menu-trigger video-controls-settings-button",
+  "media-menu-item.media-menu-trigger-item",
+  "media-menu-item.media-menu-trigger-item",
+  "media-menu-item.media-menu-trigger-item",
+  "media-menu-item.media-menu-trigger-item"
+ ],
+ "focused": [
+  "media-menu-radio-item[1]",
+  "media-menu-radio-item[1.5]",
+  "media-menu-radio-item[1.7]",
+  "media-menu-item[속도]",
+  "media-menu-radio-item[1.5]",
+  "media-menu-radio-item[1.7]",
+  "media-menu-item[속도]",
+  "media-menu-radio-item[1.5]",
+  "media-menu-radio-item[1.7]",
+  "media-menu-item[속도]"
+ ],
+ "errors": []
+}

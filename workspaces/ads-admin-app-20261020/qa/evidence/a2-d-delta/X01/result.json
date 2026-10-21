@@ -1,0 +1,141 @@
+{
+  "videojs": [
+    {
+      "label": "videojs-poster-on-title-on",
+      "poster": true,
+      "title": true,
+      "frame": {
+        "mediaId": "solad-media-1",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER",
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+        "videoPoster": null,
+        "posters": [
+          "MEDIA-POSTER:",
+          "IMG:sample-poster.svg"
+        ],
+        "titles": [
+          "MEDIA-TITLE.media-title"
+        ]
+      }
+    },
+    {
+      "label": "videojs-poster-on-title-off",
+      "poster": true,
+      "title": false,
+      "frame": {
+        "mediaId": "solad-media-2",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER",
+        "contentTitle": null,
+        "poster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+        "videoPoster": null,
+        "posters": [
+          "MEDIA-POSTER:",
+          "IMG:sample-poster.svg"
+        ],
+        "titles": []
+      }
+    },
+    {
+      "label": "videojs-poster-off-title-on",
+      "poster": false,
+      "title": true,
+      "frame": {
+        "mediaId": "solad-media-3",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER",
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null,
+        "videoPoster": null,
+        "posters": [
+          "MEDIA-POSTER:"
+        ],
+        "titles": [
+          "MEDIA-TITLE.media-title"
+        ]
+      }
+    },
+    {
+      "label": "videojs-poster-off-title-off",
+      "poster": false,
+      "title": false,
+      "frame": {
+        "mediaId": "solad-media-4",
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER",
+        "contentTitle": null,
+        "poster": null,
+        "videoPoster": null,
+        "posters": [
+          "MEDIA-POSTER:"
+        ],
+        "titles": []
+      }
+    }
+  ],
+  "native": [
+    {
+      "label": "native-poster-on",
+      "poster": true,
+      "title": null,
+      "frame": {
+        "mediaId": "solad-media-1",
+        "tree": "DIV > VIDEO",
+        "contentTitle": null,
+        "poster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+        "videoPoster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+        "posters": [],
+        "titles": []
+      }
+    },
+    {
+      "label": "native-poster-off",
+      "poster": false,
+      "title": null,
+      "frame": {
+        "mediaId": "solad-media-2",
+        "tree": "DIV > VIDEO",
+        "contentTitle": null,
+        "poster": null,
+        "videoPoster": null,
+        "posters": [],
+        "titles": []
+      }
+    }
+  ],
+  "videojsInitial": {
+    "poster": true,
+    "title": true,
+    "titleDisabled": false,
+    "frame": {
+      "mediaId": "solad-media-1",
+      "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER",
+      "contentTitle": "Grok 해안 도시 장면",
+      "poster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+      "videoPoster": null,
+      "posters": [
+        "MEDIA-POSTER:",
+        "IMG:sample-poster.svg"
+      ],
+      "titles": [
+        "MEDIA-TITLE.media-title"
+      ]
+    }
+  },
+  "nativeInitial": {
+    "poster": true,
+    "title": true,
+    "titleDisabled": true,
+    "frame": {
+      "mediaId": "solad-media-1",
+      "tree": "DIV > VIDEO",
+      "contentTitle": null,
+      "poster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+      "videoPoster": "http://127.0.0.1:18781/examples/sample-poster.svg",
+      "posters": [],
+      "titles": []
+    }
+  },
+  "events": [],
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

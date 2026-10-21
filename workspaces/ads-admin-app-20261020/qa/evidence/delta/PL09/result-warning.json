@@ -1,0 +1,22 @@
+{
+  "text": {
+    "type": null,
+    "describedBy": [
+      "강조색과 강조 글자색의 대비가 1.1:1이라 글자가 잘 안 보일 수 있어요. 4.5:1 이상을 권해요. 저장은 할 수 있어요.",
+      "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요."
+    ],
+    "invalid": null
+  },
+  "picker": {
+    "type": "color",
+    "describedBy": [
+      "강조색과 강조 글자색의 대비가 1.1:1이라 글자가 잘 안 보일 수 있어요. 4.5:1 이상을 권해요. 저장은 할 수 있어요.",
+      "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요."
+    ],
+    "invalid": null
+  },
+  "pass": true,
+  "writes": [
+    "POST login 200"
+  ]
+}

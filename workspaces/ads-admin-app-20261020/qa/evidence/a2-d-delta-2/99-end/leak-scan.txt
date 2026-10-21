@@ -1,0 +1,8 @@
+21:02:25
+scope: /Users/brian/works/tools/videojs/video.js/workspaces/ads-admin-app-20261020/qa/evidence/a2-d-delta-2 and results.md
+password: 0 files
+signing_key: 0 files
+cookie header/values (Set-Cookie|Cookie:|PHPSESSID=|ads_session=): 0 files
+csrf token values (x-csrf-token: <value>|csrf":"<value>): 0 files
+bearer/token=: 0 files
+DSN/config path in evidence (mysql:|sqlite:|config.php content): 0 files

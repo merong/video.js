@@ -1,0 +1,954 @@
+{
+  "public": {
+    "rlo": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+202E"
+      ],
+      "length": 5,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "lri-pdi": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+2066",
+        "U+2069"
+      ],
+      "length": 6,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "ideographic-space-only": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+3000"
+      ],
+      "length": 1,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "ideographic-spaces": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+3000",
+        "U+3000",
+        "U+3000"
+      ],
+      "length": 3,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "nbsp-only": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+00A0"
+      ],
+      "length": 1,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "bom-only": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+FEFF"
+      ],
+      "length": 1,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "c1-nel": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+0085"
+      ],
+      "length": 5,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "c1-csi": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+009B"
+      ],
+      "length": 5,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "c0-bell": {
+      "group": "must-reject",
+      "codepoints": [
+        "U+0007"
+      ],
+      "length": 5,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "too-long-129": {
+      "group": "must-reject",
+      "codepoints": [],
+      "length": 129,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    },
+    "valid": {
+      "group": "observe",
+      "codepoints": [],
+      "length": 13,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": true,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "echoesInput": true,
+      "bodyBytes": 2415
+    },
+    "angle-bad": {
+      "group": "observe",
+      "codepoints": [],
+      "length": 5,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": true,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "echoesInput": true,
+      "bodyBytes": 2389
+    },
+    "len-128": {
+      "group": "observe",
+      "codepoints": [],
+      "length": 128,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": true,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "echoesInput": true,
+      "bodyBytes": 2676
+    },
+    "lrm": {
+      "group": "observe",
+      "codepoints": [
+        "U+200E"
+      ],
+      "length": 5,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": true,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "echoesInput": true,
+      "bodyBytes": 2392
+    },
+    "alm": {
+      "group": "observe",
+      "codepoints": [
+        "U+061C"
+      ],
+      "length": 5,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": true,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "echoesInput": true,
+      "bodyBytes": 2391
+    },
+    "zwsp-only": {
+      "group": "observe",
+      "codepoints": [
+        "U+200B"
+      ],
+      "length": 1,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": true,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "echoesInput": true,
+      "bodyBytes": 2383
+    },
+    "empty": {
+      "group": "observe",
+      "codepoints": [],
+      "length": 0,
+      "status": 422,
+      "contentType": "application/json; charset=utf-8",
+      "nosniff": "nosniff",
+      "setCookie": "none",
+      "ok": false,
+      "code": "validation",
+      "fields": {
+        "videoId": "영상 ID를 확인해 주세요."
+      },
+      "message": "영상 ID를 확인해 주세요.",
+      "echoesInput": false,
+      "bodyBytes": 109
+    }
+  },
+  "admin": {
+    "schedule-draft(target video)": {
+      "rlo": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "lri-pdi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-space-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-spaces": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "nbsp-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "bom-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-nel": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-csi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c0-bell": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "too-long-129": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "valid": {
+        "status": 200,
+        "ok": true,
+        "code": null,
+        "fields": null,
+        "echoesInput": true
+      }
+    },
+    "video-context-save": {
+      "rlo": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "lri-pdi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-space-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-spaces": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "nbsp-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "bom-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-nel": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-csi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c0-bell": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "too-long-129": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      }
+    },
+    "schedule-preview(videoId)": {
+      "rlo": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "lri-pdi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-space-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-spaces": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "nbsp-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "bom-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-nel": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-csi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c0-bell": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "too-long-129": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "videoId": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "valid": {
+        "status": 200,
+        "ok": true,
+        "code": null,
+        "fields": null,
+        "echoesInput": true
+      }
+    },
+    "schedule-save(target.id)": {
+      "rlo": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "lri-pdi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-space-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "ideographic-spaces": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "nbsp-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "bom-only": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-nel": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c1-csi": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "c0-bell": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      },
+      "too-long-129": {
+        "status": 422,
+        "ok": false,
+        "code": "validation",
+        "fields": {
+          "target.id": "영상 ID를 확인해 주세요."
+        },
+        "echoesInput": false
+      }
+    }
+  },
+  "screens": {
+    "setup:rlo": {
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "videoIdLineCodepoints": [
+        "U+202E"
+      ],
+      "videoIdLineLength": 191
+    },
+    "setup:ideographic-space-only": {
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "alerts": [],
+      "status": [
+        "고정 영상 ID를 입력해 주세요."
+      ],
+      "codeShown": false,
+      "videoIdLineCodepoints": null,
+      "videoIdLineLength": null
+    },
+    "setup:c1-nel": {
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "videoIdLineCodepoints": [
+        "U+0085"
+      ],
+      "videoIdLineLength": 188
+    },
+    "schedule-target:rlo": {
+      "api": [
+        "GET schedule-draft 422 validation"
+      ],
+      "alerts": [
+        "영상 ID를 확인해 주세요. 영상 ID를 확인해 주세요."
+      ],
+      "idInvalid": null,
+      "idDescribedBy": [],
+      "editorShown": 0,
+      "playLinks": 2
+    },
+    "schedule-target:ideographic-space-only": {
+      "api": [],
+      "alerts": [
+        "128자 이내의 고정 대상 ID를 입력해 주세요."
+      ],
+      "idInvalid": null,
+      "idDescribedBy": [],
+      "editorShown": 0,
+      "playLinks": 2
+    },
+    "schedule-target:c1-nel": {
+      "api": [
+        "GET schedule-draft 422 validation"
+      ],
+      "alerts": [
+        "영상 ID를 확인해 주세요. 영상 ID를 확인해 주세요."
+      ],
+      "idInvalid": null,
+      "idDescribedBy": [],
+      "editorShown": 0,
+      "playLinks": 2
+    },
+    "example-player:rlo": {
+      "api": [
+        "GET schedule 422 validation"
+      ],
+      "text": "광고 관리자\n광고 연동 예제\n본편과 광고를 하나의 흐름으로.\n\n브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다.\n\nVideo.js\n기본 video\nMP4\nHLS\nGrok Imagine 예제\n확인 필요\n\n영상 ID를 확인해 주세요. 본편은 별도로 재생할 수 있습니다.\n\n영상 ID를 확인해 주세요. 본편은 별도로 재생할 수 있습니다.\n\n영상 a1‮qa · MP4\n\n처음부터 다시 확인\n\n이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요.\n\n이번 재생 기록",
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+        }
+      ]
+    }
+  },
+  "adminWritesAccepted": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    }
+  ]
+}

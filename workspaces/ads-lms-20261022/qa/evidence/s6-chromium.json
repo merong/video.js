@@ -1,0 +1,48 @@
+{
+  "steps": {
+    "1280: no on-screen \"자막 없음\" text at rest; disabled icon; tooltip and name \"자막 없음\"": {
+      "ok": true,
+      "detail": {
+        "restVisibleHits": [],
+        "button": {
+          "count": 1,
+          "disabled": true,
+          "visible": true,
+          "opacity": "0.5"
+        },
+        "tooltipVisibleHits": [
+          {
+            "tag": "media-tooltip-label",
+            "cls": "",
+            "shown": true
+          }
+        ]
+      }
+    },
+    "390: settings captions item disabled with value \"없음\"": {
+      "ok": false,
+      "detail": {
+        "captionButtonVisible": false,
+        "restVisibleHits": [],
+        "menu": [
+          {
+            "name": "속도 1×",
+            "text": "속도 1×",
+            "disabled": false
+          },
+          {
+            "name": "캡션 없음 끄기",
+            "text": "캡션 없음",
+            "disabled": true
+          }
+        ],
+        "menuAria": "- menu:\n  - menuitem \"속도 1×\"\n  - menuitem \"캡션 없음\" [disabled]",
+        "note": "menu[].name는 textContent(숨은 \"끄기\" 포함), 접근성 이름은 menuAria가 기준"
+      }
+    }
+  },
+  "consoleErrors1280": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "consoleErrors390": []
+}

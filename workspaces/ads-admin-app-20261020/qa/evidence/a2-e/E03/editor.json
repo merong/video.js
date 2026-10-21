@@ -1,0 +1,489 @@
+{
+  "editor": [
+    {
+      "label": "open (saved: off)",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5",
+          "10*",
+          "15",
+          "30"
+        ],
+        "radioVisible": false,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": null,
+        "buttons": []
+      }
+    },
+    {
+      "label": "switch on",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5",
+          "10*",
+          "15",
+          "30"
+        ],
+        "radioVisible": true,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": "10",
+        "buttons": [
+          "-10",
+          "10"
+        ]
+      }
+    },
+    {
+      "label": "step 5",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5*",
+          "10",
+          "15",
+          "30"
+        ],
+        "radioVisible": true,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": "5",
+        "buttons": [
+          "-5",
+          "5"
+        ]
+      }
+    },
+    {
+      "label": "step 15",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5",
+          "10",
+          "15*",
+          "30"
+        ],
+        "radioVisible": true,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": "15",
+        "buttons": [
+          "-15",
+          "15"
+        ]
+      }
+    },
+    {
+      "label": "step 30",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5",
+          "10",
+          "15",
+          "30*"
+        ],
+        "radioVisible": true,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": "30",
+        "buttons": [
+          "-30",
+          "30"
+        ]
+      }
+    },
+    {
+      "label": "switch off",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5",
+          "10",
+          "15",
+          "30*"
+        ],
+        "radioVisible": false,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": null,
+        "buttons": []
+      }
+    },
+    {
+      "label": "switch on again",
+      "section": {
+        "heading": null,
+        "seek": {
+          "tag": "button",
+          "role": "switch",
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+          ]
+        },
+        "radios": [
+          "5",
+          "10",
+          "15",
+          "30*"
+        ],
+        "radioVisible": true,
+        "segLabel": "건너뛰는 폭",
+        "captions": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.",
+            "끄면 단축키 c도 꺼져요."
+          ]
+        },
+        "reason": null,
+        "sectionText": "이전·이후 버튼컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.건너뛰는 폭5초10초15초30초자막자막 버튼과 설정 메뉴의 자막 항목이에요. 영상에 자막이 없으면 버튼이 ‘자막 없음’으로 막혀 보여요.끄면 단축키 c도 꺼져요."
+      },
+      "frame": {
+        "query": "?type=videojs",
+        "skin": "solad-video-skin",
+        "seekAttr": "30",
+        "buttons": [
+          "-30",
+          "30"
+        ]
+      }
+    }
+  ],
+  "native": {
+    "heading": null,
+    "seek": {
+      "tag": "button",
+      "role": "switch",
+      "checked": "false",
+      "disabled": true,
+      "describedBy": [
+        "기본 video에서는 컨트롤을 쓸 수 없어요. 기본 구획의 플레이어 종류를 Video.js로 바꾸면 쓸 수 있어요."
+      ]
+    },
+    "radios": [
+      "5",
+      "10*",
+      "15",
+      "30"
+    ],
+    "radioVisible": false,
+    "segLabel": "건너뛰는 폭",
+    "captions": {
+      "checked": "true",
+      "disabled": true,
+      "describedBy": [
+        "기본 video에서는 컨트롤을 쓸 수 없어요. 기본 구획의 플레이어 종류를 Video.js로 바꾸면 쓸 수 있어요."
+      ]
+    },
+    "reason": null,
+    "sectionText": "이전·이후 버튼건너뛰는 폭5초10초15초30초자막"
+  },
+  "api": [
+    {
+      "label": "seek 10",
+      "status": 200,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "controls": {
+        "captions": null,
+        "quality": null,
+        "audioTrack": null,
+        "playbackRate": null,
+        "pip": null,
+        "fullscreen": null,
+        "thumbnails": null,
+        "seekButtons": 10
+      },
+      "deleted": 200
+    },
+    {
+      "label": "seek null + captions false",
+      "status": 200,
+      "code": null,
+      "fields": null,
+      "message": null,
+      "controls": {
+        "captions": false,
+        "quality": null,
+        "audioTrack": null,
+        "playbackRate": null,
+        "pip": null,
+        "fullscreen": null,
+        "thumbnails": null,
+        "seekButtons": null
+      },
+      "deleted": 200
+    },
+    {
+      "label": "seek 7",
+      "status": 422,
+      "code": "validation",
+      "fields": {
+        "controls.seekButtons": "입력값을 확인해 주세요."
+      },
+      "message": "입력값을 확인해 주세요.",
+      "controls": null
+    },
+    {
+      "label": "seek \"10\"",
+      "status": 422,
+      "code": "validation",
+      "fields": {
+        "controls.seekButtons": "입력값을 확인해 주세요."
+      },
+      "message": "입력값을 확인해 주세요.",
+      "controls": null
+    },
+    {
+      "label": "seek 0",
+      "status": 422,
+      "code": "validation",
+      "fields": {
+        "controls.seekButtons": "입력값을 확인해 주세요."
+      },
+      "message": "입력값을 확인해 주세요.",
+      "controls": null
+    },
+    {
+      "label": "captions \"yes\"",
+      "status": 422,
+      "code": "validation",
+      "fields": {
+        "controls.captions": "입력값을 확인해 주세요."
+      },
+      "message": "입력값을 확인해 주세요.",
+      "controls": null
+    },
+    {
+      "label": "native + seek 10",
+      "status": 422,
+      "code": "validation",
+      "fields": {
+        "controls.seekButtons": "기본 video에서는 쓸 수 없는 설정입니다."
+      },
+      "message": "기본 video에서는 쓸 수 없는 설정입니다.",
+      "controls": null
+    },
+    {
+      "label": "native + captions false",
+      "status": 422,
+      "code": "validation",
+      "fields": {
+        "controls.captions": "기본 video에서는 쓸 수 없는 설정입니다."
+      },
+      "message": "기본 video에서는 쓸 수 없는 설정입니다.",
+      "controls": null
+    }
+  ],
+  "demoCode": {
+    "why": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+    "htmlHasSeek": false,
+    "js": [
+      "  overrides: {\"controls\":{\"seekButtons\":10}},"
+    ],
+    "html": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>"
+  },
+  "after": [
+    "default:기본",
+    "flat:플랫",
+    "rounded:둥근 테두리",
+    "accent:강조색",
+    "p-i0aecb28w3:QA 강조색 복제",
+    "p-lc3i8eidb4:QA 자동재생",
+    "p-pchm59hhyv:QA 기본 video",
+    "p-wgqz3x31a5:QA 테두리 8자리",
+    "p-46sx1n57gw:QA 테두리 투명색"
+  ],
+  "events": 0,
+  "calls": [
+    "POST login",
+    "GET player-presets",
+    "GET player-presets",
+    "GET player-presets",
+    "POST player-preset-save",
+    "POST player-preset-delete",
+    "POST player-preset-save",
+    "POST player-preset-delete",
+    "POST player-preset-save",
+    "POST player-preset-save",
+    "POST player-preset-save",
+    "POST player-preset-save",
+    "POST player-preset-save",
+    "POST player-preset-save",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+    "GET player-presets @/examples/index.html"
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+    }
+  ]
+}

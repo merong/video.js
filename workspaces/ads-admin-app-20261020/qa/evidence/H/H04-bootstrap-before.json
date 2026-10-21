@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "data": {
+    "authenticated": false,
+    "csrfToken": "<redacted>",
+    "apiUrl": "/api/index.php",
+    "capabilities": {
+      "host": "standalone",
+      "manualTargets": true,
+      "uploads": true,
+      "loginUrl": null,
+      "siteUrl": null,
+      "adminUrl": null,
+      "playerPresets": true
+    }
+  }
+}

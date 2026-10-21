@@ -1,0 +1,168 @@
+{
+  "rounds": [
+    {
+      "i": 0,
+      "ms": 120,
+      "ok": true
+    },
+    {
+      "i": 1,
+      "ms": 13750,
+      "ok": true,
+      "reqs": [
+        "+29 GET /demo-media/grok-20261018/schedule.json.js",
+        "+61 GET /demo-media/grok-20261018/schedule.json.js",
+        "+61 FAILED schedule.json.js net::ERR_ABORTED",
+        "+13508 FAILED content-scene-01.mp4 net::ERR_ABORTED",
+        "+13513 done schedule.json.js",
+        "+13542 GET /demo-media/grok-20261018/schedule.json.js",
+        "+13542 GET /examples/sample-poster.svg",
+        "+13556 done schedule.json.js"
+      ],
+      "console": [],
+      "samples": [
+        "+308 {\"video\":false,\"html\":0}",
+        "+2332 {\"video\":false,\"html\":0}",
+        "+4366 {\"video\":false,\"html\":0}",
+        "+6385 {\"video\":false,\"html\":0}",
+        "+8402 {\"video\":false,\"html\":0}",
+        "+10430 {\"video\":false,\"html\":0}",
+        "+12488 {\"video\":false,\"html\":0}"
+      ],
+      "stage": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) "
+    },
+    {
+      "i": 2,
+      "ms": 85,
+      "ok": true
+    },
+    {
+      "i": 3,
+      "ms": 88,
+      "ok": true
+    },
+    {
+      "i": 4,
+      "ms": 344,
+      "ok": true
+    },
+    {
+      "i": 5,
+      "ms": 85,
+      "ok": true
+    },
+    {
+      "i": 6,
+      "ms": 82,
+      "ok": true
+    },
+    {
+      "i": 7,
+      "ms": 80,
+      "ok": true
+    },
+    {
+      "i": 8,
+      "ms": 85,
+      "ok": true
+    },
+    {
+      "i": 9,
+      "ms": 77,
+      "ok": true
+    },
+    {
+      "i": 10,
+      "ms": 65,
+      "ok": true
+    },
+    {
+      "i": 11,
+      "ms": 496,
+      "ok": true
+    },
+    {
+      "i": 12,
+      "ms": 151,
+      "ok": true
+    },
+    {
+      "i": 13,
+      "ms": 64,
+      "ok": true
+    },
+    {
+      "i": 14,
+      "ms": 74,
+      "ok": true
+    },
+    {
+      "i": 15,
+      "ms": 79,
+      "ok": true
+    },
+    {
+      "i": 16,
+      "ms": 106,
+      "ok": true
+    },
+    {
+      "i": 17,
+      "ms": 13740,
+      "ok": true,
+      "reqs": [
+        "+37 GET /demo-media/grok-20261018/schedule.json.js",
+        "+68 GET /demo-media/grok-20261018/schedule.json.js",
+        "+68 FAILED schedule.json.js net::ERR_ABORTED",
+        "+13651 done schedule.json.js",
+        "+13681 GET /demo-media/grok-20261018/schedule.json.js",
+        "+13681 GET /examples/sample-poster.svg",
+        "+13694 done schedule.json.js",
+        "+13736 FAILED content-scene-01.mp4 net::ERR_ABORTED"
+      ],
+      "console": [],
+      "samples": [
+        "+308 {\"video\":false,\"html\":0}",
+        "+2339 {\"video\":false,\"html\":0}",
+        "+4370 {\"video\":false,\"html\":0}",
+        "+6391 {\"video\":false,\"html\":0}",
+        "+8425 {\"video\":false,\"html\":0}",
+        "+10457 {\"video\":false,\"html\":0}",
+        "+12481 {\"video\":false,\"html\":0}"
+      ],
+      "stage": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) "
+    },
+    {
+      "i": 18,
+      "ms": 137,
+      "ok": true
+    },
+    {
+      "i": 19,
+      "ms": 81,
+      "ok": true
+    }
+  ],
+  "ms": [
+    120,
+    13750,
+    85,
+    88,
+    344,
+    85,
+    82,
+    80,
+    85,
+    77,
+    65,
+    496,
+    151,
+    64,
+    74,
+    79,
+    106,
+    13740,
+    137,
+    81
+  ]
+}

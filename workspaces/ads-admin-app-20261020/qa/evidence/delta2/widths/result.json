@@ -1,0 +1,967 @@
+{
+  "B13": {
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "screens": {
+      "creatives": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "campaigns": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "dashboard": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "players": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "players-setup": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "players-options": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "광고 문구 언어 도움말",
+            "left": 1917,
+            "right": 1937,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1913,
+            "right": 1933,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1942,
+            "right": 1962,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1917,
+            "right": 1937,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "플레이어 종류 도움말",
+            "left": 1934,
+            "right": 1954,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "플레이어 종류 도움말",
+            "left": 1934,
+            "right": 1954,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 문구 언어 도움말",
+            "left": 1881,
+            "right": 1901,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 2094,
+            "right": 2114,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "강조색 도움말",
+            "left": 1891,
+            "right": 1911,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "강조색 도움말",
+            "left": 1920,
+            "right": 1940,
+            "scroller": "DIV.sa-scroll"
+          }
+        ],
+        "inScrollerCount": 18,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1949,
+            "clientWidth": 1230,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 2101,
+            "clientWidth": 1230,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1967,
+            "clientWidth": 1230,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 2446,
+            "clientWidth": 1230,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1255,
+            "clientWidth": 1230,
+            "position": "relative"
+          }
+        ]
+      },
+      "reports": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "schedule": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      }
+    },
+    "reportsRows": [
+      5,
+      6,
+      7,
+      9,
+      11,
+      3,
+      9,
+      15,
+      6,
+      5
+    ]
+  },
+  "B14": {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "screens": {
+      "creatives": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "campaigns": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 768,
+            "clientWidth": 734,
+            "position": "relative"
+          }
+        ]
+      },
+      "dashboard": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "players": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "BUTTON",
+            "text": "QA Video.js 중립 v2 삭제",
+            "left": 758,
+            "right": 805,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "QA 기본 video 삭제",
+            "left": 758,
+            "right": 805,
+            "scroller": "DIV.sa-scroll"
+          }
+        ],
+        "inScrollerCount": 2,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 890,
+            "clientWidth": 734,
+            "position": "relative"
+          }
+        ]
+      },
+      "players-setup": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "players-options": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "광고 문구 언어 도움말",
+            "left": 1909,
+            "right": 1929,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1905,
+            "right": 1925,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1934,
+            "right": 1954,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1909,
+            "right": 1929,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "플레이어 종류 도움말",
+            "left": 1926,
+            "right": 1946,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "플레이어 종류 도움말",
+            "left": 1926,
+            "right": 1946,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 문구 언어 도움말",
+            "left": 1873,
+            "right": 1893,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 2086,
+            "right": 2106,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "강조색 도움말",
+            "left": 1883,
+            "right": 1903,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "강조색 도움말",
+            "left": 1912,
+            "right": 1932,
+            "scroller": "DIV.sa-scroll"
+          }
+        ],
+        "inScrollerCount": 18,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1949,
+            "clientWidth": 734,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 2101,
+            "clientWidth": 734,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 973,
+            "clientWidth": 734,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1967,
+            "clientWidth": 734,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 2446,
+            "clientWidth": 734,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1255,
+            "clientWidth": 734,
+            "position": "relative"
+          }
+        ]
+      },
+      "reports": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 844,
+            "clientWidth": 734,
+            "position": "relative"
+          }
+        ]
+      },
+      "schedule": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [],
+        "inScrollerCount": 0,
+        "wideners": [],
+        "innerScrollers": []
+      }
+    },
+    "reportsRows": [
+      5,
+      6,
+      7,
+      9,
+      11,
+      3,
+      9,
+      15,
+      6,
+      5
+    ]
+  },
+  "B14-390": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screens": {
+      "creatives": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629,
+            "scroller": "DIV.sa-scroll"
+          }
+        ],
+        "inScrollerCount": 21,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 667,
+            "clientWidth": 356,
+            "position": "relative"
+          }
+        ]
+      },
+      "campaigns": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          }
+        ],
+        "inScrollerCount": 3,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 768,
+            "clientWidth": 356,
+            "position": "relative"
+          }
+        ]
+      },
+      "dashboard": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          }
+        ],
+        "inScrollerCount": 3,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 502,
+            "clientWidth": 356,
+            "position": "relative"
+          }
+        ]
+      },
+      "players": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "기본 수정",
+            "left": 648,
+            "right": 695,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "기본 복제",
+            "left": 648,
+            "right": 695,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "기본 삭제",
+            "left": 648,
+            "right": 695,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "기본 기본으로 지정",
+            "left": 648,
+            "right": 749,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "QA Video.js 중립 v2 수정",
+            "left": 648,
+            "right": 695,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "QA Video.js 중립 v2 복제",
+            "left": 703,
+            "right": 750,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "QA Video.js 중립 v2 삭제",
+            "left": 758,
+            "right": 805,
+            "scroller": "DIV.sa-scroll"
+          }
+        ],
+        "inScrollerCount": 15,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 890,
+            "clientWidth": 356,
+            "position": "relative"
+          }
+        ]
+      },
+      "players-setup": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          }
+        ],
+        "inScrollerCount": 3,
+        "wideners": [],
+        "innerScrollers": []
+      },
+      "players-options": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "광고 문구 언어 도움말",
+            "left": 1909,
+            "right": 1929,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1905,
+            "right": 1925,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1934,
+            "right": 1954,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 화면 도움말",
+            "left": 1909,
+            "right": 1929,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "플레이어 종류 도움말",
+            "left": 1926,
+            "right": 1946,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "플레이어 종류 도움말",
+            "left": 1926,
+            "right": 1946,
+            "scroller": "DIV.sa-scroll"
+          },
+          {
+            "tag": "A",
+            "text": "광고 문구 언어 도움말",
+            "left": 1873,
+            "right": 1893,
+            "scroller": "DIV.sa-scroll"
+          }
+        ],
+        "inScrollerCount": 21,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1949,
+            "clientWidth": 356,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 2101,
+            "clientWidth": 356,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 973,
+            "clientWidth": 356,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1967,
+            "clientWidth": 356,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 2446,
+            "clientWidth": 356,
+            "position": "relative"
+          },
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 1255,
+            "clientWidth": 356,
+            "position": "relative"
+          }
+        ]
+      },
+      "reports": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          }
+        ],
+        "inScrollerCount": 3,
+        "wideners": [],
+        "innerScrollers": [
+          {
+            "cls": "sa-scroll",
+            "scrollWidth": 844,
+            "clientWidth": 356,
+            "position": "relative"
+          }
+        ]
+      },
+      "schedule": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "inScroller": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482,
+            "scroller": "NAV.sa-nav"
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532,
+            "scroller": "NAV.sa-nav"
+          }
+        ],
+        "inScrollerCount": 3,
+        "wideners": [],
+        "innerScrollers": []
+      }
+    },
+    "reportsRows": [
+      5,
+      6,
+      7,
+      9,
+      11,
+      3,
+      9,
+      15,
+      6,
+      5
+    ]
+  }
+}

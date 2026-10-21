@@ -1,0 +1,31 @@
+{
+  "draftName": "QA Video.js 중립 v2",
+  "routed": 1,
+  "focus": {
+    "id": "aa-preset-theme-accentColor",
+    "tag": "INPUT"
+  },
+  "accent": {
+    "invalid": "true",
+    "described": [
+      "#rrggbb 형식의 소문자 색으로 입력해 주세요. 예: #1a73e8",
+      "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 강조색을 비우면 광고 화면도 이 색을 따라요."
+    ]
+  },
+  "status": [
+    "미리보기가 준비됐어요.",
+    "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+  ],
+  "savebar": "고칠 칸 1개 · 표시한 칸을 고친 뒤 저장해 주세요. 프리셋 저장",
+  "nav": "구획으로 이동 기본 테마 오류 1 재생 동작 언어 광고 화면",
+  "afterEdit": {
+    "accent": {
+      "invalid": null,
+      "described": [
+        "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 강조색을 비우면 광고 화면도 이 색을 따라요."
+      ]
+    },
+    "savebar": "사이트 적용 프리셋이에요. 저장하면 로더를 넣은 모든 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장"
+  },
+  "dropDraftButtons": 0
+}

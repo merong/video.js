@@ -1,0 +1,188 @@
+{
+  "steps": {
+    "ad plays to the end; percent and content time stay 0 during the ad": {
+      "ok": true,
+      "detail": {
+        "adSamples": 11,
+        "adMaxTime": 2.81,
+        "percentsDuringAd": [
+          0
+        ],
+        "contentTimeDuringAd": 0
+      }
+    },
+    "content progress rises after the ad": {
+      "ok": true,
+      "detail": {
+        "lastPercent": 10,
+        "contentTime": 8.9
+      }
+    },
+    "watched-only rule does not interfere with the ad": {
+      "ok": true,
+      "detail": {
+        "blockedEvents": [],
+        "firstProgress": []
+      }
+    }
+  },
+  "samples": [
+    {
+      "ms": 3,
+      "vids": [
+        {
+          "ad": false,
+          "t": 0,
+          "paused": false
+        }
+      ],
+      "percent": 0,
+      "blocked": 0
+    },
+    {
+      "ms": 1013,
+      "vids": [
+        {
+          "ad": false,
+          "t": 0,
+          "paused": true
+        },
+        {
+          "ad": true,
+          "t": 0.98,
+          "paused": false
+        }
+      ],
+      "percent": 0,
+      "blocked": 0
+    },
+    {
+      "ms": 2084,
+      "vids": [
+        {
+          "ad": false,
+          "t": 0,
+          "paused": true
+        },
+        {
+          "ad": true,
+          "t": 2.05,
+          "paused": false
+        }
+      ],
+      "percent": 0,
+      "blocked": 0
+    },
+    {
+      "ms": 3098,
+      "vids": [
+        {
+          "ad": false,
+          "t": 0.06,
+          "paused": false
+        }
+      ],
+      "percent": 0,
+      "blocked": 0
+    },
+    {
+      "ms": 4107,
+      "vids": [
+        {
+          "ad": false,
+          "t": 1.07,
+          "paused": false
+        }
+      ],
+      "percent": 0,
+      "blocked": 0
+    },
+    {
+      "ms": 5119,
+      "vids": [
+        {
+          "ad": false,
+          "t": 2.08,
+          "paused": false
+        }
+      ],
+      "percent": 1,
+      "blocked": 0
+    },
+    {
+      "ms": 6128,
+      "vids": [
+        {
+          "ad": false,
+          "t": 3.09,
+          "paused": false
+        }
+      ],
+      "percent": 2,
+      "blocked": 0
+    },
+    {
+      "ms": 7138,
+      "vids": [
+        {
+          "ad": false,
+          "t": 4.1,
+          "paused": false
+        }
+      ],
+      "percent": 3,
+      "blocked": 0
+    },
+    {
+      "ms": 8150,
+      "vids": [
+        {
+          "ad": false,
+          "t": 5.11,
+          "paused": false
+        }
+      ],
+      "percent": 6,
+      "blocked": 0
+    },
+    {
+      "ms": 9163,
+      "vids": [
+        {
+          "ad": false,
+          "t": 6.13,
+          "paused": false
+        }
+      ],
+      "percent": 7,
+      "blocked": 0
+    },
+    {
+      "ms": 10173,
+      "vids": [
+        {
+          "ad": false,
+          "t": 7.14,
+          "paused": false
+        }
+      ],
+      "percent": 7,
+      "blocked": 0
+    },
+    {
+      "ms": 11184,
+      "vids": [
+        {
+          "ad": false,
+          "t": 8.15,
+          "paused": false
+        }
+      ],
+      "percent": 8,
+      "blocked": 0
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

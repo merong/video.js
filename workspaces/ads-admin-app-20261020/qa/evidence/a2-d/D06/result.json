@@ -1,0 +1,3718 @@
+{
+  "admin": [
+    {
+      "caption": "자리 요소 data-* 속성",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "data-solad-player",
+            "있음",
+            "없음(필수)",
+            "로더가 플레이어를 만들 자리예요. 한 페이지에 여러 개 둘 수 있고, 나중에 넣은 요소도 만들어요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-data-solad-player",
+          "helpName": "‘data-solad-player’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-video-id",
+            "문자열, 128자 이하",
+            "없음(필수)",
+            "편성과 통계에 쓰는 고정 영상 ID예요. 없거나 제어 문자가 있으면 그 자리만 건너뛰고 solad-error를 보내요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-data-video-id",
+          "helpName": "‘data-video-id’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-src",
+            "/경로 또는 http(s):// 주소",
+            "없음(필수)",
+            "본편 주소예요. 경로가 .m3u8로 끝나면 HLS로 재생해요. 상대 경로는 받지 않아요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-data-src",
+          "helpName": "‘data-src’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-poster",
+            "/경로 또는 http(s):// 주소",
+            "없음",
+            "포스터 이미지예요. 보일지는 프리셋의 포스터 표시가 정해요. ?",
+            "포스터 표시"
+          ],
+          "help": "/examples/help.html#opt-data-poster",
+          "helpName": "‘data-poster’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-title",
+            "글자",
+            "없음",
+            "영상 제목이에요. 보일지는 프리셋의 제목 표시가 정하고, 기본 video에서는 보이지 않아요. ?",
+            "제목 표시"
+          ],
+          "help": "/examples/help.html#opt-data-title",
+          "helpName": "‘data-title’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-thumbnails",
+            "WebVTT 주소",
+            "없음",
+            "탐색 막대에 띄울 미리보기 이미지 목록이에요. Video.js 플레이어에서만 써요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-data-thumbnails",
+          "helpName": "‘data-thumbnails’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-autoplay",
+            "true | false",
+            "프리셋 값, 없으면 false",
+            "자동재생이에요. 켜면 늘 음소거로 시작해요. ?",
+            "자동 재생"
+          ],
+          "help": "/examples/help.html#opt-data-autoplay",
+          "helpName": "‘data-autoplay’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-muted",
+            "true | false",
+            "프리셋 값, 없으면 false",
+            "음소거로 시작해요. 자동재생이 켜져 있으면 false여도 음소거로 시작하고 콘솔에 경고를 남겨요. ?",
+            "음소거로 시작"
+          ],
+          "help": "/examples/help.html#opt-data-muted",
+          "helpName": "‘data-muted’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-loop",
+            "true | false",
+            "프리셋 값, 없으면 false",
+            "끝나면 처음부터 다시 재생해요. 반복할 때 포스트롤은 나오지 않고 미드롤은 첫 회에만 나와요. ?",
+            "반복 재생"
+          ],
+          "help": "/examples/help.html#opt-data-loop",
+          "helpName": "‘data-loop’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-preload",
+            "none | metadata | auto",
+            "프리셋 값, 없으면 metadata",
+            "재생 전에 영상을 얼마나 미리 받을지예요. ?",
+            "미리 불러오기"
+          ],
+          "help": "/examples/help.html#opt-data-preload",
+          "helpName": "‘data-preload’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-lang",
+            "ko | en | ja | zh-CN",
+            "프리셋 값, 없으면 자리 요소부터 위로 찾은 lang",
+            "플레이어 화면 언어예요. 페이지 lang은 ko·en·ja·zh-CN으로 맞추고 그 밖은 영어로 보여요. 광고 문구는 늘 한국어예요. ?",
+            "플레이어 화면 언어 ?"
+          ],
+          "help": "/examples/help.html#opt-data-lang",
+          "helpName": "‘data-lang’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-engine",
+            "spf | hlsjs",
+            "spf",
+            "HLS를 재생할 엔진이에요. Video.js 플레이어에서 .m3u8 주소일 때만 써요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-data-engine",
+          "helpName": "‘data-engine’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "data-solad-manual",
+            "있음",
+            "없음",
+            "자동으로 만들지 않아요. JS API의 mount로만 만들어요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-data-solad-manual",
+          "helpName": "‘data-solad-manual’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "<media-ads> 속성",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "for",
+            "요소 id",
+            "없음(필수)",
+            "광고를 붙일 본편 미디어 요소의 id예요. 같은 플레이어 안의 요소를 가리켜야 해요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-for",
+          "helpName": "‘for’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "src",
+            "URL",
+            "없음(필수)",
+            "편성 주소예요. raw 편성 JSON이나 관리자 API 응답({ok, data})을 받아요. http(s):// 주소나 /로 시작하는 경로만 받고 상대 경로는 거부해요. 편성 요청 시간 제한은 5초로 고정돼요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-src",
+          "helpName": "‘src’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "video-id",
+            "문자열",
+            "없음(필수)",
+            "편성과 통계에 쓰는 고정 영상 ID예요. 편성의 videoId와 같아야 광고가 붙어요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-video-id",
+          "helpName": "‘video-id’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "lang",
+            "ko | en",
+            "<media-ads>부터 위로 찾은 lang, 없으면 영어",
+            "광고 화면 문구 언어예요. 로더와 설치 코드는 늘 ko를 넣어서 광고 문구는 플레이어 언어와 상관없이 한국어예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-lang",
+          "helpName": "‘lang’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "skip-label",
+            "글자",
+            "광고 건너뛰기",
+            "건너뛰기 버튼 문구예요. ?",
+            "건너뛰기 문구 ?"
+          ],
+          "help": "/examples/help.html#opt-skip-label",
+          "helpName": "‘skip-label’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "skip-countdown-label",
+            "글자, {seconds}",
+            "{seconds}초 후 건너뛰기",
+            "건너뛰기를 기다리는 동안 보이는 문구예요. {seconds}에 남은 초가 들어가요. ?",
+            "건너뛰기 대기 문구 ?"
+          ],
+          "help": "/examples/help.html#opt-skip-countdown-label",
+          "helpName": "‘skip-countdown-label’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "timer-label",
+            "글자, {elapsed} {duration} {remaining}",
+            "{elapsed} / {duration}",
+            "광고 시간 표시 문구예요. {elapsed}(지난 시간), {duration}(길이), {remaining}(남은 시간)을 쓸 수 있어요. ?",
+            "광고 시간 문구 ?"
+          ],
+          "help": "/examples/help.html#opt-timer-label",
+          "helpName": "‘timer-label’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "media-alt",
+            "글자",
+            "소재의 대체 텍스트, 없으면 광고 / Advertisement",
+            "모든 광고 소재의 대체 텍스트를 이 값으로 덮어써요. 소재마다 입력한 대체 텍스트가 가려지므로 프리셋에서는 설정하지 않아요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-media-alt",
+          "helpName": "‘media-alt’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "createAdsController 옵션",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "media",
+            "HTMLMediaElement",
+            "없음(필수)",
+            "광고를 붙일 본편 미디어 요소예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-media",
+          "helpName": "‘media’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "container",
+            "HTMLElement",
+            "없음(필수)",
+            "광고 화면을 올릴 요소예요. 본편을 감싸고 position이 지정된 요소를 넘겨요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-container",
+          "helpName": "‘container’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "schedule",
+            "편성 객체",
+            "없음(필수)",
+            "편성 API 응답의 schedule이에요. 형식이 맞지 않으면 광고 없이 본편만 재생해요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-schedule",
+          "helpName": "‘schedule’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "tracking",
+            "추적 정보 객체",
+            "없음",
+            "편성 응답에서 schedule을 뺀 나머지예요. 있으면 광고 이벤트를 수집 API로 보내요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-tracking",
+          "helpName": "‘tracking’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "preview",
+            "boolean",
+            "false",
+            "true면 수집 요청을 보내지 않아요. 관리자 미리보기에서 써요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-preview",
+          "helpName": "‘preview’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "onEvent",
+            "(event) => void",
+            "없음",
+            "광고 시작·완료·건너뜀·클릭·오류·중단을 관측할 때마다 불려요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-onevent",
+          "helpName": "‘onEvent’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "timeouts.loadSeconds",
+            "초(0 초과 60 이하)",
+            "5",
+            "광고 소재를 불러오고 재생을 시작하기까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–60초 정수로 정해요. <media-ads>에는 이 옵션이 없어요. ?",
+            "광고 로드 시간 제한 (초) ?"
+          ],
+          "help": "/examples/help.html#opt-timeoutsloadseconds",
+          "helpName": "‘timeouts.loadSeconds’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "timeouts.stallSeconds",
+            "초(0 초과 120 이하)",
+            "10",
+            "광고 영상이 멈췄을 때 다음 순서로 넘어가기 전까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–120초 정수로 정해요. ?",
+            "광고 멈춤 시간 제한 (초) ?"
+          ],
+          "help": "/examples/help.html#opt-timeoutsstallseconds",
+          "helpName": "‘timeouts.stallSeconds’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "ui.locale",
+            "언어 코드",
+            "container부터 위로 찾은 lang, 없으면 영어",
+            "광고 화면 문구 언어예요. 로더와 설치 코드는 늘 ko를 넘겨서 광고 문구는 한국어예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-uilocale",
+          "helpName": "‘ui.locale’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "ui.labels",
+            "문구 객체",
+            "한국어 패키지 문구",
+            "광고 화면 문구를 바꿔요. 프리셋에서는 광고 문구 16개를 정하고, 비운 문구는 한국어 기본 문구예요. mediaAlt는 소재 대체 텍스트를 덮어써서 프리셋에서 정하지 않아요. ?",
+            "건너뛰기 문구 · 건너뛰기 대기 문구 · 광고 시간 문구 ?"
+          ],
+          "help": "/examples/help.html#opt-uilabels",
+          "helpName": "‘ui.labels’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "createAdsController 반환 메서드",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "destroy()",
+            "() => void",
+            "—",
+            "광고를 끝내고 화면과 이벤트 연결을 정리해요. 페이지를 떠날 때(pagehide) 불러 주세요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-destroy",
+          "helpName": "‘destroy()’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "updateUI(ui)",
+            "(ui) => void",
+            "—",
+            "편성을 다시 받지 않고 광고 화면 언어와 문구를 바꿔요. 빈 객체를 넘기면 기본값으로 돌아가요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-updateuiui",
+          "helpName": "‘updateUI(ui)’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "스킨 CSS 속성",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "--media-accent-color",
+            "색",
+            "흰색 oklch(1 0 0)",
+            "슬라이더 채움, 강조된 컨트롤과 메뉴, 주요 동작의 색이에요. 광고 화면의 음량 막대도 이 색을 이어받아요. 초점 테두리는 Video.js 스킨 안에서 흰색(--media-ring)으로 고정돼 바뀌지 않아요. ?",
+            "강조색 ?"
+          ],
+          "help": "/examples/help.html#opt-media-accent-color",
+          "helpName": "‘--media-accent-color’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-accent-text-color",
+            "색",
+            "자동 대비, contrast-color() 미지원 브라우저는 검정",
+            "강조색 위 글자와 아이콘 색이에요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정되니 어두운 강조색이면 함께 정해 주세요. ?",
+            "강조 글자색 ?"
+          ],
+          "help": "/examples/help.html#opt-media-accent-text-color",
+          "helpName": "‘--media-accent-text-color’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-border-color",
+            "색",
+            "rgb(0 0 0 / .1)",
+            "플레이어 둘레의 가는 선 색이에요. ?",
+            "테두리 색 ?"
+          ],
+          "help": "/examples/help.html#opt-media-border-color",
+          "helpName": "‘--media-border-color’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-border-radius",
+            "길이",
+            "28px",
+            "플레이어 모서리 둥글기예요. 광고 화면 모서리도 따라가요. 내장 프리셋 \"둥근 테두리\"는 12px예요. ?",
+            "모서리 둥글기 (px) ?"
+          ],
+          "help": "/examples/help.html#opt-media-border-radius",
+          "helpName": "‘--media-border-radius’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-font-family",
+            "글꼴 목록",
+            "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "플레이어 글꼴이에요. 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요. 프리셋에서는 시스템 글꼴만 고를 수 있어요. ?",
+            "글꼴 ?"
+          ],
+          "help": "/examples/help.html#opt-media-font-family",
+          "helpName": "‘--media-font-family’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-object-fit",
+            "object-fit",
+            "contain",
+            "영상과 포스터를 플레이어에 채우는 방식이에요. 전체화면에서는 항상 contain이에요. 광고 소재는 이 값과 상관없이 contain이에요. ?",
+            "화면 채우기 ?"
+          ],
+          "help": "/examples/help.html#opt-media-object-fit",
+          "helpName": "‘--media-object-fit’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-object-position",
+            "object-position",
+            "center",
+            "영상과 포스터가 다 채우지 않을 때의 위치예요. 프리셋에서는 설정하지 않아요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-media-object-position",
+          "helpName": "‘--media-object-position’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--media-scale-unit",
+            "길이",
+            "16px",
+            "컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 1rem이면 문서 글자 크기를 따라요. 광고 화면에는 영향이 없어요. ?",
+            "크기 기준 ?"
+          ],
+          "help": "/examples/help.html#opt-media-scale-unit",
+          "helpName": "‘--media-scale-unit’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "광고 화면 CSS 속성",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "--ads-accent-color",
+            "색",
+            "--media-accent-color, 없으면 #fff",
+            "광고 음량 막대 색만 바꿔요. 건너뛰기 버튼과 초점 테두리는 바뀌지 않아요. ?",
+            "광고 강조색 ?"
+          ],
+          "help": "/examples/help.html#opt-ads-accent-color",
+          "helpName": "‘--ads-accent-color’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-skip-radius",
+            "길이",
+            "6px",
+            "건너뛰기 버튼 모서리 둥글기예요. ?",
+            "건너뛰기 버튼 모서리 (px) ?"
+          ],
+          "help": "/examples/help.html#opt-ads-skip-radius",
+          "helpName": "‘--ads-skip-radius’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-font-size",
+            "길이",
+            "13px",
+            "광고 화면 글자 크기예요. 컨테이너 폭 280px 이하에서는 11px로 고정돼요. ?",
+            "광고 글자 크기 (px) ?"
+          ],
+          "help": "/examples/help.html#opt-ads-font-size",
+          "helpName": "‘--ads-font-size’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-font-family",
+            "글꼴 목록",
+            "--media-font-family, 없으면 system-ui",
+            "광고 화면 글꼴이에요. 플레이어 글꼴(--media-font-family)을 지정했으면 그것을 따라가요. 둘 다 비우면 플레이어는 스킨 글꼴(Inter 우선)을, 광고 화면은 system-ui를 써요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-font-family",
+          "helpName": "‘--ads-font-family’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-color",
+            "색",
+            "--media-foreground, 없으면 #fff",
+            "광고 화면 글자와 아이콘 색이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-color",
+          "helpName": "‘--ads-color’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-background",
+            "색",
+            "#000",
+            "광고 소재 뒤 바탕색이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-background",
+          "helpName": "‘--ads-background’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-radius",
+            "길이",
+            "스킨 모서리(--media-border-radius, 기본 28px), 스킨 밖이면 0",
+            "광고 화면 모서리 둥글기예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-radius",
+          "helpName": "‘--ads-radius’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-inset",
+            "길이",
+            "12px",
+            "광고 표시와 컨트롤의 바깥 여백이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-inset",
+          "helpName": "‘--ads-inset’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-scrim",
+            "배경",
+            "아래쪽 어두운 그러데이션",
+            "컨트롤 뒤 어둡게 깔리는 배경이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-scrim",
+          "helpName": "‘--ads-scrim’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-control-size",
+            "길이",
+            "--media-control-size, 없으면 36px",
+            "광고 컨트롤 버튼의 최소 크기예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-control-size",
+          "helpName": "‘--ads-control-size’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-control-radius",
+            "길이",
+            "--media-control-radius: 스킨 안에서 99px(알약 모양), 스킨 밖에서는 8px",
+            "광고 컨트롤 버튼 모서리 둥글기예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-control-radius",
+          "helpName": "‘--ads-control-radius’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-button-background",
+            "색",
+            "반투명 검정(#0005)",
+            "광고 컨트롤 버튼 바탕색이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-button-background",
+          "helpName": "‘--ads-button-background’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-hover-background",
+            "색",
+            "반투명 흰색(#ffffff26)",
+            "포인터를 올렸을 때 버튼과 링크 바탕색이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-hover-background",
+          "helpName": "‘--ads-hover-background’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "--ads-focus-color",
+            "색",
+            "--media-ring(Video.js 스킨은 흰색 oklch(1 0 0)) → --media-accent-color, 없으면 #fff",
+            "키보드 초점 테두리 색이에요. Video.js 스킨 안에서는 --media-ring이 있어서 강조색을 바꿔도 흰색이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-ads-focus-color",
+          "helpName": "‘--ads-focus-color’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "데모·재생 테스트 페이지 쿼리",
+      "heads": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "preset",
+            "프리셋 id",
+            "없음(사이트 적용 프리셋)",
+            "고를 프리셋이에요. 재생 테스트에서 플레이어 종류와 다른 프리셋이거나 불러오지 못하면 이유를 보여 주고 기본값으로 재생해요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-preset",
+          "helpName": "‘preset’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "video",
+            "문자열",
+            "video-1",
+            "재생 테스트에서 재생할 고정 영상 ID예요. 실제 게시 편성을 불러오고 통계를 보내요. 그누보드에서는 게시판:글번호:영상키 형식이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-video",
+          "helpName": "‘video’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "type",
+            "videojs | native",
+            "videojs",
+            "재생 테스트의 플레이어 종류예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-type",
+          "helpName": "‘type’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "content",
+            "http(s):// 주소",
+            "../demo-media/content.mp4(HLS는 content-master.m3u8)",
+            "재생 테스트의 본편 주소예요. 페이지 기준으로 해석하니 절대 주소로 넘겨 주세요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-content",
+          "helpName": "‘content’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "media",
+            "mp4 | hls",
+            "mp4",
+            "본편 형식이에요. 데모의 MP4는 Grok 샘플이에요. 기본 video의 HLS 지원은 브라우저마다 달라요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-media",
+          "helpName": "‘media’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "engine",
+            "spf | hlsjs",
+            "spf",
+            "Video.js에서 HLS를 재생할 엔진이에요. media=hls일 때만 써요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-engine",
+          "helpName": "‘engine’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "autoplay",
+            "true | false",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 자동재생이에요. 켜면 음소거가 켜진 채 잠겨요. ?",
+            "자동 재생"
+          ],
+          "help": "/examples/help.html#opt-query-autoplay",
+          "helpName": "‘autoplay’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "muted",
+            "true | false",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 음소거예요. ?",
+            "음소거로 시작"
+          ],
+          "help": "/examples/help.html#opt-query-muted",
+          "helpName": "‘muted’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "loop",
+            "true | false",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 반복 재생이에요. ?",
+            "반복 재생"
+          ],
+          "help": "/examples/help.html#opt-query-loop",
+          "helpName": "‘loop’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "preload",
+            "none | metadata | auto",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 미리 받기예요. ?",
+            "미리 불러오기"
+          ],
+          "help": "/examples/help.html#opt-query-preload",
+          "helpName": "‘preload’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "language",
+            "'' | ko | en | ja | zh-CN",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 플레이어 언어예요. 빈 값이면 언어를 비워 페이지 언어를 따라요. ?",
+            "플레이어 화면 언어 ?"
+          ],
+          "help": "/examples/help.html#opt-query-language",
+          "helpName": "‘language’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "pageLang",
+            "ko | en | ja | zh-CN",
+            "ko",
+            "데모에서 language가 비었을 때 따를 페이지 언어예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-pagelang",
+          "helpName": "‘pageLang’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "poster",
+            "true | false",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 포스터 표시예요. ?",
+            "포스터 표시"
+          ],
+          "help": "/examples/help.html#opt-query-poster",
+          "helpName": "‘poster’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "posterUrl",
+            "/경로 또는 http(s):// 주소",
+            "없음",
+            "데모 플레이어의 포스터 주소예요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-posterurl",
+          "helpName": "‘posterUrl’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "title",
+            "true | false",
+            "프리셋 값",
+            "데모에서 프리셋 대신 쓸 제목 표시예요. 기본 video에서는 쓰지 않아요. ?",
+            "제목 표시"
+          ],
+          "help": "/examples/help.html#opt-query-title",
+          "helpName": "‘title’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "titleText",
+            "글자",
+            "없음",
+            "데모 플레이어의 영상 제목이에요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-titletext",
+          "helpName": "‘titleText’ 도움말 (새 창)",
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "thumbnails",
+            "WebVTT 주소",
+            "없음",
+            "데모 플레이어의 탐색 막대 미리보기 이미지 목록이에요. Video.js 플레이어에서만 써요. ?",
+            "프리셋에서 설정 안 함"
+          ],
+          "help": "/examples/help.html#opt-query-thumbnails",
+          "helpName": "‘thumbnails’ 도움말 (새 창)",
+          "phase": null
+        }
+      ]
+    }
+  ],
+  "adminLinks": [
+    {
+      "text": "데모 열기 (새 창)",
+      "href": "/examples/index.html",
+      "target": "_blank"
+    },
+    {
+      "text": "설명서 (새 창)",
+      "href": "/examples/guide.html",
+      "target": "_blank"
+    },
+    {
+      "text": "도움말 (새 창)",
+      "href": "/examples/help.html",
+      "target": "_blank"
+    }
+  ],
+  "setupLinks": [
+    {
+      "text": "데모 열기 (새 창)",
+      "href": "/examples/index.html",
+      "target": "_blank"
+    },
+    {
+      "text": "설명서 (새 창)",
+      "href": "/examples/guide.html",
+      "target": "_blank"
+    },
+    {
+      "text": "도움말 (새 창)",
+      "href": "/examples/help.html",
+      "target": "_blank"
+    }
+  ],
+  "setupHelpLinks": [
+    "#/help/player-loader",
+    "#/help/player-placeholder",
+    "#/help/fixed-video-id",
+    "/examples/help.html#opt-data-solad-player",
+    "/examples/help.html#opt-data-video-id",
+    "/examples/help.html#opt-data-src",
+    "/examples/help.html#opt-data-poster",
+    "/examples/help.html#opt-data-title",
+    "/examples/help.html#opt-data-thumbnails",
+    "/examples/help.html#opt-data-autoplay",
+    "/examples/help.html#opt-data-muted",
+    "/examples/help.html#opt-data-loop",
+    "/examples/help.html#opt-data-preload",
+    "/examples/help.html#opt-data-lang",
+    "#/help/player-ad-language",
+    "/examples/help.html#opt-data-engine",
+    "/examples/help.html#opt-data-solad-manual"
+  ],
+  "help": [
+    {
+      "caption": "설치 코드 두 줄",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-query-preset",
+          "cells": [
+            "preset#‘preset’ 항목 주소",
+            "받는 값프리셋 id",
+            "기본값없음(사이트 적용 프리셋)",
+            "설명고를 프리셋이에요. 재생 테스트에서 플레이어 종류와 다른 프리셋이거나 불러오지 못하면 이유를 보여 주고 기본값으로 재생해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-video",
+          "cells": [
+            "video#‘video’ 항목 주소",
+            "받는 값문자열",
+            "기본값video-1",
+            "설명재생 테스트에서 재생할 고정 영상 ID예요. 실제 게시 편성을 불러오고 통계를 보내요. 그누보드에서는 게시판:글번호:영상키 형식이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-type",
+          "cells": [
+            "type#‘type’ 항목 주소",
+            "받는 값videojs | native",
+            "기본값videojs",
+            "설명재생 테스트의 플레이어 종류예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-content",
+          "cells": [
+            "content#‘content’ 항목 주소",
+            "받는 값http(s):// 주소",
+            "기본값../demo-media/content.mp4(HLS는 content-master.m3u8)",
+            "설명재생 테스트의 본편 주소예요. 페이지 기준으로 해석하니 절대 주소로 넘겨 주세요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-media",
+          "cells": [
+            "media#‘media’ 항목 주소",
+            "받는 값mp4 | hls",
+            "기본값mp4",
+            "설명본편 형식이에요. 데모의 MP4는 Grok 샘플이에요. 기본 video의 HLS 지원은 브라우저마다 달라요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-engine",
+          "cells": [
+            "engine#‘engine’ 항목 주소",
+            "받는 값spf | hlsjs",
+            "기본값spf",
+            "설명Video.js에서 HLS를 재생할 엔진이에요. media=hls일 때만 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-autoplay",
+          "cells": [
+            "autoplay#‘autoplay’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 자동재생이에요. 켜면 음소거가 켜진 채 잠겨요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-muted",
+          "cells": [
+            "muted#‘muted’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 음소거예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-loop",
+          "cells": [
+            "loop#‘loop’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 반복 재생이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-preload",
+          "cells": [
+            "preload#‘preload’ 항목 주소",
+            "받는 값none | metadata | auto",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 미리 받기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-language",
+          "cells": [
+            "language#‘language’ 항목 주소",
+            "받는 값'' | ko | en | ja | zh-CN",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 플레이어 언어예요. 빈 값이면 언어를 비워 페이지 언어를 따라요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-pagelang",
+          "cells": [
+            "pageLang#‘pageLang’ 항목 주소",
+            "받는 값ko | en | ja | zh-CN",
+            "기본값ko",
+            "설명데모에서 language가 비었을 때 따를 페이지 언어예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-poster",
+          "cells": [
+            "poster#‘poster’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 포스터 표시예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-posterurl",
+          "cells": [
+            "posterUrl#‘posterUrl’ 항목 주소",
+            "받는 값/경로 또는 http(s):// 주소",
+            "기본값없음",
+            "설명데모 플레이어의 포스터 주소예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-title",
+          "cells": [
+            "title#‘title’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값",
+            "설명데모에서 프리셋 대신 쓸 제목 표시예요. 기본 video에서는 쓰지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-titletext",
+          "cells": [
+            "titleText#‘titleText’ 항목 주소",
+            "받는 값글자",
+            "기본값없음",
+            "설명데모 플레이어의 영상 제목이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-query-thumbnails",
+          "cells": [
+            "thumbnails#‘thumbnails’ 항목 주소",
+            "받는 값WebVTT 주소",
+            "기본값없음",
+            "설명데모 플레이어의 탐색 막대 미리보기 이미지 목록이에요. Video.js 플레이어에서만 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "자리 요소 속성",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-data-solad-player",
+          "cells": [
+            "data-solad-player#‘data-solad-player’ 항목 주소",
+            "받는 값있음",
+            "기본값없음(필수)",
+            "설명로더가 플레이어를 만들 자리예요. 한 페이지에 여러 개 둘 수 있고, 나중에 넣은 요소도 만들어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-video-id",
+          "cells": [
+            "data-video-id#‘data-video-id’ 항목 주소",
+            "받는 값문자열, 128자 이하",
+            "기본값없음(필수)",
+            "설명편성과 통계에 쓰는 고정 영상 ID예요. 없거나 제어 문자가 있으면 그 자리만 건너뛰고 solad-error를 보내요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-src",
+          "cells": [
+            "data-src#‘data-src’ 항목 주소",
+            "받는 값/경로 또는 http(s):// 주소",
+            "기본값없음(필수)",
+            "설명본편 주소예요. 경로가 .m3u8로 끝나면 HLS로 재생해요. 상대 경로는 받지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-poster",
+          "cells": [
+            "data-poster#‘data-poster’ 항목 주소",
+            "받는 값/경로 또는 http(s):// 주소",
+            "기본값없음",
+            "설명포스터 이미지예요. 보일지는 프리셋의 포스터 표시가 정해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-title",
+          "cells": [
+            "data-title#‘data-title’ 항목 주소",
+            "받는 값글자",
+            "기본값없음",
+            "설명영상 제목이에요. 보일지는 프리셋의 제목 표시가 정하고, 기본 video에서는 보이지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-thumbnails",
+          "cells": [
+            "data-thumbnails#‘data-thumbnails’ 항목 주소",
+            "받는 값WebVTT 주소",
+            "기본값없음",
+            "설명탐색 막대에 띄울 미리보기 이미지 목록이에요. Video.js 플레이어에서만 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-autoplay",
+          "cells": [
+            "data-autoplay#‘data-autoplay’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값, 없으면 false",
+            "설명자동재생이에요. 켜면 늘 음소거로 시작해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-muted",
+          "cells": [
+            "data-muted#‘data-muted’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값, 없으면 false",
+            "설명음소거로 시작해요. 자동재생이 켜져 있으면 false여도 음소거로 시작하고 콘솔에 경고를 남겨요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-loop",
+          "cells": [
+            "data-loop#‘data-loop’ 항목 주소",
+            "받는 값true | false",
+            "기본값프리셋 값, 없으면 false",
+            "설명끝나면 처음부터 다시 재생해요. 반복할 때 포스트롤은 나오지 않고 미드롤은 첫 회에만 나와요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-preload",
+          "cells": [
+            "data-preload#‘data-preload’ 항목 주소",
+            "받는 값none | metadata | auto",
+            "기본값프리셋 값, 없으면 metadata",
+            "설명재생 전에 영상을 얼마나 미리 받을지예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-lang",
+          "cells": [
+            "data-lang#‘data-lang’ 항목 주소",
+            "받는 값ko | en | ja | zh-CN",
+            "기본값프리셋 값, 없으면 자리 요소부터 위로 찾은 lang",
+            "설명플레이어 화면 언어예요. 페이지 lang은 ko·en·ja·zh-CN으로 맞추고 그 밖은 영어로 보여요. 광고 문구는 늘 한국어예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-preset",
+          "cells": [
+            "data-preset#‘data-preset’ 항목 주소",
+            "받는 값default | rounded | accent | p-로 시작하는 저장 id",
+            "기본값없음(사이트 적용 프리셋)",
+            "설명사이트 적용 프리셋 대신 쓸 프리셋이에요. 재생 테스트나 예외 페이지에서만 쓰고, 관리자 화면에서는 안내하지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-engine",
+          "cells": [
+            "data-engine#‘data-engine’ 항목 주소",
+            "받는 값spf | hlsjs",
+            "기본값spf",
+            "설명HLS를 재생할 엔진이에요. Video.js 플레이어에서 .m3u8 주소일 때만 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-data-solad-manual",
+          "cells": [
+            "data-solad-manual#‘data-solad-manual’ 항목 주소",
+            "받는 값있음",
+            "기본값없음",
+            "설명자동으로 만들지 않아요. JS API의 mount로만 만들어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "자리 요소 속성",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-for",
+          "cells": [
+            "for#‘for’ 항목 주소",
+            "받는 값요소 id",
+            "기본값없음(필수)",
+            "설명광고를 붙일 본편 미디어 요소의 id예요. 같은 플레이어 안의 요소를 가리켜야 해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-src",
+          "cells": [
+            "src#‘src’ 항목 주소",
+            "받는 값URL",
+            "기본값없음(필수)",
+            "설명편성 주소예요. raw 편성 JSON이나 관리자 API 응답({ok, data})을 받아요. http(s):// 주소나 /로 시작하는 경로만 받고 상대 경로는 거부해요. 편성 요청 시간 제한은 5초로 고정돼요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-video-id",
+          "cells": [
+            "video-id#‘video-id’ 항목 주소",
+            "받는 값문자열",
+            "기본값없음(필수)",
+            "설명편성과 통계에 쓰는 고정 영상 ID예요. 편성의 videoId와 같아야 광고가 붙어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-lang",
+          "cells": [
+            "lang#‘lang’ 항목 주소",
+            "받는 값ko | en",
+            "기본값<media-ads>부터 위로 찾은 lang, 없으면 영어",
+            "설명광고 화면 문구 언어예요. 로더와 설치 코드는 늘 ko를 넣어서 광고 문구는 플레이어 언어와 상관없이 한국어예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-skip-label",
+          "cells": [
+            "skip-label#‘skip-label’ 항목 주소",
+            "받는 값글자",
+            "기본값광고 건너뛰기",
+            "설명건너뛰기 버튼 문구예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-skip-countdown-label",
+          "cells": [
+            "skip-countdown-label#‘skip-countdown-label’ 항목 주소",
+            "받는 값글자, {seconds}",
+            "기본값{seconds}초 후 건너뛰기",
+            "설명건너뛰기를 기다리는 동안 보이는 문구예요. {seconds}에 남은 초가 들어가요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-timer-label",
+          "cells": [
+            "timer-label#‘timer-label’ 항목 주소",
+            "받는 값글자, {elapsed} {duration} {remaining}",
+            "기본값{elapsed} / {duration}",
+            "설명광고 시간 표시 문구예요. {elapsed}(지난 시간), {duration}(길이), {remaining}(남은 시간)을 쓸 수 있어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-alt",
+          "cells": [
+            "media-alt#‘media-alt’ 항목 주소",
+            "받는 값글자",
+            "기본값소재의 대체 텍스트, 없으면 광고 / Advertisement",
+            "설명모든 광고 소재의 대체 텍스트를 이 값으로 덮어써요. 소재마다 입력한 대체 텍스트가 가려지므로 프리셋에서는 설정하지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "JS API",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-mount-videoid",
+          "cells": [
+            "videoId#‘videoId’ 항목 주소",
+            "받는 값문자열, 128자 이하",
+            "기본값data-video-id",
+            "설명편성과 통계에 쓰는 고정 영상 ID예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-src",
+          "cells": [
+            "src#‘src’ 항목 주소",
+            "받는 값/경로 또는 http(s):// 주소",
+            "기본값data-src",
+            "설명본편 주소예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-poster",
+          "cells": [
+            "poster#‘poster’ 항목 주소",
+            "받는 값/경로 또는 http(s):// 주소",
+            "기본값data-poster",
+            "설명포스터 이미지예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-title",
+          "cells": [
+            "title#‘title’ 항목 주소",
+            "받는 값글자",
+            "기본값data-title",
+            "설명영상 제목이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-thumbnails",
+          "cells": [
+            "thumbnails#‘thumbnails’ 항목 주소",
+            "받는 값WebVTT 주소",
+            "기본값data-thumbnails",
+            "설명탐색 막대에 띄울 미리보기 이미지 목록이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-engine",
+          "cells": [
+            "engine#‘engine’ 항목 주소",
+            "받는 값spf | hlsjs",
+            "기본값data-engine, 없으면 spf",
+            "설명HLS를 재생할 엔진이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-lang",
+          "cells": [
+            "lang#‘lang’ 항목 주소",
+            "받는 값ko | en | ja | zh-CN",
+            "기본값data-lang",
+            "설명플레이어 화면 언어예요. 프리셋 언어보다 앞서요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-preset",
+          "cells": [
+            "preset#‘preset’ 항목 주소",
+            "받는 값프리셋 id",
+            "기본값data-preset, 없으면 사이트 적용 프리셋",
+            "설명사이트 적용 프리셋 대신 쓸 프리셋이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-overrides",
+          "cells": [
+            "overrides#‘overrides’ 항목 주소",
+            "받는 값프리셋 일부 객체",
+            "기본값없음",
+            "설명프리셋 위에 덮어쓸 값이에요. 같은 검증을 거치고, 하나라도 틀리면 모두 버리고 onError로 알려요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-onevent",
+          "cells": [
+            "onEvent#‘onEvent’ 항목 주소",
+            "받는 값(detail) => void",
+            "기본값없음",
+            "설명ads-event의 detail을 받아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-onerror",
+          "cells": [
+            "onError#‘onError’ 항목 주소",
+            "받는 값({ code, message }) => void",
+            "기본값없음",
+            "설명프리셋 대체, 편성 실패, 잘못된 overrides를 받아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-preview",
+          "cells": [
+            "preview#‘preview’ 항목 주소",
+            "받는 값{ schedule, preset? }",
+            "기본값없음",
+            "설명미리보기 전용이에요. 사이트 설치에는 쓰지 않아요. raw 편성으로 재생하고 통계를 보내지 않아요. Video.js 플레이어에 편성을 주소가 아닌 객체로 넘기면 광고 중에 누른 키보드 단축키가 본편에 들어가요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handleplayer",
+          "cells": [
+            "handle.player#‘handle.player’ 항목 주소",
+            "받는 값요소",
+            "기본값없음",
+            "설명<video-player> 또는 <video>예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handlemedia",
+          "cells": [
+            "handle.media#‘handle.media’ 항목 주소",
+            "받는 값요소",
+            "기본값없음",
+            "설명본편 미디어 요소예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handlepresetid",
+          "cells": [
+            "handle.presetId#‘handle.presetId’ 항목 주소",
+            "받는 값문자열 | null",
+            "기본값없음",
+            "설명적용한 프리셋 id예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handlefallback",
+          "cells": [
+            "handle.fallback#‘handle.fallback’ 항목 주소",
+            "받는 값true | false",
+            "기본값없음",
+            "설명프리셋을 받지 못해 기본값으로 재생하는지예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handledestroy",
+          "cells": [
+            "handle.destroy()#‘handle.destroy()’ 항목 주소",
+            "받는 값함수",
+            "기본값없음",
+            "설명만든 요소와 광고 처리를 정리해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handleseektarget",
+          "cells": [
+            "handle.seek(target)#‘handle.seek(target)’ 항목 주소",
+            "받는 값'start' | 'before-midroll' | 'before-end'",
+            "기본값없음",
+            "설명미리보기 전용이에요. 사이트 설치에는 쓰지 않아요. 처음, 첫 미드롤 2초 전, 끝 2초 전으로 옮기고 재생해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-mount-handlerestylepreset",
+          "cells": [
+            "handle.restyle(preset)#‘handle.restyle(preset)’ 항목 주소",
+            "받는 값전체 프리셋 객체",
+            "기본값없음",
+            "설명미리보기 전용이에요. 사이트 설치에는 쓰지 않아요. 테마와 광고 문구만 바뀌었으면 다시 만들지 않고 적용하고 true를 돌려줘요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "JS API",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-media",
+          "cells": [
+            "media#‘media’ 항목 주소",
+            "받는 값HTMLMediaElement",
+            "기본값없음(필수)",
+            "설명광고를 붙일 본편 미디어 요소예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-container",
+          "cells": [
+            "container#‘container’ 항목 주소",
+            "받는 값HTMLElement",
+            "기본값없음(필수)",
+            "설명광고 화면을 올릴 요소예요. 본편을 감싸고 position이 지정된 요소를 넘겨요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-schedule",
+          "cells": [
+            "schedule#‘schedule’ 항목 주소",
+            "받는 값편성 객체",
+            "기본값없음(필수)",
+            "설명편성 API 응답의 schedule이에요. 형식이 맞지 않으면 광고 없이 본편만 재생해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-tracking",
+          "cells": [
+            "tracking#‘tracking’ 항목 주소",
+            "받는 값추적 정보 객체",
+            "기본값없음",
+            "설명편성 응답에서 schedule을 뺀 나머지예요. 있으면 광고 이벤트를 수집 API로 보내요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-preview",
+          "cells": [
+            "preview#‘preview’ 항목 주소",
+            "받는 값boolean",
+            "기본값false",
+            "설명true면 수집 요청을 보내지 않아요. 관리자 미리보기에서 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-onevent",
+          "cells": [
+            "onEvent#‘onEvent’ 항목 주소",
+            "받는 값(event) => void",
+            "기본값없음",
+            "설명광고 시작·완료·건너뜀·클릭·오류·중단을 관측할 때마다 불려요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-timeoutsloadseconds",
+          "cells": [
+            "timeouts.loadSeconds#‘timeouts.loadSeconds’ 항목 주소",
+            "받는 값초(0 초과 60 이하)",
+            "기본값5",
+            "설명광고 소재를 불러오고 재생을 시작하기까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–60초 정수로 정해요. <media-ads>에는 이 옵션이 없어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-timeoutsstallseconds",
+          "cells": [
+            "timeouts.stallSeconds#‘timeouts.stallSeconds’ 항목 주소",
+            "받는 값초(0 초과 120 이하)",
+            "기본값10",
+            "설명광고 영상이 멈췄을 때 다음 순서로 넘어가기 전까지 기다리는 시간이에요. 범위 밖 값은 오류 없이 기본값으로 바뀌어요. 프리셋은 기본 video에서만 1–120초 정수로 정해요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-uilocale",
+          "cells": [
+            "ui.locale#‘ui.locale’ 항목 주소",
+            "받는 값언어 코드",
+            "기본값container부터 위로 찾은 lang, 없으면 영어",
+            "설명광고 화면 문구 언어예요. 로더와 설치 코드는 늘 ko를 넘겨서 광고 문구는 한국어예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-uilabels",
+          "cells": [
+            "ui.labels#‘ui.labels’ 항목 주소",
+            "받는 값문구 객체",
+            "기본값한국어 패키지 문구",
+            "설명광고 화면 문구를 바꿔요. 프리셋에서는 광고 문구 16개를 정하고, 비운 문구는 한국어 기본 문구예요. mediaAlt는 소재 대체 텍스트를 덮어써서 프리셋에서 정하지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "JS API",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-destroy",
+          "cells": [
+            "destroy()#‘destroy()’ 항목 주소",
+            "받는 값() => void",
+            "기본값—",
+            "설명광고를 끝내고 화면과 이벤트 연결을 정리해요. 페이지를 떠날 때(pagehide) 불러 주세요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-updateuiui",
+          "cells": [
+            "updateUI(ui)#‘updateUI(ui)’ 항목 주소",
+            "받는 값(ui) => void",
+            "기본값—",
+            "설명편성을 다시 받지 않고 광고 화면 언어와 문구를 바꿔요. 빈 객체를 넘기면 기본값으로 돌아가요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "이벤트와 오류 코드",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-event-solad-ready",
+          "cells": [
+            "solad-ready#‘solad-ready’ 항목 주소",
+            "받는 값{ player, presetId, fallback }",
+            "기본값없음",
+            "설명플레이어를 만들었을 때 보내요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-event-solad-error",
+          "cells": [
+            "solad-error#‘solad-error’ 항목 주소",
+            "받는 값{ code, message }",
+            "기본값없음",
+            "설명필수 값이 없거나 틀려 플레이어를 만들지 않았을 때 보내요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-event-ads-event",
+          "cells": [
+            "ads-event#‘ads-event’ 항목 주소",
+            "받는 값광고 관찰 이벤트",
+            "기본값없음",
+            "설명광고 시작, 완료, 건너뛰기, 클릭, 오류, 취소를 보내요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "이벤트와 오류 코드",
+      "heads": [
+        "코드",
+        "알리는 곳",
+        "뜻과 결과"
+      ],
+      "rows": [
+        {
+          "id": null,
+          "cells": [
+            "missing_video_id",
+            "solad-error, onError",
+            "영상 ID가 없거나 형식이 틀려요. 그 자리는 플레이어를 만들지 않아요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "missing_src",
+            "solad-error, onError",
+            "본편 주소가 없어요. 그 자리는 플레이어를 만들지 않아요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "invalid_src",
+            "solad-error, onError",
+            "본편 주소가 /경로나 http(s):// 주소가 아니에요. 그 자리는 플레이어를 만들지 않아요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "preset_not_found",
+            "onError",
+            "프리셋이 없어요. 기본 설정으로 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "preset_unavailable",
+            "onError",
+            "프리셋 응답이 실패했거나 3초 안에 오지 않았어요. 기본 설정으로 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "preset_invalid",
+            "onError",
+            "받은 프리셋 값이 올바르지 않아요. 기본 설정으로 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "invalid_overrides",
+            "onError",
+            "overrides에 틀린 값이 있어요. overrides 전체를 쓰지 않아요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "schedule_unavailable",
+            "onError",
+            "기본 video 플레이어가 광고 편성을 받지 못했어요. 광고 없이 본편을 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "load_failed",
+            "onError",
+            "플레이어 파일을 불러오지 못했어요. 플레이어를 만들지 못해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "player_type",
+            "onError",
+            "예제 페이지가 정한 플레이어와 프리셋의 플레이어 종류가 달라요. 기본 설정으로 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "invalid_preview_preset",
+            "onError(미리보기 전용)",
+            "미리보기 프리셋 값이 틀려요. 기본 설정으로 보여요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "invalid_preview_schedule",
+            "onError(미리보기 전용)",
+            "미리보기 편성이 raw 편성이 아니에요. 광고 없이 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        },
+        {
+          "id": null,
+          "cells": [
+            "preview_schedule_unavailable",
+            "onError(미리보기 전용)",
+            "미리보기 편성 주소에서 편성을 받지 못했어요. 광고 없이 재생해요."
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": null
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-name",
+          "cells": [
+            "name#‘name’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값없음(필수)",
+            "설명관리자 목록에 보이는 이름이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-playerType",
+          "cells": [
+            "playerType#‘playerType’ 항목 주소",
+            "받는 값videojs | native",
+            "기본값없음(필수)",
+            "설명플레이어 종류예요. 저장한 뒤에는 바꿀 수 없어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-theme-accentColor",
+          "cells": [
+            "theme.accentColor#‘theme.accentColor’ 항목 주소",
+            "받는 값#rrggbb(소문자)",
+            "기본값비움(스킨 기본값)",
+            "설명강조색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-theme-accentTextColor",
+          "cells": [
+            "theme.accentTextColor#‘theme.accentTextColor’ 항목 주소",
+            "받는 값#rrggbb(소문자)",
+            "기본값비움(스킨 기본값)",
+            "설명강조색 위 글자색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-theme-borderColor",
+          "cells": [
+            "theme.borderColor#‘theme.borderColor’ 항목 주소",
+            "받는 값#rrggbb(소문자)",
+            "기본값비움(스킨 기본값)",
+            "설명테두리 색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-theme-borderRadius",
+          "cells": [
+            "theme.borderRadius#‘theme.borderRadius’ 항목 주소",
+            "받는 값0–32px 정수",
+            "기본값비움(스킨 기본값)",
+            "설명모서리 둥글기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-theme-fontFamily",
+          "cells": [
+            "theme.fontFamily#‘theme.fontFamily’ 항목 주소",
+            "받는 값system",
+            "기본값비움(스킨 기본값)",
+            "설명글꼴이에요. system은 기기 기본 글꼴이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-theme-objectFit",
+          "cells": [
+            "theme.objectFit#‘theme.objectFit’ 항목 주소",
+            "받는 값contain | cover",
+            "기본값비움(스킨 기본값)",
+            "설명영상 맞춤 방식이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-theme-scaleUnit",
+          "cells": [
+            "theme.scaleUnit#‘theme.scaleUnit’ 항목 주소",
+            "받는 값root",
+            "기본값비움(스킨 기본값)",
+            "설명컨트롤 크기 기준이에요. root는 페이지 글자 크기를 따라요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-playback-autoplay",
+          "cells": [
+            "playback.autoplay#‘playback.autoplay’ 항목 주소",
+            "받는 값true | false",
+            "기본값false",
+            "설명자동재생이에요. 켜면 음소거가 켜진 채 잠겨요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-playback-muted",
+          "cells": [
+            "playback.muted#‘playback.muted’ 항목 주소",
+            "받는 값true | false",
+            "기본값false",
+            "설명음소거로 시작해요. 자동재생과 함께 false로 둘 수 없어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-playback-loop",
+          "cells": [
+            "playback.loop#‘playback.loop’ 항목 주소",
+            "받는 값true | false",
+            "기본값false",
+            "설명끝나면 처음부터 다시 재생해요. 포스트롤은 나오지 않고 미드롤은 첫 회에만 나와요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-playback-preload",
+          "cells": [
+            "playback.preload#‘playback.preload’ 항목 주소",
+            "받는 값none | metadata | auto",
+            "기본값metadata",
+            "설명재생 전에 영상을 얼마나 미리 받을지예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-display-poster",
+          "cells": [
+            "display.poster#‘display.poster’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명포스터 표시예요. data-poster가 없으면 효과가 없어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-display-title",
+          "cells": [
+            "display.title#‘display.title’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명제목 표시예요. data-title이 없으면 효과가 없어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-language",
+          "cells": [
+            "language#‘language’ 항목 주소",
+            "받는 값ko | en | ja | zh-CN",
+            "기본값비움(페이지 lang)",
+            "설명플레이어 화면 언어예요. 비우면 페이지 lang을 따라요. 광고 문구는 늘 한국어예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-input-hotkeys",
+          "cells": [
+            "input.hotkeys#‘input.hotkeys’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명단축키예요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-input-gestures",
+          "cells": [
+            "input.gestures#‘input.gestures’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명화면 탭과 두 번 탭 동작이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-controls-captions",
+          "cells": [
+            "controls.captions#‘controls.captions’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명자막 버튼과 설정의 자막 항목이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-quality",
+          "cells": [
+            "controls.quality#‘controls.quality’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명설정의 화질 항목이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-audioTrack",
+          "cells": [
+            "controls.audioTrack#‘controls.audioTrack’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명설정의 오디오 트랙 항목이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-playbackRate",
+          "cells": [
+            "controls.playbackRate#‘controls.playbackRate’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명설정의 재생 속도 항목이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-pip",
+          "cells": [
+            "controls.pip#‘controls.pip’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명PiP 버튼이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-fullscreen",
+          "cells": [
+            "controls.fullscreen#‘controls.fullscreen’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명전체화면 버튼이에요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-thumbnails",
+          "cells": [
+            "controls.thumbnails#‘controls.thumbnails’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명시간 막대 썸네일 미리보기예요. data-thumbnails가 있을 때만 보여요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        },
+        {
+          "id": "field-controls-seekButtons",
+          "cells": [
+            "controls.seekButtons#‘controls.seekButtons’ 항목 주소",
+            "받는 값5초 | 10초 | 15초 | 30초",
+            "기본값비움(숨김)",
+            "설명앞뒤로 건너뛰는 버튼의 초예요.",
+            "적용 단계준비 중(A2-2)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-2)"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-logo-assetId",
+          "cells": [
+            "logo.assetId#‘logo.assetId’ 항목 주소",
+            "받는 값아직 받지 않음",
+            "기본값비움(로고 없음)",
+            "설명업로드한 로고 이미지예요. 업로드가 준비될 때까지 값을 받지 않아요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-position",
+          "cells": [
+            "logo.position#‘logo.position’ 항목 주소",
+            "받는 값top-left | top-right | bottom-left | bottom-right",
+            "기본값top-right",
+            "설명로고 위치예요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-margin",
+          "cells": [
+            "logo.margin#‘logo.margin’ 항목 주소",
+            "받는 값0–48px 정수",
+            "기본값12",
+            "설명로고와 가장자리 사이 간격이에요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-width",
+          "cells": [
+            "logo.width#‘logo.width’ 항목 주소",
+            "받는 값24–240px 정수",
+            "기본값80",
+            "설명로고 너비예요. 높이는 비율을 유지해요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-opacity",
+          "cells": [
+            "logo.opacity#‘logo.opacity’ 항목 주소",
+            "받는 값10–100% 정수",
+            "기본값80",
+            "설명로고 불투명도예요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-href",
+          "cells": [
+            "logo.href#‘logo.href’ 항목 주소",
+            "받는 값http(s):// 주소",
+            "기본값비움",
+            "설명로고 링크예요. 새 창으로 열려요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-alt",
+          "cells": [
+            "logo.alt#‘logo.alt’ 항목 주소",
+            "받는 값80자 이하",
+            "기본값비움",
+            "설명로고 대체 글자예요. 링크가 있으면 필수예요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-hideDuringAds",
+          "cells": [
+            "logo.hideDuringAds#‘logo.hideDuringAds’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명광고 중에 로고를 숨겨요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-logo-hideWithControls",
+          "cells": [
+            "logo.hideWithControls#‘logo.hideWithControls’ 항목 주소",
+            "받는 값true | false",
+            "기본값false",
+            "설명컨트롤이 숨을 때 로고도 숨겨요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "field-ads-labels-advertisement",
+          "cells": [
+            "ads.labels.advertisement#‘ads.labels.advertisement’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고",
+            "설명광고 표시 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-sequence",
+          "cells": [
+            "ads.labels.sequence#‘ads.labels.sequence’ 항목 주소",
+            "받는 값40자 이하, 자리표시자 {index} {count}",
+            "기본값광고 {index}/{count}",
+            "설명광고 순서 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-playPause",
+          "cells": [
+            "ads.labels.playPause#‘ads.labels.playPause’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고 재생 / 일시정지",
+            "설명재생·일시정지 버튼 이름이에요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-mute",
+          "cells": [
+            "ads.labels.mute#‘ads.labels.mute’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고 음소거",
+            "설명음소거 버튼 이름이에요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-volume",
+          "cells": [
+            "ads.labels.volume#‘ads.labels.volume’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고 음량",
+            "설명음량 조절 이름이에요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-advertiser",
+          "cells": [
+            "ads.labels.advertiser#‘ads.labels.advertiser’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고주 사이트",
+            "설명광고주 링크 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-newWindow",
+          "cells": [
+            "ads.labels.newWindow#‘ads.labels.newWindow’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값새 탭에서 열림",
+            "설명새 창 안내 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-skip",
+          "cells": [
+            "ads.labels.skip#‘ads.labels.skip’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고 건너뛰기",
+            "설명건너뛰기 버튼 글자예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-labels-skipCountdown",
+          "cells": [
+            "ads.labels.skipCountdown#‘ads.labels.skipCountdown’ 항목 주소",
+            "받는 값40자 이하, 자리표시자 {seconds}",
+            "기본값{seconds}초 후 건너뛰기",
+            "설명건너뛰기 전 남은 시간 글자예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-labels-timer",
+          "cells": [
+            "ads.labels.timer#‘ads.labels.timer’ 항목 주소",
+            "받는 값40자 이하, 자리표시자 {elapsed} {duration} {remaining}",
+            "기본값{elapsed} / {duration}",
+            "설명광고 시간 글자예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-labels-loading",
+          "cells": [
+            "ads.labels.loading#‘ads.labels.loading’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고 불러오는 중…",
+            "설명광고를 불러오는 동안 보이는 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-paused",
+          "cells": [
+            "ads.labels.paused#‘ads.labels.paused’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값광고 일시정지",
+            "설명광고가 멈췄을 때 보이는 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-blocked",
+          "cells": [
+            "ads.labels.blocked#‘ads.labels.blocked’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값재생 버튼을 눌러 계속하세요",
+            "설명자동재생이 막혔을 때 보이는 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-enterFullscreen",
+          "cells": [
+            "ads.labels.enterFullscreen#‘ads.labels.enterFullscreen’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값전체화면 시작",
+            "설명전체화면 버튼 이름이에요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-exitFullscreen",
+          "cells": [
+            "ads.labels.exitFullscreen#‘ads.labels.exitFullscreen’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값전체화면 종료",
+            "설명전체화면 끝내기 버튼 이름이에요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-labels-fullscreenError",
+          "cells": [
+            "ads.labels.fullscreenError#‘ads.labels.fullscreenError’ 항목 주소",
+            "받는 값40자 이하",
+            "기본값전체화면을 사용할 수 없습니다",
+            "설명전체화면을 쓸 수 없을 때 보이는 글자예요. 기본 video 플레이어에는 지금도 적용돼요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-accentColor",
+          "cells": [
+            "ads.accentColor#‘ads.accentColor’ 항목 주소",
+            "받는 값#rrggbb(소문자)",
+            "기본값비움(스킨 기본값)",
+            "설명광고 화면 강조색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-skipRadius",
+          "cells": [
+            "ads.skipRadius#‘ads.skipRadius’ 항목 주소",
+            "받는 값0–24px 정수",
+            "기본값비움(스킨 기본값)",
+            "설명건너뛰기 버튼 둥글기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-fontSize",
+          "cells": [
+            "ads.fontSize#‘ads.fontSize’ 항목 주소",
+            "받는 값11–18px 정수",
+            "기본값비움(스킨 기본값)",
+            "설명광고 화면 글자 크기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-progress-sequence",
+          "cells": [
+            "ads.progress.sequence#‘ads.progress.sequence’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명광고 순서 글자를 보여요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-progress-timer",
+          "cells": [
+            "ads.progress.timer#‘ads.progress.timer’ 항목 주소",
+            "받는 값true | false",
+            "기본값true",
+            "설명광고 시간 글자를 보여요. 끄면 화면에서만 숨기고 화면 읽기용 글자는 남아요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-progress-bar",
+          "cells": [
+            "ads.progress.bar#‘ads.progress.bar’ 항목 주소",
+            "받는 값true | false",
+            "기본값false",
+            "설명광고 진행 막대를 보여요.",
+            "적용 단계준비 중(A2-3)"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "준비 중(A2-3)"
+        },
+        {
+          "id": "field-ads-timeouts-loadSeconds",
+          "cells": [
+            "ads.timeouts.loadSeconds#‘ads.timeouts.loadSeconds’ 항목 주소",
+            "받는 값1–60초 정수",
+            "기본값5",
+            "설명광고를 불러오기를 기다리는 시간이에요. 기본 video 플레이어에서만 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "field-ads-timeouts-stallSeconds",
+          "cells": [
+            "ads.timeouts.stallSeconds#‘ads.timeouts.stallSeconds’ 항목 주소",
+            "받는 값1–120초 정수",
+            "기본값10",
+            "설명광고가 멈춘 뒤 기다리는 시간이에요. 기본 video 플레이어에서만 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-media-accent-color",
+          "cells": [
+            "--media-accent-color#‘--media-accent-color’ 항목 주소",
+            "받는 값색",
+            "기본값흰색 oklch(1 0 0)",
+            "설명슬라이더 채움, 강조된 컨트롤과 메뉴, 주요 동작의 색이에요. 광고 화면의 음량 막대도 이 색을 이어받아요. 초점 테두리는 Video.js 스킨 안에서 흰색(--media-ring)으로 고정돼 바뀌지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-accent-text-color",
+          "cells": [
+            "--media-accent-text-color#‘--media-accent-text-color’ 항목 주소",
+            "받는 값색",
+            "기본값자동 대비, contrast-color() 미지원 브라우저는 검정",
+            "설명강조색 위 글자와 아이콘 색이에요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정되니 어두운 강조색이면 함께 정해 주세요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-border-color",
+          "cells": [
+            "--media-border-color#‘--media-border-color’ 항목 주소",
+            "받는 값색",
+            "기본값rgb(0 0 0 / .1)",
+            "설명플레이어 둘레의 가는 선 색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-border-radius",
+          "cells": [
+            "--media-border-radius#‘--media-border-radius’ 항목 주소",
+            "받는 값길이",
+            "기본값28px",
+            "설명플레이어 모서리 둥글기예요. 광고 화면 모서리도 따라가요. 내장 프리셋 \"둥근 테두리\"는 12px예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-font-family",
+          "cells": [
+            "--media-font-family#‘--media-font-family’ 항목 주소",
+            "받는 값글꼴 목록",
+            "기본값\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "설명플레이어 글꼴이에요. 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요. 프리셋에서는 시스템 글꼴만 고를 수 있어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-object-fit",
+          "cells": [
+            "--media-object-fit#‘--media-object-fit’ 항목 주소",
+            "받는 값object-fit",
+            "기본값contain",
+            "설명영상과 포스터를 플레이어에 채우는 방식이에요. 전체화면에서는 항상 contain이에요. 광고 소재는 이 값과 상관없이 contain이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-object-position",
+          "cells": [
+            "--media-object-position#‘--media-object-position’ 항목 주소",
+            "받는 값object-position",
+            "기본값center",
+            "설명영상과 포스터가 다 채우지 않을 때의 위치예요. 프리셋에서는 설정하지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-media-scale-unit",
+          "cells": [
+            "--media-scale-unit#‘--media-scale-unit’ 항목 주소",
+            "받는 값길이",
+            "기본값16px",
+            "설명컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 1rem이면 문서 글자 크기를 따라요. 광고 화면에는 영향이 없어요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    },
+    {
+      "caption": "프리셋 설정 옵션",
+      "heads": [
+        "이름",
+        "받는 값",
+        "기본값",
+        "설명",
+        "적용 단계"
+      ],
+      "rows": [
+        {
+          "id": "opt-ads-accent-color",
+          "cells": [
+            "--ads-accent-color#‘--ads-accent-color’ 항목 주소",
+            "받는 값색",
+            "기본값--media-accent-color, 없으면 #fff",
+            "설명광고 음량 막대 색만 바꿔요. 건너뛰기 버튼과 초점 테두리는 바뀌지 않아요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-skip-radius",
+          "cells": [
+            "--ads-skip-radius#‘--ads-skip-radius’ 항목 주소",
+            "받는 값길이",
+            "기본값6px",
+            "설명건너뛰기 버튼 모서리 둥글기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-font-size",
+          "cells": [
+            "--ads-font-size#‘--ads-font-size’ 항목 주소",
+            "받는 값길이",
+            "기본값13px",
+            "설명광고 화면 글자 크기예요. 컨테이너 폭 280px 이하에서는 11px로 고정돼요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-font-family",
+          "cells": [
+            "--ads-font-family#‘--ads-font-family’ 항목 주소",
+            "받는 값글꼴 목록",
+            "기본값--media-font-family, 없으면 system-ui",
+            "설명광고 화면 글꼴이에요. 플레이어 글꼴(--media-font-family)을 지정했으면 그것을 따라가요. 둘 다 비우면 플레이어는 스킨 글꼴(Inter 우선)을, 광고 화면은 system-ui를 써요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-color",
+          "cells": [
+            "--ads-color#‘--ads-color’ 항목 주소",
+            "받는 값색",
+            "기본값--media-foreground, 없으면 #fff",
+            "설명광고 화면 글자와 아이콘 색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-background",
+          "cells": [
+            "--ads-background#‘--ads-background’ 항목 주소",
+            "받는 값색",
+            "기본값#000",
+            "설명광고 소재 뒤 바탕색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-radius",
+          "cells": [
+            "--ads-radius#‘--ads-radius’ 항목 주소",
+            "받는 값길이",
+            "기본값스킨 모서리(--media-border-radius, 기본 28px), 스킨 밖이면 0",
+            "설명광고 화면 모서리 둥글기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-inset",
+          "cells": [
+            "--ads-inset#‘--ads-inset’ 항목 주소",
+            "받는 값길이",
+            "기본값12px",
+            "설명광고 표시와 컨트롤의 바깥 여백이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-scrim",
+          "cells": [
+            "--ads-scrim#‘--ads-scrim’ 항목 주소",
+            "받는 값배경",
+            "기본값아래쪽 어두운 그러데이션",
+            "설명컨트롤 뒤 어둡게 깔리는 배경이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-control-size",
+          "cells": [
+            "--ads-control-size#‘--ads-control-size’ 항목 주소",
+            "받는 값길이",
+            "기본값--media-control-size, 없으면 36px",
+            "설명광고 컨트롤 버튼의 최소 크기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-control-radius",
+          "cells": [
+            "--ads-control-radius#‘--ads-control-radius’ 항목 주소",
+            "받는 값길이",
+            "기본값--media-control-radius: 스킨 안에서 99px(알약 모양), 스킨 밖에서는 8px",
+            "설명광고 컨트롤 버튼 모서리 둥글기예요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-button-background",
+          "cells": [
+            "--ads-button-background#‘--ads-button-background’ 항목 주소",
+            "받는 값색",
+            "기본값반투명 검정(#0005)",
+            "설명광고 컨트롤 버튼 바탕색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-hover-background",
+          "cells": [
+            "--ads-hover-background#‘--ads-hover-background’ 항목 주소",
+            "받는 값색",
+            "기본값반투명 흰색(#ffffff26)",
+            "설명포인터를 올렸을 때 버튼과 링크 바탕색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        },
+        {
+          "id": "opt-ads-focus-color",
+          "cells": [
+            "--ads-focus-color#‘--ads-focus-color’ 항목 주소",
+            "받는 값색",
+            "기본값--media-ring(Video.js 스킨은 흰색 oklch(1 0 0)) → --media-accent-color, 없으면 #fff",
+            "설명키보드 초점 테두리 색이에요. Video.js 스킨 안에서는 --media-ring이 있어서 강조색을 바꿔도 흰색이에요.",
+            "적용 단계적용"
+          ],
+          "help": null,
+          "helpName": null,
+          "phase": "적용"
+        }
+      ]
+    }
+  ],
+  "helpIds": [
+    "install",
+    "code-install",
+    "table-exampleQuery",
+    "opt-query-preset",
+    "opt-query-video",
+    "opt-query-type",
+    "opt-query-content",
+    "opt-query-media",
+    "opt-query-engine",
+    "opt-query-autoplay",
+    "opt-query-muted",
+    "opt-query-loop",
+    "opt-query-preload",
+    "opt-query-language",
+    "opt-query-pagelang",
+    "opt-query-poster",
+    "opt-query-posterurl",
+    "opt-query-title",
+    "opt-query-titletext",
+    "opt-query-thumbnails",
+    "attributes",
+    "table-loaderData",
+    "opt-data-solad-player",
+    "opt-data-video-id",
+    "opt-data-src",
+    "opt-data-poster",
+    "opt-data-title",
+    "opt-data-thumbnails",
+    "opt-data-autoplay",
+    "opt-data-muted",
+    "opt-data-loop",
+    "opt-data-preload",
+    "opt-data-lang",
+    "opt-data-preset",
+    "opt-data-engine",
+    "opt-data-solad-manual",
+    "table-element",
+    "opt-for",
+    "opt-src",
+    "opt-video-id",
+    "opt-lang",
+    "opt-skip-label",
+    "opt-skip-countdown-label",
+    "opt-timer-label",
+    "opt-media-alt",
+    "js-api",
+    "code-api",
+    "table-mount",
+    "opt-mount-videoid",
+    "opt-mount-src",
+    "opt-mount-poster",
+    "opt-mount-title",
+    "opt-mount-thumbnails",
+    "opt-mount-engine",
+    "opt-mount-lang",
+    "opt-mount-preset",
+    "opt-mount-overrides",
+    "opt-mount-onevent",
+    "opt-mount-onerror",
+    "opt-mount-preview",
+    "opt-mount-handleplayer",
+    "opt-mount-handlemedia",
+    "opt-mount-handlepresetid",
+    "opt-mount-handlefallback",
+    "opt-mount-handledestroy",
+    "opt-mount-handleseektarget",
+    "opt-mount-handlerestylepreset",
+    "table-controller",
+    "opt-media",
+    "opt-container",
+    "opt-schedule",
+    "opt-tracking",
+    "opt-preview",
+    "opt-onevent",
+    "opt-timeoutsloadseconds",
+    "opt-timeoutsstallseconds",
+    "opt-uilocale",
+    "opt-uilabels",
+    "table-controllerMethods",
+    "opt-destroy",
+    "opt-updateuiui",
+    "events",
+    "table-events",
+    "opt-event-solad-ready",
+    "opt-event-solad-error",
+    "opt-event-ads-event",
+    "error-codes",
+    "precedence",
+    "autoplay",
+    "language",
+    "preset-fields",
+    "fields-meta",
+    "field-name",
+    "field-playerType",
+    "fields-theme",
+    "field-theme-accentColor",
+    "field-theme-accentTextColor",
+    "field-theme-borderColor",
+    "field-theme-borderRadius",
+    "field-theme-fontFamily",
+    "field-theme-objectFit",
+    "field-theme-scaleUnit",
+    "fields-playback",
+    "field-playback-autoplay",
+    "field-playback-muted",
+    "field-playback-loop",
+    "field-playback-preload",
+    "fields-display",
+    "field-display-poster",
+    "field-display-title",
+    "fields-language",
+    "field-language",
+    "fields-input",
+    "field-input-hotkeys",
+    "field-input-gestures",
+    "fields-controls",
+    "field-controls-captions",
+    "field-controls-quality",
+    "field-controls-audioTrack",
+    "field-controls-playbackRate",
+    "field-controls-pip",
+    "field-controls-fullscreen",
+    "field-controls-thumbnails",
+    "field-controls-seekButtons",
+    "fields-logo",
+    "field-logo-assetId",
+    "field-logo-position",
+    "field-logo-margin",
+    "field-logo-width",
+    "field-logo-opacity",
+    "field-logo-href",
+    "field-logo-alt",
+    "field-logo-hideDuringAds",
+    "field-logo-hideWithControls",
+    "fields-ads",
+    "field-ads-labels-advertisement",
+    "field-ads-labels-sequence",
+    "field-ads-labels-playPause",
+    "field-ads-labels-mute",
+    "field-ads-labels-volume",
+    "field-ads-labels-advertiser",
+    "field-ads-labels-newWindow",
+    "field-ads-labels-skip",
+    "field-ads-labels-skipCountdown",
+    "field-ads-labels-timer",
+    "field-ads-labels-loading",
+    "field-ads-labels-paused",
+    "field-ads-labels-blocked",
+    "field-ads-labels-enterFullscreen",
+    "field-ads-labels-exitFullscreen",
+    "field-ads-labels-fullscreenError",
+    "field-ads-accentColor",
+    "field-ads-skipRadius",
+    "field-ads-fontSize",
+    "field-ads-progress-sequence",
+    "field-ads-progress-timer",
+    "field-ads-progress-bar",
+    "field-ads-timeouts-loadSeconds",
+    "field-ads-timeouts-stallSeconds",
+    "table-skinCss",
+    "opt-media-accent-color",
+    "opt-media-accent-text-color",
+    "opt-media-border-color",
+    "opt-media-border-radius",
+    "opt-media-font-family",
+    "opt-media-object-fit",
+    "opt-media-object-position",
+    "opt-media-scale-unit",
+    "table-adsCss",
+    "opt-ads-accent-color",
+    "opt-ads-skip-radius",
+    "opt-ads-font-size",
+    "opt-ads-font-family",
+    "opt-ads-color",
+    "opt-ads-background",
+    "opt-ads-radius",
+    "opt-ads-inset",
+    "opt-ads-scrim",
+    "opt-ads-control-size",
+    "opt-ads-control-radius",
+    "opt-ads-button-background",
+    "opt-ads-hover-background",
+    "opt-ads-focus-color",
+    "failure",
+    "same-origin"
+  ],
+  "helpSections": [
+    {
+      "id": "install",
+      "text": "설치 코드 두 줄"
+    },
+    {
+      "id": "attributes",
+      "text": "자리 요소 속성"
+    },
+    {
+      "id": "js-api",
+      "text": "JS API"
+    },
+    {
+      "id": "events",
+      "text": "이벤트와 오류 코드"
+    },
+    {
+      "id": "precedence",
+      "text": "값의 우선순위"
+    },
+    {
+      "id": "autoplay",
+      "text": "자동재생과 음소거"
+    },
+    {
+      "id": "language",
+      "text": "플레이어 화면 언어"
+    },
+    {
+      "id": "preset-fields",
+      "text": "프리셋 설정 옵션"
+    },
+    {
+      "id": "failure",
+      "text": "프리셋을 받지 못할 때"
+    },
+    {
+      "id": "same-origin",
+      "text": "같은 사이트에서만 동작"
+    }
+  ],
+  "clicks": [
+    {
+      "index": 0,
+      "href": "/examples/help.html#opt-data-solad-player",
+      "tab": "/examples/help.html#opt-data-solad-player",
+      "row": {
+        "tag": "TR",
+        "matchesTarget": true,
+        "bg": "rgba(0, 0, 0, 0)",
+        "outline": "none",
+        "boxShadow": "none",
+        "inView": true,
+        "text": "data-solad-player#‘data-solad-player’ 항목 주소받는 값있음기본값없음(필수)설명로더가 플레이어를 만들 자리예요. 한"
+      },
+      "plainRowBg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "index": 30,
+      "href": "/examples/help.html#opt-onevent",
+      "tab": "/examples/help.html#opt-onevent",
+      "row": {
+        "tag": "TR",
+        "matchesTarget": true,
+        "bg": "rgba(0, 0, 0, 0)",
+        "outline": "none",
+        "boxShadow": "none",
+        "inView": true,
+        "text": "onEvent#‘onEvent’ 항목 주소받는 값(event) => void기본값없음설명광고 시작·완료·건너뜀·클릭·오류·중단을 관측할 때마다 "
+      },
+      "plainRowBg": "rgba(0, 0, 0, 0)"
+    }
+  ],
+  "error": "TimeoutError: browserContext.waitForEvent: Timeout 30000ms exceeded while waiting for event \"page\"",
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

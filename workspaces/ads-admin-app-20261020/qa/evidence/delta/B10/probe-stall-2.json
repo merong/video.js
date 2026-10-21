@@ -1,0 +1,260 @@
+{
+  "url": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-probe-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+  "events": [
+    {
+      "at": 428,
+      "n": "suspend",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 1.3
+    },
+    {
+      "at": 430,
+      "n": "suspend",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 1.7
+    },
+    {
+      "at": 432,
+      "n": "suspend",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 2.6
+    },
+    {
+      "at": 2881,
+      "n": "pause() called",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "stack": [
+        "at #pauseContent (/assets/ads.js:1436:15)",
+        "at #startPending (/assets/ads.js:1196:21)",
+        "at #observe (/assets/ads.js:1153:50)",
+        "at #onPlay (/assets/ads.js:1115:16)"
+      ]
+    },
+    {
+      "at": 2886,
+      "n": "play",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 2.6
+    },
+    {
+      "at": 2886,
+      "n": "playing",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 2.6
+    },
+    {
+      "at": 2886,
+      "n": "pause",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 2.6
+    },
+    {
+      "at": 2957,
+      "n": "suspend",
+      "src": "content-scene-01.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 10
+    },
+    {
+      "at": 2957,
+      "n": "suspend",
+      "src": "ad-coffee-6s.mp4",
+      "t": 0,
+      "rs": 0,
+      "ns": 1,
+      "err": null,
+      "buf": null
+    },
+    {
+      "at": 4532,
+      "n": "playing",
+      "src": "ad-coffee-6s.mp4",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 6
+    },
+    {
+      "at": 5186,
+      "n": "pause",
+      "src": "ad-coffee-6s.mp4",
+      "t": 0.4,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 6
+    },
+    {
+      "at": 15190,
+      "n": "pause() called",
+      "src": "ad-coffee-6s.mp4",
+      "t": 0.4,
+      "stack": [
+        "at #clearCreative (/assets/ads.js:1427:19)",
+        "at #finish (/assets/ads.js:1384:22)",
+        "at #tick (/assets/ads.js:1305:16)",
+        "at /assets/ads.js:1267:49"
+      ]
+    },
+    {
+      "at": 15194,
+      "n": "abort",
+      "src": "ad-coffee-6s.mp4",
+      "t": 0,
+      "rs": 0,
+      "ns": 3,
+      "err": null,
+      "buf": null
+    },
+    {
+      "at": 15194,
+      "n": "emptied",
+      "src": "ad-coffee-6s.mp4",
+      "t": 0,
+      "rs": 0,
+      "ns": 3,
+      "err": null,
+      "buf": null
+    },
+    {
+      "at": 15223,
+      "n": "suspend",
+      "src": "c21ffd8f6db80bead47b3995",
+      "t": 0,
+      "rs": 0,
+      "ns": 1,
+      "err": null,
+      "buf": null
+    },
+    {
+      "at": 15259,
+      "n": "playing",
+      "src": "c21ffd8f6db80bead47b3995",
+      "t": 0,
+      "rs": 4,
+      "ns": 2,
+      "err": null,
+      "buf": 6.4
+    },
+    {
+      "at": 15300,
+      "n": "suspend",
+      "src": "c21ffd8f6db80bead47b3995",
+      "t": 0,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 12
+    },
+    {
+      "at": 19026,
+      "n": "pause",
+      "src": "c21ffd8f6db80bead47b3995",
+      "t": 3.5,
+      "rs": 4,
+      "ns": 1,
+      "err": null,
+      "buf": 12
+    }
+  ],
+  "statusText": "광고 관리자\n광고 연동 예제\n본편과 광고를 하나의 흐름으로.\n\n브라우저 기본 플레이어에 게시된 광고 편성을 연결합니다.\n\nVideo.js\n기본 video\nMP4\nHLS\nGrok Imagine 예제\n광고\n\n프리롤 · 광고 2/2 진행 중\n\n광고 재생이 멈춰 다음 순서로 진행합니다.\n\n영상 a1-qa-probe-1 · MP4\n\n처음부터 다시 확인\n\n이 예제의 광고 재생은 운영 통계에 기록됩니다. 통계를 남기지 않으려면 관리자 미리보기를 이용하세요.\n\n이번 재생 기록",
+  "media": [
+    {
+      "t": 274,
+      "url": "/examples/player.html?video=a1-qa-probe-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+      "status": 200,
+      "failed": null
+    },
+    {
+      "t": 329,
+      "url": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "status": 206,
+      "failed": "net::ERR_ABORTED"
+    },
+    {
+      "t": 3151,
+      "url": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "status": 206,
+      "failed": null
+    },
+    {
+      "t": 3208,
+      "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+      "status": 206,
+      "failed": null
+    },
+    {
+      "t": 15478,
+      "url": "/media/c21ffd8f6db80bead47b39958086a372.mp4",
+      "status": 206,
+      "failed": null
+    }
+  ],
+  "api": [
+    {
+      "t": 317,
+      "m": "GET",
+      "a": "schedule",
+      "s": 200
+    },
+    {
+      "t": 4904,
+      "m": "POST",
+      "a": "events",
+      "s": 200
+    },
+    {
+      "t": 15568,
+      "m": "POST",
+      "a": "events",
+      "s": 200
+    }
+  ],
+  "logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "all:error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "all:error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

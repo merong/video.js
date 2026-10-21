@@ -1,0 +1,78 @@
+{
+  "links": [
+    "대시보드",
+    "캠페인",
+    "소재",
+    "지면 편성",
+    "플레이어",
+    "승인함",
+    "리포트",
+    "설정"
+  ],
+  "snapshots": {
+    "대시보드": "http://127.0.0.1:18781/#/dashboard",
+    "캠페인": "http://127.0.0.1:18781/#/campaigns",
+    "소재": "http://127.0.0.1:18781/#/creatives",
+    "지면 편성": "http://127.0.0.1:18781/#/schedule",
+    "플레이어": "http://127.0.0.1:18781/#/players",
+    "승인함": "http://127.0.0.1:18781/#/approvals",
+    "리포트": "http://127.0.0.1:18781/#/reports",
+    "설정": "http://127.0.0.1:18781/#/settings"
+  },
+  "api": [
+    {
+      "t": 864,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false
+    },
+    {
+      "t": 1393,
+      "method": "POST",
+      "action": "login",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true
+    },
+    {
+      "t": 1685,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false
+    },
+    {
+      "t": 1739,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false
+    },
+    {
+      "t": 4805,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false
+    },
+    {
+      "t": 5631,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

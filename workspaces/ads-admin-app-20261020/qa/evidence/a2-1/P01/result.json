@@ -1,0 +1,265 @@
+{
+  "before": {
+    "revision": 12,
+    "defaultPresetId": "p-4yy9hmbhus",
+    "builtIns": [
+      {
+        "id": "default",
+        "name": "기본"
+      },
+      {
+        "id": "rounded",
+        "name": "둥근 테두리"
+      },
+      {
+        "id": "accent",
+        "name": "강조색"
+      }
+    ],
+    "savedCount": 8
+  },
+  "rows": {
+    "default": {
+      "text": "기본 내장 default Video.js 플레이어 페이지 언어 — 패키지 기본값 수정 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 복제 삭제 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 사이트에 적용",
+      "mark": 1,
+      "edit": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "duplicate": {
+        "disabled": false,
+        "reason": []
+      },
+      "delete": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "apply": {
+        "disabled": false,
+        "reason": []
+      }
+    },
+    "rounded": {
+      "text": "둥근 테두리 내장 rounded Video.js 플레이어 페이지 언어 — 패키지 기본값 수정 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 복제 삭제 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 사이트에 적용",
+      "mark": 1,
+      "edit": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "duplicate": {
+        "disabled": false,
+        "reason": []
+      },
+      "delete": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "apply": {
+        "disabled": false,
+        "reason": []
+      }
+    },
+    "accent": {
+      "text": "강조색 내장 accent Video.js 플레이어 페이지 언어 — 패키지 기본값 수정 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 복제 삭제 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요. 사이트에 적용",
+      "mark": 1,
+      "edit": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "duplicate": {
+        "disabled": false,
+        "reason": []
+      },
+      "delete": {
+        "disabled": true,
+        "reason": [
+          "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+        ]
+      },
+      "apply": {
+        "disabled": false,
+        "reason": []
+      }
+    }
+  },
+  "countNote": [
+    "저장 프리셋 8/20개. ? 사이트 적용 프리셋은 로더를 넣은 모든 페이지의 플레이어가 쓰는 프리셋이에요. ?"
+  ],
+  "editRoute": {
+    "hash": "#/players",
+    "forms": 0,
+    "saveButtons": 0,
+    "note": [
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+    ]
+  },
+  "duplicateForm": {
+    "hash": "#/players/new",
+    "name": "둥근 테두리 복사본",
+    "radius": "12"
+  },
+  "afterLeave": {
+    "hash": "#/players",
+    "dialogs": [],
+    "appDialog": 0
+  },
+  "api": {
+    "save default": {
+      "status": 400,
+      "ok": false,
+      "code": "preset_builtin",
+      "message": "내장 프리셋은 고치거나 지울 수 없습니다. 복제해서 사용해 주세요.",
+      "fields": null
+    },
+    "delete default": {
+      "status": 400,
+      "ok": false,
+      "code": "preset_builtin",
+      "message": "내장 프리셋은 고치거나 지울 수 없습니다. 복제해서 사용해 주세요.",
+      "fields": null
+    },
+    "save rounded": {
+      "status": 400,
+      "ok": false,
+      "code": "preset_builtin",
+      "message": "내장 프리셋은 고치거나 지울 수 없습니다. 복제해서 사용해 주세요.",
+      "fields": null
+    },
+    "delete rounded": {
+      "status": 400,
+      "ok": false,
+      "code": "preset_builtin",
+      "message": "내장 프리셋은 고치거나 지울 수 없습니다. 복제해서 사용해 주세요.",
+      "fields": null
+    },
+    "save accent": {
+      "status": 400,
+      "ok": false,
+      "code": "preset_builtin",
+      "message": "내장 프리셋은 고치거나 지울 수 없습니다. 복제해서 사용해 주세요.",
+      "fields": null
+    },
+    "delete accent": {
+      "status": 400,
+      "ok": false,
+      "code": "preset_builtin",
+      "message": "내장 프리셋은 고치거나 지울 수 없습니다. 복제해서 사용해 주세요.",
+      "fields": null
+    },
+    "PUT player-preset-save default": {
+      "status": 400,
+      "ok": false,
+      "code": "method",
+      "message": "요청 방식을 확인해 주세요.",
+      "fields": null
+    },
+    "DELETE player-preset-delete rounded": {
+      "status": 400,
+      "ok": false,
+      "code": "method",
+      "message": "요청 방식을 확인해 주세요.",
+      "fields": null
+    }
+  },
+  "afterApi": {
+    "revision": 12,
+    "builtIns": [
+      "default:기본",
+      "rounded:둥근 테두리",
+      "accent:강조색"
+    ]
+  },
+  "applyRounded": {
+    "dialogText": "\"둥근 테두리\" 프리셋을 사이트에 적용할까요?\n\n로더를 넣은 사이트의 모든 플레이어가 이 프리셋으로 바뀌어요. 방문자가 페이지를 새로고침하면 바로 보여요.\n\n지금 사이트 적용\tQA L02 강조색 복제 · Video.js 플레이어 · 페이지 언어\n바꿀 프리셋\t둥근 테두리 · Video.js 플레이어 · 페이지 언어\n\n취소\n사이트에 적용",
+    "status": [
+      "\"둥근 테두리\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ]
+  },
+  "afterApply": {
+    "defaultPresetId": "rounded"
+  },
+  "render": {
+    "status": 200,
+    "id": "rounded",
+    "css": {
+      "--media-border-radius": "12px"
+    }
+  },
+  "loader": {
+    "ready": [
+      {
+        "at": 157,
+        "target": "a1-qa-video-1",
+        "presetId": "rounded",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "radius": "12px",
+    "fill": "oklch(1 0 0)"
+  },
+  "restore": {
+    "dialogText": "\"QA L02 강조색 복제\" 프리셋을 사이트에 적용할까요?\n\n로더를 넣은 사이트의 모든 플레이어가 이 프리셋으로 바뀌어요. 방문자가 페이지를 새로고침하면 바로 보여요.\n\n지금 사이트 적용\t둥근 테두리 · Video.js 플레이어 · 페이지 언어\n바꿀 프리셋\tQA L02 강조색 복제 · Video.js 플레이어 · 페이지 언어\n\n취소\n사이트에 적용",
+    "status": [
+      "\"QA L02 강조색 복제\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요."
+    ]
+  },
+  "end": {
+    "defaultPresetId": "p-4yy9hmbhus",
+    "expected": "p-4yy9hmbhus"
+  },
+  "nativeDialogs": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    }
+  ]
+}

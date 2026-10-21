@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A2-1-QA l11-legacy-videojs</title>
+</head>
+<body>
+<!-- 솔애드 광고 플레이어(이전 방식) -->
+<link rel="stylesheet" href="http://127.0.0.1:18781/assets/videojs/video.css" />
+<script type="module" src="http://127.0.0.1:18781/assets/videojs/video.js"></script>
+<script type="module" src="http://127.0.0.1:18781/assets/ads.js"></script>
+<media-i18n lang="en">
+  <video-player>
+    <video-skin style="--media-accent-color: #0f5132; --media-accent-text-color: #ffffff; --media-border-radius: 12px; --ads-font-size: 15px">
+      <video id="ads-content-a1-qa-video-1-1swdj1c" src="http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4" playsinline preload="metadata"></video>
+      <media-ads for="ads-content-a1-qa-video-1-1swdj1c" src="http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1-qa-video-1" video-id="a1-qa-video-1" lang="ko" skip-label="Skip ad"></media-ads>
+    </video-skin>
+  </video-player>
+</media-i18n>
+</body>
+</html>

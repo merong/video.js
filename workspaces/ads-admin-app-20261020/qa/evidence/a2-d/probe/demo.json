@@ -1,0 +1,190 @@
+{
+  "state": {
+    "query": "",
+    "title": true,
+    "notes": {
+      "query": null,
+      "preset": null,
+      "adsRoot": null
+    },
+    "preset": {
+      "value": "p-i0aecb28w3",
+      "options": [
+        {
+          "value": "p-i0aecb28w3",
+          "label": "사이트 적용 프리셋",
+          "group": null,
+          "selected": true
+        },
+        {
+          "value": "default",
+          "label": "기본",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "rounded",
+          "label": "둥근 테두리",
+          "group": "내장",
+          "selected": false
+        },
+        {
+          "value": "accent",
+          "label": "강조색",
+          "group": "내장",
+          "selected": false
+        }
+      ],
+      "help": "관리자로 로그인하면 저장 프리셋도 고를 수 있어요."
+    },
+    "reset": {
+      "text": "프리셋 값 그대로예요",
+      "disabled": true
+    },
+    "toggles": {
+      "autoplay": {
+        "checked": "false",
+        "disabled": false,
+        "describedBy": [
+          "페이지가 열리면 바로 재생해요."
+        ]
+      },
+      "muted": {
+        "checked": "false",
+        "disabled": false,
+        "describedBy": [
+          "소리 없이 시작해요."
+        ]
+      },
+      "loop": {
+        "checked": "false",
+        "disabled": false,
+        "describedBy": [
+          "끝나면 처음부터 다시 재생해요."
+        ]
+      }
+    },
+    "preload": "metadata",
+    "poster": true,
+    "posterUrl": "",
+    "posterHelp": null,
+    "offReason": null,
+    "titleDisabled": false,
+    "titleText": "",
+    "vtt": "",
+    "vttHelp": "비우면 탐색 막대에 미리보기 그림이 나오지 않아요.",
+    "lang": "",
+    "pageLang": "ko",
+    "pageLangShown": true,
+    "media": "mp4",
+    "mediaDisabled": [],
+    "mediaHelp": null,
+    "engine": "spf",
+    "engineShown": false,
+    "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+    "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+    "codeJs": "import { mount } from \"/player/loader.js\";\n\n// 자리 요소: <div id=\"player\" data-solad-player data-solad-manual></div>\nconst handle = await mount(document.getElementById('player'), {\n  videoId: \"grok-demo-scene-01\",\n  src: \"/demo-media/grok-20261018/content-scene-01.mp4\",\n  title: \"Grok 해안 도시 장면\",\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+    "stageStatus": "",
+    "now": "최근 광고 진행아직 광고가 나오지 않았어요",
+    "sceneWhy": null,
+    "scenes": [
+      "처음부터:on",
+      "미드롤 앞:on",
+      "끝 직전:on"
+    ],
+    "log": [],
+    "logEmpty": "아직 광고 진행이 없어요재생하면 여기에 쌓여요.",
+    "empty": null,
+    "scaleNote": "자리 폭 818px · 실제 크기예요",
+    "frameWidth": 818
+  },
+  "player": {
+    "id": "player",
+    "videoId": null,
+    "children": [
+      "MEDIA-I18N"
+    ],
+    "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "ko",
+    "playerAttrs": {
+      "contentTitle": "Grok 해안 도시 장면",
+      "poster": null
+    },
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": false,
+      "mutedProp": false,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "ads": {
+      "lang": "ko",
+      "accentVar": "#2563eb",
+      "attrs": {
+        "lang": "ko",
+        "for": "solad-media-1",
+        "video-id": "grok-demo-scene-01"
+      }
+    },
+    "skin": {
+      "tag": "VIDEO-SKIN",
+      "accentVar": "#2563eb",
+      "accentTextVar": "#ffffff",
+      "adsAccentVar": "#2563eb",
+      "primary": "#2563eb",
+      "fillBefore": "rgb(37, 99, 235)",
+      "borderRadius": "28px",
+      "borderRadiusVar": "",
+      "borderColor": "rgb(24, 24, 26)",
+      "inline": "--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;",
+      "skinRootClass": "media-skin media-container video-skin",
+      "fillFound": true
+    },
+    "buttonLabels": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "visibleText": [
+      "Grok 해안 도시 장면",
+      "0:00",
+      "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+      "0:00",
+      "-",
+      "0:10",
+      "설정"
+    ]
+  },
+  "api": [
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/index.html"
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

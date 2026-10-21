@@ -1,0 +1,679 @@
+{
+  "PL03": {
+    "before": {
+      "revision": 1,
+      "preset": {
+        "id": "p-wkepup6b7d",
+        "name": "QA Video.js 중립",
+        "playerType": "videojs",
+        "skin": "neutral",
+        "theme": {
+          "accentColor": "#0a3d91",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": "en",
+          "labels": {
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:16:40Z",
+        "updatedAt": "2026-10-20T13:16:40Z",
+        "builtIn": false
+      },
+      "others": [
+        {
+          "id": "default",
+          "name": "기본",
+          "playerType": "videojs",
+          "skin": "default",
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": null,
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "createdAt": null,
+          "updatedAt": null,
+          "builtIn": true
+        }
+      ]
+    },
+    "saveApi": [
+      {
+        "t": 3081,
+        "method": "POST",
+        "action": "player-preset-save",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": true,
+        "respCsrfHeader": true
+      }
+    ],
+    "live": {
+      "status": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "alert": [],
+      "pageStatus": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ]
+    },
+    "listAfterReload": [
+      [
+        "기본",
+        "Video.js",
+        "기본",
+        "기본 프리셋",
+        "패키지 기본값"
+      ],
+      [
+        "QA Video.js 중립 v2",
+        "Video.js",
+        "뉴트럴",
+        "—",
+        "2026. 10. 20. 오후 10:18"
+      ]
+    ],
+    "formAfterReload": {
+      "이름": "QA Video.js 중립 v2",
+      "플레이어 종류": "videojs|Video.js",
+      "스킨": "neutral|뉴트럴 (모서리 12px)",
+      "강조색": "#0f5132",
+      "강조 글자색": "#ffffff",
+      "테두리 색": "",
+      "모서리 둥글기 (px)": "12",
+      "글꼴": "|스킨 기본 (Inter 우선)",
+      "화면 채우기": "|스킨 기본 (맞춤)",
+      "크기 기준": "|스킨 기본 (16px)",
+      "광고 문구 언어": "en|English",
+      "건너뛰기 문구": "Skip ad",
+      "건너뛰기 대기 문구": "",
+      "광고 시간 문구": "",
+      "광고 음량 막대 색": "",
+      "건너뛰기 버튼 모서리 (px)": "",
+      "광고 글자 크기 (px)": "15"
+    },
+    "after": {
+      "revision": 2,
+      "preset": {
+        "id": "p-wkepup6b7d",
+        "name": "QA Video.js 중립 v2",
+        "playerType": "videojs",
+        "skin": "neutral",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": "en",
+          "labels": {
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:16:40Z",
+        "updatedAt": "2026-10-20T13:18:06Z",
+        "builtIn": false
+      },
+      "othersUnchanged": true
+    }
+  },
+  "PL04": {
+    "before": [
+      {
+        "id": "default",
+        "name": "기본"
+      },
+      {
+        "id": "p-wkepup6b7d",
+        "name": "QA Video.js 중립 v2"
+      }
+    ],
+    "copyDefault": {
+      "source": "기본",
+      "hashAfterClick": "#/players/new",
+      "apiAfterClick": [],
+      "formVisible": true,
+      "formBeforeSave": {
+        "이름": "기본 복사본",
+        "플레이어 종류": "videojs|Video.js",
+        "스킨": "default|기본 (모서리 28px)",
+        "강조색": "",
+        "강조 글자색": "",
+        "테두리 색": "",
+        "모서리 둥글기 (px)": "",
+        "글꼴": "|스킨 기본 (Inter 우선)",
+        "화면 채우기": "|스킨 기본 (맞춤)",
+        "크기 기준": "|스킨 기본 (16px)",
+        "광고 문구 언어": "|페이지 lang 따름",
+        "건너뛰기 문구": "",
+        "건너뛰기 대기 문구": "",
+        "광고 시간 문구": "",
+        "광고 음량 막대 색": "",
+        "건너뛰기 버튼 모서리 (px)": "",
+        "광고 글자 크기 (px)": ""
+      },
+      "heading": [
+        "새 프리셋",
+        "새 프리셋",
+        "스킨 테마",
+        "광고 화면",
+        "미리보기"
+      ],
+      "saveApi": [
+        {
+          "t": 10047,
+          "method": "POST",
+          "action": "player-preset-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ],
+      "live": {
+        "status": [
+          "\"기본 복사본\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "\"기본 복사본\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ]
+      },
+      "hashAfterSave": "#/players/edit/p-5wtukkgv6f"
+    },
+    "copyPA": {
+      "source": "QA Video.js 중립 v2",
+      "hashAfterClick": "#/players/new",
+      "apiAfterClick": [],
+      "formVisible": true,
+      "formBeforeSave": {
+        "이름": "QA Video.js 중립 v2 복사본",
+        "플레이어 종류": "videojs|Video.js",
+        "스킨": "neutral|뉴트럴 (모서리 12px)",
+        "강조색": "#0f5132",
+        "강조 글자색": "#ffffff",
+        "테두리 색": "",
+        "모서리 둥글기 (px)": "12",
+        "글꼴": "|스킨 기본 (Inter 우선)",
+        "화면 채우기": "|스킨 기본 (맞춤)",
+        "크기 기준": "|스킨 기본 (16px)",
+        "광고 문구 언어": "en|English",
+        "건너뛰기 문구": "Skip ad",
+        "건너뛰기 대기 문구": "",
+        "광고 시간 문구": "",
+        "광고 음량 막대 색": "",
+        "건너뛰기 버튼 모서리 (px)": "",
+        "광고 글자 크기 (px)": "15"
+      },
+      "heading": [
+        "새 프리셋",
+        "새 프리셋",
+        "스킨 테마",
+        "광고 화면",
+        "미리보기"
+      ],
+      "saveApi": [
+        {
+          "t": 14530,
+          "method": "POST",
+          "action": "player-preset-save",
+          "status": 200,
+          "ok": true,
+          "csrfHeader": true,
+          "csrfMatchesLastResponse": true,
+          "respCsrfHeader": true
+        }
+      ],
+      "live": {
+        "status": [
+          "\"QA Video.js 중립 v2 복사본\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ],
+        "alert": [],
+        "pageStatus": [
+          "\"QA Video.js 중립 v2 복사본\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+        ]
+      },
+      "hashAfterSave": "#/players/edit/p-cs6hpsjmyw"
+    },
+    "after": [
+      {
+        "id": "default",
+        "name": "기본",
+        "playerType": "videojs",
+        "skin": "default",
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": null,
+          "borderRadius": null,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": null,
+          "labels": {
+            "skip": null,
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": null,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": null,
+        "updatedAt": null,
+        "builtIn": true
+      },
+      {
+        "id": "p-wkepup6b7d",
+        "name": "QA Video.js 중립 v2",
+        "playerType": "videojs",
+        "skin": "neutral",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": "en",
+          "labels": {
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:16:40Z",
+        "updatedAt": "2026-10-20T13:18:06Z",
+        "builtIn": false
+      },
+      {
+        "id": "p-5wtukkgv6f",
+        "name": "기본 복사본",
+        "playerType": "videojs",
+        "skin": "default",
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": null,
+          "borderRadius": null,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": null,
+          "labels": {
+            "skip": null,
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": null,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:18:13Z",
+        "updatedAt": "2026-10-20T13:18:13Z",
+        "builtIn": false
+      },
+      {
+        "id": "p-cs6hpsjmyw",
+        "name": "QA Video.js 중립 v2 복사본",
+        "playerType": "videojs",
+        "skin": "neutral",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": "en",
+          "labels": {
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:18:17Z",
+        "updatedAt": "2026-10-20T13:18:17Z",
+        "builtIn": false
+      }
+    ],
+    "defaultPresetId": "default",
+    "listRows": [
+      [
+        "기본",
+        "Video.js",
+        "기본",
+        "기본 프리셋",
+        "패키지 기본값"
+      ],
+      [
+        "QA Video.js 중립 v2",
+        "Video.js",
+        "뉴트럴",
+        "—",
+        "2026. 10. 20. 오후 10:18"
+      ],
+      [
+        "기본 복사본",
+        "Video.js",
+        "기본",
+        "—",
+        "2026. 10. 20. 오후 10:18"
+      ],
+      [
+        "QA Video.js 중립 v2 복사본",
+        "Video.js",
+        "뉴트럴",
+        "—",
+        "2026. 10. 20. 오후 10:18"
+      ]
+    ],
+    "copyEditable": {
+      "name": "QA Video.js 중립 v2 복사본",
+      "editable": true,
+      "saveEnabled": true
+    }
+  },
+  "bodies": [
+    {
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": "p-wkepup6b7d",
+          "name": "QA Video.js 중립 v2",
+          "playerType": "videojs",
+          "skin": "neutral",
+          "theme": {
+            "accentColor": "#0f5132",
+            "accentTextColor": "#ffffff",
+            "borderColor": null,
+            "borderRadius": 12,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": "en",
+            "labels": {
+              "skip": "Skip ad",
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": 15,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 1
+      },
+      "preset": {
+        "id": "p-wkepup6b7d",
+        "name": "QA Video.js 중립 v2",
+        "playerType": "videojs",
+        "skin": "neutral",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": "en",
+          "labels": {
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:16:40Z",
+        "updatedAt": "2026-10-20T13:18:06Z",
+        "builtIn": false
+      },
+      "revision": 2
+    },
+    {
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": null,
+          "name": "기본 복사본",
+          "playerType": "videojs",
+          "skin": "default",
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": null,
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 2
+      },
+      "preset": {
+        "id": "p-5wtukkgv6f",
+        "name": "기본 복사본",
+        "playerType": "videojs",
+        "skin": "default",
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": null,
+          "borderRadius": null,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": null,
+          "labels": {
+            "skip": null,
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": null,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:18:13Z",
+        "updatedAt": "2026-10-20T13:18:13Z",
+        "builtIn": false
+      },
+      "revision": 3
+    },
+    {
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": null,
+          "name": "QA Video.js 중립 v2 복사본",
+          "playerType": "videojs",
+          "skin": "neutral",
+          "theme": {
+            "accentColor": "#0f5132",
+            "accentTextColor": "#ffffff",
+            "borderColor": null,
+            "borderRadius": 12,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": "en",
+            "labels": {
+              "skip": "Skip ad",
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": 15,
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 3
+      },
+      "preset": {
+        "id": "p-cs6hpsjmyw",
+        "name": "QA Video.js 중립 v2 복사본",
+        "playerType": "videojs",
+        "skin": "neutral",
+        "theme": {
+          "accentColor": "#0f5132",
+          "accentTextColor": "#ffffff",
+          "borderColor": null,
+          "borderRadius": 12,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "ads": {
+          "locale": "en",
+          "labels": {
+            "skip": "Skip ad",
+            "skipCountdown": null,
+            "timer": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": 15,
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "createdAt": "2026-10-20T13:18:17Z",
+        "updatedAt": "2026-10-20T13:18:17Z",
+        "builtIn": false
+      },
+      "revision": 4
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+chromium {"direct2":{"media":1.5,"store":1.5,"seen":[1.5,1.5]},"set17":{"media":1.5,"store":1.5,"seen":[1.5,1.5,1.5,1.5]}}
+webkit {"direct2":{"media":1.5,"store":1.5,"seen":[1.5,1.5]},"set17":{"media":1.5,"store":1.5,"seen":[1.5,1.5,1.5,1.5]}}
+firefox {"direct2":{"media":1.5,"store":1.5,"seen":[1.5,1.5]},"set17":{"media":1.5,"store":1.5,"seen":[1.5,1.5,1.5,1.5]}}

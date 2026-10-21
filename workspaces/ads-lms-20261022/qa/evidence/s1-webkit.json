@@ -1,0 +1,68 @@
+{
+  "engine": "webkit",
+  "steps": {
+    "1 progress rises, store line says this browser": {
+      "ok": true,
+      "detail": {
+        "percent": 6,
+        "storeLine": 1,
+        "lsKeysAt6s": []
+      }
+    },
+    "2 chapter click seeks": {
+      "ok": true,
+      "detail": {
+        "t": 20
+      }
+    },
+    "3 transcript click seeks": {
+      "ok": true,
+      "detail": {
+        "label": "0:40패널의 목차에서 장을 누르면 그 장의 처음으로 이동해요.",
+        "t": 41.29660529205524,
+        "want": 40,
+        "cueCount": 24
+      }
+    },
+    "4 slide follows chapter": {
+      "ok": true,
+      "detail": {
+        "at31": "4 / 8",
+        "at51": "6 / 8"
+      }
+    },
+    "5 note add and delete": {
+      "ok": true,
+      "detail": {
+        "added": 1,
+        "removed": 0
+      }
+    },
+    "6 B key bookmark": {
+      "ok": true,
+      "detail": {
+        "before": 0,
+        "after": 1,
+        "toast": 2
+      }
+    },
+    "1b local copy written after pause": {
+      "ok": true,
+      "detail": {
+        "lsAfterPause": [
+          "solad-lms:v1:sample-lecture"
+        ]
+      }
+    },
+    "7 resume overlay after reload": {
+      "ok": true,
+      "detail": {
+        "overlayText": "지난번 0:33까지 봤어요",
+        "fromStartButtons": 1,
+        "saved": 33.009335332926064,
+        "resumedAt": 33.01851385329746
+      }
+    }
+  },
+  "consoleErrors": []
+}

@@ -1,0 +1,13 @@
+isolated DB read-only after run (2026-10-22 00:10:37 KST)
+ads_meta names: player_presets, schema_version, signing_key, site_id, write_lock
+ads_admins rows 5
+ads_drafts rows 2
+ads_publications rows 3
+ads_events rows 41
+ads_creatives rows 6
+player_presets:
+  p-i0aecb28w3 QA 강조색 복제 videojs seekButtons None captions None borderColor None
+  p-lc3i8eidb4 QA 자동재생 videojs seekButtons None captions None borderColor None
+  p-pchm59hhyv QA 기본 video native seekButtons None captions None borderColor None
+  p-wgqz3x31a5 QA 테두리 8자리 videojs seekButtons None captions None borderColor #00000026
+  p-46sx1n57gw QA 테두리 투명색 videojs seekButtons None captions None borderColor #ff000000

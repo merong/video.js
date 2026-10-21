@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "preview shows progress line and limit marker (no save)": {
+      "ok": true,
+      "detail": {
+        "mock": {
+          "line": "진도 42%완료 기준 80%",
+          "watched": true,
+          "limit": true,
+          "note": "자료 패널은 샘플 강의에서 볼 수 있어요.샘플 강의 열기"
+        },
+        "frame": "/examples/preview.html?type=videojs",
+        "hasPanel": false,
+        "text": null,
+        "limitMarker": true,
+        "limitVar": "10.000%"
+      },
+      "rejudged": "스크립트 정규식 이스케이프 오류(\\\\d)로 FAIL이 찍혀 같은 측정값으로 다시 판정(재실행 없음): PlayerMock 진도 줄, sa-pm-limit, iframe 한계 표시 모두 있음."
+    },
+    "values kept after save and reopen": {
+      "ok": true,
+      "detail": {
+        "set": {
+          "enabled": true,
+          "resume": "물어보기",
+          "seekLimit": "본 곳까지만",
+          "maxRate": "1.5×",
+          "completion": "80",
+          "transcript": "false",
+          "ads": "프리롤만"
+        },
+        "reopened": {
+          "enabled": true,
+          "resume": "물어보기",
+          "seekLimit": "본 곳까지만",
+          "maxRate": "1.5×",
+          "completion": "80",
+          "transcript": "false",
+          "ads": "프리롤만"
+        },
+        "url": "/#/players/edit/p-zvq819rbvq"
+      }
+    },
+    "native blocks the section with a reason": {
+      "ok": true,
+      "detail": {
+        "reason": 1,
+        "checkboxDisabled": true,
+        "enabledControlsLeft": 19
+      }
+    }
+  },
+  "presetId": "p-zvq819rbvq",
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

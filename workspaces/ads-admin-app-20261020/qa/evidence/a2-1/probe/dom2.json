@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p1",
+    "videoId": "a1-qa-video-1",
+    "children": [
+      "MEDIA-I18N"
+    ],
+    "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "i18nLang": "ko",
+    "playerAttrs": {
+      "contentTitle": null,
+      "poster": null
+    },
+    "media": {
+      "tag": "VIDEO",
+      "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+      "autoplayAttr": false,
+      "mutedAttr": false,
+      "mutedProp": false,
+      "loop": false,
+      "preload": "metadata",
+      "playsinline": true,
+      "poster": null,
+      "paused": true,
+      "currentTime": 0,
+      "controls": false,
+      "tracks": []
+    },
+    "ads": {
+      "lang": "ko",
+      "attrs": {
+        "lang": "ko",
+        "for": "solad-media-1",
+        "video-id": "a1-qa-video-1"
+      }
+    },
+    "skin": {
+      "tag": "VIDEO-SKIN",
+      "accentVar": "",
+      "accentTextVar": "",
+      "adsAccentVar": "",
+      "primary": "oklch(100% 0 0)",
+      "fillBefore": "oklch(1 0 0)",
+      "borderRadius": "28px",
+      "borderRadiusVar": "",
+      "borderColor": "rgb(0, 0, 0)",
+      "inline": null,
+      "skinRootClass": "media-skin media-container video-skin",
+      "fillFound": true
+    },
+    "buttonLabels": [
+      "닫기",
+      "재생",
+      "음소거",
+      "볼륨",
+      "탐색",
+      "재생 시간 표시, 10초 남음.",
+      "자막 켜기",
+      "설정",
+      "전송 시작",
+      "AirPlay 시작",
+      "화면 속 화면",
+      "전체 화면"
+    ],
+    "visibleText": [
+      "0:00",
+      "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+      "0:00",
+      "-",
+      "0:10",
+      "설정"
+    ]
+  }
+]

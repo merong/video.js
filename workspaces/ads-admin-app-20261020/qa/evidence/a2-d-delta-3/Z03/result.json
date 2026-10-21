@@ -1,0 +1,101 @@
+{
+  "themeOnly": {
+    "playing": "최근 광고 진행 프리롤 1/2 재생 중 21:39:00",
+    "tag": {
+      "frameUrl": "/examples/preview.html?type=videojs",
+      "tagged": true
+    },
+    "afterHash": {
+      "line": "최근 광고 진행 프리롤 1/2 재생 중 21:39:00",
+      "note": "강조색 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "player": {
+        "frameQuery": "?type=videojs",
+        "tag": "rounded-player",
+        "kind": "VIDEO-PLAYER"
+      }
+    },
+    "after2s": {
+      "line": "최근 광고 진행 프리롤 1/2 재생 중 21:39:00",
+      "player": {
+        "frameQuery": "?type=videojs",
+        "tag": "rounded-player",
+        "kind": "VIDEO-PLAYER"
+      }
+    },
+    "continues": "최근 광고 진행 프리롤 2/2 재생 중 21:39:08",
+    "player": {
+      "frameQuery": "?type=videojs",
+      "tag": "rounded-player",
+      "kind": "VIDEO-PLAYER"
+    },
+    "lines": [
+      "아직 광고가 나오지 않았어요",
+      "프리롤 1/2 재생 중21:39:00",
+      "프리롤 1/2 · 끝남21:39:08",
+      "프리롤 2/2 재생 중21:39:08"
+    ]
+  },
+  "reload": {
+    "before": "최근 광고 진행 프리롤 2/2 재생 중 21:39:08",
+    "after300ms": "최근 광고 진행 아직 광고가 나오지 않았어요",
+    "after3s": {
+      "line": "최근 광고 진행 아직 광고가 나오지 않았어요",
+      "player": {
+        "frameQuery": "?type=videojs",
+        "tag": null,
+        "kind": "VIDEO-PLAYER"
+      }
+    }
+  },
+  "playerType": {
+    "playing": "최근 광고 진행 프리롤 1/2 재생 중 21:39:11",
+    "player": {
+      "frameQuery": "?type=videojs",
+      "tag": null,
+      "kind": "VIDEO-PLAYER"
+    },
+    "after300ms": {
+      "line": "최근 광고 진행 아직 광고가 나오지 않았어요",
+      "name": "QA 기본 video"
+    },
+    "after3s": {
+      "line": "최근 광고 진행 아직 광고가 나오지 않았어요",
+      "player": {
+        "frameQuery": "?type=native",
+        "tag": null,
+        "kind": "VIDEO"
+      }
+    },
+    "lines": [
+      "아직 광고가 나오지 않았어요",
+      "프리롤 1/2 재생 중21:39:11",
+      "아직 광고가 나오지 않았어요"
+    ]
+  },
+  "formType": {
+    "playing": "최근 광고 진행 프리롤 1/2 재생 중 21:39:15",
+    "control": {
+      "tag": "SELECT",
+      "type": "select-one",
+      "value": "videojs"
+    },
+    "after300ms": "최근 광고 진행 아직 광고가 나오지 않았어요",
+    "after3s": {
+      "line": "최근 광고 진행 아직 광고가 나오지 않았어요",
+      "player": {
+        "frameQuery": "?type=native",
+        "tag": null,
+        "kind": "VIDEO"
+      }
+    }
+  },
+  "api": [
+    "POST login",
+    "GET player-presets"
+  ],
+  "events": 0,
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

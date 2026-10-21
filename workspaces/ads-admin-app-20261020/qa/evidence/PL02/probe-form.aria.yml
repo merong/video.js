@@ -1,0 +1,124 @@
+- main "플레이어":
+  - region "플레이어":
+    - heading "플레이어" [level=1]
+    - paragraph: 플레이어 종류, 스킨 테마, 광고 화면 설정을 프리셋으로 저장하고, 설치 방법과 옵션을 확인해요.
+    - navigation "플레이어 화면":
+      - link "프리셋 목록":
+        - /url: "#/players"
+      - link "초기 설정 방법":
+        - /url: "#/players/setup"
+      - link "옵션 설명":
+        - /url: "#/players/options"
+    - heading "새 프리셋" [level=2]
+    - form "새 프리셋":
+      - region "새 프리셋":
+        - heading "새 프리셋" [level=2]
+        - text: 이름
+        - textbox "이름"
+        - text: 목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요.
+        - link "프리셋 도움말":
+          - /url: "#/help/player-preset"
+          - text: "?"
+        - text: 플레이어 종류
+        - combobox "플레이어 종류":
+          - option "Video.js" [selected]
+          - option "기본 video"
+        - text: 기본 video는 브라우저 컨트롤을 써요. 광고 시간 제한은 기본 video에서만 정할 수 있어요.
+        - link "플레이어 종류 도움말":
+          - /url: "#/help/player-type"
+          - text: "?"
+        - text: 스킨
+        - combobox "스킨":
+          - option "기본 (모서리 28px)" [selected]
+          - option "뉴트럴 (모서리 12px)"
+        - text: compat·scaffold 스킨은 준비 중이에요. 기본 컨트롤이나 직접 만들 스킨이라 같은 테마 설정으로 설명할 수 없어요.
+        - link "스킨 도움말":
+          - /url: "#/help/player-skin"
+          - text: "?"
+      - region "스킨 테마":
+        - heading "스킨 테마" [level=2]
+        - link "테마 속성 도움말":
+          - /url: "#/help/player-theme-property"
+          - text: "?"
+        - text: 강조색
+        - textbox "강조색 색 고르기": "#ffffff"
+        - textbox "강조색":
+          - /placeholder: "#rrggbb"
+        - text: 스킨 기본 (흰색) 진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대와 초점 테두리도 이 색을 따라요.
+        - link "강조색 도움말":
+          - /url: "#/help/player-accent-color"
+          - text: "?"
+        - text: 강조 글자색
+        - textbox "강조 글자색 색 고르기": "#ffffff"
+        - textbox "강조 글자색":
+          - /placeholder: "#rrggbb"
+        - text: 자동 대비 비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.
+        - link "강조색 도움말":
+          - /url: "#/help/player-accent-color"
+          - text: "?"
+        - text: 테두리 색
+        - textbox "테두리 색 색 고르기": "#ffffff"
+        - textbox "테두리 색":
+          - /placeholder: "#rrggbb"
+        - text: 스킨 기본 (반투명 검정) 플레이어 둘레의 가는 선 색이에요. 모서리 둥글기 (px)
+        - spinbutton "모서리 둥글기 (px)"
+        - text: 0–32 정수예요. 광고 화면 모서리도 따라가요. 글꼴
+        - combobox "글꼴":
+          - option "스킨 기본 (Inter 우선)" [selected]
+          - option "시스템 글꼴"
+        - text: 플레이어 글꼴을 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요. 화면 채우기
+        - combobox "화면 채우기":
+          - option "스킨 기본 (맞춤)" [selected]
+          - option "맞춤 · 전체가 보여요"
+          - option "채움 · 빈 곳 없이 잘려요"
+        - text: 전체화면에서는 항상 맞춤이에요. 채우기 위치는 프리셋에서 정하지 않아요.
+        - link "화면 채우기 도움말":
+          - /url: "#/help/player-object-fit"
+          - text: "?"
+        - text: 크기 기준
+        - combobox "크기 기준":
+          - option "스킨 기본 (16px)" [selected]
+          - option "문서 글자 크기 (1rem)"
+        - text: 컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 광고 화면에는 영향이 없어요.
+      - region "광고 화면":
+        - heading "광고 화면" [level=2]
+        - link "광고 화면 도움말":
+          - /url: "#/help/player-ad-overlay"
+          - text: "?"
+        - text: 광고 문구 언어
+        - combobox "광고 문구 언어":
+          - option "페이지 lang 따름" [selected]
+          - option "한국어"
+          - option "English"
+        - text: 비우면 페이지의 lang을 따라요. 페이지에 lang이 없으면 영어로 나와요.
+        - link "광고 문구 언어 도움말":
+          - /url: "#/help/player-ad-language"
+          - text: "?"
+        - text: 건너뛰기 문구
+        - textbox "건너뛰기 문구":
+          - /placeholder: 패키지 문구 (광고 건너뛰기 / Skip ad)
+        - text: "40자 이내예요. { } 문자는 쓸 수 없어요. 건너뛰기 대기 문구"
+        - textbox "건너뛰기 대기 문구":
+          - /placeholder: "패키지 문구 ({seconds}초 후 건너뛰기)"
+        - text: "{seconds} 자리에 남은 초가 들어가요. 광고 시간 문구"
+        - textbox "광고 시간 문구":
+          - /placeholder: "패키지 문구 ({elapsed} / {duration})"
+        - text: "{elapsed} 지난 시간, {duration} 광고 길이, {remaining} 남은 시간을 쓸 수 있어요. 광고 음량 막대 색"
+        - textbox "광고 음량 막대 색 색 고르기": "#ffffff"
+        - textbox "광고 음량 막대 색":
+          - /placeholder: "#rrggbb"
+        - text: 흰색 (강조색이 있으면 그 색) 광고 음량 막대 색만 바뀌어요. 건너뛰기 버튼과 초점 테두리는 그대로예요. 건너뛰기 버튼 모서리 (px)
+        - spinbutton "건너뛰기 버튼 모서리 (px)"
+        - text: 0–24 정수예요. 광고 글자 크기 (px)
+        - spinbutton "광고 글자 크기 (px)"
+        - text: 11–18 정수예요. 플레이어 폭이 280px 이하이면 글자가 11px로 고정돼요.
+        - note: 광고 시간 제한 · 준비 중 · Video.js의 광고 요소에는 아직 시간 제한 속성이 없어요. 편성 요청 시간 제한은 5초로 고정돼요. 시간 제한은 기본 video 프리셋에서 정할 수 있어요.
+      - region "미리보기":
+        - heading "미리보기" [level=2]
+        - note: Grok 샘플 편성으로 재생해서 통계에 기록되지 않아요. 저장하기 전 값이 바로 반영돼요.
+        - iframe
+        - status
+        - alert
+      - text: 저장하면 재생 테스트 페이지에 바로 적용돼요. 이미 붙여 넣은 설치 코드는 다시 복사해야 바뀌어요.
+      - button "프리셋 저장"
+      - status

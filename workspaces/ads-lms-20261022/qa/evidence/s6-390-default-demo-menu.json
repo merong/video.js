@@ -1,0 +1,30 @@
+{
+  "playerBox": {
+    "x": 35,
+    "y": 498,
+    "width": 320,
+    "height": 180
+  },
+  "items": [
+    {
+      "text": "속도 1×",
+      "box": {
+        "x": 171,
+        "y": 584,
+        "width": 168,
+        "height": 31.5
+      },
+      "top": "media-menu-item.media-menu-trigger-item"
+    },
+    {
+      "text": "캡션 없음",
+      "box": {
+        "x": 171,
+        "y": 617.5,
+        "width": 168,
+        "height": 31.5
+      },
+      "top": "media-time-slider-chapters.media-time-slider-chapters"
+    }
+  ]
+}

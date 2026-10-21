@@ -1,0 +1,360 @@
+{
+  "schedule": {
+    "rlo": {
+      "group": "block",
+      "codepoints": [
+        "U+202E"
+      ],
+      "length": 5,
+      "api": [],
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요."
+      ],
+      "errormessage": null,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-schedule-target-id",
+        "text": "",
+        "role": null
+      },
+      "alerts": [
+        "편성을 불러오지 못했어요. 고정 대상 ID를 확인해 주세요."
+      ],
+      "repeatedSentence": false,
+      "editorShown": 0,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "c1-nel": {
+      "group": "block",
+      "codepoints": [
+        "U+0085"
+      ],
+      "length": 5,
+      "api": [],
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요."
+      ],
+      "errormessage": null,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-schedule-target-id",
+        "text": "",
+        "role": null
+      },
+      "alerts": [
+        "편성을 불러오지 못했어요. 고정 대상 ID를 확인해 주세요."
+      ],
+      "repeatedSentence": false,
+      "editorShown": 1,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "ideographic-space-only": {
+      "group": "block",
+      "codepoints": [
+        "U+3000"
+      ],
+      "length": 1,
+      "api": [],
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID를 입력해 주세요."
+      ],
+      "errormessage": null,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-schedule-target-id",
+        "text": "",
+        "role": null
+      },
+      "alerts": [
+        "편성을 불러오지 못했어요. 고정 대상 ID를 확인해 주세요."
+      ],
+      "repeatedSentence": false,
+      "editorShown": 1,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "too-long-129": {
+      "group": "block",
+      "codepoints": [],
+      "length": 129,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1,
+      "afterFix": {
+        "api": [
+          "GET schedule-draft 200"
+        ],
+        "invalid": null,
+        "describedBy": [],
+        "errormessage": null,
+        "editorShown": 1
+      }
+    },
+    "lrm": {
+      "group": "observe",
+      "codepoints": [
+        "U+200E"
+      ],
+      "length": 5,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    },
+    "alm": {
+      "group": "observe",
+      "codepoints": [
+        "U+061C"
+      ],
+      "length": 5,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    },
+    "zwsp-only": {
+      "group": "observe",
+      "codepoints": [
+        "U+200B"
+      ],
+      "length": 1,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    },
+    "valid": {
+      "group": "valid",
+      "codepoints": [],
+      "length": 13,
+      "api": [
+        "GET schedule-draft 200"
+      ],
+      "invalid": null,
+      "describedBy": [],
+      "errormessage": null,
+      "focus": {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "편성 불러오기",
+        "role": null
+      },
+      "alerts": [],
+      "repeatedSentence": false,
+      "editorShown": 1
+    }
+  },
+  "setup": {
+    "rlo": {
+      "group": "block",
+      "api": [],
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [
+        "영상 ID를 고치면 설치 코드를 만들어요."
+      ],
+      "codeShown": false,
+      "copyButtons": [],
+      "videoIdLine": null
+    },
+    "c1-nel": {
+      "group": "block",
+      "api": [],
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID에는 제어 문자나 글자 방향 제어 문자를 쓸 수 없어요. 지우고 다시 입력해 주세요.",
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [
+        "영상 ID를 고치면 설치 코드를 만들어요."
+      ],
+      "codeShown": false,
+      "copyButtons": [],
+      "videoIdLine": null
+    },
+    "ideographic-space-only": {
+      "group": "block",
+      "api": [],
+      "invalid": "true",
+      "describedBy": [
+        "영상 ID를 입력해 주세요.",
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [
+        "영상 ID를 고치면 설치 코드를 만들어요."
+      ],
+      "codeShown": false,
+      "copyButtons": [],
+      "videoIdLine": null
+    },
+    "too-long-129": {
+      "group": "block",
+      "api": [],
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-aaaaaaaaaaaaaaaaaaaaaaaa-1508eo5\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "lrm": {
+      "group": "observe",
+      "api": [],
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-a1-qa-1jbiu9p\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1%E2%80%8Eqa\" video-id=\"a1<U+200E>qa\"></media-ads>"
+    },
+    "alm": {
+      "group": "observe",
+      "api": [],
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-a1-qa-1cxj3pf\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1%D8%9Cqa\" video-id=\"a1<U+61C>qa\"></media-ads>"
+    },
+    "zwsp-only": {
+      "group": "observe",
+      "api": [],
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-3yaiq2\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=%E2%80%8B\" video-id=\"<U+200B>\"></media-ads>"
+    },
+    "valid": {
+      "group": "valid",
+      "api": [],
+      "invalid": null,
+      "describedBy": [
+        "편성과 통계에 쓰는 고정 영상 ID예요. 128자 이내예요."
+      ],
+      "errormessage": null,
+      "alerts": [],
+      "status": [],
+      "codeShown": true,
+      "copyButtons": [
+        "복사"
+      ],
+      "videoIdLine": "<media-ads for=\"ads-content-a1-qa-video-1-1swdj1c\" src=\"http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1-qa-video-1\" video-id=\"a1-qa-video-1\"></media-ads>"
+    }
+  },
+  "playTest": {},
+  "focus": {},
+  "error": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('고정 영상 ID', { exact: true }).last()\u001b[22m\n\u001b[2m    - locator resolved to <input readonly required=\"\" maxlength=\"128\" class=\"sa-input\" value=\"a1-qa-video-1\" id=\"aa-playback-video-id\" aria-describedby=\"aa-playback-video-id-help\"/>\u001b[22m\n\u001b[2m    - fill(\"a1‮qa\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    60 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not editable\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

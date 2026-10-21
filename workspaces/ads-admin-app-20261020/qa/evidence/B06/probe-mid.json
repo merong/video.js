@@ -1,0 +1,100 @@
+[
+  {
+    "step": "미드롤 추가",
+    "active": {
+      "tag": "BUTTON",
+      "label": null,
+      "value": ""
+    },
+    "position": "10",
+    "wait": null,
+    "articles": 1,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  },
+  {
+    "step": "위치 fill 5",
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5"
+    },
+    "position": "5",
+    "wait": null,
+    "articles": 1,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  },
+  {
+    "step": "소재 선택",
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5"
+    },
+    "position": "5",
+    "wait": null,
+    "articles": 1,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  },
+  {
+    "step": "광고 추가",
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5"
+    },
+    "position": "5",
+    "wait": null,
+    "articles": 1,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  },
+  {
+    "step": "스킵 모드",
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5"
+    },
+    "position": "5",
+    "wait": "1",
+    "articles": 1,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  },
+  {
+    "step": "대기 fill 3",
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "53"
+    },
+    "position": "53",
+    "wait": "1",
+    "articles": 1,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  },
+  {
+    "step": "포스트롤 클릭",
+    "active": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "53"
+    },
+    "position": "53",
+    "wait": "1",
+    "articles": 2,
+    "statuses": [
+      "편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요."
+    ]
+  }
+]

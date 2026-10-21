@@ -1,0 +1,19 @@
+- link "본문으로 이동":
+  - /url: "#ads-main"
+- banner:
+  - text: VIDEO / AD OPERATIONS
+  - strong: 광고 운영실
+  - text: 로그인 필요
+- main:
+  - status: 관리자 계정으로 로그인하세요.
+  - region "광고 운영을 이어가세요.":
+    - text: 관리자 접속
+    - heading "광고 운영을 이어가세요." [level=1]
+    - paragraph: 소재를 등록하고, 영상별 편성을 게시하고, 재생 결과를 확인합니다.
+    - group "관리자 로그인":
+      - text: 관리자 로그인 아이디
+      - textbox "아이디"
+      - text: 비밀번호
+      - textbox "비밀번호"
+      - button "로그인"
+    - status

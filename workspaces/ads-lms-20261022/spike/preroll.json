@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "siteId": "grok-local-demo",
+  "videoId": "grok-demo-scene-01",
+  "boardId": null,
+  "categoryId": null,
+  "scheduleId": "lms-spike-preroll",
+  "scheduleVersion": 1,
+  "breaks": [
+    {
+      "breakId": "grok-pre",
+      "position": "pre",
+      "ads": [
+        {
+          "itemId": "grok-pre-coffee",
+          "adId": "grok-coffee",
+          "creativeId": "grok-coffee",
+          "creativeVersion": 1,
+          "kind": "video",
+          "url": "/demo-media/grok-20261018/ad-coffee-6s.mp4",
+          "mime": "video/mp4",
+          "alt": "Grok Imagine 커피 광고",
+          "clickUrl": null,
+          "skipAfterSeconds": null
+        }
+      ]
+    }
+  ]
+}

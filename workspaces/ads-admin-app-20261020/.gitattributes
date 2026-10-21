@@ -1,0 +1,3 @@
+# Keep captured HTTP headers (CRLF line endings) byte-for-byte.
+*.headers.txt -text
+headers-*.txt -text

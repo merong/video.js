@@ -1,0 +1,227 @@
+{
+  "B13": {
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "screens": {
+      "login": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "creatives": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "reports": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "dashboard": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "campaigns": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "schedule": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "preview": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      }
+    },
+    "menu": {
+      "count": 8,
+      "visible": 8,
+      "menuButton": 0
+    },
+    "scheduleItems": 4,
+    "scheduleActions": {
+      "save": {
+        "visible": true,
+        "box": {
+          "x": 991,
+          "w": 84
+        },
+        "hit": "초안 저장",
+        "enabled": true
+      },
+      "publish": {
+        "visible": true,
+        "box": {
+          "x": 1084,
+          "w": 125
+        },
+        "hit": "저장한 초안 게시",
+        "enabled": true
+      }
+    },
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  },
+  "B14": {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "screens": {
+      "login": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "creatives": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "reports": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "dashboard": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "campaigns": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "BUTTON",
+            "text": "예시 캠페인 A 열기",
+            "left": 725,
+            "right": 772
+          },
+          {
+            "tag": "BUTTON",
+            "text": "예시 캠페인 B 열기",
+            "left": 725,
+            "right": 772
+          },
+          {
+            "tag": "BUTTON",
+            "text": "예시 캠페인 C 열기",
+            "left": 725,
+            "right": 772
+          },
+          {
+            "tag": "BUTTON",
+            "text": "예시 캠페인 D 열기",
+            "left": 725,
+            "right": 772
+          },
+          {
+            "tag": "BUTTON",
+            "text": "예시 캠페인 E 열기",
+            "left": 725,
+            "right": 772
+          }
+        ],
+        "clippedCount": 5,
+        "innerScrollers": [
+          {
+            "tag": "DIV",
+            "cls": "sa-scroll",
+            "scrollWidth": 767,
+            "clientWidth": 734
+          }
+        ]
+      },
+      "schedule": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "preview": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      }
+    },
+    "menu": {
+      "count": 8,
+      "visible": 8,
+      "menuButton": 0
+    },
+    "scheduleItems": 4,
+    "scheduleActions": {
+      "save": {
+        "visible": true,
+        "box": {
+          "x": 487,
+          "w": 84
+        },
+        "hit": "초안 저장",
+        "enabled": true
+      },
+      "publish": {
+        "visible": true,
+        "box": {
+          "x": 580,
+          "w": 125
+        },
+        "hit": "저장한 초안 게시",
+        "enabled": true
+      }
+    },
+    "console": []
+  }
+}

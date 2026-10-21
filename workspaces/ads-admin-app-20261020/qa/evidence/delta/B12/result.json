@@ -1,0 +1,282 @@
+{
+  "screens": [
+    {
+      "label": "대시보드",
+      "hash": "#/dashboard",
+      "mainCount": 1,
+      "visibleH1": [
+        "대시보드"
+      ],
+      "badge": 1,
+      "notBuiltCards": 0,
+      "specRefs": [],
+      "disabledButtons": [
+        {
+          "name": "승인함 열기",
+          "reason": "목업 화면이라 아직 동작하지 않아요."
+        }
+      ],
+      "enabledButtons": [],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/dashboard"
+      },
+      "apiAfterMenuClick": []
+    },
+    {
+      "label": "캠페인",
+      "hash": "#/campaigns",
+      "mainCount": 1,
+      "visibleH1": [
+        "캠페인"
+      ],
+      "badge": 1,
+      "notBuiltCards": 0,
+      "specRefs": [],
+      "disabledButtons": [
+        {
+          "name": "캠페인 만들기",
+          "reason": "목업 화면이라 아직 동작하지 않아요."
+        }
+      ],
+      "enabledButtons": [
+        "전체5",
+        "진행3",
+        "승인 대기1",
+        "미달 종료1",
+        "예시 캠페인 A 열기",
+        "예시 캠페인 B 열기",
+        "예시 캠페인 C 열기",
+        "예시 캠페인 D 열기",
+        "예시 캠페인 E 열기"
+      ],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/campaigns"
+      },
+      "apiAfterMenuClick": []
+    },
+    {
+      "label": "캠페인 상세",
+      "hash": "#/campaigns",
+      "mainCount": 1,
+      "visibleH1": [
+        "예시 캠페인 A"
+      ],
+      "badge": 1,
+      "notBuiltCards": 0,
+      "specRefs": [],
+      "disabledButtons": [
+        {
+          "name": "이 캠페인에 집행 추가",
+          "reason": "목업 화면이라 아직 동작하지 않아요."
+        },
+        {
+          "name": "프리롤 보장 A 켜기",
+          "reason": "목업이라 켜고 끄기를 바꿀 수 없어요."
+        },
+        {
+          "name": "미드롤 보장 B 켜기",
+          "reason": "목업이라 켜고 끄기를 바꿀 수 없어요."
+        },
+        {
+          "name": "포스트롤 브랜드 하우스 켜기",
+          "reason": "목업이라 켜고 끄기를 바꿀 수 없어요."
+        }
+      ],
+      "enabledButtons": [
+        "← 캠페인 목록"
+      ],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/campaigns"
+      },
+      "tables": [
+        "예시 캠페인 A의 집행 (예시)"
+      ],
+      "apiAfterOpen": []
+    },
+    {
+      "label": "승인함",
+      "hash": "#/approvals",
+      "mainCount": 1,
+      "visibleH1": [
+        "승인함"
+      ],
+      "badge": 1,
+      "notBuiltCards": 1,
+      "specRefs": [
+        ".agents/plans/ads-admin-v2-spec.md §8.5"
+      ],
+      "disabledButtons": [],
+      "enabledButtons": [],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/approvals"
+      },
+      "apiAfterMenuClick": []
+    },
+    {
+      "label": "리포트",
+      "hash": "#/reports",
+      "mainCount": 1,
+      "visibleH1": [
+        "리포트"
+      ],
+      "badge": 1,
+      "notBuiltCards": 1,
+      "specRefs": [
+        ".agents/plans/ads-admin-v2-spec.md §8.6"
+      ],
+      "disabledButtons": [],
+      "enabledButtons": [
+        "현재 조건 CSV 다운로드",
+        "통계 조회"
+      ],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/reports"
+      },
+      "apiAfterMenuClick": []
+    },
+    {
+      "label": "설정",
+      "hash": "#/settings",
+      "mainCount": 1,
+      "visibleH1": [
+        "설정"
+      ],
+      "badge": 1,
+      "notBuiltCards": 1,
+      "specRefs": [
+        ".agents/plans/ads-admin-v2-spec.md §8.9"
+      ],
+      "disabledButtons": [],
+      "enabledButtons": [],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/settings"
+      },
+      "apiAfterMenuClick": []
+    },
+    {
+      "label": "집행 만들기",
+      "hash": "#/new-line-item",
+      "mainCount": 1,
+      "visibleH1": [
+        "집행 만들기"
+      ],
+      "badge": 1,
+      "notBuiltCards": 1,
+      "specRefs": [
+        ".agents/plans/ads-admin-v2-spec.md §8.2 집행 편집"
+      ],
+      "disabledButtons": [],
+      "enabledButtons": [],
+      "afterDisabledClicks": {
+        "api": [],
+        "liveBefore": [],
+        "liveAfter": [],
+        "hash": "#/new-line-item"
+      },
+      "apiAfterClick": []
+    }
+  ],
+  "reloads": [
+    {
+      "hash": "#/dashboard",
+      "landed": "#/dashboard",
+      "api": [
+        "GET bootstrap 200"
+      ]
+    },
+    {
+      "hash": "#/campaigns",
+      "landed": "#/campaigns",
+      "api": [
+        "GET bootstrap 200"
+      ]
+    },
+    {
+      "hash": "#/approvals",
+      "landed": "#/approvals",
+      "api": [
+        "GET bootstrap 200"
+      ]
+    },
+    {
+      "hash": "#/settings",
+      "landed": "#/settings",
+      "api": [
+        "GET bootstrap 200"
+      ]
+    },
+    {
+      "hash": "#/new-line-item",
+      "landed": "#/new-line-item",
+      "api": [
+        "GET bootstrap 200"
+      ]
+    }
+  ],
+  "loginApi": [
+    {
+      "t": 912,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": false
+    },
+    {
+      "t": 1073,
+      "method": "POST",
+      "action": "login",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": false,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1351,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1388,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "ancestry": [
+    {
+      "tag": "video",
+      "cls": "",
+      "part": "media",
+      "inShadowOf": "div",
+      "display": "block",
+      "position": "absolute",
+      "font": "system-ui",
+      "radius": "0px"
+    },
+    {
+      "tag": "div",
+      "cls": "creative",
+      "part": "creative",
+      "inShadowOf": "div",
+      "display": "block",
+      "position": "absolute",
+      "font": "system-ui",
+      "radius": "0px"
+    },
+    {
+      "tag": "section",
+      "cls": "panel",
+      "part": "panel",
+      "inShadowOf": "div",
+      "display": "block",
+      "position": "absolute",
+      "font": "system-ui",
+      "radius": "12px"
+    },
+    {
+      "tag": "div",
+      "cls": "",
+      "part": null,
+      "inShadowOf": "video-neutral-skin",
+      "display": "block",
+      "position": "absolute",
+      "font": "system-ui",
+      "radius": "0px"
+    },
+    {
+      "tag": "media-container",
+      "cls": "media-skin media-container video-skin",
+      "part": null,
+      "inShadowOf": "video-neutral-skin",
+      "display": "block",
+      "position": "relative",
+      "font": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-seri",
+      "radius": "12px"
+    },
+    {
+      "tag": "video-neutral-skin",
+      "cls": "",
+      "part": null,
+      "inShadowOf": null,
+      "display": "grid",
+      "position": "static",
+      "font": "system-ui, sans-serif",
+      "radius": "0px"
+    },
+    {
+      "tag": "video-player",
+      "cls": "",
+      "part": null,
+      "inShadowOf": null,
+      "display": "contents",
+      "position": "static",
+      "font": "system-ui, sans-serif",
+      "radius": "0px"
+    },
+    {
+      "tag": "div",
+      "cls": "",
+      "part": null,
+      "inShadowOf": null,
+      "display": "block",
+      "position": "relative",
+      "font": "system-ui, sans-serif",
+      "radius": "0px"
+    },
+    {
+      "tag": "body",
+      "cls": "",
+      "part": null,
+      "inShadowOf": null,
+      "display": "block",
+      "position": "static",
+      "font": "system-ui, sans-serif",
+      "radius": "0px"
+    },
+    {
+      "tag": "html",
+      "cls": "",
+      "part": null,
+      "inShadowOf": null,
+      "display": "block",
+      "position": "static",
+      "font": "system-ui, sans-serif",
+      "radius": "0px"
+    }
+  ],
+  "overlayTree": [
+    "video part=media Grok Imagine 커피 광고"
+  ],
+  "adsAttrs": [
+    "for=preview-content",
+    "src=http://127.0.0.1:18781/demo-media/grok-20261018/schedule.json.js",
+    "video-id=grok-demo-scene-01",
+    "lang=en",
+    "skip-label=Skip ad"
+  ],
+  "tree": [],
+  "deepVideos": [
+    {
+      "src": "content-scene-01.mp4",
+      "t": 0.015367,
+      "paused": true,
+      "muted": false
+    },
+    {
+      "src": "ad-coffee-6s.mp4",
+      "t": 2.891289,
+      "paused": false,
+      "muted": false
+    }
+  ]
+}

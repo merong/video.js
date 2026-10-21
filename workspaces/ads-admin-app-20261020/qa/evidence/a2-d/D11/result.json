@@ -1,0 +1,135 @@
+{
+  "missing": {
+    "demo": {
+      "blocks": [
+        "DIV.sa-stage-view is-emp: 샘플 미디어가 없어요 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요. 설명서에서 준비 방법 보기",
+        "DIV.sa-empty: 샘플 미디어가 없어요 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요. 설명서에서 준비 방법 보기",
+        "B.: 샘플 미디어가 없어요",
+        "SPAN.: 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요."
+      ],
+      "links": [
+        "설명서에서 준비 방법 보기 -> guide.html#sample-media"
+      ],
+      "player": false,
+      "playerHtml": "",
+      "scenesDisabled": [
+        true,
+        true,
+        true
+      ],
+      "codeShown": true,
+      "now": "최근 광고 진행아직 광고가 나오지 않았어요"
+    },
+    "demoNative": {
+      "blocks": [
+        "DIV.sa-stage-view is-emp: 샘플 미디어가 없어요 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요. 설명서에서 준비 방법 보기",
+        "DIV.sa-empty: 샘플 미디어가 없어요 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요. 설명서에서 준비 방법 보기",
+        "B.: 샘플 미디어가 없어요",
+        "SPAN.: 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요."
+      ],
+      "links": [
+        "설명서에서 준비 방법 보기 -> guide.html#sample-media"
+      ],
+      "player": false,
+      "playerHtml": "",
+      "scenesDisabled": [
+        true,
+        true,
+        true
+      ],
+      "codeShown": true,
+      "now": "최근 광고 진행아직 광고가 나오지 않았어요"
+    },
+    "editor": {
+      "text": "플레이어 미리보기 저장하기 전 입력도 보여요 샘플 미디어가 없어 미리보기를 재생할 수 없어요. 서버에 demo-media/grok-20261018/ 폴더를 넣어 주세요. 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 플레이어가 준비되면 쓸 수 있어요. 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창)",
+      "notes": [
+        "샘플 미디어가 없어 미리보기를 재생할 수 없어요. 서버에 demo-media/grok-20261018/ 폴더를 넣어 주세요.",
+        ""
+      ],
+      "frameVideo": false,
+      "sceneButtons": [
+        "처음부터:true",
+        "미드롤 앞:true",
+        "끝 직전:true",
+        "다시 불러오기:"
+      ]
+    },
+    "media": [
+      "GET /demo-media/grok-20261018/schedule.json.js -> 404",
+      "GET /demo-media/grok-20261018/schedule.json.js -> 404",
+      "GET /demo-media/grok-20261018/schedule.json.js -> 404"
+    ],
+    "console": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  "invalid": {
+    "demo": {
+      "blocks": [
+        "DIV.sa-stage-view is-emp: 샘플 미디어가 없어요 샘플 편성 파일의 형식이 달라요. demo-media/grok-20261018/schedule.json.js가 원본 raw 편성인지 확인해 주세요. 설명서에서 준비 방법 보기",
+        "DIV.sa-empty: 샘플 미디어가 없어요 샘플 편성 파일의 형식이 달라요. demo-media/grok-20261018/schedule.json.js가 원본 raw 편성인지 확인해 주세요. 설명서에서 준비 방법 보기",
+        "B.: 샘플 미디어가 없어요",
+        "SPAN.: 샘플 편성 파일의 형식이 달라요. demo-media/grok-20261018/schedule.json.js가 원본 raw 편성인지 확인해 주세요."
+      ],
+      "links": [
+        "설명서에서 준비 방법 보기 -> guide.html#sample-media"
+      ],
+      "player": false,
+      "playerHtml": "",
+      "scenesDisabled": [
+        true,
+        true,
+        true
+      ],
+      "codeShown": true,
+      "now": "최근 광고 진행아직 광고가 나오지 않았어요"
+    },
+    "demoNative": {
+      "blocks": [
+        "DIV.sa-stage-view is-emp: 샘플 미디어가 없어요 샘플 편성 파일의 형식이 달라요. demo-media/grok-20261018/schedule.json.js가 원본 raw 편성인지 확인해 주세요. 설명서에서 준비 방법 보기",
+        "DIV.sa-empty: 샘플 미디어가 없어요 샘플 편성 파일의 형식이 달라요. demo-media/grok-20261018/schedule.json.js가 원본 raw 편성인지 확인해 주세요. 설명서에서 준비 방법 보기",
+        "B.: 샘플 미디어가 없어요",
+        "SPAN.: 샘플 편성 파일의 형식이 달라요. demo-media/grok-20261018/schedule.json.js가 원본 raw 편성인지 확인해 주세요."
+      ],
+      "links": [
+        "설명서에서 준비 방법 보기 -> guide.html#sample-media"
+      ],
+      "player": false,
+      "playerHtml": "",
+      "scenesDisabled": [
+        true,
+        true,
+        true
+      ],
+      "codeShown": true,
+      "now": "최근 광고 진행아직 광고가 나오지 않았어요"
+    },
+    "editor": {
+      "text": "플레이어 미리보기 저장하기 전 입력도 보여요 샘플 미디어가 없어 미리보기를 재생할 수 없어요. 서버에 demo-media/grok-20261018/ 폴더를 넣어 주세요. 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 플레이어가 준비되면 쓸 수 있어요. 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창)",
+      "notes": [
+        "샘플 미디어가 없어 미리보기를 재생할 수 없어요. 서버에 demo-media/grok-20261018/ 폴더를 넣어 주세요.",
+        ""
+      ],
+      "frameVideo": false,
+      "sceneButtons": [
+        "처음부터:true",
+        "미드롤 앞:true",
+        "끝 직전:true",
+        "다시 불러오기:"
+      ]
+    },
+    "media": [
+      "GET /demo-media/grok-20261018/schedule.json.js -> 200",
+      "GET /demo-media/grok-20261018/schedule.json.js -> 200",
+      "GET /demo-media/grok-20261018/schedule.json.js -> 200"
+    ],
+    "console": [
+      "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ]
+  }
+}

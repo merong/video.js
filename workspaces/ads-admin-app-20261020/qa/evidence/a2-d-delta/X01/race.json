@@ -1,0 +1,192 @@
+{
+  "rounds": [
+    {
+      "gap": 0,
+      "i": 0,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 0,
+      "i": 1,
+      "ok": true,
+      "ms": 14873
+    },
+    {
+      "gap": 0,
+      "i": 2,
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "gap": 0,
+      "i": 3,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 0,
+      "i": 4,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 0,
+      "i": 5,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 0,
+      "i": 6,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 0,
+      "i": 7,
+      "ok": true,
+      "ms": 301
+    },
+    {
+      "gap": 0,
+      "i": 8,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 0,
+      "i": 9,
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "gap": 150,
+      "i": 0,
+      "ok": true,
+      "ms": 314
+    },
+    {
+      "gap": 150,
+      "i": 1,
+      "ok": true,
+      "ms": 304
+    },
+    {
+      "gap": 150,
+      "i": 2,
+      "ok": true,
+      "ms": 305
+    },
+    {
+      "gap": 150,
+      "i": 3,
+      "ok": true,
+      "ms": 301
+    },
+    {
+      "gap": 150,
+      "i": 4,
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "gap": 150,
+      "i": 5,
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "gap": 150,
+      "i": 6,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 150,
+      "i": 7,
+      "ok": true,
+      "ms": 305
+    },
+    {
+      "gap": 150,
+      "i": 8,
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "gap": 150,
+      "i": 9,
+      "ok": true,
+      "ms": 301
+    },
+    {
+      "gap": 600,
+      "i": 0,
+      "ok": true,
+      "ms": 300
+    },
+    {
+      "gap": 600,
+      "i": 1,
+      "ok": true,
+      "ms": 301
+    },
+    {
+      "gap": 600,
+      "i": 2,
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "gap": 600,
+      "i": 3,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 600,
+      "i": 4,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 600,
+      "i": 5,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 600,
+      "i": 6,
+      "ok": true,
+      "ms": 301
+    },
+    {
+      "gap": 600,
+      "i": 7,
+      "ok": true,
+      "ms": 301
+    },
+    {
+      "gap": 600,
+      "i": 8,
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "gap": 600,
+      "i": 9,
+      "ok": true,
+      "ms": 302
+    }
+  ],
+  "summary": [
+    "0ms: empty 0/10",
+    "150ms: empty 0/10",
+    "600ms: empty 0/10"
+  ],
+  "console": [
+    "/favicon.ico error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

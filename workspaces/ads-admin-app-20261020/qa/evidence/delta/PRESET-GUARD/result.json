@@ -1,0 +1,275 @@
+{
+  "bidi-RLO-skip-label": {
+    "case": "bidi-RLO-skip-label",
+    "injected": 371,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: ads.labels.skip(control).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "bidi-isolate-lang-lri": {
+    "case": "bidi-isolate-lang-lri",
+    "injected": 373,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: ads.labels.skip(control).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "c0-bell-skip-label": {
+    "case": "c0-bell-skip-label",
+    "injected": 376,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: ads.labels.skip(control).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "proto-in-attributes": {
+    "case": "proto-in-attributes",
+    "injected": 402,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: attributes.__proto__(unknown_key).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.4
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "proto-in-css": {
+    "case": "proto-in-css",
+    "injected": 389,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: css.__proto__(unknown_key).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "constructor-in-css": {
+    "case": "constructor-in-css",
+    "injected": 391,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: css.constructor(unknown_key).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "proto-in-ui-labels": {
+    "case": "proto-in-ui-labels",
+    "injected": 420,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-vym1rjw052을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: ads.labels.__proto__(unknown_key).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": "video-skin",
+      "accent": null,
+      "adsAttrs": {},
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "native-bidi-skip-label": {
+    "case": "native-bidi-skip-label",
+    "injected": 214,
+    "injectedHasMarker": true,
+    "notice": "프리셋 p-obxpj5v9m9을 적용하지 못해 기본값으로 재생합니다. 프리셋 값 오류: ads.labels.skip(control).",
+    "meta": "영상 a1-qa-preset-1 · MP4",
+    "applied": {
+      "skinTag": null,
+      "accent": null,
+      "adsAttrs": null,
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.3
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"광고 건너뛰기\""
+    ],
+    "console": []
+  },
+  "control-unmodified": {
+    "case": "control-unmodified",
+    "injected": 371,
+    "injectedHasMarker": false,
+    "notice": null,
+    "meta": "영상 a1-qa-preset-1 · MP4 · 프리셋 p-vym1rjw052",
+    "applied": {
+      "skinTag": "video-neutral-skin",
+      "accent": "#0f5132",
+      "adsAttrs": {
+        "lang": "en",
+        "skip-label": "Skip ad"
+      },
+      "prototypePolluted": false
+    },
+    "playing": [
+      {
+        "src": "content-scene-01.mp4",
+        "paused": true,
+        "t": 0
+      },
+      {
+        "src": "ad-coffee-6s.mp4",
+        "paused": false,
+        "t": 5.5
+      }
+    ],
+    "adPlaying": true,
+    "skipText": [
+      "\"Skip ad\""
+    ],
+    "console": []
+  }
+}

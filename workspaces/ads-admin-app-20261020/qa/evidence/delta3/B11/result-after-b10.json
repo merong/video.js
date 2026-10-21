@@ -1,0 +1,603 @@
+{
+  "queries": [
+    {
+      "filters": {},
+      "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-21&to=2026-10-21",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "data": {
+          "totals": {
+            "starts": 16,
+            "completes": 15,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 0.9375,
+            "clickRate": 0
+          },
+          "rows": [
+            {
+              "adId": "creative-267101fb797012e881497f982d14d614",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-875bd60a31c5ae33e483d934d9c0884f",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 3,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 0.75,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            }
+          ],
+          "timeZone": "Asia/Seoul",
+          "asOf": "2026-10-20T18:59:23Z"
+        }
+      },
+      "tables": [
+        [
+          [
+            "광고 ID",
+            "영상 ID",
+            "게시판",
+            "시작",
+            "완료",
+            "스킵",
+            "클릭",
+            "오류",
+            "완료율",
+            "클릭률"
+          ],
+          [
+            "creative-267101fb797012e881497f982d14d614",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ],
+          [
+            "creative-875bd60a31c5ae33e483d934d9c0884f",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ],
+          [
+            "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "3",
+            "0",
+            "0",
+            "0",
+            "75%",
+            "0%"
+          ],
+          [
+            "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ]
+        ]
+      ],
+      "formStatus": "4개 조합의 결과예요."
+    },
+    {
+      "filters": {
+        "광고 ID": "creative-56f8787f880150925a4ccd6e062fdadf"
+      },
+      "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-21&to=2026-10-21&adId=creative-56f8787f880150925a4ccd6e062fdadf",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "data": {
+          "totals": {
+            "starts": 0,
+            "completes": 0,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": null,
+            "clickRate": null
+          },
+          "rows": [],
+          "timeZone": "Asia/Seoul",
+          "asOf": "2026-10-20T18:59:24Z"
+        }
+      },
+      "tables": [
+        [
+          [
+            "광고 ID",
+            "영상 ID",
+            "게시판",
+            "시작",
+            "완료",
+            "스킵",
+            "클릭",
+            "오류",
+            "완료율",
+            "클릭률"
+          ],
+          [
+            "수집된 기록이 없어요.기간이나 ID 조건을 바꿔 보세요."
+          ]
+        ]
+      ],
+      "formStatus": "이 조건에 수집된 기록이 없어요. 기간과 광고·영상·게시판 ID를 확인해 주세요."
+    },
+    {
+      "filters": {
+        "영상 ID": "a1-qa-video-1"
+      },
+      "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-21&to=2026-10-21&videoId=a1-qa-video-1",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "data": {
+          "totals": {
+            "starts": 16,
+            "completes": 15,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 0.9375,
+            "clickRate": 0
+          },
+          "rows": [
+            {
+              "adId": "creative-267101fb797012e881497f982d14d614",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-875bd60a31c5ae33e483d934d9c0884f",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 3,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 0.75,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            }
+          ],
+          "timeZone": "Asia/Seoul",
+          "asOf": "2026-10-20T18:59:25Z"
+        }
+      },
+      "tables": [
+        [
+          [
+            "광고 ID",
+            "영상 ID",
+            "게시판",
+            "시작",
+            "완료",
+            "스킵",
+            "클릭",
+            "오류",
+            "완료율",
+            "클릭률"
+          ],
+          [
+            "creative-267101fb797012e881497f982d14d614",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ],
+          [
+            "creative-875bd60a31c5ae33e483d934d9c0884f",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ],
+          [
+            "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "3",
+            "0",
+            "0",
+            "0",
+            "75%",
+            "0%"
+          ],
+          [
+            "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ]
+        ]
+      ],
+      "formStatus": "4개 조합의 결과예요."
+    },
+    {
+      "filters": {
+        "게시판 ID": "notice"
+      },
+      "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-21&to=2026-10-21&boardId=notice",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "data": {
+          "totals": {
+            "starts": 16,
+            "completes": 15,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": 0.9375,
+            "clickRate": 0
+          },
+          "rows": [
+            {
+              "adId": "creative-267101fb797012e881497f982d14d614",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-875bd60a31c5ae33e483d934d9c0884f",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 3,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 0.75,
+              "clickRate": 0
+            },
+            {
+              "adId": "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+              "videoId": "a1-qa-video-1",
+              "boardId": "notice",
+              "starts": 4,
+              "completes": 4,
+              "skips": 0,
+              "clicks": 0,
+              "clickedStarts": 0,
+              "errors": 0,
+              "completionRate": 1,
+              "clickRate": 0
+            }
+          ],
+          "timeZone": "Asia/Seoul",
+          "asOf": "2026-10-20T18:59:25Z"
+        }
+      },
+      "tables": [
+        [
+          [
+            "광고 ID",
+            "영상 ID",
+            "게시판",
+            "시작",
+            "완료",
+            "스킵",
+            "클릭",
+            "오류",
+            "완료율",
+            "클릭률"
+          ],
+          [
+            "creative-267101fb797012e881497f982d14d614",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ],
+          [
+            "creative-875bd60a31c5ae33e483d934d9c0884f",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ],
+          [
+            "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "3",
+            "0",
+            "0",
+            "0",
+            "75%",
+            "0%"
+          ],
+          [
+            "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+            "a1-qa-video-1",
+            "notice",
+            "4",
+            "4",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "0%"
+          ]
+        ]
+      ],
+      "formStatus": "4개 조합의 결과예요."
+    },
+    {
+      "filters": {
+        "게시판 ID": "free"
+      },
+      "url": "http://127.0.0.1:18781/api/index.php?action=stats&from=2026-10-21&to=2026-10-21&boardId=free",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "data": {
+          "totals": {
+            "starts": 0,
+            "completes": 0,
+            "skips": 0,
+            "clicks": 0,
+            "clickedStarts": 0,
+            "errors": 0,
+            "completionRate": null,
+            "clickRate": null
+          },
+          "rows": [],
+          "timeZone": "Asia/Seoul",
+          "asOf": "2026-10-20T18:59:26Z"
+        }
+      },
+      "tables": [
+        [
+          [
+            "광고 ID",
+            "영상 ID",
+            "게시판",
+            "시작",
+            "완료",
+            "스킵",
+            "클릭",
+            "오류",
+            "완료율",
+            "클릭률"
+          ],
+          [
+            "수집된 기록이 없어요.기간이나 ID 조건을 바꿔 보세요."
+          ]
+        ]
+      ],
+      "formStatus": "이 조건에 수집된 기록이 없어요. 기간과 광고·영상·게시판 ID를 확인해 주세요."
+    }
+  ],
+  "csvScreen": [
+    [
+      [
+        "광고 ID",
+        "영상 ID",
+        "게시판",
+        "시작",
+        "완료",
+        "스킵",
+        "클릭",
+        "오류",
+        "완료율",
+        "클릭률"
+      ],
+      [
+        "creative-267101fb797012e881497f982d14d614",
+        "a1-qa-video-1",
+        "notice",
+        "4",
+        "4",
+        "0",
+        "0",
+        "0",
+        "100%",
+        "0%"
+      ],
+      [
+        "creative-875bd60a31c5ae33e483d934d9c0884f",
+        "a1-qa-video-1",
+        "notice",
+        "4",
+        "4",
+        "0",
+        "0",
+        "0",
+        "100%",
+        "0%"
+      ],
+      [
+        "creative-bb0142cd680ea2bcb6cc54dcb4b9fe03",
+        "a1-qa-video-1",
+        "notice",
+        "4",
+        "3",
+        "0",
+        "0",
+        "0",
+        "75%",
+        "0%"
+      ],
+      [
+        "creative-dd69a86f19eb54f49ce49ac3b31250b8",
+        "a1-qa-video-1",
+        "notice",
+        "4",
+        "4",
+        "0",
+        "0",
+        "0",
+        "100%",
+        "0%"
+      ]
+    ]
+  ],
+  "csv": {
+    "suggestedFilename": "ads-2026-10-21-2026-10-21.csv",
+    "bom": true,
+    "text": "adId,videoId,boardId,starts,completes,skips,clicks,clickedStarts,errors,completionRate,clickRate\ncreative-267101fb797012e881497f982d14d614,a1-qa-video-1,notice,4,4,0,0,0,0,1,0\ncreative-875bd60a31c5ae33e483d934d9c0884f,a1-qa-video-1,notice,4,4,0,0,0,0,1,0\ncreative-bb0142cd680ea2bcb6cc54dcb4b9fe03,a1-qa-video-1,notice,4,3,0,0,0,0,0.75,0\ncreative-dd69a86f19eb54f49ce49ac3b31250b8,a1-qa-video-1,notice,4,4,0,0,0,0,1,0\n"
+  },
+  "csvRequest": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:18781/api/index.php?action=stats-csv&from=2026-10-21&to=2026-10-21&videoId=a1-qa-video-1",
+      "status": 200
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

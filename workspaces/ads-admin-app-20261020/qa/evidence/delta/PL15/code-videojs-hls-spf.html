@@ -1,0 +1,11 @@
+<!-- 솔애드 광고 플레이어 -->
+<link rel="stylesheet" href="http://127.0.0.1:18781/assets/videojs/video-neutral.css" />
+<script type="module" src="http://127.0.0.1:18781/assets/videojs/video-neutral.js"></script>
+<script type="module" src="http://127.0.0.1:18781/assets/videojs/media/hls-video.js"></script>
+<script type="module" src="http://127.0.0.1:18781/assets/ads.js"></script>
+<video-player>
+  <video-neutral-skin style="--media-accent-color: #0f5132; --media-accent-text-color: #ffffff; --media-border-radius: 12px; --ads-font-size: 15px">
+    <hls-video id="ads-content-a1-qa-preset-1-erbkye" src="http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4" playsinline preload="metadata"></hls-video>
+    <media-ads for="ads-content-a1-qa-preset-1-erbkye" src="http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1-qa-preset-1" video-id="a1-qa-preset-1" lang="en" skip-label="Skip ad"></media-ads>
+  </video-neutral-skin>
+</video-player>

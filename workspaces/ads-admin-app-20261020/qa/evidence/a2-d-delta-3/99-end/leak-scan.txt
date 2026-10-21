@@ -1,0 +1,8 @@
+21:44:35
+scope: evidence/a2-d-delta-3 and results.md
+password: 0 files
+signing_key: 0 files
+cookie header/values (Set-Cookie|Cookie:|PHPSESSID=|ads_session=): 0 files
+csrf token values: 0 files
+bearer/token=: 0 files
+DSN (mysql:host|sqlite:/): 0 files

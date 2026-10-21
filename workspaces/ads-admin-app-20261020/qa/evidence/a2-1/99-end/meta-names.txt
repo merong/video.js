@@ -1,0 +1,8 @@
+## ads_meta names (sqlite3 -readonly; 값은 player_presets 요약만)
+player_presets
+schema_version
+signing_key
+site_id
+write_lock
+## player_presets: length|schema|revision|defaultPresetId|presets
+2468|2|19|p-qrgzuc8ste|2

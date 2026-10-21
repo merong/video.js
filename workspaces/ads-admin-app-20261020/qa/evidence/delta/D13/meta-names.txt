@@ -1,0 +1,10 @@
+# D13 ads_meta (sqlite3 -readonly, 2026-10-20T16:56:16Z) — run DB only; names + player_presets value only
+## names
+player_presets|1028
+schema_version|1
+signing_key|64
+site_id|10
+write_lock|1
+revision 26 default p-vym1rjw052
+{'id': 'p-vym1rjw052', 'name': 'QA Video.js 중립 v2', 'playerType': 'videojs', 'skin': 'neutral', 'theme': {'accentColor': '#0f5132', 'accentTextColor': '#ffffff', 'borderColor': None, 'borderRadius': 12, 'fontFamily': None, 'objectFit': None, 'scaleUnit': None}, 'ads': {'locale': 'en', 'labels': {'skip': 'Skip ad', 'skipCountdown': None, 'timer': None}, 'accentColor': None, 'skipRadius': None, 'fontSize': 15, 'timeouts': {'loadSeconds': None, 'stallSeconds': None}}, 'createdAt': '2026-10-20T16:13:47Z', 'updatedAt': '2026-10-20T16:23:53Z'} False
+{'id': 'p-obxpj5v9m9', 'name': 'QA 기본 video', 'playerType': 'native', 'skin': None, 'theme': {'accentColor': None, 'accentTextColor': None, 'borderColor': None, 'borderRadius': None, 'fontFamily': None, 'objectFit': None, 'scaleUnit': None}, 'ads': {'locale': 'ko', 'labels': {'skip': None, 'skipCountdown': None, 'timer': None}, 'accentColor': None, 'skipRadius': None, 'fontSize': None, 'timeouts': {'loadSeconds': 8, 'stallSeconds': None}}, 'createdAt': '2026-10-20T16:28:31Z', 'updatedAt': '2026-10-20T16:28:31Z'} False

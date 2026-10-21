@@ -1,0 +1,208 @@
+{
+  "HL11": {
+    "steps": [
+      {
+        "label": "상단 도움말",
+        "presses": 12,
+        "reached": {
+          "tag": "A",
+          "href": "#/help",
+          "name": "도움말",
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "필터 스킵",
+        "presses": 20,
+        "reached": {
+          "tag": "BUTTON",
+          "pressed": "false",
+          "name": "스킵2",
+          "group": "용어 분류",
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "스킵 대기 일시정지",
+        "presses": 7,
+        "reached": {
+          "tag": "BUTTON",
+          "pressed": "false",
+          "name": "일시정지",
+          "group": "스킵 대기 그림 조작",
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "스킵 대기 다시 보기",
+        "presses": 1,
+        "reached": {
+          "tag": "BUTTON",
+          "name": "다시 보기",
+          "group": "스킵 대기 그림 조작",
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "메뉴 소재",
+        "presses": 18,
+        "reached": {
+          "tag": "A",
+          "href": "#/creatives",
+          "name": "소재",
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "소재 HelpLink",
+        "presses": 4,
+        "reached": {
+          "tag": "A",
+          "href": "#/help/archive",
+          "name": "보관 도움말",
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      }
+    ],
+    "afterHelp": {
+      "tag": "H1",
+      "id": "aa-title-help",
+      "name": "도움말",
+      "visible": true,
+      "focusRing": true
+    },
+    "filterAfterEnter": {
+      "tag": "BUTTON",
+      "pressed": "true",
+      "name": "스킵2",
+      "group": "용어 분류",
+      "visible": true,
+      "focusRing": true
+    },
+    "pauseAfterSpace": {
+      "tag": "BUTTON",
+      "pressed": "true",
+      "name": "일시정지",
+      "group": "스킵 대기 그림 조작",
+      "visible": true,
+      "focusRing": true
+    },
+    "pausedClass": "sa-motion is-paused",
+    "replay": [
+      67,
+      67,
+      67
+    ],
+    "afterCreatives": {
+      "tag": "H1",
+      "id": "aa-title-creatives",
+      "name": "소재",
+      "visible": true,
+      "focusRing": true
+    },
+    "afterHelpLink": {
+      "link": "#/help/archive",
+      "tag": "H4",
+      "id": "sa-help-archive",
+      "name": "보관",
+      "visible": true,
+      "focusRing": true,
+      "hash": "#/help/archive"
+    },
+    "api": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  },
+  "HL12": {
+    "768": {
+      "top": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "flow": {
+        "rows": 1,
+        "overflowX": false,
+        "overlapping": false
+      },
+      "figures": {
+        "ad-break": {
+          "figWidth": 322,
+          "clipped": [],
+          "buttonsOverlap": false
+        },
+        "creative-source": {
+          "figWidth": 322,
+          "clipped": [],
+          "buttonsOverlap": false
+        },
+        "player-skin": {
+          "figWidth": 322,
+          "clipped": [],
+          "buttonsOverlap": false
+        }
+      },
+      "end": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    "1280": {
+      "top": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "flow": {
+        "rows": 1,
+        "overflowX": false,
+        "overlapping": false
+      },
+      "figures": {
+        "ad-break": {
+          "figWidth": 362,
+          "clipped": [],
+          "buttonsOverlap": false
+        },
+        "creative-source": {
+          "figWidth": 362,
+          "clipped": [],
+          "buttonsOverlap": false
+        },
+        "player-skin": {
+          "figWidth": 362,
+          "clipped": [],
+          "buttonsOverlap": false
+        }
+      },
+      "end": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    }
+  }
+}

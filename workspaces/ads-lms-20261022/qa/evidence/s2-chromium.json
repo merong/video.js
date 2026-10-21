@@ -1,0 +1,78 @@
+{
+  "engine": "chromium",
+  "steps": {
+    "rate menu has no value above 1.5 and \">\" stops at 1.5": {
+      "ok": true,
+      "detail": {
+        "rates": [
+          "0.2×",
+          "0.5×",
+          "0.7×",
+          "1×",
+          "1.2×",
+          "1.5×"
+        ],
+        "seen": [
+          1.2,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ]
+      }
+    },
+    "seek past watched stops at the limit (slider, →, +10s) with a notice and event": {
+      "ok": true,
+      "detail": [
+        {
+          "label": "slider click 85%",
+          "before": 10.683496,
+          "after": 12.759992,
+          "jump": 2.1,
+          "event": {
+            "requested": 68,
+            "allowed": 11.982
+          },
+          "toast": 2
+        },
+        {
+          "label": "→ key",
+          "before": 16.190531,
+          "after": 18.092607,
+          "jump": 1.9,
+          "event": {
+            "requested": 26.712,
+            "allowed": 17.35
+          },
+          "toast": 2
+        },
+        {
+          "label": "+10s button",
+          "before": 21.40222,
+          "after": 23.492927,
+          "jump": 2.1,
+          "event": {
+            "requested": 31.979,
+            "allowed": 22.748
+          },
+          "toast": 2
+        }
+      ],
+      "rejudged": "판정 기준을 jump<2.5에서 (멈춘 시각 − allowed) ≤ 1.5초로 바꿔 같은 측정값으로 다시 판정(재실행 없음). 막힌 뒤에도 0.5초 대기 동안 1.5배로 재생된다."
+    },
+    "limit lifts after completion": {
+      "ok": true,
+      "detail": {
+        "head": "진도 52% | 완료 기준 50% | 완료 · 10월 22일 03:27 | ",
+        "afterSliderTo90pct": 73.201936,
+        "blockedEventsAfterCompletion": 0
+      }
+    }
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

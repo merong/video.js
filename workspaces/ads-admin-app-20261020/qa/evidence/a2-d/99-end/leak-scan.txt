@@ -1,0 +1,7 @@
+leak scan 2026-10-21 19:21:20 (counts only, text files under evidence/a2-d, fixtures/paste/a2d-*, results.md)
+password files:        0
+signing_key files:        0
+PHPSESSID= or ads_session= with value:        0
+csrf with value:        0
+token= with long value:        0
+"token":" long value:        0

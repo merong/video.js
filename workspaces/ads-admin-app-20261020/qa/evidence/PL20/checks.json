@@ -1,0 +1,69 @@
+{
+ "body-default.json": {
+  "ok": true,
+  "hasName": false,
+  "keys": [
+   "attributes",
+   "css",
+   "id",
+   "playerType",
+   "revision",
+   "skin",
+   "skinTag",
+   "styles"
+  ],
+  "error": null
+ },
+ "body-none.json": {
+  "ok": true,
+  "hasName": false,
+  "keys": [
+   "attributes",
+   "css",
+   "id",
+   "playerType",
+   "revision",
+   "skin",
+   "skinTag",
+   "styles"
+  ],
+  "error": null
+ },
+ "body-p-nln4iamtsc.json": {
+  "ok": true,
+  "hasName": false,
+  "keys": [
+   "css",
+   "id",
+   "playerType",
+   "revision",
+   "skin",
+   "skinTag",
+   "styles",
+   "timeouts",
+   "ui"
+  ],
+  "error": null
+ },
+ "body-p-wkepup6b7d.json": {
+  "ok": true,
+  "hasName": false,
+  "keys": [
+   "attributes",
+   "css",
+   "id",
+   "playerType",
+   "revision",
+   "skin",
+   "skinTag",
+   "styles"
+  ],
+  "error": null
+ },
+ "body-p-zzzzzzzzzz.json": {
+  "ok": false,
+  "hasName": false,
+  "keys": [],
+  "error": "preset_not_found"
+ }
+}

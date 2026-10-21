@@ -1,0 +1,131 @@
+{
+  "ja": {
+    "status": [
+      "\"QA 일본어\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+      "미리보기가 준비됐어요."
+    ],
+    "id": "p-04uhxwffri"
+  },
+  "native": {
+    "status": [
+      "\"QA 기본 video\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+      "미리보기가 준비됐어요."
+    ],
+    "id": "p-dz06hj5w17"
+  },
+  "nativeJa": {
+    "status": [
+      "\"QA 기본 video 일본어\" 프리셋을 저장했어요. 이 프리셋을 쓰는 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+      "미리보기가 준비됐어요."
+    ],
+    "id": "p-qpmllkxi62"
+  },
+  "renders": {
+    "ja": {
+      "id": "p-04uhxwffri",
+      "revision": 12,
+      "playerType": "videojs",
+      "language": "ja",
+      "playback": {
+        "autoplay": false,
+        "muted": false,
+        "loop": false,
+        "preload": "metadata"
+      },
+      "display": {
+        "poster": true,
+        "title": true
+      },
+      "input": {
+        "hotkeys": true,
+        "gestures": true
+      },
+      "controls": {
+        "captions": true,
+        "quality": true,
+        "audioTrack": true,
+        "playbackRate": true,
+        "pip": true,
+        "fullscreen": true,
+        "thumbnails": true,
+        "seekButtons": null
+      },
+      "logo": null,
+      "progress": {
+        "sequence": true,
+        "timer": true,
+        "bar": false
+      },
+      "labels": {},
+      "skinTag": "video-skin",
+      "styles": {
+        "css": "video.css",
+        "js": "video.js"
+      },
+      "css": {},
+      "attributes": {
+        "lang": "ko"
+      }
+    },
+    "native": {
+      "id": "p-dz06hj5w17",
+      "revision": 12,
+      "playerType": "native",
+      "language": null,
+      "playback": {
+        "autoplay": false,
+        "muted": false,
+        "loop": false,
+        "preload": "metadata"
+      },
+      "display": {
+        "poster": true
+      },
+      "progress": {
+        "sequence": true,
+        "timer": true,
+        "bar": false
+      },
+      "labels": {},
+      "skinTag": null,
+      "styles": null,
+      "css": {},
+      "ui": {
+        "locale": "ko"
+      }
+    },
+    "nativeJa": {
+      "id": "p-qpmllkxi62",
+      "revision": 12,
+      "playerType": "native",
+      "language": "ja",
+      "playback": {
+        "autoplay": false,
+        "muted": false,
+        "loop": false,
+        "preload": "metadata"
+      },
+      "display": {
+        "poster": true
+      },
+      "progress": {
+        "sequence": true,
+        "timer": true,
+        "bar": false
+      },
+      "labels": {},
+      "skinTag": null,
+      "styles": null,
+      "css": {},
+      "ui": {
+        "locale": "ko"
+      }
+    }
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

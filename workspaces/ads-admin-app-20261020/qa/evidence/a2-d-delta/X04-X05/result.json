@@ -1,0 +1,220 @@
+{
+  "x04": [
+    {
+      "label": "ref-site-videojs",
+      "query": "?video=grok-demo-scene-01&type=videojs",
+      "presetNote": null,
+      "queryNote": null,
+      "conditions": [
+        "프리셋=사이트 적용 프리셋",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "controls": false
+        }
+      },
+      "events": 0
+    },
+    {
+      "label": "ref-default-videojs",
+      "query": "?video=grok-demo-scene-01&type=videojs&preset=default",
+      "presetNote": null,
+      "queryNote": null,
+      "conditions": [
+        "프리셋=기본",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "controls": false
+        }
+      },
+      "events": 0
+    },
+    {
+      "label": "unknown-videojs",
+      "query": "?video=grok-demo-scene-01&type=videojs&preset=p-zzzzzzzzzz",
+      "presetNote": "프리셋을 찾지 못했어요(p-zzzzzzzzzz). 설치한 페이지와 같이 기본 설정으로 재생해요.",
+      "queryNote": null,
+      "conditions": [
+        "프리셋=p-zzzzzzzzzz",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "controls": false
+        }
+      },
+      "nowAfterPlay": "최근 광고 진행 프리롤 1/2 재생 중 19:59:45",
+      "events": 1
+    },
+    {
+      "label": "unknown-native",
+      "query": "?video=grok-demo-scene-01&type=native&preset=p-zzzzzzzzzz",
+      "presetNote": "프리셋을 찾지 못했어요(p-zzzzzzzzzz). 설치한 페이지와 같이 기본 설정으로 재생해요.",
+      "queryNote": null,
+      "conditions": [
+        "프리셋=p-zzzzzzzzzz",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "DIV > VIDEO",
+        "media": {
+          "tag": "VIDEO",
+          "controls": true
+        }
+      },
+      "events": 0
+    },
+    {
+      "label": "other-native-rounded",
+      "query": "?video=grok-demo-scene-01&type=native&preset=rounded",
+      "presetNote": "‘둥근 테두리’ 프리셋은 Video.js용이에요. 기본 video에서는 이 프리셋 대신 기본값으로 재생해요. 로더도 같은 규칙이에요.",
+      "queryNote": null,
+      "conditions": [
+        "프리셋=둥근 테두리",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "DIV > VIDEO",
+        "media": {
+          "tag": "VIDEO",
+          "controls": true
+        }
+      },
+      "events": 0
+    },
+    {
+      "label": "other-videojs-native-preset",
+      "query": "?video=grok-demo-scene-01&type=videojs&preset=p-pchm59hhyv",
+      "presetNote": "‘p-pchm59hhyv’ 프리셋은 기본 video용이에요. Video.js에서는 이 프리셋 대신 기본값으로 재생해요. 로더도 같은 규칙이에요.",
+      "queryNote": null,
+      "conditions": [
+        "프리셋=p-pchm59hhyv",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "controls": false
+        }
+      },
+      "nowAfterPlay": "최근 광고 진행 프리롤 1/2 재생 중 20:00:00",
+      "events": 1
+    }
+  ],
+  "x05": {
+    "links": [
+      {
+        "text": "?",
+        "href": "#/help/play-test",
+        "target": null,
+        "describedBy": []
+      }
+    ],
+    "notes": [],
+    "opened": []
+  },
+  "error": "TypeError: Cannot read properties of undefined (reading 'href')",
+  "api": [
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=default @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset&id=default @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "POST events @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/play-test.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=rounded @/examples/play-test.html",
+    "GET player-preset&id=rounded @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "POST events @/examples/play-test.html",
+    "POST login",
+    "GET player-presets",
+    "GET schedule-draft&targetType=site&targetId=site-local"
+  ],
+  "eventsTotal": 2,
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "warning: [solad] 프리셋을 찾지 못했습니다(p-zzzzzzzzzz). 기본 설정으로 재생합니다.",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "warning: [solad] 프리셋을 찾지 못했습니다(p-zzzzzzzzzz). 기본 설정으로 재생합니다.",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "warning: [solad] 프리셋이 다른 플레이어용이라 기본 설정으로 재생합니다(rounded: videojs 플레이어용).",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "warning: [solad] 프리셋이 다른 플레이어용이라 기본 설정으로 재생합니다(p-pchm59hhyv: native 플레이어용).",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

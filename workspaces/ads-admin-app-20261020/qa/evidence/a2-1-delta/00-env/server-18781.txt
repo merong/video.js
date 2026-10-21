@@ -1,0 +1,3 @@
+48304
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+php     48304 brian    5u  IPv4 0x34bcc25b76720a9d      0t0  TCP 127.0.0.1:18781 (LISTEN)

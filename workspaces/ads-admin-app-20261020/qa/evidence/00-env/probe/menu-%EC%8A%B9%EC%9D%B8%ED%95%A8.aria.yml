@@ -1,0 +1,11 @@
+- main "승인함":
+  - region "승인함":
+    - heading "승인함" [level=1]
+    - text: 목업 · 아직 동작하지 않아요
+    - region "승인함":
+      - text: 아직 만들지 않은 화면
+      - heading "승인함" [level=2]
+      - paragraph: 소재 심사, 지면 편성, 집행 승인 요청을 탭으로 모아 게시본과 제출본의 차이를 보고 승인하거나 반려해요.
+      - paragraph:
+        - text: 기획 문서
+        - code: .agents/plans/ads-admin-v2-spec.md §8.5

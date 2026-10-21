@@ -1,0 +1,23 @@
+{
+  "dom": {
+    "skinShadow": true,
+    "skinClass": "",
+    "skinStyleRadius": "0px",
+    "classes": [],
+    "shadowHosts": [],
+    "withRadius": [],
+    "primary": [
+      {
+        "tag": "VIDEO",
+        "cls": "",
+        "primary": "oklch(100% 0 0)"
+      },
+      {
+        "tag": "MEDIA-ADS",
+        "cls": "",
+        "primary": "oklch(100% 0 0)"
+      }
+    ]
+  },
+  "failed": []
+}

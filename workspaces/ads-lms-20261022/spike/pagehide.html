@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>LMS spike pagehide</title>
+  </head>
+  <body>
+    <p>pagehide 전송 시험</p>
+    <script>
+      // ?browser=<name>&run=<id>. Sends both on pagehide (and on visibilitychange→hidden, the usual pair).
+      const params = new URLSearchParams(location.search);
+      const browser = params.get('browser') ?? 'unknown';
+      const run = params.get('run') ?? '0';
+      const body = (via, trigger) =>
+        JSON.stringify({ via, trigger, run, browser, watchedSeconds: 12.5, at: new Date().toISOString() });
+      const url = (kind) => `/spike/beacon.php?kind=${kind}&browser=${encodeURIComponent(browser)}&run=${run}`;
+      let sent = 0;
+
+      function send(trigger) {
+        if (sent++) return;
+
+        let fetchOk = 'thrown';
+        try {
+          fetch(url('fetch-keepalive'), {
+            method: 'POST',
+            keepalive: true,
+            headers: { 'Content-Type': 'application/json' },
+            body: body('fetch-keepalive', trigger),
+          }).catch(() => {});
+          fetchOk = 'called';
+        } catch (error) {
+          fetchOk = `thrown:${error.name}`;
+        }
+
+        const beaconOk = navigator.sendBeacon(
+          url('beacon-json-blob'),
+          new Blob([body('beacon-json-blob', trigger)], { type: 'application/json' })
+        );
+
+        sessionStorage.setItem('lms-spike-sent', JSON.stringify({ trigger, fetchOk, beaconOk }));
+        // A popup tells its opener that pagehide ran (for the window.close() case).
+        window.opener?.postMessage({ lmsSpike: 'pagehide', fetchOk, beaconOk }, '*');
+      }
+
+      addEventListener('pagehide', () => send('pagehide'));
+      window.__ready = true;
+    </script>
+  </body>
+</html>

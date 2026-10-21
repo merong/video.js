@@ -1,0 +1,83 @@
+- link "본문으로 이동":
+  - /url: "#ads-main"
+- banner:
+  - text: VIDEO / AD OPERATIONS
+  - strong: 광고 운영실
+  - text: site-local · Asia/Seoul
+  - button "로그아웃"
+- main:
+  - status
+  - navigation "광고 관리자 메뉴":
+    - button "소재 보관함"
+    - button "광고 편성"
+    - button "성과 통계"
+  - region "하나의 소재, 여러 편성.":
+    - text: 소재 보관함
+    - heading "하나의 소재, 여러 편성." [level=1]
+    - paragraph: 파일을 교체해도 기존 게시본과 기록은 유지됩니다.
+    - button "새 소재 등록"
+    - heading "등록한 소재" [level=2]
+    - button "새로고침"
+    - status: 6개 소재를 불러왔습니다.
+    - article:
+      - heading "QA 오류 뒤 유효 쓰기" [level=3]
+      - paragraph: creative-0443f3c2309264d81f999bd136e2a127 · v1 · video/mp4 · 사용 가능
+      - button "소재 미리보기"
+      - button "새 버전으로 수정"
+      - button "보관"
+    - article:
+      - heading "QA 이어버드 프리롤" [level=3]
+      - paragraph: creative-0afaf3d354178e48df2623e0265cf10f · v1 · video/mp4 · 사용 가능
+      - button "소재 미리보기"
+      - button "새 버전으로 수정"
+      - button "보관"
+    - article:
+      - heading "QA 포스트롤 이미지" [level=3]
+      - paragraph: creative-4f7176309eef79c367f79a8fb2baadba · v1 · image/png · 사용 가능
+      - button "소재 미리보기"
+      - button "새 버전으로 수정"
+      - button "보관"
+    - article:
+      - heading "QA 커피 프리롤 v2" [level=3]
+      - paragraph: creative-56f8787f880150925a4ccd6e062fdadf · v2 · video/mp4 · 사용 가능
+      - button "소재 미리보기"
+      - button "새 버전으로 수정"
+      - button "보관"
+    - article:
+      - heading "QA 보관 테스트" [level=3]
+      - paragraph: creative-8df64506f9e82341dc391e8f3accb7ba · v1 · video/mp4 · 보관됨
+      - button "소재 미리보기"
+      - button "새 버전으로 수정" [disabled]
+      - button "보관" [disabled]
+    - article:
+      - heading "QA 생수 미드롤" [level=3]
+      - paragraph: creative-c0e45eddb3d3820b1d733e9aac8766e9 · v1 · video/mp4 · 사용 가능
+      - button "소재 미리보기"
+      - button "새 버전으로 수정"
+      - button "보관"
+    - heading "새 소재 등록" [level=2]
+    - paragraph: 영상과 이미지 · GIF를 지원합니다.
+    - group "소재 정보":
+      - text: 소재 정보 소재 이름
+      - textbox "소재 이름"
+      - text: 등록 방식
+      - combobox "등록 방식":
+        - option "외부 URL" [selected]
+        - option "파일 업로드"
+      - text: 소재 URL
+      - textbox "소재 URL":
+        - /placeholder: https://… 또는 /media/…
+      - text: 파일 형식
+      - combobox "파일 형식":
+        - option "MP4 영상" [selected]
+        - option "WebM 영상"
+        - option "JPEG 이미지"
+        - option "PNG 이미지"
+        - option "WebP 이미지"
+        - option "GIF 이미지"
+      - text: 대체텍스트
+      - textbox "대체텍스트 이미지 광고의 내용을 짧게 설명하세요."
+      - text: 이미지 광고의 내용을 짧게 설명하세요.
+      - button "소재 저장"
+      - button "입력 소재 미리보기"
+    - status

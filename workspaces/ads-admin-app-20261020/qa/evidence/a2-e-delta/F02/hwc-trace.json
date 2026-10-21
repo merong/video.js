@@ -1,0 +1,242 @@
+{
+  "trace": [
+    {
+      "label": "after toggle",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": true,
+      "now": "최근 광고 진행프리롤 1/2 재생 중01:13:24",
+      "paused": true,
+      "t": 0
+    },
+    {
+      "label": "content playing",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 5.9
+    },
+    {
+      "label": "away 0.5s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 6.4
+    },
+    {
+      "label": "away 1s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 6.9
+    },
+    {
+      "label": "away 1.5s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 7.4
+    },
+    {
+      "label": "away 2s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 7.9
+    },
+    {
+      "label": "away 2.5s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 8.4
+    },
+    {
+      "label": "away 3s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 8.9
+    },
+    {
+      "label": "away 3.5s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 9.4
+    },
+    {
+      "label": "away 4s",
+      "controls": false,
+      "opacity": "0",
+      "visibility": "hidden",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 9.9
+    },
+    {
+      "label": "hover 0.25s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 0.1
+    },
+    {
+      "label": "hover 0.5s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 0.4
+    },
+    {
+      "label": "hover 0.75s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 0.6
+    },
+    {
+      "label": "hover 1s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 0.9
+    },
+    {
+      "label": "hover 1.25s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 1.2
+    },
+    {
+      "label": "hover 1.5s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 1.4
+    },
+    {
+      "label": "hover 1.75s",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 1.7
+    },
+    {
+      "label": "hover 2s",
+      "controls": false,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 1.9
+    },
+    {
+      "label": "moved again",
+      "controls": true,
+      "opacity": "1",
+      "visibility": "visible",
+      "attr": true,
+      "hda": true,
+      "ads": false,
+      "now": "최근 광고 진행미드롤 1/1 · 끝남01:13:56",
+      "paused": false,
+      "t": 2.5
+    }
+  ],
+  "playClick": {
+    "paused": true,
+    "t": 0.005677
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

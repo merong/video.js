@@ -1,0 +1,404 @@
+{
+  "a-display-on": {
+    "ready": [
+      {
+        "at": 210,
+        "target": "a1-qa-video-1",
+        "presetId": "p-vhpyxtqv36",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "playerAttrs": {
+      "contentTitle": "QA 제목 표시",
+      "poster": "http://127.0.0.1:18781/demo-media/ad.png"
+    },
+    "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "before": {
+      "videoPoster": null,
+      "tracks": [
+        {
+          "kind": "metadata",
+          "label": "thumbnails",
+          "mode": "hidden",
+          "cues": 2
+        }
+      ],
+      "trackEls": [
+        {
+          "src": "http://127.0.0.1:18781/__qa/thumbs.vtt",
+          "readyState": 2
+        }
+      ],
+      "posterImgs": [
+        {
+          "tag": "MEDIA-POSTER",
+          "cls": "media-poster",
+          "visible": true,
+          "src": ""
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-poster-image",
+          "visible": true,
+          "src": "/demo-media/ad.png"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "src": "/demo-media/ad.png"
+        }
+      ],
+      "thumbnails": [
+        {
+          "tag": "MEDIA-SLIDER-THUMBNAIL",
+          "cls": "media-slider-preview-content media-popup-surface media-slide",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "bg": "none"
+        },
+        {
+          "tag": "MEDIA-ICON",
+          "cls": "media-slider-thumbnail-spinner-icon",
+          "visible": false,
+          "bg": "none"
+        }
+      ],
+      "titleText": [
+        {
+          "tag": "MEDIA-TITLE",
+          "visible": true
+        }
+      ]
+    },
+    "hover": {
+      "videoPoster": null,
+      "tracks": [
+        {
+          "kind": "metadata",
+          "label": "thumbnails",
+          "mode": "hidden",
+          "cues": 2
+        }
+      ],
+      "trackEls": [
+        {
+          "src": "http://127.0.0.1:18781/__qa/thumbs.vtt",
+          "readyState": 2
+        }
+      ],
+      "posterImgs": [
+        {
+          "tag": "MEDIA-POSTER",
+          "cls": "media-poster",
+          "visible": true,
+          "src": ""
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-poster-image",
+          "visible": true,
+          "src": "/demo-media/ad.png"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "src": "/demo-media/ad.png"
+        }
+      ],
+      "thumbnails": [
+        {
+          "tag": "MEDIA-SLIDER-THUMBNAIL",
+          "cls": "media-slider-preview-content media-popup-surface media-slide",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "bg": "none"
+        },
+        {
+          "tag": "MEDIA-ICON",
+          "cls": "media-slider-thumbnail-spinner-icon",
+          "visible": false,
+          "bg": "none"
+        }
+      ],
+      "titleText": [
+        {
+          "tag": "MEDIA-TITLE",
+          "visible": true
+        }
+      ]
+    },
+    "sliderFound": 1,
+    "vttRequests": [
+      "/__qa/thumbs.vtt"
+    ],
+    "solad": []
+  },
+  "b-display-off": {
+    "ready": [
+      {
+        "at": 259,
+        "target": "a1-qa-video-1",
+        "presetId": "p-5opxze3ep0",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "playerAttrs": {
+      "contentTitle": null,
+      "poster": null
+    },
+    "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "before": {
+      "videoPoster": null,
+      "tracks": [
+        {
+          "kind": "metadata",
+          "label": "thumbnails",
+          "mode": "hidden",
+          "cues": 2
+        }
+      ],
+      "trackEls": [
+        {
+          "src": "http://127.0.0.1:18781/__qa/thumbs.vtt",
+          "readyState": 2
+        }
+      ],
+      "posterImgs": [
+        {
+          "tag": "MEDIA-POSTER",
+          "cls": "media-poster",
+          "visible": true,
+          "src": ""
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "src": "/demo-media/ad.png"
+        }
+      ],
+      "thumbnails": [
+        {
+          "tag": "MEDIA-SLIDER-THUMBNAIL",
+          "cls": "media-slider-preview-content media-popup-surface media-slide",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "bg": "none"
+        },
+        {
+          "tag": "MEDIA-ICON",
+          "cls": "media-slider-thumbnail-spinner-icon",
+          "visible": false,
+          "bg": "none"
+        }
+      ],
+      "titleText": []
+    },
+    "hover": {
+      "videoPoster": null,
+      "tracks": [
+        {
+          "kind": "metadata",
+          "label": "thumbnails",
+          "mode": "hidden",
+          "cues": 2
+        }
+      ],
+      "trackEls": [
+        {
+          "src": "http://127.0.0.1:18781/__qa/thumbs.vtt",
+          "readyState": 2
+        }
+      ],
+      "posterImgs": [
+        {
+          "tag": "MEDIA-POSTER",
+          "cls": "media-poster",
+          "visible": true,
+          "src": ""
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "src": "/demo-media/ad.png"
+        }
+      ],
+      "thumbnails": [
+        {
+          "tag": "MEDIA-SLIDER-THUMBNAIL",
+          "cls": "media-slider-preview-content media-popup-surface media-slide",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": true,
+          "bg": "none"
+        },
+        {
+          "tag": "MEDIA-ICON",
+          "cls": "media-slider-thumbnail-spinner-icon",
+          "visible": false,
+          "bg": "none"
+        }
+      ],
+      "titleText": []
+    },
+    "sliderFound": 1,
+    "vttRequests": [
+      "/__qa/thumbs.vtt"
+    ],
+    "solad": []
+  },
+  "c-native": {
+    "ready": [
+      {
+        "at": 39,
+        "target": "a1-qa-video-1",
+        "presetId": "p-dz06hj5w17",
+        "fallback": false,
+        "player": "VIDEO"
+      }
+    ],
+    "playerAttrs": null,
+    "tree": "DIV > VIDEO",
+    "before": {
+      "videoPoster": "http://127.0.0.1:18781/demo-media/ad.png",
+      "tracks": [],
+      "trackEls": [],
+      "posterImgs": [],
+      "thumbnails": [],
+      "titleText": []
+    },
+    "sliderFound": 0,
+    "vttRequests": [],
+    "solad": []
+  },
+  "d-bad-poster": {
+    "ready": [
+      {
+        "at": 210,
+        "target": "a1-qa-video-1",
+        "presetId": "p-vhpyxtqv36",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "playerAttrs": {
+      "contentTitle": "QA 제목 표시",
+      "poster": null
+    },
+    "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+    "before": {
+      "videoPoster": null,
+      "tracks": [],
+      "trackEls": [],
+      "posterImgs": [
+        {
+          "tag": "MEDIA-POSTER",
+          "cls": "media-poster",
+          "visible": true,
+          "src": ""
+        }
+      ],
+      "thumbnails": [
+        {
+          "tag": "MEDIA-SLIDER-THUMBNAIL",
+          "cls": "media-slider-preview-content media-popup-surface media-slide",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "MEDIA-ICON",
+          "cls": "media-slider-thumbnail-spinner-icon",
+          "visible": false,
+          "bg": "none"
+        }
+      ],
+      "titleText": [
+        {
+          "tag": "MEDIA-TITLE",
+          "visible": true
+        }
+      ]
+    },
+    "hover": {
+      "videoPoster": null,
+      "tracks": [],
+      "trackEls": [],
+      "posterImgs": [
+        {
+          "tag": "MEDIA-POSTER",
+          "cls": "media-poster",
+          "visible": true,
+          "src": ""
+        }
+      ],
+      "thumbnails": [
+        {
+          "tag": "MEDIA-SLIDER-THUMBNAIL",
+          "cls": "media-slider-preview-content media-popup-surface media-slide",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "IMG",
+          "cls": "media-slider-thumbnail-image",
+          "visible": false,
+          "bg": "none"
+        },
+        {
+          "tag": "MEDIA-ICON",
+          "cls": "media-slider-thumbnail-spinner-icon",
+          "visible": false,
+          "bg": "none"
+        }
+      ],
+      "titleText": [
+        {
+          "tag": "MEDIA-TITLE",
+          "visible": true
+        }
+      ]
+    },
+    "sliderFound": 1,
+    "vttRequests": [],
+    "solad": [
+      {
+        "type": "warning",
+        "text": "[solad] data-poster=\"javascript:alert(1)\" 값은 쓸 수 없어 무시합니다."
+      },
+      {
+        "type": "warning",
+        "text": "[solad] data-thumbnails=\"ftp://example.com/t.vtt\" 값은 쓸 수 없어 무시합니다."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A2-1-QA msg-mount-videojs</title>
+</head>
+<body>
+<div id="m"></div>
+<script type="module">
+import { mount } from '/player/loader.js';
+const el = document.getElementById('m');
+mount(el, { videoId: 'a1-qa-video-1', src: '/demo-media/grok-20261018/content-scene-01.mp4', preset: 'p-i22c0n5b8p', playerType: 'videojs', onError: (e) => { window.__qaMountErrors = (window.__qaMountErrors || []).concat({ code: e.code, message: e.message }); } })
+  .then((h) => { window.__qaMount = { presetId: h.presetId, fallback: h.fallback, media: h.media.localName }; }, (e) => { window.__qaMount = { error: String(e) }; });
+</script>
+</body>
+</html>

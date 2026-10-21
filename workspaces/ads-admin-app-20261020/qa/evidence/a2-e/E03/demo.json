@@ -1,0 +1,2883 @@
+{
+  "runs": [
+    {
+      "size": "1280x900",
+      "steps": [
+        {
+          "label": "first open (default)",
+          "group": {
+            "seek": {
+              "checked": "false",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": true,
+            "step": "10",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": ""
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": null,
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": null,
+            "forward": null,
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": []
+          }
+        },
+        {
+          "label": "switch on",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "10",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=10"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "10",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-10",
+              "ariaLabel": "10초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "10",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "10",
+              "ariaLabel": "10초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "10",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-10",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "10",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":10}},"
+            ]
+          }
+        },
+        {
+          "label": "step 5",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "5",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=5"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "5",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-5",
+              "ariaLabel": "5초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "5",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "5",
+              "ariaLabel": "5초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "5",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-5",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "5",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":5}},"
+            ]
+          }
+        },
+        {
+          "label": "step 15",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "15",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=15"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "15",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-15",
+              "ariaLabel": "15초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "15",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "15",
+              "ariaLabel": "15초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "15",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-15",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "15",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":15}},"
+            ]
+          }
+        },
+        {
+          "label": "step 30",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        },
+        {
+          "label": "switch off",
+          "group": {
+            "seek": {
+              "checked": "false",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": true,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": ""
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": null,
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": null,
+            "forward": null,
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": []
+          }
+        },
+        {
+          "label": "switch on again",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        },
+        {
+          "label": "reload same query",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        },
+        {
+          "label": "native preset",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": true,
+              "ariaDisabled": null,
+              "describedBy": [
+                "기본 video 프리셋에서는 이전·이후 버튼과 자막을 쓸 수 없어요. Video.js 프리셋을 고르면 쓸 수 있어요.",
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [
+              "5",
+              "10",
+              "15",
+              "30"
+            ],
+            "offReason": "기본 video 프리셋에서는 이전·이후 버튼과 자막을 쓸 수 없어요. Video.js 프리셋을 고르면 쓸 수 있어요.",
+            "bodyOff": true,
+            "query": "?preset=p-pchm59hhyv&seekButtons=30"
+          },
+          "player": {
+            "skin": null
+          },
+          "code": {
+            "html": [],
+            "js": []
+          }
+        },
+        {
+          "label": "back to default",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?preset=default&seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 818,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "block",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        }
+      ],
+      "play": {
+        "duringAd": {
+          "skin": "solad-video-skin",
+          "attrs": {
+            "seekButtons": "5",
+            "captions": null
+          },
+          "containerWidth": 818,
+          "primaryOrder": [
+            "media-play-button#vjs-t8h5QXcn-0-trigger",
+            "media-seek-button#solad-seek-backward",
+            "media-seek-button#solad-seek-forward",
+            "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+            "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+            "media-controls-group",
+            "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+            "button#vjs-t8h5QXcn-0-4-trigger",
+            "media-menu#vjs-OmWN2nJf-0-popup"
+          ],
+          "backward": {
+            "seconds": "-5",
+            "ariaLabel": "5초 뒤로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "block",
+            "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+            "inert": [
+              "media-controls"
+            ],
+            "w": 36,
+            "visible": true
+          },
+          "forward": {
+            "seconds": "5",
+            "ariaLabel": "5초 앞으로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "block",
+            "iconTransform": "none",
+            "inert": [
+              "media-controls"
+            ],
+            "w": 36,
+            "visible": true
+          },
+          "gestures": [
+            {
+              "type": "tap",
+              "action": "togglePaused",
+              "pointer": "mouse",
+              "region": "center",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "tap",
+              "action": "toggleControls",
+              "pointer": "touch",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "left",
+              "value": "-5",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "doubletap",
+              "action": "toggleFullscreen",
+              "region": "center",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "right",
+              "value": "5",
+              "style": "display: none;",
+              "inert": ""
+            }
+          ],
+          "hotkeys": [
+            "Space:togglePaused",
+            "k:togglePaused",
+            "m:toggleMuted",
+            "ArrowRight:seekStep",
+            "ArrowLeft:seekStep",
+            "l:seekStep",
+            "j:seekStep",
+            "ArrowUp:volumeStep",
+            "ArrowDown:volumeStep",
+            "0-9:seekToPercent",
+            "Home:seekToPercent=0",
+            "End:seekToPercent=100",
+            ">:speedUp",
+            "<:speedDown",
+            "f:toggleFullscreen",
+            "c:toggleSubtitles",
+            "i:togglePictureInPicture"
+          ],
+          "adsOverlay": true,
+          "t": 5.11,
+          "paused": true
+        },
+        "duringAdNow": "최근 광고 진행 미드롤 1/1 재생 중 23:43:09",
+        "duringAdTab": [
+          "button 끝 직전",
+          "a 옵션 설명 보기",
+          "button ",
+          "button ",
+          "button ",
+          "input "
+        ],
+        "clickDuringAd": "not clickable: \u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m | \u001b[2m      - element is visible, enabled and stable\u001b[22m",
+        "mainDuringAd": 5.11,
+        "afterAdNow": "최근 광고 진행 미드롤 1/1 · 끝남 23:43:17",
+        "before": {
+          "skin": "solad-video-skin",
+          "attrs": {
+            "seekButtons": "5",
+            "captions": null
+          },
+          "containerWidth": 818,
+          "primaryOrder": [
+            "media-play-button#vjs-t8h5QXcn-0-trigger",
+            "media-seek-button#solad-seek-backward",
+            "media-seek-button#solad-seek-forward",
+            "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+            "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+            "media-controls-group",
+            "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+            "button#vjs-t8h5QXcn-0-4-trigger",
+            "media-menu#vjs-OmWN2nJf-0-popup"
+          ],
+          "backward": {
+            "seconds": "-5",
+            "ariaLabel": "5초 뒤로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "block",
+            "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+            "inert": [],
+            "w": 36,
+            "visible": true
+          },
+          "forward": {
+            "seconds": "5",
+            "ariaLabel": "5초 앞으로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "block",
+            "iconTransform": "none",
+            "inert": [],
+            "w": 36,
+            "visible": true
+          },
+          "gestures": [
+            {
+              "type": "tap",
+              "action": "togglePaused",
+              "pointer": "mouse",
+              "region": "center",
+              "style": "display: none;"
+            },
+            {
+              "type": "tap",
+              "action": "toggleControls",
+              "pointer": "touch",
+              "style": "display: none;"
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "left",
+              "value": "-5",
+              "style": "display: none;"
+            },
+            {
+              "type": "doubletap",
+              "action": "toggleFullscreen",
+              "region": "center",
+              "style": "display: none;"
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "right",
+              "value": "5",
+              "style": "display: none;"
+            }
+          ],
+          "hotkeys": [
+            "Space:togglePaused",
+            "k:togglePaused",
+            "m:toggleMuted",
+            "ArrowRight:seekStep",
+            "ArrowLeft:seekStep",
+            "l:seekStep",
+            "j:seekStep",
+            "ArrowUp:volumeStep",
+            "ArrowDown:volumeStep",
+            "0-9:seekToPercent",
+            "Home:seekToPercent=0",
+            "End:seekToPercent=100",
+            ">:speedUp",
+            "<:speedDown",
+            "f:toggleFullscreen",
+            "c:toggleSubtitles",
+            "i:togglePictureInPicture"
+          ],
+          "adsOverlay": false,
+          "t": 5.75,
+          "paused": true
+        },
+        "afterBackward": 0.75,
+        "nowAfterBackward": "최근 광고 진행 미드롤 1/1 · 끝남 23:43:17",
+        "afterForward": 5.75,
+        "nowAfterForward": "최근 광고 진행 미드롤 1/1 · 끝남 23:43:17",
+        "tooltip": [
+          {
+            "trigger": "solad-seek-backward",
+            "label": "5초 뒤로 탐색",
+            "shortcut": ""
+          },
+          {
+            "trigger": "solad-seek-forward",
+            "label": "5초 앞으로 탐색",
+            "shortcut": ""
+          }
+        ],
+        "tabOrder": [
+          "재생",
+          "media-seek-button#solad-seek-backward 5초 뒤로 탐색",
+          "media-seek-button#solad-seek-forward 5초 앞으로 탐색",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거"
+        ],
+        "enterBackward": {
+          "before": 5.75,
+          "after": 0.75
+        }
+      },
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "size": "390x844",
+      "steps": [
+        {
+          "label": "first open (default)",
+          "group": {
+            "seek": {
+              "checked": "false",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": true,
+            "step": "10",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": ""
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": null,
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": null,
+            "forward": null,
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": []
+          }
+        },
+        {
+          "label": "switch on",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "10",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=10"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "10",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-10",
+              "ariaLabel": "10초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "10",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "10",
+              "ariaLabel": "10초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "10",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-10",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "10",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":10}},"
+            ]
+          }
+        },
+        {
+          "label": "step 5",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "5",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=5"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "5",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-5",
+              "ariaLabel": "5초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "5",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "5",
+              "ariaLabel": "5초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "5",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-5",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "5",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":5}},"
+            ]
+          }
+        },
+        {
+          "label": "step 15",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "15",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=15"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "15",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-15",
+              "ariaLabel": "15초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "15",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "15",
+              "ariaLabel": "15초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "15",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-15",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "15",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":15}},"
+            ]
+          }
+        },
+        {
+          "label": "step 30",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        },
+        {
+          "label": "switch off",
+          "group": {
+            "seek": {
+              "checked": "false",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": true,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": ""
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": null,
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": null,
+            "forward": null,
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": []
+          }
+        },
+        {
+          "label": "switch on again",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        },
+        {
+          "label": "reload same query",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        },
+        {
+          "label": "native preset",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": true,
+              "ariaDisabled": null,
+              "describedBy": [
+                "기본 video 프리셋에서는 이전·이후 버튼과 자막을 쓸 수 없어요. Video.js 프리셋을 고르면 쓸 수 있어요.",
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [
+              "5",
+              "10",
+              "15",
+              "30"
+            ],
+            "offReason": "기본 video 프리셋에서는 이전·이후 버튼과 자막을 쓸 수 없어요. Video.js 프리셋을 고르면 쓸 수 있어요.",
+            "bodyOff": true,
+            "query": "?preset=p-pchm59hhyv&seekButtons=30"
+          },
+          "player": {
+            "skin": null
+          },
+          "code": {
+            "html": [],
+            "js": []
+          }
+        },
+        {
+          "label": "back to default",
+          "group": {
+            "seek": {
+              "checked": "true",
+              "disabled": false,
+              "ariaDisabled": null,
+              "describedBy": [
+                "컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요."
+              ]
+            },
+            "subHidden": false,
+            "step": "30",
+            "stepsDisabled": [],
+            "offReason": null,
+            "bodyOff": false,
+            "query": "?preset=default&seekButtons=30"
+          },
+          "player": {
+            "skin": "solad-video-skin",
+            "attrs": {
+              "seekButtons": "30",
+              "captions": null
+            },
+            "containerWidth": 320,
+            "primaryOrder": [
+              "media-play-button#vjs-t8h5QXcn-0-trigger",
+              "media-seek-button#solad-seek-backward",
+              "media-seek-button#solad-seek-forward",
+              "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+              "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+              "media-controls-group",
+              "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+              "button#vjs-t8h5QXcn-0-4-trigger",
+              "media-menu#vjs-OmWN2nJf-0-popup"
+            ],
+            "backward": {
+              "seconds": "-30",
+              "ariaLabel": "30초 뒤로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "forward": {
+              "seconds": "30",
+              "ariaLabel": "30초 앞으로 탐색",
+              "role": "button",
+              "tabIndex": 0,
+              "labelText": "30",
+              "labelDisplay": "none",
+              "iconTransform": "none",
+              "inert": [],
+              "w": 36,
+              "visible": true
+            },
+            "gestures": [
+              {
+                "type": "tap",
+                "action": "togglePaused",
+                "pointer": "mouse",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "tap",
+                "action": "toggleControls",
+                "pointer": "touch",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "left",
+                "value": "-30",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "toggleFullscreen",
+                "region": "center",
+                "style": "display: none;"
+              },
+              {
+                "type": "doubletap",
+                "action": "seekStep",
+                "region": "right",
+                "value": "30",
+                "style": "display: none;"
+              }
+            ],
+            "hotkeys": [
+              "Space:togglePaused",
+              "k:togglePaused",
+              "m:toggleMuted",
+              "ArrowRight:seekStep",
+              "ArrowLeft:seekStep",
+              "l:seekStep",
+              "j:seekStep",
+              "ArrowUp:volumeStep",
+              "ArrowDown:volumeStep",
+              "0-9:seekToPercent",
+              "Home:seekToPercent=0",
+              "End:seekToPercent=100",
+              ">:speedUp",
+              "<:speedDown",
+              "f:toggleFullscreen",
+              "c:toggleSubtitles",
+              "i:togglePictureInPicture"
+            ],
+            "adsOverlay": false,
+            "t": 0,
+            "paused": true
+          },
+          "code": {
+            "html": [],
+            "js": [
+              "  overrides: {\"controls\":{\"seekButtons\":30}},"
+            ]
+          }
+        }
+      ],
+      "play": {
+        "duringAd": {
+          "skin": "solad-video-skin",
+          "attrs": {
+            "seekButtons": "5",
+            "captions": null
+          },
+          "containerWidth": 320,
+          "primaryOrder": [
+            "media-play-button#vjs-t8h5QXcn-0-trigger",
+            "media-seek-button#solad-seek-backward",
+            "media-seek-button#solad-seek-forward",
+            "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+            "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+            "media-controls-group",
+            "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+            "button#vjs-t8h5QXcn-0-4-trigger",
+            "media-menu#vjs-OmWN2nJf-0-popup"
+          ],
+          "backward": {
+            "seconds": "-5",
+            "ariaLabel": "5초 뒤로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "none",
+            "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+            "inert": [
+              "media-controls"
+            ],
+            "w": 36,
+            "visible": true
+          },
+          "forward": {
+            "seconds": "5",
+            "ariaLabel": "5초 앞으로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "none",
+            "iconTransform": "none",
+            "inert": [
+              "media-controls"
+            ],
+            "w": 36,
+            "visible": true
+          },
+          "gestures": [
+            {
+              "type": "tap",
+              "action": "togglePaused",
+              "pointer": "mouse",
+              "region": "center",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "tap",
+              "action": "toggleControls",
+              "pointer": "touch",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "left",
+              "value": "-5",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "doubletap",
+              "action": "toggleFullscreen",
+              "region": "center",
+              "style": "display: none;",
+              "inert": ""
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "right",
+              "value": "5",
+              "style": "display: none;",
+              "inert": ""
+            }
+          ],
+          "hotkeys": [
+            "Space:togglePaused",
+            "k:togglePaused",
+            "m:toggleMuted",
+            "ArrowRight:seekStep",
+            "ArrowLeft:seekStep",
+            "l:seekStep",
+            "j:seekStep",
+            "ArrowUp:volumeStep",
+            "ArrowDown:volumeStep",
+            "0-9:seekToPercent",
+            "Home:seekToPercent=0",
+            "End:seekToPercent=100",
+            ">:speedUp",
+            "<:speedDown",
+            "f:toggleFullscreen",
+            "c:toggleSubtitles",
+            "i:togglePictureInPicture"
+          ],
+          "adsOverlay": true,
+          "t": 5.14,
+          "paused": true
+        },
+        "duringAdNow": "최근 광고 진행 미드롤 1/1 재생 중 23:43:40",
+        "duringAdTab": [
+          "button 끝 직전",
+          "a 옵션 설명 보기",
+          "button ",
+          "button ",
+          "button ",
+          "input "
+        ],
+        "clickDuringAd": "not clickable: \u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m | \u001b[2m      - element is visible, enabled and stable\u001b[22m",
+        "mainDuringAd": 5.14,
+        "afterAdNow": "최근 광고 진행 미드롤 1/1 · 끝남 23:43:48",
+        "before": {
+          "skin": "solad-video-skin",
+          "attrs": {
+            "seekButtons": "5",
+            "captions": null
+          },
+          "containerWidth": 320,
+          "primaryOrder": [
+            "media-play-button#vjs-t8h5QXcn-0-trigger",
+            "media-seek-button#solad-seek-backward",
+            "media-seek-button#solad-seek-forward",
+            "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+            "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+            "media-controls-group",
+            "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+            "button#vjs-t8h5QXcn-0-4-trigger",
+            "media-menu#vjs-OmWN2nJf-0-popup"
+          ],
+          "backward": {
+            "seconds": "-5",
+            "ariaLabel": "5초 뒤로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "none",
+            "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+            "inert": [],
+            "w": 36,
+            "visible": true
+          },
+          "forward": {
+            "seconds": "5",
+            "ariaLabel": "5초 앞으로 탐색",
+            "role": "button",
+            "tabIndex": 0,
+            "labelText": "5",
+            "labelDisplay": "none",
+            "iconTransform": "none",
+            "inert": [],
+            "w": 36,
+            "visible": true
+          },
+          "gestures": [
+            {
+              "type": "tap",
+              "action": "togglePaused",
+              "pointer": "mouse",
+              "region": "center",
+              "style": "display: none;"
+            },
+            {
+              "type": "tap",
+              "action": "toggleControls",
+              "pointer": "touch",
+              "style": "display: none;"
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "left",
+              "value": "-5",
+              "style": "display: none;"
+            },
+            {
+              "type": "doubletap",
+              "action": "toggleFullscreen",
+              "region": "center",
+              "style": "display: none;"
+            },
+            {
+              "type": "doubletap",
+              "action": "seekStep",
+              "region": "right",
+              "value": "5",
+              "style": "display: none;"
+            }
+          ],
+          "hotkeys": [
+            "Space:togglePaused",
+            "k:togglePaused",
+            "m:toggleMuted",
+            "ArrowRight:seekStep",
+            "ArrowLeft:seekStep",
+            "l:seekStep",
+            "j:seekStep",
+            "ArrowUp:volumeStep",
+            "ArrowDown:volumeStep",
+            "0-9:seekToPercent",
+            "Home:seekToPercent=0",
+            "End:seekToPercent=100",
+            ">:speedUp",
+            "<:speedDown",
+            "f:toggleFullscreen",
+            "c:toggleSubtitles",
+            "i:togglePictureInPicture"
+          ],
+          "adsOverlay": false,
+          "t": 5.63,
+          "paused": true
+        },
+        "afterBackward": 0.63,
+        "nowAfterBackward": "최근 광고 진행 미드롤 1/1 · 끝남 23:43:48",
+        "afterForward": 5.63,
+        "nowAfterForward": "최근 광고 진행 미드롤 1/1 · 끝남 23:43:48",
+        "tooltip": [
+          {
+            "trigger": "solad-seek-backward",
+            "label": "5초 뒤로 탐색",
+            "shortcut": ""
+          },
+          {
+            "trigger": "solad-seek-forward",
+            "label": "5초 앞으로 탐색",
+            "shortcut": ""
+          }
+        ],
+        "tabOrder": [
+          "재생",
+          "media-seek-button#solad-seek-backward 5초 뒤로 탐색",
+          "media-seek-button#solad-seek-forward 5초 앞으로 탐색",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger 음소거"
+        ],
+        "enterBackward": {
+          "before": 5.63,
+          "after": 0.63
+        }
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "bad": []
+    }
+  ],
+  "doubletap": {
+    "start": {
+      "skin": "solad-video-skin",
+      "attrs": {
+        "seekButtons": "5",
+        "captions": null
+      },
+      "containerWidth": 320,
+      "primaryOrder": [
+        "media-play-button#vjs-t8h5QXcn-0-trigger",
+        "media-seek-button#solad-seek-backward",
+        "media-seek-button#solad-seek-forward",
+        "media-mute-button#vjs-t8h5QXcn-0-2-trigger",
+        "media-volume-popover#vjs-0vfRjIYZ-0-popup",
+        "media-controls-group",
+        "media-captions-button#vjs-t8h5QXcn-0-3-trigger",
+        "button#vjs-t8h5QXcn-0-4-trigger",
+        "media-menu#vjs-OmWN2nJf-0-popup"
+      ],
+      "backward": {
+        "seconds": "-5",
+        "ariaLabel": "5초 뒤로 탐색",
+        "role": "button",
+        "tabIndex": 0,
+        "labelText": "5",
+        "labelDisplay": "none",
+        "iconTransform": "matrix(-1, 0, 0, 1, 0, 0)",
+        "inert": [],
+        "w": 36,
+        "visible": true
+      },
+      "forward": {
+        "seconds": "5",
+        "ariaLabel": "5초 앞으로 탐색",
+        "role": "button",
+        "tabIndex": 0,
+        "labelText": "5",
+        "labelDisplay": "none",
+        "iconTransform": "none",
+        "inert": [],
+        "w": 36,
+        "visible": true
+      },
+      "gestures": [
+        {
+          "type": "tap",
+          "action": "togglePaused",
+          "pointer": "mouse",
+          "region": "center",
+          "style": "display: none;"
+        },
+        {
+          "type": "tap",
+          "action": "toggleControls",
+          "pointer": "touch",
+          "style": "display: none;"
+        },
+        {
+          "type": "doubletap",
+          "action": "seekStep",
+          "region": "left",
+          "value": "-5",
+          "style": "display: none;"
+        },
+        {
+          "type": "doubletap",
+          "action": "toggleFullscreen",
+          "region": "center",
+          "style": "display: none;"
+        },
+        {
+          "type": "doubletap",
+          "action": "seekStep",
+          "region": "right",
+          "value": "5",
+          "style": "display: none;"
+        }
+      ],
+      "hotkeys": [
+        "Space:togglePaused",
+        "k:togglePaused",
+        "m:toggleMuted",
+        "ArrowRight:seekStep",
+        "ArrowLeft:seekStep",
+        "l:seekStep",
+        "j:seekStep",
+        "ArrowUp:volumeStep",
+        "ArrowDown:volumeStep",
+        "0-9:seekToPercent",
+        "Home:seekToPercent=0",
+        "End:seekToPercent=100",
+        ">:speedUp",
+        "<:speedDown",
+        "f:toggleFullscreen",
+        "c:toggleSubtitles",
+        "i:togglePictureInPicture"
+      ],
+      "adsOverlay": false,
+      "t": 5.78,
+      "paused": true
+    },
+    "afterLeft": 0.78,
+    "afterRight": 5.78,
+    "gestures": [
+      {
+        "type": "tap",
+        "action": "togglePaused",
+        "pointer": "mouse",
+        "region": "center",
+        "style": "display: none;"
+      },
+      {
+        "type": "tap",
+        "action": "toggleControls",
+        "pointer": "touch",
+        "style": "display: none;"
+      },
+      {
+        "type": "doubletap",
+        "action": "seekStep",
+        "region": "left",
+        "value": "-5",
+        "style": "display: none;"
+      },
+      {
+        "type": "doubletap",
+        "action": "toggleFullscreen",
+        "region": "center",
+        "style": "display: none;"
+      },
+      {
+        "type": "doubletap",
+        "action": "seekStep",
+        "region": "right",
+        "value": "5",
+        "style": "display: none;"
+      }
+    ]
+  }
+}

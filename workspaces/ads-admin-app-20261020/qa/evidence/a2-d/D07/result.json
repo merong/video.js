@@ -1,0 +1,541 @@
+{
+  "pages": [
+    {
+      "width": 390,
+      "name": "demo",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "wide": [
+        "CODE. r=526",
+        "CODE. r=595"
+      ],
+      "nav": "데모[page] 설명서 도움말"
+    },
+    {
+      "width": 390,
+      "name": "guide",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "wide": [
+        "CODE. r=677"
+      ],
+      "nav": "데모 설명서[page] 도움말",
+      "tocOpen": false,
+      "tocBox": {
+        "x": 16,
+        "y": 107,
+        "w": 358,
+        "h": 38
+      },
+      "tocLinks": 8,
+      "tocMissing": [],
+      "anchor": {
+        "href": "#schedules",
+        "hash": "#schedules",
+        "top": 16,
+        "current": [
+          "#schedules"
+        ]
+      },
+      "sampleNotice": [
+        "데모와 관리자의 플레이어 미리보기는 Grok 샘플을 재생해요. 샘플은 저장소에 들어 있지 않아서 서버에 직접 넣어야 해요. 없으면 대신할 영상을 만들지 않고 준비 방법을 보여요.",
+        "관리자의 public/demo-media/grok-20261018/ 폴더를 만들어요.",
+        "샘플 광고는 서버 루트가 public/일 때만 나와요. 샘플 편성의 광고 주소가 /demo-media/로 시작해서, 관리자를 /ads/처럼 경로 아래에 설치하면 광고 파일을 찾지 못하고 본편만 재생해요."
+      ]
+    },
+    {
+      "width": 390,
+      "name": "help",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "wide": [
+        "CODE. r=677",
+        "CODE. r=576",
+        "TABLE.sa-table r=956"
+      ],
+      "nav": "데모 설명서 도움말[page]",
+      "tocOpen": false,
+      "tocBox": {
+        "x": 16,
+        "y": 107,
+        "w": 358,
+        "h": 38
+      },
+      "tocLinks": 10,
+      "tocMissing": [],
+      "anchor": {
+        "href": "#events",
+        "hash": "#events",
+        "top": 16,
+        "current": [
+          "#events"
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "name": "play-test",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서 도움말"
+    },
+    {
+      "width": 768,
+      "name": "demo",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모[page] 설명서 도움말"
+    },
+    {
+      "width": 768,
+      "name": "guide",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서[page] 도움말",
+      "tocOpen": false,
+      "tocBox": {
+        "x": 16,
+        "y": 107,
+        "w": 736,
+        "h": 38
+      },
+      "tocLinks": 8,
+      "tocMissing": [],
+      "sampleNotice": [
+        "데모와 관리자의 플레이어 미리보기는 Grok 샘플을 재생해요. 샘플은 저장소에 들어 있지 않아서 서버에 직접 넣어야 해요. 없으면 대신할 영상을 만들지 않고 준비 방법을 보여요.",
+        "관리자의 public/demo-media/grok-20261018/ 폴더를 만들어요.",
+        "샘플 광고는 서버 루트가 public/일 때만 나와요. 샘플 편성의 광고 주소가 /demo-media/로 시작해서, 관리자를 /ads/처럼 경로 아래에 설치하면 광고 파일을 찾지 못하고 본편만 재생해요."
+      ]
+    },
+    {
+      "width": 768,
+      "name": "help",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "wide": [
+        "TABLE.sa-table r=956"
+      ],
+      "nav": "데모 설명서 도움말[page]",
+      "tocOpen": false,
+      "tocBox": {
+        "x": 16,
+        "y": 107,
+        "w": 736,
+        "h": 38
+      },
+      "tocLinks": 10,
+      "tocMissing": []
+    },
+    {
+      "width": 768,
+      "name": "play-test",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서 도움말"
+    },
+    {
+      "width": 960,
+      "name": "demo",
+      "overflow": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모[page] 설명서 도움말"
+    },
+    {
+      "width": 960,
+      "name": "guide",
+      "overflow": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서[page] 도움말",
+      "tocOpen": false,
+      "tocBox": {
+        "x": 16,
+        "y": 107,
+        "w": 928,
+        "h": 38
+      },
+      "tocLinks": 8,
+      "tocMissing": [],
+      "sampleNotice": [
+        "데모와 관리자의 플레이어 미리보기는 Grok 샘플을 재생해요. 샘플은 저장소에 들어 있지 않아서 서버에 직접 넣어야 해요. 없으면 대신할 영상을 만들지 않고 준비 방법을 보여요.",
+        "관리자의 public/demo-media/grok-20261018/ 폴더를 만들어요.",
+        "샘플 광고는 서버 루트가 public/일 때만 나와요. 샘플 편성의 광고 주소가 /demo-media/로 시작해서, 관리자를 /ads/처럼 경로 아래에 설치하면 광고 파일을 찾지 못하고 본편만 재생해요."
+      ]
+    },
+    {
+      "width": 960,
+      "name": "help",
+      "overflow": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서 도움말[page]",
+      "tocOpen": false,
+      "tocBox": {
+        "x": 16,
+        "y": 107,
+        "w": 928,
+        "h": 38
+      },
+      "tocLinks": 10,
+      "tocMissing": []
+    },
+    {
+      "width": 960,
+      "name": "play-test",
+      "overflow": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서 도움말"
+    },
+    {
+      "width": 1280,
+      "name": "demo",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모[page] 설명서 도움말"
+    },
+    {
+      "width": 1280,
+      "name": "guide",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서[page] 도움말",
+      "tocOpen": true,
+      "tocBox": {
+        "x": 64,
+        "y": 80,
+        "w": 220,
+        "h": 322
+      },
+      "tocLinks": 8,
+      "tocMissing": [],
+      "anchor": {
+        "href": "#schedules",
+        "hash": "#schedules",
+        "top": 16,
+        "current": [
+          "#schedules"
+        ]
+      },
+      "sampleNotice": [
+        "데모와 관리자의 플레이어 미리보기는 Grok 샘플을 재생해요. 샘플은 저장소에 들어 있지 않아서 서버에 직접 넣어야 해요. 없으면 대신할 영상을 만들지 않고 준비 방법을 보여요.",
+        "관리자의 public/demo-media/grok-20261018/ 폴더를 만들어요.",
+        "샘플 광고는 서버 루트가 public/일 때만 나와요. 샘플 편성의 광고 주소가 /demo-media/로 시작해서, 관리자를 /ads/처럼 경로 아래에 설치하면 광고 파일을 찾지 못하고 본편만 재생해요."
+      ]
+    },
+    {
+      "width": 1280,
+      "name": "help",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서 도움말[page]",
+      "tocOpen": true,
+      "tocBox": {
+        "x": 64,
+        "y": 80,
+        "w": 220,
+        "h": 382
+      },
+      "tocLinks": 10,
+      "tocMissing": [],
+      "anchor": {
+        "href": "#events",
+        "hash": "#events",
+        "top": 16,
+        "current": [
+          "#events"
+        ]
+      }
+    },
+    {
+      "width": 1280,
+      "name": "play-test",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "nav": "데모 설명서 도움말"
+    }
+  ],
+  "admin": [
+    {
+      "width": 390,
+      "overflowClosed": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "opener": {
+        "expanded": "false",
+        "after": "true"
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "wide": [
+        "A. r=420",
+        "A. r=482",
+        "A. r=532"
+      ],
+      "scale": "자리 폭 320px · 실제 크기예요",
+      "segment": [
+        "LABEL:좁게 · 390:91x34:flex",
+        "INPUT:narrow:91x34:block",
+        "LABEL:보통 · 768:92x34:flex",
+        "INPUT:medium:91x34:block",
+        "LABEL:넓게 · 자리 폭:110x34:flex",
+        "INPUT:wide:109x34:block"
+      ],
+      "stageBarHidden": false,
+      "overflow-narrow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "scale-narrow": "보이는 폭 390px · 실제의 82%로 줄여 보여요",
+      "overflow-medium": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "scale-medium": "보이는 폭 768px · 실제의 42%로 줄여 보여요",
+      "schedule": {
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        },
+        "wide": [
+          "A. r=420",
+          "A. r=482",
+          "A. r=532"
+        ]
+      }
+    },
+    {
+      "width": 768,
+      "overflowClosed": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "opener": {
+        "expanded": "false",
+        "after": "true"
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "scale": "자리 폭 698px · 실제 크기예요",
+      "segment": [
+        "LABEL:좁게 · 390:91x34:flex",
+        "INPUT:narrow:91x34:block",
+        "LABEL:보통 · 768:92x34:flex",
+        "INPUT:medium:91x34:block",
+        "LABEL:넓게 · 자리 폭:110x34:flex",
+        "INPUT:wide:109x34:block"
+      ],
+      "stageBarHidden": false,
+      "overflow-narrow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "scale-narrow": "보이는 폭 390px · 실제 크기예요",
+      "overflow-medium": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "scale-medium": "보이는 폭 768px · 실제의 91%로 줄여 보여요",
+      "schedule": {
+        "overflow": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false
+        },
+        "wide": []
+      }
+    },
+    {
+      "width": 960,
+      "overflowClosed": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "opener": {
+        "expanded": "false",
+        "after": "true"
+      },
+      "overflow": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "scale": "자리 폭 890px · 실제 크기예요",
+      "segment": [
+        "LABEL:좁게 · 390:91x34:flex",
+        "INPUT:narrow:91x34:block",
+        "LABEL:보통 · 768:92x34:flex",
+        "INPUT:medium:91x34:block",
+        "LABEL:넓게 · 자리 폭:110x34:flex",
+        "INPUT:wide:109x34:block"
+      ],
+      "stageBarHidden": false,
+      "overflow-narrow": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "scale-narrow": "보이는 폭 390px · 실제 크기예요",
+      "overflow-medium": {
+        "scrollWidth": 960,
+        "clientWidth": 960,
+        "horizontalOverflow": false
+      },
+      "scale-medium": "보이는 폭 768px · 실제 크기예요",
+      "schedule": {
+        "overflow": {
+          "scrollWidth": 960,
+          "clientWidth": 960,
+          "horizontalOverflow": false
+        },
+        "wide": []
+      }
+    },
+    {
+      "width": 1280,
+      "overflowClosed": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "opener": null,
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "wide": [],
+      "scale": "자리 폭 322px · 실제 크기예요",
+      "segment": [
+        "LABEL:좁게 · 390:91x34:flex",
+        "INPUT:narrow:91x34:block",
+        "LABEL:보통 · 768:92x34:flex",
+        "INPUT:medium:91x34:block",
+        "LABEL:넓게 · 자리 폭:110x34:flex",
+        "INPUT:wide:109x34:block"
+      ],
+      "stageBarHidden": false,
+      "overflow-narrow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "scale-narrow": "보이는 폭 390px · 실제의 83%로 줄여 보여요",
+      "overflow-medium": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "scale-medium": "보이는 폭 768px · 실제의 42%로 줄여 보여요",
+      "schedule": {
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        },
+        "wide": []
+      }
+    }
+  ],
+  "reduced": {
+    "demo": {
+      "matches": true,
+      "running": [],
+      "scrollBehavior": "auto"
+    },
+    "guide": {
+      "matches": true,
+      "running": [],
+      "scrollBehavior": "auto",
+      "topAfter100ms": 16
+    },
+    "admin": {
+      "matches": true,
+      "running": [],
+      "scrollBehavior": "auto"
+    },
+    "frame": {
+      "matches": true,
+      "running": [],
+      "scrollBehavior": "auto"
+    }
+  },
+  "console390": [],
+  "console768": [],
+  "console960": [],
+  "console1280": []
+}

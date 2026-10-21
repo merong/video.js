@@ -1,0 +1,2685 @@
+{
+  "sizes": {
+    "390x844": {
+      "cases": [
+        {
+          "w": 24,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 284,
+            "top": 12,
+            "bottom": 144
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 44,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 44,
+            "textRight": 174,
+            "box": {
+              "left": 0,
+              "right": 320,
+              "w": 320
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 44
+        },
+        {
+          "w": 24,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 284,
+            "top": 12,
+            "bottom": 144
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 284,
+            "right": 12,
+            "top": 60,
+            "bottom": 96
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 284,
+            "right": 12,
+            "top": 60,
+            "bottom": 96
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 284,
+            "top": 96,
+            "bottom": 60
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 284,
+            "top": 96,
+            "bottom": 60
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 284,
+            "right": 12,
+            "top": 96,
+            "bottom": 60
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 284,
+            "right": 12,
+            "top": 96,
+            "bottom": 60
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 80,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 12,
+            "bottom": 88
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 100,
+            "spacing": 4,
+            "lines": 2,
+            "charsPerLine": 7,
+            "textLeft": 100,
+            "textRight": 167,
+            "box": {
+              "left": 0,
+              "right": 320,
+              "w": 320
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 100
+        },
+        {
+          "w": 80,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 12,
+            "bottom": 88
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 60,
+            "bottom": 40
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 60,
+            "bottom": 40
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 12,
+            "bottom": 88
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 100,
+            "spacing": 4,
+            "lines": 2,
+            "charsPerLine": 7,
+            "textLeft": 100,
+            "textRight": 167,
+            "box": {
+              "left": 0,
+              "right": 320,
+              "w": 320
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 100
+        },
+        {
+          "w": 120,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 12,
+            "bottom": 88
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 60,
+            "bottom": 40
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 60,
+            "bottom": 40
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "120px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 12,
+            "bottom": 88
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 100,
+            "spacing": 4,
+            "lines": 2,
+            "charsPerLine": 7,
+            "textLeft": 100,
+            "textRight": 167,
+            "box": {
+              "left": 0,
+              "right": 320,
+              "w": 320
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 100
+        },
+        {
+          "w": 240,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 12,
+            "bottom": 88
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 60,
+            "bottom": 40
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 60,
+            "bottom": 40
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 228,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 320,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 228,
+            "right": 12,
+            "top": 40,
+            "bottom": 60
+          },
+          "varWidth": "240px",
+          "imgRendered": "80x80"
+        }
+      ],
+      "checks": [
+        {
+          "label": "24 top-left shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-left title padStart",
+          "ok": true,
+          "detail": "44 vs 44"
+        },
+        {
+          "label": "24 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "24 top-left hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-right shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-right hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-left shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-right shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "80 top-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-left title padStart",
+          "ok": true,
+          "detail": "100 vs 100"
+        },
+        {
+          "label": "80 top-left title fits",
+          "ok": true,
+          "detail": "lines 2, overflow false"
+        },
+        {
+          "label": "80 top-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 top-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 top-left title padStart",
+          "ok": true,
+          "detail": "100 vs 100"
+        },
+        {
+          "label": "120 top-left title fits",
+          "ok": true,
+          "detail": "lines 2, overflow false"
+        },
+        {
+          "label": "120 top-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 top-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 top-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 bottom-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 bottom-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 top-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 top-left title padStart",
+          "ok": true,
+          "detail": "100 vs 100"
+        },
+        {
+          "label": "240 top-left title fits",
+          "ok": true,
+          "detail": "lines 2, overflow false"
+        },
+        {
+          "label": "240 top-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 top-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 top-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 bottom-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 bottom-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "240 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        }
+      ],
+      "longTitle": {
+        "facts": {
+          "text": "아주 긴 제목이 로고 옆에서 어떻게 줄바꿈되는지 보는 QA 문장입니다",
+          "padStart": 100,
+          "spacing": 4,
+          "lines": 7,
+          "charsPerLine": 5,
+          "textLeft": 100,
+          "textRight": 172,
+          "box": {
+            "left": 0,
+            "right": 320,
+            "w": 320
+          },
+          "overflowX": false,
+          "insideContainer": true,
+          "textInside": true
+        },
+        "logo": {
+          "w": 80,
+          "h": 80
+        }
+      },
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "GET bootstrap",
+        "POST login",
+        "GET bootstrap",
+        "GET creatives",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html"
+      ],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "failed": []
+    },
+    "768x1024": {
+      "cases": [
+        {
+          "w": 24,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 662,
+            "top": 12,
+            "bottom": 356.6
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 44,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 44,
+            "textRight": 174,
+            "box": {
+              "left": 0,
+              "right": 698,
+              "w": 698
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 44
+        },
+        {
+          "w": 24,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 662,
+            "top": 12,
+            "bottom": 356.6
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 662,
+            "right": 12,
+            "top": 12,
+            "bottom": 356.6
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 662,
+            "right": 12,
+            "top": 12,
+            "bottom": 356.6
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 662,
+            "top": 304.6,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 662,
+            "top": 304.6,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 662,
+            "right": 12,
+            "top": 304.6,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 662,
+            "right": 12,
+            "top": 304.6,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 80,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 606,
+            "top": 12,
+            "bottom": 300.6
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 100,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 100,
+            "textRight": 230,
+            "box": {
+              "left": 0,
+              "right": 698,
+              "w": 698
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 100
+        },
+        {
+          "w": 80,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 606,
+            "top": 12,
+            "bottom": 300.6
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 606,
+            "right": 12,
+            "top": 12,
+            "bottom": 300.6
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 606,
+            "right": 12,
+            "top": 12,
+            "bottom": 300.6
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 606,
+            "top": 248.6,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 606,
+            "top": 248.6,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 606,
+            "right": 12,
+            "top": 248.6,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 606,
+            "right": 12,
+            "top": 248.6,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 566,
+            "top": 12,
+            "bottom": 260.6
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 140,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 140,
+            "textRight": 270,
+            "box": {
+              "left": 0,
+              "right": 698,
+              "w": 698
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 140
+        },
+        {
+          "w": 120,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 566,
+            "top": 12,
+            "bottom": 260.6
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 566,
+            "right": 12,
+            "top": 12,
+            "bottom": 260.6
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 566,
+            "right": 12,
+            "top": 12,
+            "bottom": 260.6
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 566,
+            "top": 208.6,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 566,
+            "top": 208.6,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 566,
+            "right": 12,
+            "top": 208.6,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 566,
+            "right": 12,
+            "top": 208.6,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 240,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 12,
+            "right": 511.5,
+            "top": 12,
+            "bottom": 206.1
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 194.5,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 195,
+            "textRight": 324,
+            "box": {
+              "left": 0,
+              "right": 698,
+              "w": 698
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 194.5
+        },
+        {
+          "w": 240,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 12,
+            "right": 511.5,
+            "top": 12,
+            "bottom": 206.1
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        },
+        {
+          "w": 240,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 511.5,
+            "right": 12,
+            "top": 12,
+            "bottom": 206.1
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        },
+        {
+          "w": 240,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 511.5,
+            "right": 12,
+            "top": 12,
+            "bottom": 206.1
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 12,
+            "right": 511.5,
+            "top": 154.1,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 12,
+            "right": 511.5,
+            "top": 154.1,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 511.5,
+            "right": 12,
+            "top": 154.1,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 698,
+          "drawn": 174.5,
+          "expected": 174.5,
+          "gap": {
+            "left": 511.5,
+            "right": 12,
+            "top": 154.1,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "174.5x174.5"
+        }
+      ],
+      "checks": [
+        {
+          "label": "24 top-left shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-left title padStart",
+          "ok": true,
+          "detail": "44 vs 44"
+        },
+        {
+          "label": "24 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "24 top-left hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-right shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-right hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-left shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-right shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "80 top-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-left title padStart",
+          "ok": true,
+          "detail": "100 vs 100"
+        },
+        {
+          "label": "80 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "80 top-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 top-left shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 top-left title padStart",
+          "ok": true,
+          "detail": "140 vs 140"
+        },
+        {
+          "label": "120 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "120 top-left hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 top-right shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 top-right hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-left shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-right shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "240 top-left shown drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 top-left title padStart",
+          "ok": true,
+          "detail": "194.5 vs 194.5"
+        },
+        {
+          "label": "240 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "240 top-left hidden drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 top-right shown drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 top-right hidden drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 bottom-left shown drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 bottom-right shown drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        },
+        {
+          "label": "240 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "174.5 vs 174.5"
+        }
+      ],
+      "longTitle": {
+        "facts": {
+          "text": "아주 긴 제목이 로고 옆에서 어떻게 줄바꿈되는지 보는 QA 문장입니다",
+          "padStart": 194.5,
+          "spacing": 4,
+          "lines": 1,
+          "charsPerLine": 38,
+          "textLeft": 195,
+          "textRight": 622,
+          "box": {
+            "left": 0,
+            "right": 698,
+            "w": 698
+          },
+          "overflowX": false,
+          "insideContainer": true,
+          "textInside": true
+        },
+        "logo": {
+          "w": 174.5,
+          "h": 174.5
+        }
+      },
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "GET bootstrap",
+        "POST login",
+        "GET bootstrap",
+        "GET creatives",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html"
+      ],
+      "console": [],
+      "failed": []
+    },
+    "1280x900": {
+      "cases": [
+        {
+          "w": 24,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 782,
+            "top": 12,
+            "bottom": 424.1
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 44,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 44,
+            "textRight": 174,
+            "box": {
+              "left": 0,
+              "right": 818,
+              "w": 818
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 44
+        },
+        {
+          "w": 24,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 782,
+            "top": 12,
+            "bottom": 424.1
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 782,
+            "right": 12,
+            "top": 12,
+            "bottom": 424.1
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 782,
+            "right": 12,
+            "top": 12,
+            "bottom": 424.1
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 782,
+            "top": 372.1,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 12,
+            "right": 782,
+            "top": 372.1,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 782,
+            "right": 12,
+            "top": 372.1,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 24,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 24,
+          "expected": 24,
+          "gap": {
+            "left": 782,
+            "right": 12,
+            "top": 372.1,
+            "bottom": 64
+          },
+          "varWidth": "24px",
+          "imgRendered": "24x24"
+        },
+        {
+          "w": 80,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 726,
+            "top": 12,
+            "bottom": 368.1
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 100,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 100,
+            "textRight": 230,
+            "box": {
+              "left": 0,
+              "right": 818,
+              "w": 818
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 100
+        },
+        {
+          "w": 80,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 726,
+            "top": 12,
+            "bottom": 368.1
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 726,
+            "right": 12,
+            "top": 12,
+            "bottom": 368.1
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 726,
+            "right": 12,
+            "top": 12,
+            "bottom": 368.1
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 726,
+            "top": 316.1,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 12,
+            "right": 726,
+            "top": 316.1,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 726,
+            "right": 12,
+            "top": 316.1,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 80,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 80,
+          "expected": 80,
+          "gap": {
+            "left": 726,
+            "right": 12,
+            "top": 316.1,
+            "bottom": 64
+          },
+          "varWidth": "80px",
+          "imgRendered": "80x80"
+        },
+        {
+          "w": 120,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 686,
+            "top": 12,
+            "bottom": 328.1
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 140,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 140,
+            "textRight": 270,
+            "box": {
+              "left": 0,
+              "right": 818,
+              "w": 818
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 140
+        },
+        {
+          "w": 120,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 686,
+            "top": 12,
+            "bottom": 328.1
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 686,
+            "right": 12,
+            "top": 12,
+            "bottom": 328.1
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 686,
+            "right": 12,
+            "top": 12,
+            "bottom": 328.1
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 686,
+            "top": 276.1,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 12,
+            "right": 686,
+            "top": 276.1,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 686,
+            "right": 12,
+            "top": 276.1,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 120,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 120,
+          "expected": 120,
+          "gap": {
+            "left": 686,
+            "right": 12,
+            "top": 276.1,
+            "bottom": 64
+          },
+          "varWidth": "120px",
+          "imgRendered": "120x120"
+        },
+        {
+          "w": 240,
+          "pos": "top-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 12,
+            "right": 601.5,
+            "top": 12,
+            "bottom": 243.6
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5",
+          "title": {
+            "text": "Grok 해안 도시 장면",
+            "padStart": 224.5,
+            "spacing": 4,
+            "lines": 1,
+            "charsPerLine": 13,
+            "textLeft": 225,
+            "textRight": 354,
+            "box": {
+              "left": 0,
+              "right": 818,
+              "w": 818
+            },
+            "overflowX": false,
+            "insideContainer": true,
+            "textInside": true
+          },
+          "titleExpected": 224.5
+        },
+        {
+          "w": 240,
+          "pos": "top-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 12,
+            "right": 601.5,
+            "top": 12,
+            "bottom": 243.6
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        },
+        {
+          "w": 240,
+          "pos": "top-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 601.5,
+            "right": 12,
+            "top": 12,
+            "bottom": 243.6
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        },
+        {
+          "w": 240,
+          "pos": "top-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 601.5,
+            "right": 12,
+            "top": 12,
+            "bottom": 243.6
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-left",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 12,
+            "right": 601.5,
+            "top": 191.6,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-left",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 12,
+            "right": 601.5,
+            "top": 191.6,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-right",
+          "controls": "shown",
+          "reached": true,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 601.5,
+            "right": 12,
+            "top": 191.6,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        },
+        {
+          "w": 240,
+          "pos": "bottom-right",
+          "controls": "hidden",
+          "reached": false,
+          "containerW": 818,
+          "drawn": 204.5,
+          "expected": 204.5,
+          "gap": {
+            "left": 601.5,
+            "right": 12,
+            "top": 191.6,
+            "bottom": 64
+          },
+          "varWidth": "240px",
+          "imgRendered": "204.5x204.5"
+        }
+      ],
+      "checks": [
+        {
+          "label": "24 top-left shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-left title padStart",
+          "ok": true,
+          "detail": "44 vs 44"
+        },
+        {
+          "label": "24 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "24 top-left hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-right shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 top-right hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-left shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-right shown drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "24 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "24 vs 24"
+        },
+        {
+          "label": "80 top-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-left title padStart",
+          "ok": true,
+          "detail": "100 vs 100"
+        },
+        {
+          "label": "80 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "80 top-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 top-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-left shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-right shown drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "80 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "80 vs 80"
+        },
+        {
+          "label": "120 top-left shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 top-left title padStart",
+          "ok": true,
+          "detail": "140 vs 140"
+        },
+        {
+          "label": "120 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "120 top-left hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 top-right shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 top-right hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-left shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-right shown drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "120 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "120 vs 120"
+        },
+        {
+          "label": "240 top-left shown drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 top-left title padStart",
+          "ok": true,
+          "detail": "224.5 vs 224.5"
+        },
+        {
+          "label": "240 top-left title fits",
+          "ok": true,
+          "detail": "lines 1, overflow false"
+        },
+        {
+          "label": "240 top-left hidden drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 top-right shown drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 top-right hidden drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 bottom-left shown drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 bottom-left hidden drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 bottom-right shown drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        },
+        {
+          "label": "240 bottom-right hidden drawn",
+          "ok": true,
+          "detail": "204.5 vs 204.5"
+        }
+      ],
+      "longTitle": {
+        "facts": {
+          "text": "아주 긴 제목이 로고 옆에서 어떻게 줄바꿈되는지 보는 QA 문장입니다",
+          "padStart": 224.5,
+          "spacing": 4,
+          "lines": 1,
+          "charsPerLine": 38,
+          "textLeft": 225,
+          "textRight": 652,
+          "box": {
+            "left": 0,
+            "right": 818,
+            "w": 818
+          },
+          "overflowX": false,
+          "insideContainer": true,
+          "textInside": true
+        },
+        "logo": {
+          "w": 204.5,
+          "h": 204.5
+        }
+      },
+      "hideWithControls": {
+        "hidden": {
+          "opacity": "1",
+          "visibility": "visible",
+          "attr": true
+        },
+        "shown": {
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      },
+      "hideDuringAds": {
+        "on": {
+          "now": "최근 광고 진행 미드롤 1/1 재생 중 01:07:10",
+          "adsOverlay": true,
+          "opacity": "0",
+          "visibility": "hidden",
+          "attr": true
+        },
+        "off": {
+          "now": "최근 광고 진행 미드롤 1/1 재생 중 01:07:15",
+          "adsOverlay": true,
+          "opacity": "1",
+          "visibility": "visible",
+          "attr": false
+        }
+      },
+      "linkTab": {
+        "shiftTabFromPlay": [
+          "a.solad-logo-link",
+          "media-container.media-skin 미디어 플레이어",
+          "input"
+        ],
+        "tabFromLink": [
+          "a.solad-logo-link",
+          "media-play-button#vjs-t8h5QXcn-0-trigger.media-button 재생",
+          "media-mute-button#vjs-t8h5QXcn-0-2-trigger.media-button 음소거"
+        ],
+        "slot": {
+          "w": 204.5,
+          "h": 50.4
+        }
+      },
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "events": 0,
+      "api": [
+        "GET bootstrap",
+        "POST login",
+        "GET bootstrap",
+        "GET creatives",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html",
+        "GET player-preset @/examples/index.html",
+        "GET player-presets @/examples/index.html",
+        "GET player-preset&id=p-i0aecb28w3 @/examples/index.html"
+      ],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "failed": []
+    }
+  }
+}

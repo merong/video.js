@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "key": "name-blank",
+      "label": "이름",
+      "input": "",
+      "api": [],
+      "field": {
+        "value": "",
+        "maxLength": -1,
+        "ariaInvalid": "true",
+        "describedBy": [
+          {
+            "id": "aa-preset-name-error",
+            "text": "이름을 입력해 주세요."
+          },
+          {
+            "id": "aa-preset-name-help",
+            "text": "목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요. ?"
+          }
+        ],
+        "validationMessage": null
+      },
+      "live": {
+        "status": [],
+        "alert": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "pageStatus": []
+      },
+      "invalidFields": [
+        "이름"
+      ],
+      "activeAfter": "이름",
+      "hash": "#/players/new"
+    },
+    {
+      "key": "name-41",
+      "label": "이름",
+      "input": "가가가…(41)",
+      "api": [],
+      "field": {
+        "value": "가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가",
+        "maxLength": -1,
+        "ariaInvalid": "true",
+        "describedBy": [
+          {
+            "id": "aa-preset-name-error",
+            "text": "1–40자로 입력해 주세요. 줄바꿈 같은 제어 문자는 쓸 수 없어요."
+          },
+          {
+            "id": "aa-preset-name-help",
+            "text": "목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요. ?"
+          }
+        ],
+        "validationMessage": null
+      },
+      "live": {
+        "status": [],
+        "alert": [
+          "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+        ],
+        "pageStatus": []
+      },
+      "invalidFields": [
+        "이름"
+      ],
+      "activeAfter": "이름",
+      "hash": "#/players/new"
+    }
+  ],
+  "error": "TimeoutError: page.reload: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n",
+  "bodies": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "native-dialog",
+      "dialogType": "beforeunload",
+      "text": ""
+    }
+  ]
+}

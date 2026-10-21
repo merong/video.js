@@ -1,0 +1,47 @@
+{
+  "start": {
+    "heading": true,
+    "focused": true,
+    "title": "시작"
+  },
+  "completion": {
+    "heading": true,
+    "focused": true,
+    "title": "완료와 완료율"
+  },
+  "click": {
+    "heading": true,
+    "focused": true,
+    "title": "클릭"
+  },
+  "click-through-rate": {
+    "heading": true,
+    "focused": true,
+    "title": "클릭률"
+  },
+  "video-context": {
+    "heading": true,
+    "focused": true,
+    "title": "영상 소속 연결"
+  },
+  "inherit": {
+    "heading": true,
+    "focused": true,
+    "title": "상위 설정 상속"
+  },
+  "replace": {
+    "heading": true,
+    "focused": true,
+    "title": "직접 편성 · 전체 대체"
+  },
+  "disabled": {
+    "heading": true,
+    "focused": true,
+    "title": "광고 비활성화 · 상속 중단"
+  },
+  "revision-conflict": {
+    "heading": true,
+    "focused": true,
+    "title": "초안 충돌"
+  }
+}

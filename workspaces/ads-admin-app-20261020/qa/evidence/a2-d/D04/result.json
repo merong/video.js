@@ -1,0 +1,678 @@
+{
+  "cases": [
+    {
+      "name": "site-mix",
+      "query": "?autoplay=true&loop=true&language=ja&posterUrl=%2Fdemo-media%2Fad.png&titleText=QA+%EB%B6%99%EC%97%AC%EB%84%A3%EA%B8%B0&media=hls&engine=hlsjs",
+      "ignored": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "preset": "p-i0aecb28w3",
+      "toggles": {
+        "autoplay": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": true,
+          "describedBy": [
+            "자동재생을 켜면 음소거로 시작해요. 브라우저가 소리 나는 자동재생을 막기 때문이에요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이라 data-preset을 넣지 않았고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/content-master.m3u8\"\n     data-poster=\"/demo-media/ad.png\"\n     data-title=\"QA 붙여넣기\"\n     data-engine=\"hlsjs\"\n     data-autoplay=\"true\"\n     data-loop=\"true\"\n     data-lang=\"ja\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "codeJs": "import { mount } from \"/player/loader.js\";\n\n// 자리 요소: <div id=\"player\" data-solad-player data-solad-manual></div>\nconst handle = await mount(document.getElementById('player'), {\n  videoId: \"grok-demo-scene-01\",\n  src: \"/demo-media/content-master.m3u8\",\n  poster: \"/demo-media/ad.png\",\n  title: \"QA 붙여넣기\",\n  engine: 'hlsjs',\n  lang: \"ja\",\n  overrides: {\"playback\":{\"autoplay\":true,\"loop\":true}},\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+      "demo": {
+        "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLSJS-VIDEO+MEDIA-ADS",
+        "lang": "ja",
+        "fill": "rgb(37, 99, 235)",
+        "radius": "28px",
+        "media": {
+          "tag": "HLSJS-VIDEO",
+          "src": "/demo-media/content-master.m3u8",
+          "preload": "metadata",
+          "autoplay": true,
+          "muted": true,
+          "loop": true,
+          "poster": null,
+          "controls": false,
+          "tracks": 0
+        },
+        "contentTitle": "QA 붙여넣기",
+        "poster": "http://127.0.0.1:18781/demo-media/ad.png"
+      },
+      "demoAdsSrc": "/demo-media/grok-20261018/schedule.json.js",
+      "paste": {
+        "url": "/__qa/paste/a2d-site-mix.html",
+        "ready": [
+          {
+            "at": 228,
+            "target": "grok-demo-scene-01",
+            "presetId": "p-i0aecb28w3",
+            "fallback": false,
+            "player": "VIDEO-PLAYER"
+          }
+        ],
+        "errors": [],
+        "look": {
+          "tree": "MEDIA-I18N[lang=ja] > VIDEO-PLAYER > VIDEO-SKIN > HLSJS-VIDEO+MEDIA-ADS",
+          "lang": "ja",
+          "fill": "rgb(37, 99, 235)",
+          "radius": "28px",
+          "media": {
+            "tag": "HLSJS-VIDEO",
+            "src": "/demo-media/content-master.m3u8",
+            "preload": "metadata",
+            "autoplay": true,
+            "muted": true,
+            "loop": true,
+            "poster": null,
+            "controls": false,
+            "tracks": 0
+          },
+          "contentTitle": "QA 붙여넣기",
+          "poster": "http://127.0.0.1:18781/demo-media/ad.png"
+        },
+        "adsSrc": "/api/index.php?action=schedule&videoId=grok-demo-scene-01",
+        "ads": [
+          {
+            "at": 347,
+            "target": "grok-demo-scene-01",
+            "type": "start",
+            "contentTime": 0.000105,
+            "ad": "f72d5a",
+            "break": "e802f6",
+            "sequence": 1,
+            "code": null
+          }
+        ],
+        "adText": [
+          "광고 1/2",
+          "광고주 사이트"
+        ],
+        "requests": [
+          "GET /api/index.php?action=player-preset",
+          "GET /api/index.php?action=schedule&videoId=grok-demo-scene-01",
+          "POST /api/index.php?action=events"
+        ],
+        "console": []
+      },
+      "diff": []
+    },
+    {
+      "name": "rounded-muted",
+      "query": "?preset=rounded&muted=true&preload=none",
+      "ignored": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "preset": "rounded",
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-preset=\"rounded\"\n     data-muted=\"true\"\n     data-preload=\"none\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "codeJs": "import { mount } from \"/player/loader.js\";\n\n// 자리 요소: <div id=\"player\" data-solad-player data-solad-manual></div>\nconst handle = await mount(document.getElementById('player'), {\n  videoId: \"grok-demo-scene-01\",\n  src: \"/demo-media/grok-20261018/content-scene-01.mp4\",\n  title: \"Grok 해안 도시 장면\",\n  preset: \"rounded\",\n  overrides: {\"playback\":{\"preload\":\"none\",\"muted\":true}},\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+      "demo": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "oklch(1 0 0)",
+        "radius": "12px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "none",
+          "autoplay": false,
+          "muted": true,
+          "loop": false,
+          "poster": null,
+          "controls": false,
+          "tracks": 0
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null
+      },
+      "demoAdsSrc": "/demo-media/grok-20261018/schedule.json.js",
+      "paste": {
+        "url": "/__qa/paste/a2d-rounded-muted.html",
+        "ready": [
+          {
+            "at": 199,
+            "target": "grok-demo-scene-01",
+            "presetId": "rounded",
+            "fallback": false,
+            "player": "VIDEO-PLAYER"
+          }
+        ],
+        "errors": [],
+        "look": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "oklch(1 0 0)",
+          "radius": "12px",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "none",
+            "autoplay": false,
+            "muted": true,
+            "loop": false,
+            "poster": null,
+            "controls": false,
+            "tracks": 0
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null
+        },
+        "adsSrc": "/api/index.php?action=schedule&videoId=grok-demo-scene-01",
+        "ads": [
+          {
+            "at": 2249,
+            "target": "grok-demo-scene-01",
+            "type": "start",
+            "contentTime": 0,
+            "ad": "f72d5a",
+            "break": "e802f6",
+            "sequence": 1,
+            "code": null
+          }
+        ],
+        "adText": [
+          "광고 1/2",
+          "광고주 사이트"
+        ],
+        "requests": [
+          "GET /api/index.php?action=player-preset&id=rounded",
+          "GET /api/index.php?action=schedule&videoId=grok-demo-scene-01",
+          "POST /api/index.php?action=events"
+        ],
+        "console": []
+      },
+      "diff": []
+    },
+    {
+      "name": "autoplay-preset-off",
+      "query": "?preset=p-lc3i8eidb4&autoplay=false",
+      "ignored": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "preset": "p-lc3i8eidb4",
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-preset=\"p-lc3i8eidb4\"\n     data-autoplay=\"false\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "codeJs": "import { mount } from \"/player/loader.js\";\n\n// 자리 요소: <div id=\"player\" data-solad-player data-solad-manual></div>\nconst handle = await mount(document.getElementById('player'), {\n  videoId: \"grok-demo-scene-01\",\n  src: \"/demo-media/grok-20261018/content-scene-01.mp4\",\n  title: \"Grok 해안 도시 장면\",\n  preset: \"p-lc3i8eidb4\",\n  overrides: {\"playback\":{\"autoplay\":false}},\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+      "demo": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "poster": null,
+          "controls": false,
+          "tracks": 0
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null
+      },
+      "demoAdsSrc": "/demo-media/grok-20261018/schedule.json.js",
+      "paste": {
+        "url": "/__qa/paste/a2d-autoplay-preset-off.html",
+        "ready": [
+          {
+            "at": 251,
+            "target": "grok-demo-scene-01",
+            "presetId": "p-lc3i8eidb4",
+            "fallback": false,
+            "player": "VIDEO-PLAYER"
+          }
+        ],
+        "errors": [],
+        "look": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "oklch(1 0 0)",
+          "radius": "28px",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": false,
+            "muted": false,
+            "loop": false,
+            "poster": null,
+            "controls": false,
+            "tracks": 0
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null
+        },
+        "adsSrc": "/api/index.php?action=schedule&videoId=grok-demo-scene-01",
+        "ads": [
+          {
+            "at": 2519,
+            "target": "grok-demo-scene-01",
+            "type": "start",
+            "contentTime": 0,
+            "ad": "f72d5a",
+            "break": "e802f6",
+            "sequence": 1,
+            "code": null
+          }
+        ],
+        "adText": [
+          "광고 1/2",
+          "광고주 사이트"
+        ],
+        "requests": [
+          "GET /api/index.php?action=player-preset&id=p-lc3i8eidb4",
+          "GET /api/index.php?action=schedule&videoId=grok-demo-scene-01",
+          "POST /api/index.php?action=events"
+        ],
+        "console": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          }
+        ]
+      },
+      "diff": []
+    },
+    {
+      "name": "autoplay-preset-same",
+      "query": "?preset=p-lc3i8eidb4",
+      "ignored": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "preset": "p-lc3i8eidb4",
+      "toggles": {
+        "autoplay": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "true",
+          "disabled": true,
+          "describedBy": [
+            "자동재생을 켜면 음소거로 시작해요. 브라우저가 소리 나는 자동재생을 막기 때문이에요."
+          ]
+        },
+        "loop": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-title=\"Grok 해안 도시 장면\"\n     data-preset=\"p-lc3i8eidb4\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "codeJs": "import { mount } from \"/player/loader.js\";\n\n// 자리 요소: <div id=\"player\" data-solad-player data-solad-manual></div>\nconst handle = await mount(document.getElementById('player'), {\n  videoId: \"grok-demo-scene-01\",\n  src: \"/demo-media/grok-20261018/content-scene-01.mp4\",\n  title: \"Grok 해안 도시 장면\",\n  preset: \"p-lc3i8eidb4\",\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+      "demo": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "lang": "ko",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": true,
+          "muted": true,
+          "loop": false,
+          "poster": null,
+          "controls": false,
+          "tracks": 0
+        },
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": null
+      },
+      "demoAdsSrc": "/demo-media/grok-20261018/schedule.json.js",
+      "paste": {
+        "url": "/__qa/paste/a2d-autoplay-preset-same.html",
+        "ready": [
+          {
+            "at": 196,
+            "target": "grok-demo-scene-01",
+            "presetId": "p-lc3i8eidb4",
+            "fallback": false,
+            "player": "VIDEO-PLAYER"
+          }
+        ],
+        "errors": [],
+        "look": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "lang": "ko",
+          "fill": "oklch(1 0 0)",
+          "radius": "28px",
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": true,
+            "muted": true,
+            "loop": false,
+            "poster": null,
+            "controls": false,
+            "tracks": 0
+          },
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": null
+        },
+        "adsSrc": "/api/index.php?action=schedule&videoId=grok-demo-scene-01",
+        "ads": [
+          {
+            "at": 321,
+            "target": "grok-demo-scene-01",
+            "type": "start",
+            "contentTime": 0.000669,
+            "ad": "f72d5a",
+            "break": "e802f6",
+            "sequence": 1,
+            "code": null
+          }
+        ],
+        "adText": [
+          "광고 1/2",
+          "광고주 사이트"
+        ],
+        "requests": [
+          "GET /api/index.php?action=player-preset&id=p-lc3i8eidb4",
+          "GET /api/index.php?action=schedule&videoId=grok-demo-scene-01",
+          "POST /api/index.php?action=events"
+        ],
+        "console": []
+      },
+      "diff": []
+    },
+    {
+      "name": "native-loop",
+      "query": "?preset=p-pchm59hhyv&loop=true&titleText=QA+native",
+      "ignored": {
+        "query": null,
+        "preset": null,
+        "adsRoot": null
+      },
+      "preset": "p-pchm59hhyv",
+      "toggles": {
+        "autoplay": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "페이지가 열리면 바로 재생해요."
+          ]
+        },
+        "muted": {
+          "checked": "false",
+          "disabled": false,
+          "describedBy": [
+            "소리 없이 시작해요."
+          ]
+        },
+        "loop": {
+          "checked": "true",
+          "disabled": false,
+          "describedBy": [
+            "끝나면 처음부터 다시 재생해요."
+          ]
+        }
+      },
+      "codeWhy": "지금 설정 그대로예요. 사이트 적용 프리셋이 아니라서 data-preset을 넣었고, 프리셋과 같은 값은 쓰지 않았어요.",
+      "codeHtml": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"grok-demo-scene-01\"\n     data-src=\"/demo-media/grok-20261018/content-scene-01.mp4\"\n     data-preset=\"p-pchm59hhyv\"\n     data-loop=\"true\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+      "codeJs": "import { mount } from \"/player/loader.js\";\n\n// 자리 요소: <div id=\"player\" data-solad-player data-solad-manual></div>\nconst handle = await mount(document.getElementById('player'), {\n  videoId: \"grok-demo-scene-01\",\n  src: \"/demo-media/grok-20261018/content-scene-01.mp4\",\n  preset: \"p-pchm59hhyv\",\n  overrides: {\"playback\":{\"loop\":true}},\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+      "demo": {
+        "tree": "DIV > VIDEO",
+        "lang": null,
+        "media": {
+          "tag": "VIDEO",
+          "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+          "preload": "metadata",
+          "autoplay": false,
+          "muted": false,
+          "loop": true,
+          "poster": null,
+          "controls": true,
+          "tracks": 0
+        }
+      },
+      "paste": {
+        "url": "/__qa/paste/a2d-native-loop.html",
+        "ready": [
+          {
+            "at": 23,
+            "target": "grok-demo-scene-01",
+            "presetId": "p-pchm59hhyv",
+            "fallback": false,
+            "player": "VIDEO"
+          }
+        ],
+        "errors": [],
+        "look": {
+          "tree": "DIV > VIDEO",
+          "lang": null,
+          "media": {
+            "tag": "VIDEO",
+            "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+            "preload": "metadata",
+            "autoplay": false,
+            "muted": false,
+            "loop": true,
+            "poster": null,
+            "controls": true,
+            "tracks": 0
+          }
+        },
+        "ads": [
+          {
+            "at": 2743,
+            "target": "grok-demo-scene-01",
+            "type": "start",
+            "contentTime": 0,
+            "ad": "f72d5a",
+            "break": "e802f6",
+            "sequence": 1,
+            "code": null
+          }
+        ],
+        "adText": [
+          "광고 1/2",
+          "광고주 사이트"
+        ],
+        "requests": [
+          "GET /api/index.php?action=player-preset&id=p-pchm59hhyv",
+          "GET /api/index.php?action=schedule&videoId=grok-demo-scene-01",
+          "POST /api/index.php?action=events"
+        ],
+        "console": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          }
+        ]
+      },
+      "diff": []
+    }
+  ],
+  "noSchedule": {
+    "url": "/__qa/paste/a2d-no-schedule.html",
+    "ready": [
+      {
+        "at": 181,
+        "target": "qa-a2d-no-schedule",
+        "presetId": "rounded",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "look": {
+      "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+      "lang": "ko",
+      "fill": "oklch(1 0 0)",
+      "radius": "12px",
+      "media": {
+        "tag": "VIDEO",
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "preload": "none",
+        "autoplay": false,
+        "muted": true,
+        "loop": false,
+        "poster": null,
+        "controls": false,
+        "tracks": 0
+      },
+      "contentTitle": "Grok 해안 도시 장면",
+      "poster": null
+    },
+    "adsSrc": "/api/index.php?action=schedule&videoId=qa-a2d-no-schedule",
+    "ads": [
+      {
+        "at": 2230,
+        "target": "qa-a2d-no-schedule",
+        "type": "start",
+        "contentTime": 0,
+        "ad": "f72d5a",
+        "break": "e802f6",
+        "sequence": 1,
+        "code": null
+      }
+    ],
+    "adText": [
+      "광고 1/2",
+      "광고주 사이트"
+    ],
+    "requests": [
+      "GET /__qa/paste/a2d-no-schedule.html",
+      "GET /api/index.php?action=player-preset&id=rounded",
+      "GET /api/index.php?action=schedule&videoId=qa-a2d-no-schedule",
+      "POST /api/index.php?action=events"
+    ],
+    "console": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "path": "/api/index.php?action=events",
+      "frame": "/__qa/paste/a2d-site-mix.html"
+    },
+    {
+      "method": "POST",
+      "path": "/api/index.php?action=events",
+      "frame": "/__qa/paste/a2d-rounded-muted.html"
+    },
+    {
+      "method": "POST",
+      "path": "/api/index.php?action=events",
+      "frame": "/__qa/paste/a2d-autoplay-preset-off.html"
+    },
+    {
+      "method": "POST",
+      "path": "/api/index.php?action=events",
+      "frame": "/__qa/paste/a2d-autoplay-preset-same.html"
+    },
+    {
+      "method": "POST",
+      "path": "/api/index.php?action=events",
+      "frame": "/__qa/paste/a2d-native-loop.html"
+    },
+    {
+      "method": "POST",
+      "path": "/api/index.php?action=events",
+      "frame": "/__qa/paste/a2d-no-schedule.html"
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ]
+}

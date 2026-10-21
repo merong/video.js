@@ -1,0 +1,16 @@
+leak scan 2026-10-22 01:27:14 KST over evidence/a2-e-delta
+files scanned 114
+password hits: 0
+signing_key hits: 0
+password-hash hits (6 hashes): 0
+session-value hits (58 values): 0
+cookie/csrf patterns: 0
+DSN patterns: 0
+results.md scan 2026-10-22 01:27:15 KST (after appending A2-E-QA-DELTA)
+files scanned 1
+password hits: 0
+signing_key hits: 0
+password-hash hits (6 hashes): 0
+session-value hits (58 values): 0
+cookie/csrf patterns: 0
+DSN patterns: 0

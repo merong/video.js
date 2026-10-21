@@ -1,0 +1,158 @@
+{
+ "scenario": "pagehide",
+ "engine": "webkit",
+ "startedAt": "2026-10-21T17:23:38.149Z",
+ "steps": [],
+ "runs": [
+  {
+   "how": "navigate",
+   "round": 1,
+   "run": "webkit-navigate-1-1792603418591",
+   "note": {
+    "_type": "Response",
+    "_guid": "response@60c98c4375e0c315a0e4b50ff66273fa"
+   },
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "reload",
+   "round": 1,
+   "run": "webkit-reload-1-1792603421550",
+   "note": "{\"trigger\":\"pagehide\",\"fetchOk\":\"called\",\"beaconOk\":true}",
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "close",
+   "round": 1,
+   "run": "webkit-close-1-1792603423805",
+   "received": []
+  },
+  {
+   "how": "popup-window.close",
+   "round": 1,
+   "run": "webkit-popup-window.close-1-1792603426117",
+   "note": [
+    {
+     "lmsSpike": "pagehide",
+     "fetchOk": "called",
+     "beaconOk": true
+    }
+   ],
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "navigate",
+   "round": 2,
+   "run": "webkit-navigate-2-1792603428520",
+   "note": {
+    "_type": "Response",
+    "_guid": "response@0026d886fdb540112b5c59ab032d12b6"
+   },
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "reload",
+   "round": 2,
+   "run": "webkit-reload-2-1792603430811",
+   "note": "{\"trigger\":\"pagehide\",\"fetchOk\":\"called\",\"beaconOk\":true}",
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "close",
+   "round": 2,
+   "run": "webkit-close-2-1792603433130",
+   "received": []
+  },
+  {
+   "how": "popup-window.close",
+   "round": 2,
+   "run": "webkit-popup-window.close-2-1792603435369",
+   "note": [
+    {
+     "lmsSpike": "pagehide",
+     "fetchOk": "called",
+     "beaconOk": true
+    }
+   ],
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  }
+ ]
+}

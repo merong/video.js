@@ -1,0 +1,143 @@
+{
+  "demo": [
+    {
+      "button": "미드롤 앞",
+      "reached": true,
+      "ms": 21513,
+      "now": "최근 광고 진행 미드롤 1/1 재생 중 20:12:23",
+      "adText": [
+        "0:04",
+        "설정",
+        "광고 1/1",
+        "3초 후 건너뛰기",
+        "0:00 / 0:08"
+      ],
+      "controls": [
+        "닫기",
+        "일시중지",
+        "음소거",
+        "볼륨"
+      ]
+    },
+    {
+      "button": "끝 직전",
+      "reached": true,
+      "ms": 10546,
+      "now": "최근 광고 진행 포스트롤 1/1 재생 중 20:12:33",
+      "adText": [
+        "0:00",
+        "설정",
+        "재생 중",
+        "광고 1/1",
+        "0:00 / 0:06"
+      ],
+      "controls": [
+        "닫기",
+        "일시중지",
+        "음소거",
+        "볼륨"
+      ]
+    },
+    {
+      "button": "처음부터",
+      "reached": false,
+      "ms": 25157,
+      "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:12:40",
+      "adText": [
+        "Grok 해안 도시 장면",
+        "0:10",
+        "0:00",
+        "0:00",
+        "설정"
+      ],
+      "controls": [
+        "닫기",
+        "다시 재생",
+        "음소거",
+        "볼륨"
+      ]
+    }
+  ],
+  "editor": [
+    {
+      "button": "미드롤 앞",
+      "reached": true,
+      "ms": 21555,
+      "now": "최근 광고 진행 미드롤 1/1 재생 중 20:13:25",
+      "adText": [
+        "0:00",
+        "설정",
+        "광고 1/1",
+        "3초 후 건너뛰기",
+        "0:00 / 0:08"
+      ],
+      "controls": [
+        "닫기",
+        "일시중지",
+        "음소거",
+        "볼륨"
+      ]
+    },
+    {
+      "button": "끝 직전",
+      "reached": true,
+      "ms": 10516,
+      "now": "최근 광고 진행 포스트롤 1/1 재생 중 20:13:36",
+      "adText": [
+        "0:00",
+        "설정",
+        "재생 중",
+        "광고 1/1",
+        "0:00 / 0:06"
+      ],
+      "controls": [
+        "닫기",
+        "일시중지",
+        "음소거",
+        "볼륨"
+      ]
+    },
+    {
+      "button": "처음부터",
+      "reached": false,
+      "ms": 25102,
+      "now": "최근 광고 진행 포스트롤 1/1 · 끝남 20:13:42",
+      "adText": [
+        "Grok 해안 도시 장면",
+        "0:00",
+        "설정"
+      ],
+      "controls": [
+        "닫기",
+        "다시 재생",
+        "음소거",
+        "볼륨"
+      ]
+    }
+  ],
+  "demoLink": {
+    "url": "/examples/index.html?preset=p-i0aecb28w3",
+    "preset": "p-i0aecb28w3",
+    "selected": "QA 강조색 복제 (사이트 적용)",
+    "opener": true
+  },
+  "events": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

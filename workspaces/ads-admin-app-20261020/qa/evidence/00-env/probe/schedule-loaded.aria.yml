@@ -1,0 +1,89 @@
+- main "지면 편성":
+  - region "지면 편성":
+    - heading "지면 편성" [level=1]
+    - paragraph: 사이트 → 게시판 → 분류 → 영상. 더 구체적인 게시 설정이 우선해요. 초안 저장만으로는 노출이 바뀌지 않아요.
+    - form "편집할 대상":
+      - heading "편집할 대상" [level=2]
+      - text: 적용 단위
+      - combobox "적용 단위":
+        - option "사이트 기본" [selected]
+        - option "게시판"
+        - option "분류"
+        - option "개별 영상"
+      - link "적용 단위 도움말":
+        - /url: "#/help/target-scope"
+        - text: "?"
+      - text: 고정 대상 ID
+      - textbox "고정 대상 ID": site-local
+      - text: 사이트 기본 편성은 이 사이트 ID로 고정돼요.
+      - status: 편성을 불러왔어요. 초안과 현재 게시본은 따로 관리돼요.
+      - button "편성 불러오기"
+    - form "광고 편성 편집":
+      - region "사이트 · site-local":
+        - heading "사이트 · site-local" [level=2]
+        - text: 게시본 없음
+        - link "게시본과 게시 버전 도움말":
+          - /url: "#/help/publish-version"
+          - text: "?"
+        - text: 저장 전 초안
+        - link "초안 revision 도움말":
+          - /url: "#/help/draft-revision"
+          - text: "?"
+        - paragraph: 현재 적용되는 게시 편성이 없어요.
+        - text: 이 대상의 광고
+        - combobox "이 대상의 광고":
+          - option "상위 설정 상속" [disabled]
+          - option "직접 편성 · 전체 대체"
+          - option "광고 비활성화 · 상속 중단" [selected]
+        - text: 이 대상의 광고를 끄고 상위 편성으로의 대체도 중단해요. 게시해야 적용돼요.
+        - link "광고 비활성화 · 상속 중단 도움말":
+          - /url: "#/help/disabled"
+          - text: "?"
+      - text: 초안 저장만으로는 노출이 바뀌지 않아요.
+      - link "초안 도움말":
+        - /url: "#/help/draft"
+        - text: "?"
+      - button "초안 저장"
+      - button "저장한 초안 게시" [disabled]
+      - text: 저장한 초안이 없어요.
+      - link "게시 도움말":
+        - /url: "#/help/publish"
+        - text: "?"
+      - status
+    - form "재생 확인":
+      - heading "재생 확인" [level=2]
+      - paragraph: 본편 영상과 고정 영상 ID로 게시 전 편성과 게시본을 각각 재생해 봐요.
+      - text: 본편 영상 URL
+      - textbox "본편 영상 URL":
+        - /placeholder: https://…/content.mp4 또는 /media/content.mp4
+        - text: /demo-media/grok-20261018/content-scene-01.mp4
+      - text: 기본값은 데모 본편이에요. 실제 서비스 영상 주소로 바꿀 수 있어요. 고정 영상 ID
+      - textbox "고정 영상 ID"
+      - text: 재생할 영상의 고정 ID예요. 더 구체적인 게시 설정이 우선할 수 있어요.
+      - link "고정 영상 ID 도움말":
+        - /url: "#/help/fixed-video-id"
+        - text: "?"
+      - group "게시 전 미리보기":
+        - heading "게시 전 미리보기" [level=3]
+        - link "게시 전 미리보기 도움말":
+          - /url: "#/help/preview"
+          - text: "?"
+        - button "미리보기 준비"
+        - button "미리보기 닫기" [disabled]
+        - status
+        - paragraph: 본편은 브라우저 기본 플레이어예요. Video.js 스킨·HLS 엔진·전체화면 연동은 아래 재생 테스트에서 확인해 주세요.
+      - group "게시본 재생 테스트":
+        - heading "게시본 재생 테스트" [level=3]
+        - link "게시본 재생 테스트 도움말":
+          - /url: "#/help/play-test"
+          - text: "?"
+        - paragraph: 저장·게시하지 않은 변경은 반영되지 않아요.
+        - text: 플레이어 프리셋
+        - combobox "플레이어 프리셋":
+          - option "기본 (기본 프리셋)" [selected]
+        - text: 플레이어 메뉴에서 저장한 프리셋으로 재생해요. 처음에는 기본 프리셋이 선택돼요.
+        - link "프리셋 도움말":
+          - /url: "#/help/player-preset"
+          - text: "?"
+        - note: 통계에 기록돼요 · 게시한 편성을 실제 수집 경로로 재생해요. 기록 없이 확인하려면 미리보기를 이용해 주세요.
+        - paragraph: 고정 영상 ID를 먼저 입력해 주세요.

@@ -1,0 +1,196 @@
+{
+  "serverAtOpen": {
+    "id": "p-wkepup6b7d",
+    "name": "QA Video.js 중립 v2",
+    "playerType": "videojs",
+    "skin": "neutral",
+    "theme": {
+      "accentColor": "#0f5132",
+      "accentTextColor": "#ffffff",
+      "borderColor": null,
+      "borderRadius": 12,
+      "fontFamily": null,
+      "objectFit": null,
+      "scaleUnit": null
+    },
+    "ads": {
+      "locale": "en",
+      "labels": {
+        "skip": "Skip ad",
+        "skipCountdown": null,
+        "timer": null
+      },
+      "accentColor": null,
+      "skipRadius": null,
+      "fontSize": 15,
+      "timeouts": {
+        "loadSeconds": null,
+        "stallSeconds": null
+      }
+    },
+    "createdAt": "2026-10-20T13:16:40Z",
+    "updatedAt": "2026-10-20T13:22:36Z",
+    "builtIn": false
+  },
+  "serverAfterA": {
+    "id": "p-wkepup6b7d",
+    "name": "QA Video.js 중립 v2",
+    "playerType": "videojs",
+    "skin": "neutral",
+    "theme": {
+      "accentColor": "#0f5132",
+      "accentTextColor": "#ffffff",
+      "borderColor": null,
+      "borderRadius": 12,
+      "fontFamily": null,
+      "objectFit": null,
+      "scaleUnit": null
+    },
+    "ads": {
+      "locale": "en",
+      "labels": {
+        "skip": "Skip ad",
+        "skipCountdown": null,
+        "timer": null
+      },
+      "accentColor": "#ff8800",
+      "skipRadius": null,
+      "fontSize": 15,
+      "timeouts": {
+        "loadSeconds": null,
+        "stallSeconds": null
+      }
+    },
+    "createdAt": "2026-10-20T13:16:40Z",
+    "updatedAt": "2026-10-20T13:23:28Z",
+    "builtIn": false
+  },
+  "firstB": [
+    "POST player-preset-save 409 revision_conflict"
+  ],
+  "bFormAfterReload": {
+    "이름": "QA Video.js 중립 v2",
+    "플레이어 종류": "videojs|Video.js",
+    "스킨": "neutral|뉴트럴 (모서리 12px)",
+    "강조색": "#0f5132",
+    "강조 글자색": "#ffffff",
+    "테두리 색": "",
+    "모서리 둥글기 (px)": "12",
+    "글꼴": "|스킨 기본 (Inter 우선)",
+    "화면 채우기": "|스킨 기본 (맞춤)",
+    "크기 기준": "|스킨 기본 (16px)",
+    "광고 문구 언어": "en|English",
+    "건너뛰기 문구": "Skip ad",
+    "건너뛰기 대기 문구": "",
+    "광고 시간 문구": "",
+    "광고 음량 막대 색": "",
+    "건너뛰기 버튼 모서리 (px)": "",
+    "광고 글자 크기 (px)": "16"
+  },
+  "secondB": {
+    "api": [
+      "POST player-preset-save 200 "
+    ],
+    "live": {
+      "status": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "alert": [],
+      "pageStatus": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ]
+    }
+  },
+  "serverAfterSecondB": {
+    "id": "p-wkepup6b7d",
+    "name": "QA Video.js 중립 v2",
+    "playerType": "videojs",
+    "skin": "neutral",
+    "theme": {
+      "accentColor": "#0f5132",
+      "accentTextColor": "#ffffff",
+      "borderColor": null,
+      "borderRadius": 12,
+      "fontFamily": null,
+      "objectFit": null,
+      "scaleUnit": null
+    },
+    "ads": {
+      "locale": "en",
+      "labels": {
+        "skip": "Skip ad",
+        "skipCountdown": null,
+        "timer": null
+      },
+      "accentColor": null,
+      "skipRadius": null,
+      "fontSize": 16,
+      "timeouts": {
+        "loadSeconds": null,
+        "stallSeconds": null
+      }
+    },
+    "createdAt": "2026-10-20T13:16:40Z",
+    "updatedAt": "2026-10-20T13:23:33Z",
+    "builtIn": false
+  },
+  "aChangeLost": true,
+  "restore": {
+    "live": {
+      "status": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "alert": [],
+      "pageStatus": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ]
+    },
+    "server": {
+      "id": "p-wkepup6b7d",
+      "name": "QA Video.js 중립 v2",
+      "playerType": "videojs",
+      "skin": "neutral",
+      "theme": {
+        "accentColor": "#0f5132",
+        "accentTextColor": "#ffffff",
+        "borderColor": null,
+        "borderRadius": 12,
+        "fontFamily": null,
+        "objectFit": null,
+        "scaleUnit": null
+      },
+      "ads": {
+        "locale": "en",
+        "labels": {
+          "skip": "Skip ad",
+          "skipCountdown": null,
+          "timer": null
+        },
+        "accentColor": null,
+        "skipRadius": null,
+        "fontSize": 15,
+        "timeouts": {
+          "loadSeconds": null,
+          "stallSeconds": null
+        }
+      },
+      "createdAt": "2026-10-20T13:16:40Z",
+      "updatedAt": "2026-10-20T13:23:38Z",
+      "builtIn": false
+    }
+  },
+  "console": {
+    "a": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ],
+    "b": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      }
+    ]
+  }
+}

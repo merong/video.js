@@ -1,0 +1,70 @@
+{
+  "api": [
+    {
+      "t": 833,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": false
+    },
+    {
+      "t": 970,
+      "method": "POST",
+      "action": "login",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": true,
+      "csrfMatchesLastResponse": false,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1229,
+      "method": "GET",
+      "action": "bootstrap",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1262,
+      "method": "GET",
+      "action": "creatives",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1356,
+      "method": "GET",
+      "action": "player-presets",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    },
+    {
+      "t": 1399,
+      "method": "GET",
+      "action": "schedule-draft",
+      "status": 200,
+      "ok": true,
+      "csrfHeader": false,
+      "csrfMatchesLastResponse": null,
+      "respCsrfHeader": true
+    }
+  ],
+  "logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

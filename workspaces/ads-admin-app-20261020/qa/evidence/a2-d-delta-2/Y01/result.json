@@ -1,0 +1,1573 @@
+{
+  "screens": [
+    {
+      "size": "1280x800",
+      "id": "default",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 736,
+        "h": 38,
+        "bottom": 274,
+        "right": 760
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 776,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1256
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 795,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1237
+        },
+        "scenes": {
+          "x": 795,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1237
+        },
+        "now": {
+          "x": 795,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1237
+        },
+        "pageLang": {
+          "x": 795,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1237
+        },
+        "demo": {
+          "x": 795,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 926
+        }
+      },
+      "firstScreen": {
+        "stage": true,
+        "scenes": true,
+        "now": true,
+        "pageLang": true,
+        "demo": false
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x800",
+      "id": "rounded",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 736,
+        "h": 38,
+        "bottom": 274,
+        "right": 760
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 776,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1256
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 795,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1237
+        },
+        "scenes": {
+          "x": 795,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1237
+        },
+        "now": {
+          "x": 795,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1237
+        },
+        "pageLang": {
+          "x": 795,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1237
+        },
+        "demo": {
+          "x": 795,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 926
+        }
+      },
+      "firstScreen": {
+        "stage": true,
+        "scenes": true,
+        "now": true,
+        "pageLang": true,
+        "demo": false
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x800",
+      "id": "accent",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 736,
+        "h": 38,
+        "bottom": 274,
+        "right": 760
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 776,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1256
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 795,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1237
+        },
+        "scenes": {
+          "x": 795,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1237
+        },
+        "now": {
+          "x": 795,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1237
+        },
+        "pageLang": {
+          "x": 795,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1237
+        },
+        "demo": {
+          "x": 795,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 926
+        }
+      },
+      "firstScreen": {
+        "stage": true,
+        "scenes": true,
+        "now": true,
+        "pageLang": true,
+        "demo": false
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1100x800",
+      "id": "default",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 556,
+        "h": 38,
+        "bottom": 274,
+        "right": 580
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 596,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1076
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1100,
+        "clientWidth": 1100,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 615,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1057
+        },
+        "scenes": {
+          "x": 615,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1057
+        },
+        "now": {
+          "x": 615,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1057
+        },
+        "pageLang": {
+          "x": 615,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1057
+        },
+        "demo": {
+          "x": 615,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 746
+        }
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1100,
+        "clientWidth": 1100,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1100x800",
+      "id": "rounded",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 556,
+        "h": 38,
+        "bottom": 274,
+        "right": 580
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 596,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1076
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1100,
+        "clientWidth": 1100,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 615,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1057
+        },
+        "scenes": {
+          "x": 615,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1057
+        },
+        "now": {
+          "x": 615,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1057
+        },
+        "pageLang": {
+          "x": 615,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1057
+        },
+        "demo": {
+          "x": 615,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 746
+        }
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1100,
+        "clientWidth": 1100,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1100x800",
+      "id": "accent",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 556,
+        "h": 38,
+        "bottom": 274,
+        "right": 580
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 596,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1076
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1100,
+        "clientWidth": 1100,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 615,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1057
+        },
+        "scenes": {
+          "x": 615,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1057
+        },
+        "now": {
+          "x": 615,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1057
+        },
+        "pageLang": {
+          "x": 615,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1057
+        },
+        "demo": {
+          "x": 615,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 746
+        }
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 800
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        },
+        {
+          "scrollY": 126,
+          "cardTop": 110,
+          "noteTop": 110
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1100,
+        "clientWidth": 1100,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "768x1024",
+      "id": "default",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-medium",
+      "note": {
+        "x": 16,
+        "y": 263,
+        "w": 736,
+        "h": 38,
+        "bottom": 301,
+        "right": 752
+      },
+      "dup": {
+        "x": 16,
+        "y": 317,
+        "w": 150,
+        "h": 36,
+        "bottom": 353,
+        "right": 166
+      },
+      "card": {
+        "x": 16,
+        "y": 369,
+        "w": 736,
+        "h": 68,
+        "bottom": 437,
+        "right": 752
+      },
+      "twoColumns": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowStart": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "parts": {
+        "stage": {
+          "x": 35,
+          "y": 502,
+          "w": 698,
+          "h": 393,
+          "bottom": 895,
+          "right": 733
+        },
+        "scenes": {
+          "x": 35,
+          "y": 907,
+          "w": 698,
+          "h": 30,
+          "bottom": 937,
+          "right": 733
+        },
+        "now": {
+          "x": 35,
+          "y": 949,
+          "w": 698,
+          "h": 20,
+          "bottom": 969,
+          "right": 733
+        },
+        "pageLang": {
+          "x": 35,
+          "y": 1005,
+          "w": 698,
+          "h": 36,
+          "bottom": 1041,
+          "right": 733
+        },
+        "demo": {
+          "x": 35,
+          "y": 1090,
+          "w": 131,
+          "h": 36,
+          "bottom": 1126,
+          "right": 166
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1161,
+        "innerHeight": 1024
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 269,
+          "noteTop": 163
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "768x1024",
+      "id": "rounded",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-medium",
+      "note": {
+        "x": 16,
+        "y": 263,
+        "w": 736,
+        "h": 38,
+        "bottom": 301,
+        "right": 752
+      },
+      "dup": {
+        "x": 16,
+        "y": 317,
+        "w": 150,
+        "h": 36,
+        "bottom": 353,
+        "right": 166
+      },
+      "card": {
+        "x": 16,
+        "y": 369,
+        "w": 736,
+        "h": 68,
+        "bottom": 437,
+        "right": 752
+      },
+      "twoColumns": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowStart": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "parts": {
+        "stage": {
+          "x": 35,
+          "y": 502,
+          "w": 698,
+          "h": 393,
+          "bottom": 895,
+          "right": 733
+        },
+        "scenes": {
+          "x": 35,
+          "y": 907,
+          "w": 698,
+          "h": 30,
+          "bottom": 937,
+          "right": 733
+        },
+        "now": {
+          "x": 35,
+          "y": 949,
+          "w": 698,
+          "h": 20,
+          "bottom": 969,
+          "right": 733
+        },
+        "pageLang": {
+          "x": 35,
+          "y": 1005,
+          "w": 698,
+          "h": 36,
+          "bottom": 1041,
+          "right": 733
+        },
+        "demo": {
+          "x": 35,
+          "y": 1090,
+          "w": 131,
+          "h": 36,
+          "bottom": 1126,
+          "right": 166
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1161,
+        "innerHeight": 1024
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 269,
+          "noteTop": 163
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "768x1024",
+      "id": "accent",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-medium",
+      "note": {
+        "x": 16,
+        "y": 263,
+        "w": 736,
+        "h": 38,
+        "bottom": 301,
+        "right": 752
+      },
+      "dup": {
+        "x": 16,
+        "y": 317,
+        "w": 150,
+        "h": 36,
+        "bottom": 353,
+        "right": 166
+      },
+      "card": {
+        "x": 16,
+        "y": 369,
+        "w": 736,
+        "h": 68,
+        "bottom": 437,
+        "right": 752
+      },
+      "twoColumns": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowStart": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "parts": {
+        "stage": {
+          "x": 35,
+          "y": 502,
+          "w": 698,
+          "h": 393,
+          "bottom": 895,
+          "right": 733
+        },
+        "scenes": {
+          "x": 35,
+          "y": 907,
+          "w": 698,
+          "h": 30,
+          "bottom": 937,
+          "right": 733
+        },
+        "now": {
+          "x": 35,
+          "y": 949,
+          "w": 698,
+          "h": 20,
+          "bottom": 969,
+          "right": 733
+        },
+        "pageLang": {
+          "x": 35,
+          "y": 1005,
+          "w": 698,
+          "h": 36,
+          "bottom": 1041,
+          "right": 733
+        },
+        "demo": {
+          "x": 35,
+          "y": 1090,
+          "w": 131,
+          "h": 36,
+          "bottom": 1126,
+          "right": 166
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1161,
+        "innerHeight": 1024
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 269,
+          "noteTop": 163
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126
+        },
+        {
+          "scrollY": 137,
+          "cardTop": 232,
+          "noteTop": 126
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "default",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-narrow",
+      "note": {
+        "x": 16,
+        "y": 308,
+        "w": 358,
+        "h": 38,
+        "bottom": 346,
+        "right": 374
+      },
+      "dup": {
+        "x": 16,
+        "y": 362,
+        "w": 150,
+        "h": 36,
+        "bottom": 398,
+        "right": 166
+      },
+      "card": {
+        "x": 16,
+        "y": 414,
+        "w": 358,
+        "h": 68,
+        "bottom": 482,
+        "right": 374
+      },
+      "twoColumns": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowStart": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "parts": {
+        "stage": {
+          "x": 35,
+          "y": 573,
+          "w": 320,
+          "h": 180,
+          "bottom": 753,
+          "right": 355
+        },
+        "scenes": {
+          "x": 35,
+          "y": 765,
+          "w": 320,
+          "h": 94,
+          "bottom": 859,
+          "right": 355
+        },
+        "now": {
+          "x": 35,
+          "y": 871,
+          "w": 320,
+          "h": 20,
+          "bottom": 891,
+          "right": 355
+        },
+        "pageLang": {
+          "x": 35,
+          "y": 927,
+          "w": 320,
+          "h": 36,
+          "bottom": 963,
+          "right": 355
+        },
+        "demo": {
+          "x": 35,
+          "y": 1030,
+          "w": 131,
+          "h": 36,
+          "bottom": 1066,
+          "right": 166
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1101,
+        "innerHeight": 844
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 314,
+          "noteTop": 208
+        },
+        {
+          "scrollY": 257,
+          "cardTop": 157,
+          "noteTop": 51
+        },
+        {
+          "scrollY": 257,
+          "cardTop": 157,
+          "noteTop": 51
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "rounded",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-narrow",
+      "note": {
+        "x": 16,
+        "y": 308,
+        "w": 358,
+        "h": 38,
+        "bottom": 346,
+        "right": 374
+      },
+      "dup": {
+        "x": 16,
+        "y": 362,
+        "w": 150,
+        "h": 36,
+        "bottom": 398,
+        "right": 166
+      },
+      "card": {
+        "x": 16,
+        "y": 414,
+        "w": 358,
+        "h": 68,
+        "bottom": 482,
+        "right": 374
+      },
+      "twoColumns": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowStart": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "parts": {
+        "stage": {
+          "x": 35,
+          "y": 573,
+          "w": 320,
+          "h": 180,
+          "bottom": 753,
+          "right": 355
+        },
+        "scenes": {
+          "x": 35,
+          "y": 765,
+          "w": 320,
+          "h": 94,
+          "bottom": 859,
+          "right": 355
+        },
+        "now": {
+          "x": 35,
+          "y": 871,
+          "w": 320,
+          "h": 20,
+          "bottom": 891,
+          "right": 355
+        },
+        "pageLang": {
+          "x": 35,
+          "y": 927,
+          "w": 320,
+          "h": 36,
+          "bottom": 963,
+          "right": 355
+        },
+        "demo": {
+          "x": 35,
+          "y": 1030,
+          "w": 131,
+          "h": 36,
+          "bottom": 1066,
+          "right": 166
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1101,
+        "innerHeight": 844
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 314,
+          "noteTop": 208
+        },
+        {
+          "scrollY": 257,
+          "cardTop": 157,
+          "noteTop": 51
+        },
+        {
+          "scrollY": 257,
+          "cardTop": 157,
+          "noteTop": 51
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "accent",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-narrow",
+      "note": {
+        "x": 16,
+        "y": 308,
+        "w": 358,
+        "h": 38,
+        "bottom": 346,
+        "right": 374
+      },
+      "dup": {
+        "x": 16,
+        "y": 362,
+        "w": 150,
+        "h": 36,
+        "bottom": 398,
+        "right": 166
+      },
+      "card": {
+        "x": 16,
+        "y": 414,
+        "w": 358,
+        "h": 68,
+        "bottom": 482,
+        "right": 374
+      },
+      "twoColumns": false,
+      "css": {
+        "position": "static",
+        "top": "auto"
+      },
+      "opener": {
+        "text": "열기",
+        "expanded": "false",
+        "bodyHidden": true
+      },
+      "overflowStart": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      },
+      "openerAfter": {
+        "text": "접기",
+        "expanded": "true",
+        "bodyHidden": false
+      },
+      "parts": {
+        "stage": {
+          "x": 35,
+          "y": 573,
+          "w": 320,
+          "h": 180,
+          "bottom": 753,
+          "right": 355
+        },
+        "scenes": {
+          "x": 35,
+          "y": 765,
+          "w": 320,
+          "h": 94,
+          "bottom": 859,
+          "right": 355
+        },
+        "now": {
+          "x": 35,
+          "y": 871,
+          "w": 320,
+          "h": 20,
+          "bottom": 891,
+          "right": 355
+        },
+        "pageLang": {
+          "x": 35,
+          "y": 927,
+          "w": 320,
+          "h": 36,
+          "bottom": 963,
+          "right": 355
+        },
+        "demo": {
+          "x": 35,
+          "y": 1030,
+          "w": 131,
+          "h": 36,
+          "bottom": 1066,
+          "right": 166
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1101,
+        "innerHeight": 844
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 314,
+          "noteTop": 208
+        },
+        {
+          "scrollY": 257,
+          "cardTop": 157,
+          "noteTop": 51
+        },
+        {
+          "scrollY": 257,
+          "cardTop": 157,
+          "noteTop": 51
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x600",
+      "id": "rounded",
+      "landmark": {
+        "regions": 1,
+        "tag": "SECTION",
+        "cls": "sa-card sa-ppv aa-builtin-preview",
+        "asides": 0
+      },
+      "layoutClass": "aa-builtin is-wide",
+      "note": {
+        "x": 24,
+        "y": 236,
+        "w": 736,
+        "h": 38,
+        "bottom": 274,
+        "right": 760
+      },
+      "dup": {
+        "x": 24,
+        "y": 290,
+        "w": 150,
+        "h": 36,
+        "bottom": 326,
+        "right": 174
+      },
+      "card": {
+        "x": 776,
+        "y": 236,
+        "w": 480,
+        "h": 666,
+        "bottom": 902,
+        "right": 1256
+      },
+      "twoColumns": true,
+      "css": {
+        "position": "sticky",
+        "top": "12px"
+      },
+      "opener": null,
+      "overflowStart": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      },
+      "parts": {
+        "stage": {
+          "x": 795,
+          "y": 385,
+          "w": 442,
+          "h": 249,
+          "bottom": 634,
+          "right": 1237
+        },
+        "scenes": {
+          "x": 795,
+          "y": 646,
+          "w": 442,
+          "h": 30,
+          "bottom": 676,
+          "right": 1237
+        },
+        "now": {
+          "x": 795,
+          "y": 688,
+          "w": 442,
+          "h": 20,
+          "bottom": 708,
+          "right": 1237
+        },
+        "pageLang": {
+          "x": 795,
+          "y": 744,
+          "w": 442,
+          "h": 36,
+          "bottom": 780,
+          "right": 1237
+        },
+        "demo": {
+          "x": 795,
+          "y": 847,
+          "w": 131,
+          "h": 36,
+          "bottom": 883,
+          "right": 926
+        }
+      },
+      "scroll": {
+        "scrollHeight": 926,
+        "innerHeight": 600
+      },
+      "sticky": [
+        {
+          "scrollY": 100,
+          "cardTop": 136,
+          "noteTop": 136
+        },
+        {
+          "scrollY": 300,
+          "cardTop": -64,
+          "noteTop": -64
+        },
+        {
+          "scrollY": 326,
+          "cardTop": -90,
+          "noteTop": -90
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    }
+  ],
+  "events1280x800": 0,
+  "console1280x800": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "events1100x800": 0,
+  "console1100x800": [],
+  "events768x1024": 0,
+  "console768x1024": [],
+  "events390x844": 0,
+  "console390x844": [],
+  "events1280x600": 0,
+  "console1280x600": []
+}

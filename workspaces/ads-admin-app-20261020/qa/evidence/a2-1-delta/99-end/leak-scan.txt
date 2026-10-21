@@ -1,0 +1,7 @@
+2026-10-21 15:48:12
+scan targets: evidence/a2-1-delta (all files), fixtures/paste/a2-1d-*.html
+password value: 0 files
+signing_key value: 0 files
+password hash ($2y$/$argon2): 0 files
+session cookie value (PHPSESSID=/ads_session=<value>): 0 files
+csrf token value ("csrf"|X-CSRF... with 16+ chars): 0 files

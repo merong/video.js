@@ -1,0 +1,356 @@
+{
+  "reportsBefore": [
+    {
+      "termId": "archive",
+      "name": "보관 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative",
+      "name": "소재 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative-source",
+      "name": "등록 방식 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "alt-text",
+      "name": "대체텍스트 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "stats-csv",
+      "name": "조회 조건과 CSV 도움말",
+      "visible": true,
+      "inDetails": false
+    }
+  ],
+  "reportsQueryButton": "통계 조회",
+  "reportsAfter": [
+    {
+      "termId": "archive",
+      "name": "보관 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative",
+      "name": "소재 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative-source",
+      "name": "등록 방식 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "alt-text",
+      "name": "대체텍스트 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "stats-csv",
+      "name": "조회 조건과 CSV 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "start",
+      "name": "시작",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "completion",
+      "name": "완료와 완료율",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "click",
+      "name": "클릭",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "click-through-rate",
+      "name": "클릭률",
+      "visible": true,
+      "inDetails": false
+    }
+  ],
+  "reportsKpiText": [
+    "지표 설명: 시작 · 완료와 완료율 · 클릭 · 클릭률"
+  ],
+  "videoBefore": [
+    {
+      "termId": "archive",
+      "name": "보관 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative",
+      "name": "소재 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative-source",
+      "name": "등록 방식 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "alt-text",
+      "name": "대체텍스트 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "target-scope",
+      "name": "적용 단위 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "video-context",
+      "name": "영상 소속 연결 도움말",
+      "visible": true,
+      "inDetails": true
+    },
+    {
+      "termId": "publish-version",
+      "name": "게시본과 게시 버전 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "draft-revision",
+      "name": "초안 revision 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "inherit",
+      "name": "상위 설정 상속 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "draft",
+      "name": "초안 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "publish",
+      "name": "게시 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "fixed-video-id",
+      "name": "고정 영상 ID 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "preview",
+      "name": "게시 전 미리보기 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "play-test",
+      "name": "게시본 재생 테스트 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "player-preset",
+      "name": "프리셋 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "stats-csv",
+      "name": "조회 조건과 CSV 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "start",
+      "name": "시작",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "completion",
+      "name": "완료와 완료율",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "click",
+      "name": "클릭",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "click-through-rate",
+      "name": "클릭률",
+      "visible": false,
+      "inDetails": false
+    }
+  ],
+  "videoContextToggle": 1,
+  "videoAfterOpen": [
+    {
+      "termId": "archive",
+      "name": "보관 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative",
+      "name": "소재 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "creative-source",
+      "name": "등록 방식 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "alt-text",
+      "name": "대체텍스트 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "target-scope",
+      "name": "적용 단위 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "video-context",
+      "name": "영상 소속 연결 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "publish-version",
+      "name": "게시본과 게시 버전 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "draft-revision",
+      "name": "초안 revision 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "inherit",
+      "name": "상위 설정 상속 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "draft",
+      "name": "초안 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "publish",
+      "name": "게시 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "fixed-video-id",
+      "name": "고정 영상 ID 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "preview",
+      "name": "게시 전 미리보기 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "play-test",
+      "name": "게시본 재생 테스트 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "player-preset",
+      "name": "프리셋 도움말",
+      "visible": true,
+      "inDetails": false
+    },
+    {
+      "termId": "stats-csv",
+      "name": "조회 조건과 CSV 도움말",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "start",
+      "name": "시작",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "completion",
+      "name": "완료와 완료율",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "click",
+      "name": "클릭",
+      "visible": false,
+      "inDetails": false
+    },
+    {
+      "termId": "click-through-rate",
+      "name": "클릭률",
+      "visible": false,
+      "inDetails": false
+    }
+  ],
+  "videoContextParagraph": [
+    "고정 영상 ID에 소속을 등록해야 게시판·분류 편성이 적용돼요. 실제 영상 주소와는 별개의 ID예요. ?"
+  ],
+  "modeDisabledLinks": [
+    {
+      "termId": "inherit",
+      "name": "상위 설정 상속 도움말",
+      "visible": true,
+      "inDetails": false
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

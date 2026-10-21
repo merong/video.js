@@ -1,0 +1,79 @@
+- form "새 프리셋":
+  - region "새 프리셋":
+    - heading "새 프리셋" [level=2]
+    - text: 저장하지 않은 변경 이름
+    - link "프리셋 도움말":
+      - /url: "#/help/player-preset"
+      - text: "?"
+    - textbox "이름": QA PL10 전환
+    - text: 목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요. 플레이어 종류
+    - link "플레이어 종류 도움말":
+      - /url: "#/help/player-type"
+      - text: "?"
+    - combobox "플레이어 종류":
+      - option "Video.js"
+      - option "기본 video" [selected]
+    - text: 기본 video는 브라우저 컨트롤을 써요. 광고 시간 제한은 기본 video에서만 정할 수 있어요.
+  - note: 스킨 테마 · 기본 video는 브라우저 컨트롤을 써서 스킨 테마가 적용되지 않아요.
+  - note:
+    - text: 준비 중인 기능 ·
+    - list:
+      - listitem:
+        - strong: 오디오·라이브 플레이어 · 준비 중.
+        - text: 지금은 VOD 영상 플레이어(Video.js, 기본 video)만 만들 수 있어요.
+      - listitem:
+        - strong: 사용자 CSS 직접 입력 · 준비 중.
+        - text: 테마는 위 항목으로만 정해요. CSS를 직접 넣는 칸은 아직 없어요.
+      - listitem:
+        - strong: 로고·워터마크 · 준비 중.
+        - text: 플레이어 위에 로고나 워터마크를 넣는 설정은 아직 없어요.
+      - listitem:
+        - strong: 스킨 소스 내려받기 · 준비 중.
+        - text: 관리자에서 스킨 소스를 내려받을 수는 없어요.
+  - region "광고 화면":
+    - heading "광고 화면" [level=2]
+    - link "광고 화면 도움말":
+      - /url: "#/help/player-ad-overlay"
+      - text: "?"
+    - text: 광고 문구 언어
+    - link "광고 문구 언어 도움말":
+      - /url: "#/help/player-ad-language"
+      - text: "?"
+    - combobox "광고 문구 언어":
+      - option "페이지 lang 따름" [selected]
+      - option "한국어"
+      - option "English"
+    - text: 비우면 페이지의 lang을 따라요. 페이지에 lang이 없으면 영어로 나와요. 건너뛰기 문구
+    - textbox "건너뛰기 문구":
+      - /placeholder: 패키지 문구 (광고 건너뛰기 / Skip ad)
+    - text: "40자 이내예요. { } 문자는 쓸 수 없어요. 건너뛰기 대기 문구"
+    - textbox "건너뛰기 대기 문구":
+      - /placeholder: "패키지 문구 ({seconds}초 후 건너뛰기)"
+    - text: "{seconds} 자리에 남은 초가 들어가요. 광고 시간 문구"
+    - textbox "광고 시간 문구":
+      - /placeholder: "패키지 문구 ({elapsed} / {duration})"
+    - text: "{elapsed} 지난 시간, {duration} 광고 길이, {remaining} 남은 시간을 쓸 수 있어요. 광고 음량 막대 색"
+    - link "광고 화면 도움말":
+      - /url: "#/help/player-ad-overlay"
+      - text: "?"
+    - textbox "광고 음량 막대 색 색 고르기": "#ffffff"
+    - textbox "광고 음량 막대 색":
+      - /placeholder: "#rrggbb"
+    - text: 흰색 광고 음량 막대 색만 바뀌어요. 건너뛰기 버튼과 초점 테두리는 그대로예요. 건너뛰기 버튼 모서리 (px)
+    - spinbutton "건너뛰기 버튼 모서리 (px)"
+    - text: 0–24 정수예요. 광고 글자 크기 (px)
+    - spinbutton "광고 글자 크기 (px)"
+    - text: 11–18 정수예요. 플레이어 폭이 280px 이하이면 글자가 11px로 고정돼요. 광고 로드 시간 제한 (초)
+    - spinbutton "광고 로드 시간 제한 (초)"
+    - text: 광고 소재를 불러와 재생을 시작하기까지 기다리는 시간이에요. 1–60 정수예요. 광고 멈춤 시간 제한 (초)
+    - spinbutton "광고 멈춤 시간 제한 (초)"
+    - text: 광고 영상이 멈췄을 때 다음으로 넘어가기 전까지 기다리는 시간이에요. 1–120 정수예요.
+  - region "미리보기":
+    - heading "미리보기" [level=2]
+    - note: Grok 샘플 편성으로 재생해서 통계에 기록되지 않아요. 저장하기 전 값이 바로 반영돼요. 광고 대기 시간은 미리보기에 반영되지 않으니 재생 테스트에서 확인해 주세요.
+    - iframe
+    - status: 미리보기가 준비됐어요.
+    - alert
+  - text: 저장하면 재생 테스트 페이지에 바로 적용돼요. 이미 붙여 넣은 설치 코드는 다시 복사해야 바뀌어요.
+  - button "프리셋 저장"
+  - status

@@ -1,0 +1,94 @@
+{
+  "created": [
+    {
+      "name": "QA X02 표시 끔 videojs",
+      "type": "videojs",
+      "id": "p-0vkc07d2z4",
+      "checked": {
+        "aa-preset-display-poster": {
+          "checked": false,
+          "disabled": false
+        },
+        "aa-preset-display-title": {
+          "checked": false,
+          "disabled": false
+        }
+      }
+    },
+    {
+      "name": "QA X02 표시 끔 native",
+      "type": "native",
+      "id": "p-bpn2hrxa6s",
+      "checked": {
+        "aa-preset-display-poster": {
+          "checked": false,
+          "disabled": false
+        },
+        "aa-preset-display-title": {
+          "checked": true,
+          "disabled": true
+        }
+      }
+    }
+  ],
+  "cases": [
+    {
+      "preset": "QA X02 표시 끔 videojs",
+      "frame": {
+        "url": "?type=videojs",
+        "built": true,
+        "tree": "VIDEO-PLAYER",
+        "contentTitle": null,
+        "poster": null
+      },
+      "visible": {
+        "posters": [
+          "MEDIA-POSTER:"
+        ],
+        "titles": []
+      }
+    },
+    {
+      "preset": "QA X02 표시 끔 native",
+      "frame": {
+        "url": "?type=native",
+        "built": true,
+        "tree": "DIV > VIDEO",
+        "contentTitle": null,
+        "poster": null
+      },
+      "visible": {
+        "posters": [],
+        "titles": []
+      }
+    }
+  ],
+  "deleted": [
+    {
+      "name": "QA X02 표시 끔 videojs",
+      "stillListed": 0
+    },
+    {
+      "name": "QA X02 표시 끔 native",
+      "stillListed": 0
+    }
+  ],
+  "api": [
+    "POST login",
+    "GET player-presets",
+    "POST player-preset-save",
+    "POST player-preset-save",
+    "GET player-presets",
+    "POST video-context-save",
+    "GET schedule-draft&targetType=site&targetId=site-local",
+    "POST schedule-preview",
+    "POST schedule-preview",
+    "GET player-presets",
+    "POST player-preset-delete",
+    "POST player-preset-delete"
+  ],
+  "events": [],
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

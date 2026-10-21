@@ -1,0 +1,223 @@
+{
+  "click": {
+    "afterTypePos": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+    },
+    "afterSelect": {
+      "tag": "INPUT",
+      "label": "본편 재생 위치 (초)",
+      "value": "5",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+    },
+    "afterWaitClick": {
+      "tag": "INPUT",
+      "label": "스킵 대기 (초)",
+      "value": "1",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+    },
+    "afterTypeWait": {
+      "active": {
+        "tag": "INPUT",
+        "label": "스킵 대기 (초)",
+        "value": "3",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+      },
+      "position": "5",
+      "wait": "3"
+    },
+    "afterAddClick": {
+      "tag": "INPUT",
+      "label": "클릭 목적지 URL",
+      "value": "",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 0,
+      "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+    },
+    "pass": true
+  },
+  "keyboard": {
+    "tab": [
+      {
+        "tag": "BUTTON",
+        "label": "1번 광고 아래로 이동",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "광고 제거",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+      },
+      {
+        "tag": "A",
+        "label": "클릭 목적지 URL 도움말",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+      }
+    ],
+    "shiftTab": [
+      {
+        "tag": "A",
+        "label": "미드롤 도움말",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "구간 삭제",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "소재 목록 새로고침",
+        "value": "",
+        "card": null,
+        "cardIndex": null,
+        "breakId": null
+      }
+    ],
+    "tabLeft": true,
+    "shiftTabLeft": true,
+    "positionAfter": "5"
+  },
+  "resort": {
+    "beforeSort": [
+      {
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948",
+        "at": "5"
+      },
+      {
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e",
+        "at": "2"
+      }
+    ],
+    "afterSort": [
+      {
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e",
+        "at": "2"
+      },
+      {
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948",
+        "at": "5"
+      }
+    ],
+    "clickedBreakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948",
+    "focusAfterSort": {
+      "tag": "INPUT",
+      "label": "스킵 대기 (초)",
+      "value": "3",
+      "card": "미드롤 · 재생 중",
+      "cardIndex": 1,
+      "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948"
+    },
+    "focusStayedOnClickedControl": true,
+    "afterTyping": [
+      {
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e",
+        "at": "2"
+      },
+      {
+        "breakId": "break-ebe95c8e-c129-400e-b039-dd39d3c49948",
+        "at": "5"
+      }
+    ],
+    "clickedWaitValue": "4"
+  },
+  "invalid": [
+    {
+      "value": "",
+      "typed": "",
+      "api": [],
+      "alerts": [],
+      "statuses": [],
+      "ariaInvalid": null,
+      "validationMessage": "이 입력란을 작성하세요.",
+      "focus": {
+        "tag": "INPUT",
+        "label": "본편 재생 위치 (초)",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e"
+      }
+    },
+    {
+      "value": "0",
+      "typed": "0",
+      "api": [],
+      "alerts": [],
+      "statuses": [],
+      "ariaInvalid": null,
+      "validationMessage": "값은 0.01 이상이어야 합니다.",
+      "focus": {
+        "tag": "INPUT",
+        "label": "본편 재생 위치 (초)",
+        "value": "0",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e"
+      }
+    },
+    {
+      "value": "-3",
+      "typed": "-3",
+      "api": [],
+      "alerts": [],
+      "statuses": [],
+      "ariaInvalid": null,
+      "validationMessage": "값은 0.01 이상이어야 합니다.",
+      "focus": {
+        "tag": "INPUT",
+        "label": "본편 재생 위치 (초)",
+        "value": "-3",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e"
+      }
+    },
+    {
+      "value": "abc",
+      "typed": "",
+      "api": [],
+      "alerts": [],
+      "statuses": [],
+      "ariaInvalid": null,
+      "validationMessage": "이 입력란을 작성하세요.",
+      "focus": {
+        "tag": "INPUT",
+        "label": "본편 재생 위치 (초)",
+        "value": "",
+        "card": "미드롤 · 재생 중",
+        "cardIndex": 0,
+        "breakId": "break-956ca85a-4f41-4659-a98f-08b95d5b824e"
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "builtIn": [
+    {
+      "id": "rounded",
+      "containingBlock": {
+        "grid": {
+          "x": 24,
+          "y": 236,
+          "w": 1232,
+          "h": 666
+        },
+        "left": {
+          "x": 24,
+          "y": 236,
+          "w": 736,
+          "h": 90
+        },
+        "card": {
+          "x": 776,
+          "y": 236,
+          "w": 480,
+          "h": 666
+        }
+      },
+      "mid": "최근 광고 진행 미드롤 1/1 재생 중 20:39:04",
+      "end": "최근 광고 진행 포스트롤 1/1 재생 중 20:39:15",
+      "demo": {
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=rounded",
+        "target": "_blank",
+        "popup": {
+          "url": "/examples/index.html?preset=rounded",
+          "selected": "rounded"
+        }
+      }
+    },
+    {
+      "id": "accent",
+      "containingBlock": {
+        "grid": {
+          "x": 24,
+          "y": 110,
+          "w": 1232,
+          "h": 666
+        },
+        "left": {
+          "x": 24,
+          "y": 110,
+          "w": 736,
+          "h": 90
+        },
+        "card": {
+          "x": 776,
+          "y": 110,
+          "w": 480,
+          "h": 666
+        }
+      },
+      "mid": "최근 광고 진행 포스트롤 1/1 · 끝남 20:39:21",
+      "end": "최근 광고 진행 포스트롤 1/1 · 끝남 20:39:21",
+      "demo": {
+        "href": "http://127.0.0.1:18781/examples/index.html?preset=accent",
+        "target": "_blank",
+        "popup": {
+          "url": "/examples/index.html?preset=accent",
+          "selected": "accent"
+        }
+      }
+    }
+  ],
+  "editor": {
+    "aside": {
+      "x": 896,
+      "y": 110,
+      "w": 360,
+      "h": 662
+    },
+    "form": {
+      "x": 259,
+      "y": 189,
+      "w": 295,
+      "h": 36
+    },
+    "asideTag": "ASIDE",
+    "rightColumn": true,
+    "opener": 0,
+    "initial": {
+      "poster": true,
+      "title": true,
+      "frame": {
+        "contentTitle": "Grok 해안 도시 장면",
+        "poster": "http://127.0.0.1:18781/examples/sample-poster.svg"
+      }
+    },
+    "toggles": [
+      {
+        "poster": true,
+        "title": true,
+        "frame": {
+          "contentTitle": "Grok 해안 도시 장면",
+          "poster": "http://127.0.0.1:18781/examples/sample-poster.svg"
+        }
+      },
+      {
+        "poster": false,
+        "title": false,
+        "frame": {
+          "contentTitle": null,
+          "poster": null
+        }
+      }
+    ]
+  },
+  "keys": {
+    "duplicate": {
+      "tag": "BUTTON",
+      "type": "button",
+      "text": "복제해서 새로 만들기",
+      "ring": true,
+      "presses": 1
+    },
+    "radio": {
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "wide",
+      "checked": true,
+      "text": "",
+      "ring": true,
+      "presses": 1
+    },
+    "radioAfter": {
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "narrow",
+      "checked": true,
+      "text": "",
+      "ring": true
+    },
+    "scene": {
+      "tag": "BUTTON",
+      "type": "button",
+      "text": "끝 직전",
+      "ring": true,
+      "presses": 12
+    },
+    "nowAfter": "최근 광고 진행 포스트롤 1/1 재생 중 20:40:20",
+    "demo": {
+      "tag": "A",
+      "type": null,
+      "text": "데모에서 열기 (새 창)",
+      "ring": true,
+      "presses": 3
+    },
+    "popup": {
+      "url": "/examples/index.html?preset=rounded",
+      "selected": "rounded"
+    }
+  },
+  "bad": [],
+  "api": [
+    "POST login",
+    "GET player-presets",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=rounded @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=accent @/examples/index.html",
+    "GET player-preset @/examples/index.html",
+    "GET player-presets @/examples/index.html",
+    "GET player-preset&id=rounded @/examples/index.html"
+  ],
+  "events": 0,
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

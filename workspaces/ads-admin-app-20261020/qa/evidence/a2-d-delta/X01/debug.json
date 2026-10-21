@@ -1,0 +1,78 @@
+{
+  "steps": [
+    {
+      "label": "initial",
+      "at": 1792579383677,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player content-title=\"Grok 해안 도시 장면\" poster=\"http://127.0.0.1:18781/examples/sample-poster.svg\"><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-1\" playsinline=\"\" preload=\"metadata\"",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창)"
+    },
+    {
+      "label": "poster-off 1s",
+      "at": 1792579384700,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player content-title=\"Grok 해안 도시 장면\"><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-2\" playsinline=\"\" preload=\"metadata\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/conte",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창) 저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요"
+    },
+    {
+      "label": "poster-off 3s",
+      "at": 1792579386706,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player content-title=\"Grok 해안 도시 장면\"><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-2\" playsinline=\"\" preload=\"metadata\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/conte",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창) 저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요"
+    },
+    {
+      "label": "poster-off 8s",
+      "at": 1792579391715,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player content-title=\"Grok 해안 도시 장면\"><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-2\" playsinline=\"\" preload=\"metadata\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/conte",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창) 저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요"
+    },
+    {
+      "label": "poster-off 20s",
+      "at": 1792579403725,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player content-title=\"Grok 해안 도시 장면\"><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-2\" playsinline=\"\" preload=\"metadata\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/conte",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창) 저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요"
+    },
+    {
+      "label": "poster-off title-off 4s",
+      "at": 1792579407899,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-3\" playsinline=\"\" preload=\"metadata\" src=\"http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4\"></video><medi",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창) 저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요"
+    },
+    {
+      "label": "poster-on title-off 4s",
+      "at": 1792579411945,
+      "dom": {
+        "url": "?type=videojs",
+        "player": "<media-i18n lang=\"ko\"><video-player poster=\"http://127.0.0.1:18781/examples/sample-poster.svg\"><video-skin style=\"--media-accent-color: #2563eb; --media-accent-text-color: #ffffff; --ads-accent-color: #2563eb;\"><video id=\"solad-media-4\" playsinline=\"\" preload=\"metadata\" src=\"http://127.0.0.1:18781/d",
+        "body": ""
+      },
+      "aside": "플레이어 미리보기 저장하기 전 입력도 보여요 폭 보기 좁게 · 390 보통 · 768 넓게 · 자리 폭 자리 폭 322px · 실제 크기예요 장면 바로가기 처음부터 미드롤 앞 끝 직전 다시 불러오기 최근 광고 진행 아직 광고가 나오지 않았어요 페이지 언어 한국어 (ko) 영어 (en) 일본어 (ja) 중국어 간체 (zh-CN) 그 밖의 언어 (fr) 플레이어 화면 언어를 비워서 페이지 lang을 따라요. 미리보기에서만 바꿔 보고 저장하지 않아요. 데모에서 열기 (새 창) 저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요"
+    }
+  ],
+  "error": "TimeoutError: page.reload: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n",
+  "console": [
+    "/favicon.ico error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

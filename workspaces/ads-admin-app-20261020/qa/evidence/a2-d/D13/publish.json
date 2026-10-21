@@ -1,0 +1,34 @@
+{
+  "listEdit": {
+    "text": "수정",
+    "disabled": true,
+    "color": "rgb(154, 154, 160)",
+    "bg": "rgb(247, 247, 247)",
+    "reason": "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+    "reasonVisible": true,
+    "reasonColor": "rgb(95, 95, 102)",
+    "reasonFont": "12.5px"
+  },
+  "before": {
+    "text": "저장한 초안 게시",
+    "disabled": false,
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(24, 24, 26)",
+    "reason": null,
+    "reasonVisible": false
+  },
+  "after": {
+    "text": "저장한 초안 게시",
+    "disabled": true,
+    "color": "rgb(154, 154, 160)",
+    "bg": "rgb(247, 247, 247)",
+    "reason": "먼저 초안을 저장해 주세요.",
+    "reasonVisible": true,
+    "reasonColor": "rgb(95, 95, 102)",
+    "reasonFont": "12.5px"
+  },
+  "savebar": "변경 내용을 저장한 뒤 게시해 주세요. ? 초안 저장 저장한 초안 게시 먼저 초안을 저장해 주세요. ?",
+  "writes": [
+    "POST login"
+  ]
+}

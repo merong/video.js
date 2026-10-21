@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A2-E-QA solad-video-skin captions</title>
+<link rel="stylesheet" href="/assets/videojs/video.css">
+<script type="module">
+await import('/assets/videojs/video.js');
+await import('/assets/videojs/ui/seek-button.js'); await import('/player/solad-video-skin.js');
+</script>
+<style>body{margin:16px;background:#f7f7f7}</style>
+</head>
+<body>
+<div style="width:818px">
+<video-player><solad-video-skin><video src="/demo-media/grok-20261018/content-scene-01.mp4" playsinline muted preload="auto"><track kind="subtitles" srclang="ko" label="한국어" src="/examples/sample-captions.vtt"></video></solad-video-skin></video-player>
+</div>
+</body>
+</html>

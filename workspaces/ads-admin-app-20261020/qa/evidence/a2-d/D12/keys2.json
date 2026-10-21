@@ -1,0 +1,54 @@
+{
+  "switchNames": [
+    {
+      "name": "자동재생",
+      "checked": "false",
+      "disabled": null
+    },
+    {
+      "name": "음소거",
+      "checked": "false",
+      "disabled": null
+    },
+    {
+      "name": "반복",
+      "checked": "false",
+      "disabled": null
+    }
+  ],
+  "selectArrows": {
+    "sel": [
+      "ArrowDown:p-i0aecb28w3",
+      "ArrowDown:p-i0aecb28w3",
+      "Enter:p-i0aecb28w3"
+    ],
+    "url": "/examples/index.html"
+  },
+  "selectType": {
+    "value": "p-i0aecb28w3",
+    "url": "/examples/index.html"
+  },
+  "loopSpace": {
+    "before": "false",
+    "after": "true",
+    "url": "/examples/index.html?loop=true"
+  },
+  "posterSpace": {
+    "before": true,
+    "after": false,
+    "url": "/examples/index.html?loop=true&poster=false"
+  },
+  "playFocus": "MEDIA-PLAY-BUTTON#vjs-t8h5QXcn-0-trigger:재생",
+  "nowAfterPlay": "최근 광고 진행 프리롤 1/2 재생 중 19:07:46",
+  "admin": {
+    "count": 1,
+    "attrs": {
+      "href": "http://127.0.0.1:18781/examples/index.html?preset=p-i0aecb28w3",
+      "target": "_blank",
+      "disabled": null,
+      "rel": "noopener noreferrer"
+    },
+    "focus": "A:데모에서 열기 (새 창)",
+    "popup": ""
+  }
+}

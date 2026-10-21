@@ -1,0 +1,524 @@
+{
+  "B13": {
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "screens": {
+      "login": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "creatives": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "reports": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "dashboard": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "campaigns": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "schedule": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "preview": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      }
+    },
+    "menu": {
+      "count": 8,
+      "visible": 8,
+      "menuButton": 0
+    },
+    "scheduleItems": 4,
+    "scheduleActions": {
+      "save": {
+        "visible": true,
+        "box": {
+          "x": 991,
+          "w": 84
+        },
+        "hit": "초안 저장",
+        "enabled": true
+      },
+      "publish": {
+        "visible": true,
+        "box": {
+          "x": 1084,
+          "w": 125
+        },
+        "hit": "저장한 초안 게시",
+        "enabled": true
+      }
+    },
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      }
+    ]
+  },
+  "B14": {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "screens": {
+      "login": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "creatives": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "reports": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "dashboard": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "campaigns": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": [
+          {
+            "tag": "DIV",
+            "cls": "sa-scroll",
+            "scrollWidth": 768,
+            "clientWidth": 734
+          }
+        ]
+      },
+      "schedule": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "preview": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      }
+    },
+    "menu": {
+      "count": 8,
+      "visible": 8,
+      "menuButton": 0
+    },
+    "scheduleItems": 4,
+    "scheduleActions": {
+      "save": {
+        "visible": true,
+        "box": {
+          "x": 487,
+          "w": 84
+        },
+        "hit": "초안 저장",
+        "enabled": true
+      },
+      "publish": {
+        "visible": true,
+        "box": {
+          "x": 580,
+          "w": 125
+        },
+        "hit": "저장한 초안 게시",
+        "enabled": true
+      }
+    },
+    "console": []
+  },
+  "B14-390": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screens": {
+      "login": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "clippedCount": 0,
+        "innerScrollers": []
+      },
+      "creatives": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672
+          },
+          {
+            "tag": "BUTTON",
+            "text": "보관",
+            "left": 559,
+            "right": 605
+          },
+          {
+            "tag": "BUTTON",
+            "text": "미리보기",
+            "left": 559,
+            "right": 629
+          },
+          {
+            "tag": "BUTTON",
+            "text": "새 버전으로 수정",
+            "left": 559,
+            "right": 672
+          }
+        ],
+        "clippedCount": 21,
+        "innerScrollers": [
+          {
+            "tag": "DIV",
+            "cls": "sa-scroll",
+            "scrollWidth": 667,
+            "clientWidth": 356
+          }
+        ]
+      },
+      "reports": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532
+          }
+        ],
+        "clippedCount": 3,
+        "innerScrollers": []
+      },
+      "dashboard": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532
+          }
+        ],
+        "clippedCount": 3,
+        "innerScrollers": [
+          {
+            "tag": "DIV",
+            "cls": "sa-scroll",
+            "scrollWidth": 502,
+            "clientWidth": 356
+          }
+        ]
+      },
+      "campaigns": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532
+          }
+        ],
+        "clippedCount": 3,
+        "innerScrollers": [
+          {
+            "tag": "DIV",
+            "cls": "sa-scroll",
+            "scrollWidth": 768,
+            "clientWidth": 356
+          }
+        ]
+      },
+      "schedule": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532
+          }
+        ],
+        "clippedCount": 3,
+        "innerScrollers": []
+      },
+      "preview": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false,
+        "clipped": [
+          {
+            "tag": "A",
+            "text": "승인함",
+            "left": 359,
+            "right": 420
+          },
+          {
+            "tag": "A",
+            "text": "리포트",
+            "left": 422,
+            "right": 482
+          },
+          {
+            "tag": "A",
+            "text": "설정",
+            "left": 484,
+            "right": 532
+          }
+        ],
+        "clippedCount": 3,
+        "innerScrollers": []
+      }
+    },
+    "menu": {
+      "count": 8,
+      "visible": 8,
+      "menuButton": 0
+    },
+    "scheduleItems": 4,
+    "scheduleActions": {
+      "save": {
+        "visible": true,
+        "box": {
+          "x": 35,
+          "w": 84
+        },
+        "hit": "초안 저장",
+        "enabled": true
+      },
+      "publish": {
+        "visible": true,
+        "box": {
+          "x": 127,
+          "w": 125
+        },
+        "hit": "저장한 초안 게시",
+        "enabled": true
+      }
+    },
+    "console": []
+  }
+}

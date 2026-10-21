@@ -1,0 +1,11 @@
+<!-- 솔애드 광고 플레이어 -->
+<!-- 광고 문구 언어는 페이지 lang을 따라요. lang이 없으면 영어로 나와요. -->
+<link rel="stylesheet" href="http://127.0.0.1:18781/assets/videojs/video.css" />
+<script type="module" src="http://127.0.0.1:18781/assets/videojs/video.js"></script>
+<script type="module" src="http://127.0.0.1:18781/assets/ads.js"></script>
+<video-player>
+  <video-skin>
+    <video id="ads-content" src="http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4" playsinline preload="metadata"></video>
+    <media-ads for="ads-content" src="http://127.0.0.1:18781/api/index.php?action=schedule&#38;videoId=a1-qa-preset-1" video-id="a1-qa-preset-1"></media-ads>
+  </video-skin>
+</video-player>

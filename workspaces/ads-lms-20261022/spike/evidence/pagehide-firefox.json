@@ -1,0 +1,132 @@
+{
+ "scenario": "pagehide",
+ "engine": "firefox",
+ "startedAt": "2026-10-21T17:23:58.226Z",
+ "steps": [],
+ "runs": [
+  {
+   "how": "navigate",
+   "round": 1,
+   "run": "firefox-navigate-1-1792603439278",
+   "note": {
+    "_type": "Response",
+    "_guid": "response@ef598e055757a2e51ec43c38251a1e46"
+   },
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "reload",
+   "round": 1,
+   "run": "firefox-reload-1-1792603442549",
+   "note": null,
+   "received": []
+  },
+  {
+   "how": "close",
+   "round": 1,
+   "run": "firefox-close-1-1792603445228",
+   "received": []
+  },
+  {
+   "how": "popup-window.close",
+   "round": 1,
+   "run": "firefox-popup-window.close-1-1792603447569",
+   "note": [
+    {
+     "lmsSpike": "pagehide",
+     "fetchOk": "called",
+     "beaconOk": true
+    }
+   ],
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "navigate",
+   "round": 2,
+   "run": "firefox-navigate-2-1792603451160",
+   "note": {
+    "_type": "Response",
+    "_guid": "response@81a6ca1720d757928a727f02de7e62a0"
+   },
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  },
+  {
+   "how": "reload",
+   "round": 2,
+   "run": "firefox-reload-2-1792603453683",
+   "note": null,
+   "received": []
+  },
+  {
+   "how": "close",
+   "round": 2,
+   "run": "firefox-close-2-1792603456384",
+   "received": []
+  },
+  {
+   "how": "popup-window.close",
+   "round": 2,
+   "run": "firefox-popup-window.close-2-1792603459111",
+   "note": [
+    {
+     "lmsSpike": "pagehide",
+     "fetchOk": "called",
+     "beaconOk": true
+    }
+   ],
+   "received": [
+    {
+     "kind": "fetch-keepalive",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    },
+    {
+     "kind": "beacon-json-blob",
+     "contentType": "application/json",
+     "json": true,
+     "secFetchMode": "cors"
+    }
+   ]
+  }
+ ]
+}

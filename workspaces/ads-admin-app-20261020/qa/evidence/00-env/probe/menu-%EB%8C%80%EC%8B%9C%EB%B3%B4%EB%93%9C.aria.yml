@@ -1,0 +1,70 @@
+- main "대시보드":
+  - region "대시보드":
+    - heading "대시보드" [level=1]
+    - text: 목업 · 아직 동작하지 않아요
+    - paragraph: 10.20 15:00 기준 예시 수치예요.
+    - region "오늘의 할 일":
+      - text: 오늘의 할 일
+      - heading "예시 운영자 님, 확인할 일이 6건 있어요" [level=2]:
+        - text: 예시 운영자 님, 확인할 일이
+        - emphasis: "6"
+        - text: 건 있어요
+      - paragraph: 오래된 승인 대기부터 처리하면 집행이 늦어지지 않아요.
+      - button "승인함 열기" [disabled]
+      - text: 목업 화면이라 아직 동작하지 않아요.
+      - list:
+        - listitem: 소재 심사 대기 예시 소재 B v4 외 1건 · 가장 오래된 건 10.19 2 건
+        - listitem: 집행 승인 대기 프리롤 보장 · 메인 r5 1 건
+        - listitem: 지면 편성 승인 대기 대기 없음 0 건
+        - listitem: 7일 안에 종료되는 캠페인 예시 캠페인 C · 예시 캠페인 H 2 건
+        - listitem: 내 제출 중 반려 예시 소재 D v1 · 10.15 반려 1 건
+    - region "오늘 요약, 어제 같은 시각과 비교":
+      - text: 노출 28,412 ▲ 5.4%
+      - emphasis: 어제 26,950
+      - text: 채움률 77.5% ▲ 1.2%p
+      - emphasis: 어제 76.3%
+      - text: 완료율 71.2% ▼ 0.8%p
+      - emphasis: 어제 72.0%
+      - text: 클릭률 0.84% ▲ 0.06%p
+      - emphasis: 어제 0.78%
+    - region "최근 집행":
+      - table "최근 집행":
+        - caption: 최근 집행
+        - rowgroup:
+          - row "집행 위치 오늘 노출 최근 변경 상태":
+            - columnheader "집행"
+            - columnheader "위치"
+            - columnheader "오늘 노출"
+            - columnheader "최근 변경"
+            - columnheader "상태"
+        - rowgroup:
+          - row "프리롤 보장 A 예시 캠페인 A 프리롤 12,480 10.20 14:52 진행":
+            - cell "프리롤 보장 A 예시 캠페인 A"
+            - cell "프리롤"
+            - cell "12,480"
+            - cell "10.20 14:52"
+            - cell "진행"
+          - row "미드롤 보장 B 예시 캠페인 A 미드롤 4,318 10.20 11:02 승인 대기":
+            - cell "미드롤 보장 B 예시 캠페인 A"
+            - cell "미드롤"
+            - cell "4,318"
+            - cell "10.20 11:02"
+            - cell "승인 대기"
+          - row "앱 설치 프리롤 예시 캠페인 C 프리롤 6,207 10.19 18:30 진행":
+            - cell "앱 설치 프리롤 예시 캠페인 C"
+            - cell "프리롤"
+            - cell "6,207"
+            - cell "10.19 18:30"
+            - cell "진행"
+          - row "포스트롤 브랜드 하우스 예시 캠페인 F 포스트롤 – 10.18 14:20 일시중지":
+            - cell "포스트롤 브랜드 하우스 예시 캠페인 F"
+            - cell "포스트롤"
+            - cell "–"
+            - cell "10.18 14:20"
+            - cell "일시중지"
+    - region "곧 끝나는 캠페인":
+      - heading "곧 끝나는 캠페인" [level=2]
+      - text: 7일 안
+      - list:
+        - listitem: 예시 캠페인 C 예시 광고주 C · 집행 1 · 10.24 종료 D-4
+        - listitem: 예시 캠페인 H 예시 광고주 B · 집행 2 · 10.26 종료 D-6

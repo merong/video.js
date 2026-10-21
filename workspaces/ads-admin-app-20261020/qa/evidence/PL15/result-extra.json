@@ -1,0 +1,50 @@
+{
+  "codes": {
+    "native-mp4-escape": {
+      "media": [
+        "MP4 [checked]",
+        "HLS · SPF [disabled]",
+        "HLS · hls.js [disabled]"
+      ],
+      "status": [],
+      "alert": [],
+      "saved": true,
+      "length": 1204
+    },
+    "builtin-default-mp4": {
+      "media": [
+        "MP4 [checked]",
+        "HLS · SPF",
+        "HLS · hls.js"
+      ],
+      "status": [],
+      "alert": [],
+      "saved": true,
+      "length": 677
+    }
+  },
+  "initial": {
+    "selectedPreset": "QA Video.js 중립 v2 (기본 프리셋)",
+    "contentUrl": "http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+    "media": [
+      "MP4 [checked]",
+      "HLS · SPF",
+      "HLS · hls.js"
+    ],
+    "status": [
+      "고정 영상 ID를 입력해 주세요."
+    ],
+    "alert": [],
+    "code": null
+  },
+  "langNotice": [
+    "<!-- 광고 문구 언어는 페이지 lang을 따라요. lang이 없으면 영어로 나와요. -->"
+  ],
+  "error": "Error: EXTRA done",
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

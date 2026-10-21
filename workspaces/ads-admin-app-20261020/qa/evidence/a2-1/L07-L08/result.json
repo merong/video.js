@@ -1,0 +1,159 @@
+{
+  "L07": {
+    "errors": [
+      {
+        "at": 36,
+        "target": "no-id",
+        "code": "missing_video_id",
+        "message": "data-video-id가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "at": 39,
+        "target": "no-src",
+        "code": "missing_src",
+        "message": "data-src가 없어 플레이어를 만들지 않았습니다."
+      },
+      {
+        "at": 39,
+        "target": "js-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "at": 39,
+        "target": "relative-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      },
+      {
+        "at": 39,
+        "target": "ftp-src",
+        "code": "invalid_src",
+        "message": "data-src는 /경로 또는 http(s):// 주소여야 합니다."
+      }
+    ],
+    "ready": [
+      {
+        "at": 253,
+        "target": "ok",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      },
+      {
+        "at": 275,
+        "target": "bidi-id",
+        "presetId": "p-4yy9hmbhus",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "placeholders": [
+      {
+        "id": "no-id",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "no-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "js-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "relative-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "ftp-src",
+        "children": 0,
+        "text": "",
+        "height": 0
+      },
+      {
+        "id": "bidi-id",
+        "children": 1,
+        "text": "",
+        "height": 711
+      },
+      {
+        "id": "ok",
+        "children": 1,
+        "text": "",
+        "height": 711
+      }
+    ],
+    "bodyText": "QA 본문 문단",
+    "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-solad-player]').nth(7)\u001b[22m\n"
+  },
+  "L08": {
+    "initial": {
+      "ready": [
+        "first"
+      ],
+      "manualChildren": 0
+    },
+    "late": {
+      "ready": [
+        "first",
+        "late"
+      ],
+      "lateChildren": 1,
+      "lateManualChildren": 0
+    },
+    "twice": {
+      "children": 1,
+      "i18n": 1,
+      "firstPlayerConnected": false,
+      "secondPlayerConnected": true,
+      "same": false
+    },
+    "concurrent": {
+      "first": "rejected AbortError",
+      "second": "fulfilled",
+      "children": 1,
+      "i18n": 1
+    },
+    "countsBeforeDestroy": {
+      "videos": 4,
+      "playingVideos": 0,
+      "mediaAds": 4,
+      "players": 4
+    },
+    "duringAd": {
+      "counts": {
+        "videos": 5,
+        "playingVideos": 1,
+        "mediaAds": 4,
+        "players": 4
+      },
+      "manualEvents": [
+        "start"
+      ]
+    },
+    "afterDestroy": {
+      "manualChildren": 0,
+      "counts": {
+        "videos": 3,
+        "playingVideos": 0,
+        "mediaAds": 3,
+        "players": 3
+      },
+      "adEventsAfter": [],
+      "manualEventsAfter": [
+        "start"
+      ],
+      "destroyAgain": "ok"
+    },
+    "solad": []
+  }
+}

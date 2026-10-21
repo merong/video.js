@@ -1,0 +1,113 @@
+{
+  "options": [
+    "default:기본",
+    "p-wkepup6b7d:QA Video.js 중립 v2 (기본 프리셋) [selected]",
+    "p-nln4iamtsc:QA 기본 video"
+  ],
+  "initial": [
+    {
+      "text": "?",
+      "href": "#/help/play-test",
+      "target": ""
+    },
+    {
+      "text": "?",
+      "href": "#/help/player-preset",
+      "target": ""
+    },
+    {
+      "text": "기본 video로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-wkepup6b7d",
+      "target": "_blank"
+    },
+    {
+      "text": "Video.js로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-wkepup6b7d",
+      "target": "_blank"
+    }
+  ],
+  "default": [
+    {
+      "text": "?",
+      "href": "#/help/play-test",
+      "target": ""
+    },
+    {
+      "text": "?",
+      "href": "#/help/player-preset",
+      "target": ""
+    },
+    {
+      "text": "기본 video로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+      "target": "_blank"
+    },
+    {
+      "text": "Video.js로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+      "target": "_blank"
+    }
+  ],
+  "pa": [
+    {
+      "text": "?",
+      "href": "#/help/play-test",
+      "target": ""
+    },
+    {
+      "text": "?",
+      "href": "#/help/player-preset",
+      "target": ""
+    },
+    {
+      "text": "기본 video로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-wkepup6b7d",
+      "target": "_blank"
+    },
+    {
+      "text": "Video.js로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-wkepup6b7d",
+      "target": "_blank"
+    }
+  ],
+  "pb": [
+    {
+      "text": "?",
+      "href": "#/help/play-test",
+      "target": ""
+    },
+    {
+      "text": "?",
+      "href": "#/help/player-preset",
+      "target": ""
+    },
+    {
+      "text": "기본 video로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/player.html?video=a1-qa-preset-1&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-nln4iamtsc",
+      "target": "_blank"
+    },
+    {
+      "text": "Video.js로 재생 (새 탭)",
+      "href": "http://127.0.0.1:18781/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-nln4iamtsc",
+      "target": "_blank"
+    }
+  ],
+  "apiWhileSwitching": [],
+  "opened": {
+    "url": "/examples/videojs.html?video=a1-qa-preset-1&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-wkepup6b7d",
+    "skinTag": "video-neutral-skin",
+    "accent": "#0f5132",
+    "adsAttrs": {
+      "lang": "en",
+      "skip-label": "Skip ad",
+      "video-id": "a1-qa-preset-1"
+    },
+    "meta": "영상 a1-qa-preset-1 · MP4 · 프리셋 p-wkepup6b7d"
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

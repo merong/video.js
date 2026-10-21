@@ -1,0 +1,257 @@
+{
+  "390": {
+    "editorClass": "aa-editor is-narrow",
+    "nav": {
+      "navClass": null,
+      "navBox": null,
+      "links": [],
+      "select": {
+        "label": "구획으로 이동",
+        "options": [
+          "기본",
+          "테마",
+          "재생 동작",
+          "언어",
+          "광고 화면"
+        ],
+        "box": {
+          "w": 358,
+          "h": 36,
+          "visible": true
+        }
+      }
+    },
+    "overflow": {
+      "scrollWidth": 390,
+      "innerWidth": 390
+    },
+    "jump": {
+      "headingTop": 440,
+      "viewport": 900,
+      "scrollY": 1204,
+      "focus": {
+        "tag": "H2",
+        "id": "aa-preset-section-playback-title",
+        "text": "재생 동작",
+        "name": null
+      },
+      "hashBefore": "#/players/edit/p-qrgzuc8ste",
+      "hashAfter": "#/players/edit/p-qrgzuc8ste",
+      "current": "테마"
+    },
+    "savebarSite": "사이트 적용 프리셋이에요. 저장하면 사이트의 플레이어가 바뀌어요. 프리셋 저장",
+    "nativeDialogs": [],
+    "console": []
+  },
+  "768": {
+    "editorClass": "aa-editor is-medium",
+    "nav": {
+      "navClass": "sa-secnav is-row",
+      "navBox": {
+        "w": 736,
+        "h": 53,
+        "visible": true
+      },
+      "links": [
+        "기본",
+        "테마",
+        "재생 동작",
+        "언어",
+        "광고 화면"
+      ],
+      "select": null
+    },
+    "overflow": {
+      "scrollWidth": 768,
+      "innerWidth": 768
+    },
+    "jump": {
+      "headingTop": 440,
+      "viewport": 900,
+      "scrollY": 687,
+      "focus": {
+        "tag": "H2",
+        "id": "aa-preset-section-playback-title",
+        "text": "재생 동작",
+        "name": null
+      },
+      "hashBefore": "#/players/edit/p-qrgzuc8ste",
+      "hashAfter": "#/players/edit/p-qrgzuc8ste",
+      "current": "테마"
+    },
+    "savebarSite": "사이트 적용 프리셋이에요. 저장하면 로더를 넣은 모든 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장",
+    "nativeDialogs": [],
+    "console": []
+  },
+  "1280": {
+    "editorClass": "aa-editor is-wide",
+    "nav": {
+      "navClass": "sa-secnav",
+      "navBox": {
+        "w": 200,
+        "h": 236,
+        "visible": true
+      },
+      "links": [
+        "기본",
+        "테마",
+        "재생 동작",
+        "언어",
+        "광고 화면"
+      ],
+      "select": null
+    },
+    "overflow": {
+      "scrollWidth": 1280,
+      "innerWidth": 1280
+    },
+    "jump": {
+      "headingTop": 440,
+      "viewport": 900,
+      "scrollY": 543,
+      "focus": {
+        "tag": "H2",
+        "id": "aa-preset-section-playback-title",
+        "text": "재생 동작",
+        "name": null
+      },
+      "hashBefore": "#/players/edit/p-qrgzuc8ste",
+      "hashAfter": "#/players/edit/p-qrgzuc8ste",
+      "current": "테마"
+    },
+    "mutedBefore": {
+      "checked": "false",
+      "disabled": false,
+      "described": [
+        "소리 없이 시작해요. 보는 사람이 음량 버튼으로 켤 수 있어요."
+      ]
+    },
+    "mutedLocked": {
+      "checked": "true",
+      "disabled": true,
+      "described": [
+        "자동 재생을 켜서 바꿀 수 없어요. 브라우저는 소리 나는 자동 재생을 막아서, 광고도 음소거로 시작해요. 바꾸려면 자동 재생을 꺼 주세요."
+      ]
+    },
+    "mutedBadge": [
+      "음소거로 시작 자동 재생 때문에 켜짐"
+    ],
+    "mutedAfterOff": {
+      "checked": "false",
+      "disabled": false,
+      "described": [
+        "소리 없이 시작해요. 보는 사람이 음량 버튼으로 켤 수 있어요."
+      ]
+    },
+    "loopNote": [
+      "포스트롤은 재생되지 않아요 · 반복 재생을 켜면 본편이 끝나지 않아서, 본편 뒤에 넣은 광고가 나오지 않아요. 포스트롤을 쓰는 지면이면 반복을 꺼 주세요."
+    ],
+    "loopNoteAfterOff": 0,
+    "preload": {
+      "start": {
+        "role": "radiogroup",
+        "label": "미리 불러오기",
+        "count": 3,
+        "checked": "정보만 (기본)",
+        "focused": false,
+        "help": [
+          "길이와 첫 정보만 미리 받아요. 기본값이에요."
+        ]
+      },
+      "right": {
+        "role": "radiogroup",
+        "label": "미리 불러오기",
+        "count": 3,
+        "checked": "미리 받기",
+        "focused": true,
+        "help": [
+          "페이지를 열 때 영상을 미리 받아요. 빨리 시작하지만 보지 않아도 데이터를 써요."
+        ]
+      },
+      "leftLeft": {
+        "role": "radiogroup",
+        "label": "미리 불러오기",
+        "count": 3,
+        "checked": "누를 때",
+        "focused": true,
+        "help": [
+          "재생을 누를 때 영상을 받기 시작해요. 데이터를 가장 적게 써요. 길이는 재생 전에 보이지 않아요."
+        ]
+      },
+      "back": {
+        "role": "radiogroup",
+        "label": "미리 불러오기",
+        "count": 3,
+        "checked": "정보만 (기본)",
+        "focused": true,
+        "help": [
+          "길이와 첫 정보만 미리 받아요. 기본값이에요."
+        ]
+      }
+    },
+    "savebarSite": "사이트 적용 프리셋이에요. 저장하면 로더를 넣은 모든 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장",
+    "localError": {
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-preset-name",
+        "text": "",
+        "name": null
+      },
+      "savebar": "고칠 칸 1개 · 표시한 칸을 고친 뒤 저장해 주세요. 프리셋 저장",
+      "nameDescribed": {
+        "checked": false,
+        "disabled": false,
+        "described": [
+          "이름을 입력해 주세요.",
+          "목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요."
+        ]
+      },
+      "invalid": "true",
+      "navErrors": "구획으로 이동\n기본\n오류 1\n테마\n재생 동작\n언어\n광고 화면"
+    },
+    "serverError": {
+      "routed": 0,
+      "focus": {
+        "tag": "INPUT",
+        "id": "aa-preset-name",
+        "text": "",
+        "name": null
+      },
+      "field": {
+        "checked": false,
+        "disabled": false,
+        "described": [
+          "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 강조색을 비우면 광고 화면도 이 색을 따라요."
+        ]
+      },
+      "invalid": null,
+      "status": [
+        "미리보기가 준비됐어요.",
+        "저장하지 못했어요. 표시한 항목을 확인해 주세요."
+      ],
+      "savebar": "고칠 칸 1개 · 표시한 칸을 고친 뒤 저장해 주세요. 프리셋 저장",
+      "nav": "구획으로 이동 기본 오류 1 테마 재생 동작 언어 광고 화면"
+    },
+    "native": {
+      "title": {
+        "checked": "true",
+        "disabled": true,
+        "described": [
+          "기본 video에서는 쓸 수 없어요. 브라우저 컨트롤에는 제목 자리가 없어요. 플레이어 종류를 Video.js 플레이어로 바꾸면 쓸 수 있어요."
+        ]
+      },
+      "themeNote": [
+        "기본 video 프리셋이에요 · 테마, 로고, 컨트롤, 단축키·제스처, 제목 표시는 브라우저 기본 컨트롤에서 쓸 수 없어요. 입력한 값은 화면에 그대로 남아 있지만, 기본 video로 저장하면 이 값은 빼고 저장해요. 저장하기 전에 Video.js 플레이어로 되돌리면 값이 그대로 쓰여요.",
+        "기본 video에서는 테마를 쓸 수 없어요. 브라우저 컨트롤을 써서 테마가 적용되지 않아요. 기본 구획의 플레이어 종류를 Video.js 플레이어로 바꾸면 쓸 수 있어요.",
+        "기본 video에서는 쓸 수 없어요. 브라우저 컨트롤에는 제목 자리가 없어요. 플레이어 종류를 Video.js 플레이어로 바꾸면 쓸 수 있어요.",
+        "기본 video에서는 이 값이 화면에 쓰이지 않아요. 브라우저 컨트롤은 브라우저 언어로, 광고 문구는 늘 한국어로 나와요.",
+        "40자 이내예요. { } 문자는 쓸 수 없어요."
+      ],
+      "accentDisabled": true,
+      "nav": "구획으로 이동 기본 테마 쓸 수 없음 재생 동작 언어 광고 화면",
+      "savebar": "저장하면 이 프리셋을 쓰는 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장"
+    },
+    "nativeDialogs": [],
+    "console": []
+  }
+}

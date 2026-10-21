@@ -1,0 +1,419 @@
+{
+  "before": [
+    {
+      "id": "p1",
+      "videoId": "a1-qa-video-1",
+      "children": [
+        "MEDIA-I18N"
+      ],
+      "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+      "i18nLang": "ko",
+      "playerAttrs": {
+        "contentTitle": null,
+        "poster": null
+      },
+      "media": {
+        "tag": "VIDEO",
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "autoplayAttr": false,
+        "mutedAttr": false,
+        "mutedProp": false,
+        "loop": false,
+        "preload": "metadata",
+        "playsinline": true,
+        "poster": null,
+        "paused": true,
+        "currentTime": 0,
+        "controls": false,
+        "tracks": []
+      },
+      "ads": {
+        "lang": "ko",
+        "attrs": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "a1-qa-video-1"
+        }
+      },
+      "skin": {
+        "tag": "VIDEO-SKIN",
+        "accentVar": "",
+        "accentTextVar": "",
+        "adsAccentVar": "",
+        "primary": "",
+        "fillBefore": null,
+        "borderRadius": "0px",
+        "borderRadiusVar": "",
+        "borderColor": "rgb(0, 0, 0)",
+        "inline": null
+      },
+      "buttonLabels": [
+        "닫기",
+        "재생",
+        "음소거",
+        "볼륨",
+        "탐색",
+        "재생 시간 표시, 10초 남음.",
+        "자막 켜기",
+        "설정",
+        "전송 시작",
+        "AirPlay 시작",
+        "화면 속 화면",
+        "전체 화면"
+      ],
+      "visibleText": [
+        "0:00",
+        "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+        "0:00",
+        "-",
+        "0:10",
+        "설정"
+      ]
+    }
+  ],
+  "during": [
+    {
+      "id": "p1",
+      "videoId": "a1-qa-video-1",
+      "children": [
+        "MEDIA-I18N"
+      ],
+      "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+      "i18nLang": "ko",
+      "playerAttrs": {
+        "contentTitle": null,
+        "poster": null
+      },
+      "media": {
+        "tag": "VIDEO",
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "autoplayAttr": false,
+        "mutedAttr": false,
+        "mutedProp": false,
+        "loop": false,
+        "preload": "metadata",
+        "playsinline": true,
+        "poster": null,
+        "paused": true,
+        "currentTime": 0,
+        "controls": false,
+        "tracks": []
+      },
+      "ads": {
+        "lang": "ko",
+        "attrs": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "a1-qa-video-1"
+        }
+      },
+      "skin": {
+        "tag": "VIDEO-SKIN",
+        "accentVar": "",
+        "accentTextVar": "",
+        "adsAccentVar": "",
+        "primary": "",
+        "fillBefore": null,
+        "borderRadius": "0px",
+        "borderRadiusVar": "",
+        "borderColor": "rgb(0, 0, 0)",
+        "inline": null
+      },
+      "buttonLabels": [
+        "닫기",
+        "일시중지",
+        "음소거",
+        "볼륨",
+        "탐색",
+        "재생 시간 표시, 10초 남음.",
+        "자막 켜기",
+        "설정",
+        "전송 시작",
+        "AirPlay 시작",
+        "화면 속 화면",
+        "전체 화면",
+        "광고 건너뛰기",
+        "광고 재생 / 일시정지",
+        "광고 음소거",
+        "광고 음량",
+        "전체화면 시작"
+      ],
+      "visibleText": [
+        "0:00",
+        "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+        "0:00",
+        "-",
+        "0:10",
+        "설정",
+        "광고 1/2",
+        "광고주 사이트",
+        "0:01 / 0:06"
+      ]
+    }
+  ],
+  "state": {
+    "ready": [
+      {
+        "at": 221,
+        "target": "p1",
+        "presetId": "default",
+        "fallback": false,
+        "player": "VIDEO-PLAYER"
+      }
+    ],
+    "errors": [],
+    "ads": [
+      {
+        "at": 2337,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "ee68a8f9-3222-46ac-8528-24e417633381",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "b83de34e-c511-42c8-ac85-d4ffc0efd352",
+        "adAttemptId": "5dc553d8-3250-44d1-abdf-944ab297f7b6",
+        "breakId": "break-60408e9e-5556-47b6-a718-692170396276",
+        "itemId": "item-fc043753-95ee-4027-b64c-74c851f3e02f",
+        "adId": "creative-23c0f01edc902d6199c7c8eacceeda3a",
+        "creativeId": "creative-23c0f01edc902d6199c7c8eacceeda3a",
+        "creativeVersion": 2,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 1,
+        "occurredAt": "2026-10-21T05:53:12.627Z",
+        "contentTimeSeconds": 0,
+        "adElapsedSeconds": 0,
+        "type": "start"
+      },
+      {
+        "at": 8593,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "23693e5b-35b3-4b47-b2e9-418a8899b5ab",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "b83de34e-c511-42c8-ac85-d4ffc0efd352",
+        "adAttemptId": "5dc553d8-3250-44d1-abdf-944ab297f7b6",
+        "breakId": "break-60408e9e-5556-47b6-a718-692170396276",
+        "itemId": "item-fc043753-95ee-4027-b64c-74c851f3e02f",
+        "adId": "creative-23c0f01edc902d6199c7c8eacceeda3a",
+        "creativeId": "creative-23c0f01edc902d6199c7c8eacceeda3a",
+        "creativeVersion": 2,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 2,
+        "occurredAt": "2026-10-21T05:53:18.891Z",
+        "contentTimeSeconds": 0,
+        "adElapsedSeconds": 6,
+        "type": "complete"
+      },
+      {
+        "at": 8619,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "cd421840-719e-4e97-9e3c-6071a81bc59e",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "b83de34e-c511-42c8-ac85-d4ffc0efd352",
+        "adAttemptId": "30ac3f5b-43ad-4de9-8110-781bf70c3244",
+        "breakId": "break-60408e9e-5556-47b6-a718-692170396276",
+        "itemId": "item-78584e0f-020f-4e0a-807e-8dcf6c10a3f2",
+        "adId": "creative-dfe58b4d58eccf449b713879f96fa130",
+        "creativeId": "creative-dfe58b4d58eccf449b713879f96fa130",
+        "creativeVersion": 1,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 1,
+        "occurredAt": "2026-10-21T05:53:18.917Z",
+        "contentTimeSeconds": 0,
+        "adElapsedSeconds": 0,
+        "type": "start"
+      },
+      {
+        "at": 20900,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "442ed03c-858e-4a54-ad71-fea76326a61a",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "b83de34e-c511-42c8-ac85-d4ffc0efd352",
+        "adAttemptId": "30ac3f5b-43ad-4de9-8110-781bf70c3244",
+        "breakId": "break-60408e9e-5556-47b6-a718-692170396276",
+        "itemId": "item-78584e0f-020f-4e0a-807e-8dcf6c10a3f2",
+        "adId": "creative-dfe58b4d58eccf449b713879f96fa130",
+        "creativeId": "creative-dfe58b4d58eccf449b713879f96fa130",
+        "creativeVersion": 1,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 2,
+        "occurredAt": "2026-10-21T05:53:31.197Z",
+        "contentTimeSeconds": 0,
+        "adElapsedSeconds": 12,
+        "type": "complete"
+      },
+      {
+        "at": 26289,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "19a9954c-baaf-476f-a77d-502292963e88",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "608fb09e-f645-4fe6-a13f-0e7ac92086ec",
+        "adAttemptId": "26492dc7-c7ce-40ce-8481-466becf260bf",
+        "breakId": "break-aab1d262-0397-4674-bee1-9a81fad15720",
+        "itemId": "item-51e933ca-3ab3-4878-804c-a526be9c6239",
+        "adId": "creative-755d273eab311caca4d056e3dc5faadd",
+        "creativeId": "creative-755d273eab311caca4d056e3dc5faadd",
+        "creativeVersion": 1,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 1,
+        "occurredAt": "2026-10-21T05:53:36.586Z",
+        "contentTimeSeconds": 5.048752,
+        "adElapsedSeconds": 0,
+        "type": "start"
+      },
+      {
+        "at": 34577,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "86b27d8d-c01a-4179-8353-454977bdfc18",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "608fb09e-f645-4fe6-a13f-0e7ac92086ec",
+        "adAttemptId": "26492dc7-c7ce-40ce-8481-466becf260bf",
+        "breakId": "break-aab1d262-0397-4674-bee1-9a81fad15720",
+        "itemId": "item-51e933ca-3ab3-4878-804c-a526be9c6239",
+        "adId": "creative-755d273eab311caca4d056e3dc5faadd",
+        "creativeId": "creative-755d273eab311caca4d056e3dc5faadd",
+        "creativeVersion": 1,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 2,
+        "occurredAt": "2026-10-21T05:53:44.874Z",
+        "contentTimeSeconds": 5.048752,
+        "adElapsedSeconds": 8,
+        "type": "complete"
+      },
+      {
+        "at": 39559,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "f6f09be5-8710-4bf1-a854-4031f3925dec",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "045f7bc9-ab39-460a-bf40-608f9a9e26b6",
+        "adAttemptId": "2776280c-1989-4e33-8ddb-de1d36ca5c10",
+        "breakId": "break-3c7456a2-5b44-4def-94e3-acdfebaab634",
+        "itemId": "item-ce299d95-11ae-4a0d-bfad-41d95a7b40a2",
+        "adId": "creative-07a85fee09f99b15c6ea45d8cac26c49",
+        "creativeId": "creative-07a85fee09f99b15c6ea45d8cac26c49",
+        "creativeVersion": 1,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 1,
+        "occurredAt": "2026-10-21T05:53:49.857Z",
+        "contentTimeSeconds": 10,
+        "adElapsedSeconds": 0,
+        "type": "start"
+      },
+      {
+        "at": 42604,
+        "target": "p1",
+        "schemaVersion": 1,
+        "eventId": "50e35922-493a-4f96-87a6-646f554af942",
+        "playbackSessionId": "session-e6d80af3303d835deecc2f1b9461fb6a",
+        "breakAttemptId": "045f7bc9-ab39-460a-bf40-608f9a9e26b6",
+        "adAttemptId": "2776280c-1989-4e33-8ddb-de1d36ca5c10",
+        "breakId": "break-3c7456a2-5b44-4def-94e3-acdfebaab634",
+        "itemId": "item-ce299d95-11ae-4a0d-bfad-41d95a7b40a2",
+        "adId": "creative-07a85fee09f99b15c6ea45d8cac26c49",
+        "creativeId": "creative-07a85fee09f99b15c6ea45d8cac26c49",
+        "creativeVersion": 1,
+        "scheduleId": "schedule-cd6c768cefb35745274154eb984526795e0add63e833056ec4b8a34d597fe051",
+        "scheduleVersion": 1,
+        "sequence": 2,
+        "occurredAt": "2026-10-21T05:53:52.902Z",
+        "contentTimeSeconds": 10,
+        "adElapsedSeconds": 3,
+        "type": "complete"
+      }
+    ],
+    "t0": 6.3999998569488525
+  },
+  "after": [
+    {
+      "id": "p1",
+      "videoId": "a1-qa-video-1",
+      "children": [
+        "MEDIA-I18N"
+      ],
+      "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+      "i18nLang": "ko",
+      "playerAttrs": {
+        "contentTitle": null,
+        "poster": null
+      },
+      "media": {
+        "tag": "VIDEO",
+        "src": "/demo-media/grok-20261018/content-scene-01.mp4",
+        "autoplayAttr": false,
+        "mutedAttr": false,
+        "mutedProp": false,
+        "loop": false,
+        "preload": "metadata",
+        "playsinline": true,
+        "poster": null,
+        "paused": true,
+        "currentTime": 10,
+        "controls": false,
+        "tracks": []
+      },
+      "ads": {
+        "lang": "ko",
+        "attrs": {
+          "lang": "ko",
+          "for": "solad-media-1",
+          "video-id": "a1-qa-video-1"
+        }
+      },
+      "skin": {
+        "tag": "VIDEO-SKIN",
+        "accentVar": "",
+        "accentTextVar": "",
+        "adsAccentVar": "",
+        "primary": "",
+        "fillBefore": null,
+        "borderRadius": "0px",
+        "borderRadiusVar": "",
+        "borderColor": "rgb(0, 0, 0)",
+        "inline": null
+      },
+      "buttonLabels": [
+        "닫기",
+        "다시 재생",
+        "음소거",
+        "볼륨",
+        "탐색",
+        "재생 시간 표시, 0초 남음.",
+        "자막 켜기",
+        "설정",
+        "전송 시작",
+        "AirPlay 시작",
+        "화면 속 화면",
+        "전체 화면"
+      ],
+      "visibleText": [
+        "0:10",
+        "@keyframes media-spinner-fade{0%{opacity:1}to{opacity:0}}.media-spinner__segment{animation:var(--media-spinner-animation, media-spinner-fade 1s steps(8, end) infinite);animation-delay:var(--media-spinner-delay)}@media (prefers-reduced-motion:reduce){.media-spinner__segment{animation:none}}",
+        "0:00",
+        "0:00",
+        "설정"
+      ]
+    }
+  ],
+  "solad": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

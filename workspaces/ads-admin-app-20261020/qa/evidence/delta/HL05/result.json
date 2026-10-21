@@ -1,0 +1,732 @@
+{
+  "screens": {
+    "소재": [
+      {
+        "termId": "archive",
+        "name": "보관 도움말",
+        "text": "?",
+        "context": "등록한 소재 6개보관 ?새로고침"
+      },
+      {
+        "termId": "creative",
+        "name": "소재 도움말",
+        "text": "?",
+        "context": "영상과 이미지 · GIF를 등록할 수 있어요. ?"
+      },
+      {
+        "termId": "creative-source",
+        "name": "등록 방식 도움말",
+        "text": "?",
+        "context": "등록 방식?"
+      },
+      {
+        "termId": "alt-text",
+        "name": "대체텍스트 도움말",
+        "text": "?",
+        "context": "대체텍스트?"
+      }
+    ],
+    "지면 편성 · 사이트": [
+      {
+        "termId": "target-scope",
+        "name": "적용 단위 도움말",
+        "text": "?",
+        "context": "적용 단위?"
+      },
+      {
+        "termId": "publish-version",
+        "name": "게시본과 게시 버전 도움말",
+        "text": "?",
+        "context": "게시 v2?저장된 초안 r3?"
+      },
+      {
+        "termId": "draft-revision",
+        "name": "초안 revision 도움말",
+        "text": "?",
+        "context": "게시 v2?저장된 초안 r3?"
+      },
+      {
+        "termId": "replace",
+        "name": "직접 편성 · 전체 대체 도움말",
+        "text": "?",
+        "context": "이 대상의 광고?"
+      },
+      {
+        "termId": "ad-break",
+        "name": "광고 구간 도움말",
+        "text": "?",
+        "context": "?프리롤미드롤포스트롤"
+      },
+      {
+        "termId": "pre-roll",
+        "name": "프리롤 도움말",
+        "text": "?",
+        "context": "프리롤 · 시작 전?"
+      },
+      {
+        "termId": "click-through-url",
+        "name": "클릭 목적지 URL 도움말",
+        "text": "?",
+        "context": "클릭 목적지 URL?"
+      },
+      {
+        "termId": "ad-skip",
+        "name": "이 광고의 스킵 도움말",
+        "text": "?",
+        "context": "이 광고의 스킵?"
+      },
+      {
+        "termId": "click-through-url",
+        "name": "클릭 목적지 URL 도움말",
+        "text": "?",
+        "context": "클릭 목적지 URL?"
+      },
+      {
+        "termId": "ad-skip",
+        "name": "이 광고의 스킵 도움말",
+        "text": "?",
+        "context": "이 광고의 스킵?"
+      },
+      {
+        "termId": "skip-offset",
+        "name": "스킵 대기 도움말",
+        "text": "?",
+        "context": "스킵 대기 (초)?"
+      },
+      {
+        "termId": "ad-item",
+        "name": "광고 항목과 순서 도움말",
+        "text": "?",
+        "context": "추가할 소재?"
+      },
+      {
+        "termId": "mid-roll",
+        "name": "미드롤 도움말",
+        "text": "?",
+        "context": "본편 재생 위치 (초)?"
+      },
+      {
+        "termId": "click-through-url",
+        "name": "클릭 목적지 URL 도움말",
+        "text": "?",
+        "context": "클릭 목적지 URL?"
+      },
+      {
+        "termId": "ad-skip",
+        "name": "이 광고의 스킵 도움말",
+        "text": "?",
+        "context": "이 광고의 스킵?"
+      },
+      {
+        "termId": "skip-offset",
+        "name": "스킵 대기 도움말",
+        "text": "?",
+        "context": "스킵 대기 (초)?"
+      },
+      {
+        "termId": "ad-item",
+        "name": "광고 항목과 순서 도움말",
+        "text": "?",
+        "context": "추가할 소재?"
+      },
+      {
+        "termId": "post-roll",
+        "name": "포스트롤 도움말",
+        "text": "?",
+        "context": "포스트롤 · 종료 후?"
+      },
+      {
+        "termId": "click-through-url",
+        "name": "클릭 목적지 URL 도움말",
+        "text": "?",
+        "context": "클릭 목적지 URL?"
+      },
+      {
+        "termId": "ad-skip",
+        "name": "이 광고의 스킵 도움말",
+        "text": "?",
+        "context": "이 광고의 스킵?"
+      },
+      {
+        "termId": "image-display-time",
+        "name": "이미지 · GIF 표시 시간 도움말",
+        "text": "?",
+        "context": "이미지 · GIF 표시 (초)?"
+      },
+      {
+        "termId": "ad-item",
+        "name": "광고 항목과 순서 도움말",
+        "text": "?",
+        "context": "추가할 소재?"
+      },
+      {
+        "termId": "draft",
+        "name": "초안 도움말",
+        "text": "?",
+        "context": "초안 저장만으로는 노출이 바뀌지 않아요. ?초안 저장저장한 초안 게시?"
+      },
+      {
+        "termId": "publish",
+        "name": "게시 도움말",
+        "text": "?",
+        "context": "초안 저장저장한 초안 게시?"
+      },
+      {
+        "termId": "fixed-video-id",
+        "name": "고정 영상 ID 도움말",
+        "text": "?",
+        "context": "고정 영상 ID?"
+      },
+      {
+        "termId": "preview",
+        "name": "게시 전 미리보기 도움말",
+        "text": "?",
+        "context": "게시 전 미리보기?"
+      },
+      {
+        "termId": "play-test",
+        "name": "게시본 재생 테스트 도움말",
+        "text": "?",
+        "context": "게시본 재생 테스트?"
+      },
+      {
+        "termId": "player-preset",
+        "name": "프리셋 도움말",
+        "text": "?",
+        "context": "플레이어 프리셋?"
+      }
+    ],
+    "지면 편성 · 개별 영상": [
+      {
+        "termId": "target-scope",
+        "name": "적용 단위 도움말",
+        "text": "?",
+        "context": "적용 단위?"
+      },
+      {
+        "termId": "publish-version",
+        "name": "게시본과 게시 버전 도움말",
+        "text": "?",
+        "context": "게시본 없음?저장 전 초안?"
+      },
+      {
+        "termId": "draft-revision",
+        "name": "초안 revision 도움말",
+        "text": "?",
+        "context": "게시본 없음?저장 전 초안?"
+      },
+      {
+        "termId": "inherit",
+        "name": "상위 설정 상속 도움말",
+        "text": "?",
+        "context": "이 대상의 광고?"
+      },
+      {
+        "termId": "draft",
+        "name": "초안 도움말",
+        "text": "?",
+        "context": "초안 저장만으로는 노출이 바뀌지 않아요. ?초안 저장저장한 초안 게시저장한 초안이 없어요.?"
+      },
+      {
+        "termId": "publish",
+        "name": "게시 도움말",
+        "text": "?",
+        "context": "초안 저장저장한 초안 게시저장한 초안이 없어요.?"
+      },
+      {
+        "termId": "fixed-video-id",
+        "name": "고정 영상 ID 도움말",
+        "text": "?",
+        "context": "고정 영상 ID?"
+      },
+      {
+        "termId": "preview",
+        "name": "게시 전 미리보기 도움말",
+        "text": "?",
+        "context": "게시 전 미리보기?"
+      },
+      {
+        "termId": "play-test",
+        "name": "게시본 재생 테스트 도움말",
+        "text": "?",
+        "context": "게시본 재생 테스트?"
+      },
+      {
+        "termId": "player-preset",
+        "name": "프리셋 도움말",
+        "text": "?",
+        "context": "플레이어 프리셋?"
+      }
+    ],
+    "리포트(통계)": [
+      {
+        "termId": "stats-csv",
+        "name": "조회 조건과 CSV 도움말",
+        "text": "?",
+        "context": "현재 조건 CSV 다운로드?통계 조회"
+      }
+    ],
+    "플레이어 · 목록": [
+      {
+        "termId": "player-preset",
+        "name": "프리셋 도움말",
+        "text": "?",
+        "context": "저장 프리셋 2/20개. ? 기본 프리셋은 설치 코드 생성기와 재생 테스트에서 먼저 선택되는 프리셋이에요. "
+      },
+      {
+        "termId": "player-default-preset",
+        "name": "기본 프리셋 도움말",
+        "text": "?",
+        "context": "저장 프리셋 2/20개. ? 기본 프리셋은 설치 코드 생성기와 재생 테스트에서 먼저 선택되는 프리셋이에요. "
+      }
+    ],
+    "플레이어 · 편집(Video.js)": [
+      {
+        "termId": "player-preset",
+        "name": "프리셋 도움말",
+        "text": "?",
+        "context": "이름?"
+      },
+      {
+        "termId": "player-type",
+        "name": "플레이어 종류 도움말",
+        "text": "?",
+        "context": "플레이어 종류?"
+      },
+      {
+        "termId": "player-skin",
+        "name": "스킨 도움말",
+        "text": "?",
+        "context": "스킨?"
+      },
+      {
+        "termId": "player-theme-property",
+        "name": "테마 속성 도움말",
+        "text": "?",
+        "context": "스킨 테마?"
+      },
+      {
+        "termId": "player-accent-color",
+        "name": "강조색 도움말",
+        "text": "?",
+        "context": "강조색?"
+      },
+      {
+        "termId": "player-accent-color",
+        "name": "강조색 도움말",
+        "text": "?",
+        "context": "강조 글자색?"
+      },
+      {
+        "termId": "player-object-fit",
+        "name": "화면 채우기 도움말",
+        "text": "?",
+        "context": "화면 채우기?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "광고 화면?"
+      },
+      {
+        "termId": "player-ad-language",
+        "name": "광고 문구 언어 도움말",
+        "text": "?",
+        "context": "광고 문구 언어?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "광고 음량 막대 색?"
+      }
+    ],
+    "플레이어 · 초기 설정": [
+      {
+        "termId": "player-install-snippet",
+        "name": "설치 코드 도움말",
+        "text": "?",
+        "context": "설치 코드 만들기?"
+      },
+      {
+        "termId": "player-preset",
+        "name": "프리셋 도움말",
+        "text": "?",
+        "context": "프리셋?"
+      },
+      {
+        "termId": "fixed-video-id",
+        "name": "고정 영상 ID 도움말",
+        "text": "?",
+        "context": "영상 ID?"
+      },
+      {
+        "termId": "player-media-engine",
+        "name": "미디어 형식 도움말",
+        "text": "?",
+        "context": "?"
+      }
+    ],
+    "플레이어 · 옵션 설명": [
+      {
+        "termId": "player-ad-language",
+        "name": "광고 문구 언어 도움말",
+        "text": "?",
+        "context": "광고 문구 언어 ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "건너뛰기 문구 ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "건너뛰기 대기 문구 ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "광고 시간 문구 ?"
+      },
+      {
+        "termId": "player-type",
+        "name": "플레이어 종류 도움말",
+        "text": "?",
+        "context": "광고 로드 시간 제한 (초) ?"
+      },
+      {
+        "termId": "player-type",
+        "name": "플레이어 종류 도움말",
+        "text": "?",
+        "context": "광고 멈춤 시간 제한 (초) ?"
+      },
+      {
+        "termId": "player-ad-language",
+        "name": "광고 문구 언어 도움말",
+        "text": "?",
+        "context": "광고 문구 언어 ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "건너뛰기 문구 · 건너뛰기 대기 문구 · 광고 시간 문구 ?"
+      },
+      {
+        "termId": "player-accent-color",
+        "name": "강조색 도움말",
+        "text": "?",
+        "context": "강조색 ?"
+      },
+      {
+        "termId": "player-accent-color",
+        "name": "강조색 도움말",
+        "text": "?",
+        "context": "강조 글자색 ?"
+      },
+      {
+        "termId": "player-theme-property",
+        "name": "테마 속성 도움말",
+        "text": "?",
+        "context": "테두리 색 ?"
+      },
+      {
+        "termId": "player-theme-property",
+        "name": "테마 속성 도움말",
+        "text": "?",
+        "context": "모서리 둥글기 (px) ?"
+      },
+      {
+        "termId": "player-theme-property",
+        "name": "테마 속성 도움말",
+        "text": "?",
+        "context": "글꼴 ?"
+      },
+      {
+        "termId": "player-object-fit",
+        "name": "화면 채우기 도움말",
+        "text": "?",
+        "context": "화면 채우기 ?"
+      },
+      {
+        "termId": "player-theme-property",
+        "name": "테마 속성 도움말",
+        "text": "?",
+        "context": "크기 기준 ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "광고 음량 막대 색 ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "건너뛰기 버튼 모서리 (px) ?"
+      },
+      {
+        "termId": "player-ad-overlay",
+        "name": "광고 화면 도움말",
+        "text": "?",
+        "context": "광고 글자 크기 (px) ?"
+      }
+    ]
+  },
+  "targets": {
+    "ad-break": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/ad-break",
+      "title": "광고 구간"
+    },
+    "ad-item": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/ad-item",
+      "title": "광고 항목과 순서"
+    },
+    "ad-skip": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/ad-skip",
+      "title": "이 광고의 스킵"
+    },
+    "alt-text": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/alt-text",
+      "title": "대체텍스트"
+    },
+    "archive": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/archive",
+      "title": "보관"
+    },
+    "click-through-url": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/click-through-url",
+      "title": "클릭 목적지 URL"
+    },
+    "creative": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/creative",
+      "title": "소재"
+    },
+    "creative-source": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/creative-source",
+      "title": "등록 방식"
+    },
+    "draft": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/draft",
+      "title": "초안"
+    },
+    "draft-revision": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/draft-revision",
+      "title": "초안 revision"
+    },
+    "fixed-video-id": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/fixed-video-id",
+      "title": "고정 영상 ID"
+    },
+    "image-display-time": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/image-display-time",
+      "title": "이미지 · GIF 표시 시간"
+    },
+    "inherit": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/inherit",
+      "title": "상위 설정 상속"
+    },
+    "mid-roll": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/mid-roll",
+      "title": "미드롤"
+    },
+    "play-test": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/play-test",
+      "title": "게시본 재생 테스트"
+    },
+    "player-accent-color": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-accent-color",
+      "title": "강조색"
+    },
+    "player-ad-language": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-ad-language",
+      "title": "광고 문구 언어"
+    },
+    "player-ad-overlay": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-ad-overlay",
+      "title": "광고 화면"
+    },
+    "player-default-preset": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-default-preset",
+      "title": "기본 프리셋"
+    },
+    "player-install-snippet": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-install-snippet",
+      "title": "설치 코드"
+    },
+    "player-media-engine": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-media-engine",
+      "title": "미디어 형식"
+    },
+    "player-object-fit": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-object-fit",
+      "title": "화면 채우기"
+    },
+    "player-preset": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-preset",
+      "title": "프리셋"
+    },
+    "player-skin": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-skin",
+      "title": "스킨"
+    },
+    "player-theme-property": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-theme-property",
+      "title": "테마 속성"
+    },
+    "player-type": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/player-type",
+      "title": "플레이어 종류"
+    },
+    "post-roll": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/post-roll",
+      "title": "포스트롤"
+    },
+    "pre-roll": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/pre-roll",
+      "title": "프리롤"
+    },
+    "preview": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/preview",
+      "title": "게시 전 미리보기"
+    },
+    "publish": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/publish",
+      "title": "게시"
+    },
+    "publish-version": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/publish-version",
+      "title": "게시본과 게시 버전"
+    },
+    "replace": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/replace",
+      "title": "직접 편성 · 전체 대체"
+    },
+    "skip-offset": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/skip-offset",
+      "title": "스킵 대기"
+    },
+    "stats-csv": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/stats-csv",
+      "title": "조회 조건과 CSV"
+    },
+    "target-scope": {
+      "heading": true,
+      "focused": true,
+      "hash": "#/help/target-scope",
+      "title": "적용 단위"
+    }
+  },
+  "d9": {
+    "scheduleOriginal": "https://example.com/qa-coffee-kbd",
+    "scheduleAtHelp": {
+      "hash": "#/help/mid-roll",
+      "active": "sa-help-mid-roll"
+    },
+    "scheduleAfterBack": {
+      "hash": "#/schedule",
+      "editorVisible": true,
+      "value": "https://example.com/qa-d9-unsaved"
+    },
+    "scheduleAfterMenu": {
+      "hash": "#/schedule",
+      "editorVisible": true,
+      "value": "https://example.com/qa-d9-unsaved"
+    },
+    "presetAtHelp": {
+      "hash": "#/help/player-skin"
+    },
+    "presetAfterBack": {
+      "hash": "#/players/edit/p-vym1rjw052",
+      "formVisible": true,
+      "value": "{seconds}초 뒤 넘김 D9"
+    },
+    "presetAfterMenu": {
+      "hash": "#/players",
+      "formVisible": false,
+      "reopenedValue": "{seconds}초 뒤 넘김 D9",
+      "hashAfterReopen": "#/players/edit/p-vym1rjw052"
+    },
+    "writes": []
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

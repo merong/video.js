@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "key": "yellow-white",
+      "accent": {
+        "ariaInvalid": null,
+        "describedBy": [
+          "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+        ]
+      },
+      "text": "#ffffff",
+      "accentText": {
+        "ariaInvalid": null,
+        "describedBy": [
+          "강조색과 강조 글자색의 대비가 1:1이라 글자가 잘 안 보일 수 있어요. 4.5:1 이상을 권해요. 저장은 할 수 있어요.",
+          "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요."
+        ]
+      },
+      "warnings": [
+        "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.",
+        "강조색과 강조 글자색의 대비가 1:1이라 글자가 잘 안 보일 수 있어요. 4.5:1 이상을 권해요. 저장은 할 수 있어요."
+      ],
+      "saveEnabled": true,
+      "save": {
+        "api": [
+          "POST player-preset-save 200 "
+        ],
+        "live": {
+          "status": [
+            "미리보기가 준비됐어요.",
+            "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+          ],
+          "alert": [],
+          "pageStatus": [
+            "미리보기가 준비됐어요.",
+            "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+          ]
+        }
+      }
+    },
+    {
+      "key": "navy-white",
+      "accent": {
+        "ariaInvalid": null,
+        "describedBy": [
+          "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+        ]
+      },
+      "text": "#ffffff",
+      "accentText": {
+        "ariaInvalid": null,
+        "describedBy": [
+          "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요."
+        ]
+      },
+      "warnings": [
+        "프리셋 수정 · QA PL11 대비",
+        "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.",
+        "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "saveEnabled": true,
+      "save": {
+        "api": [
+          "POST player-preset-save 200 "
+        ],
+        "live": {
+          "status": [
+            "미리보기가 준비됐어요.",
+            "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+          ],
+          "alert": [],
+          "pageStatus": [
+            "미리보기가 준비됐어요.",
+            "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+          ]
+        }
+      }
+    },
+    {
+      "key": "navy-blank",
+      "accent": {
+        "ariaInvalid": null,
+        "describedBy": [
+          "진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 음량 막대도 이 색을 따라요."
+        ]
+      },
+      "text": "",
+      "accentText": {
+        "ariaInvalid": null,
+        "describedBy": [
+          "자동 대비",
+          "강조 글자색이 비어 있으면 일부 브라우저는 검정 글자를 써요. 검정과의 대비가 1.3:1이에요. 강조 글자색도 지정해 주세요.",
+          "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요."
+        ]
+      },
+      "warnings": [
+        "프리셋 수정 · QA PL11 대비",
+        "자동 대비",
+        "비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.",
+        "강조 글자색이 비어 있으면 일부 브라우저는 검정 글자를 써요. 검정과의 대비가 1.3:1이에요. 강조 글자색도 지정해 주세요.",
+        "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "saveEnabled": true,
+      "save": {
+        "api": [
+          "POST player-preset-save 200 "
+        ],
+        "live": {
+          "status": [
+            "미리보기가 준비됐어요.",
+            "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+          ],
+          "alert": [],
+          "pageStatus": [
+            "미리보기가 준비됐어요.",
+            "\"QA PL11 대비\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+          ]
+        }
+      }
+    }
+  ],
+  "cleanup": [
+    200
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

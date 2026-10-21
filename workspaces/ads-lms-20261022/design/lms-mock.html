@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LMS 시안</title>
+    <link rel="stylesheet" href="lms-mock.css" />
+  </head>
+  <body>
+    <h1>L-1 강의 프리셋 시안 (ads-lms-design-handoff.md 그림)</h1>
+    <p>폭은 로더 root 폭입니다. 390은 페이지 390에서 양옆 16px을 뺀 358입니다.</p>
+    <div id="cases"></div>
+    <script>
+      const SLIDES = '../../../integrations/ads-manager/public/examples/lecture/';
+      const CH = ['들어가며', '강의 프리셋 고르기', '진도와 완료 기준', '앞으로 건너뛰기 제한', '목차와 슬라이드', '스크립트 찾기', '메모와 북마크', '정리'];
+      const CUES = [
+        [0.5, '안녕하세요. 솔애드 플레이어로 강의를 올리는 방법을 함께 알아봐요.'],
+        [3.5, '강의 프리셋을 쓰면 학습자가 본 만큼 진도가 쌓여요.'],
+        [6.8, '목차와 슬라이드, 스크립트, 메모도 영상과 함께 움직여요.'],
+        [10.5, '먼저 관리자 화면의 플레이어 메뉴로 가요.'],
+        [13.5, '내장 프리셋 중 ‘강의’를 고르거나, 내 프리셋에서 강의 기능 사용을 켜요.'],
+        [16.5, '그다음 설치 코드에 강의 자료 주소 data-lecture를 더하면 준비가 끝나요.'],
+        [20.5, '진도는 실제로 재생한 구간만 세요.'],
+        [23.5, '같은 구간을 두 번 봐도 한 번만 들어가고, 광고 시간은 넣지 않아요.'],
+        [26.5, '진도가 완료 기준을 넘는 순간 완료로 기록돼요. 기본 기준은 90%예요.'],
+      ];
+      // packages/icons 기본 아이콘과 같은 18 칸, 2px 선. handoff 2.4절의 path와 같다.
+      const I = {
+        bookmarkAdd: '<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h8a1.5 1.5 0 0 1 1.5 1.5V16L9 12.5 3.5 16V3.5A1.5 1.5 0 0 1 5 2Z"/><path d="M9 5v5M6.5 7.5h5"/></svg>',
+        bookmark: '<svg viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M5 1h8a2.5 2.5 0 0 1 2.5 2.5v12.6a.9.9 0 0 1-1.39.76L9 13.6l-5.11 3.26a.9.9 0 0 1-1.39-.76V3.5A2.5 2.5 0 0 1 5 1Z"/></svg>',
+        lock: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="2"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>',
+        check: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-6.5"/></svg>',
+        checkCircle: '<svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="currentColor"/><path d="M5.5 9.2l2.3 2.3 4.7-5" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        server: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="4.5" rx="1.5"/><rect x="2.5" y="9" width="11" height="4.5" rx="1.5"/></svg>',
+        device: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="12" height="8.5" rx="1.5"/><path d="M5.5 14h5" stroke-linecap="round"/></svg>',
+        warn: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2 1.8 13h12.4Z"/><path d="M8 6.5v3M8 11.5v.1"/></svg>',
+        note: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M3 2.5h10a1 1 0 0 1 1 1v6.5a1 1 0 0 1-1 1H7L4 13.5V11H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1Z"/></svg>',
+        edit: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 2.5l3 3L6 13H3v-3Z"/></svg>',
+        trash: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5h11M6 4.5V3h4v1.5M4 4.5l.7 9h6.6l.7-9"/></svg>',
+        prev: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg>',
+        next: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg>',
+        up: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10 8 5.5l4.5 4.5"/></svg>',
+        down: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6 8 10.5 12.5 6"/></svg>',
+        file: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M4 1.5h5.5L13 5v9.5H4Z"/><path d="M9.5 1.5V5H13"/></svg>',
+        play: '<svg viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M5 3.5v11l9-5.5Z"/></svg>',
+        vol: '<svg viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M2 7h3l4-3.5v11L5 11H2Z"/><path d="M12 6.5a3.5 3.5 0 0 1 0 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+        cc: '<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect width="16" height="12" x="1" y="3" stroke="currentColor" stroke-width="2" rx="3"/><rect width="5" height="2" x="3" y="8" fill="currentColor" rx="1"/><rect width="5" height="2" x="9" y="11" fill="currentColor" rx="1"/></svg>',
+        gear: '<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="2.5"/><path d="M9 1.5v2M9 14.5v2M1.5 9h2M14.5 9h2M3.7 3.7l1.4 1.4M12.9 12.9l1.4 1.4M3.7 14.3l1.4-1.4M12.9 5.1l1.4-1.4"/></svg>',
+        pip: '<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="16" height="12" rx="3"/><rect x="9" y="9" width="5" height="3" fill="currentColor" stroke="none"/></svg>',
+        fs: '<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 6V2h4M16 6V2h-4M2 12v4h4M16 12v4h-4"/></svg>',
+        seek: '<svg viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1a7.98 7.98 0 0 1 6.132 2.867l1.441-1.44a.25.25 0 0 1 .427.177V6.75a.25.25 0 0 1-.25.25h-4.146a.25.25 0 0 1-.177-.427L13.71 5.29A5.99 5.99 0 0 0 9 3a6 6 0 0 0-4.242 10.242l-1.415 1.415A8 8 0 0 1 9 1"/></svg>',
+      };
+      const DUR = 80;
+      const pct = (t) => `${((t / DUR) * 100).toFixed(2)}%`;
+      const clock = (t) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+
+      function watched(segs) {
+        const stops = ['transparent 0'];
+        for (const [s, e] of segs) stops.push(`transparent ${pct(s)}`, `var(--solad-lms-watched-color) ${pct(s)} ${pct(e)}`, `transparent ${pct(e)}`);
+        return `linear-gradient(to right, ${stops.join(', ')})`;
+      }
+      function gaps() {
+        const parts = [];
+        for (let i = 0; i < 8; i++) {
+          const a = i * 12.5, b = a + 12.5;
+          parts.push(`#000 calc(${a}% + ${i ? 2 : 0}px)`, `#000 calc(${b}% - ${i < 7 ? 2 : 0}px)`, `transparent calc(${b}% - ${i < 7 ? 2 : 0}px)`, `transparent calc(${b}% + 2px)`);
+        }
+        return `linear-gradient(to right, transparent 0, ${parts.join(', ')})`;
+      }
+
+      function player(o) {
+        const narrow = o.w < 448;
+        const segs = o.segs ?? [[0, 34]];
+        const now = o.now ?? 34;
+        const style = `--now:${pct(now)};--buf:${pct(now + 12)};--solad-lms-watched:${watched(segs)};--solad-lms-watched-color:color-mix(in oklab, var(--media-primary) 65%, transparent);--gaps:${gaps()};${o.limit != null ? `--solad-lms-limit:${pct(o.limit)};` : ''}${o.accent ? `--media-accent-color:${o.accent};` : ''}`;
+        const title = o.title ?? '솔애드 플레이어로 강의 올리기 · 3장 진도와 완료 기준';
+        const right = `<span class="pl-btn${o.focusBm ? ' is-focus' : ''}" title="북마크 추가 (B)">${I.bookmarkAdd}</span><span class="pl-btn">${I.cc}</span><span class="pl-btn">${I.gear}</span>`;
+        const side = `<span class="pl-btn">${I.pip}</span><span class="pl-btn">${I.fs}</span>`;
+        return `<div class="pl${o.toast ? ' has-toast' : ''}" style="${style}">
+          <img src="${SLIDES}slide-0${o.slide ?? 4}.svg" alt="" />
+          <div class="pl-title"><span>${title}</span></div>
+          <div class="pl-grad"></div>
+          <div class="pl-top">${side}</div>
+          <div class="pl-ctl">
+            <span class="pl-btn">${I.play}</span><span class="pl-btn">${I.seek}</span><span class="pl-btn">${I.vol}</span>
+            <span class="pl-time${narrow ? '' : ' is-wide'}">${clock(now)}</span>
+            <div class="pl-slider"><div class="pl-track"><i class="buf"></i><i class="watched"></i><i class="fill"></i></div>${o.limit != null ? '<i class="pl-limit"></i>' : ''}<i class="pl-thumb"></i></div>
+            <span class="pl-time${narrow ? ' is-wide' : ''}">${clock(DUR)}</span>
+            ${narrow ? '<span class="pl-sp"></span>' : ''}${right}${narrow ? '' : side}
+          </div>
+          ${o.toast ? `<div class="solad-lms-toast" aria-hidden="true">${o.toast}</div>` : ''}
+          ${o.resume ? `<div class="solad-lms-resume" role="dialog" aria-modal="true" aria-labelledby="rs-t"><div class="solad-lms-resume-card"><p class="solad-lms-resume-text" id="rs-t">지난번 <b>0:34</b>까지 봤어요</p><p class="solad-lms-resume-sub">진도 42% · 완료 기준 90%</p><div class="solad-lms-resume-row"><button type="button">처음부터</button><button type="button" class="is-primary is-focus">이어서 보기</button></div></div></div>` : ''}
+        </div>`;
+      }
+
+      function head(o = {}) {
+        const v = o.pct ?? 42;
+        const state = o.done
+          ? `<span class="lms-state is-done">${I.check}완료 · 10월 22일 14:05</span>`
+          : o.ad
+            ? `<span class="lms-state">광고 중</span>`
+            : `<span class="lms-state">학습 중</span>`;
+        const store = o.store ?? ['server', '학습 기록이 저장돼요'];
+        const icon = store[0] === 'server' ? I.server : store[0] === 'warn' ? I.warn : I.device;
+        return `<div class="lms-head">
+          <div class="lms-head-row"><span class="lms-pct">진도 ${v}%</span><span class="lms-sub">완료 기준 90%</span>${state}</div>
+          <div class="lms-bar" role="img" aria-label="진도 ${v}%, 완료 기준 90%" style="--v:${v}%;--t:90%"><i></i><b></b></div>
+          <p class="lms-store${store[0] === 'warn' ? ' is-warn' : ''}" style="margin:0">${icon}<span>${store[1]}</span></p>
+        </div>`;
+      }
+
+      function tabs(sel, o = {}) {
+        const names = o.names ?? ['목차', '자료', '스크립트', '메모'];
+        return `<div class="lms-tabs" role="tablist" aria-label="강의 자료">${names
+          .map((n) => `<button class="lms-tab${o.focus === n ? ' is-focus' : ''}" role="tab" aria-selected="${n === sel}" tabindex="${n === sel ? 0 : -1}">${n}${n === '메모' && o.notes ? `<small>${o.notes}</small>` : ''}</button>`)
+          .join('')}</div>`;
+      }
+
+      function chapters(o = {}) {
+        const cur = o.cur ?? 3, limit = o.limit ?? 34;
+        const ratio = o.ratio ?? [100, 100, 100, 40, 0, 0, 0, 0];
+        return `<ol class="lms-list">${CH.map((t, i) => {
+          const start = i * 10;
+          const locked = o.locked !== false && start > limit;
+          const r = ratio[i];
+          const side = locked
+            ? `<span class="lms-mini">${I.lock.replace('<svg', '<svg class="lms-ico"')}</span>`
+            : r >= 90
+              ? `<span class="lms-mini lms-done">${I.check.replace('<svg', '<svg class="lms-ico"')}</span>`
+              : `<span class="lms-mini"><span><i style="--v:${r}%"></i></span><small>${r}%</small></span>`;
+          return `<li><button class="lms-row" ${i === cur ? 'aria-current="true"' : ''} ${locked ? 'aria-disabled="true"' : ''}><span class="lms-time">${clock(start)}</span><span class="lms-title">${i + 1}. ${t}</span>${side}</button></li>`;
+        }).join('')}</ol>`;
+      }
+
+      function materials(o = {}) {
+        const n = o.n ?? 3;
+        return `<div class="lms-slide">
+          <div class="lms-slide-title">${n}장 ${CH[n - 1]}</div>
+          <img src="${SLIDES}slide-0${n}.svg" alt="${n}장 ${CH[n - 1]} 슬라이드" />
+          <div class="lms-tools" style="padding:0">
+            <div class="lms-pager"><button class="lms-btn is-icon" aria-label="이전 슬라이드">${I.prev}</button><span class="lms-count">${n} / 8</span><button class="lms-btn is-icon" aria-label="다음 슬라이드">${I.next}</button></div>
+            <span class="lms-grow"></span>
+            <button class="lms-btn" aria-pressed="${o.follow ?? true}">${(o.follow ?? true) ? I.check : ''}영상 따라가기</button>
+            ${(o.follow ?? true) ? '' : '<button class="lms-btn">이 장면으로 이동</button>'}
+          </div>
+        </div>
+        <h3 class="lms-h3">내려받기 자료</h3>
+        <a class="lms-file" href="#">${I.file.replace('<svg', '<svg class="lms-ico"')}강의 자료(PDF)<span class="lms-sr"> (새 탭에서 열림)</span><small>1.2MB</small></a>
+        <a class="lms-file" href="#">${I.file.replace('<svg', '<svg class="lms-ico"')}1장 슬라이드(SVG)<span class="lms-sr"> (새 탭에서 열림)</span><small>2.2KB</small></a>`;
+      }
+
+      function transcript(o = {}) {
+        const q = o.q ?? '';
+        const cur = o.cur ?? 6;
+        let hit = 0;
+        const rows = CUES.map(([t, text], i) => {
+          let html = text;
+          if (q) html = text.replaceAll(q, () => `<mark${++hit === 2 ? ' class="is-current"' : ''}>${q}</mark>`);
+          return `<li><button class="lms-row" style="grid-template-columns:44px minmax(0,1fr)" ${i === cur ? 'aria-current="true"' : ''}><span class="lms-time">${clock(t)}</span><span>${html}</span></button></li>`;
+        }).join('');
+        const none = o.none;
+        return `<div class="lms-tools">
+            <input class="lms-input" type="search" aria-label="스크립트 검색" placeholder="스크립트에서 찾기" value="${none ?? q}" />
+            ${q || none ? `<span class="lms-count">${none ? '0개' : `${hit}개 중 2번째`}</span><button class="lms-btn is-icon" aria-label="이전 결과" ${none ? 'disabled' : ''}>${I.up}</button><button class="lms-btn is-icon" aria-label="다음 결과" ${none ? 'disabled' : ''}>${I.down}</button>` : ''}
+            <span class="lms-switch${o.auto === false ? '' : ' is-on'}" role="switch" aria-checked="${o.auto !== false}"><i></i>자동 스크롤</span>
+          </div>
+          ${none ? `<div class="lms-empty"><b>‘${none}’와 맞는 문장이 없어요.</b><span>다른 낱말로 찾아보세요.</span></div>` : `<ol class="lms-list">${rows}</ol>`}`;
+      }
+
+      function notes(o = {}) {
+        if (o.empty)
+          return `${compose(o)}<div class="lms-empty"><b>아직 메모가 없어요.</b><span>지금 장면에 떠오른 생각을 남겨 보세요. 북마크 버튼이나 B 키로 장면만 표시할 수도 있어요.</span></div>`;
+        const items = [
+          [12, 'note', '설치 코드에 data-lecture 한 줄만 더하면 된다.\n토큰은 LMS 서버에서 서명.'],
+          [26, 'bookmark', ''],
+          [34, 'note', '완료 기준은 사업주훈련이면 80%로 맞추기'],
+          [61, 'bookmark', '메모 화면 다시 보기'],
+        ];
+        return `${compose(o)}<div>${items
+          .map(([t, kind, text], i) => {
+            const k = kind === 'note' ? '메모' : '북마크';
+            const err = o.fail && i === 2 ? `<div class="lms-note-err">${I.warn.replace('<svg', '<svg class="lms-ico"')}저장하지 못했어요.<button class="lms-btn">다시 시도</button></div>` : '';
+            const confirm = o.confirm && i === 0 ? `<div class="lms-note-confirm"><span>이 메모를 지울까요?</span><span class="lms-grow"></span><button class="lms-btn">취소</button><button class="lms-btn is-danger is-focus">지우기</button></div>` : '';
+            return `<div class="lms-note"><button class="lms-note-time" aria-label="${clock(t)}로 이동, ${k}">${kind === 'note' ? I.note : I.bookmark}${clock(t)}</button><p class="${text ? '' : 'is-empty'}">${text || '북마크'}</p><span class="lms-note-acts"><button class="lms-btn is-icon" aria-label="${clock(t)} ${k} 고치기">${I.edit}</button><button class="lms-btn is-icon" aria-label="${clock(t)} ${k} 지우기">${I.trash}</button></span>${err}${confirm}</div>`;
+          })
+          .join('')}</div>`;
+      }
+      function compose(o) {
+        if (o.full)
+          return `<div class="lms-limit-note">${I.warn}<span><b>메모와 북마크는 200개까지예요.</b> 지운 뒤에 더할 수 있어요.</span></div>`;
+        return `<div class="lms-compose"><label for="nt">0:34에 메모</label><textarea class="lms-input" id="nt" rows="2" maxlength="1000" placeholder="이 장면에 남길 메모"></textarea><div class="lms-compose-row"><span class="lms-count">0 / 1000</span><span class="lms-grow"></span><button class="lms-btn is-primary" disabled>저장</button></div></div>`;
+      }
+
+      function panel(o) {
+        return `<section class="lms-panel ${o.scheme ? `is-${o.scheme}` : ''}" aria-label="강의 진도와 자료" style="${o.accent ? `--media-accent-color:${o.accent};` : ''}">
+          ${head(o.head)}
+          ${o.noTabs ? '' : tabs(o.tab, o.tabs)}
+          <div class="lms-body" role="tabpanel" aria-label="${o.tab}">${o.body}</div>
+          ${o.foot ? `<p class="lms-foot" style="margin:0">${I.warn}<span>${o.foot}</span></p>` : ''}
+          <div class="lms-sr" role="status"></div>
+        </section>`;
+      }
+
+      function layout(o) {
+        return `<section class="case" style="--w:${o.w}px" data-case="${o.id}"><h2>${o.label}</h2>
+          <div class="page is-${o.page}"><div class="solad-lms" style="width:${o.w - 32}px"><div class="solad-lms-grid">${player({ ...o.player, w: o.pw })}${panel(o.panel)}</div></div></div></section>`;
+      }
+
+      const out = [];
+      out.push(
+        layout({
+          id: 'w1280',
+          w: 1280 + 32,
+          pw: 840,
+          page: 'light',
+          label: '1280 · 옆 배치(2:1) · 밝은 페이지 · 앞으로 건너뛰기 막힘 알림 · 목차 탭',
+          player: { segs: [[0, 34], [52, 58]], now: 34, limit: 35, toast: `${I.lock}<span>아직 보지 않은 구간이에요. <b>0:35</b>까지만 이동할 수 있어요.</span>` },
+          panel: { tab: '목차', tabs: { notes: 4 }, body: chapters() },
+        }),
+        layout({
+          id: 'w768',
+          w: 768 + 32,
+          pw: 736,
+          page: 'dark',
+          label: '768 · 아래 배치 · 어두운 페이지 · 이어보기 물어보기 · 스크립트 검색 “진도”',
+          player: { resume: true, now: 0, segs: [[0, 34]], limit: 35, slide: 1, title: '솔애드 플레이어로 강의 올리기' },
+          panel: { scheme: 'dark', tab: '스크립트', tabs: { notes: 4 }, body: transcript({ q: '진도' }), head: { store: ['device', '로그인하지 않아 이 브라우저에만 저장돼요'] } },
+        }),
+        layout({
+          id: 'w390',
+          w: 390,
+          pw: 358,
+          page: 'light',
+          label: '390 · 아래 배치 · 강조색 라임(#CDF352) · 북마크 추가 알림 · 자료 탭(따라가기 끔)',
+          player: { accent: '#CDF352', now: 61, segs: [[0, 61]], focusBm: true, slide: 7, title: '솔애드 플레이어로 강의 올리기 · 7장 메모와 북마크 — 두 줄이 넘는 긴 제목은 말줄임해요', toast: `${I.bookmark}<span>북마크를 추가했어요 · <b>1:01</b></span>` },
+          panel: { accent: '#CDF352', tab: '자료', tabs: { notes: 5 }, body: materials({ n: 5, follow: false }), head: { pct: 76 } },
+        }),
+        layout({
+          id: 'w390d',
+          w: 390,
+          pw: 358,
+          page: 'dark',
+          label: '390 · 어두운 페이지(패널은 밝은 체계 고정) · 완료 알림 · 메모 탭(지우기 확인)',
+          player: { now: 73, segs: [[0, 73]], slide: 8, toast: `<span style="color:var(--media-primary)">${I.checkCircle}</span><span>강의를 완료했어요</span>` },
+          panel: { scheme: 'light', tab: '메모', tabs: { notes: 4 }, body: notes({ confirm: true }), head: { pct: 91, done: true } },
+        })
+      );
+
+      out.push(
+        layout({
+          id: 'w390r',
+          w: 390,
+          pw: 358,
+          page: 'dark',
+          label: '390 · 이어보기 물어보기(가장 좁은 폭) · 패널은 어두운 체계',
+          player: { resume: true, now: 0, segs: [[0, 34]], slide: 1, title: '솔애드 플레이어로 강의 올리기' },
+          panel: { scheme: 'dark', tab: '목차', tabs: { notes: 4 }, body: chapters({ locked: false }) },
+        })
+      );
+
+      const st = (h, o) => `<div><h3>${h}</h3>${panel(o)}</div>`;
+      out.push(`<section class="case" style="--w:1520px" data-case="states"><h2>패널 상태 · 358 폭(390 화면) · 밝은 체계</h2><div class="page is-light"><div class="states">
+        ${st('불러오는 중', { tab: '목차', head: { pct: 0, store: ['device', '진도를 불러오는 중이에요'] }, body: '<div class="lms-skel" aria-busy="true"><i></i><i></i><i></i><i></i></div><span class="lms-sr">강의 자료를 불러오는 중이에요</span>' })}
+        ${st('메모 비어 있음', { tab: '메모', body: notes({ empty: true }) })}
+        ${st('검색 결과 없음', { tab: '스크립트', body: transcript({ none: '퀴즈' }) })}
+        ${st('메모 한도(200개)', { tab: '메모', tabs: { notes: 200 }, body: notes({ full: true }) })}
+        ${st('서버 저장 실패(진도·메모)', { tab: '메모', head: { store: ['warn', '서버에 저장하지 못해 이 브라우저에 임시로 저장하고 있어요. 연결되면 다시 보내요.'] }, body: notes({ fail: true }) })}
+        ${st('자료 일부 못 읽음 · 목차 잠긴 장', { tab: '목차', names: ['목차', '스크립트', '메모'], tabs: { names: ['목차', '스크립트', '메모'] }, body: chapters({ cur: 1, limit: 18, ratio: [100, 80, 0, 0, 0, 0, 0, 0] }), foot: '강의 자료 중 2개를 읽지 못했어요' })}
+        ${st('광고 중(프리롤)', { tab: '목차', head: { pct: 0, ad: true, store: ['server', '학습 기록이 저장돼요'] }, body: chapters({ cur: 0, limit: 0, ratio: [0, 0, 0, 0, 0, 0, 0, 0] }) })}
+        ${st('미리보기', { tab: '목차', head: { pct: 12, store: ['device', '미리보기는 진도를 저장하지 않아요'] }, body: chapters({ cur: 1, locked: false, ratio: [100, 20, 0, 0, 0, 0, 0, 0] }) })}
+        ${st('어두운 체계 · 목차', { scheme: 'dark', tab: '목차', body: chapters() })}
+      </div></div></section>`);
+      document.getElementById('cases').innerHTML = out.join('');
+    </script>
+  </body>
+</html>

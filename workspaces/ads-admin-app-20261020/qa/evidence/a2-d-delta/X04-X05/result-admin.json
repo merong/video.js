@@ -1,0 +1,234 @@
+{
+  "x04": [
+    {
+      "label": "admin-other-videojs-native-preset",
+      "query": "?video=grok-demo-scene-01&type=videojs&preset=p-pchm59hhyv",
+      "presetNote": "‘QA 기본 video’ 프리셋은 기본 video용이에요. Video.js에서는 이 프리셋 대신 기본값으로 재생해요. 로더도 같은 규칙이에요.",
+      "queryNote": null,
+      "conditions": [
+        "프리셋=QA 기본 video",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "controls": false
+        }
+      },
+      "events": 0
+    },
+    {
+      "label": "admin-unknown-videojs",
+      "query": "?video=grok-demo-scene-01&type=videojs&preset=p-zzzzzzzzzz",
+      "presetNote": "프리셋을 찾지 못했어요(p-zzzzzzzzzz). 설치한 페이지와 같이 기본 설정으로 재생해요.",
+      "queryNote": null,
+      "conditions": [
+        "프리셋=p-zzzzzzzzzz",
+        "영상 ID=grok-demo-scene-01",
+        "본편=http://127.0.0.1:18781/demo-media/content.mp4",
+        "편성=게시본",
+        "통계=수집해요"
+      ],
+      "status": "",
+      "player": {
+        "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+        "fill": "oklch(1 0 0)",
+        "radius": "28px",
+        "media": {
+          "tag": "VIDEO",
+          "controls": false
+        }
+      },
+      "events": 0
+    }
+  ],
+  "x05": {
+    "links": [
+      {
+        "text": "?",
+        "href": "#/help/play-test",
+        "target": null,
+        "describedBy": []
+      },
+      {
+        "text": "기본 video로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/play-test.html?video=grok-demo-scene-01&type=native&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-pchm59hhyv",
+        "target": "_blank",
+        "describedBy": []
+      },
+      {
+        "text": "Video.js로 재생 (새 탭)",
+        "href": "http://127.0.0.1:18781/examples/play-test.html?video=grok-demo-scene-01&type=videojs&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "target": "_blank",
+        "describedBy": [
+          "Video.js는 이 프리셋과 다른 플레이어라 프리셋 없이 열어요. 설치한 페이지처럼 사이트 적용 프리셋으로 재생하고, 그것도 다른 플레이어용이면 기본값으로 재생해요."
+        ]
+      }
+    ],
+    "notes": [
+      "Video.js는 이 프리셋과 다른 플레이어라 프리셋 없이 열어요. 설치한 페이지처럼 사이트 적용 프리셋으로 재생하고, 그것도 다른 플레이어용이면 기본값으로 재생해요."
+    ],
+    "opened": [
+      {
+        "label": "videojs-link-site-accent",
+        "query": "?video=grok-demo-scene-01&type=videojs&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "presetNote": null,
+        "queryNote": null,
+        "conditions": [
+          "프리셋=QA 강조색 복제 (사이트 적용)",
+          "영상 ID=grok-demo-scene-01",
+          "본편=http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+          "편성=게시본",
+          "통계=수집해요"
+        ],
+        "status": "",
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "fill": "rgb(37, 99, 235)",
+          "radius": "28px",
+          "media": {
+            "tag": "VIDEO",
+            "controls": false
+          }
+        },
+        "nowAfterPlay": "최근 광고 진행 프리롤 1/2 재생 중 20:01:23",
+        "events": 1
+      },
+      {
+        "label": "native-link",
+        "query": "?video=grok-demo-scene-01&type=native&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4&preset=p-pchm59hhyv",
+        "presetNote": null,
+        "queryNote": null,
+        "conditions": [
+          "프리셋=QA 기본 video",
+          "영상 ID=grok-demo-scene-01",
+          "본편=http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+          "편성=게시본",
+          "통계=수집해요"
+        ],
+        "status": "",
+        "player": {
+          "tree": "DIV > VIDEO",
+          "media": {
+            "tag": "VIDEO",
+            "controls": true
+          }
+        },
+        "events": 0
+      },
+      {
+        "label": "videojs-link-site-native",
+        "query": "?video=grok-demo-scene-01&type=videojs&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "presetNote": "‘QA 기본 video’ 프리셋은 기본 video용이에요. Video.js에서는 이 프리셋 대신 기본값으로 재생해요. 로더도 같은 규칙이에요.",
+        "queryNote": null,
+        "conditions": [
+          "프리셋=QA 기본 video (사이트 적용)",
+          "영상 ID=grok-demo-scene-01",
+          "본편=http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+          "편성=게시본",
+          "통계=수집해요"
+        ],
+        "status": "",
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "fill": "oklch(1 0 0)",
+          "radius": "28px",
+          "media": {
+            "tag": "VIDEO",
+            "controls": false
+          }
+        },
+        "events": 0
+      },
+      {
+        "label": "videojs-link-restored",
+        "query": "?video=grok-demo-scene-01&type=videojs&media=mp4&content=http%3A%2F%2F127.0.0.1%3A18781%2Fdemo-media%2Fgrok-20261018%2Fcontent-scene-01.mp4",
+        "presetNote": null,
+        "queryNote": null,
+        "conditions": [
+          "프리셋=QA 강조색 복제 (사이트 적용)",
+          "영상 ID=grok-demo-scene-01",
+          "본편=http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4",
+          "편성=게시본",
+          "통계=수집해요"
+        ],
+        "status": "",
+        "player": {
+          "tree": "MEDIA-I18N[lang=ko] > VIDEO-PLAYER > VIDEO-SKIN > VIDEO+MEDIA-ADS",
+          "fill": "rgb(37, 99, 235)",
+          "radius": "28px",
+          "media": {
+            "tag": "VIDEO",
+            "controls": false
+          }
+        },
+        "events": 0
+      }
+    ],
+    "applyNative": "\"QA 기본 video\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+    "restore": "\"QA 강조색 복제\" 프리셋을 사이트에 적용했어요. 페이지를 새로고침하면 바뀐 플레이어가 보여요.",
+    "siteAfter": [
+      "이름 플레이어 종류 언어 사이트 적용 수정 시각 작업",
+      "QA 강조색 복제 p-i0aecb28w3 Video.js 플레이어 페이지 언어 사이트 적용 2026. 10. 21. 오후 6:28 수정 복제 삭"
+    ]
+  },
+  "api": [
+    "POST login",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset&id=p-zzzzzzzzzz @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-presets",
+    "GET schedule-draft&targetType=site&targetId=site-local",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "POST events @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-presets",
+    "POST player-preset-default",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-pchm59hhyv @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "POST player-preset-default",
+    "GET player-preset @/examples/play-test.html",
+    "GET player-presets @/examples/play-test.html",
+    "GET player-preset&id=p-i0aecb28w3 @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html",
+    "GET player-preset @/examples/play-test.html",
+    "GET schedule&videoId=grok-demo-scene-01 @/examples/play-test.html"
+  ],
+  "eventsTotal": 1,
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "warning: [solad] 프리셋이 다른 플레이어용이라 기본 설정으로 재생합니다(p-pchm59hhyv: native 플레이어용).",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "warning: [solad] 프리셋을 찾지 못했습니다(p-zzzzzzzzzz). 기본 설정으로 재생합니다."
+  ]
+}

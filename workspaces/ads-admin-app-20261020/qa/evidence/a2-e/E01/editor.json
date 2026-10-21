@@ -1,0 +1,249 @@
+{
+  "openFF000000": {
+    "text": "#ff000000",
+    "textDisabled": true,
+    "textInvalid": null,
+    "textDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#ff0000",
+    "colorDisabled": true,
+    "colorDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color is-none",
+    "clear": null,
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": true,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ],
+    "line": "rgba(255, 0, 0, 0)"
+  },
+  "open00000026": {
+    "text": "#00000026",
+    "textDisabled": false,
+    "textInvalid": null,
+    "textDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#000000",
+    "colorDisabled": false,
+    "colorDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color",
+    "clear": "지우기",
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ],
+    "line": "rgba(0, 0, 0, 0.15)"
+  },
+  "on": {
+    "text": "#00000000",
+    "textDisabled": true,
+    "textInvalid": null,
+    "textDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#000000",
+    "colorDisabled": true,
+    "colorDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color is-none",
+    "clear": null,
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": true,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ],
+    "line": "rgba(0, 0, 0, 0)",
+    "focusIsCheck": true
+  },
+  "off": {
+    "text": "",
+    "textDisabled": false,
+    "textInvalid": null,
+    "textDesc": [
+      "스킨 기본 (반투명 검정)",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#ffffff",
+    "colorDisabled": false,
+    "colorDesc": [
+      "스킨 기본 (반투명 검정)",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color is-empty",
+    "clear": null,
+    "state": "스킨 기본 (반투명 검정)",
+    "fieldCls": "sa-field",
+    "help": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ],
+    "line": "rgba(0, 0, 0, 0.1)"
+  },
+  "upper8": {
+    "text": "#abcdef12",
+    "textDisabled": false,
+    "textInvalid": null,
+    "textDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#abcdef",
+    "colorDisabled": false,
+    "colorDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color",
+    "clear": "지우기",
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ],
+    "line": "rgba(171, 205, 239, 0.07)"
+  },
+  "wrong": {
+    "text": "#12345",
+    "textDisabled": false,
+    "textInvalid": "true",
+    "textDesc": [
+      "#과 16진수 6자리로 입력해 주세요. 투명도를 넣으려면 8자리로 써요. 예: #cdf352, #00000026",
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#abcdef",
+    "colorDisabled": false,
+    "colorDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color",
+    "clear": "지우기",
+    "state": null,
+    "fieldCls": "sa-field is-error",
+    "help": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "#과 16진수 6자리로 입력해 주세요. 투명도를 넣으려면 8자리로 써요. 예: #cdf352, #00000026",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ]
+  },
+  "typedNone": {
+    "text": "#00000000",
+    "textDisabled": false,
+    "textInvalid": null,
+    "textDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#000000",
+    "colorDisabled": false,
+    "colorDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color",
+    "clear": "지우기",
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ],
+    "line": "rgba(0, 0, 0, 0)"
+  },
+  "typed8ff": {
+    "text": "#11223344",
+    "textDisabled": false,
+    "textInvalid": null,
+    "textDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#112233",
+    "colorDisabled": false,
+    "colorDesc": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color",
+    "clear": "지우기",
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "색 칸은 투명도를 보이지 못해요. 색 칸에서 고르면 투명도가 빠져요.",
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ]
+  },
+  "typedFF": {
+    "text": "#112233ff",
+    "textDisabled": false,
+    "textInvalid": null,
+    "textDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "color": "#112233",
+    "colorDisabled": false,
+    "colorDesc": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "colorCls": "sa-color",
+    "clear": "지우기",
+    "state": null,
+    "fieldCls": "sa-field",
+    "help": [
+      "플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요."
+    ],
+    "check": false,
+    "checkDesc": [
+      "켜면 플레이어 둘레에 선을 그리지 않아요."
+    ]
+  },
+  "api": [
+    "POST login",
+    "GET player-presets"
+  ],
+  "events": 0,
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

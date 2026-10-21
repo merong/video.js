@@ -1,0 +1,2855 @@
+{
+  "demo": [
+    {
+      "size": "1280x900",
+      "id": "default",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 43,
+          "y": 397,
+          "w": 818,
+          "h": 460.1
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 818px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 44.5,
+          "y": 398.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 859,
+          "y": 855.1,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 73,
+          "y": 627.05,
+          "rgb": [
+            39,
+            56,
+            102
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 40,
+          "y": 627.05,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "flat",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "0px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000000",
+        "varRadius": "0px",
+        "overflow": "clip",
+        "rect": {
+          "x": 43,
+          "y": 397,
+          "w": 818,
+          "h": 460.1
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 818px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 44.5,
+          "y": 398.5,
+          "rgb": [
+            4,
+            14,
+            40
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 859,
+          "y": 855.1,
+          "rgb": [
+            16,
+            23,
+            52
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 73,
+          "y": 627.05,
+          "rgb": [
+            39,
+            56,
+            102
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 40,
+          "y": 627.05,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "rounded",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "12px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "12px",
+        "overflow": "clip",
+        "rect": {
+          "x": 43,
+          "y": 397,
+          "w": 818,
+          "h": 460.1
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 818px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 44.5,
+          "y": 398.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 859,
+          "y": 855.1,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 73,
+          "y": 627.05,
+          "rgb": [
+            39,
+            56,
+            102
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 40,
+          "y": 627.05,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "accent",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 43,
+          "y": 397,
+          "w": 818,
+          "h": 460.1
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 818px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 44.5,
+          "y": 398.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 859,
+          "y": 855.1,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 73,
+          "y": 627.05,
+          "rgb": [
+            39,
+            56,
+            102
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 40,
+          "y": 627.05,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "p-wgqz3x31a5",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000026",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 43,
+          "y": 397,
+          "w": 818,
+          "h": 460.1
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 43,
+            "y": 397,
+            "w": 818,
+            "h": 460
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 818px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 44.5,
+          "y": 398.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 859,
+          "y": 855.1,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 73,
+          "y": 627.05,
+          "rgb": [
+            39,
+            56,
+            102
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 40,
+          "y": 627.05,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "default",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 35,
+          "y": 498,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 499.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 676,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 588,
+          "rgb": [
+            26,
+            32,
+            58
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 588,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "flat",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "0px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000000",
+        "varRadius": "0px",
+        "overflow": "clip",
+        "rect": {
+          "x": 35,
+          "y": 498,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 499.5,
+          "rgb": [
+            4,
+            14,
+            40
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 676,
+          "rgb": [
+            16,
+            24,
+            52
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 588,
+          "rgb": [
+            26,
+            32,
+            58
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 588,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "rounded",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "12px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "12px",
+        "overflow": "clip",
+        "rect": {
+          "x": 35,
+          "y": 498,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 499.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 676,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 588,
+          "rgb": [
+            26,
+            32,
+            58
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 588,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "accent",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 35,
+          "y": 498,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 499.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 676,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 588,
+          "rgb": [
+            26,
+            32,
+            58
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 588,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "p-wgqz3x31a5",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000026",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 35,
+          "y": 498,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": {
+          "cls": "ex-player",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 498,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "iframe": null,
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 499.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 676,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 588,
+          "rgb": [
+            26,
+            32,
+            58
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 588,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    }
+  ],
+  "admin": [
+    {
+      "size": "1280x900",
+      "id": "default",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 442,
+          "h": 248.6
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "scaleNote": "자리 폭 442px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 796.5,
+          "y": 386.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 1235,
+          "y": 631.6,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 825,
+          "y": 509.3,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 792,
+          "y": 509.3,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "flat",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "0px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000000",
+        "varRadius": "0px",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 442,
+          "h": 248.6
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "scaleNote": "자리 폭 442px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 796.5,
+          "y": 386.5,
+          "rgb": [
+            12,
+            12,
+            13
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 1235,
+          "y": 631.6,
+          "rgb": [
+            14,
+            14,
+            16
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 825,
+          "y": 509.3,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 792,
+          "y": 509.3,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "rounded",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "12px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "12px",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 442,
+          "h": 248.6
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "scaleNote": "자리 폭 442px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 796.5,
+          "y": 386.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 1235,
+          "y": 631.6,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 825,
+          "y": 509.3,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 792,
+          "y": 509.3,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "accent",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 442,
+          "h": 248.6
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 795,
+            "y": 385,
+            "w": 442,
+            "h": 249
+          }
+        },
+        "scaleNote": "자리 폭 442px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 796.5,
+          "y": 386.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 1235,
+          "y": 631.6,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 825,
+          "y": 509.3,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 792,
+          "y": 509.3,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "1280x900",
+      "id": "p-wgqz3x31a5",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000026",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 322,
+          "h": 181.1
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 915,
+            "y": 385,
+            "w": 322,
+            "h": 181
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 915,
+            "y": 385,
+            "w": 322,
+            "h": 181
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 915,
+            "y": 385,
+            "w": 322,
+            "h": 181
+          }
+        },
+        "scaleNote": "자리 폭 322px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 916.5,
+          "y": 386.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 1235,
+          "y": 564.1,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 945,
+          "y": 475.55,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 912,
+          "y": 475.55,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "default",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 574.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 751,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 663,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 663,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "flat",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "0px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000000",
+        "varRadius": "0px",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 574.5,
+          "rgb": [
+            12,
+            12,
+            13
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 751,
+          "rgb": [
+            14,
+            14,
+            16
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 663,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 663,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "rounded",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "12px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "12px",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 574.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 751,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 663,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 663,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "accent",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 573,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 574.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 751,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 663,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 663,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "size": "390x844",
+      "id": "p-wgqz3x31a5",
+      "shape": {
+        "kind": "solad-video-skin",
+        "radius": "28px",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "-4px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderColor": "rgb(24, 24, 26)",
+        "varBorderColor": "#00000026",
+        "varRadius": "",
+        "overflow": "clip",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180
+        }
+      },
+      "stage": {
+        "view": {
+          "cls": "sa-stage-view",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "hidden",
+          "clipPath": "none",
+          "bg": "rgb(247, 247, 247)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 556,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "frame": {
+          "cls": "sa-stage-frame",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "visible",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "rect": {
+            "x": 35,
+            "y": 556,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "exPlayer": null,
+        "iframe": {
+          "cls": "",
+          "radius": "0px",
+          "border": "0px none rgb(24, 24, 26)",
+          "outline": "none 3px",
+          "shadow": "none",
+          "overflow": "clip",
+          "clipPath": "none",
+          "bg": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "rect": {
+            "x": 35,
+            "y": 556,
+            "w": 320,
+            "h": 180
+          }
+        },
+        "scaleNote": "자리 폭 320px · 실제 크기예요"
+      },
+      "frameDoc": {
+        "html": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "body": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "visible",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        "exPlayer": {
+          "radius": "0px",
+          "border": "0px none",
+          "shadow": "none",
+          "overflow": "hidden",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      },
+      "scale": 1,
+      "pixels": [
+        {
+          "label": "top-left corner +1.5",
+          "x": 36.5,
+          "y": 557.5,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "bottom-right corner -2",
+          "x": 353,
+          "y": 734,
+          "rgb": [
+            247,
+            247,
+            247
+          ]
+        },
+        {
+          "label": "inside left middle",
+          "x": 65,
+          "y": 646,
+          "rgb": [
+            19,
+            19,
+            21
+          ]
+        },
+        {
+          "label": "outside left -3",
+          "x": 32,
+          "y": 646,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalOverflow": false
+      }
+    }
+  ],
+  "lists": {
+    "demoSelect": [
+      {
+        "label": "내장",
+        "options": [
+          "default:기본",
+          "flat:플랫",
+          "rounded:둥근 테두리",
+          "accent:강조색"
+        ]
+      },
+      {
+        "label": "저장 프리셋",
+        "options": [
+          "p-i0aecb28w3:QA 강조색 복제 (사이트 적용)",
+          "p-lc3i8eidb4:QA 자동재생",
+          "p-pchm59hhyv:QA 기본 video",
+          "p-wgqz3x31a5:QA 테두리 8자리",
+          "p-46sx1n57gw:QA 테두리 투명색"
+        ]
+      }
+    ],
+    "adminRows": [
+      "기본내장defaultVideo.js 플레이어페이지 언어—패키지 기본값미리",
+      "플랫내장flatVideo.js 플레이어페이지 언어—패키지 기본값미리보기수",
+      "둥근 테두리내장roundedVideo.js 플레이어페이지 언어—패키지 기",
+      "강조색내장accentVideo.js 플레이어페이지 언어—패키지 기본값미리",
+      "QA 강조색 복제p-i0aecb28w3Video.js 플레이어페이지 언어",
+      "QA 자동재생p-lc3i8eidb4Video.js 플레이어페이지 언어—2",
+      "QA 기본 videop-pchm59hhyv기본 video페이지 언어—20",
+      "QA 테두리 8자리p-wgqz3x31a5Video.js 플레이어페이지 언",
+      "QA 테두리 투명색p-46sx1n57gwVideo.js 플레이어페이지 언"
+    ],
+    "adminSentence": [
+      "미리보기수정내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.복제삭제내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.사이트에 적용",
+      "수정내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요."
+    ],
+    "scheduleSelect": [
+      {
+        "label": "(top)",
+        "options": [
+          "default:기본"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "flat:플랫"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "rounded:둥근 테두리"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "accent:강조색"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "p-i0aecb28w3:QA 강조색 복제 (사이트 적용)"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "p-lc3i8eidb4:QA 자동재생"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "p-pchm59hhyv:QA 기본 video"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "p-wgqz3x31a5:QA 테두리 8자리"
+        ]
+      },
+      {
+        "label": "(top)",
+        "options": [
+          "p-46sx1n57gw:QA 테두리 투명색"
+        ]
+      }
+    ]
+  },
+  "events1280": 0,
+  "console1280": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "events390": 0,
+  "console390": [],
+  "empty": {
+    "cls": "sa-stage-view is-empty",
+    "radius": "12px",
+    "border": "1px dashed rgb(212, 212, 216)",
+    "bg": "rgb(247, 247, 247)",
+    "text": "샘플 미디어가 없어요 서버의 demo-media/grok-20261018/ 폴더에 샘플을 넣으면 재생돼요. 설명서에서 준비 방법 보기",
+    "barHidden": true
+  }
+}

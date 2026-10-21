@@ -1,0 +1,30 @@
+<!-- 솔애드 광고 플레이어 -->
+<div id="ads-player-a1-qa-preset-1-erbkye" style="position: relative; aspect-ratio: 16 / 9">
+  <video id="ads-content-a1-qa-preset-1-erbkye" src="http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4" controls playsinline preload="metadata" style="width: 100%; height: 100%"></video>
+</div>
+<script type="module">
+  import { createAdsController } from "http://127.0.0.1:18781/assets/ads.js";
+
+  const endpoint = new URL("http://127.0.0.1:18781/api/index.php", location.href);
+
+  endpoint.searchParams.set('action', 'schedule');
+  endpoint.searchParams.set('videoId', "a1-qa-preset-1");
+  const response = await fetch(endpoint, { credentials: 'same-origin', cache: 'no-store' }).catch(() => null);
+  // An error page is not JSON, so the body is read only after a successful response.
+  const payload = response?.ok ? await response.json().catch(() => null) : null;
+
+  // Without a schedule the content still plays.
+  if (payload?.ok) {
+    const { schedule, ...tracking } = payload.data;
+    const controller = createAdsController({
+      media: document.getElementById("ads-content-a1-qa-preset-1-erbkye"),
+      container: document.getElementById("ads-player-a1-qa-preset-1-erbkye"),
+      schedule,
+      tracking,
+      ui: {"locale":"ko"},
+      timeouts: {"loadSeconds":8},
+    });
+
+    window.addEventListener('pagehide', () => controller.destroy(), { once: true });
+  }
+</script>

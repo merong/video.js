@@ -1,0 +1,136 @@
+{
+  "default": {
+    "hash": "#/players/edit/default",
+    "text": [
+      "플레이어",
+      "플레이어 종류, 테마, 재생 동작, 언어, 광고 화면을 프리셋으로 저장하고, 사이트에 적용할 프리셋과 설치 방법을 정해요.",
+      "프리셋 목록",
+      "초기 설정 방법",
+      "옵션 설명",
+      "프리셋 수정",
+      "기본 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "복제해서 새로 만들기"
+    ],
+    "editForm": 0,
+    "notFound": 0,
+    "readOnly": 0,
+    "duplicateButton": 1,
+    "listShown": 0,
+    "duplicateEnabled": true,
+    "afterDuplicate": {
+      "hash": "#/players/new",
+      "form": 1,
+      "name": "기본 복사본",
+      "accent": "",
+      "savebar": "저장하면 이 프리셋을 쓰는 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장"
+    },
+    "savedCount": 6,
+    "nativeDialogs": [],
+    "console": []
+  },
+  "rounded": {
+    "hash": "#/players/edit/rounded",
+    "text": [
+      "플레이어",
+      "플레이어 종류, 테마, 재생 동작, 언어, 광고 화면을 프리셋으로 저장하고, 사이트에 적용할 프리셋과 설치 방법을 정해요.",
+      "프리셋 목록",
+      "초기 설정 방법",
+      "옵션 설명",
+      "프리셋 수정",
+      "둥근 테두리 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "복제해서 새로 만들기"
+    ],
+    "editForm": 0,
+    "notFound": 0,
+    "readOnly": 0,
+    "duplicateButton": 1,
+    "listShown": 0,
+    "duplicateEnabled": true,
+    "afterDuplicate": {
+      "hash": "#/players/new",
+      "form": 1,
+      "name": "둥근 테두리 복사본",
+      "accent": "",
+      "savebar": "저장하면 이 프리셋을 쓰는 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장"
+    },
+    "savedCount": 6,
+    "nativeDialogs": [],
+    "console": []
+  },
+  "accent": {
+    "hash": "#/players/edit/accent",
+    "text": [
+      "플레이어",
+      "플레이어 종류, 테마, 재생 동작, 언어, 광고 화면을 프리셋으로 저장하고, 사이트에 적용할 프리셋과 설치 방법을 정해요.",
+      "프리셋 목록",
+      "초기 설정 방법",
+      "옵션 설명",
+      "프리셋 수정",
+      "강조색 · 내장 프리셋은 바꿀 수 없어요. 복제해서 쓰세요.",
+      "복제해서 새로 만들기"
+    ],
+    "editForm": 0,
+    "notFound": 0,
+    "readOnly": 0,
+    "duplicateButton": 1,
+    "listShown": 0,
+    "duplicateEnabled": true,
+    "afterDuplicate": {
+      "hash": "#/players/new",
+      "form": 1,
+      "name": "강조색 복사본",
+      "accent": "#2563eb",
+      "savebar": "저장하면 이 프리셋을 쓰는 페이지에서, 새로고침하면 바뀐 플레이어가 보여요. 프리셋 저장"
+    },
+    "savedCount": 6,
+    "nativeDialogs": [],
+    "console": []
+  },
+  "neutral": {
+    "hash": "#/players",
+    "text": [
+      "플레이어",
+      "플레이어 종류, 테마, 재생 동작, 언어, 광고 화면을 프리셋으로 저장하고, 사이트에 적용할 프리셋과 설치 방법을 정해요.",
+      "프리셋 목록",
+      "초기 설정 방법",
+      "옵션 설명",
+      "프리셋 목록",
+      "새 프리셋 만들기",
+      "플레이어 프리셋",
+      "이름\t플레이어 종류\t언어\t사이트 적용\t수정 시각\t작업",
+      "기본",
+      "내장",
+      "default",
+      "Video.js 플레이어\t페이지 언어\t—\t패키지 기본값",
+      "수정"
+    ],
+    "editForm": 0,
+    "notFound": 0,
+    "readOnly": 6,
+    "duplicateButton": 0,
+    "listShown": 1,
+    "savedCount": 6,
+    "nativeDialogs": [],
+    "console": []
+  },
+  "p-zzzzzzzzzz": {
+    "hash": "#/players/edit/p-zzzzzzzzzz",
+    "text": [
+      "플레이어",
+      "플레이어 종류, 테마, 재생 동작, 언어, 광고 화면을 프리셋으로 저장하고, 사이트에 적용할 프리셋과 설치 방법을 정해요.",
+      "프리셋 목록",
+      "초기 설정 방법",
+      "옵션 설명",
+      "프리셋 수정",
+      "프리셋을 찾지 못했어요 · 지워졌거나 주소가 잘못됐어요. 프리셋 목록에서 다시 골라 주세요."
+    ],
+    "editForm": 0,
+    "notFound": 1,
+    "readOnly": 0,
+    "duplicateButton": 0,
+    "listShown": 0,
+    "savedCount": 6,
+    "nativeDialogs": [],
+    "console": []
+  }
+}

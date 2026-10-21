@@ -1,0 +1,62 @@
+{
+  "390#/creatives": {
+    "scrollWidth": 560,
+    "vw": 390,
+    "offenders": []
+  },
+  "390#/campaigns": {
+    "scrollWidth": 390,
+    "vw": 390,
+    "offenders": []
+  },
+  "390#/schedule": {
+    "scrollWidth": 390,
+    "vw": 390,
+    "offenders": []
+  },
+  "390#/players": {
+    "scrollWidth": 390,
+    "vw": 390,
+    "offenders": []
+  },
+  "390#/help": {
+    "scrollWidth": 390,
+    "vw": 390,
+    "offenders": []
+  },
+  "390#/reports": {
+    "scrollWidth": 390,
+    "vw": 390,
+    "offenders": []
+  },
+  "768#/creatives": {
+    "scrollWidth": 768,
+    "vw": 768,
+    "offenders": []
+  },
+  "768#/campaigns": {
+    "scrollWidth": 768,
+    "vw": 768,
+    "offenders": []
+  },
+  "768#/schedule": {
+    "scrollWidth": 768,
+    "vw": 768,
+    "offenders": []
+  },
+  "768#/players": {
+    "scrollWidth": 768,
+    "vw": 768,
+    "offenders": []
+  },
+  "768#/help": {
+    "scrollWidth": 768,
+    "vw": 768,
+    "offenders": []
+  },
+  "768#/reports": {
+    "scrollWidth": 768,
+    "vw": 768,
+    "offenders": []
+  }
+}

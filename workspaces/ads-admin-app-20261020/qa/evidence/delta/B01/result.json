@@ -1,0 +1,128 @@
+{
+  "wrong": {
+    "api": [
+      {
+        "t": 732,
+        "method": "POST",
+        "action": "login",
+        "status": 401,
+        "ok": false,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": false,
+        "respCsrfHeader": false,
+        "error": {
+          "code": "invalid_login",
+          "message": "아이디 또는 비밀번호를 확인해 주세요."
+        }
+      }
+    ],
+    "live": {
+      "alert": [
+        "아이디나 비밀번호가 맞지 않아요. 다시 입력해 주세요."
+      ],
+      "status": [
+        "관리자 계정으로 로그인해 주세요."
+      ]
+    },
+    "expiredTextShown": 0,
+    "passwordDescribedBy": {
+      "invalid": null,
+      "describedBy": []
+    }
+  },
+  "expired": {
+    "api": [
+      {
+        "t": 2797,
+        "method": "GET",
+        "action": "player-presets",
+        "status": 401,
+        "ok": false,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": false,
+        "error": {
+          "code": "login_required",
+          "message": "관리자 로그인이 필요합니다."
+        }
+      },
+      {
+        "t": 3593,
+        "method": "GET",
+        "action": "schedule-draft",
+        "status": 401,
+        "ok": false,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": false,
+        "error": {
+          "code": "login_required",
+          "message": "관리자 로그인이 필요합니다."
+        }
+      }
+    ],
+    "live": {
+      "alert": [
+        "로그인이 만료됐어요. 현재 입력은 그대로 두었어요. 다시 로그인한 뒤 작업을 이어가 주세요."
+      ],
+      "status": []
+    },
+    "loginVisible": false,
+    "wrongTextShown": 0
+  },
+  "reloadHash": "#/creatives",
+  "logout": {
+    "api": [
+      {
+        "t": 5727,
+        "method": "POST",
+        "action": "logout",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": true,
+        "csrfMatchesLastResponse": true,
+        "respCsrfHeader": false
+      },
+      {
+        "t": 5739,
+        "method": "GET",
+        "action": "bootstrap",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": false
+      },
+      {
+        "t": 5787,
+        "method": "GET",
+        "action": "bootstrap",
+        "status": 200,
+        "ok": true,
+        "csrfHeader": false,
+        "csrfMatchesLastResponse": null,
+        "respCsrfHeader": false
+      }
+    ],
+    "loginVisible": true,
+    "protectedHeading": 0
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ]
+}

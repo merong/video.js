@@ -1,0 +1,126 @@
+{
+  "anonymous": {
+    "calls": [
+      {
+        "call": "GET player-preset 200",
+        "n": 1,
+        "setCookie": 0,
+        "reqCookie": 0,
+        "reqCsrf": 0,
+        "respCsrf": 0
+      },
+      {
+        "call": "GET schedule 200",
+        "n": 1,
+        "setCookie": 0,
+        "reqCookie": 0,
+        "reqCsrf": 0,
+        "respCsrf": 0
+      },
+      {
+        "call": "POST events 200",
+        "n": 2,
+        "setCookie": 0,
+        "reqCookie": 0,
+        "reqCsrf": 0,
+        "respCsrf": 0
+      }
+    ],
+    "cookiesAfter": []
+  },
+  "adminWrite": {
+    "revisionFound": true,
+    "tokenFound": true,
+    "withCsrf": 200,
+    "withCsrfOk": true,
+    "withoutCsrf": 403,
+    "withoutCsrfCode": "csrf"
+  },
+  "adminCalls": [
+    {
+      "call": "GET bootstrap 200",
+      "n": 2,
+      "setCookie": 1,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 1
+    },
+    {
+      "call": "POST login 200",
+      "n": 1,
+      "setCookie": 1,
+      "reqCookie": 1,
+      "reqCsrf": 1,
+      "respCsrf": 1
+    },
+    {
+      "call": "GET creatives 200",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 1
+    },
+    {
+      "call": "GET player-presets 200",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 1
+    }
+  ],
+  "adminWriteCalls": [
+    {
+      "call": "GET player-presets 200",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 1
+    },
+    {
+      "call": "POST player-preset-default 200",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 1,
+      "respCsrf": 1
+    },
+    {
+      "call": "POST player-preset-default 403",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 1
+    }
+  ],
+  "publicWhileLoggedIn": [
+    {
+      "call": "GET player-preset 200",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 0
+    },
+    {
+      "call": "GET schedule 200",
+      "n": 1,
+      "setCookie": 0,
+      "reqCookie": 1,
+      "reqCsrf": 0,
+      "respCsrf": 0
+    },
+    {
+      "call": "POST events 200",
+      "n": 2,
+      "setCookie": 0,
+      "reqCookie": 2,
+      "reqCsrf": 0,
+      "respCsrf": 0
+    }
+  ],
+  "stillLoggedIn": true
+}

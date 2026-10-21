@@ -1,0 +1,756 @@
+{
+  "PL12": {
+    "steps": [
+      {
+        "label": "baseline (earbuds preroll)",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #0f5132; --media-accent-text-color: #ffffff; --media-border-radius: 12px; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "en",
+            "skip-label": "Skip ad"
+          },
+          "containerVars": {
+            "--media-accent-color": "#0f5132",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "12px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "12px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#0f5132",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "12px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#0f5132",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "12px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui",
+            "fontSize": "15px",
+            "borderRadius": "12px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "Advertisement 2 of 2",
+            "Visit advertiser",
+            "[aria] Visit advertiser — Opens in a new tab",
+            "Skip in 3s",
+            "[aria] Play / pause ad",
+            "[aria] Mute ad",
+            "[aria] Ad volume",
+            "0:00 / 0:12",
+            "[aria] Enter fullscreen"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 0.9,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "accent #c2185b",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 12px; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "en",
+            "skip-label": "Skip ad"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "12px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "12px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "12px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "12px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui",
+            "fontSize": "15px",
+            "borderRadius": "12px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "Advertisement 2 of 2",
+            "Visit advertiser",
+            "[aria] Visit advertiser — Opens in a new tab",
+            "Skip in 2s",
+            "[aria] Play / pause ad",
+            "[aria] Mute ad",
+            "[aria] Ad volume",
+            "0:01 / 0:12",
+            "[aria] Enter fullscreen"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 1.8,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "radius 20",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "en",
+            "skip-label": "Skip ad"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui",
+            "fontSize": "15px",
+            "borderRadius": "20px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "Advertisement 2 of 2",
+            "Visit advertiser",
+            "[aria] Visit advertiser — Opens in a new tab",
+            "Skip in 1s",
+            "[aria] Play / pause ad",
+            "[aria] Mute ad",
+            "[aria] Ad volume",
+            "0:02 / 0:12",
+            "[aria] Enter fullscreen"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 2.5,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "ads.locale ko",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "ko",
+            "skip-label": "Skip ad"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui",
+            "fontSize": "15px",
+            "borderRadius": "20px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "광고 2/2",
+            "광고주 사이트",
+            "[aria] 광고주 사이트 — 새 탭에서 열림",
+            "Skip ad",
+            "[aria] 광고 재생 / 일시정지",
+            "[aria] 광고 음소거",
+            "[aria] 광고 음량",
+            "0:03 / 0:12",
+            "[aria] 전체화면 시작"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 3.2,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "skip label",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "ko",
+            "skip-label": "광고 넘기기"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui",
+            "fontSize": "15px",
+            "borderRadius": "20px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "광고 2/2",
+            "광고주 사이트",
+            "[aria] 광고주 사이트 — 새 탭에서 열림",
+            "광고 넘기기",
+            "[aria] 광고 재생 / 일시정지",
+            "[aria] 광고 음소거",
+            "[aria] 광고 음량",
+            "0:03 / 0:12",
+            "[aria] 전체화면 시작"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 3.9,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "fontFamily system",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --media-font-family: system-ui, sans-serif; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "ko",
+            "skip-label": "광고 넘기기"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "system-ui, sans-serif",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "system-ui, sans-serif",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "system-ui, sans-serif",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui, sans-serif",
+            "fontSize": "15px",
+            "borderRadius": "20px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "광고 2/2",
+            "광고주 사이트",
+            "[aria] 광고주 사이트 — 새 탭에서 열림",
+            "광고 넘기기",
+            "[aria] 광고 재생 / 일시정지",
+            "[aria] 광고 음소거",
+            "[aria] 광고 음량",
+            "0:04 / 0:12",
+            "[aria] 전체화면 시작"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 4.7,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "fontFamily skin default (U-P5 compare)",
+        "docs": 1,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "ko",
+            "skip-label": "광고 넘기기"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "panelBox": {
+            "fontFamily": "system-ui",
+            "fontSize": "15px",
+            "borderRadius": "20px"
+          },
+          "panelTexts": [
+            "[aria] Grok Imagine 이어폰 광고",
+            "광고 2/2",
+            "광고주 사이트",
+            "[aria] 광고주 사이트 — 새 탭에서 열림",
+            "광고 넘기기",
+            "[aria] 광고 재생 / 일시정지",
+            "[aria] 광고 음소거",
+            "[aria] 광고 음량",
+            "0:05 / 0:12",
+            "[aria] 전체화면 시작"
+          ],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            },
+            {
+              "src": "ad-earbuds-12s.mp4",
+              "t": 5.6,
+              "paused": false,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "skin → default",
+        "docs": 2,
+        "m": {
+          "skinTag": "video-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --media-font-family: system-ui, sans-serif; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "ko",
+            "skip-label": "광고 넘기기"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "system-ui, sans-serif",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": null,
+          "panelVars": null,
+          "panelBox": null,
+          "panelTexts": [],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            }
+          ]
+        }
+      },
+      {
+        "label": "skin → neutral",
+        "docs": 3,
+        "m": {
+          "skinTag": "video-neutral-skin",
+          "skinStyle": "--media-accent-color: #c2185b; --media-accent-text-color: #ffffff; --media-border-radius: 20px; --media-font-family: system-ui, sans-serif; --ads-font-size: 15px;",
+          "adsAttrs": {
+            "for": "preview-content",
+            "src": "http://127.0.0.1:18781/demo-media/grok-20261018/schedule.jso",
+            "video-id": "grok-demo-scene-01",
+            "lang": "ko",
+            "skip-label": "광고 넘기기"
+          },
+          "containerVars": {
+            "--media-accent-color": "#c2185b",
+            "--media-accent-text-color": "#ffffff",
+            "--media-border-radius": "20px",
+            "--media-font-family": "system-ui, sans-serif",
+            "--ads-font-size": "15px",
+            "--ads-accent-color": "",
+            "--ads-skip-radius": ""
+          },
+          "containerBox": {
+            "fontFamily": "system-ui, sans-serif",
+            "fontSize": "13px",
+            "borderRadius": "20px"
+          },
+          "panelHostVars": null,
+          "panelVars": null,
+          "panelBox": null,
+          "panelTexts": [],
+          "lang": "ko",
+          "videos": [
+            {
+              "src": "content-scene-01.mp4",
+              "t": 0,
+              "paused": true,
+              "ended": false
+            }
+          ]
+        }
+      }
+    ],
+    "playedSecondsBeforeSkin": 13,
+    "previewDocs": [
+      "2273 /examples/player-preview.html?type=videojs&skin=neutral",
+      "18117 /examples/player-preview.html?type=videojs&skin=default",
+      "21638 /examples/player-preview.html?type=videojs&skin=neutral"
+    ],
+    "docsAtOpen": [
+      "2273 /examples/player-preview.html?type=videojs&skin=neutral"
+    ],
+    "messages": [
+      {
+        "t": 1792520566683,
+        "type": "ads-player-preview-status",
+        "status": "loading",
+        "message": ""
+      },
+      {
+        "t": 1792520566931,
+        "type": "ads-player-preview-status",
+        "status": "ready",
+        "message": ""
+      },
+      {
+        "t": 1792520582519,
+        "type": "ads-player-preview-status",
+        "status": "loading",
+        "message": ""
+      },
+      {
+        "t": 1792520582677,
+        "type": "ads-player-preview-status",
+        "status": "ready",
+        "message": ""
+      },
+      {
+        "t": 1792520586027,
+        "type": "ads-player-preview-status",
+        "status": "loading",
+        "message": ""
+      },
+      {
+        "t": 1792520586132,
+        "type": "ads-player-preview-status",
+        "status": "ready",
+        "message": ""
+      }
+    ]
+  },
+  "PL13": {
+    "timeline": [
+      "1s ad-coffee-6s.mp4@0.6 | 0",
+      "2s ad-coffee-6s.mp4@1.6 | 0",
+      "3s ad-coffee-6s.mp4@2.6 | 0",
+      "4s ad-coffee-6s.mp4@3.6 | 0",
+      "5s ad-coffee-6s.mp4@4.9 | 0",
+      "6s ad-coffee-6s.mp4@5.9 | 0",
+      "7s ad-earbuds-12s.mp4@0.6 | 0",
+      "8s ad-earbuds-12s.mp4@1.6 | 0",
+      "9s ad-earbuds-12s.mp4@2.6 | 0",
+      "10s ad-earbuds-12s.mp4@3.7 | 0",
+      "11s ad-earbuds-12s.mp4@4.7 | 0",
+      "12s ad-earbuds-12s.mp4@5.7 | 0",
+      "13s ad-earbuds-12s.mp4@6.7 | 0",
+      "14s ad-earbuds-12s.mp4@7.7 | 0",
+      "15s ad-earbuds-12s.mp4@8.7 | 0",
+      "16s ad-earbuds-12s.mp4@9.7 | 0",
+      "17s ad-earbuds-12s.mp4@10.7 | 0",
+      "18s ad-earbuds-12s.mp4@11.7 | 0",
+      "19s content-scene-01.mp4@0.1 | 0.1",
+      "20s content-scene-01.mp4@1.1 | 1.1",
+      "21s content-scene-01.mp4@2.1 | 2.1",
+      "22s content-scene-01.mp4@3.4 | 3.4",
+      "23s content-scene-01.mp4@4.4 | 4.4",
+      "24s ad-water-8s.mp4@0 | 5.3",
+      "25s ad-water-8s.mp4@0.8 | 5.3",
+      "26s ad-water-8s.mp4@1.8 | 5.3",
+      "27s ad-water-8s.mp4@2.8 | 5.3",
+      "28s ad-water-8s.mp4@4.1 | 5.3",
+      "29s ad-water-8s.mp4@5.1 | 5.3",
+      "30s ad-water-8s.mp4@6.1 | 5.3",
+      "31s ad-water-8s.mp4@7.1 | 5.3",
+      "32s content-scene-01.mp4@5.5 | 5.5",
+      "33s content-scene-01.mp4@6.3 | 6.3",
+      "34s content-scene-01.mp4@7.3 | 7.3",
+      "35s content-scene-01.mp4@8.3 | 8.3",
+      "36s content-scene-01.mp4@9.3 | 9.3",
+      "37s ad-coffee-6s.mp4@0 | 10 ended",
+      "38s ad-coffee-6s.mp4@1 | 10 ended",
+      "39s ad-coffee-6s.mp4@2 | 10 ended",
+      "40s ad-coffee-6s.mp4@3 | 10 ended",
+      "41s ad-coffee-6s.mp4@4 | 10 ended",
+      "42s ad-coffee-6s.mp4@5 | 10 ended",
+      "43s none playing | 10 ended"
+    ],
+    "apiRequests": [],
+    "requests": [
+      "GET 206 media /demo-media/grok-20261018/content-scene-01.mp4 frame=/examples/player-preview.html",
+      "GET 206 media /demo-media/grok-20261018/ad-coffee-6s.mp4 frame=/examples/player-preview.html",
+      "GET 206 media /demo-media/grok-20261018/ad-earbuds-12s.mp4 frame=/examples/player-preview.html",
+      "GET 206 media /demo-media/grok-20261018/ad-water-8s.mp4 frame=/examples/player-preview.html",
+      "GET 206 media /demo-media/grok-20261018/ad-coffee-6s.mp4 frame=/examples/player-preview.html"
+    ],
+    "messages": []
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

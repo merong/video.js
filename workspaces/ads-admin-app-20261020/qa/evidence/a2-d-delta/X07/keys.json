@@ -1,0 +1,88 @@
+{
+  "screens": [],
+  "compare": {},
+  "keys": {
+    "390": {
+      "opener": {
+        "tag": "BUTTON",
+        "type": "button",
+        "text": "열기",
+        "ring": true
+      },
+      "openerAfter": "true",
+      "radio": {
+        "tag": "INPUT",
+        "type": "radio",
+        "value": "wide",
+        "text": "",
+        "ring": true
+      },
+      "radioAfter": {
+        "tag": "INPUT",
+        "type": "radio",
+        "value": "narrow",
+        "text": "",
+        "ring": true
+      },
+      "scene": {
+        "tag": "BUTTON",
+        "type": "button",
+        "text": "끝 직전",
+        "ring": true
+      },
+      "nowAfter": "최근 광고 진행 포스트롤 1/1 재생 중 20:11:36",
+      "demo": {
+        "tag": "A",
+        "type": null,
+        "text": "데모에서 열기 (새 창)",
+        "ring": true
+      },
+      "popup": {
+        "url": "/examples/index.html?preset=rounded",
+        "selected": "rounded"
+      }
+    },
+    "768": {
+      "opener": {
+        "tag": "BUTTON",
+        "type": "button",
+        "text": "열기",
+        "ring": true
+      },
+      "openerAfter": "true",
+      "radio": {
+        "tag": "INPUT",
+        "type": "radio",
+        "value": "wide",
+        "text": "",
+        "ring": true
+      },
+      "radioAfter": {
+        "tag": "INPUT",
+        "type": "radio",
+        "value": "narrow",
+        "text": "",
+        "ring": true
+      },
+      "scene": {
+        "tag": "BUTTON",
+        "type": "button",
+        "text": "끝 직전",
+        "ring": true
+      },
+      "nowAfter": "최근 광고 진행 포스트롤 1/1 재생 중 20:11:09",
+      "demo": {
+        "tag": "A",
+        "type": null,
+        "text": "데모에서 열기 (새 창)",
+        "ring": true
+      },
+      "popup": {
+        "url": "/examples/index.html?preset=rounded",
+        "selected": "rounded"
+      }
+    }
+  },
+  "events768": 0,
+  "events390": 0
+}

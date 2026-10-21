@@ -1,0 +1,16 @@
+20:16:40
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+php      9878 brian    5u  IPv4 0xad614d83c9231ee2      0t0  TCP 127.0.0.1:18765 (LISTEN)
+php     34509 brian    5u  IPv4 0xb9f046894b1456ce      0t0  TCP 127.0.0.1:18766 (LISTEN)
+php     59381 brian    5u  IPv4 0x342289f774cb0c65      0t0  TCP 127.0.0.1:18781 (LISTEN)
+  PID STARTED                      COMMAND
+ 9878 2026년 10월 18일 일요일 00시 46분 00초 /opt/homebrew/opt/php@8.5/bin/php -d mysqli.default_socket=/private/tmp/ads-qa-txrhuzog/mysql.sock -d pdo_mysql.default_socket=/private/tmp/ads-qa-txrhuzog/mysql.sock -d session.save_path=/private/tmp/ads-qa-txrhuzog/sessions -d upload_tmp_dir=/private/tmp/ads-qa-txrhuzog/tmp -d sys_temp_dir=/private/tmp/ads-qa-txrhuzog/tmp -d error_log=/private/tmp/ads-qa-txrhuzog/php-error.log -d log_errors=1 -d display_errors=0 -d error_reporting=32767 -d sendmail_path=/usr/bin/false -S 127.0.0.1:18765 -t /private/tmp/ads-qa-txrhuzog/gnuboard /private/tmp/ads-qa-txrhuzog/router.php
+34509 2026년 10월 18일 일요일 01시 07분 06초 php -d display_errors=0 -d log_errors=1 -d error_log=/private/tmp/ads-qa-txrhuzog/manager/php-errors.log -d session.save_path=/private/tmp/ads-qa-txrhuzog/manager/sessions -d upload_tmp_dir=/private/tmp/ads-qa-txrhuzog/tmp -d upload_max_filesize=100M -d post_max_size=101M -S 127.0.0.1:18766 -t /Users/brian/works/tools/videojs/video.js/integrations/ads-manager/public /Users/brian/works/tools/videojs/video.js/integrations/ads-manager/public/router.php
+20:17:04
+killed my PID 59381
+18781 listeners after:
+none
+18765/18766:
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+php      9878 brian    5u  IPv4 0xad614d83c9231ee2      0t0  TCP 127.0.0.1:18765 (LISTEN)
+php     34509 brian    5u  IPv4 0xb9f046894b1456ce      0t0  TCP 127.0.0.1:18766 (LISTEN)

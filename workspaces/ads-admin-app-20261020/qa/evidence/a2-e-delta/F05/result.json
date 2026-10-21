@@ -1,0 +1,338 @@
+{
+  "1280x900": {
+    "pages": [
+      {
+        "label": "demo (logged out)",
+        "url": "/examples/index.html",
+        "requests": 204,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /api/index.php?action=player-presets 401",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [
+          "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+          "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "help (logged out)",
+        "url": "/examples/help.html",
+        "requests": 28,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin home",
+        "url": "/#/",
+        "requests": 0,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players",
+        "url": "/#/players",
+        "requests": 1,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players/options",
+        "url": "/#/players/options",
+        "requests": 0,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players/edit/rounded",
+        "url": "/#/players/edit/rounded",
+        "requests": 204,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players/edit saved",
+        "url": "/#/players/edit/p-wgqz3x31a5",
+        "requests": 205,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "demo (logged in)",
+        "url": "/examples/index.html",
+        "requests": 210,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "demo logo query",
+        "url": "/examples/index.html?logo=sample-png&logoWidth=240&logoPosition=top-left",
+        "requests": 211,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "help (logged in)",
+        "url": "/examples/help.html#field-ads-labels-newWindow",
+        "requests": 28,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "play-test",
+        "url": "/examples/play-test.html?preset=p-wgqz3x31a5",
+        "requests": 33,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false
+        }
+      }
+    ],
+    "totalEvents": 0
+  },
+  "390x844": {
+    "pages": [
+      {
+        "label": "demo (logged out)",
+        "url": "/examples/index.html",
+        "requests": 204,
+        "bad": [
+          "GET /api/index.php?action=player-presets 401",
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [
+          "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+        ],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "help (logged out)",
+        "url": "/examples/help.html",
+        "requests": 28,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin home",
+        "url": "/#/",
+        "requests": 0,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players",
+        "url": "/#/players",
+        "requests": 1,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players/options",
+        "url": "/#/players/options",
+        "requests": 0,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players/edit/rounded",
+        "url": "/#/players/edit/rounded",
+        "requests": 204,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "admin players/edit saved",
+        "url": "/#/players/edit/p-wgqz3x31a5",
+        "requests": 205,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "demo (logged in)",
+        "url": "/examples/index.html",
+        "requests": 210,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "demo logo query",
+        "url": "/examples/index.html?logo=sample-png&logoWidth=240&logoPosition=top-left",
+        "requests": 214,
+        "bad": [
+          "HEAD /demo-media/grok-20261018/content-scene-01.mp4 200 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED",
+          "GET /demo-media/grok-20261018/content-scene-01.mp4 206 net::ERR_ABORTED"
+        ],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "help (logged in)",
+        "url": "/examples/help.html#field-ads-labels-newWindow",
+        "requests": 28,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "label": "play-test",
+        "url": "/examples/play-test.html?preset=p-wgqz3x31a5",
+        "requests": 33,
+        "bad": [],
+        "events": 0,
+        "console": [],
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "horizontalOverflow": false
+        }
+      }
+    ],
+    "totalEvents": 0
+  }
+}

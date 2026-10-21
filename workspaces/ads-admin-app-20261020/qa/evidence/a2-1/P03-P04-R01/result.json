@@ -1,0 +1,315 @@
+{
+  "P03": {
+    "open": {
+      "firstFocus": {
+        "tag": "BUTTON",
+        "label": "취소"
+      },
+      "modal": {
+        "tag": "DIALOG",
+        "modal": true,
+        "labelledBy": "\"둥근 테두리\" 프리셋을 사이트에 적용할까요?"
+      }
+    },
+    "afterEsc": {
+      "open": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "label": "둥근 테두리 사이트에 적용"
+      }
+    },
+    "afterCancel": {
+      "open": 0,
+      "focus": {
+        "tag": "BUTTON",
+        "label": "둥근 테두리 사이트에 적용"
+      }
+    },
+    "tabCycle": [
+      {
+        "inDialog": true,
+        "label": "사이트에 적용"
+      },
+      {
+        "inDialog": false,
+        "label": "{\"apiUrl\":\"\\/api\\/in"
+      },
+      {
+        "inDialog": true,
+        "label": ""
+      },
+      {
+        "inDialog": true,
+        "label": "취소"
+      }
+    ],
+    "siteUnchanged": "p-qrgzuc8ste",
+    "nativeDialogs": []
+  },
+  "P04": {
+    "loaderCodeBeforeId": 1,
+    "problemBeforeId": [],
+    "loaderCode": "<!-- 솔애드 광고 플레이어 -->\n<div data-solad-player\n     data-video-id=\"a1-qa-video-1\"\n     data-src=\"http://127.0.0.1:18781/demo-media/grok-20261018/content-scene-01.mp4\"></div>\n<!-- 아래 로더 줄은 페이지에 한 번만 넣어요. -->\n<script type=\"module\" src=\"/player/loader.js\"></script>",
+    "jsApi": "import { mount } from \"/player/loader.js\";\n\nconst handle = await mount(document.getElementById('player'), {\n  videoId: 'notice:12:main',\n  src: '/media/intro.mp4',\n  poster: '/media/intro.jpg',\n  title: '회사 소개 영상',\n  overrides: { playback: { autoplay: true } },\n  onEvent(event) {}, // ads-event의 detail\n  onError(error) {}, // { code, message }\n});\n\nhandle.player; // <video-player> 또는 <video>\nhandle.destroy();",
+    "dataTable": {
+      "headers": [
+        "이름",
+        "형식",
+        "기본값",
+        "설명",
+        "프리셋 설정"
+      ],
+      "rows": [
+        "data-solad-player",
+        "data-video-id",
+        "data-src",
+        "data-poster",
+        "data-title",
+        "data-thumbnails",
+        "data-autoplay",
+        "data-muted",
+        "data-loop",
+        "data-preload",
+        "data-lang",
+        "data-engine",
+        "data-solad-manual"
+      ]
+    },
+    "sameSiteNote": [
+      "매니저와 같은 사이트의 페이지에서만 동작해요 · 로더와 광고 정보는 매니저가 설치된 사이트에서만 받을 수 있어요. 다른 도메인의 페이지에 붙이면 재생되지 않아요. 파일을 직접 열지 말고 웹 서버로 열어 주세요."
+    ],
+    "noVisitorErrorNote": [
+      "문제가 있어도 방문자에게는 오류가 보이지 않아요 · 프리셋을 받지 못하면 기본 모습으로 재생해요. data-video-id나 data-src가 빠진 자리는 건너뛰고, 브라우저 콘솔에 [solad]로 시작하는 경고를 한 번 남겨요."
+    ],
+    "gnuboardNotice": {
+      "planned": 0,
+      "boardIdFormat": false,
+      "gnuboardWord": 0
+    },
+    "host": null,
+    "disclosure": {
+      "afterEnter": true,
+      "afterSpace": false,
+      "afterSpace2": true,
+      "focusOnSummary": true
+    }
+  },
+  "R01": {
+    "390": {
+      "list": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "ok": true
+      },
+      "editor": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "ok": true
+      },
+      "setupEmpty": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "ok": true
+      },
+      "setupFilledOpen": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "ok": true
+      },
+      "wideBlocks": [
+        {
+          "tag": "TABLE",
+          "client": 0,
+          "scroll": 0,
+          "scrollsInside": false,
+          "overflowX": "visible",
+          "parentOverflowX": "auto"
+        },
+        {
+          "tag": "PRE",
+          "client": 320,
+          "scroll": 727,
+          "scrollsInside": true,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        },
+        {
+          "tag": "TABLE",
+          "client": 1472,
+          "scroll": 1472,
+          "scrollsInside": false,
+          "overflowX": "visible",
+          "parentOverflowX": "auto"
+        },
+        {
+          "tag": "PRE",
+          "client": 320,
+          "scroll": 511,
+          "scrollsInside": true,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        },
+        {
+          "tag": "PRE",
+          "client": 294,
+          "scroll": 1647,
+          "scrollsInside": true,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        }
+      ],
+      "nativeDialogs": [],
+      "console": []
+    },
+    "768": {
+      "list": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "ok": true
+      },
+      "editor": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "ok": true
+      },
+      "setupEmpty": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "ok": true
+      },
+      "setupFilledOpen": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "ok": true
+      },
+      "wideBlocks": [
+        {
+          "tag": "TABLE",
+          "client": 0,
+          "scroll": 0,
+          "scrollsInside": false,
+          "overflowX": "visible",
+          "parentOverflowX": "auto"
+        },
+        {
+          "tag": "PRE",
+          "client": 698,
+          "scroll": 727,
+          "scrollsInside": true,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        },
+        {
+          "tag": "TABLE",
+          "client": 1472,
+          "scroll": 1472,
+          "scrollsInside": false,
+          "overflowX": "visible",
+          "parentOverflowX": "auto"
+        },
+        {
+          "tag": "PRE",
+          "client": 698,
+          "scroll": 698,
+          "scrollsInside": false,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        },
+        {
+          "tag": "PRE",
+          "client": 672,
+          "scroll": 1647,
+          "scrollsInside": true,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        }
+      ],
+      "nativeDialogs": [],
+      "console": []
+    },
+    "1280": {
+      "list": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "ok": true
+      },
+      "editor": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "ok": true
+      },
+      "setupEmpty": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "ok": true
+      },
+      "setupFilledOpen": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "ok": true
+      },
+      "wideBlocks": [
+        {
+          "tag": "TABLE",
+          "client": 0,
+          "scroll": 0,
+          "scrollsInside": false,
+          "overflowX": "visible",
+          "parentOverflowX": "auto"
+        },
+        {
+          "tag": "PRE",
+          "client": 1194,
+          "scroll": 1194,
+          "scrollsInside": false,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        },
+        {
+          "tag": "TABLE",
+          "client": 1472,
+          "scroll": 1472,
+          "scrollsInside": false,
+          "overflowX": "visible",
+          "parentOverflowX": "auto"
+        },
+        {
+          "tag": "PRE",
+          "client": 1194,
+          "scroll": 1194,
+          "scrollsInside": false,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        },
+        {
+          "tag": "PRE",
+          "client": 1168,
+          "scroll": 1647,
+          "scrollsInside": true,
+          "overflowX": "auto",
+          "parentOverflowX": "visible"
+        }
+      ],
+      "nativeDialogs": [],
+      "console": []
+    },
+    "loader390": {
+      "ready": [
+        {
+          "at": 273,
+          "target": "a1-qa-video-1",
+          "presetId": "p-qrgzuc8ste",
+          "fallback": false,
+          "player": "VIDEO-PLAYER"
+        }
+      ],
+      "box": {
+        "w": 374,
+        "h": 210
+      },
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "ok": true
+    }
+  }
+}

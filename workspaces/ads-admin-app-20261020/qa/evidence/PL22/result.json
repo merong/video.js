@@ -1,0 +1,448 @@
+{
+  "widths": {
+    "768": {
+      "list": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "플레이어 프리셋",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          }
+        ]
+      },
+      "edit": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          }
+        ],
+        "formPreview": {
+          "form": [
+            16,
+            263,
+            736,
+            1808
+          ],
+          "iframe": [
+            35,
+            1570,
+            698,
+            393
+          ],
+          "overlap": true,
+          "stacked": false
+        }
+      },
+      "setup": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          }
+        ]
+      },
+      "options": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "<media-ads> 속성",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "createAdsController 옵션",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "createAdsController 반환 메서드",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "스킨 CSS 속성",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "광고 화면 CSS 속성",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "예제 페이지 쿼리",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          }
+        ]
+      }
+    },
+    "1280": {
+      "list": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "플레이어 프리셋",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          }
+        ]
+      },
+      "edit": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          }
+        ],
+        "formPreview": {
+          "form": [
+            24,
+            236,
+            1232,
+            1767
+          ],
+          "iframe": [
+            43,
+            1223,
+            1194,
+            672
+          ],
+          "overlap": true,
+          "stacked": false
+        }
+      },
+      "setup": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          }
+        ]
+      },
+      "options": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "horizontalOverflow": false,
+        "clipped": [],
+        "tableScrollers": [
+          {
+            "name": "등록한 소재 목록",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "<media-ads> 속성",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "createAdsController 옵션",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "createAdsController 반환 메서드",
+            "tableWider": false,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "스킨 CSS 속성",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "광고 화면 CSS 속성",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          },
+          {
+            "name": "예제 페이지 쿼리",
+            "tableWider": true,
+            "parentOverflowX": "auto"
+          }
+        ]
+      }
+    }
+  },
+  "keyboard": {
+    "steps": [
+      {
+        "label": "하위 탐색 초기 설정 방법",
+        "presses": 2,
+        "reached": {
+          "tag": "A",
+          "href": "#/players/setup",
+          "name": "초기 설정 방법",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "하위 탐색 프리셋 목록",
+        "presses": 3,
+        "reached": {
+          "tag": "A",
+          "href": "#/players",
+          "name": "프리셋 목록",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "P-A 수정",
+        "presses": 5,
+        "reached": {
+          "tag": "BUTTON",
+          "name": "QA Video.js 중립 v2 수정",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "강조색 입력",
+        "presses": 9,
+        "reached": {
+          "tag": "INPUT",
+          "name": "강조색",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": [
+          "INPUT:"
+        ]
+      },
+      {
+        "label": "프리셋 저장",
+        "presses": 34,
+        "reached": {
+          "tag": "BUTTON",
+          "name": "프리셋 저장",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": [
+          "INPUT:",
+          "INPUT:",
+          "INPUT:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:",
+          "IFRAME:"
+        ]
+      },
+      {
+        "label": "P-B 삭제",
+        "presses": 10,
+        "reached": {
+          "tag": "BUTTON",
+          "name": "QA 기본 video 삭제",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "하위 탐색 초기 설정 방법(2)",
+        "presses": 11,
+        "reached": {
+          "tag": "A",
+          "href": "#/players/setup",
+          "name": "초기 설정 방법",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "영상 ID",
+        "presses": 4,
+        "reached": {
+          "tag": "INPUT",
+          "name": "영상 ID",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      },
+      {
+        "label": "코드 복사",
+        "presses": 5,
+        "reached": {
+          "tag": "BUTTON",
+          "name": "복사",
+          "inDialog": false,
+          "visible": true,
+          "focusRing": true
+        },
+        "hiddenFocus": [],
+        "noRing": []
+      }
+    ],
+    "subnavAfter": {
+      "hash": "#/players/setup",
+      "current": "page",
+      "focus": {
+        "tag": "H2",
+        "name": "초기 설정 방법",
+        "inDialog": false,
+        "visible": true,
+        "focusRing": true
+      }
+    },
+    "editFocus": {
+      "tag": "H2",
+      "name": "프리셋 수정",
+      "inDialog": false,
+      "visible": true,
+      "focusRing": true
+    },
+    "save": {
+      "api": [
+        "POST player-preset-save 200"
+      ],
+      "status": [
+        "\"QA Video.js 중립 v2\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "hash": "#/players/edit/p-wkepup6b7d",
+      "focus": {
+        "tag": "H2",
+        "name": "프리셋 수정",
+        "inDialog": false,
+        "visible": true,
+        "focusRing": true
+      }
+    },
+    "dialogOpen": {
+      "tag": "BUTTON",
+      "name": "닫기",
+      "inDialog": true,
+      "visible": true,
+      "focusRing": true
+    },
+    "dialogTrap": [
+      {
+        "tag": "BUTTON",
+        "name": "취소",
+        "inDialog": true,
+        "visible": true,
+        "focusRing": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "삭제",
+        "inDialog": true,
+        "visible": true,
+        "focusRing": true
+      },
+      {
+        "tag": "BODY"
+      },
+      {
+        "tag": "BUTTON",
+        "name": "닫기",
+        "inDialog": true,
+        "visible": true,
+        "focusRing": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "취소",
+        "inDialog": true,
+        "visible": true,
+        "focusRing": true
+      }
+    ],
+    "afterEscape": {
+      "tag": "BUTTON",
+      "name": "QA 기본 video 삭제",
+      "inDialog": false,
+      "visible": true,
+      "focusRing": true
+    },
+    "presetsAfter": 3,
+    "copy": {
+      "clipboardCalls": [
+        813
+      ],
+      "status": [
+        "복사했어요."
+      ]
+    },
+    "writes": [
+      "player-preset-save 200"
+    ],
+    "console": []
+  }
+}

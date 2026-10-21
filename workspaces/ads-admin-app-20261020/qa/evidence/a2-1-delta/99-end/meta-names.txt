@@ -1,0 +1,12 @@
+## ads_meta names (sqlite3 -readonly; 값은 player_presets 요약만)
+player_presets
+schema_version
+signing_key
+site_id
+write_lock
+## player_presets: length|schema|revision|defaultPresetId|presets
+3654|2|4|p-lbelw4d2xx|3
+## presets id|name|playerType|autoplay|accent
+p-lbelw4d2xx|QA 강조색 복제|videojs||#2563eb
+p-0dq4w3qd6p|QA 자동재생|videojs|1|
+p-i22c0n5b8p|QA 기본 video|native||

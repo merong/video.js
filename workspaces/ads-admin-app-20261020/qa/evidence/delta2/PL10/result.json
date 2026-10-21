@@ -1,0 +1,212 @@
+{
+  "videojs": {
+    "이름": "QA PL10 전환",
+    "플레이어 종류": "videojs|Video.js",
+    "스킨": "neutral|뉴트럴 (모서리 12px)",
+    "강조색": "#0a3d91",
+    "강조 글자색": "",
+    "테두리 색": "",
+    "모서리 둥글기 (px)": "12",
+    "글꼴": "|스킨 기본 (Inter 우선)",
+    "화면 채우기": "|스킨 기본 (맞춤)",
+    "크기 기준": "|스킨 기본 (16px)",
+    "광고 문구 언어": "|페이지 lang 따름",
+    "건너뛰기 문구": "",
+    "건너뛰기 대기 문구": "",
+    "광고 시간 문구": "",
+    "광고 음량 막대 색": "",
+    "건너뛰기 버튼 모서리 (px)": "",
+    "광고 글자 크기 (px)": ""
+  },
+  "previewDocsBeforeSwitch": [
+    "/examples/player-preview.html?type=videojs&skin=default",
+    "/examples/player-preview.html?type=videojs&skin=neutral"
+  ],
+  "native": {
+    "이름": "QA PL10 전환",
+    "플레이어 종류": "native|기본 video",
+    "스킨": "<absent>",
+    "강조색": "<absent>",
+    "강조 글자색": "<absent>",
+    "테두리 색": "<absent>",
+    "모서리 둥글기 (px)": "<absent>",
+    "글꼴": "<absent>",
+    "화면 채우기": "<absent>",
+    "크기 기준": "<absent>",
+    "광고 문구 언어": "|페이지 lang 따름",
+    "건너뛰기 문구": "",
+    "건너뛰기 대기 문구": "",
+    "광고 시간 문구": "",
+    "광고 음량 막대 색": "",
+    "건너뛰기 버튼 모서리 (px)": "",
+    "광고 글자 크기 (px)": ""
+  },
+  "noticeExact": [
+    "스킨 테마 · 기본 video는 브라우저 컨트롤을 써서 스킨 테마가 적용되지 않아요."
+  ],
+  "mainTextHasNotice": true,
+  "previewDocsAfterSwitch": [
+    "/examples/player-preview.html?type=videojs&skin=default",
+    "/examples/player-preview.html?type=videojs&skin=neutral",
+    "/examples/player-preview.html?type=native"
+  ],
+  "timeoutFields": [
+    "건너뛰기 버튼 모서리 (px)",
+    "광고 글자 크기 (px)",
+    "광고 로드 시간 제한 (초)",
+    "광고 멈춤 시간 제한 (초)"
+  ],
+  "save": {
+    "api": [
+      "POST player-preset-save 200 "
+    ],
+    "live": {
+      "status": [
+        "미리보기가 준비됐어요.",
+        "\"QA 기본 video\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ],
+      "alert": [],
+      "pageStatus": [
+        "미리보기가 준비됐어요.",
+        "\"QA 기본 video\" 프리셋을 저장했어요. 재생 테스트 페이지에 바로 적용돼요."
+      ]
+    },
+    "hash": "#/players/edit/p-6aiokv34yw"
+  },
+  "stored": {
+    "id": "p-6aiokv34yw",
+    "name": "QA 기본 video",
+    "playerType": "native",
+    "skin": null,
+    "theme": {
+      "accentColor": null,
+      "accentTextColor": null,
+      "borderColor": null,
+      "borderRadius": null,
+      "fontFamily": null,
+      "objectFit": null,
+      "scaleUnit": null
+    },
+    "ads": {
+      "locale": "ko",
+      "labels": {
+        "skip": null,
+        "skipCountdown": null,
+        "timer": null
+      },
+      "accentColor": null,
+      "skipRadius": null,
+      "fontSize": null,
+      "timeouts": {
+        "loadSeconds": 8,
+        "stallSeconds": null
+      }
+    },
+    "createdAt": "2026-10-20T18:22:36Z",
+    "updatedAt": "2026-10-20T18:22:36Z",
+    "builtIn": false
+  },
+  "skinAndThemeNull": true,
+  "backToVideojs": {
+    "이름": "QA 기본 video",
+    "플레이어 종류": "videojs|Video.js",
+    "스킨": "default|기본 (모서리 28px)",
+    "강조색": "",
+    "강조 글자색": "",
+    "테두리 색": "",
+    "모서리 둥글기 (px)": "",
+    "글꼴": "|스킨 기본 (Inter 우선)",
+    "화면 채우기": "|스킨 기본 (맞춤)",
+    "크기 기준": "|스킨 기본 (16px)",
+    "광고 문구 언어": "ko|한국어",
+    "건너뛰기 문구": "",
+    "건너뛰기 대기 문구": "",
+    "광고 시간 문구": "",
+    "광고 음량 막대 색": "",
+    "건너뛰기 버튼 모서리 (px)": "",
+    "광고 글자 크기 (px)": ""
+  },
+  "leave": {
+    "hash": "#/players",
+    "dialog": 0,
+    "api": []
+  },
+  "storedAfterLeave": {
+    "id": "p-6aiokv34yw",
+    "name": "QA 기본 video",
+    "playerType": "native",
+    "skin": null,
+    "theme": {
+      "accentColor": null,
+      "accentTextColor": null,
+      "borderColor": null,
+      "borderRadius": null,
+      "fontFamily": null,
+      "objectFit": null,
+      "scaleUnit": null
+    },
+    "ads": {
+      "locale": "ko",
+      "labels": {
+        "skip": null,
+        "skipCountdown": null,
+        "timer": null
+      },
+      "accentColor": null,
+      "skipRadius": null,
+      "fontSize": null,
+      "timeouts": {
+        "loadSeconds": 8,
+        "stallSeconds": null
+      }
+    },
+    "createdAt": "2026-10-20T18:22:36Z",
+    "updatedAt": "2026-10-20T18:22:36Z",
+    "builtIn": false
+  },
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "bodies": [
+    {
+      "action": "player-preset-save",
+      "status": 200,
+      "sent": {
+        "preset": {
+          "id": null,
+          "name": "QA 기본 video",
+          "playerType": "native",
+          "skin": null,
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "ads": {
+            "locale": "ko",
+            "labels": {
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "timeouts": {
+              "loadSeconds": 8,
+              "stallSeconds": null
+            }
+          }
+        },
+        "revision": 9
+      }
+    }
+  ]
+}

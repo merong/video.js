@@ -1,0 +1,82 @@
+{
+  "steps": {
+    "key created (hint only after)": {
+      "ok": true,
+      "detail": {
+        "keyRow": "연동 키\t있어요 (…d3c4)"
+      }
+    },
+    "test token created": {
+      "ok": true,
+      "detail": {
+        "tokenFound": true
+      }
+    },
+    "lecture saves to server with token": {
+      "ok": true,
+      "detail": {
+        "storeLine": "학습 기록이 저장돼요",
+        "rulesOffShown": true,
+        "panelPercent": "진도 10%",
+        "position": 8.972696,
+        "lmsCalls": [
+          {
+            "action": "lms-settings",
+            "status": 200
+          },
+          {
+            "action": "lms-key-rotate",
+            "status": 200
+          },
+          {
+            "action": "lms-test-token",
+            "status": 200
+          },
+          {
+            "action": "lms-session",
+            "status": 200
+          },
+          {
+            "action": "lms-session",
+            "status": 200
+          },
+          {
+            "action": "lms-progress",
+            "status": 200
+          },
+          {
+            "action": "lms-progress-list",
+            "status": 200
+          },
+          {
+            "action": "lms-progress-csv",
+            "status": 200
+          }
+        ]
+      }
+    },
+    "progress table has one row with learner and percent": {
+      "ok": true,
+      "detail": {
+        "rows": [
+          "학습자 영상 진도율 완료 학습 시간 마지막 위치 갱신",
+          "qa-learner-1 외부 LMS sample-lecture 10% 학습 중 8초 00:08 / 01:20 방금 전"
+        ],
+        "panelPercent": "진도 10%"
+      }
+    },
+    "CSV file name lms-progress.csv": {
+      "ok": true,
+      "detail": {
+        "name": "lms-progress.csv",
+        "bom": true,
+        "lines": 2,
+        "header": "learner,videoId,percent,completedAt,activeSeconds,position,duration,updatedAt",
+        "hasLearner": true
+      }
+    }
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

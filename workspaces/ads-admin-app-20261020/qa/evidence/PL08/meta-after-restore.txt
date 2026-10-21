@@ -1,0 +1,4 @@
+2026-10-20 22:27:03 KST
+# D13 player_presets summary after pl08c restore
+revision 14 default p-wkepup6b7d
+p-wkepup6b7d QA Video.js 중립 v2 {"accentColor": "#0f5132", "accentTextColor": "#ffffff", "borderColor": null, "borderRadius": 12, "fontFamily": null, "objectFit": null, "scaleUnit": null} {"locale": "en", "labels": {"skip": "Skip ad", "skipCountdown": null, "timer": null}, "accentColor": null, "skipRadius": null, "fontSize": 15, "timeouts": {"loadSeconds": null, "stallSeconds": null}}

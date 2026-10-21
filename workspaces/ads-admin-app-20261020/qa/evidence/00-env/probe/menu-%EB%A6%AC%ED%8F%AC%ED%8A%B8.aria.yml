@@ -1,0 +1,36 @@
+- main "리포트":
+  - region "리포트":
+    - heading "리포트" [level=1]
+    - paragraph: 실제 수집된 재생 기록이에요. 관리자 미리보기는 통계에 들어가지 않아요.
+    - form "기본 통계":
+      - heading "기본 통계" [level=2]
+      - paragraph: 기간과 광고·영상·게시판으로 수집 기록을 조회해요.
+      - text: 시작일
+      - textbox "시작일": 2026-10-20
+      - link "조회 조건과 CSV 도움말":
+        - /url: "#/help/stats-csv"
+        - text: "?"
+      - text: 종료일
+      - textbox "종료일": 2026-10-20
+      - text: 광고 ID
+      - textbox "광고 ID":
+        - /placeholder: 전체 광고
+      - text: 영상 ID
+      - textbox "영상 ID":
+        - /placeholder: 전체 영상
+      - text: 게시판 ID
+      - textbox "게시판 ID":
+        - /placeholder: 전체 게시판
+      - status
+      - button "현재 조건 CSV 다운로드"
+      - button "통계 조회"
+    - region "리포트 v2":
+      - heading "리포트 v2" [level=2]
+      - text: 목업 · 아직 동작하지 않아요
+      - region "차원별 리포트":
+        - text: 아직 만들지 않은 화면
+        - heading "차원별 리포트" [level=3]
+        - paragraph: 기간, 광고주, 캠페인, 위치 같은 조건으로 거르고 1–2개 기준으로 나눠 KPI, 추이, 표를 보고 같은 결과를 CSV로 내려받아요.
+        - paragraph:
+          - text: 기획 문서
+          - code: .agents/plans/ads-admin-v2-spec.md §8.6
