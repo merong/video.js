@@ -195,6 +195,52 @@
   object-fit: cover;
   background: #000;
 }
+/* 소리 켜기 토글. 컨트롤을 띄울 때 플레이어 제목이 왼쪽 위에 나와서 오른쪽 위에 둔다. */
+.sl-hero-sound {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 14px 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(12, 12, 14, 0.72);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+.sl-hero-sound[hidden] {
+  display: none;
+}
+.sl-hero-sound:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.sl-hero-sound:focus-visible {
+  outline: 3px solid var(--sl-accent);
+  outline-offset: 3px;
+}
+.sl-hero-sound[aria-pressed="true"] {
+  border-color: var(--sl-accent);
+  background: var(--sl-accent);
+  color: var(--sl-on-accent);
+}
+.sl-hero-sound[aria-pressed="true"] .sl-hero-sound-off,
+.sl-hero-sound[aria-pressed="false"] .sl-hero-sound-on {
+  display: none;
+}
+
 .sl-hero-chip {
   position: absolute;
   z-index: 2;
@@ -244,7 +290,7 @@
   --d: 0.25s;
 }
 .sl-hero-chip--logo {
-  top: 64px;
+  top: 84px;
   right: -28px;
   --d: 0.5s;
 }
@@ -1280,16 +1326,43 @@
   }
 }
 @media (max-width: 767px) {
+  /* 첫 화면에 영상이 보이도록 제목 바로 아래에 영상을 두고, 소개 글과 버튼은 그 아래로 보낸다. */
   .sl-hero-inner {
-    gap: 36px;
-    padding-top: calc(var(--sl-hd-h) + 40px);
+    gap: 0;
+    padding-top: calc(var(--sl-hd-h) + 28px);
     padding-bottom: 64px;
   }
+  .sl-hero-copy {
+    display: contents;
+  }
+  .sl-hero-copy > .sl-eyebrow,
+  .sl-hero-link {
+    justify-self: start;
+  }
   .sl-hero-title {
+    margin-top: 14px;
     font-size: clamp(30px, 9vw, 44px);
   }
+  .sl-hero-stage {
+    order: 1;
+    margin-top: 24px;
+  }
   .sl-hero-lead {
+    order: 2;
+    margin-top: 24px;
     font-size: 16px;
+  }
+  .sl-hero-actions {
+    order: 3;
+    margin-top: 24px;
+  }
+  .sl-hero-link {
+    order: 4;
+  }
+  .sl-hero-sound {
+    top: 10px;
+    right: 10px;
+    min-height: 44px;
   }
   .sl-hero-chip {
     display: none;

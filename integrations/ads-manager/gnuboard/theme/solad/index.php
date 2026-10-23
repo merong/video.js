@@ -17,6 +17,9 @@ $sl_gallery_url = get_pretty_url(SOLAD_THEME_VIDEO_BOARD);
 $sl_request_url = get_pretty_url(SOLAD_THEME_REQUEST_BOARD);
 $sl_player_base = solad_theme_player_base(SOLAD_THEME_VIDEO_BOARD);
 $sl_admin_url = solad_theme_admin_entry();
+// 소개 영상 로더가 이 사이트에 있으면 경로만 쓴다. 다른 호스트 이름(localhost, www 유무)으로 열어도 같은 출처에서 불러온다.
+$sl_hero_loader = $sl_player_base.'/player/loader.js';
+if (strpos($sl_hero_loader, G5_URL.'/') === 0) $sl_hero_loader = rtrim((string)parse_url(G5_URL, PHP_URL_PATH), '/').substr($sl_hero_loader, strlen(G5_URL));
 
 $g5['title'] = '솔애드 동영상 플레이어';
 
@@ -65,11 +68,16 @@ include_once(G5_THEME_PATH.'/head.php');
                      data-loop="true"
                      data-preload="metadata"
                      <?php if ($sl_hero['poster']) { ?>data-poster="<?php echo solad_attr($sl_hero['poster']); ?>" style="background-image:url('<?php echo $sl_hero['poster']; ?>')"<?php } ?>></div>
+                <button type="button" class="sl-hero-sound" aria-pressed="false" data-sl-hero-sound hidden>
+                    <svg class="sl-hero-sound-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.6V5.4L7.5 9.5H4Z" fill="currentColor"/><path d="m16 9.5 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <svg class="sl-hero-sound-on" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.6V5.4L7.5 9.5H4Z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <span>소리 켜기</span>
+                </button>
                 <?php } elseif ($sl_hero['poster']) { ?>
                 <img class="sl-hero-poster" src="<?php echo $sl_hero['poster']; ?>" alt="">
                 <?php } ?>
             </div>
-            <span class="sl-hero-chip sl-hero-chip--ad" aria-hidden="true"><b>광고</b> 5초 후 건너뛰기</span>
+            <span class="sl-hero-chip sl-hero-chip--ad" aria-hidden="true"><b>광고</b> 3초 후 건너뛰기</span>
             <span class="sl-hero-chip sl-hero-chip--hls" aria-hidden="true"><i></i>MP4 · HLS 재생</span>
             <span class="sl-hero-chip sl-hero-chip--logo" aria-hidden="true"><i></i>로고 네 모서리</span>
         </div>
@@ -96,16 +104,21 @@ include_once(G5_THEME_PATH.'/head.php');
         if (node.getAttribute("data-poster")) video.poster = node.getAttribute("data-poster");
         node.classList.add("is-fallback");
         node.appendChild(video);
+        node.dispatchEvent(new CustomEvent("sl-hero-ready", { bubbles: true, detail: { media: video } }));
     }
     </script>
     <script type="module">
     // 소개 영상은 광고 없이 재생한다. 빈 편성을 미리보기로 넘겨 광고 API를 부르지 않고 이벤트도 보내지 않는다.
     // 움직임 줄이기를 켠 사람에게는 자동 재생하지 않고 포스터와 재생 버튼만 보여 준다.
+    // 녹화된 소개 영상 안에 플레이어 로고가 이미 있어서 이 플레이어의 로고는 끈다.
     const node = document.getElementById("sl-hero-player");
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) node.dataset.autoplay = "true";
     try {
-        const { mount } = await import(<?php echo json_encode($sl_player_base.'/player/loader.js', JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
-        const handle = await mount(node, { preview: { schedule: { videoId: "solad-hero", breaks: [] } } });
+        const { mount } = await import(<?php echo json_encode($sl_hero_loader, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
+        const handle = await mount(node, {
+            overrides: { logo: { assetId: null } },
+            preview: { schedule: { videoId: "solad-hero", breaks: [] } }
+        });
         node.dispatchEvent(new CustomEvent("sl-hero-ready", { bubbles: true, detail: handle }));
     } catch (error) {
         sl_hero_fallback();

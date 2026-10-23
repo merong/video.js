@@ -53,6 +53,29 @@
     ).observe(event.target);
   });
 
+  // 소개 영상은 음소거로 시작하고, 영상 모서리 버튼으로 소리를 켜고 끈다. 플레이어의 음소거 버튼이나 M 키로 바꿔도 따라간다.
+  var sound = hero && hero.querySelector('[data-sl-hero-sound]');
+
+  if (sound) {
+    document.addEventListener('sl-hero-ready', function (event) {
+      var media = event.detail && event.detail.media;
+      if (!media) return;
+
+      var sync = function () {
+        sound.setAttribute('aria-pressed', String(!media.muted));
+      };
+
+      sound.addEventListener('click', function () {
+        media.muted = !media.muted;
+
+        if (!media.muted && !media.volume) media.volume = 1;
+      });
+      media.addEventListener('volumechange', sync);
+      sync();
+      sound.hidden = false;
+    });
+  }
+
   // 스크롤하면 히어로 뒤의 번진 빛이 천천히 따라 내려간다.
   var ambient = hero && hero.querySelector('[data-sl-ambient]');
 
