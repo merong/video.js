@@ -1,0 +1,312 @@
+<template>
+  <style>
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Medium.otf') format('opentype');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Bold.otf') format('opentype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Black.otf') format('opentype');
+      font-weight: 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #0f0f11;
+      color: #f4f4f5;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    #root .ln {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.08em;
+    }
+    #root .ln > span {
+      display: inline-block;
+    }
+    #root .t {
+      font-weight: 900;
+      font-size: 96px;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+    }
+    #root .sub {
+      font-weight: 700;
+      font-size: 52px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    #root .fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #root .fill img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    #root .meter {
+      position: absolute;
+      background: #18181a;
+      border: 2px solid #26262a;
+      border-radius: 16px;
+    }
+    #root .m-lab {
+      font-weight: 700;
+      color: #a1a1aa;
+      letter-spacing: -0.01em;
+    }
+    #root .num {
+      display: flex;
+      align-items: flex-start;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+      color: #f4f4f5;
+    }
+    #root .dg {
+      display: inline-block;
+      overflow: hidden;
+    }
+    #root .dg-s {
+      display: flex;
+      flex-direction: column;
+    }
+    #root .dg-s i {
+      font-style: normal;
+      display: block;
+      text-align: center;
+    }
+    #root .meter {
+      left: 1334px;
+      top: 280px;
+      width: 490px;
+      height: 669px;
+      padding: 48px 44px;
+    }
+    #root .meter .m-lab {
+      font-size: 44px;
+    }
+    #root .meter .num {
+      margin-top: 18px;
+      font-size: 128px;
+      line-height: 1;
+      height: 128px;
+    }
+    #root .meter .dg,
+    #root .meter .dg-s i {
+      height: 128px;
+      line-height: 128px;
+    }
+    #root .meter .unit {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 700;
+      font-size: 44px;
+      color: #a1a1aa;
+      margin: 70px 0 0 10px;
+    }
+    #root .meter .rule {
+      margin: 54px 0 40px;
+      height: 2px;
+      background: #2e2e33;
+    }
+    #root .meter .bar {
+      position: relative;
+      margin-top: 26px;
+      height: 120px;
+      width: 100%;
+      background: #232327;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    #root .meter .barfill {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: #6b6b73;
+      transform-origin: 50% 100%;
+    }
+    #root .meter .note {
+      margin-top: 22px;
+      font-weight: 500;
+      font-size: 30px;
+      color: #71717a;
+    }
+    #root .slot {
+      position: absolute;
+      left: 96px;
+      top: 280px;
+      width: 1190px;
+      height: 669px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+    }
+    #root .slot img,
+    #root .slot video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    #root .lime {
+      color: #cdf352;
+    }
+    #r-title {
+      position: absolute;
+      left: 96px;
+      top: 84px;
+    }
+    #r-new {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      clip-path: inset(0% 100% 0% 0%);
+    }
+    #r-band {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 669px;
+      background: #cdf352;
+    }
+  </style>
+  <div data-hf-id="hf-bde6" id="root" data-composition-id="s04-reveal" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-6sft" id="r-title" class="t">
+      <div data-hf-id="hf-gmyq" class="ln">
+        <span data-hf-id="hf-fgzd" id="r-l1"
+          >같은 영상, <span data-hf-id="hf-kdim" class="lime">솔애드</span> 플레이어로</span
+        >
+      </div>
+    </div>
+    <div data-hf-id="hf-mkwd" class="slot" id="r-slot">
+      <video
+        data-hf-id="hf-wfky"
+        id="r-old"
+        class="clip"
+        data-start="0"
+        data-duration="3.5"
+        data-media-start="5"
+        src="assets/media/content-02.mp4"
+        muted
+        playsinline
+      ></video>
+      <div data-hf-id="hf-rkjc" id="r-new">
+        <img data-hf-id="hf-79v2" src="assets/capture/s01b-player.png" alt="" />
+      </div>
+      <div data-hf-id="hf-0cpj" id="r-band"></div>
+    </div>
+    <div data-hf-id="hf-bxcl" id="r-meter" class="meter">
+      <div data-hf-id="hf-s13s" class="m-lab" id="r-lab">재생 수</div>
+      <div data-hf-id="hf-km5s" class="num">
+        <span data-hf-id="hf-ikog">1</span><span data-hf-id="hf-jrlj">,</span
+        ><span data-hf-id="hf-rmk6" class="dg"
+          ><span data-hf-id="hf-3xex" class="dg-s" id="r-d2"
+            ><i data-hf-id="hf-9iec">0</i><i data-hf-id="hf-943b">1</i><i data-hf-id="hf-8psa">2</i
+            ><i data-hf-id="hf-8bh9">3</i><i data-hf-id="hf-b3mg">4</i><i data-hf-id="hf-apbf">5</i
+            ><i data-hf-id="hf-ab0e">6</i><i data-hf-id="hf-9wpd">7</i><i data-hf-id="hf-couk">8</i
+            ><i data-hf-id="hf-cajj">9</i><i data-hf-id="hf-td0c">0</i><i data-hf-id="hf-9cdz">1</i
+            ><i data-hf-id="hf-hqa6">2</i><i data-hf-id="hf-ckz5">3</i><i data-hf-id="hf-64q8">4</i
+            ><i data-hf-id="hf-gfpn">5</i><i data-hf-id="hf-cvmq">6</i><i data-hf-id="hf-2lhh">7</i
+            ><i data-hf-id="hf-fdgk">8</i><i data-hf-id="hf-t7fj">9</i><i data-hf-id="hf-s639">0</i
+            ><i data-hf-id="hf-8y2y">1</i><i data-hf-id="hf-i4l7">2</i><i data-hf-id="hf-drw8">3</i
+            ><i data-hf-id="hf-4xt5">4</i><i data-hf-id="hf-g1em">5</i><i data-hf-id="hf-d9xr">6</i
+            ><i data-hf-id="hf-3sek">7</i><i data-hf-id="hf-e6jh">8</i><i data-hf-id="hf-st4i">9</i
+            ><i data-hf-id="hf-skea">0</i><i data-hf-id="hf-8jrx">1</i><i data-hf-id="hf-iiw8">2</i
+            ><i data-hf-id="hf-ddl7">3</i><i data-hf-id="hf-5c46">4</i><i data-hf-id="hf-fn3l">5</i
+            ><i data-hf-id="hf-do8s">6</i><i data-hf-id="hf-3e3j">7</i><i data-hf-id="hf-ekui">8</i
+            ><i data-hf-id="hf-seth">9</i><i data-hf-id="hf-ujxf">0</i><i data-hf-id="hf-bbx4">1</i
+            ><i data-hf-id="hf-fqr1">2</i><i data-hf-id="hf-be22">3</i><i data-hf-id="hf-4573">4</i
+            ><i data-hf-id="hf-f8sk">5</i><i data-hf-id="hf-e2jt">6</i><i data-hf-id="hf-4l0m">7</i
+            ><i data-hf-id="hf-gkdn">8</i><i data-hf-id="hf-v6yo">9</i></span
+          ></span
+        ><span data-hf-id="hf-er16" class="dg"
+          ><span data-hf-id="hf-a34q" class="dg-s" id="r-d1"
+            ><i data-hf-id="hf-uy8g">0</i><i data-hf-id="hf-axm3">1</i><i data-hf-id="hf-g522">2</i
+            ><i data-hf-id="hf-azr1">3</i><i data-hf-id="hf-4ji4">4</i><i data-hf-id="hf-euhj">5</i
+            ><i data-hf-id="hf-eguu">6</i><i data-hf-id="hf-46pl">7</i><i data-hf-id="hf-gyoo">8</i
+            ><i data-hf-id="hf-usnn">9</i><i data-hf-id="hf-trbd">0</i><i data-hf-id="hf-ajb2">1</i
+            ><i data-hf-id="hf-gjd3">2</i><i data-hf-id="hf-c6o4">3</i><i data-hf-id="hf-3cl1">4</i
+            ><i data-hf-id="hf-eg6i">5</i><i data-hf-id="hf-ev5v">6</i><i data-hf-id="hf-5dmo">7</i
+            ><i data-hf-id="hf-frrl">8</i><i data-hf-id="hf-uecm">9</i><i data-hf-id="hf-u5me">0</i
+            ><i data-hf-id="hf-a501">1</i><i data-hf-id="hf-gxo4">2</i><i data-hf-id="hf-bsd3">3</i
+            ><i data-hf-id="hf-3qw2">4</i><i data-hf-id="hf-e1vh">5</i><i data-hf-id="hf-f9gw">6</i
+            ><i data-hf-id="hf-4zbn">7</i><i data-hf-id="hf-g62m">8</i><i data-hf-id="hf-u01l">9</i
+            ><i data-hf-id="hf-ps93">0</i><i data-hf-id="hf-cx58">1</i><i data-hf-id="hf-kifd">2</i
+            ><i data-hf-id="hf-g5qe">3</i><i data-hf-id="hf-2jyz">4</i><i data-hf-id="hf-k0gw">5</i
+            ><i data-hf-id="hf-9avh">6</i><i data-hf-id="hf-vrd6">7</i><i data-hf-id="hf-i5lr">8</i
+            ><i data-hf-id="hf-qfac">9</i><i data-hf-id="hf-q6k4">0</i><i data-hf-id="hf-ciu7">1</i
+            ><i data-hf-id="hf-kwqe">2</i><i data-hf-id="hf-frfd">3</i><i data-hf-id="hf-2ya0">4</i
+            ><i data-hf-id="hf-jm5v">5</i><i data-hf-id="hf-9p6i">6</i><i data-hf-id="hf-vd25">7</i
+            ><i data-hf-id="hf-ijws">8</i><i data-hf-id="hf-q0zb">9</i></span
+          ></span
+        ><span data-hf-id="hf-f5c7" class="dg"
+          ><span data-hf-id="hf-e18r" class="dg-s" id="r-d0"
+            ><i data-hf-id="hf-pwlg">0</i><i data-hf-id="hf-fqkl">1</i><i data-hf-id="hf-gmze">2</i
+            ><i data-hf-id="hf-cw43">3</i><i data-hf-id="hf-5juo">4</i><i data-hf-id="hf-tq3l">5</i
+            ><i data-hf-id="hf-p1zq">6</i><i data-hf-id="hf-db8v">7</i><i data-hf-id="hf-su64">8</i
+            ><i data-hf-id="hf-wnjx">9</i><i data-hf-id="hf-piaf">0</i><i data-hf-id="hf-g4vm">1</i
+            ><i data-hf-id="hf-g8od">2</i><i data-hf-id="hf-daf4">3</i><i data-hf-id="hf-55jn">4</i
+            ><i data-hf-id="hf-u4em">5</i><i data-hf-id="hf-onop">6</i><i data-hf-id="hf-dpjw">7</i
+            ><i data-hf-id="hf-sfv3">8</i><i data-hf-id="hf-x1uy">9</i><i data-hf-id="hf-p3ze">0</i
+            ><i data-hf-id="hf-gj6n">1</i><i data-hf-id="hf-hflg">2</i><i data-hf-id="hf-c3i1">3</i
+            ><i data-hf-id="hf-4r8m">4</i><i data-hf-id="hf-uipn">5</i><i data-hf-id="hf-puls">6</i
+            ><i data-hf-id="hf-cimt">7</i><i data-hf-id="hf-s1k2">8</i><i data-hf-id="hf-xg5z">9</i
+            ><i data-hf-id="hf-opod">0</i><i data-hf-id="hf-gxho">1</i><i data-hf-id="hf-h1af">2</i
+            ><i data-hf-id="hf-cht2">3</i><i data-hf-id="hf-4cxl">4</i><i data-hf-id="hf-ux0o">5</i
+            ><i data-hf-id="hf-pgar">6</i><i data-hf-id="hf-cwxu">7</i><i data-hf-id="hf-rn91">8</i
+            ><i data-hf-id="hf-xuh0">9</i><i data-hf-id="hf-rhtk">0</i><i data-hf-id="hf-hbsp">1</i
+            ><i data-hf-id="hf-i87i">2</i><i data-hf-id="hf-bavz">3</i><i data-hf-id="hf-3ymk">4</i
+            ><i data-hf-id="hf-s4vh">5</i><i data-hf-id="hf-ngrm">6</i><i data-hf-id="hf-ewgz">7</i
+            ><i data-hf-id="hf-ufe8">8</i><i data-hf-id="hf-y8s1">9</i></span
+          ></span
+        ><span data-hf-id="hf-cgxd" class="unit">회</span>
+      </div>
+      <div data-hf-id="hf-a46i" class="rule"></div>
+      <div data-hf-id="hf-y00d" class="m-lab cost" id="r-cost">트래픽 비용 ↑</div>
+      <div data-hf-id="hf-ufsv" class="bar"><div data-hf-id="hf-mtx7" class="barfill" id="r-barfill"></div></div>
+      <div data-hf-id="hf-m36r" class="note">예시 숫자</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const C = 128;
+    tl.fromTo('#r-d2', { y: -2 * C }, { y: -2 * C, duration: 0.01 }, 0)
+      .fromTo('#r-d1', { y: -8 * C }, { y: -8 * C, duration: 0.01 }, 0)
+      .fromTo('#r-d0', { y: -36 * C }, { y: -36 * C, duration: 0.01 }, 0)
+      .fromTo('#r-barfill', { scaleY: 0.92 }, { scaleY: 0.92, duration: 0.01 }, 0)
+      .fromTo('#r-band', { x: -160 }, { x: 1210, duration: 0.5, ease: 'power2.inOut' }, 0.45)
+      .fromTo(
+        '#r-new',
+        { clipPath: 'inset(0% 100% 0% 0%)' },
+        { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.5, ease: 'power2.inOut' },
+        0.45
+      )
+      .fromTo('#r-l1', { yPercent: 110 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 0.9)
+      .fromTo(
+        '#r-slot',
+        { scale: 1 },
+        { scale: 1.04, transformOrigin: '50% 50%', duration: 2.0, ease: 'power1.inOut' },
+        1.4
+      );
+    window.__timelines['s04-reveal'] = tl;
+  </script>
+</template>

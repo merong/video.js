@@ -1,0 +1,11 @@
+# HyperFrames caches and local renders
+.hyperframes/
+.thumbnails/
+.waveform-cache/
+renders/
+
+# Media sources and storyboard stills stay local; only source and docs are tracked.
+assets/**
+!assets/**/
+!assets/**/README.md
+boards/stills/

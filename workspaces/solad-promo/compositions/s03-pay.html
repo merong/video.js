@@ -1,0 +1,133 @@
+<template>
+  <style>
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Medium.otf') format('opentype');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Bold.otf') format('opentype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Black.otf') format('opentype');
+      font-weight: 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #0f0f11;
+      color: #f4f4f5;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    #root .ln {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.08em;
+    }
+    #root .ln > span {
+      display: inline-block;
+    }
+    #root .t {
+      font-weight: 900;
+      font-size: 96px;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+    }
+    #root .sub {
+      font-weight: 700;
+      font-size: 52px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    #root .fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #root .fill img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    #p-shade {
+      background: linear-gradient(
+        to right,
+        rgba(15, 15, 17, 0.94) 0%,
+        rgba(15, 15, 17, 0.8) 38%,
+        rgba(15, 15, 17, 0) 64%
+      );
+    }
+    #p-title {
+      position: absolute;
+      left: 120px;
+      top: 220px;
+    }
+    #p-f {
+      position: absolute;
+      left: 120px;
+      top: 560px;
+    }
+    #p-f .sub {
+      color: #d4d4d8;
+    }
+    #p-f b {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      color: #f4f4f5;
+      padding: 0 0.12em;
+    }
+    #p-morph {
+      position: absolute;
+      left: 96px;
+      top: 280px;
+      width: 1190px;
+      height: 669px;
+      background: #000;
+      border-radius: 16px;
+      transform-origin: 50% 50%;
+    }
+  </style>
+  <div data-hf-id="hf-evyy" id="root" data-composition-id="s03-pay" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-0s9x" id="p-cam" class="fill">
+      <img data-hf-id="hf-69u6" src="assets/gen/g1-datacenter.png" alt="" />
+    </div>
+    <div data-hf-id="hf-fobn" id="p-shade" class="fill"></div>
+    <div data-hf-id="hf-g7f7" id="p-title" class="t">
+      <div data-hf-id="hf-gmyq" class="ln"><span data-hf-id="hf-vekq" id="p-l1">유료 플레이어는</span></div>
+      <div data-hf-id="hf-ru7a" class="ln"><span data-hf-id="hf-bix4" id="p-l2">볼수록 요금</span></div>
+    </div>
+    <div data-hf-id="hf-7o9y" id="p-f">
+      <div data-hf-id="hf-4kfk" class="ln sub">
+        <span data-hf-id="hf-e2el" id="p-f1">사용자 수 <b data-hf-id="hf-pk8m">×</b> 요금</span>
+      </div>
+      <div data-hf-id="hf-se2w" class="ln sub">
+        <span data-hf-id="hf-14ow" id="p-f2">재생 수 <b data-hf-id="hf-cqoq">×</b> 요금</span>
+      </div>
+    </div>
+    <div data-hf-id="hf-treq" id="p-morph"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#p-cam', { x: 260, scale: 1.0 }, { x: 0, duration: 0.5, ease: 'expo.out' }, 0)
+      .fromTo('#p-cam', { scale: 1.0 }, { scale: 1.22, duration: 3.5, ease: 'power1.in', immediateRender: false }, 0)
+      .fromTo('#p-l1', { yPercent: 110 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 0.25)
+      .fromTo('#p-l2', { yPercent: 110 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 0.38)
+      .fromTo('#p-f1', { yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: 'power3.out' }, 1.0)
+      .fromTo('#p-f2', { yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: 'power3.out' }, 1.3)
+      .to(['#p-title', '#p-f'], { opacity: 0, duration: 0.3, ease: 'power2.in' }, 2.9)
+      .fromTo(
+        '#p-morph',
+        { x: 269, y: -75, scale: 0.02, opacity: 0 },
+        { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.45, ease: 'expo.inOut' },
+        3.0
+      );
+    window.__timelines['s03-pay'] = tl;
+  </script>
+</template>

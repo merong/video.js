@@ -1,0 +1,312 @@
+<template>
+  <style>
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Medium.otf') format('opentype');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Bold.otf') format('opentype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'Noto Sans KR';
+      src: url('assets/fonts/NotoSansKR-Black.otf') format('opentype');
+      font-weight: 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #0f0f11;
+      color: #f4f4f5;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    #root .ln {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.08em;
+    }
+    #root .ln > span {
+      display: inline-block;
+    }
+    #root .t {
+      font-weight: 900;
+      font-size: 96px;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+    }
+    #root .sub {
+      font-weight: 700;
+      font-size: 52px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    #root .fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #root .fill img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    #root .meter {
+      position: absolute;
+      background: #18181a;
+      border: 2px solid #26262a;
+      border-radius: 16px;
+    }
+    #root .m-lab {
+      font-weight: 700;
+      color: #a1a1aa;
+      letter-spacing: -0.01em;
+    }
+    #root .num {
+      display: flex;
+      align-items: flex-start;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+      color: #f4f4f5;
+    }
+    #root .dg {
+      display: inline-block;
+      overflow: hidden;
+    }
+    #root .dg-s {
+      display: flex;
+      flex-direction: column;
+    }
+    #root .dg-s i {
+      font-style: normal;
+      display: block;
+      text-align: center;
+    }
+    #v-tiles {
+      position: absolute;
+      inset: 0;
+    }
+    #root .tile {
+      position: absolute;
+      top: 0;
+      width: 640px;
+      height: 1080px;
+      overflow: hidden;
+    }
+    #root .tile img {
+      position: absolute;
+      left: -320px;
+      top: 0;
+      width: 1280px;
+      height: 1080px;
+      object-fit: cover;
+    }
+    #v-a {
+      left: 0;
+    }
+    #v-b {
+      left: 640px;
+    }
+    #v-c {
+      left: 1280px;
+    }
+    #v-cap {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1920px;
+      height: 300px;
+      background: linear-gradient(to top, rgba(15, 15, 17, 0.9), rgba(15, 15, 17, 0));
+    }
+    #v-line {
+      position: absolute;
+      left: 120px;
+      bottom: 100px;
+    }
+    #v-title {
+      position: absolute;
+      left: 96px;
+      top: 330px;
+    }
+    #v-meter {
+      left: 900px;
+      top: 230px;
+      width: 924px;
+      height: 620px;
+      padding: 60px 64px;
+    }
+    #v-meter .m-lab {
+      font-size: 64px;
+      color: #cdf352;
+    }
+    #v-meter .num {
+      margin-top: 36px;
+      font-size: 270px;
+      line-height: 1;
+      height: 270px;
+    }
+    #v-meter .dg,
+    #v-meter .dg-s i {
+      height: 270px;
+      line-height: 270px;
+    }
+    #v-note {
+      margin-top: 56px;
+      font-weight: 500;
+      font-size: 34px;
+      color: #8a8a93;
+    }
+  </style>
+  <div data-hf-id="hf-q6yr" id="root" data-composition-id="s10-viewers" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-f3ft" id="v-meter" class="meter">
+      <div data-hf-id="hf-6scm" class="m-lab">광고 노출</div>
+      <div data-hf-id="hf-11hv" class="num" id="v-num">
+        <span data-hf-id="hf-rmk6" class="dg"
+          ><span data-hf-id="hf-zwpw" class="dg-s" id="v-d3"
+            ><i data-hf-id="hf-9iec">0</i><i data-hf-id="hf-943b">1</i><i data-hf-id="hf-8psa">2</i
+            ><i data-hf-id="hf-8bh9">3</i><i data-hf-id="hf-b3mg">4</i><i data-hf-id="hf-apbf">5</i
+            ><i data-hf-id="hf-ab0e">6</i><i data-hf-id="hf-9wpd">7</i><i data-hf-id="hf-couk">8</i
+            ><i data-hf-id="hf-cajj">9</i><i data-hf-id="hf-td0c">0</i><i data-hf-id="hf-9cdz">1</i
+            ><i data-hf-id="hf-hqa6">2</i><i data-hf-id="hf-ckz5">3</i><i data-hf-id="hf-64q8">4</i
+            ><i data-hf-id="hf-gfpn">5</i><i data-hf-id="hf-cvmq">6</i><i data-hf-id="hf-2lhh">7</i
+            ><i data-hf-id="hf-fdgk">8</i><i data-hf-id="hf-t7fj">9</i><i data-hf-id="hf-s639">0</i
+            ><i data-hf-id="hf-8y2y">1</i><i data-hf-id="hf-i4l7">2</i><i data-hf-id="hf-drw8">3</i
+            ><i data-hf-id="hf-4xt5">4</i><i data-hf-id="hf-g1em">5</i><i data-hf-id="hf-d9xr">6</i
+            ><i data-hf-id="hf-3sek">7</i><i data-hf-id="hf-e6jh">8</i><i data-hf-id="hf-st4i">9</i
+            ><i data-hf-id="hf-skea">0</i><i data-hf-id="hf-8jrx">1</i><i data-hf-id="hf-iiw8">2</i
+            ><i data-hf-id="hf-ddl7">3</i><i data-hf-id="hf-5c46">4</i><i data-hf-id="hf-fn3l">5</i
+            ><i data-hf-id="hf-do8s">6</i><i data-hf-id="hf-3e3j">7</i><i data-hf-id="hf-ekui">8</i
+            ><i data-hf-id="hf-seth">9</i><i data-hf-id="hf-ujxf">0</i><i data-hf-id="hf-bbx4">1</i
+            ><i data-hf-id="hf-fqr1">2</i><i data-hf-id="hf-be22">3</i><i data-hf-id="hf-4573">4</i
+            ><i data-hf-id="hf-f8sk">5</i><i data-hf-id="hf-e2jt">6</i><i data-hf-id="hf-4l0m">7</i
+            ><i data-hf-id="hf-gkdn">8</i><i data-hf-id="hf-v6yo">9</i></span
+          ></span
+        ><span data-hf-id="hf-jrlj">,</span
+        ><span data-hf-id="hf-er16" class="dg"
+          ><span data-hf-id="hf-2vzh" class="dg-s" id="v-d2"
+            ><i data-hf-id="hf-uy8g">0</i><i data-hf-id="hf-axm3">1</i><i data-hf-id="hf-g522">2</i
+            ><i data-hf-id="hf-azr1">3</i><i data-hf-id="hf-4ji4">4</i><i data-hf-id="hf-euhj">5</i
+            ><i data-hf-id="hf-eguu">6</i><i data-hf-id="hf-46pl">7</i><i data-hf-id="hf-gyoo">8</i
+            ><i data-hf-id="hf-usnn">9</i><i data-hf-id="hf-trbd">0</i><i data-hf-id="hf-ajb2">1</i
+            ><i data-hf-id="hf-gjd3">2</i><i data-hf-id="hf-c6o4">3</i><i data-hf-id="hf-3cl1">4</i
+            ><i data-hf-id="hf-eg6i">5</i><i data-hf-id="hf-ev5v">6</i><i data-hf-id="hf-5dmo">7</i
+            ><i data-hf-id="hf-frrl">8</i><i data-hf-id="hf-uecm">9</i><i data-hf-id="hf-u5me">0</i
+            ><i data-hf-id="hf-a501">1</i><i data-hf-id="hf-gxo4">2</i><i data-hf-id="hf-bsd3">3</i
+            ><i data-hf-id="hf-3qw2">4</i><i data-hf-id="hf-e1vh">5</i><i data-hf-id="hf-f9gw">6</i
+            ><i data-hf-id="hf-4zbn">7</i><i data-hf-id="hf-g62m">8</i><i data-hf-id="hf-u01l">9</i
+            ><i data-hf-id="hf-ps93">0</i><i data-hf-id="hf-cx58">1</i><i data-hf-id="hf-kifd">2</i
+            ><i data-hf-id="hf-g5qe">3</i><i data-hf-id="hf-2jyz">4</i><i data-hf-id="hf-k0gw">5</i
+            ><i data-hf-id="hf-9avh">6</i><i data-hf-id="hf-vrd6">7</i><i data-hf-id="hf-i5lr">8</i
+            ><i data-hf-id="hf-qfac">9</i><i data-hf-id="hf-q6k4">0</i><i data-hf-id="hf-ciu7">1</i
+            ><i data-hf-id="hf-kwqe">2</i><i data-hf-id="hf-frfd">3</i><i data-hf-id="hf-2ya0">4</i
+            ><i data-hf-id="hf-jm5v">5</i><i data-hf-id="hf-9p6i">6</i><i data-hf-id="hf-vd25">7</i
+            ><i data-hf-id="hf-ijws">8</i><i data-hf-id="hf-q0zb">9</i></span
+          ></span
+        ><span data-hf-id="hf-f5c7" class="dg"
+          ><span data-hf-id="hf-6u3i" class="dg-s" id="v-d1"
+            ><i data-hf-id="hf-pwlg">0</i><i data-hf-id="hf-fqkl">1</i><i data-hf-id="hf-gmze">2</i
+            ><i data-hf-id="hf-cw43">3</i><i data-hf-id="hf-5juo">4</i><i data-hf-id="hf-tq3l">5</i
+            ><i data-hf-id="hf-p1zq">6</i><i data-hf-id="hf-db8v">7</i><i data-hf-id="hf-su64">8</i
+            ><i data-hf-id="hf-wnjx">9</i><i data-hf-id="hf-piaf">0</i><i data-hf-id="hf-g4vm">1</i
+            ><i data-hf-id="hf-g8od">2</i><i data-hf-id="hf-daf4">3</i><i data-hf-id="hf-55jn">4</i
+            ><i data-hf-id="hf-u4em">5</i><i data-hf-id="hf-onop">6</i><i data-hf-id="hf-dpjw">7</i
+            ><i data-hf-id="hf-sfv3">8</i><i data-hf-id="hf-x1uy">9</i><i data-hf-id="hf-p3ze">0</i
+            ><i data-hf-id="hf-gj6n">1</i><i data-hf-id="hf-hflg">2</i><i data-hf-id="hf-c3i1">3</i
+            ><i data-hf-id="hf-4r8m">4</i><i data-hf-id="hf-uipn">5</i><i data-hf-id="hf-puls">6</i
+            ><i data-hf-id="hf-cimt">7</i><i data-hf-id="hf-s1k2">8</i><i data-hf-id="hf-xg5z">9</i
+            ><i data-hf-id="hf-opod">0</i><i data-hf-id="hf-gxho">1</i><i data-hf-id="hf-h1af">2</i
+            ><i data-hf-id="hf-cht2">3</i><i data-hf-id="hf-4cxl">4</i><i data-hf-id="hf-ux0o">5</i
+            ><i data-hf-id="hf-pgar">6</i><i data-hf-id="hf-cwxu">7</i><i data-hf-id="hf-rn91">8</i
+            ><i data-hf-id="hf-xuh0">9</i><i data-hf-id="hf-rhtk">0</i><i data-hf-id="hf-hbsp">1</i
+            ><i data-hf-id="hf-i87i">2</i><i data-hf-id="hf-bavz">3</i><i data-hf-id="hf-3ymk">4</i
+            ><i data-hf-id="hf-s4vh">5</i><i data-hf-id="hf-ngrm">6</i><i data-hf-id="hf-ewgz">7</i
+            ><i data-hf-id="hf-ufe8">8</i><i data-hf-id="hf-y8s1">9</i></span
+          ></span
+        ><span data-hf-id="hf-fjn8" class="dg"
+          ><span data-hf-id="hf-as7j" class="dg-s" id="v-d0"
+            ><i data-hf-id="hf-r3ij">0</i><i data-hf-id="hf-hq3q">1</i><i data-hf-id="hf-htwh">2</i
+            ><i data-hf-id="hf-bp70">3</i><i data-hf-id="hf-3kbj">4</i><i data-hf-id="hf-sj6i">5</i
+            ><i data-hf-id="hf-n2gl">6</i><i data-hf-id="hf-fas0">7</i><i data-hf-id="hf-u137">8</i
+            ><i data-hf-id="hf-yn32">9</i><i data-hf-id="hf-qp7i">0</i><i data-hf-id="hf-i4er">1</i
+            ><i data-hf-id="hf-j0tk">2</i><i data-hf-id="hf-ai9x">3</i><i data-hf-id="hf-360i">4</i
+            ><i data-hf-id="hf-sxhj">5</i><i data-hf-id="hf-o9do">6</i><i data-hf-id="hf-e3ux">7</i
+            ><i data-hf-id="hf-tms6">8</i><i data-hf-id="hf-z1e3">9</i><i data-hf-id="hf-qawh">0</i
+            ><i data-hf-id="hf-iips">1</i><i data-hf-id="hf-imij">2</i><i data-hf-id="hf-awky">3</i
+            ><i data-hf-id="hf-2rph">4</i><i data-hf-id="hf-tbsk">5</i><i data-hf-id="hf-nv2n">6</i
+            ><i data-hf-id="hf-ei5y">7</i><i data-hf-id="hf-t8h5">8</i><i data-hf-id="hf-zfp4">9</i
+            ><i data-hf-id="hf-t31o">0</i><i data-hf-id="hf-8i59">1</i><i data-hf-id="hf-jtfm">2</i
+            ><i data-hf-id="hf-9pnv">3</i><i data-hf-id="hf-2deg">4</i><i data-hf-id="hf-wwjt">5</i
+            ><i data-hf-id="hf-lvji">6</i><i data-hf-id="hf-a4sn">7</i><i data-hf-id="hf-pnpw">8</i
+            ><i data-hf-id="hf-zu05">9</i><i data-hf-id="hf-soqn">0</i><i data-hf-id="hf-8wga">1</i
+            ><i data-hf-id="hf-jf4l">2</i><i data-hf-id="hf-a3yw">3</i><i data-hf-id="hf-1z3f">4</i
+            ><i data-hf-id="hf-xauu">5</i><i data-hf-id="hf-lh8h">6</i><i data-hf-id="hf-aj3o">7</i
+            ><i data-hf-id="hf-p9ev">8</i><i data-hf-id="hf-08b6">9</i></span
+          ></span
+        >
+      </div>
+      <div data-hf-id="hf-jqhm" id="v-note">예시 화면</div>
+    </div>
+    <div data-hf-id="hf-md7x" id="v-title" class="t">
+      <div data-hf-id="hf-gmyq" class="ln"><span data-hf-id="hf-e6g4" id="v-l1">재생이 곧</span></div>
+      <div data-hf-id="hf-ru7a" class="ln"><span data-hf-id="hf-gouu" id="v-l2">광고 노출</span></div>
+    </div>
+    <div data-hf-id="hf-h34d" id="v-tiles">
+      <div data-hf-id="hf-az4e" class="tile" id="v-a">
+        <img data-hf-id="hf-kcor" src="assets/gen/g3-viewer-subway.png" alt="" />
+      </div>
+      <div data-hf-id="hf-710d" class="tile" id="v-b">
+        <img data-hf-id="hf-w6wq" src="assets/gen/g4-viewer-home.png" alt="" />
+      </div>
+      <div data-hf-id="hf-69ck" class="tile" id="v-c">
+        <img data-hf-id="hf-6eep" src="assets/gen/g5-viewer-cafe.png" alt="" />
+      </div>
+      <div data-hf-id="hf-fa2u" id="v-cap"></div>
+      <div data-hf-id="hf-l7v5" id="v-line" class="sub">
+        <div data-hf-id="hf-s8ib" class="ln">
+          <span data-hf-id="hf-nk9f" id="v-l0">지하철에서, 거실에서, 카페에서</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const C = 270;
+    // 1,286 -> 3,904 : thousands 1 -> 3, hundreds 2 -> 9, tens 8 -> 10, ones 6 -> 44
+    tl.fromTo('#v-a', { yPercent: 100 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 0)
+      .fromTo('#v-b', { yPercent: -100 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 0.12)
+      .fromTo('#v-c', { yPercent: 100 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 0.24)
+      .fromTo('#v-l0', { yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: 'power3.out' }, 0.6)
+      .to('#v-a', { x: 1000, y: 280, scale: 0.0, duration: 0.5, ease: 'expo.inOut' }, 2.2)
+      .to('#v-c', { x: 120, y: 280, scale: 0.0, duration: 0.5, ease: 'expo.inOut' }, 2.2)
+      .to(
+        '#v-b',
+        {
+          x: 760,
+          y: 0,
+          scaleX: 1.25,
+          scaleY: 0.48,
+          transformOrigin: '0% 50%',
+          opacity: 0,
+          duration: 0.5,
+          ease: 'expo.inOut',
+        },
+        2.2
+      )
+      .to(['#v-cap', '#v-line'], { opacity: 0, duration: 0.25, ease: 'power2.in' }, 2.2)
+      .fromTo('#v-meter', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out' }, 2.5)
+      .fromTo('#v-l1', { yPercent: 110 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 2.6)
+      .fromTo('#v-l2', { yPercent: 110 }, { yPercent: 0, duration: 0.6, ease: 'power3.out' }, 2.72)
+      .fromTo('#v-d3', { y: -1 * C }, { y: -3 * C, duration: 2.2, ease: 'power2.inOut' }, 2.8)
+      .fromTo('#v-d2', { y: -2 * C }, { y: -9 * C, duration: 2.2, ease: 'power2.inOut' }, 2.8)
+      .fromTo('#v-d1', { y: -8 * C }, { y: -20 * C, duration: 2.2, ease: 'power2.inOut' }, 2.8)
+      .fromTo('#v-d0', { y: -6 * C }, { y: -44 * C, duration: 2.2, ease: 'power2.inOut' }, 2.8);
+    window.__timelines['s10-viewers'] = tl;
+  </script>
+</template>

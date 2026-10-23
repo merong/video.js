@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>솔애드 소개 영상 스토리보드</title>
+    <style>
+      :root {
+        --bg: #f4f4f5;
+        --card: #ffffff;
+        --ink: #18181a;
+        --mute: #6b6b73;
+        --line: #e4e4e7;
+        --accent: #cdf352;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
+      }
+      header {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 40px 24px 8px;
+      }
+      header h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+        letter-spacing: -0.02em;
+      }
+      header p {
+        margin: 4px 0;
+        color: var(--mute);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      .grid {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 16px 24px 64px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 20px;
+      }
+      .act {
+        grid-column: 1 / -1;
+        margin-top: 18px;
+        font-weight: 800;
+        font-size: 18px;
+        padding-left: 10px;
+        border-left: 6px solid var(--accent);
+      }
+      .frame {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .frame img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        background: #0f0f11;
+      }
+      .title {
+        padding: 14px 16px 2px;
+        font-weight: 800;
+        font-size: 16px;
+      }
+      .time {
+        padding: 0 16px;
+        color: var(--mute);
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+      }
+      .words {
+        margin: 10px 16px 6px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .kind {
+        margin: 0 16px 16px;
+        font-size: 12px;
+        color: var(--mute);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>솔애드 플레이어 소개 영상 · 스토리보드 (A안 확장)</h1>
+      <p>56초 · 1920×1080 · 30fps · 무음(메인 히어로 자동재생) · 12장면 14컷</p>
+      <p>
+        [생성 이미지]는 Higgsfield로 만든 사진입니다. "임시 화면"이라고 적힌 컷은 ego-lite 캡처와 녹화가 오면 같은
+        자리에서 실제 화면으로 바뀝니다. 지금은 예전 스크린샷을 넣어 두었습니다.
+      </p>
+    </header>
+    <main class="grid">
+      <section class="act">1막: 비용만 쌓이는 지금</section>
+      <div class="frame">
+        <img src="stills/frame-00-at-2.4s.png" alt="" />
+        <div class="title">01: 많이 볼수록, 비용만</div>
+        <div class="time">0.0 to 4.0s</div>
+        <p class="words">
+          기본 플레이어로 영상이 재생되고, 옆 계량기의 재생 수가 1,204에서 1,286으로 돌아갑니다. 그 아래 '트래픽 비용'
+          막대만 같이 올라갑니다. 마지막에 숫자가 화면 쪽으로 커지면서 다음 컷으로 밀고 들어갑니다.
+        </p>
+        <p class="kind">기본 컨트롤 녹화 r01로 교체 예정. 지금은 본편 영상만 들어 있음</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-01-at-5.6s.png" alt="" />
+        <div class="title">02: 남는 건 서버 청구서</div>
+        <div class="time">4.0 to 8.0s</div>
+        <p class="words">
+          [생성 이미지] 밤에 청구서를 든 운영자 사진에서 카메라가 천천히 물러납니다. 끝에서 오른쪽으로 패닝해 다음
+          사진으로 넘어갑니다.
+        </p>
+        <p class="kind">Higgsfield g0</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-02-at-9.9s.png" alt="" />
+        <div class="title">03: 유료 플레이어는 볼수록 요금</div>
+        <div class="time">8.0 to 11.5s</div>
+        <p class="words">
+          [생성 이미지] 데이터센터 복도의 소실점으로 파고듭니다. '사용자 수 × 요금', '재생 수 × 요금'이 한 줄씩
+          들어오고, 소실점이 플레이어 사각형으로 커져 다음 컷의 자리가 됩니다. 경쟁사 이름과 가격은 쓰지 않습니다.
+        </p>
+        <p class="kind">Higgsfield g1</p>
+      </div>
+      <section class="act">2막: 같은 화면이 다시 짜인다</section>
+      <div class="frame">
+        <img src="stills/frame-03-at-13.6s.png" alt="" />
+        <div class="title">04: 같은 영상, 솔애드 플레이어로</div>
+        <div class="time">11.5 to 15.0s</div>
+        <p class="words">
+          1컷과 같은 구도입니다. 라임 띠가 왼쪽에서 오른쪽으로 지나가면 같은 자리의 기본 플레이어가 솔애드 플레이어로
+          바뀝니다. 바뀐 뒤 화면은 캡처로 채웁니다(지금은 임시 화면).
+        </p>
+        <p class="kind">임시 화면</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-04-at-18.3s.png" alt="" />
+        <div class="title">05: 영상 앞·중간에 내 광고</div>
+        <div class="time">15.0 to 21.0s</div>
+        <p class="words">
+          프리롤 광고가 재생되고 커서가 '건너뛰기'를 누릅니다. 그 순간 계량기 라벨이 '트래픽 비용'에서 '광고
+          노출'(라임)로 바뀝니다. 끝에서 광고 배지 쪽으로 파고듭니다.
+        </p>
+        <p class="kind">r02 녹화로 교체 예정. 지금은 임시 화면</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-05-at-22.4s.png" alt="" />
+        <div class="title">06: 내 광고는 직접 올리고</div>
+        <div class="time">21.0 to 23.4s</div>
+        <p class="words">
+          관리자의 하우스 광고에서 새 소재를 등록합니다. 영상, 이미지, GIF를 받습니다. 커뮤니티 자체 배너("이번 주 인기
+          영상 한곳에 모았어요")가 등록 폼으로 들어가고 커서가 저장을 누릅니다.
+        </p>
+        <p class="kind">s06 하우스 광고 캡처로 교체 예정. 배너 배경은 Higgsfield 생성 이미지</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-06-at-25.2s.png" alt="" />
+        <div class="title">07: 영상 광고도, 고정 배너도</div>
+        <div class="time">23.4 to 26.0s</div>
+        <p class="words">
+          등록한 배너가 그대로 커지며 플레이어 자리로 들어갑니다. 광고 시간에 이미지 광고가 정해진 시간 동안 고정으로
+          뜹니다. 오른쪽에 영상 · 이미지(라임) · GIF가 차례로 올라옵니다.
+        </p>
+        <p class="kind">r07 플레이어 이미지 광고 녹화로 교체 예정</p>
+      </div>
+      <section class="act">3막: 내 사이트답게</section>
+      <div class="frame">
+        <img src="stills/frame-07-at-28.6s.png" alt="" />
+        <div class="title">08: 내 사이트 로고를 원하는 모서리에</div>
+        <div class="time">26.0 to 31.0s</div>
+        <p class="words">
+          관리자 2×2 모서리 선택을 크게 보여 줍니다. 커서가 왼쪽 아래, 오른쪽 아래를 누를 때마다 옆 플레이어의 로고가 그
+          모서리로 옮겨갑니다(r05 녹화).
+        </p>
+        <p class="kind">s04 캡처와 r05 녹화로 교체 예정</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-08-at-34.2s.png" alt="" />
+        <div class="title">09: 테마 6종, 내 사이트답게</div>
+        <div class="time">31.0 to 36.0s</div>
+        <p class="words">
+          테마 카드 6장 가운데 3장을 차례로 누르면 오른쪽 플레이어의 색과 모서리가 카드마다 바뀝니다(r04 녹화).
+        </p>
+        <p class="kind">s03 캡처와 r04 녹화로 교체 예정</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-09-at-37.8s.png" alt="" />
+        <div class="title">10: 앞뒤 10초, 가운데에서도</div>
+        <div class="time">36.0 to 40.0s</div>
+        <p class="words">
+          플레이어 가운데의 −10 · 재생 · +10입니다. 커서가 +10을 두 번 누르면 시간 표시가 넘어갑니다(r03 녹화).
+        </p>
+        <p class="kind">r03 녹화로 교체 예정. 임시 화면의 Big Buck Bunny는 빠짐</p>
+      </div>
+      <section class="act">4막: 결과</section>
+      <div class="frame">
+        <img src="stills/frame-10-at-41.4s.png" alt="" />
+        <div class="title">11: 지하철에서, 거실에서, 카페에서</div>
+        <div class="time">40.0 to 42.5s</div>
+        <p class="words">
+          [생성 이미지] 세 시청자 사진이 위아래에서 번갈아 들어와 세 칸으로 나뉩니다. 그다음 가운데로 접히며 하나가
+          됩니다.
+        </p>
+        <p class="kind">Higgsfield g3, g4, g5</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-11-at-45.6s.png" alt="" />
+        <div class="title">12: 재생이 곧 광고 노출</div>
+        <div class="time">42.5 to 46.0s</div>
+        <p class="words">
+          1컷의 계량기가 크게 돌아옵니다. 라벨은 라임 '광고 노출'이고, 숫자는 1,286에서 3,904로 돌아갑니다. 숫자는
+          예시라서 '예시 화면'이라고 붙입니다.
+        </p>
+        <p class="kind">그래픽</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-12-at-48.9s.png" alt="" />
+        <div class="title">13: 사용자 수·재생 수 과금 없이 무제한</div>
+        <div class="time">46.0 to 50.5s</div>
+        <p class="words">
+          [생성 이미지] 기계식 계량기를 가까이 찍은 사진입니다. 숫자 창 위로 판이 밀려 들어오고 '무제한'(라임)이
+          올라옵니다.
+        </p>
+        <p class="kind">Higgsfield g6</p>
+      </div>
+      <div class="frame">
+        <img src="stills/frame-13-at-53.6s.png" alt="" />
+        <div class="title">14: 끝 화면</div>
+        <div class="time">50.5 to 56.0s</div>
+        <p class="words">
+          라임이 아래에서 차올라 바탕이 됩니다. '솔애드', '그누보드 동영상 게시판용 플레이어', '동영상 갤러리 보기 →'가
+          나오고 마지막 4.5초는 멈춰 있습니다.
+        </p>
+        <p class="kind">그래픽</p>
+      </div>
+    </main>
+  </body>
+</html>
