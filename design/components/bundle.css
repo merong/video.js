@@ -3,27 +3,27 @@
 
 /* ── 밀도: 기본과 밀집. 밀집은 표 카드(.sa-dense)에만 건다 ── */
 :root {
-  --sa-ctl: var(--control-h, 36px);
-  --sa-ctl-sm: var(--control-h-sm, 30px);
-  --sa-row: var(--row-h, 46px);
-  --sa-head: var(--row-head-h, 36px);
+  --sa-ctl: var(--control-h, 34px);
+  --sa-ctl-sm: var(--control-h-sm, 28px);
+  --sa-row: var(--row-h, 42px);
+  --sa-head: var(--row-head-h, 34px);
   --sa-pad: var(--pad-card, 18px);
-  --sa-cell: 13.5px;
-  --sa-num: 13px;
-  --sa-btn: 13.5px;
+  --sa-cell: 13px;
+  --sa-num: 12.5px;
+  --sa-btn: 13px;
   --sa-sans: var(--font-sans, "Noto Sans KR", system-ui, sans-serif);
   --sa-numf: var(--font-num, Inter, "Noto Sans KR", system-ui, sans-serif);
   --sa-mono: var(--font-mono, ui-monospace, monospace);
 }
 .sa-dense {
-  --sa-ctl: var(--control-h-dense, 32px);
-  --sa-ctl-sm: var(--control-h-dense-sm, 28px);
-  --sa-row: var(--row-h-dense, 40px);
-  --sa-head: var(--row-head-h-dense, 32px);
+  --sa-ctl: var(--control-h-dense, 30px);
+  --sa-ctl-sm: var(--control-h-dense-sm, 26px);
+  --sa-row: var(--row-h-dense, 36px);
+  --sa-head: var(--row-head-h-dense, 30px);
   --sa-pad: var(--pad-card-dense, 14px);
-  --sa-cell: 13px;
-  --sa-num: 12.5px;
-  --sa-btn: 13px;
+  --sa-cell: 12.5px;
+  --sa-num: 12px;
+  --sa-btn: 12.5px;
 }
 
 *,
@@ -35,7 +35,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font: 400 14px/22px var(--sa-sans);
+  font: 400 13px/20px var(--sa-sans);
   -webkit-font-smoothing: antialiased;
 }
 :focus-visible {
@@ -80,25 +80,25 @@ p {
 
 /* ── 글자 역할 ── */
 .sa-page-title {
-  font: 700 22px/30px var(--sa-sans);
+  font: 700 20px/27px var(--sa-sans);
   letter-spacing: -0.02em;
 }
 .sa-card-title {
-  font: 700 15px/20px var(--sa-sans);
+  font: 700 14px/19px var(--sa-sans);
   letter-spacing: -0.01em;
 }
 .sa-body {
-  font: 400 14px/22px var(--sa-sans);
+  font: 400 13px/20px var(--sa-sans);
 }
 .sa-strong {
   font-weight: 700;
 }
 .sa-label {
-  font: 500 13px/18px var(--sa-sans);
+  font: 500 12.5px/17px var(--sa-sans);
   color: var(--ink);
 }
 .sa-small {
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--sub);
 }
 .sa-num {
@@ -177,7 +177,7 @@ p {
   border-radius: var(--radius-control);
   background: var(--panel);
   color: var(--ink);
-  font: 400 14px/1 var(--sa-sans);
+  font: 400 13px/1 var(--sa-sans);
 }
 .sa-input::placeholder {
   color: var(--faint);
@@ -192,7 +192,7 @@ p {
   font-variant-numeric: tabular-nums;
 }
 .sa-help {
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--sub);
 }
 .sa-field.is-error .sa-input {
@@ -218,7 +218,7 @@ p {
   border-radius: var(--radius-control);
   background: var(--panel);
   color: var(--sub);
-  font: 500 13px/1 var(--sa-sans);
+  font: 500 12.5px/1 var(--sa-sans);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -427,7 +427,7 @@ p {
   caption-side: top;
   padding: 4px 12px 8px;
   text-align: left;
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--sub);
 }
 /* 위 여백이 .sa-sr보다 우선해 숨긴 caption이 25px 상자가 되지 않게 한다. */
@@ -482,7 +482,7 @@ p {
   font-weight: 700;
 }
 .sa-table .sa-name small {
-  font: 400 12.5px/16px var(--sa-sans);
+  font: 400 12px/15px var(--sa-sans);
   color: var(--sub);
 }
 /* 고정 열: 표가 가로로 넘쳐도 맨 오른쪽 동작 칸은 카드 안에 남고, 나머지 열이 그 아래로 지나간다. */
@@ -510,22 +510,22 @@ p {
   border-left: 0;
 }
 .sa-kpi-label {
-  font: 500 13px/18px var(--sa-sans);
+  font: 500 12.5px/17px var(--sa-sans);
   color: var(--sub);
 }
 .sa-kpi-value {
-  font: 700 22px/26px var(--sa-numf);
+  font: 700 20px/24px var(--sa-numf);
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
 .sa-kpis.is-hero .sa-kpi-value {
-  font-size: 28px;
+  font-size: 26px;
   line-height: 32px;
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 .sa-delta {
-  font: 500 12.5px/16px var(--sa-numf);
+  font: 500 12px/15px var(--sa-numf);
   font-variant-numeric: tabular-nums;
 }
 .sa-delta.is-good {
@@ -536,7 +536,7 @@ p {
 }
 .sa-delta em {
   margin-left: 4px;
-  font: 400 12.5px/16px var(--sa-sans);
+  font: 400 12px/15px var(--sa-sans);
   font-style: normal;
   color: var(--sub);
 }
@@ -594,7 +594,7 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-  font: 800 15px/1 var(--sa-sans);
+  font: 800 14px/1 var(--sa-sans);
   letter-spacing: -0.02em;
   white-space: nowrap;
   color: var(--ink);
@@ -620,7 +620,7 @@ p {
   padding: 0 11px;
   border-radius: var(--radius-control);
   color: var(--sub);
-  font: 500 14px/1 var(--sa-sans);
+  font: 500 13px/1 var(--sa-sans);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -657,7 +657,7 @@ p {
   background: var(--panel-2);
   box-shadow: inset 0 0 0 1px var(--line);
   color: var(--sub);
-  font: 400 12.5px/1 var(--sa-sans);
+  font: 400 12px/1 var(--sa-sans);
   white-space: nowrap;
 }
 .sa-avatar {
@@ -670,6 +670,235 @@ p {
   background: var(--ink);
   color: var(--panel);
   font: 700 12px/1 var(--sa-sans);
+}
+
+/* ── 왼쪽 메뉴와 화면 틀(sa-shell) ── */
+.sa-shell {
+  display: flex;
+  min-width: 0;
+}
+.sa-side {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: 224px;
+  height: 100vh;
+  border-right: 1px solid var(--line);
+  background: var(--panel);
+}
+.sa-side-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: var(--nav-h);
+  padding: 0 14px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+.sa-side-close {
+  display: none;
+  place-items: center;
+  width: var(--sa-ctl-sm);
+  height: var(--sa-ctl-sm);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.sa-side-close:hover {
+  background: var(--hover);
+}
+.sa-side-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 10px 16px;
+}
+.sa-side-label {
+  margin: 16px 10px 6px;
+  color: var(--sub);
+  font: 600 12px/1 var(--sa-sans);
+  letter-spacing: 0.02em;
+}
+.sa-side-nav ul {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sa-side-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  font: 500 13px/1 var(--sa-sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sa-side-nav a > span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sa-side-nav a .sa-ico {
+  flex: none;
+  color: var(--sub);
+}
+.sa-side-nav a:hover {
+  background: var(--hover);
+}
+.sa-side-nav a[aria-current="page"] {
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+}
+.sa-side-nav a[aria-current="page"] .sa-ico {
+  color: inherit;
+}
+.sa-side-nav a b {
+  padding: 3px 5px;
+  border-radius: var(--radius-tag);
+  background: var(--accent);
+  color: var(--on-accent);
+  font: 700 10.5px/1 var(--sa-numf);
+}
+.sa-side-foot {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--line);
+}
+.sa-side-user {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.sa-side-user b {
+  overflow: hidden;
+  font: 700 12.5px/1.2 var(--sa-sans);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sa-side-user small {
+  color: var(--sub);
+  font: 400 12px/1.2 var(--sa-sans);
+}
+.sa-side-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  background: color-mix(in srgb, var(--dark) 55%, transparent);
+}
+.sa-shell-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.sa-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--nav-h);
+  padding: 0 var(--pad-page);
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.sa-topbar-menu {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--sa-ctl-sm);
+  height: var(--sa-ctl-sm);
+  margin-left: -6px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.sa-topbar-menu:hover {
+  background: var(--hover);
+}
+.sa-topbar-crumb {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  color: var(--sub);
+  font: 500 12.5px/1 var(--sa-sans);
+  white-space: nowrap;
+}
+.sa-topbar-crumb span::after {
+  content: "/";
+  margin-left: 6px;
+  color: var(--faint);
+}
+.sa-topbar-crumb b {
+  overflow: hidden;
+  color: var(--ink);
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+.sa-topbar-r {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* 960px 미만: 왼쪽 메뉴는 메뉴 단추로 여는 서랍이 된다. */
+@media (max-width: 960px) {
+  .sa-side {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 20;
+    width: min(280px, calc(100vw - 48px));
+    height: auto;
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+  .sa-side.is-open {
+    transform: none;
+    visibility: visible;
+  }
+  .sa-side-close {
+    display: grid;
+  }
+  .sa-topbar {
+    gap: 8px;
+    padding: 0 16px;
+  }
+}
+@media (max-width: 599px) {
+  .sa-topbar-crumb span {
+    display: none;
+  }
+}
+@media (max-width: 960px) and (prefers-reduced-motion: no-preference) {
+  .sa-side {
+    transition:
+      transform var(--motion-fast) var(--ease-standard),
+      visibility 0s linear var(--motion-fast);
+  }
+  .sa-side.is-open {
+    transition: transform var(--motion-fast) var(--ease-standard);
+  }
 }
 
 /* ── 할 일 배너 ── */
@@ -690,7 +919,7 @@ p {
   justify-items: start;
 }
 .sa-banner-title {
-  font: 700 22px/30px var(--sa-sans);
+  font: 700 20px/27px var(--sa-sans);
   letter-spacing: -0.02em;
 }
 .sa-banner-title em {
@@ -699,11 +928,11 @@ p {
   color: var(--accent);
 }
 .sa-banner-l p {
-  font: 400 14px/22px var(--sa-sans);
+  font: 400 13px/20px var(--sa-sans);
   color: var(--dark-sub);
 }
 .sa-banner-link {
-  font: 600 13.5px/1 var(--sa-sans);
+  font: 600 13px/1 var(--sa-sans);
   color: var(--on-dark);
   text-decoration: none;
 }
@@ -733,11 +962,11 @@ p {
   min-width: 0;
 }
 .sa-todo b {
-  font: 700 14px/20px var(--sa-sans);
+  font: 700 13px/19px var(--sa-sans);
 }
 .sa-todo small {
   overflow: hidden;
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--dark-sub);
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -747,7 +976,7 @@ p {
   border-radius: var(--radius-tag);
   background: var(--accent);
   color: var(--on-accent);
-  font: 700 13px/1 var(--sa-numf);
+  font: 700 12.5px/1 var(--sa-numf);
   font-style: normal;
 }
 .sa-todo li.is-bad > svg {
@@ -785,7 +1014,7 @@ p {
 }
 .sa-endl b {
   overflow: hidden;
-  font: 700 14px/20px var(--sa-sans);
+  font: 700 13px/19px var(--sa-sans);
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -832,7 +1061,7 @@ p {
   padding: 8px 10px;
   border-radius: var(--radius-control);
   color: var(--sub);
-  font: 500 13.5px/18px var(--sa-sans);
+  font: 500 13px/17px var(--sa-sans);
   counter-increment: s;
 }
 .sa-steps li::before {
@@ -979,7 +1208,7 @@ input[type="file"].sa-input {
   padding: 0;
   line-height: calc(var(--sa-ctl) - 2px);
   color: var(--sub);
-  font-size: 13px;
+  font-size: 12.5px;
 }
 input[type="file"].sa-input::file-selector-button {
   height: 100%;
@@ -1002,7 +1231,7 @@ input[type="file"].sa-input::file-selector-button {
   align-items: center;
   gap: var(--gap-xs);
   min-height: var(--sa-ctl-sm);
-  font: 400 14px/22px var(--sa-sans);
+  font: 400 13px/20px var(--sa-sans);
   color: var(--ink);
   cursor: pointer;
 }
@@ -1070,7 +1299,7 @@ a.sa-chip {
   border-radius: var(--radius-control);
   background: var(--panel-2);
   box-shadow: inset 0 0 0 1px var(--line);
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--sub);
 }
 .sa-note.is-warn {
@@ -1093,7 +1322,7 @@ a.sa-chip {
   border-radius: var(--radius-control);
   background: var(--panel);
   box-shadow: inset 0 0 0 1px var(--line-2);
-  font: 500 13px/20px var(--sa-sans);
+  font: 500 12.5px/19px var(--sa-sans);
   color: var(--ink);
 }
 .sa-status::before {
@@ -1151,7 +1380,7 @@ a.sa-chip {
   border-radius: var(--radius-tag);
   background: var(--panel-2);
   color: var(--ink);
-  font: 500 12.5px/18px var(--sa-numf);
+  font: 500 12px/17px var(--sa-numf);
   word-break: break-all;
 }
 .sa-empty {
@@ -1163,7 +1392,7 @@ a.sa-chip {
   color: var(--sub);
 }
 .sa-empty b {
-  font: 700 14px/20px var(--sa-sans);
+  font: 700 13px/19px var(--sa-sans);
   color: var(--ink);
 }
 .sa-table td.sa-empty {
@@ -1181,7 +1410,7 @@ a.sa-chip {
   height: auto;
   padding: 11px 14px;
   vertical-align: top;
-  font: 500 13px/20px var(--sa-sans);
+  font: 500 12.5px/19px var(--sa-sans);
   white-space: nowrap;
 }
 .sa-kv td {
@@ -1208,14 +1437,14 @@ a.sa-chip {
   gap: var(--gap-md);
   padding: 10px 0;
   border-top: 1px solid var(--line);
-  font: 400 13.5px/20px var(--sa-sans);
+  font: 400 13px/19px var(--sa-sans);
 }
 .sa-log li:first-child {
   border-top: 0;
   padding-top: 0;
 }
 .sa-log time {
-  font: 500 12.5px/20px var(--sa-numf);
+  font: 500 12px/19px var(--sa-numf);
   font-variant-numeric: tabular-nums;
   color: var(--sub);
 }
@@ -1239,7 +1468,7 @@ a.sa-chip {
   background: var(--panel-2);
   box-shadow: inset 0 0 0 1px var(--line);
   color: var(--sub);
-  font: 500 13px/18px var(--sa-sans);
+  font: 500 12.5px/17px var(--sa-sans);
   counter-increment: f;
 }
 .sa-flow li::before {
@@ -1375,7 +1604,7 @@ a.sa-chip {
   font-family: var(--sa-mono);
 }
 .sa-color-state {
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--sub);
 }
 
@@ -1398,7 +1627,7 @@ a.sa-chip {
   border-bottom: 1px solid var(--line);
 }
 .sa-codeblock-title {
-  font: 500 13px/18px var(--sa-sans);
+  font: 500 12.5px/17px var(--sa-sans);
   color: var(--sub);
 }
 .sa-codeblock-head > .sa-btn {
@@ -1412,7 +1641,7 @@ a.sa-chip {
   overflow-x: auto;
   white-space: pre;
   tab-size: 2;
-  font: 400 12.5px/20px var(--sa-mono);
+  font: 400 12px/19px var(--sa-mono);
   color: var(--ink);
 }
 .sa-codeblock pre:focus-visible {
@@ -1440,7 +1669,7 @@ a.sa-chip {
   padding: 0 6px;
   border-bottom: 2px solid transparent;
   color: var(--sub);
-  font: 500 14px/1 var(--sa-sans);
+  font: 500 13px/1 var(--sa-sans);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -1595,7 +1824,7 @@ a.sa-chip {
 }
 .sa-term-h > h4 {
   scroll-margin-top: calc(var(--nav-h) + var(--gap-lg));
-  font: 700 15px/20px var(--sa-sans);
+  font: 700 14px/19px var(--sa-sans);
   letter-spacing: -0.01em;
 }
 
@@ -2482,7 +2711,7 @@ a.sa-chip {
   padding: 0 10px;
   border-radius: var(--radius-control);
   color: var(--sub);
-  font: 500 13.5px/20px var(--sa-sans);
+  font: 500 13px/19px var(--sa-sans);
   text-decoration: none;
 }
 .sa-secnav a:hover {
@@ -2548,7 +2777,7 @@ a.sa-chip {
   border-radius: var(--radius-control);
   background: var(--panel-2);
   color: var(--sub);
-  font: 400 13px/20px var(--sa-sans);
+  font: 400 12.5px/19px var(--sa-sans);
 }
 .sa-off-reason b {
   color: var(--ink);
@@ -2582,13 +2811,13 @@ a.sa-chip {
   margin-top: 1px;
 }
 .sa-switch-name {
-  font: 500 13.5px/20px var(--sa-sans);
+  font: 500 13px/19px var(--sa-sans);
   color: var(--ink);
 }
 .sa-switch-desc,
 .sa-switch-keys {
   grid-column: 2;
-  font: 400 12.5px/19px var(--sa-sans);
+  font: 400 12px/18px var(--sa-sans);
   color: var(--sub);
 }
 .sa-switch-keys {
@@ -2633,7 +2862,7 @@ kbd.sa-kbd {
   padding: 0 14px;
   border-left: 1px solid var(--line-2);
   color: var(--sub);
-  font: 500 13.5px/1 var(--sa-sans);
+  font: 500 13px/1 var(--sa-sans);
   cursor: pointer;
 }
 .sa-seg label:first-of-type {
@@ -2701,7 +2930,7 @@ kbd.sa-kbd {
   border: 1px dashed var(--dark-line);
   border-radius: var(--radius-tag);
   color: var(--dark-sub);
-  font: 500 12.5px/16px var(--sa-sans);
+  font: 500 12px/15px var(--sa-sans);
   cursor: pointer;
 }
 .sa-corner-frame label:nth-child(1) {
@@ -2797,7 +3026,7 @@ kbd.sa-kbd {
 }
 .sa-file-name {
   overflow: hidden;
-  font: 500 13.5px/20px var(--sa-sans);
+  font: 500 13px/19px var(--sa-sans);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -2816,7 +3045,7 @@ kbd.sa-kbd {
 }
 .sa-unit-text {
   color: var(--sub);
-  font: 400 13px/1 var(--sa-sans);
+  font: 400 12.5px/1 var(--sa-sans);
 }
 
 /* 되돌리기 붙은 문구 칸: 바꾼 칸에만 "기본값으로" 버튼이 생긴다. 자리표시자는 기존 .sa-code로 쓴다. */
@@ -3122,7 +3351,7 @@ kbd.sa-kbd {
   background: var(--panel-2);
 }
 .sa-sb-scene p {
-  font: 400 12.5px/19px var(--sa-sans);
+  font: 400 12px/18px var(--sa-sans);
   color: var(--ink);
 }
 .sa-sb-page {
@@ -3187,7 +3416,7 @@ kbd.sa-kbd {
   padding: 0 12px;
   border-radius: var(--radius-control);
   color: var(--ink);
-  font: 500 13.5px/20px var(--sa-sans);
+  font: 500 13px/19px var(--sa-sans);
   list-style: none;
   cursor: pointer;
 }
@@ -3310,11 +3539,11 @@ kbd.sa-kbd {
   scroll-margin-top: var(--gap-lg);
 }
 .sa-doc-h {
-  font: 700 15px/22px var(--sa-sans);
+  font: 700 14px/21px var(--sa-sans);
   letter-spacing: -0.01em;
 }
 .sa-doc-h3 {
-  font: 700 14px/22px var(--sa-sans);
+  font: 700 13px/20px var(--sa-sans);
 }
 .sa-anchor {
   position: relative;
@@ -3324,7 +3553,7 @@ kbd.sa-kbd {
   height: 24px;
   border-radius: var(--radius-tag);
   color: var(--faint);
-  font: 500 14px/1 var(--sa-numf);
+  font: 500 13px/1 var(--sa-numf);
   text-decoration: none;
 }
 .sa-anchor:hover {
@@ -3345,7 +3574,7 @@ kbd.sa-kbd {
 }
 .sa-toc .sa-secnav a {
   min-height: 32px;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 /* 문장 안 링크. 색만으로 구분하지 않게 밑줄을 둔다. */
 .sa-link {
@@ -3392,7 +3621,7 @@ kbd.sa-kbd {
 .sa-optt th[scope="row"] {
   background: var(--panel);
   color: var(--ink);
-  font: 400 13.5px/20px var(--sa-sans);
+  font: 400 13px/19px var(--sa-sans);
 }
 .sa-optt td {
   line-height: 20px;
@@ -3407,10 +3636,10 @@ kbd.sa-kbd {
   gap: 2px;
 }
 .sa-optt-name code {
-  font: 500 12.5px/20px var(--sa-mono);
+  font: 500 12px/19px var(--sa-mono);
 }
 .sa-optt td code {
-  font: 400 12.5px/20px var(--sa-mono);
+  font: 400 12px/19px var(--sa-mono);
 }
 /* 카드 꼴에서만 보이는 칸 이름. 표 머리가 이미 읽히므로 aria-hidden으로 둔다. */
 .sa-optt-k {
@@ -3525,7 +3754,7 @@ kbd.sa-kbd {
   gap: 4px var(--gap-sm);
   min-width: 0;
   color: var(--ink);
-  font: 400 13px/20px var(--sa-sans);
+  font: 400 12.5px/19px var(--sa-sans);
 }
 .sa-stage-now > span:first-child {
   color: var(--sub);
@@ -3637,7 +3866,7 @@ kbd.sa-kbd {
   float: left;
   width: 100%;
   padding: 0;
-  font: 700 14px/20px var(--sa-sans);
+  font: 700 13px/19px var(--sa-sans);
 }
 
 /* 플레이어 미리보기 칸(관리자 편집기, 지면 편성 게시 전 미리보기) */
@@ -3810,7 +4039,7 @@ kbd.sa-kbd {
 }
 .sa-pager-total {
   margin-right: auto;
-  font: 400 12.5px/18px var(--sa-sans);
+  font: 400 12px/17px var(--sa-sans);
   color: var(--sub);
 }
 .sa-pager-nav {
@@ -3821,7 +4050,7 @@ kbd.sa-kbd {
 .sa-pager-now {
   min-width: 72px;
   text-align: center;
-  font: 500 13px/1 var(--sa-numf);
+  font: 500 12.5px/1 var(--sa-numf);
   font-variant-numeric: tabular-nums;
 }
 

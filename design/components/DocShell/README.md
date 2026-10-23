@@ -30,7 +30,7 @@
 
 - `div.sa-doc` > `details.sa-toc` + `main.sa-doc-body`. 본문 맨 위 `div.sa-doc-head`에 `h1.sa-page-title`과 한두 문장 소개를 둡니다.
 - 절은 `section.sa-doc-sec[aria-labelledby]`이고 위에 `line` 한 줄을 긋습니다. 문단과 목록은 72자 폭으로 끊고, 표와 코드 블록은 본문 폭을 다 씁니다.
-- 제목은 `h2.sa-doc-h`(15px/700), 절 안 소제목은 `h3.sa-doc-h3`(14px/700)입니다. 화면 제목만 22px입니다.
+- 제목은 `h2.sa-doc-h`(14px/700), 절 안 소제목은 `h3.sa-doc-h3`(13px/700)입니다. 화면 제목만 20px입니다.
 - 긴 코드는 CodeBlock, 표는 OptionTable 또는 DataTable을 씁니다. 둘 다 안에서 가로로 스크롤하거나(코드) 카드로 바뀌어(옵션 표) 페이지 가로 스크롤을 만들지 않습니다.
 
 ## 제목 앵커

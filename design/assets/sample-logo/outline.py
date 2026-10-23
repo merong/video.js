@@ -1,7 +1,7 @@
 """Build the sample logo SVGs with every letter as an outline path (no font needed at view time).
 
-Usage: python3 outline.py <font.otf> <wordmark.svg> <emblem.svg>
-The font is Noto Sans CJK KR Bold (SIL OFL 1.1); only its Latin glyphs are used.
+Usage: python3 outline.py <font.otf> <wordmark.svg> <emblem.svg> <site.svg>
+The font is Noto Sans CJK KR Bold (SIL OFL 1.1); the site logo also uses its Hangul glyphs.
 """
 
 import sys
@@ -14,6 +14,8 @@ from fontTools.ttLib import TTFont
 ON_DARK = "#F4F4F5"  # on-dark
 DARK = "#18181A"  # dark
 ACCENT = "#CDF352"  # accent
+# The site logo's mark: a made-up site's own color, not a token, so it never reads as the 솔애드 accent.
+SITE = "#FF6B4A"
 
 
 def run(font, text, size, x, baseline, tracking=0.0):
@@ -77,10 +79,32 @@ def emblem(font):
 """
 
 
+def site(font):
+    name, name_w = run(font, "MY SITE", 50, 116, 62, 0.03)
+    tag, tag_w = run(font, "샘플 로고", 24, 118, 98, 0.08)
+    width = round(116 + max(name_w, tag_w) + 12)
+    return f"""<!--
+  Built-in sample logo (logo.assetId "sample"): the logo of a made-up site, not a real brand. "샘플 로고" marks it as
+  test art. Built by design/assets/sample-logo/outline.py; letters are outline paths, so no font is needed.
+  White letters with a dark outline read on light and dark scenes; the mark color is not a design token.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} 112" width="{width}" height="112" role="img" aria-label="MY SITE 샘플 로고">
+  <g stroke="{DARK}" stroke-opacity="0.85" stroke-width="8" stroke-linejoin="round" paint-order="stroke">
+    <rect x="8" y="12" width="88" height="88" rx="24" fill="{SITE}" />
+    <path fill="{ON_DARK}" d="{name}" />
+    <path fill="{ON_DARK}" d="{tag}" />
+  </g>
+  <path fill="{ON_DARK}" stroke="{ON_DARK}" stroke-width="6" stroke-linejoin="round" d="M44 39L71 56L44 73Z" />
+</svg>
+"""
+
+
 if __name__ == "__main__":
-    font_path, wordmark_out, emblem_out = sys.argv[1:4]
+    font_path, wordmark_out, emblem_out, site_out = sys.argv[1:5]
     font = TTFont(font_path)
     with open(wordmark_out, "w") as f:
         f.write(wordmark(font))
     with open(emblem_out, "w") as f:
         f.write(emblem(font))
+    with open(site_out, "w") as f:
+        f.write(site(font))

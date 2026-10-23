@@ -1,6 +1,6 @@
 # Field
 
-라벨, 입력란, 도움말을 묶은 입력 단위입니다. 라벨은 `label`(13px/500), 입력값은 `body`(14px), 도움말은 `small`(12.5px, `sub`)입니다.
+라벨, 입력란, 도움말을 묶은 입력 단위입니다. 라벨은 `label`(12.5px/500), 입력값은 `body`(13px), 도움말은 `small`(12px, `sub`)입니다.
 
 - 구조: `sa-field` 안에 `label.sa-label`, `input.sa-input`, `span.sa-help`. 도움말은 `aria-describedby`로 연결합니다.
 - 숫자·날짜 입력은 `is-num`을 붙여 Inter로 자릿수를 맞춥니다.

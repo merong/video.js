@@ -1,0 +1,101 @@
+<!-- @dsCard group="화면 틀" height=420 width=1200 subtitle="왼쪽 메뉴와 상단 막대" -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="../../tokens.css" />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>SideNav</title>
+    <style>
+      .sa-shell {
+        height: 420px;
+      }
+      .sa-side {
+        height: 420px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sa-shell">
+      <div class="sa-side" id="side">
+        <div class="sa-side-head"><span class="sa-logo">광고 관리</span></div>
+        <nav class="sa-side-nav" aria-label="광고 관리 메뉴">
+          <div class="sa-side-group">
+            <p class="sa-side-label" id="g-ad">광고</p>
+            <ul aria-labelledby="g-ad">
+              <li>
+                <a href="#"
+                  ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                    <path
+                      d="M2.5 9.5l1.6-5.2a1 1 0 0 1 1-.8h5.8a1 1 0 0 1 1 .8l1.6 5.2V12a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1z"
+                    />
+                    <path d="M2.5 9.5h3l1 1.5h3l1-1.5h3" /></svg
+                  ><span>광고 요청</span><b>3</b></a
+                >
+              </li>
+              <li>
+                <a href="#" aria-current="page"
+                  ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                    <rect x="2" y="3" width="12" height="10" rx="1.5" />
+                    <path d="M2.5 11.5l3.5-3.5 2.5 2.5 2-2 3 3" />
+                    <circle cx="10.5" cy="6" r="1" /></svg
+                  ><span>하우스 광고</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                    <rect x="2.5" y="3.5" width="11" height="10" rx="1.5" />
+                    <path d="M2.5 6.5h11M5.5 2v3M10.5 2v3M5 9h2M9 9h2M5 11h2" /></svg
+                  ><span>지면 편성</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sa-side-group">
+            <p class="sa-side-label" id="g-player">플레이어</p>
+            <ul aria-labelledby="g-player">
+              <li>
+                <a href="#"
+                  ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                    <rect x="2" y="3" width="12" height="10" rx="1.5" />
+                    <path d="M6.5 6v4l3.5-2z" /></svg
+                  ><span>플레이어 설정</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sa-side-group">
+            <p class="sa-side-label" id="g-stats">분석</p>
+            <ul aria-labelledby="g-stats">
+              <li>
+                <a href="#"
+                  ><svg class="sa-ico" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2.5 13.5h11M4.5 11V8M8 11V4.5M11.5 11V6.5" /></svg
+                  ><span>통계</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="sa-side-foot">
+          <span class="sa-avatar" role="img" aria-label="최고관리자 · 관리자">최</span
+          ><span class="sa-side-user" aria-hidden="true"><b>최고관리자</b><small>관리자</small></span>
+        </div>
+      </div>
+      <div class="sa-shell-main">
+        <header class="sa-topbar">
+          <p class="sa-topbar-crumb" aria-hidden="true"><span>광고</span><b>하우스 광고</b></p>
+          <div class="sa-topbar-r">
+            <a class="sa-btn is-sm" href="#">도움말</a><a class="sa-btn is-sm" href="#">사이트 보기</a
+            ><a class="sa-btn is-sm" href="#">관리자</a>
+          </div>
+        </header>
+        <main class="sa-main">
+          <h1 class="sa-page-title">하우스 광고</h1>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

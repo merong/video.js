@@ -7,7 +7,7 @@ Use this when building or restyling ads manager screens. `README.md` holds the u
 - Load `components/fonts.css`, then `tokens.css`, then `components/bundle.css`. Use the `sa-` classes and markup shown in each `components/<Name>/preview.html`; `components/Dashboard/` and `components/ExecutionList/` show full screens.
 - Style through `var(--…)` tokens only. Do not add raw hex colors, shadows, or font sizes that are not in `tokens.json`.
 - Put `sa-dense` on table cards only and `sa-kpis is-hero` on dashboard and report KPI rows only.
-- The logo text is "솔애드 관리자" (`sa-logo`); keep it in the top nav and the browser tab title.
+- The logo text is "솔애드 관리자" (`sa-logo`); keep it in the side menu head (`sa-side-head`) and the browser tab title.
 - Public player pages (demo, guide, help, play test) use "솔애드 플레이어" instead; see `components/DocShell/README.md`.
 
 ## Changing it
