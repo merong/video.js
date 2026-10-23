@@ -1,0 +1,636 @@
+@charset "utf-8";
+
+/* 그누보드 기본 스킨(게시판 basic·gallery, 회원 basic, 새글·FAQ·내용·현재접속자)과 default.css의 밝은 색을 테마의 어두운 바탕에 맞춘다.
+   스킨 파일은 고치지 않고 덮어쓴다. 범위는 기본 스킨을 담은 본문 틀(.sl-page--g5)과 회원 상자(.mbskin)다.
+   본문 틀은 head.php가, 로그인·회원 비밀번호 확인·비밀글 비밀번호 화면에서는 head.sub.php가 붙인다. 색은 테마 --sl-* 변수만 쓴다. */
+:is(.sl-page--g5, .mbskin) {
+  color-scheme: dark;
+}
+:where(.sl-page--g5, .mbskin) a {
+  color: var(--sl-text);
+}
+:where(.sl-page--g5, .mbskin) input[type="checkbox"],
+:where(.sl-page--g5, .mbskin) input[type="radio"] {
+  accent-color: var(--sl-accent);
+}
+:where(.sl-page--g5, .mbskin) :is(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--sl-accent);
+  outline-offset: 3px;
+}
+:is(.sl-page--g5, .mbskin) .sv_member,
+:is(.sl-page--g5, .mbskin) .sv_guest {
+  color: var(--sl-text);
+}
+
+/* 버튼: 핵심 동작(btn_submit)만 라임, 나머지는 테두리 버튼 */
+:is(.sl-page--g5, .mbskin) .btn_submit {
+  border: 0;
+  border-radius: 999px;
+  background: var(--sl-accent);
+  color: var(--sl-on-accent);
+  font-weight: 700;
+}
+:is(.sl-page--g5, .mbskin) .btn_submit:hover {
+  background: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin)
+  :is(
+    a.btn_b02,
+    .btn_b02,
+    a.btn_b03,
+    .btn_b03,
+    a.btn_b04,
+    .btn_b04,
+    a.btn_cancel,
+    button.btn_cancel,
+    .btn_close,
+    a.btn01,
+    button.btn01,
+    a.btn02,
+    button.btn02
+  ) {
+  border: 1px solid var(--sl-line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(.btn_b02, .btn_b03, .btn_b04, .btn_cancel, .btn_close, .btn01, .btn02):hover {
+  border-color: var(--sl-muted);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) :is(a.btn_b01, .btn_b01) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .btn_b01:hover {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(a.btn_frmline, button.btn_frmline) {
+  background: var(--sl-surface-2);
+  color: var(--sl-text);
+}
+
+/* 입력칸 */
+:is(.sl-page--g5, .mbskin)
+  :is(.frm_input, .wr_content textarea, .tbl_frm01 textarea, .form_01 textarea, select, .bo_vc_w textarea),
+:is(.sl-page--g5, .mbskin) #captcha #captcha_key {
+  border: 1px solid var(--sl-line-strong);
+  background-color: var(--sl-surface);
+  color: var(--sl-text);
+  box-shadow: none;
+}
+:is(.sl-page--g5, .mbskin) :is(.frm_input, textarea, select):focus {
+  border-color: var(--sl-accent);
+  outline: none;
+}
+:is(.sl-page--g5, .mbskin) ::placeholder {
+  color: var(--sl-muted);
+  opacity: 1;
+}
+:is(.sl-page--g5, .mbskin)
+  :is(.frm_info, .chk_box input[type="checkbox"] + label, .chk_box input[type="radio"] + label) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .chk_box input:checked + label {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .chk_box input[type="checkbox"] + label span,
+:is(.sl-page--g5, .mbskin) .write_div .chk_box input[type="checkbox"] + label span,
+:is(.sl-page--g5, .mbskin) .fregister_agree input[type="checkbox"] + label span {
+  border-color: var(--sl-line-strong);
+  background-color: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) .chk_box input[type="checkbox"]:checked + label span,
+:is(.sl-page--g5, .mbskin) .fregister_agree input[type="checkbox"]:checked + label span {
+  border-color: var(--sl-accent);
+  background-color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) .frm_info.add_info {
+  border-color: var(--sl-line);
+  background: var(--sl-surface);
+}
+/* 자동등록방지: 아이콘 이미지가 어두운 바탕에 묻히지 않게 밝은 칩 위에 둔다. */
+:is(.sl-page--g5, .mbskin) #captcha :is(#captcha_mp3, #captcha_reload) {
+  background-color: var(--sl-text);
+  color: var(--sl-bg);
+}
+:is(.sl-page--g5, .mbskin) #captcha #captcha_img {
+  border-color: var(--sl-line-strong);
+}
+
+/* 표 */
+:is(.sl-page--g5, .mbskin) .tbl_wrap {
+  overflow-x: auto;
+}
+:is(.sl-page--g5, .mbskin) .tbl_wrap table {
+  border-color: var(--sl-line);
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) :is(.tbl_head01, .tbl_head02) thead th {
+  border-color: var(--sl-line);
+  background: var(--sl-surface);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .tbl_head02 thead a {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) :is(.tbl_head01, .tbl_head02) :is(tbody th, td, tfoot th, tfoot td),
+:is(.sl-page--g5, .mbskin) #bo_list .td_chk {
+  border-color: var(--sl-line);
+  background: transparent;
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .tbl_head01 tbody tr:hover td,
+:is(.sl-page--g5, .mbskin) #bo_list tbody .even td {
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) #bo_list tbody tr:hover {
+  border-left-color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) .bo_notice td {
+  border-bottom-color: var(--sl-line);
+  background: var(--sl-surface) !important;
+}
+:is(.sl-page--g5, .mbskin) .bo_notice .notice_icon {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) :is(.bo_tit, .td_num strong) {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(.empty_table, .empty_list, .list_01 li.empty_li) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .tbl_frm01 th {
+  border-color: var(--sl-line);
+  background: var(--sl-surface);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .tbl_frm01 td {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) .list_01 ul {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) .list_01 li,
+:is(.sl-page--g5, .mbskin) .list_01 li:nth-child(odd) {
+  border-color: var(--sl-line);
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) .list_01 li:hover {
+  background: var(--sl-surface);
+}
+
+/* 페이지 번호: 동영상 갤러리와 같은 알약 모양 */
+:is(.sl-page--g5, .mbskin) .pg_page,
+:is(.sl-page--g5, .mbskin) .pg_current {
+  min-width: 36px;
+  height: 36px;
+  line-height: 34px;
+  border: 1px solid var(--sl-line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) :is(.pg_start, .pg_prev, .pg_next, .pg_end) {
+  width: auto;
+  padding: 0 12px;
+  background-image: none;
+  text-indent: 0;
+}
+:is(.sl-page--g5, .mbskin) .pg_page:hover {
+  border-color: var(--sl-muted);
+  background: transparent;
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .pg_current {
+  border-color: var(--sl-text);
+  background: var(--sl-text);
+  color: var(--sl-bg);
+}
+
+/* 게시판 목록 머리: 분류, 글 수, 버튼 메뉴, 검색 창 */
+:is(.sl-page--g5, .mbskin) #bo_list_total {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_cate a {
+  border-color: var(--sl-line-strong);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #bo_cate a:is(:hover, :focus, :active),
+:is(.sl-page--g5, .mbskin) #bo_cate #bo_cate_on {
+  border-color: var(--sl-text);
+  background: var(--sl-text);
+  color: var(--sl-bg);
+  box-shadow: none;
+}
+:is(.sl-page--g5, .mbskin) .btn_bo_user li {
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) .btn_bo_adm input {
+  background: var(--sl-surface-2);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(.more_opt, .bo_vc_act) {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) :is(.more_opt, .bo_vc_act)::before {
+  border-bottom-color: var(--sl-line-strong);
+}
+:is(.sl-page--g5, .mbskin) :is(.more_opt, .bo_vc_act)::after {
+  border-bottom-color: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) :is(.more_opt li, .bo_vc_act li) {
+  border-color: var(--sl-line);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .more_opt li :is(a, button) {
+  background: transparent;
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .more_opt li:hover :is(a, button),
+:is(.sl-page--g5, .mbskin) .bo_vc_act li a:hover {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .bo_sch {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) .bo_sch h3,
+:is(.sl-page--g5, .mbskin) .bo_sch .sch_bar {
+  border-color: var(--sl-line-strong);
+}
+:is(.sl-page--g5, .mbskin) .bo_sch .sch_input {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .bo_sch :is(.sch_btn, .bo_sch_cls) {
+  background: transparent;
+  color: var(--sl-muted);
+}
+
+/* 갤러리 */
+:is(.sl-page--g5, .mbskin) #bo_gall .gall_img {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) #bo_gall .gall_img span {
+  background: var(--sl-surface-2);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_gall :is(.bo_tit, .gall_text_href a) {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #bo_gall :is(.bo_cnt, .gall_info, .gall_info .gall_view) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_gall .gall_option strong {
+  background: var(--sl-surface-2);
+}
+
+/* 글 보기 */
+:is(.sl-page--g5, .mbskin) #bo_v,
+:is(.sl-page--g5, .mbskin) #bo_v_top ul {
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) #bo_v_info {
+  border-color: var(--sl-line);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_info :is(.sv_member, .if_date) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_con a {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) :is(#bo_v_file, #bo_v_link) li {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) :is(#bo_v_file, #bo_v_link) a {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(#bo_v_file, #bo_v_link) :is(li i, .bo_v_file_cnt, .bo_v_link_cnt) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) :is(#bo_v_file, #bo_v_link) li:hover {
+  border-color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) :is(#bo_v_file, #bo_v_link) li:hover :is(a, i, .bo_v_file_cnt, .bo_v_link_cnt) {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) .bo_v_nb li {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) .bo_v_nb li:hover {
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) .bo_v_nb li :is(i, .nb_tit, .nb_date) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_act a {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_act a:hover {
+  border-color: var(--sl-accent);
+  background-color: transparent;
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_act :is(.bo_v_good, .bo_v_nogood) {
+  border-color: var(--sl-line-strong);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_share .btn {
+  border-color: var(--sl-line-strong);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_share .btn:hover {
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) #bo_v_share .btn i {
+  color: var(--sl-muted);
+}
+
+/* 댓글 */
+:is(.sl-page--g5, .mbskin) .cmt_btn {
+  border-color: var(--sl-line);
+  background: transparent;
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .cmt_btn b {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .cmt_btn span.total {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) .cmt_btn span.total::after {
+  background: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) #bo_vc article {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) :is(.bo_vc_hdinfo, #bo_vc_empty) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_vc p a.s_cmt {
+  color: var(--sl-accent);
+}
+
+/* 글쓰기 */
+:is(.sl-page--g5, .mbskin) #bo_w :is(.bo_w_link label, .bo_w_flie .lb_icon, .bo_w_flie .file_del) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #bo_w .bo_w_flie .file_wr {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-surface);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #autosave_pop {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) #autosave_pop::before {
+  border-bottom-color: var(--sl-line-strong);
+}
+:is(.sl-page--g5, .mbskin) #autosave_pop::after {
+  border-bottom-color: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) #autosave_pop ul {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) #autosave_pop li {
+  border-color: var(--sl-surface-2);
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) :is(#autosave_pop span, .autosave_close) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .autosave_close:hover {
+  background: var(--sl-surface);
+  color: var(--sl-text);
+}
+
+/* 회원: 로그인, 약관, 가입 폼, 정보 찾기, 비밀번호 확인 */
+.mbskin {
+  max-width: 100%;
+}
+:is(.sl-page--g5, .mbskin) .mbskin_box,
+:is(.sl-page--g5, .mbskin)
+  :is(
+    #mb_login_notmb,
+    #mb_login_od_wr,
+    #fregister section,
+    #register_form,
+    .register_form_inner,
+    #find_info .new_win_con
+  ) {
+  border: 1px solid var(--sl-line);
+  border-radius: 20px;
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) .mbskin_box {
+  overflow: hidden;
+}
+:is(.sl-page--g5, .mbskin) .mb_log_cate h2 {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .mb_log_cate .join {
+  background: var(--sl-surface-2);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .mb_log_cate .join:hover {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #login_password_lost {
+  border-color: var(--sl-line-strong);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #guest_privacy {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-bg);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #mb_login_od_wr p {
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) #mb_login #sns_login {
+  border-color: var(--sl-line);
+}
+/* 안내 띠(분홍 상자)는 라임 줄이 있는 어두운 띠로 바꾼다. */
+:is(.sl-page--g5, .mbskin) :is(#fregister p, #member_cert_refresh p, .new_win .win_desc) {
+  border: 1px solid var(--sl-line);
+  background: var(--sl-surface);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(#fregister p, #member_cert_refresh p, .new_win .win_desc)::before,
+:is(.sl-page--g5, .mbskin) .new_win .win_desc::after {
+  background: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) :is(#fregister h2, #member_cert_refresh h2, #register_form h2) {
+  border-color: var(--sl-line);
+}
+:is(.sl-page--g5, .mbskin) :is(#fregister textarea, #member_cert_refresh textarea) {
+  background: transparent;
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) :is(.fregister_terms div, #member_cert_refresh_private div) {
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) :is(.fregister_terms table, #member_cert_refresh_private table) :is(th, td) {
+  border-color: var(--sl-line-strong);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) :is(.fregister_terms table, #member_cert_refresh_private table) th {
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) :is(#fregister_chkall, #member_cert_refresh_chkall) {
+  border-color: var(--sl-line);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) :is(.fregister_agree, .member_cert_refresh_agree) input[type="checkbox"] + label {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) :is(.fregister_agree, .member_cert_refresh_agree) input[type="checkbox"]:checked + label {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #fregisterform :is(.cert_desc, .js-open-consent) {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) #fregisterform #msg_certify {
+  border-color: var(--sl-line-strong);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) .tooltip_icon {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #reg_result {
+  border-color: var(--sl-line);
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) #reg_result #result_email {
+  border-color: var(--sl-line);
+  background: var(--sl-surface-2);
+}
+:is(.sl-page--g5, .mbskin) #reg_result :is(h2 strong, #result_email strong, .reg_result_p) {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) .reg_btn_submit {
+  border-radius: 999px;
+  background: var(--sl-accent);
+  color: var(--sl-on-accent);
+}
+:is(.sl-page--g5, .mbskin) :is(#mb_confirm, #pw_confirm) p {
+  border-color: var(--sl-line);
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) :is(#mb_confirm, #pw_confirm) p strong {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) :is(#mb_confirm, #pw_confirm) fieldset .frm_input {
+  background-color: var(--sl-surface) !important;
+}
+:is(.sl-page--g5, .mbskin) #mb_confirm .confirm_id {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .new_win #win_title {
+  background: transparent;
+  color: var(--sl-text);
+  box-shadow: none;
+}
+:is(.sl-page--g5, .mbskin) .new_win .win_ul li {
+  border-color: var(--sl-line-strong);
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) .new_win .win_ul li a {
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .new_win .win_ul .selected {
+  border-color: var(--sl-text);
+  background: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) .new_win .win_ul .selected a {
+  color: var(--sl-bg);
+}
+
+/* 새글, FAQ, 내용, 현재접속자, 검색 */
+:is(.sl-page--g5, .mbskin) :is(#new_sch, #faq_sch, #sch_res_detail) {
+  border: 1px solid var(--sl-line);
+  border-radius: 14px;
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) :is(#new_sch, #faq_sch, #sch_res_detail) .btn_submit {
+  background: var(--sl-accent);
+  color: var(--sl-on-accent);
+}
+:is(.sl-page--g5, .mbskin) #new_sch p {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #ctt {
+  border: 1px solid var(--sl-line);
+  border-radius: 14px;
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) #faq_wrap li {
+  border-color: var(--sl-line);
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) #faq_wrap li h3 :is(.tit_btn, .tit_bg) {
+  background: transparent;
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #faq_wrap li h3.faq_li_open a,
+:is(.sl-page--g5, .mbskin) #faq_con .con_inner .closer_btn {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) #faq_con .con_inner .closer_btn {
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) #faq_con .con_inner .tit_bg {
+  background: var(--sl-surface-2);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #current_connect :is(.crt_num, .crt_lct a, li.empty_li) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #sch_res_ov {
+  border-color: var(--sl-line);
+  background: var(--sl-surface);
+}
+:is(.sl-page--g5, .mbskin) #sch_res_ov :is(h2, ul) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) #sch_res_ov h2 strong {
+  color: var(--sl-accent);
+}
+:is(.sl-page--g5, .mbskin) .sch_res_list li {
+  border-color: var(--sl-line);
+  background: transparent;
+}
+:is(.sl-page--g5, .mbskin) .sch_res_list :is(p, .sch_info) {
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .switch_field label {
+  border-color: var(--sl-line-strong);
+  background-color: transparent;
+  color: var(--sl-muted);
+}
+:is(.sl-page--g5, .mbskin) .switch_field input:checked + label {
+  border-color: var(--sl-text);
+  background-color: var(--sl-text);
+  color: var(--sl-bg);
+}
+:is(.sl-page--g5, .mbskin) #sch_res_board a {
+  border-color: var(--sl-line-strong);
+  color: var(--sl-text);
+}
+:is(.sl-page--g5, .mbskin) #sch_res_board :is(a:hover, .sch_on) {
+  border-color: var(--sl-text);
+  background: var(--sl-text);
+  color: var(--sl-bg);
+}
+
+@media (max-width: 767px) {
+  /* 새글·FAQ 검색 상자는 고정 폭 입력칸 때문에 좁은 화면을 넘는다. */
+  :is(.sl-page--g5, .mbskin) :is(#new_sch, #faq_sch, #sch_res_detail) {
+    padding: 16px;
+  }
+  :is(.sl-page--g5, .mbskin) :is(#new_sch, #faq_sch, #sch_res_detail) :is(.frm_input, select) {
+    max-width: 100%;
+  }
+}

@@ -99,6 +99,44 @@ The callback must return the real allowed keys for that particular post. Keys us
 
 Host request variables are isolated while loading GnuBoard's common bootstrap, preventing its `extract()` and SQL-escaping behavior from replacing API configuration or altering API input. Additional site-specific content access restrictions require host integration review; the local upstream source is a reference, not a universal host-version compatibility claim.
 
+### Video gallery board skin
+
+`gnuboard/skin/board/solad_video` is a gallery board skin that plays each post with `player/loader.js`, so the post's video ID is the canonical `bo_table:wr_id:main`. Copy or symlink it into both `skin/board/` and `mobile/skin/board/`, and copy `gnuboard/extend/solad.extend.php` into `extend/` to add 솔애드 광고 관리 under 게시판관리 (it uses `SOLAD_ADMIN_MENU`, default `300950`, and `SOLAD_URL`, default `G5_URL.'/ads'`).
+
+Configure everything in 게시판 수정:
+
+- Skin: `solad_video` for PC and mobile.
+- 갤러리 이미지 수 and 갤러리 이미지 폭/높이 set the maximum columns and thumbnail ratio. Cards wrap to fewer columns below 220px.
+- 파일 업로드 개수 must be at least 2: slot 1 is the video file or HLS zip, slot 2 the thumbnail. Further slots are ordinary attachments. 파일 업로드 용량 also limits the video and the zip.
+- The extra field titled `솔애드 주소` (read by subject, not by number) takes the manager URL when it is not `/ads`. The player always uses the site preset chosen in the manager's 플레이어 menu.
+
+The write form offers four sources, stored in `wr_3`:
+
+| `wr_3` | Source | `wr_1` |
+| --- | --- | --- |
+| `file` | Uploaded MP4/WebM in slot 1 | empty |
+| `hls_zip` | Uploaded zip of playlists and segments, extracted on save | `/data/file/<bo_table>/hls/<wr_id>/<token>/…/<playlist>.m3u8` |
+| `hls_url` | External `.m3u8` URL (media or multivariant playlist) | the URL |
+| `url` | External MP4/WebM URL | the URL |
+
+Posts without `wr_3` are read as `url`/`hls_url` when `wr_1` is set, otherwise `file`. HLS sources play with `data-engine="hlsjs"`, so media playlists work too; an external server must allow the site origin (CORS). A zip may hold `.m3u8`, `.ts`, `.m4s`, `.mp4`, `.m4a`, `.aac`, `.vtt` and `.key` files in up to four folder levels, at most 5,000 files and three times the zip size plus 50 MB once extracted; anything else, a path leaving the folder, or a zip without an `#EXTM3U` playlist is refused before saving. The shallowest multivariant playlist is preferred. After extraction the zip attachment is removed, `wr_2` is the sum of `#EXTINF`, and a new token folder replaces the old one. Switching a post to another source, deleting it, or 선택삭제 removes its `hls/<wr_id>` folder. The web server must serve `data/file` as static files (GnuBoard's `data/.htaccess` already blocks scripts).
+
+`wr_2` holds the duration in seconds, read in the browser for files and URLs. The write form previews every source except a new zip (HLS through `hlsjs-video` from the manager's assets) and captures a thumbnail at one second unless one is chosen; a cross-origin URL without CORS cannot be captured.
+
+The list shows the newest post large on an unfiltered first page, then cards with avatar, views and relative age; MP4/WebM cards preview muted on mouse hover (not on touch devices or with reduced motion). Board administrators toggle 선택 to show checkboxes and the 삭제/복사/이동 bar. The view page puts the player, actions and description beside an up-next list of eight posts when the skin is at least 1000px wide, and below it otherwise. Super administrators see a settings summary with a manager connection check above the list. Comments reuse the host's `basic` board skin.
+
+### Ad request board skin
+
+`gnuboard/skin/board/solad_request` is a board skin where members send video ad requests and administrators process them. Copy or symlink it into `skin/board/` and `mobile/skin/board/`, then create a board with:
+
+- Categories on, with the list `접수|검토|보완 요청|집행 예정|집행|종료|반려`. The category is the request stage; new requests are always 접수 and members cannot choose it.
+- 비밀글 사용: always (2). Requests carry contact details, and the list masks other members' requests.
+- 파일 업로드 개수 1 or more. Slot 1 is the creative (MP4, WebM, JPG, PNG, GIF, WebP); a creative URL can be given instead.
+- 원글 수정 불가 0, so members can still edit after a 보완 요청 comment. The settings box warns when it is higher.
+- Optional extra field titled `솔애드 주소` when the manager is not at `/ads`.
+
+Request fields use `wr_1`–`wr_9`: advertiser, start and end date, position (프리롤, 미드롤 or 포스트롤), impressions, click URL, creative URL, contact and preferred board. Comments are the processing log: an administrator picks a new stage in the comment form, the skin updates the request's category and stores the stage in the comment's `wr_1`. 보완 요청 and 반려 need a reason. From 집행 예정 on, members can no longer edit or delete the request. For approved requests the view page links to the manager's 하우스 광고 (`#/house`) and 지면 편성 (`#/schedule`) pages.
+
 ## Persistence and public boundaries
 
 - A creative ID is the advertisement ID. Edits create immutable media versions. Archive blocks new selection/publication; it does not modify old snapshots or delete files.
