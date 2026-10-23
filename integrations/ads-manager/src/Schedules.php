@@ -97,6 +97,14 @@ final class Schedules
                 }
                 $out['ads'][] = $item;
             }
+            // The default "none" plays the whole pod and is never stored, so older JSON keeps its bytes.
+            $rotation = $break['rotation'] ?? 'none';
+            if (!in_array($rotation, ['none', 'random'], true) || ($rotation === 'random' && count($out['ads']) < 2)) {
+                $rotation === 'random' ? Value::fail('rotation', '무작위로 하나를 고르려면 광고가 2개 이상 있어야 합니다.') : Value::fail('rotation');
+            }
+            if ($rotation === 'random') {
+                $out['rotation'] = 'random';
+            }
             $canonical[] = $out;
         }
         usort($canonical, static function ($a, $b): int {
@@ -195,7 +203,7 @@ final class Schedules
         // Preview is administrator-only; context is still host-derived for video targets.
         $hasVideo = isset($input['videoId']) && $input['videoId'] !== '';
         $context = $hasVideo ? $this->host->resolveVideoContext(Value::videoId($input['videoId'])) : $this->contextForTarget($draft['target']);
-        return ['schedule' => $this->resolve($context, $draft, $hasVideo || $draft['target']['type'] === 'video')['schedule']];
+        return ['schedule' => $this->rotate($this->resolve($context, $draft, $hasVideo || $draft['target']['type'] === 'video')['schedule'])['schedule']];
     }
 
     public function dto(array $context, string $id, int $version, array $breaks): array
@@ -213,7 +221,36 @@ final class Schedules
             throw new ApiError(403, 'invalid_session', '재생 세션이 유효하지 않습니다.');
         }
         $schedule = $this->dto($claims, $claims['scheduleId'], $claims['scheduleVersion'], $row['mode'] === 'disabled' ? [] : Value::decode($row['breaks_json']));
-        return ($claims['breaks'] ?? null) === 'preroll' ? self::preroll($schedule) : $schedule;
+        $schedule = ($claims['breaks'] ?? null) === 'preroll' ? self::preroll($schedule) : $schedule;
+        return $this->rotate($schedule, is_array($claims['picks'] ?? null) ? $claims['picks'] : [])['schedule'];
+    }
+
+    /**
+     * Serves one ad of each `rotation: random` break, chosen uniformly unless `$picks`
+     * (breakId => itemId, signed into the session) already fixed it. The served break
+     * keeps the playback-v1 shape: one ad and no `rotation` key.
+     */
+    public function rotate(array $schedule, ?array $picks = null): array
+    {
+        $chosen = [];
+        foreach ($schedule['breaks'] as $index => $break) {
+            if (($break['rotation'] ?? 'none') !== 'random') {
+                continue;
+            }
+            unset($break['rotation']);
+            if ($picks === null) {
+                $ad = $break['ads'][random_int(0, count($break['ads']) - 1)];
+            } else {
+                $matches = array_values(array_filter($break['ads'], static fn (array $item): bool => $item['itemId'] === ($picks[$break['breakId']] ?? null)));
+                if ($matches === []) {
+                    throw new ApiError(403, 'invalid_session', '재생 세션이 유효하지 않습니다.');
+                }
+                $ad = $matches[0];
+            }
+            $chosen[$break['breakId']] = $ad['itemId'];
+            $schedule['breaks'][$index] = [...$break, 'ads' => [$ad]];
+        }
+        return ['schedule' => $schedule, 'picks' => $chosen];
     }
 
     /** `schedule&breaks=preroll` (LMS presets): only the pre break is served and frozen into the session. */

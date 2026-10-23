@@ -4,6 +4,8 @@ export type TargetType = 'site' | 'board' | 'category' | 'video';
 export type ScheduleMode = 'inherit' | 'replace' | 'disabled';
 export type BreakPosition = 'pre' | 'mid' | 'post';
 export type CreativeKind = 'video' | 'image';
+/** `none` plays every ad in order; `random` plays one ad, picked with equal chance for each playback. */
+export type BreakRotation = 'none' | 'random';
 
 export interface Target {
   type: TargetType;
@@ -42,6 +44,8 @@ export interface AdBreak {
   breakId: string;
   position: BreakPosition;
   atSeconds?: number;
+  /** Absent means `none`; the default is never stored, so existing schedules keep their bytes. */
+  rotation?: BreakRotation;
   ads: AdItem[];
 }
 
@@ -73,6 +77,8 @@ export const TARGET_TYPES: readonly TargetType[] = ['site', 'board', 'category',
 export const SCHEDULE_MODES: readonly ScheduleMode[] = ['inherit', 'replace', 'disabled'];
 export const MAX_BREAKS = 100;
 export const MAX_ADS_PER_BREAK = 20;
+/** Seconds a new image item shows for; the server and player have no default of their own. */
+export const IMAGE_DISPLAY_SECONDS = 3;
 
 // Contract 4.1: \p{Cc} plus bidirectional embeddings, overrides and isolates. Same set as the preset label rule.
 // oxlint-disable-next-line no-control-regex
@@ -125,7 +131,7 @@ export function makeItem(creative: Creative, itemId: string): AdItem {
     skipAfterSeconds: null,
   };
 
-  if (creative.kind === 'image') item.displaySeconds = 5;
+  if (creative.kind === 'image') item.displaySeconds = IMAGE_DISPLAY_SECONDS;
 
   return item;
 }
@@ -177,6 +183,12 @@ export function editorPayload(record: EditorRecord): EditorRecord {
     if (br.position !== 'mid') delete br.atSeconds;
 
     if (!br.ads.length || br.ads.length > MAX_ADS_PER_BREAK) fail('각 광고 구간에는 광고를 1~20개 넣어 주세요.');
+
+    if (br.rotation === 'random' && br.ads.length < 2) {
+      fail('광고 중 하나만 골라 보여 주려면 구간에 광고를 2개 이상 넣어 주세요.');
+    }
+
+    if (br.rotation !== 'random') delete br.rotation;
 
     for (const ad of br.ads) validateItem(ad, itemIds, fail);
   }

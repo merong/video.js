@@ -16,7 +16,7 @@ use AdsManager\Standalone;
 use AdsManager\Value;
 
 // A1 additions are counted separately so the v1 baseline stays comparable.
-$checks = ['v1' => 0, 'a1' => 0, 'presets' => 0, 'videoId' => 0, 'lms' => 0];
+$checks = ['v1' => 0, 'a1' => 0, 'presets' => 0, 'videoId' => 0, 'lms' => 0, 'rotation' => 0];
 function same(mixed $actual, mixed $expected, string $message, string $group = 'v1'): void
 {
     global $checks;
@@ -773,9 +773,60 @@ rejects(fn () => $lmsAdmin('GET', 'lms-progress-list', ['videoId' => ['x']]), 42
 $csv = $lmsAdmin('GET', 'lms-progress-csv', ['videoId' => '=1+1']);
 same($csv, "\xEF\xBB\xBFlearner,videoId,percent,completedAt,activeSeconds,position,duration,updatedAt\nx:=formula,'=1+1,0,2026-01-02T00:00:00Z,0,0,,2026-01-02T00:00:00Z\n", 'CSV has a BOM and quotes formula-like cells', 'lms');
 
+// ROT: `rotation: "random"` serves one ad of the break per playback session.
+$rotationAds = [];
+foreach (['하나', '둘', '셋'] as $index => $label) {
+    $creative = $app->creatives->save(['name' => '돌림 ' . $label, 'url' => '/rotation-' . $index . '.png', 'mime' => 'image/png', 'alt' => '돌림 소재 ' . $label])['creative'];
+    $rotationAds[] = ['itemId' => 'rotation-' . $index, 'creativeId' => $creative['creativeId'], 'creativeVersion' => 1, 'skipAfterSeconds' => null, 'displaySeconds' => 3];
+}
+$host->saveVideoContext(['videoId' => 'rotation-video', 'label' => '돌림 영상', 'boardId' => 'rotation-board', 'categoryId' => null]);
+$rotationTarget = ['type' => 'video', 'id' => 'rotation-video'];
+$rotationBreaks = fn (array $pre): array => [['breakId' => 'rotation-pre', 'position' => 'pre', 'ads' => $rotationAds, ...$pre], ['breakId' => 'rotation-mid', 'position' => 'mid', 'atSeconds' => 10, 'ads' => [[...$rotationAds[0], 'itemId' => 'rotation-mid-0'], [...$rotationAds[1], 'itemId' => 'rotation-mid-1']]]];
+$explicitNone = $app->schedules->validate(['target' => $rotationTarget, 'mode' => 'replace', 'revision' => 0, 'breaks' => $rotationBreaks(['rotation' => 'none'])]);
+same(Value::json($explicitNone['breaks']), Value::json($app->schedules->validate(['target' => $rotationTarget, 'mode' => 'replace', 'revision' => 0, 'breaks' => $rotationBreaks([])])['breaks']), 'rotation "none" is the default and is not stored', 'rotation');
+same(str_contains(Value::json($explicitNone['breaks']), 'rotation"'), false, 'no rotation key without random', 'rotation');
+$plainItem = fn (int $index, string $itemId): array => ['itemId' => $itemId, 'adId' => $rotationAds[$index]['creativeId'], 'creativeId' => $rotationAds[$index]['creativeId'], 'creativeVersion' => 1, 'kind' => 'image', 'url' => '/rotation-' . $index . '.png', 'mime' => 'image/png', 'alt' => '돌림 소재 ' . ['하나', '둘', '셋'][$index], 'clickUrl' => null, 'skipAfterSeconds' => null, 'displaySeconds' => 3];
+same($explicitNone['breaks'], [['breakId' => 'rotation-pre', 'position' => 'pre', 'ads' => [$plainItem(0, 'rotation-0'), $plainItem(1, 'rotation-1'), $plainItem(2, 'rotation-2')]], ['breakId' => 'rotation-mid', 'position' => 'mid', 'atSeconds' => 10, 'ads' => [$plainItem(0, 'rotation-mid-0'), $plainItem(1, 'rotation-mid-1')]]], 'a break without rotation keeps the exact v1 keys and order', 'rotation');
+rejects(fn () => $app->schedules->validate(['target' => $rotationTarget, 'mode' => 'replace', 'revision' => 0, 'breaks' => [['breakId' => 'one', 'position' => 'pre', 'rotation' => 'random', 'ads' => [$rotationAds[0]]]]]), 422, 'validation', 'rotation', 'random needs at least two ads', 'rotation');
+rejects(fn () => $app->schedules->validate(['target' => $rotationTarget, 'mode' => 'replace', 'revision' => 0, 'breaks' => $rotationBreaks(['rotation' => 'shuffle'])]), 422, 'validation', 'rotation', 'unknown rotation rejected', 'rotation');
+$rotationDraft = $app->schedules->save(['target' => $rotationTarget, 'mode' => 'replace', 'revision' => 0, 'breaks' => $rotationBreaks(['rotation' => 'random'])]);
+same([$rotationDraft['draft']['breaks'][0]['rotation'], array_key_exists('rotation', $rotationDraft['draft']['breaks'][1])], ['random', false], 'the draft keeps rotation for the editor', 'rotation');
+$app->schedules->publish(['target' => $rotationTarget, 'revision' => 1]);
+$seen = [];
+for ($index = 0; $index < 30; $index++) {
+    $served = $app->dispatch('GET', 'schedule', ['videoId' => 'rotation-video']);
+    $pre = $served['schedule']['breaks'][0];
+    if ($index === 0) {
+        same([array_keys($pre), count($pre['ads']), count($served['schedule']['breaks'][1]['ads']), array_keys($served['schedule']['breaks'][1])], [['breakId', 'position', 'ads'], 1, 2, ['breakId', 'position', 'atSeconds', 'ads']], 'a random break serves one ad in the playback-v1 shape; others keep the pod', 'rotation');
+        same($claimsOf($served['eventToken'])['picks'], ['rotation-pre' => $pre['ads'][0]['itemId']], 'the session claims sign the chosen item', 'rotation');
+        $firstServed = $served;
+    }
+    $seen[$pre['ads'][0]['itemId']] = true;
+}
+same(count($seen) >= 2, true, 'repeated sessions choose different ads', 'rotation');
+same(array_key_exists('picks', $claimsOf($app->dispatch('GET', 'schedule', ['videoId' => 'video-1'])['eventToken'])), false, 'sessions without rotation sign no picks', 'rotation');
+$chosen = $firstServed['schedule']['breaks'][0]['ads'][0]['itemId'];
+$unchosen = array_values(array_diff(array_column($rotationAds, 'itemId'), [$chosen]))[0];
+$fullRotation = [...$firstServed, 'schedule' => [...$firstServed['schedule'], 'breaks' => $rotationDraft['draft']['breaks']]];
+same($send($firstServed, [eventFor($firstServed, 'start', 1, 0, 'attempt-rotation-a', $chosen), eventFor($fullRotation, 'start', 1, 0, 'attempt-rotation-b', $unchosen)]), ['accepted' => 1, 'duplicates' => 0, 'rejected' => 1], 'only the chosen item of a random break is accepted', 'rotation');
+same(Value::decode($db->one('SELECT snapshot_json FROM ' . $db->table('sessions') . ' WHERE session_id = ?', [$firstServed['playbackSessionId']])['snapshot_json'])['breaks'], $firstServed['schedule']['breaks'], 'the frozen snapshot is the served one-ad break', 'rotation');
+same($app->schedules->frozen($claimsOf($firstServed['eventToken'])), $firstServed['schedule'], 'frozen() rebuilds the same schedule from the claims', 'rotation');
+$unpicked = $claimsOf($firstServed['eventToken']);
+unset($unpicked['picks']);
+rejects(fn () => $app->schedules->frozen($unpicked), 403, 'invalid_session', null, 'a random break without a signed pick is not a valid session', 'rotation');
+$rotationPreroll = $app->dispatch('GET', 'schedule', ['videoId' => 'rotation-video', 'breaks' => 'preroll']);
+same([count($rotationPreroll['schedule']['breaks']), count($rotationPreroll['schedule']['breaks'][0]['ads']), array_keys($claimsOf($rotationPreroll['eventToken'])['picks'])], [1, 1, ['rotation-pre']], 'breaks=preroll serves the one chosen pre ad', 'rotation');
+same($app->schedules->frozen($claimsOf($rotationPreroll['eventToken'])), $rotationPreroll['schedule'], 'preroll and rotation freeze together', 'rotation');
+$previewSeen = [];
+for ($index = 0; $index < 30; $index++) {
+    $preview = $app->schedules->preview(['target' => $rotationTarget, 'mode' => 'replace', 'revision' => 1, 'breaks' => $rotationDraft['draft']['breaks']])['schedule']['breaks'][0];
+    $previewSeen[$preview['ads'][0]['itemId']] = count($preview['ads']) === 1 && !array_key_exists('rotation', $preview);
+}
+same([count($previewSeen) >= 2, array_unique(array_values($previewSeen))], [true, [true]], 'schedule-preview also picks one ad per request', 'rotation');
 fwrite(STDOUT, 'PASS ' . $checks['v1'] . ' persistence/authorization/publication/collector/statistics assertions (' . $db->driver . ").\n");
 fwrite(STDOUT, 'PASS ' . $checks['a1'] . " A1 bootstrap user/capability assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['presets'] . " A1-API-4/A2-1 player preset assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['videoId'] . " A1-FIX-API-2 video ID assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['lms'] . " L-1 lecture progress, notes and preroll assertions (counted separately).\n");
+fwrite(STDOUT, 'PASS ' . $checks['rotation'] . " ROT random ad rotation assertions (counted separately).\n");
 fwrite(STDOUT, 'Isolated test prefix: ' . $config['tablePrefix'] . '; SQLite/test files: ' . $directory . "\n");

@@ -14,7 +14,7 @@ final class Events
         return hash_hmac('sha256', $payload, $this->db->meta('signing_key'));
     }
 
-    public function issue(array $schedule, ?string $breaks = null): array
+    public function issue(array $schedule, ?string $breaks = null, array $picks = []): array
     {
         $id = 'session-' . Value::uuid();
         $expiry = time() + $this->config['sessionSeconds'];
@@ -22,6 +22,10 @@ final class Events
         if ($breaks !== null) {
             // Only present when set, so tokens without a filter keep their exact bytes.
             $claims['breaks'] = $breaks;
+        }
+        if ($picks !== []) {
+            // The rotated ad of each random break, so the frozen snapshot serves the same one.
+            $claims['picks'] = $picks;
         }
         $payload = rtrim(strtr(base64_encode(Value::json($claims)), '+/', '-_'), '=');
         return ['schedule' => $schedule, 'playbackSessionId' => $id, 'eventToken' => $payload . '.' . $this->sign($payload), 'expiresAt' => gmdate('Y-m-d\TH:i:s\Z', $expiry), 'eventsUrl' => $this->config['apiUrl'] . '?action=events'];

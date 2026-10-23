@@ -53,7 +53,8 @@ final class App
             }
             $context = $this->host->resolveVideoContext($videoId);
             $schedule = $this->schedules->resolve($context)['schedule'];
-            return $this->events->issue($breaks === 'preroll' ? Schedules::preroll($schedule) : $schedule, $breaks);
+            $served = $this->schedules->rotate($breaks === 'preroll' ? Schedules::preroll($schedule) : $schedule);
+            return $this->events->issue($served['schedule'], $breaks, $served['picks']);
         }
         if ($action === 'events') {
             return $this->events->collect($input);

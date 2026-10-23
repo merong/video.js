@@ -856,6 +856,46 @@ describe('App flows', () => {
     expect(screen.getByRole('heading', { name: '지면 편성' })).toBeTruthy();
   });
 
+  it('shows one ad at random only for a break with two or more ads', async () => {
+    const draft = {
+      ...PRE_DRAFT,
+      breaks: [{ breakId: 'break-1', position: 'pre', ads: [adItem('item-1'), adItem('item-2')] }],
+    };
+    const saved = { ...draft, revision: 3, breaks: [{ ...draft.breaks[0], rotation: 'random' }] };
+    const fetch = await openSchedule(draft, {
+      'schedule-save': () => ok({ draft: saved, publishedVersion: 4, resolvedFrom: null }),
+    });
+    const random = () => screen.queryByRole('checkbox', { name: '광고 중 하나만 골라 보여 주기 (무작위)' });
+
+    expect(screen.getByText('아래 광고 2개를 목록 순서대로 모두 재생해요.')).toBeTruthy();
+
+    fireEvent.click(random()!);
+
+    expect(random()?.matches(':checked')).toBe(true);
+    expect(
+      screen.getByText(
+        '재생할 때마다 아래 광고 2개 중 하나를 같은 확률로 골라 그것만 보여 줘요. 목록 순서는 재생 순서가 아니에요.'
+      )
+    ).toBeTruthy();
+    // The list order is not a play order, so the order buttons go away.
+    expect(screen.queryByRole('button', { name: '2번 광고 위로 이동' })).toBeNull();
+    expect(screen.getByText(/^후보 1\./u)).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: '초안 저장' }));
+    await waitFor(() => expect(actions(fetch)).toContain('schedule-save'));
+
+    const [, init] = fetch.mock.calls.find(([input]) => new URL(input).searchParams.get('action') === 'schedule-save')!;
+
+    expect(JSON.parse(String(init?.body)).breaks[0].rotation).toBe('random');
+    expect(await screen.findByText('저장된 초안 r3')).toBeTruthy();
+    expect(random()?.matches(':checked')).toBe(true);
+
+    fireEvent.click(screen.getAllByRole('button', { name: '광고 제거' })[0]!);
+
+    expect(random()).toBeNull();
+    expect(screen.queryByText(/후보 1\./u)).toBeNull();
+  });
+
   // Tab, Shift+Tab and a click all move focus to another control; jsdom has no Tab order, so the tests focus it.
   const MID_DRAFT = {
     ...PRE_DRAFT,

@@ -147,6 +147,12 @@ integrations/ads-manager/
 - **관리자 액션:** 명세 3.4 표 그대로다. `lms-key-rotate`의 `key`는 그 응답에만 실린다. `lms-progress-list`의 `learner`는 접두사(`g:`·`x:`)를 포함해 돌려주고, 거름 `learner`는 접두사 없이 받는다. `page`는 1부터, `status`는 `all|done|doing`이고 틀리면 422다. CSV 파일 이름은 `lms-progress.csv`.
 - **확정 JSON 예시:** ads-admin-api 증거 `l1-api/evidence/examples.json`(키·토큰 값은 `<redacted>`).
 
+### 4.3 광고 돌려 보여 주기 (2026-10-24, TASK ROT)
+
+- 편성 구간에 선택 필드 `rotation: "none" | "random"`. 기본 `"none"`(모두 차례로 재생)은 저장하지 않아 기존 초안·게시본 JSON 바이트가 그대로다. `"random"`은 광고 2개 이상에서만 허용하고, 아니면 422 `fields.rotation`이다. `schedule-draft`는 저장된 `rotation`을 돌려준다.
+- 공개 `schedule`(`breaks=preroll` 포함)과 `schedule-preview`는 요청마다 `random` 구간에서 `random_int`로 광고 하나를 골라 그 하나만 `ads`에 담는다. 응답에 `rotation`은 싣지 않는다(`contract/playback-v1.json` 모양 그대로). 고른 항목은 `eventToken` claims `picks: {breakId: itemId}`(있을 때만)에 서명하고, `frozen()`이 같은 한 개짜리 구간을 다시 만든다. 고르지 않은 항목의 이벤트는 기존 `snapshot_membership` 규칙으로 거절된다.
+- 이미지 항목의 새 기본 노출 시간은 3초다(관리자 화면 기본값, 서버 검증은 그대로).
+
 ## 5. 팀과 배정
 
 2026-10-20 사용자 지시로 Codex 담당 5명을 Claude Opus 5.5(`claude-opus-5-5`, effort high)로 교체했다. 이름과 pane은 유지했다. 이전 Codex 세션 ID(필요 시 `codex resume`): ads-source-analyst `01a14840-dfc1-7630-9362-6f2a55cfd424`, ads-implementer `01a14841-332b-7561-9b3b-4b3c4fbbe6bd`, ads-admin-api `01a14874-e0de-7c33-b579-f716cdec5561`, ads-admin-ui `01a14876-0d6a-78a0-8123-142836ccc2d5`, ads-qa `01a14876-1831-7712-9015-a326b2f016a6`. `grok`(Grok 4.7, `w1:p7`)은 미디어 담당이라 그대로 둔다.

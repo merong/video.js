@@ -53,7 +53,7 @@ describe('makeItem', () => {
   it('pins the creative version and gives images a display time', () => {
     expect(makeItem(video, 'item-1')).toMatchObject({ adId: 'cr-video', creativeVersion: 2, skipAfterSeconds: null });
     expect(makeItem(video, 'item-1')).not.toHaveProperty('displaySeconds');
-    expect(makeItem(image, 'item-2').displaySeconds).toBe(5);
+    expect(makeItem(image, 'item-2').displaySeconds).toBe(3);
   });
 });
 
@@ -71,6 +71,18 @@ describe('editorPayload', () => {
     expect(payload.breaks.map((br) => br.breakId)).toEqual(['pre', 'mid-10', 'mid-30', 'post']);
     expect(payload.breaks[3]).not.toHaveProperty('atSeconds');
     expect(payload.breaks[0]!.ads[0]).not.toHaveProperty('displaySeconds');
+  });
+
+  it('keeps a random break and leaves out the default rotation', () => {
+    const payload = editorPayload(
+      record([
+        { breakId: 'pre', position: 'pre', rotation: 'random', ads: [item(image, 'a'), item(image, 'b')] },
+        { breakId: 'post', position: 'post', rotation: 'none', ads: [item(video, 'c'), item(video, 'd')] },
+      ])
+    );
+
+    expect(payload.breaks[0]).toHaveProperty('rotation', 'random');
+    expect(payload.breaks[1]).not.toHaveProperty('rotation');
   });
 
   it('clears breaks unless the mode replaces the schedule', () => {
@@ -118,6 +130,10 @@ describe('editorPayload', () => {
     [
       'image skip not shorter than display',
       record([{ breakId: 'pre', position: 'pre', ads: [item(image, 'a', { skipAfterSeconds: 5 })] }]),
+    ],
+    [
+      'random break with one ad',
+      record([{ breakId: 'pre', position: 'pre', rotation: 'random', ads: [item(image, 'a')] }]),
     ],
   ])('rejects %s', (_name, input) => {
     expect(() => editorPayload(input)).toThrow(Error);

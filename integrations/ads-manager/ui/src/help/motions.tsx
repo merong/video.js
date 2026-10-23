@@ -205,7 +205,7 @@ export const HELP_MOTIONS = {
           <Arrow step={5} />
           <Box step={5}>본편</Box>
         </Row>
-        <Cap>표시 시간 5초</Cap>
+        <Cap>표시 시간 3초</Cap>
       </Scene>
     ),
   },

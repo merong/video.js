@@ -13,7 +13,7 @@ import {
 import { useConfirm } from '../app/confirm';
 import { NumberInput, PlusIcon } from '../app/ui';
 import type { Workspace } from '../app/workspace-context';
-import { Button, Card, Field, Input, Select } from '../components';
+import { Button, Card, Check, Field, Input, Select } from '../components';
 import { HelpLink } from '../help';
 
 const CREATIVE_STATE_TEXT = {
@@ -155,6 +155,8 @@ function BreakCard({
 }: Omit<BreakEditorProps, 'breaks' | 'reloadCreatives'> & { br: AdBreak }) {
   const confirm = useConfirm();
   const titleId = useId();
+  const rotationHelpId = useId();
+  const random = br.rotation === 'random';
   const [choice, setChoice] = useState('');
   // The position error shows once the field was left or a save was tried, and clears as soon as the value is valid.
   const [positionChecked, setPositionChecked] = useState(false);
@@ -247,14 +249,44 @@ function BreakCard({
         </Field>
       ) : null}
       {br.ads.length ? null : <p className="sa-small">구간에 광고를 추가해 주세요. 빈 구간은 저장할 수 없어요.</p>}
+      {br.ads.length >= 2 ? (
+        <div>
+          <Check
+            label="광고 중 하나만 골라 보여 주기 (무작위)"
+            checked={random}
+            aria-describedby={rotationHelpId}
+            onChange={(event) => {
+              const on = event.currentTarget.checked;
+
+              edit((target) => {
+                if (on) target.rotation = 'random';
+                else delete target.rotation;
+              });
+            }}
+          />
+          <p className="sa-small" id={rotationHelpId}>
+            {random
+              ? `재생할 때마다 아래 광고 ${br.ads.length}개 중 하나를 같은 확률로 골라 그것만 보여 줘요. 목록 순서는 재생 순서가 아니에요.`
+              : `아래 광고 ${br.ads.length}개를 목록 순서대로 모두 재생해요.`}
+          </p>
+        </div>
+      ) : null}
       {br.ads.map((ad, index) => (
         <ItemFields
           key={ad.itemId}
           ad={ad}
           index={index}
           count={br.ads.length}
+          random={random}
           creative={creatives.find((candidate) => candidate.creativeId === ad.creativeId)}
-          edit={(mutate) => edit((target) => mutate(target.ads))}
+          edit={(mutate) =>
+            edit((target) => {
+              mutate(target.ads);
+
+              // One ad left cannot rotate; the server refuses `random` below two ads.
+              if (target.ads.length < 2) delete target.rotation;
+            })
+          }
           focus={focus}
           message={message}
           breakId={br.breakId}
@@ -306,6 +338,7 @@ function ItemFields({
   ad,
   index,
   count,
+  random,
   creative,
   edit,
   focus,
@@ -315,6 +348,8 @@ function ItemFields({
   ad: AdItem;
   index: number;
   count: number;
+  /** The break plays one of its ads at random, so the list order is not a play order. */
+  random: boolean;
   creative: Creative | undefined;
   edit: (mutate: (ads: AdItem[]) => void) => void;
   focus: (request: FocusRequest) => void;
@@ -345,6 +380,7 @@ function ItemFields({
   return (
     <fieldset data-item-id={ad.itemId} className="aa-item">
       <legend className="sa-label">
+        {random ? '후보 ' : ''}
         {index + 1}. {creative?.name || ad.creativeId}
       </legend>
       <div className="aa-between">
@@ -353,24 +389,28 @@ function ItemFields({
           {creative?.archived ? ' · 보관된 소재: 게시 전에 제거하거나 교체해 주세요.' : ''}
         </span>
         <div className="sa-row">
-          <Button
-            size="sm"
-            data-move="-1"
-            disabled={index === 0}
-            aria-label={`${index + 1}번 광고 위로 이동`}
-            onClick={() => move(-1)}
-          >
-            위로
-          </Button>
-          <Button
-            size="sm"
-            data-move="1"
-            disabled={index === count - 1}
-            aria-label={`${index + 1}번 광고 아래로 이동`}
-            onClick={() => move(1)}
-          >
-            아래로
-          </Button>
+          {random ? null : (
+            <>
+              <Button
+                size="sm"
+                data-move="-1"
+                disabled={index === 0}
+                aria-label={`${index + 1}번 광고 위로 이동`}
+                onClick={() => move(-1)}
+              >
+                위로
+              </Button>
+              <Button
+                size="sm"
+                data-move="1"
+                disabled={index === count - 1}
+                aria-label={`${index + 1}번 광고 아래로 이동`}
+                onClick={() => move(1)}
+              >
+                아래로
+              </Button>
+            </>
+          )}
           <Button
             size="sm"
             onClick={() => {
