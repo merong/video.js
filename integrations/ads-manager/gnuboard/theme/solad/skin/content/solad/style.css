@@ -160,6 +160,110 @@
 .sl-buy-contact .sl-btn {
   margin-top: 20px;
 }
+/* 플레이어 특징(co_id=features) */
+.sl-feat-lead {
+  max-width: 760px;
+  color: var(--sl-text);
+  font-size: 18px;
+}
+.sl-feat-section {
+  margin-top: 56px;
+}
+.sl-feat-kicker {
+  color: var(--sl-accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.sl-feat-section h2,
+.sl-feat-cta h2 {
+  margin-top: 6px;
+  font-size: 26px;
+}
+.sl-feat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.sl-feat-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.sl-feat-card {
+  padding: 24px;
+  border: 1px solid var(--sl-line);
+  border-radius: 18px;
+  background: var(--sl-surface);
+}
+.sl-feat-card h3 {
+  color: var(--sl-text);
+  font-size: 17px;
+  font-weight: 800;
+}
+.sl-feat-card > p:not(.sl-feat-tag) {
+  margin-top: 8px;
+  font-size: 15px;
+}
+.sl-feat-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 12px;
+  padding: 0 10px;
+  border: 1px solid rgba(205, 243, 82, 0.45);
+  border-radius: 999px;
+  color: var(--sl-accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+.sl-feat-shot {
+  margin-top: 24px;
+}
+.sl-feat-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--sl-line);
+  border-radius: 14px;
+}
+.sl-feat-note {
+  margin-top: 16px;
+  font-size: 15px;
+}
+.sl-feat-notice {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border: 1px solid rgba(205, 243, 82, 0.4);
+  border-radius: 14px;
+  background: rgba(205, 243, 82, 0.08);
+  color: var(--sl-text);
+}
+.sl-feat-notice strong {
+  margin-right: 8px;
+  color: var(--sl-accent);
+}
+.sl-feat-cta {
+  margin-top: 56px;
+  padding: 32px 28px;
+  border: 1px solid var(--sl-line);
+  border-radius: 20px;
+  background: linear-gradient(180deg, var(--sl-surface) 0%, #121214 100%);
+}
+.sl-feat-cta > p {
+  margin-top: 8px;
+}
+.sl-feat-cta .sl-feat-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+@media (max-width: 1023px) {
+  .sl-feat-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 767px) {
   .sl-buy-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -167,5 +271,16 @@
   .sl-buy-card,
   .sl-buy-contact {
     padding: 22px 18px;
+  }
+  .sl-feat-grid,
+  .sl-feat-grid--3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sl-feat-card,
+  .sl-feat-cta {
+    padding: 22px 18px;
+  }
+  .sl-feat-actions .sl-btn {
+    flex: 1 1 auto;
   }
 }
