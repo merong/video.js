@@ -192,7 +192,7 @@ function frameAddress(examples: URL, preset: PlayerPreset): string {
 }
 
 function demoReason(demo: PreviewDemo): string {
-  if (demo.presetId === null) return '새 프리셋은 저장한 뒤 데모에서 열 수 있어요.';
+  if (demo.presetId === null) return '처음 저장한 뒤 데모에서 열 수 있어요.';
 
   return demo.unsaved ? '저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요.' : '';
 }

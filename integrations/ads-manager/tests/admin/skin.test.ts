@@ -127,6 +127,39 @@ describe('SoladVideoSkinElement', () => {
 
   it('ignores a seek-buttons value outside 5, 10, 15 and 30', () => {
     expect(skin({ 'seek-buttons': '20' }).querySelector('media-seek-button')).toBeNull();
+    expect(skin({ 'seek-buttons': '20', 'seek-placement': 'center' }).querySelector('.solad-center')).toBeNull();
+  });
+
+  it.each([
+    ['center', 0],
+    ['both', 2],
+  ])('puts a play button between -N/+N in the middle of the video for seek-placement %s', (placement, inBar) => {
+    const root = skin({ 'seek-buttons': '10', 'seek-placement': placement });
+    const group = root.querySelector('.solad-center')!;
+    const [backward, play, forward] = [...group.children];
+
+    expect(root.querySelectorAll('.video-controls-primary > media-seek-button')).toHaveLength(inBar);
+    // After the controls, so the bar's play button stays first in the Tab order and for the lecture focus.
+    expect(group.parentElement!.lastElementChild).toBe(group);
+    expect(root.querySelector('media-play-button')!.closest('.solad-center')).toBeNull();
+    expect(group.children).toHaveLength(3);
+    expect(backward!.getAttribute('seconds')).toBe('-10');
+    expect(forward!.getAttribute('seconds')).toBe('10');
+    expect(play!.localName).toBe('media-play-button');
+    expect(play!.id).toBe('solad-center-play');
+    expect(play!.querySelector('.media-play-button-play-icon')).not.toBeNull();
+    expect(group.querySelector('.solad-center-seek-label')!.textContent).toBe('10');
+    expect(group.querySelector('media-tooltip')).toBeNull();
+    expect(root.querySelector('media-gesture[region="left"][action="seekStep"]')!.getAttribute('value')).toBe('-10');
+  });
+
+  it('keeps the bar for a missing or unknown seek-placement', () => {
+    for (const attributes of [{}, { 'seek-placement': 'top' }, { 'seek-placement': 'Center' }]) {
+      const root = skin({ 'seek-buttons': '5', ...attributes });
+
+      expect(root.querySelectorAll('.video-controls-primary > media-seek-button')).toHaveLength(2);
+      expect(root.querySelector('.solad-center')).toBeNull();
+    }
   });
 
   it('removes the captions button, settings item and c hotkey for captions="off"', () => {

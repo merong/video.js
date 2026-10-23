@@ -17,7 +17,7 @@ import { PageHead } from '../app/ui';
 import { useWorkspace } from '../app/workspace-context';
 import { Button, ButtonLink, DataTable, type DataTableColumn, Note, PresetMark, SubNav } from '../components';
 import { HelpLink } from '../help';
-import { parsePlayerPreset, type PlayerPreset, ThemePreview } from '../player';
+import { parsePlayerPreset, ThemePreview } from '../player';
 import { ApplyConfirm, languageLabel, PLAYER_TYPE_LABELS } from './ApplyConfirm';
 import { LmsMock } from './LmsMock';
 import { LIST_PLANNED, PlannedNote } from './planned';
@@ -25,43 +25,32 @@ import { PlayerOptions } from './PlayerOptions';
 import { PlayerPreviewCard } from './PlayerPreviewCard';
 import { initialSetupForm, ListState, PlayerSetup, type SetupForm } from './PlayerSetup';
 import {
+  changedDraft,
+  CONFLICT_REASON,
+  type Draft,
+  draftOf,
+  FIELD_ORDER,
+  fixTarget,
+  localErrors,
+  rebased,
+  resolvedDraft,
+} from './preset-draft';
+import {
   BLANK_FORM,
   duplicateForm,
   type FieldErrors,
   fieldErrors,
-  type FormConflict,
   formFromPreset,
   PRESET_CONFLICT_TEXT,
   PRESET_LIST_CONFLICT_TEXT,
-  isPresetPath,
   needsListReload,
-  PRESET_FIELD_LABELS,
   presetError,
-  type PresetForm,
   presetInput,
   type PresetPath,
   previewPreset,
-  rebaseForm,
-  updateForm,
 } from './preset-form';
-import { PresetEditor, presetFieldId, presetSectionId, presetSectionOf } from './PresetEditor';
+import { PresetEditor } from './PresetEditor';
 import { PresetPreviewDialog } from './PresetPreviewDialog';
-
-/** Unsaved editor state. Drafts outlive their page, so moving between menus and pages keeps input. */
-interface Draft {
-  form: PresetForm;
-  dirty: boolean;
-  /** The form that counts as unchanged; `null` for a copy, which is unsaved from the start. */
-  clean: PresetForm | null;
-  /** After a save attempt, local schema errors show on their fields. */
-  checked: boolean;
-  /** Paths the API rejected (422); cleared when that field changes. */
-  serverErrors: FieldErrors;
-  /** The last form state that passed the schema; the live preview keeps it while the form is invalid. */
-  preview: PlayerPreset | null;
-  /** Fields changed here and in a save elsewhere; saving waits until the operator picks a side. */
-  conflicts: readonly FormConflict[];
-}
 
 type DraftKey = 'new' | `edit:${string}`;
 
@@ -75,57 +64,6 @@ const APPLIED_REASON = '이미 사이트에 적용된 프리셋이에요.';
  */
 const MIGRATION_SEEN_KEY = 'aa-players-migrated-neutral';
 const LABELS_SEEN_KEY = 'aa-players-migrated-labels';
-const FIELD_ORDER = Object.keys(PRESET_FIELD_LABELS).filter(isPresetPath);
-
-function draftOf(form: PresetForm, dirty = false): Draft {
-  return {
-    form,
-    dirty,
-    clean: dirty ? null : form,
-    checked: false,
-    serverErrors: {},
-    preview: previewPreset(form),
-    conflicts: [],
-  };
-}
-
-const CONFLICT_REASON = '다른 곳에서도 바꾼 항목이 있어요. 어느 값을 쓸지 먼저 골라 주세요.';
-
-/**
- * The draft moved onto the server's current form, or `null` when the server form is the one the draft started from. A
- * copy has no server form and never moves.
- */
-function rebased(draft: Draft, server: PresetForm): { draft: Draft; text: string } | null {
-  if (!draft.clean || sameForm(draft.clean, server)) return null;
-
-  const { form, adopted, conflicts } = rebaseForm(draft.form, draft.clean, server);
-  const names = (paths: readonly PresetPath[]) => paths.map((path) => PRESET_FIELD_LABELS[path]).join(', ');
-  const text = [
-    '다른 곳에서 이 프리셋을 먼저 저장했어요.',
-    adopted.length ? `그쪽에서 바꾼 값(${names(adopted)})을 입력에 반영했어요.` : '',
-    conflicts.length
-      ? `양쪽에서 바꾼 항목(${names(conflicts.map(({ path }) => path))})은 어느 값을 쓸지 골라 주세요.`
-      : '확인한 뒤 다시 저장해 주세요.',
-  ]
-    .filter(Boolean)
-    .join(' ');
-
-  return {
-    draft: {
-      ...draft,
-      form,
-      clean: server,
-      dirty: !sameForm(form, server),
-      conflicts,
-      preview: previewPreset(form) ?? draft.preview,
-    },
-    text,
-  };
-}
-
-function sameForm(a: PresetForm, b: PresetForm): boolean {
-  return JSON.stringify(a) === JSON.stringify(b);
-}
 
 function editKey(id: string): DraftKey {
   return `edit:${id}`;
@@ -361,23 +299,8 @@ export function PlayersScreen({ titleId, title, page, activation }: PlayersScree
       FIELD_ORDER.find((path) => conflicts.some((conflict) => conflict.path === path)) ?? conflicts[0]?.path ?? null;
     setDrafts((current) => {
       const draft = current[key];
-      if (!draft) return current;
 
-      const form =
-        choice === 'theirs'
-          ? draft.conflicts.reduce((next, { path, theirs }) => updateForm(next, path, theirs), draft.form)
-          : draft.form;
-
-      return {
-        ...current,
-        [key]: {
-          ...draft,
-          form,
-          conflicts: [],
-          dirty: draft.clean === null || !sameForm(form, draft.clean),
-          preview: previewPreset(form) ?? draft.preview,
-        },
-      };
+      return draft ? { ...current, [key]: resolvedDraft(draft, choice) } : current;
     });
     setEditStatus(
       info(
@@ -413,24 +336,7 @@ export function PlayersScreen({ titleId, title, page, activation }: PlayersScree
   };
 
   const change = (key: DraftKey, base: Draft, path: PresetPath, value: string) =>
-    setDrafts((current) => {
-      const draft = current[key] ?? base;
-      const form = updateForm(draft.form, path, value);
-      const serverErrors = { ...draft.serverErrors };
-
-      delete serverErrors[path];
-
-      return {
-        ...current,
-        [key]: {
-          ...draft,
-          form,
-          dirty: draft.clean === null || !sameForm(form, draft.clean),
-          serverErrors,
-          preview: previewPreset(form) ?? draft.preview,
-        },
-      };
-    });
+    setDrafts((current) => ({ ...current, [key]: changedDraft(current[key] ?? base, path, value) }));
 
   const save = (key: DraftKey, draft: Draft, invalidColors: readonly PresetPath[]) => {
     if (draft.conflicts.length) return setEditStatus(failure(CONFLICT_REASON));
@@ -889,15 +795,6 @@ function readMigrationSeen(key: string): string {
  * Where to fix the field at `path`. A disabled control takes no focus: a muted switch locked by autoplay is fixed at
  * the autoplay switch, and a field native video disables at its section heading, beside the reason.
  */
-function fixTarget(path: PresetPath): HTMLElement | null {
-  const field = document.getElementById(presetFieldId(path));
-  if (!field || !field.matches(':disabled')) return field;
-
-  if (path === 'playback.muted') return document.getElementById(presetFieldId('playback.autoplay'));
-
-  return document.getElementById(`${presetSectionId(presetSectionOf(path))}-title`);
-}
-
 function migrationKey(ids: readonly string[]): string {
   return [...ids].sort().join(',');
 }
@@ -905,12 +802,6 @@ function migrationKey(ids: readonly string[]): string {
 /** Row buttons by preset id, so focus can move to a row after a write or the preview. */
 function presetButtonId(action: 'preview' | 'edit' | 'dup' | 'apply', id: string): string {
   return `aa-preset-${action}-${id}`;
-}
-
-function localErrors(draft: Draft) {
-  const result = parsePlayerPreset(presetInput(draft.form));
-
-  return result.ok ? [] : result.errors;
 }
 
 function pageTitle(page: PlayerPage): string {

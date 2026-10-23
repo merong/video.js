@@ -21,7 +21,7 @@ final class App
         $this->schedules = new Schedules($db, $config, $host, $this->creatives);
         $this->events = new Events($db, $config, $this->schedules);
         $this->statistics = new Statistics($db, $config);
-        $this->playerPresets = new PlayerPresets($db);
+        $this->playerPresets = new PlayerPresets($db, $host->singlePlayerPreset(), $host->lectures());
         $this->lms = new Lms($db, $config, $host, $this->playerPresets);
     }
 
@@ -29,7 +29,8 @@ final class App
     {
         $reads = ['bootstrap', 'creatives', 'targets', 'schedule-draft', 'stats', 'stats-csv', 'schedule', 'player-presets', 'player-preset', 'lms-settings', 'lms-progress-list', 'lms-progress-csv'];
         $writes = ['login', 'logout', 'creative-save', 'creative-upload', 'creative-archive', 'video-context-save', 'schedule-save', 'schedule-publish', 'schedule-preview', 'events', 'player-preset-save', 'player-preset-delete', 'player-preset-default', 'lms-session', 'lms-progress', 'lms-notes', 'lms-key-rotate', 'lms-test-token'];
-        if (!in_array($action, [...$reads, ...$writes], true)) {
+        // A host without lectures has no LMS actions at all, public ones included.
+        if (!in_array($action, [...$reads, ...$writes], true) || (str_starts_with($action, 'lms-') && !$this->host->lectures())) {
             throw new ApiError(404, 'action_not_found', '요청을 찾을 수 없습니다.');
         }
         if (($method === 'GET' && !in_array($action, $reads, true)) || ($method === 'POST' && !in_array($action, $writes, true)) || !in_array($method, ['GET', 'POST'], true)) {
@@ -37,7 +38,7 @@ final class App
         }
 
         if ($action === 'bootstrap') {
-            $base = ['authenticated' => $this->host->authenticated(), 'csrfToken' => $this->host->csrfToken(), 'apiUrl' => $this->config['apiUrl'], 'capabilities' => [...$this->host->capabilities(), 'playerPresets' => true, 'lms' => ['installed' => $this->lms->installed()]]];
+            $base = ['authenticated' => $this->host->authenticated(), 'csrfToken' => $this->host->csrfToken(), 'apiUrl' => $this->config['apiUrl'], 'capabilities' => [...$this->host->capabilities(), 'playerPresets' => true, 'lms' => $this->host->lectures() ? ['installed' => $this->lms->installed()] : false]];
             if (!$base['authenticated']) {
                 return $base;
             }

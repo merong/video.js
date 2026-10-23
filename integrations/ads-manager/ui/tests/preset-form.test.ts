@@ -1,3 +1,6 @@
+/// <reference types="node" />
+import { readFileSync } from 'node:fs';
+
 import { describe, expect, it } from 'vite-plus/test';
 
 import { ApiError } from '../src/api/client';
@@ -15,6 +18,8 @@ import {
   presetError,
   presetInput,
   previewPreset,
+  THEME_CHOICES,
+  themeChoiceOf,
   updateForm,
 } from '../src/screens/preset-form';
 
@@ -27,6 +32,14 @@ const STORED = {
   playback: { autoplay: true, muted: true, loop: null, preload: 'none' as const },
   display: { poster: false, title: null },
   controls: { ...DEFAULT_PLAYER_PRESET.controls, pip: false },
+  logo: {
+    ...DEFAULT_PLAYER_PRESET.logo,
+    assetId: 'sample' as const,
+    position: 'bottom-left' as const,
+    width: 120,
+    alt: 'MY SITE',
+    hideWithControls: true,
+  },
   ads: {
     ...DEFAULT_PLAYER_PRESET.ads,
     fontSize: 14,
@@ -97,6 +110,7 @@ describe('presetInput', () => {
     expect(Object.values(input.theme).every((value) => value === null)).toBe(true);
     expect(input.display.title).toBeNull();
     expect(input.controls.pip).toBeNull();
+    expect(Object.values(input.logo).every((value) => value === null)).toBe(true);
     expect(parsePlayerPreset(input).ok).toBe(true);
 
     const back = presetInput(updateForm(form, 'playerType', 'videojs'));
@@ -104,6 +118,27 @@ describe('presetInput', () => {
     expect(back.theme.accentColor).toBe('#112233');
     expect(back.display.title).toBe(false);
     expect(back.controls.pip).toBe(false);
+    expect(back.logo).toEqual(STORED.logo);
+  });
+
+  it('stores the top-right corner and the default switches of the logo as unset', () => {
+    const form = formFromPreset({
+      ...STORED,
+      logo: { ...STORED.logo, position: 'top-right', hideDuringAds: true, hideWithControls: false },
+    });
+
+    expect(formValue(form, 'logo.position')).toBe('');
+    expect(presetInput(form).logo).toMatchObject({ position: null, hideDuringAds: null, hideWithControls: null });
+  });
+
+  it('stores the bar as the unset seek placement and keeps a place while the seek buttons are off', () => {
+    const bar = formFromPreset({ ...STORED, controls: { ...STORED.controls, seekButtons: 10, seekPlacement: 'bar' } });
+    const center = updateForm(updateForm(bar, 'controls.seekPlacement', 'center'), 'controls.seekButtons', '');
+
+    expect(formValue(bar, 'controls.seekPlacement')).toBe('');
+    expect(presetInput(bar).controls).toMatchObject({ seekButtons: 10, seekPlacement: null });
+    expect(presetInput(center).controls).toMatchObject({ seekButtons: null, seekPlacement: 'center' });
+    expect(presetInput(updateForm(center, 'playerType', 'native')).controls.seekPlacement).toBeNull();
   });
 
   it('sends timeouts as null for Video.js', () => {
@@ -126,6 +161,32 @@ describe('presetInput', () => {
 
     expect(input.ads.labels.skip).toBeNull();
     expect(parsePlayerPreset(input)).toMatchObject({ ok: false, errors: [{ path: 'ads.fontSize' }] });
+  });
+});
+
+describe('themeChoiceOf', () => {
+  // Shared with the PHP and loader validators; ads-admin-api owns the file.
+  const fixture: { builtIn: { id: string; theme: (typeof STORED)['theme'] }[] } = JSON.parse(
+    readFileSync(`${import.meta.dirname}/../../tests/fixtures/player-preset-v2.json`, 'utf8')
+  );
+
+  it.each(['default', 'flat', 'rounded', 'accent'])('picks the %s card for the built-in preset of that id', (id) => {
+    const builtIn = fixture.builtIn.find((preset) => preset.id === id)!;
+
+    expect(themeChoiceOf(formFromPreset({ ...STORED, theme: builtIn.theme }))?.id).toBe(id);
+  });
+
+  it('fills a card into four theme values, ignores letter case and reads anything else as set by hand', () => {
+    const dark = THEME_CHOICES.find((choice) => choice.id === 'dark')!;
+    let form = formFromPreset({ ...STORED, theme: DEFAULT_PLAYER_PRESET.theme });
+
+    for (const key of ['accentColor', 'accentTextColor', 'borderColor', 'borderRadius'] as const) {
+      form = updateForm(form, `theme.${key}`, dark[key].toUpperCase());
+    }
+
+    expect(themeChoiceOf(form)?.id).toBe('dark');
+    expect(themeChoiceOf(updateForm(form, 'theme.borderRadius', '9'))).toBeUndefined();
+    expect(new Set(THEME_CHOICES.map((choice) => choice.id)).size).toBe(THEME_CHOICES.length);
   });
 });
 

@@ -83,7 +83,8 @@ export interface LmsScreenProps {
 export function LmsScreen({ titleId, title, page, activation }: LmsScreenProps) {
   const { session } = useWorkspace();
   const [shown, setShown] = useState<LmsPage>(page ?? 'progress');
-  const installed = session.capabilities.lms?.installed === true;
+  const { lms } = session.capabilities;
+  const installed = lms ? lms.installed === true : false;
   const visible = page !== null;
   const firstPage = useRef(true);
 

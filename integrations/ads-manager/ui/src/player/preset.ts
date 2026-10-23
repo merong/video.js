@@ -9,7 +9,26 @@ export type PlayerType = 'videojs' | 'native';
 export type PlayerLanguage = 'ko' | 'en' | 'ja' | 'zh-CN';
 export type PlayerPreload = 'none' | 'metadata' | 'auto';
 export type SeekButtonSeconds = 5 | 10 | 15 | 30;
+/** Where the seek pair shows: the control bar, the middle of the video (around a play button), or both. */
+export type SeekPlacement = 'bar' | 'center' | 'both';
 export type LogoPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+
+/** Built-in logo images by `logo.assetId`: the render's `logo.src`, a file name relative to `public/player/`. */
+export const LOGO_ASSETS = { sample: 'logo-sample.svg' } as const;
+
+export type LogoAssetId = keyof typeof LOGO_ASSETS;
+
+/** What each empty `logo.*` value renders as once an image is chosen (ads-a2e-spec 5.2). */
+export const LOGO_DEFAULTS = {
+  position: 'top-right',
+  margin: 12,
+  width: 80,
+  opacity: 80,
+  href: null,
+  alt: null,
+  hideDuringAds: true,
+  hideWithControls: false,
+} as const satisfies Omit<PresetLogoRender, 'src'>;
 /** `DEFAULT_RATES` values a lecture may cap playback at. */
 export type LmsMaxRate = 1 | 1.2 | 1.5 | 1.7 | 2;
 
@@ -55,11 +74,13 @@ export interface PlayerControls {
   readonly thumbnails: boolean | null;
   /** `null` hides the seek buttons. */
   readonly seekButtons: SeekButtonSeconds | null;
+  /** `null` is the control bar. Kept while `seekButtons` is `null`. */
+  readonly seekPlacement: SeekPlacement | null;
 }
 
-/** Video.js only. A2-1 accepts no logo yet, so `assetId` is always `null`. */
+/** Video.js only. Logo uploads are not here yet, so `assetId` is a built-in image or `null`. */
 export interface PlayerLogo {
-  readonly assetId: string | null;
+  readonly assetId: LogoAssetId | null;
   readonly position: LogoPosition | null;
   readonly margin: number | null;
   readonly width: number | null;
@@ -184,7 +205,7 @@ export type PresetErrorCode =
   | 'player_type'
   /** `playback.muted: false` while `playback.autoplay` is true. */
   | 'conflict'
-  /** A field accepted only by a later release: `logo.assetId` until logo uploads exist. */
+  /** A field accepted only by a later release: a `logo.assetId` that is not built in, until logo uploads exist. */
   | 'unavailable';
 
 export interface PresetError {
@@ -239,6 +260,20 @@ interface PresetRenderBase {
   readonly css: PresetCss;
 }
 
+/** The logo a Video.js render carries once an image is chosen; every layout value is filled. */
+export interface PresetLogoRender {
+  /** A built-in image's file name relative to `public/player/`; the loader turns it into an address. */
+  readonly src: string;
+  readonly position: LogoPosition;
+  readonly margin: number;
+  readonly width: number;
+  readonly opacity: number;
+  readonly href: string | null;
+  readonly alt: string | null;
+  readonly hideDuringAds: boolean;
+  readonly hideWithControls: boolean;
+}
+
 /** The lecture rules and panel a Video.js render carries while `lms.enabled` is on; every value is filled. */
 export interface PresetLmsRender {
   readonly resume: 'ask' | 'auto' | 'off';
@@ -269,9 +304,10 @@ export interface VideojsPresetRender extends PresetRenderBase {
     readonly fullscreen: boolean;
     readonly thumbnails: boolean;
     readonly seekButtons: SeekButtonSeconds | null;
+    readonly seekPlacement: SeekPlacement;
   };
-  /** Always `null` until logo uploads exist (A2-3). */
-  readonly logo: null;
+  /** `null` without a logo image. */
+  readonly logo: PresetLogoRender | null;
   readonly skinTag: 'video-skin';
   /** File names relative to `public/assets/videojs/`. */
   readonly styles: { readonly css: 'video.css'; readonly js: 'video.js' };
@@ -326,6 +362,7 @@ export const DEFAULT_PLAYER_PRESET: PlayerPreset = {
     fullscreen: null,
     thumbnails: null,
     seekButtons: null,
+    seekPlacement: null,
   },
   logo: {
     assetId: null,
@@ -407,6 +444,7 @@ const controlKeys = [
   'fullscreen',
   'thumbnails',
   'seekButtons',
+  'seekPlacement',
 ] as const satisfies readonly (keyof PlayerControls)[];
 const logoKeys = [
   'assetId',
@@ -685,15 +723,17 @@ export function parsePlayerPreset(value: unknown): PresetResult {
     fullscreen: read.bool(controlsInput, 'controls.fullscreen'),
     thumbnails: read.bool(controlsInput, 'controls.thumbnails'),
     seekButtons: read.step(controlsInput, 'controls.seekButtons', seekSteps),
+    seekPlacement: read.choice(controlsInput, 'controls.seekPlacement', ['bar', 'center', 'both'] as const),
   };
   const logoInput = read.group(input, 'logo', logoKeys);
   const assetId = read.text(logoInput, 'logo.assetId');
+  const builtInLogo = assetId !== null && isLogoAsset(assetId) ? assetId : null;
 
-  // Logo uploads arrive in A2-3; until then any id is refused rather than kept for later.
-  if (assetId !== null) read.fail('logo.assetId', 'unavailable');
+  // Logo uploads are not here yet, so only a built-in image id is accepted.
+  if (assetId !== null && builtInLogo === null) read.fail('logo.assetId', 'unavailable');
 
   const logo: PlayerLogo = {
-    assetId: null,
+    assetId: builtInLogo,
     position: read.choice(logoInput, 'logo.position', [
       'top-left',
       'top-right',
@@ -820,6 +860,27 @@ function presetCss(preset: PlayerPreset) {
   return css;
 }
 
+function isLogoAsset(id: string): id is LogoAssetId {
+  return Object.hasOwn(LOGO_ASSETS, id);
+}
+
+/** The render `logo`: `null` without an image, otherwise every layout value filled with its default. */
+function logoRender(logo: PlayerLogo): PresetLogoRender | null {
+  if (logo.assetId === null) return null;
+
+  return {
+    src: LOGO_ASSETS[logo.assetId],
+    position: logo.position ?? LOGO_DEFAULTS.position,
+    margin: logo.margin ?? LOGO_DEFAULTS.margin,
+    width: logo.width ?? LOGO_DEFAULTS.width,
+    opacity: logo.opacity ?? LOGO_DEFAULTS.opacity,
+    href: logo.href,
+    alt: logo.alt,
+    hideDuringAds: logo.hideDuringAds ?? LOGO_DEFAULTS.hideDuringAds,
+    hideWithControls: logo.hideWithControls ?? LOGO_DEFAULTS.hideWithControls,
+  };
+}
+
 /** The render `lms`: only for an enabled group, every value filled with its default. */
 function lmsRender(lms: PlayerLms): PresetLmsRender | null {
   if (lms.enabled !== true) return null;
@@ -897,8 +958,9 @@ export function presetRender(preset: PlayerPreset, revision = 0): PlayerPresetRe
         fullscreen: controls.fullscreen ?? true,
         thumbnails: controls.thumbnails ?? true,
         seekButtons: controls.seekButtons,
+        seekPlacement: controls.seekPlacement ?? 'bar',
       },
-      logo: null,
+      logo: logoRender(preset.logo),
       progress,
       labels,
       skinTag: 'video-skin',

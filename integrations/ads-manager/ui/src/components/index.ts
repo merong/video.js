@@ -45,6 +45,7 @@ export { Note, type NoteProps } from './Note';
 export { Progress, type ProgressProps } from './Progress';
 export { SectionNav, type SectionNavItem, type SectionNavProps } from './SectionNav';
 export { Segmented, type SegmentedOption, type SegmentedProps } from './Segmented';
+export { SideNav, type SideNavGroup, type SideNavItem, type SideNavProps } from './SideNav';
 export {
   type AdStatus,
   PRESET_MARK_LABELS,

@@ -5,14 +5,17 @@ import { listCreatives } from '../api/actions';
 import type { AdminApi } from '../api/client';
 import type { Creative } from '../api/model';
 import { safeUrl } from '../api/model';
-import { Avatar, Button, ButtonLink, TopNav } from '../components';
+import { Avatar, Button, ButtonLink, SideNav, type SideNavItem } from '../components';
 import { HelpScreen, isHelpTermId, termHeadingId } from '../help';
 import { mockScreens } from '../mocks';
 import { CreativesScreen } from '../screens/CreativesScreen';
 import { LmsScreen } from '../screens/LmsScreen';
+import { PlayerSettingsScreen } from '../screens/PlayerSettingsScreen';
 import { PlayersScreen } from '../screens/PlayersScreen';
 import { ScheduleScreen } from '../screens/ScheduleScreen';
 import { StatsScreen } from '../screens/StatsScreen';
+import { useMediaQuery } from './media-query';
+import { MenuIcon, NavIcon } from './nav-icons';
 import {
   defaultRoute,
   hrefFor,
@@ -134,6 +137,7 @@ export function Workspace({
   usePageFocus(active.id, active.view.kind === 'help' ? path : '');
 
   const runInMain = useReturnFocus(run, busy, active.id);
+  const menu = useDrawer();
 
   const workspace = useMemo<WorkspaceValue>(
     () => ({
@@ -152,38 +156,45 @@ export function Workspace({
 
   return (
     <WorkspaceContext value={workspace}>
-      <div className="aa-workspace" hidden={hidden}>
-        <TopBar session={session} routes={routes} activeId={active.id} busy={busy} onLogout={onLogout} />
-        {banner}
-        <main
-          id={hidden ? undefined : 'aa-main'}
-          className="sa-main aa-main"
-          tabIndex={-1}
-          inert={busy}
-          aria-busy={busy}
-          aria-label={active.label}
-        >
-          {listError && usesCreatives(active) ? (
-            <div className="aa-global">
-              <Status status={failure(`소재 목록을 불러오지 못했어요. ${listError}`)} />
-              <Button size="sm" onClick={() => loadCreatives(reloadCreatives)}>
-                소재 목록 다시 불러오기
-              </Button>
-            </div>
-          ) : null}
-          {routes
-            .filter((route) => visited.has(route.id))
-            .map((route) => (
-              <section key={route.id} className="aa-stack" hidden={route.id !== active.id} aria-label={route.label}>
-                <RouteView
-                  route={route}
-                  host={host}
-                  path={route.id === active.id ? path : null}
-                  activation={route.id === active.id ? activation : null}
-                />
-              </section>
-            ))}
-        </main>
+      <div className="aa-workspace sa-shell" hidden={hidden}>
+        <SideMenu session={session} routes={routes} activeId={active.id} menu={menu} />
+        {menu.open ? (
+          <div className="sa-side-scrim" aria-hidden="true" onClick={() => menu.close(MENU_BUTTON_ID)} />
+        ) : null}
+        {/* While the drawer is open only the menu takes focus. */}
+        <div className="sa-shell-main" inert={menu.open}>
+          <TopBar session={session} active={active} busy={busy} onLogout={onLogout} menu={menu} />
+          {banner}
+          <main
+            id={hidden ? undefined : 'aa-main'}
+            className="sa-main aa-main"
+            tabIndex={-1}
+            inert={busy}
+            aria-busy={busy}
+            aria-label={active.label}
+          >
+            {listError && usesCreatives(active) ? (
+              <div className="aa-global">
+                <Status status={failure(`소재 목록을 불러오지 못했어요. ${listError}`)} />
+                <Button size="sm" onClick={() => loadCreatives(reloadCreatives)}>
+                  소재 목록 다시 불러오기
+                </Button>
+              </div>
+            ) : null}
+            {routes
+              .filter((route) => visited.has(route.id))
+              .map((route) => (
+                <section key={route.id} className="aa-stack" hidden={route.id !== active.id} aria-label={route.label}>
+                  <RouteView
+                    route={route}
+                    host={host}
+                    path={route.id === active.id ? path : null}
+                    activation={route.id === active.id ? activation : null}
+                  />
+                </section>
+              ))}
+          </main>
+        </div>
       </div>
     </WorkspaceContext>
   );
@@ -225,6 +236,8 @@ function RouteView({
           activation={activation}
         />
       );
+    case 'playerSettings':
+      return <PlayerSettingsScreen titleId={titleId} title={route.label} activation={activation} />;
     case 'lms':
       return (
         <LmsScreen
@@ -255,81 +268,205 @@ function RouteView({
   }
 }
 
-function TopBar({
+const MENU_BUTTON_ID = 'aa-menu-button';
+const SIDE_ID = 'aa-side';
+
+interface Drawer {
+  /** Below 960px the side menu is an off-canvas drawer. */
+  drawer: boolean;
+  open: boolean;
+  show: () => void;
+  /** Closes the drawer and focuses the element with `focusId`, if any. */
+  close: (focusId?: string) => void;
+}
+
+function useDrawer(): Drawer {
+  const drawer = useMediaQuery('(max-width: 960px)', false);
+  const [shown, setShown] = useState(false);
+  const focusAfter = useRef<string | undefined>(undefined);
+  const open = drawer && shown;
+
+  // A wide window has no drawer; narrowing it again starts closed.
+  if (!drawer && shown) setShown(false);
+
+  // Opening moves focus into the menu; closing returns it to where `close` asked.
+  useEffect(() => {
+    if (open) {
+      const side = document.getElementById(SIDE_ID);
+
+      (side?.querySelector<HTMLElement>('a[aria-current="page"]') ?? side?.querySelector<HTMLElement>('a'))?.focus();
+      return;
+    }
+
+    const focusId = focusAfter.current;
+
+    focusAfter.current = undefined;
+
+    if (focusId) document.getElementById(focusId)?.focus();
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+
+      focusAfter.current = MENU_BUTTON_ID;
+      setShown(false);
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [open]);
+
+  const show = useCallback(() => setShown(true), []);
+  const close = useCallback((focusId?: string) => {
+    focusAfter.current = focusId;
+    setShown(false);
+  }, []);
+
+  return { drawer, open, show, close };
+}
+
+function SideMenu({
   session,
   routes,
   activeId,
-  busy,
-  onLogout,
+  menu,
 }: {
   session: Session;
   routes: readonly RouteDef[];
   activeId: string;
-  busy: boolean;
-  onLogout: () => void;
+  menu: Drawer;
 }) {
-  const { host, siteUrl, adminUrl } = session.capabilities;
-  const gnuboard = host === 'gnuboard';
+  const gnuboard = session.capabilities.host === 'gnuboard';
   const name = session.displayName || '관리자';
   // A code point, not a UTF-16 unit, so a leading emoji or rare Hanja stays whole.
   const initial = Array.from(name)[0] ?? '관';
-  // Only a window this page's opener created can be closed by script; otherwise the button would do nothing.
-  const closable = gnuboard && Boolean(window.opener);
-  const items = routes
-    .filter((route) => route.nav)
-    .map((route) => ({ id: route.id, label: route.label, href: hrefFor(route.id), current: route.id === activeId }));
+  const groups: { label: string; items: SideNavItem[] }[] = [];
+
+  for (const route of routes) {
+    if (!route.nav) continue;
+
+    const item = {
+      id: route.id,
+      label: route.label,
+      href: hrefFor(route.id),
+      current: route.id === activeId,
+      icon: <NavIcon id={route.id} />,
+    };
+    const last = groups.at(-1);
+
+    if (last?.label === route.group) last.items.push(item);
+    else groups.push({ label: route.group, items: [item] });
+  }
+
+  // The hash router takes over after the click; the current menu's own link would leave focus in the closed drawer.
+  const navigate = (item: SideNavItem) => menu.close(item.current ? `aa-title-${item.id}` : undefined);
 
   return (
-    <TopNav
+    <SideNav
+      id={SIDE_ID}
       brand={gnuboard ? undefined : '솔애드'}
       tag={gnuboard ? '광고 관리' : '관리자'}
       navLabel={gnuboard ? '광고 관리 메뉴' : '주 메뉴'}
-      items={items}
-      actions={
+      groups={groups}
+      open={menu.open}
+      onClose={menu.drawer ? () => menu.close(MENU_BUTTON_ID) : undefined}
+      onNavigate={menu.drawer ? navigate : undefined}
+      footer={
         <>
-          <ButtonLink size="sm" href={hrefFor('help')} aria-current={activeId === 'help' ? 'page' : undefined}>
-            도움말
-          </ButtonLink>
-          {gnuboard ? (
-            <>
-              {safeUrl(siteUrl) ? (
-                <ButtonLink size="sm" href={siteUrl} target="_blank" rel="noopener">
-                  사이트 보기
-                </ButtonLink>
-              ) : null}
-              {safeUrl(adminUrl) ? (
-                <ButtonLink size="sm" href={adminUrl} target="_blank" rel="noopener">
-                  관리자
-                </ButtonLink>
-              ) : null}
-            </>
-          ) : (
-            <ButtonLink
-              size="sm"
-              variant="accent"
-              icon={<PlusIcon />}
-              href={hrefFor('new-line-item')}
-              aria-current={activeId === 'new-line-item' ? 'page' : undefined}
-            >
-              집행 만들기
-            </ButtonLink>
-          )}
           <Avatar initial={initial} label={`${name} · 관리자`} />
-          {gnuboard ? null : (
-            <Button
-              size="sm"
-              disabledReason={busy ? '처리 중인 작업이 끝나면 로그아웃할 수 있어요.' : undefined}
-              onClick={onLogout}
-            >
-              로그아웃
-            </Button>
-          )}
-          {closable ? (
-            <Button size="sm" icon={<CloseIcon />} aria-label="광고 관리 창 닫기" onClick={() => window.close()} />
-          ) : null}
+          <span className="sa-side-user" aria-hidden="true">
+            <b>{name}</b>
+            <small>관리자</small>
+          </span>
         </>
       }
     />
+  );
+}
+
+function TopBar({
+  session,
+  active,
+  busy,
+  onLogout,
+  menu,
+}: {
+  session: Session;
+  active: RouteDef;
+  busy: boolean;
+  onLogout: () => void;
+  menu: Drawer;
+}) {
+  const { host, siteUrl, adminUrl } = session.capabilities;
+  const gnuboard = host === 'gnuboard';
+  // Only a window this page's opener created can be closed by script; otherwise the button would do nothing.
+  const closable = gnuboard && Boolean(window.opener);
+
+  return (
+    <header className="sa-topbar">
+      {menu.drawer ? (
+        <button
+          type="button"
+          id={MENU_BUTTON_ID}
+          className="sa-topbar-menu"
+          aria-label="메뉴 열기"
+          aria-expanded={menu.open}
+          aria-controls={SIDE_ID}
+          onClick={menu.show}
+        >
+          <MenuIcon />
+        </button>
+      ) : null}
+      {/* The page title repeats this for screen readers; it shows where the page sits while the menu is hidden. */}
+      <p className="sa-topbar-crumb" aria-hidden="true">
+        <span>{active.group}</span>
+        <b>{active.label}</b>
+      </p>
+      <div className="sa-topbar-r">
+        <ButtonLink size="sm" href={hrefFor('help')} aria-current={active.id === 'help' ? 'page' : undefined}>
+          도움말
+        </ButtonLink>
+        {gnuboard ? (
+          <>
+            {safeUrl(siteUrl) ? (
+              <ButtonLink size="sm" href={siteUrl} target="_blank" rel="noopener">
+                사이트 보기
+              </ButtonLink>
+            ) : null}
+            {safeUrl(adminUrl) ? (
+              <ButtonLink size="sm" href={adminUrl} target="_blank" rel="noopener">
+                관리자
+              </ButtonLink>
+            ) : null}
+          </>
+        ) : (
+          <ButtonLink
+            size="sm"
+            variant="accent"
+            icon={<PlusIcon />}
+            href={hrefFor('new-line-item')}
+            aria-current={active.id === 'new-line-item' ? 'page' : undefined}
+          >
+            집행 만들기
+          </ButtonLink>
+        )}
+        {gnuboard ? null : (
+          <Button
+            size="sm"
+            disabledReason={busy ? '처리 중인 작업이 끝나면 로그아웃할 수 있어요.' : undefined}
+            onClick={onLogout}
+          >
+            로그아웃
+          </Button>
+        )}
+        {closable ? (
+          <Button size="sm" icon={<CloseIcon />} aria-label="광고 관리 창 닫기" onClick={() => window.close()} />
+        ) : null}
+      </div>
+    </header>
   );
 }
 

@@ -6,7 +6,7 @@ import type { Bootstrap } from '../src/api/actions';
 import { AdminApi, ApiError } from '../src/api/client';
 import { App } from '../src/app/App';
 import { publicBase, readConfig } from '../src/app/config';
-import { defaultRoute, routeFromHash, routesFor } from '../src/app/routes';
+import { defaultRoute, locationFromHash, routeFromHash, routesFor } from '../src/app/routes';
 import { describeError } from '../src/app/status';
 import { DEFAULT_PLAYER_PRESET } from '../src/player';
 import { siteToday } from '../src/screens/StatsScreen';
@@ -118,7 +118,31 @@ describe('routesFor', () => {
       '리포트',
       '설정',
     ]);
-    expect(labels('gnuboard')).toEqual(['광고 요청', '하우스 광고', '지면 편성', '플레이어', '강의', '통계', '설정']);
+    expect(labels('gnuboard')).toEqual(['광고 요청', '하우스 광고', '지면 편성', '플레이어 설정', '통계', '설정']);
+  });
+
+  it('groups the menus under section labels', () => {
+    const groups = (host: 'standalone' | 'gnuboard') => [
+      ...new Set(
+        routesFor(host)
+          .filter((route) => route.nav)
+          .map((route) => route.group)
+      ),
+    ];
+
+    expect(groups('standalone')).toEqual(['개요', '광고', '플레이어', '운영', '시스템']);
+    expect(groups('gnuboard')).toEqual(['광고', '플레이어', '분석', '시스템']);
+  });
+
+  it('opens the one player setting for old #/players sub pages and has no lectures on gnuboard', () => {
+    const routes = routesFor('gnuboard');
+
+    expect(locationFromHash('#/players/setup', routes, defaultRoute('gnuboard'))).toEqual({ id: 'players', path: '' });
+    expect(locationFromHash('#/players/edit/p1', routes, defaultRoute('gnuboard'))).toEqual({
+      id: 'players',
+      path: '',
+    });
+    expect(routeFromHash('#/lms/progress', routes, defaultRoute('gnuboard'))).toBe('house');
   });
 
   it('falls back to the default route for an unknown hash', () => {
@@ -267,6 +291,78 @@ describe('App', () => {
       await new Promise((resolve) => setTimeout(resolve, 20));
     });
     expect(actions(fetch)).toEqual(['bootstrap']);
+  });
+
+  it('groups the GnuBoard side menu under section labels', async () => {
+    serve({ bootstrap: () => ok(bootstrap('gnuboard')), creatives: () => ok({ items: [] }) });
+    renderApp();
+
+    const nav = await screen.findByRole('navigation', { name: '광고 관리 메뉴' });
+    const links = (group: string) =>
+      within(within(nav).getByRole('list', { name: group }))
+        .getAllByRole('link')
+        .map((link) => link.textContent);
+
+    expect(links('광고')).toEqual(['광고 요청', '하우스 광고', '지면 편성']);
+    expect(links('플레이어')).toEqual(['플레이어 설정']);
+    expect(links('분석')).toEqual(['통계']);
+    expect(links('시스템')).toEqual(['설정']);
+    expect(nav.querySelectorAll('a > svg[aria-hidden="true"]')).toHaveLength(6);
+    // The menu is in the side bar, and wide windows have no menu button.
+    expect(within(screen.getByRole('banner')).queryByRole('navigation')).toBeNull();
+    expect(screen.queryByRole('button', { name: '메뉴 열기' })).toBeNull();
+  });
+
+  it('turns the side menu into a drawer below 960px', async () => {
+    vi.stubGlobal('matchMedia', (query: string) => ({
+      matches: query === '(max-width: 960px)',
+      media: query,
+      addEventListener: () => {},
+      removeEventListener: () => {},
+    }));
+
+    try {
+      serve({ bootstrap: () => ok(bootstrap('gnuboard')), creatives: () => ok({ items: [] }) });
+      renderApp();
+
+      const button = await screen.findByRole('button', { name: '메뉴 열기' });
+      const side = document.getElementById('aa-side');
+      if (!side) throw new Error('no side menu');
+
+      const isOpen = () => side.classList.contains('is-open');
+
+      expect(button.getAttribute('aria-controls')).toBe('aa-side');
+      expect(button.getAttribute('aria-expanded')).toBe('false');
+      expect(isOpen()).toBe(false);
+
+      // Opening focuses the current menu and makes the page behind it inert.
+      fireEvent.click(button);
+
+      expect(isOpen()).toBe(true);
+      expect(button.getAttribute('aria-expanded')).toBe('true');
+      expect(document.activeElement).toBe(within(side).getByRole('link', { name: '하우스 광고' }));
+      expect(button.closest('[inert]')).not.toBeNull();
+
+      fireEvent.keyDown(document, { key: 'Escape' });
+
+      expect(isOpen()).toBe(false);
+      expect(button.closest('[inert]')).toBeNull();
+      expect(document.activeElement).toBe(button);
+
+      fireEvent.click(button);
+      fireEvent.click(within(side).getByRole('button', { name: '메뉴 닫기' }));
+
+      expect(isOpen()).toBe(false);
+      expect(document.activeElement).toBe(button);
+
+      // Following a menu link closes the drawer.
+      fireEvent.click(button);
+      fireEvent.click(within(side).getByRole('link', { name: '설정' }));
+
+      expect(isOpen()).toBe(false);
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 
   it('offers 광고 관리 창 닫기 on GnuBoard only when an opener window exists (QA U06)', async () => {

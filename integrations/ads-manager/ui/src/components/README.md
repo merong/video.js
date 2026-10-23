@@ -12,6 +12,7 @@
 | 컴포넌트 | 주요 prop |
 | --- | --- |
 | `TopNav` | `brand?`(솔애드 / 사이트 이름, 없으면 `tag`만 일반 글자), `tag`(관리자 / 광고 관리), `items: TopNavItem[]`(`id`, `label`, `href`, `current?` → `aria-current="page"`, `count?` → 라임 건수, 0이면 숨김), `navLabel?`(기본 "주 메뉴"), `actions?`(오른쪽 영역), `onNavigate?(item, event)`(수정 키 없는 왼쪽 클릭만). 960px 미만 두 줄은 CSS가 처리합니다. |
+| `SideNav` | 관리자 화면 틀의 왼쪽 메뉴. `id?`(메뉴 단추의 `aria-controls` 대상), `brand?`, `tag`, `navLabel?`(기본 "주 메뉴"), `groups: SideNavGroup[]`(`label` 구획 이름 → 목록의 `aria-labelledby`, `items: SideNavItem[]` = `TopNavItem` + `icon?`(16px `sa-ico`, 장식)), `footer?`(사용자 표시), `open?`(960px 미만 서랍이 열림), `onClose?`(있으면 서랍의 메뉴 닫기 단추), `onNavigate?(item, event)`. 서랍의 포커스, Esc, 뒤 화면 `inert`는 쓰는 쪽이 맡습니다. |
 | `Avatar` | `initial`(한 글자), `label`(화면 읽기용 이름 · 역할) |
 | `Card` | `title?`(있으면 `h2`로 section 이름), `actions?`, `flush?`(제목이 `sa-toolbar`로), `dense?`, `label?`(제목 없을 때 이름), `children` |
 | `Panel` | `title`, `description?`, `footer?`(오른쪽 정렬 버튼 줄), `onSubmit?`(있으면 `form`), `children` |

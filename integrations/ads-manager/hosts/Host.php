@@ -25,6 +25,18 @@ abstract class Host
 
     public function validateTarget(array $target): void {}
 
+    /** Whether the host offers lectures (LMS); without them the LMS actions do not exist. */
+    public function lectures(): bool
+    {
+        return true;
+    }
+
+    /** Whether the site keeps one stored player preset that is always the site preset. */
+    public function singlePlayerPreset(): bool
+    {
+        return false;
+    }
+
     /** The host's own signed-in visitor for LMS progress, or null when the host has none. */
     public function learnerId(): ?string
     {

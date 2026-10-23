@@ -157,6 +157,14 @@ async function open(hash: string) {
   await waitFor(() => expect(document.body.textContent).not.toContain('프리셋 목록을 불러오고 있어요.'), LOAD_WAIT);
 }
 
+/** GnuBoard's one player setting; its editor shows once the list is read. */
+async function openSettings(hash: string) {
+  history.replaceState(null, '', `/${hash}`);
+  render(<App api={new AdminApi('http://admin.test/ads/api/index.php')} publicBase="/ads/" />);
+  await screen.findByRole('heading', { level: 1, name: '플레이어 설정' }, LOAD_WAIT);
+  await screen.findByRole('button', { name: '설정 저장' }, LOAD_WAIT);
+}
+
 const table = () => screen.getByRole('table', { name: '플레이어 프리셋' });
 
 function control(element: HTMLElement) {
@@ -219,15 +227,18 @@ describe('locationFromHash', () => {
 });
 
 describe('PlayersScreen', () => {
-  it.each(['standalone', 'gnuboard'] as const)('sits right after 지면 편성 on %s', async (host) => {
+  it.each([
+    ['standalone', '주 메뉴', '플레이어'],
+    ['gnuboard', '광고 관리 메뉴', '플레이어 설정'],
+  ] as const)('sits right after 지면 편성 on %s', async (host, menu, label) => {
     serve({}, host);
-    await open('#/players');
+    await (host === 'gnuboard' ? openSettings('#/players') : open('#/players'));
 
-    const links = within(screen.getByRole('navigation', { name: host === 'gnuboard' ? '광고 관리 메뉴' : '주 메뉴' }))
+    const links = within(screen.getByRole('navigation', { name: menu }))
       .getAllByRole('link')
       .map((link) => link.textContent);
 
-    expect(links[links.indexOf('지면 편성') + 1]).toBe('플레이어');
+    expect(links[links.indexOf('지면 편성') + 1]).toBe(label);
   });
 
   it('lists presets with built-in actions blocked', async () => {
@@ -1187,7 +1198,7 @@ describe('PresetEditor', () => {
       .map((id) => document.getElementById(id)?.textContent ?? '')
       .join(' ');
 
-  it('moves between the seven sections and focuses the section heading', async () => {
+  it('moves between the eight sections and focuses the section heading', async () => {
     serve({});
     await open('#/players/new');
 
@@ -1197,6 +1208,7 @@ describe('PresetEditor', () => {
     expect(links.map((link) => link.textContent)).toEqual([
       '기본',
       '테마',
+      '로고',
       '컨트롤',
       '재생 동작',
       '강의(LMS)',
@@ -1205,10 +1217,10 @@ describe('PresetEditor', () => {
     ]);
     expect(links[0]?.getAttribute('aria-current')).toBe('true');
 
-    fireEvent.click(links[6]!);
+    fireEvent.click(links[7]!);
 
     expect(document.activeElement).toBe(screen.getByRole('heading', { level: 2, name: '광고 화면' }));
-    expect(links[6]?.getAttribute('aria-current')).toBe('true');
+    expect(links[7]?.getAttribute('aria-current')).toBe('true');
     expect(location.hash).toBe('#/players/new');
   });
 
@@ -1477,7 +1489,7 @@ describe('PresetEditor 컨트롤', () => {
       '끄면 단축키 c도 꺼져요.',
     ]);
     expect(document.getElementById(sw('이전·이후 버튼').getAttribute('aria-describedby')!)?.textContent).toBe(
-      '컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.'
+      '뒤로·앞으로 건너뛰기 버튼을 컨트롤 막대나 화면 가운데, 또는 두 곳 모두에 보여요.'
     );
     expect(await save(0)).toEqual(DEFAULT_PLAYER_PRESET.controls);
 
@@ -1504,6 +1516,51 @@ describe('PresetEditor 컨트롤', () => {
 
     expect(step('30초').checked).toBe(true);
     expect(await save(2)).toEqual({ ...DEFAULT_PLAYER_PRESET.controls, seekButtons: 30, captions: false });
+  });
+
+  it('places the seek buttons in the bar, the middle of the video or both, keeping one place on', async () => {
+    const fetch = serve({ 'player-preset-save': () => fail(500, 'server') });
+    const place = (name: string) =>
+      within(screen.getByRole('group', { name: '이전·이후 버튼 위치' })).getByRole<HTMLInputElement>('checkbox', {
+        name,
+      });
+    const save = async (nth: number) => {
+      fireEvent.click(screen.getByRole('button', { name: '프리셋 저장' }));
+      await waitFor(() =>
+        expect(actions(fetch).filter((action) => action === 'player-preset-save')).toHaveLength(nth + 1)
+      );
+
+      return sent(fetch, 'player-preset-save', nth).preset.controls;
+    };
+
+    await open('#/players/new');
+    fireEvent.change(input('이름'), { target: { value: '가운데' } });
+    fireEvent.click(sw('이전·이후 버튼'));
+
+    expect(sub()?.contains(screen.getByRole('group', { name: '이전·이후 버튼 위치' }))).toBe(true);
+    expect([place('컨트롤 막대').checked, place('컨트롤 막대').disabled]).toEqual([true, true]);
+    expect([place('화면 가운데').checked, place('화면 가운데').disabled]).toEqual([false, false]);
+
+    fireEvent.click(place('화면 가운데'));
+
+    expect([place('컨트롤 막대').disabled, place('화면 가운데').disabled]).toEqual([false, false]);
+    expect(await save(0)).toMatchObject({ seekButtons: 10, seekPlacement: 'both' });
+
+    fireEvent.click(place('컨트롤 막대'));
+
+    expect([place('컨트롤 막대').checked, place('화면 가운데').disabled]).toEqual([false, true]);
+    expect(await save(1)).toMatchObject({ seekButtons: 10, seekPlacement: 'center' });
+
+    // Turning the buttons off keeps the place for the next time they come back.
+    fireEvent.click(sw('이전·이후 버튼'));
+
+    expect(await save(2)).toMatchObject({ seekButtons: null, seekPlacement: 'center' });
+
+    fireEvent.click(sw('이전·이후 버튼'));
+    fireEvent.click(place('컨트롤 막대'));
+    fireEvent.click(place('화면 가운데'));
+
+    expect(await save(3)).toMatchObject({ seekButtons: 10, seekPlacement: null });
   });
 
   it('opens saved values and keeps the controls the editor does not show yet', async () => {
@@ -1671,19 +1728,6 @@ describe('PlayerSetup', () => {
 
   const steps = () => screen.getAllByRole('listitem').map((item) => item.textContent);
 
-  it('gives the GnuBoard install steps: /ads/ on the same origin, video IDs and read permission (QA PL24)', async () => {
-    serve({}, 'gnuboard');
-    await open('#/players/setup');
-
-    expect(await screen.findByRole('heading', { name: '설치 순서' })).toBeTruthy();
-    expect(steps()).toContain(
-      '영상을 넣을 자리에 코드 붙이기. 아래 설치 코드를 붙이고 data-video-id, data-src를 영상에 맞게 바꿔요. 영상 ID는 게시판:글번호:영상키 형식이에요. 영상키는 기본 main이에요. 방문자가 그 글을 읽을 권한이 있어야 광고가 나와요.'
-    );
-    expect(steps()).toContain(
-      '그누보드 게시물 자동 삽입 · 준비 중. 게시물에 플레이어를 자동으로 넣는 기능은 아직 없어요. 지금은 관리자를 사이트 아래 /ads/에 설치해 같은 출처로 쓰고, 설치 코드를 게시판 스킨이나 페이지에 직접 붙여 넣어 주세요.'
-    );
-  });
-
   it('keeps the GnuBoard video ID format and post insertion out of the standalone install steps', async () => {
     serve({});
     await open('#/players/setup');
@@ -1695,12 +1739,98 @@ describe('PlayerSetup', () => {
     expect(document.body.textContent).not.toContain('게시판:글번호:영상키');
     expect(screen.queryByText('그누보드 게시물 자동 삽입 · 준비 중', { exact: false })).toBeNull();
   });
+});
 
-  it('marks Gnuboard auto insertion as not built yet', async () => {
-    serve({}, 'gnuboard');
-    await open('#/players/setup');
+describe('PlayerSettingsScreen', () => {
+  // The API hides the lecture built-in on GnuBoard; a fresh site still shows the built-in "기본".
+  const SITE_LIST = { ...LIST, presets: [BUILT_IN, FLAT, ROUNDED, ACCENT] };
+  const SETTING = stored('p-site000001', '플레이어 설정');
 
-    expect(await screen.findByText('그누보드 게시물 자동 삽입 · 준비 중', { exact: false })).toBeTruthy();
+  it('opens the one setting for old #/players sub pages, without a list, copies or lectures', async () => {
+    serve({ 'player-presets': () => ok(SITE_LIST) }, 'gnuboard');
+    await openSettings('#/players/setup');
+
+    expect(location.hash).toBe('#/players');
+    expect(screen.queryByRole('table', { name: '플레이어 프리셋' })).toBeNull();
+    expect(screen.queryByLabelText('이름')).toBeNull();
+    expect(screen.queryByRole('button', { name: /복제|삭제|사이트에 적용/u })).toBeNull();
+    // The settings page gives the section list's width to the preview.
+    expect(screen.queryByRole('navigation', { name: '편집 구획' })).toBeNull();
+    expect(screen.queryByRole('heading', { name: '강의(LMS)' })).toBeNull();
+    expect(screen.getByRole('heading', { level: 2, name: '로고' })).toBeTruthy();
+  });
+
+  it('saves a theme card, its fine-tuning and the sample logo in the corner picked', async () => {
+    const fetch = serve(
+      { 'player-presets': () => ok(SITE_LIST), 'player-preset-save': () => ok({ ...SITE_LIST, preset: SETTING }) },
+      'gnuboard'
+    );
+
+    await openSettings('#/players');
+
+    const themes = screen.getByRole('group', { name: '테마 고르기' });
+    const corner = (name: string) => checkbox(screen.getByRole('radio', { name }));
+
+    expect(checkbox(within(themes).getByRole('radio', { name: /^기본/u })).checked).toBe(true);
+    expect(corner('왼쪽 아래').matches(':disabled')).toBe(true);
+
+    fireEvent.click(within(themes).getByRole('radio', { name: /^플랫/u }));
+
+    expect(within(themes).getByText(/지금 테마: 플랫/u)).toBeTruthy();
+
+    fireEvent.change(color('강조색'), { target: { value: '#445566' } });
+
+    expect(within(themes).queryByRole('radio', { checked: true })).toBeNull();
+    expect(within(themes).getByText(/지금 테마: 직접 조정/u)).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('radio', { name: '샘플 로고' }));
+    expect(corner('오른쪽 위').checked).toBe(true);
+    fireEvent.click(corner('왼쪽 아래'));
+    fireEvent.click(screen.getByRole('button', { name: '설정 저장' }));
+    await waitFor(() => expect(actions(fetch)).toContain('player-preset-save'));
+
+    const { preset } = sent(fetch, 'player-preset-save');
+
+    expect(preset.theme).toMatchObject({ accentColor: '#445566', borderColor: '#00000000', borderRadius: 0 });
+    expect(preset.logo).toMatchObject({ assetId: 'sample', position: 'bottom-left', width: null, alt: null });
+  });
+
+  it('stores the first save as the site setting and updates it afterwards', async () => {
+    const saved = (revision: number) =>
+      ok({
+        ...SITE_LIST,
+        revision,
+        defaultPresetId: SETTING.id,
+        presets: [...SITE_LIST.presets, SETTING],
+        preset: SETTING,
+      });
+    const replies = [saved(6), saved(7)];
+    const fetch = serve(
+      { 'player-presets': () => ok(SITE_LIST), 'player-preset-save': () => replies.shift() ?? fail(500, 'server') },
+      'gnuboard'
+    );
+
+    await openSettings('#/players');
+    fireEvent.change(color('강조색'), { target: { value: '#445566' } });
+    fireEvent.click(screen.getByRole('button', { name: '설정 저장' }));
+    await screen.findByText(/플레이어 설정을 저장했어요/u);
+
+    const first = sent(fetch, 'player-preset-save');
+
+    expect(first.revision).toBe(5);
+    expect(first.preset.id).toBeNull();
+    expect(first.preset.name).toBe('플레이어 설정');
+    expect(first.preset.theme.accentColor).toBe('#445566');
+    expect(first.preset.lms.enabled).toBeNull();
+
+    fireEvent.change(color('강조색'), { target: { value: '#778899' } });
+    fireEvent.click(screen.getByRole('button', { name: '설정 저장' }));
+    await waitFor(() => expect(actions(fetch).filter((action) => action === 'player-preset-save')).toHaveLength(2));
+
+    const second = sent(fetch, 'player-preset-save', 1);
+
+    expect(second.revision).toBe(6);
+    expect(second.preset.id).toBe(SETTING.id);
   });
 });
 
@@ -2069,7 +2199,6 @@ describe('PlayerSetup review fixes', () => {
     ['standalone', 'C1 NEL U+0085', 'vid\u00851'],
     ['standalone', 'only ideographic spaces', '\u3000\u3000'],
     ['standalone', '129 characters', 'a'.repeat(129)],
-    ['gnuboard', 'RLO U+202E', 'free:12:\u202emain'],
   ] as const)('on %s, makes no install code for a video ID with %s', async (host, _name, value) => {
     serve({}, host);
     await open('#/players/setup');
@@ -2090,18 +2219,6 @@ describe('PlayerSetup review fixes', () => {
     expect(screen.getByText('위 설치 코드의 영상 ID를 고치면 예전 정적 코드도 만들어요.')).toBeTruthy();
     expect(screen.queryByRole('region', { name: '로더 설치 코드' })).toBeNull();
     expect(screen.queryByRole('region', { name: '예전 정적 코드' })).toBeNull();
-  });
-
-  it('keeps building gnuboard install code for a 게시판:글번호:영상키 ID', async () => {
-    serve({}, 'gnuboard');
-    await open('#/players/setup');
-    fireEvent.change(await screen.findByLabelText('영상 ID'), { target: { value: 'free:12:main' } });
-
-    expect(screen.getByLabelText('영상 ID').getAttribute('aria-invalid')).toBeNull();
-    expect(screen.getByRole('region', { name: '로더 설치 코드' }).textContent).toContain(
-      'data-video-id="free:12:main"'
-    );
-    expect(screen.getByRole('region', { name: '예전 정적 코드' }).textContent).toContain('video-id="free:12:main"');
   });
 });
 
@@ -2414,17 +2531,17 @@ describe('PresetEditor color format errors', () => {
 });
 
 describe('PlannedNote', () => {
-  it.each([
-    ['#/players/setup', 'gnuboard', ['그누보드 게시물 자동 삽입']],
-    ['#/players', 'standalone', ['프리셋 변경 이력과 되돌리기']],
-  ] as const)('marks the contract 3.2 features that are not built yet on %s (QA PL23)', async (hash, host, names) => {
-    serve({}, host);
-    await open(hash);
+  it.each([['#/players', 'standalone', ['프리셋 변경 이력과 되돌리기']]] as const)(
+    'marks the contract 3.2 features that are not built yet on %s (QA PL23)',
+    async (hash, host, names) => {
+      serve({}, host);
+      await open(hash);
 
-    await screen.findByText('준비 중인 기능');
+      await screen.findByText('준비 중인 기능');
 
-    for (const name of names) expect(screen.getByText(`${name} · 준비 중.`)).toBeTruthy();
-  });
+      for (const name of names) expect(screen.getByText(`${name} · 준비 중.`)).toBeTruthy();
+    }
+  );
 
   it('drops the marks for features schema v2 built', async () => {
     serve({});

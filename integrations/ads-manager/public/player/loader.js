@@ -251,7 +251,7 @@ function requiredError({ videoId, src }) {
 
 /**
  * Apply page values over the preset (contract 4.2). Invalid `overrides` are dropped as a whole and reported. Autoplay
- * always starts muted. `logo` is the preview logo image, the only source of the render's `logo.src` for now.
+ * always starts muted. `logo` is the preview logo image; it wins over the preset's built-in one.
  */
 function settle(base, revision, local, overrides, report, logo = null) {
   const playerType = base.playerType;
@@ -406,6 +406,8 @@ function loadStyle(href) {
 
 const assets = new URL('../assets/', here);
 const asset = (path) => new URL(path, assets).href;
+// A built-in logo's render `src` is a file name beside this loader; a preview logo is already a full address.
+const skinLogo = (logo) => logo && { ...logo, src: new URL(logo.src, here).href };
 
 function mediaId() {
   let id;
@@ -501,12 +503,15 @@ async function buildVideojs(element, render, values, signal, onEvent, preview) {
   i18n.setAttribute('lang', language);
 
   // `<solad-video-skin>` reads these once when it connects; a change remounts (see `structure`).
-  if (render.controls.seekButtons) skin.setAttribute('seek-buttons', String(render.controls.seekButtons));
+  if (render.controls.seekButtons) {
+    skin.setAttribute('seek-buttons', String(render.controls.seekButtons));
+    skin.setAttribute('seek-placement', render.controls.seekPlacement ?? 'bar');
+  }
 
   if (render.controls.captions === false) skin.setAttribute('captions', 'off');
 
   // The ad skin draws the logo and takes a new one in place (`restyle`).
-  if (render.logo) skin.logo = render.logo;
+  if (render.logo) skin.logo = skinLogo(render.logo);
 
   if (lms) {
     skin.setAttribute('lms', '');
@@ -778,8 +783,7 @@ function previewPreset(value, playerType) {
  * to the default render of this type. `preview` is for the demo and admin previews only: it plays a raw schedule
  * without sending events, may take an unsaved preset, and adds `seek` and `restyle` to the handle; `preview.scene`
  * starts it at a `seek` target without the breaks before it, and `preview.logo` is a logo image URL for the preset's
- * `logo` values (no other input takes one until logo uploads exist). Mounting the same element again destroys the
- * previous player first.
+ * `logo` values, in place of its built-in image. Mounting the same element again destroys the previous player first.
  */
 export async function mount(element, options = {}) {
   mounts.get(element)?.destroy();
@@ -972,7 +976,7 @@ export async function mount(element, options = {}) {
 
         if (built.panel) applyPresetCss(built.panel, next.css);
 
-        if (next.playerType === 'videojs') built.styled.logo = next.logo;
+        if (next.playerType === 'videojs') built.styled.logo = skinLogo(next.logo);
 
         if (built.ads) applyMediaAdsAttributes(built.ads, next.attributes);
         // `updateUI` replaces the options, so an emptied label returns to the package default.

@@ -8,8 +8,9 @@ import {
   type PlayerAdsLabels,
   type PlayerAdsProgress,
   type PlayerControls,
+  type LogoAssetId,
+  type LogoPosition,
   type PlayerInput,
-  type PlayerLogo,
   type PlayerPreset,
   type PresetError,
 } from '../player';
@@ -25,8 +26,14 @@ export type FormPreload = '' | 'none' | 'auto';
 /** `''` hides the seek buttons (`null`). */
 export type FormSeekButtons = '' | '5' | '10' | '15' | '30';
 
+/** `''` is `bar`, the built-in default. */
+export type FormSeekPlacement = '' | 'center' | 'both';
+
 /** `''` is `2`, the built-in default. */
 export type FormMaxRate = '' | '1' | '1.2' | '1.5' | '1.7';
+
+/** `''` is `top-right`, the built-in default. */
+export type FormLogoPosition = '' | Exclude<LogoPosition, 'top-right'>;
 
 type LmsTab = keyof PlayerPreset['lms']['tabs'];
 
@@ -35,13 +42,12 @@ type ShownLabel = 'skip' | 'skipCountdown' | 'timer';
 
 /**
  * Saved values the editor has no controls for yet (A2-2, A2-3). They go back unchanged on save, so editing a preset
- * never clears them. `controls.seekButtons` and `controls.captions` are edited in the form and replace their copies
- * here.
+ * never clears them. `controls.seekButtons`, `controls.seekPlacement` and `controls.captions` are edited in the form
+ * and replace their copies here.
  */
 export interface KeptValues {
   input: PlayerInput;
   controls: PlayerControls;
-  logo: PlayerLogo;
   labels: Omit<PlayerAdsLabels, ShownLabel>;
   progress: PlayerAdsProgress;
 }
@@ -67,7 +73,19 @@ export interface PresetForm {
   };
   playback: { autoplay: FormFlag; muted: FormFlag; loop: FormFlag; preload: FormPreload };
   display: { poster: FormFlag; title: FormFlag };
-  controls: { seekButtons: FormSeekButtons; captions: FormFlag };
+  controls: { seekButtons: FormSeekButtons; seekPlacement: FormSeekPlacement; captions: FormFlag };
+  /** Number and text fields keep their raw text, like `theme`; `''` is the built-in default. */
+  logo: {
+    assetId: '' | LogoAssetId;
+    position: FormLogoPosition;
+    width: string;
+    margin: string;
+    opacity: string;
+    href: string;
+    alt: string;
+    hideDuringAds: FormFlag;
+    hideWithControls: FormFlag;
+  };
   ads: {
     skip: string;
     skipCountdown: string;
@@ -104,6 +122,7 @@ export type PresetPath =
   | `playback.${keyof PresetForm['playback']}`
   | `display.${keyof PresetForm['display']}`
   | `controls.${keyof PresetForm['controls']}`
+  | `logo.${keyof PresetForm['logo']}`
   | `ads.labels.${ShownLabel}`
   | 'ads.accentColor'
   | 'ads.skipRadius'
@@ -131,7 +150,17 @@ export const PRESET_FIELD_LABELS = {
   'display.poster': '포스터 표시',
   'display.title': '제목 표시',
   'controls.seekButtons': '이전·이후 버튼',
+  'controls.seekPlacement': '이전·이후 버튼 위치',
   'controls.captions': '자막',
+  'logo.assetId': '로고 이미지',
+  'logo.position': '로고 위치',
+  'logo.width': '로고 폭 (px)',
+  'logo.margin': '로고 여백 (px)',
+  'logo.opacity': '로고 불투명도 (%)',
+  'logo.href': '로고 링크 주소',
+  'logo.alt': '로고 대체 텍스트',
+  'logo.hideDuringAds': '광고 중 로고 숨기기',
+  'logo.hideWithControls': '컨트롤과 함께 로고 숨기기',
   'ads.labels.skip': '건너뛰기 문구',
   'ads.labels.skipCountdown': '건너뛰기 대기 문구',
   'ads.labels.timer': '광고 시간 문구',
@@ -176,7 +205,17 @@ const FIELD_RULES = {
   'display.poster': SWITCH_RULE,
   'display.title': SWITCH_RULE,
   'controls.seekButtons': '건너뛰는 폭을 다시 골라 주세요.',
+  'controls.seekPlacement': '컨트롤 막대와 화면 가운데 중 한 곳 이상을 골라 주세요.',
   'controls.captions': SWITCH_RULE,
+  'logo.assetId': '로고 이미지를 다시 골라 주세요. 지금은 샘플 로고만 쓸 수 있어요.',
+  'logo.position': '로고 위치를 다시 골라 주세요.',
+  'logo.width': '24–240 사이의 정수로 입력해 주세요.',
+  'logo.margin': '0–48 사이의 정수로 입력해 주세요.',
+  'logo.opacity': '10–100 사이의 정수로 입력해 주세요.',
+  'logo.href': 'http:// 또는 https://로 시작하는 2048자 이내 주소로 입력해 주세요. 빈칸은 쓸 수 없어요.',
+  'logo.alt': '80자 이내로 입력해 주세요. 링크 주소를 넣으면 꼭 써야 해요.',
+  'logo.hideDuringAds': SWITCH_RULE,
+  'logo.hideWithControls': SWITCH_RULE,
   'ads.labels.skip': `${LABEL_RULE} { } 문자도 쓸 수 없어요.`,
   'ads.labels.skipCountdown': `${LABEL_RULE} 자리표시자는 {seconds}만 쓸 수 있어요.`,
   'ads.labels.timer': `${LABEL_RULE} 자리표시자는 {elapsed} {duration} {remaining}만 쓸 수 있어요.`,
@@ -237,8 +276,10 @@ const pick = <T extends string>(value: string, allowed: readonly T[], fallback: 
   allowed.find((item) => item === value) ?? fallback;
 
 const SEEK_BUTTONS: readonly FormSeekButtons[] = ['', '5', '10', '15', '30'];
+const SEEK_PLACEMENTS: readonly FormSeekPlacement[] = ['', 'center', 'both'];
 const MAX_RATES: readonly FormMaxRate[] = ['', '1', '1.2', '1.5', '1.7'];
 const LMS_TABS: readonly LmsTab[] = ['chapters', 'materials', 'transcript', 'notes'];
+const LOGO_POSITIONS: readonly FormLogoPosition[] = ['', 'top-left', 'bottom-left', 'bottom-right'];
 
 /** A saved switch value; one equal to the built-in default reads as `''`, like the API's `null`. */
 const flag = (value: boolean | null, fallback: boolean): FormFlag =>
@@ -252,6 +293,8 @@ export const FLAG_DEFAULTS = {
   'display.poster': true,
   'display.title': true,
   'controls.captions': true,
+  'logo.hideDuringAds': true,
+  'logo.hideWithControls': false,
   'lms.enabled': false,
   'lms.tabs.chapters': true,
   'lms.tabs.materials': true,
@@ -272,7 +315,7 @@ export function flagOn(form: PresetForm, path: FlagPath): boolean {
 export const BLANK_FORM: PresetForm = formFromPreset({ ...DEFAULT_PLAYER_PRESET, id: null, name: '' });
 
 export function formFromPreset(preset: PlayerPreset): PresetForm {
-  const { theme, playback, display, ads, lms } = preset;
+  const { theme, playback, display, logo, ads, lms } = preset;
   const { skip, skipCountdown, timer, ...labels } = ads.labels;
 
   return {
@@ -298,7 +341,20 @@ export function formFromPreset(preset: PlayerPreset): PresetForm {
     display: { poster: flag(display.poster, true), title: flag(display.title, true) },
     controls: {
       seekButtons: pick(text(preset.controls.seekButtons), SEEK_BUTTONS, ''),
+      // `bar` is the built-in default, so it reads as `''` like the API's `null`.
+      seekPlacement: pick(preset.controls.seekPlacement ?? '', SEEK_PLACEMENTS, ''),
       captions: flag(preset.controls.captions, true),
+    },
+    logo: {
+      assetId: logo.assetId ?? '',
+      position: pick(logo.position ?? '', LOGO_POSITIONS, ''),
+      width: text(logo.width),
+      margin: text(logo.margin),
+      opacity: text(logo.opacity),
+      href: logo.href ?? '',
+      alt: logo.alt ?? '',
+      hideDuringAds: flag(logo.hideDuringAds, true),
+      hideWithControls: flag(logo.hideWithControls, false),
     },
     ads: {
       skip: text(skip),
@@ -323,7 +379,7 @@ export function formFromPreset(preset: PlayerPreset): PresetForm {
       bookmarks: flag(lms.bookmarks, true),
       ads: lms.ads === 'preroll' ? 'preroll' : '',
     },
-    kept: { input: preset.input, controls: preset.controls, logo: preset.logo, labels, progress: ads.progress },
+    kept: { input: preset.input, controls: preset.controls, labels, progress: ads.progress },
   };
 }
 
@@ -369,6 +425,9 @@ export function updateForm(form: PresetForm, path: PresetPath, value: string): P
     case 'controls.seekButtons':
       next.controls.seekButtons = pick(value, SEEK_BUTTONS, '');
       break;
+    case 'controls.seekPlacement':
+      next.controls.seekPlacement = pick(value, SEEK_PLACEMENTS, '');
+      break;
     case 'controls.captions':
       next.controls.captions = switchValue(path, value);
       break;
@@ -380,6 +439,24 @@ export function updateForm(form: PresetForm, path: PresetPath, value: string): P
       break;
     case 'theme.scaleUnit':
       next.theme.scaleUnit = pick(value, ['', 'root'], '');
+      break;
+    case 'logo.assetId':
+      next.logo.assetId = pick(value, ['', 'sample'], '');
+      break;
+    case 'logo.position':
+      // `top-right` is the built-in default, so it is stored as `''` like the other choices.
+      next.logo.position = pick(value, LOGO_POSITIONS, '');
+      break;
+    case 'logo.hideDuringAds':
+    case 'logo.hideWithControls':
+      next.logo[pick(key ?? '', ['hideDuringAds', 'hideWithControls'], 'hideDuringAds')] = switchValue(path, value);
+      break;
+    case 'logo.width':
+    case 'logo.margin':
+    case 'logo.opacity':
+    case 'logo.href':
+    case 'logo.alt':
+      next.logo[pick(key ?? '', ['width', 'margin', 'opacity', 'href', 'alt'], 'width')] = value;
       break;
     case 'lms.enabled':
     case 'lms.bookmarks':
@@ -500,6 +577,8 @@ export function formValue(form: PresetForm, path: PresetPath): string {
 
   if (group === 'controls') return find(form.controls);
 
+  if (group === 'logo') return find(form.logo);
+
   if (group === 'lms') return find(form.lms);
 
   return find(form.ads);
@@ -523,7 +602,7 @@ function bool(value: FormFlag): boolean | null {
 /** The schema input for `parsePlayerPreset` and the save request: the full v2 shape in contract 2.1 order. */
 export function presetInput(form: PresetForm) {
   const native = form.playerType === 'native';
-  const { theme, playback, display, ads, lms, kept } = form;
+  const { theme, playback, display, logo, ads, lms, kept } = form;
   const labels: PlayerAdsLabels = {
     ...kept.labels,
     skip: optional(ads.skip),
@@ -561,8 +640,21 @@ export function presetInput(form: PresetForm) {
           ...kept.controls,
           captions: bool(form.controls.captions),
           seekButtons: form.controls.seekButtons ? Number(form.controls.seekButtons) : null,
+          seekPlacement: form.controls.seekPlacement || null,
         },
-    logo: native ? empty.logo : kept.logo,
+    logo: native
+      ? empty.logo
+      : {
+          assetId: logo.assetId || null,
+          position: logo.position || null,
+          margin: integer(logo.margin),
+          width: integer(logo.width),
+          opacity: integer(logo.opacity),
+          href: optional(logo.href),
+          alt: optional(logo.alt),
+          hideDuringAds: bool(logo.hideDuringAds),
+          hideWithControls: bool(logo.hideWithControls),
+        },
     ads: {
       labels: Object.fromEntries(AD_LABEL_KEYS.map((key) => [key, labels[key]])),
       accentColor: optional(ads.accentColor),
@@ -610,6 +702,85 @@ export const NO_BORDER_COLOR = '#00000000';
 /** A border color whose alpha is `00` draws no line; the editor opens it with "테두리 없음" on. */
 export function drawsNoBorder(value: string): boolean {
   return /^#[0-9a-f]{6}00$/u.test(value.trim().toLowerCase());
+}
+
+type ThemeLook = Pick<PresetForm['theme'], 'accentColor' | 'accentTextColor' | 'borderColor' | 'borderRadius'>;
+
+export interface ThemeChoice extends ThemeLook {
+  id: string;
+  label: string;
+  /** What sets it apart, under the name on its card. */
+  note: string;
+}
+
+/**
+ * The editor's theme cards: the four built-in looks (fixture `builtIn`) and two more. A card fills these four theme
+ * values; the font, fit and scale stay as they are.
+ */
+export const THEME_CHOICES: readonly ThemeChoice[] = [
+  {
+    id: 'default',
+    label: '기본',
+    note: '스킨 기본값',
+    accentColor: '',
+    accentTextColor: '',
+    borderColor: '',
+    borderRadius: '',
+  },
+  {
+    id: 'flat',
+    label: '플랫',
+    note: '테두리·모서리 없음',
+    accentColor: '',
+    accentTextColor: '',
+    borderColor: NO_BORDER_COLOR,
+    borderRadius: '0',
+  },
+  {
+    id: 'rounded',
+    label: '둥근 테두리',
+    note: '모서리 12px',
+    accentColor: '',
+    accentTextColor: '',
+    borderColor: '',
+    borderRadius: '12',
+  },
+  {
+    id: 'accent',
+    label: '강조색',
+    note: '파란 강조',
+    accentColor: '#2563eb',
+    accentTextColor: '#ffffff',
+    borderColor: '',
+    borderRadius: '',
+  },
+  {
+    id: 'dark',
+    label: '다크',
+    note: '회색 강조·진한 테두리',
+    accentColor: '#d4d4d8',
+    accentTextColor: '#18181a',
+    borderColor: '#18181a',
+    borderRadius: '8',
+  },
+  {
+    id: 'warm',
+    label: '따뜻한 색',
+    note: '주황 강조·둥근 모서리',
+    accentColor: '#f97316',
+    accentTextColor: '#18181a',
+    borderColor: '',
+    borderRadius: '16',
+  },
+];
+
+export const THEME_FIELDS = ['accentColor', 'accentTextColor', 'borderColor', 'borderRadius'] as const;
+
+/** The card whose four values the form holds, or `undefined` for values set by hand ("직접 조정"). */
+export function themeChoiceOf(form: PresetForm): ThemeChoice | undefined {
+  return THEME_CHOICES.find((choice) =>
+    THEME_FIELDS.every((key) => choice[key] === form.theme[key].trim().toLowerCase())
+  );
 }
 
 /** WCAG 2 contrast ratio of two `#rrggbb` colors. */

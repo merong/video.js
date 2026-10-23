@@ -1139,6 +1139,16 @@ export const PRESET_FIELDS = [
       '재생 버튼 뒤에 붙는 뒤로·앞으로 건너뛰기 버튼의 초예요. 화면 양쪽 두 번 탭도 같은 초만큼 움직여요. 좁은 화면(28rem 미만)에서는 아이콘 안 숫자를 빼요.',
   },
   {
+    path: 'controls.seekPlacement',
+    accepts: { kind: 'enum', values: ['bar', 'center', 'both'] },
+    defaultValue: null,
+    defaultText: 'bar',
+    stage: 'A2-E',
+    players: ['videojs'],
+    description:
+      '뒤로·앞으로 건너뛰기 버튼을 놓을 곳이에요. bar는 컨트롤 막대, center는 화면 가운데의 재생 버튼 양옆, both는 두 곳 모두예요. 화면 가운데 버튼은 컨트롤 막대와 함께 나타나고 숨어요. 건너뛰기 버튼을 숨겨도 값은 남아요.',
+  },
+  {
     path: 'logo.assetId',
     accepts: { kind: 'unavailable' },
     defaultValue: null,

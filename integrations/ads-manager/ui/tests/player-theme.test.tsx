@@ -644,7 +644,7 @@ describe('ThemePreview', () => {
 
     for (const [demo, reason] of [
       [{ presetId: 'p-brand00001', unsaved: true }, '저장하지 않은 입력이 있어요. 저장하면 데모에서 열 수 있어요.'],
-      [{ presetId: null, unsaved: true }, '새 프리셋은 저장한 뒤 데모에서 열 수 있어요.'],
+      [{ presetId: null, unsaved: true }, '처음 저장한 뒤 데모에서 열 수 있어요.'],
     ] as const) {
       rerender(<ThemePreview preset={brand} examplesUrl="/examples/" demo={demo} />);
 

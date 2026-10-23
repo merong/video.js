@@ -290,7 +290,7 @@ $presetObjects = json_decode($presetRaw, false, 64, JSON_THROW_ON_ERROR);
 $builtIns = $presetFixture['builtIn'];
 same(array_column($builtIns, 'id'), ['default', 'flat', 'rounded', 'accent', 'lms'], 'fixture lists the five built-ins in order', 'presets');
 same($emptyList, ['revision' => 0, 'defaultPresetId' => 'default', 'presets' => $builtIns, 'migratedNeutral' => [], 'migratedLabels' => []], 'absent document lists only the built-ins', 'presets');
-same(Value::json($emptyRender), '{"id":"default","revision":0,"playerType":"videojs","language":null,"playback":{"autoplay":false,"muted":false,"loop":false,"preload":"metadata"},"display":{"poster":true,"title":true},"input":{"hotkeys":true,"gestures":true},"controls":{"captions":true,"quality":true,"audioTrack":true,"playbackRate":true,"pip":true,"fullscreen":true,"thumbnails":true,"seekButtons":null},"logo":null,"progress":{"sequence":true,"timer":true,"bar":false},"labels":{},"skinTag":"video-skin","styles":{"css":"video.css","js":"video.js"},"css":{},"attributes":{"lang":"ko"}}', 'built-in render has empty objects', 'presets');
+same(Value::json($emptyRender), '{"id":"default","revision":0,"playerType":"videojs","language":null,"playback":{"autoplay":false,"muted":false,"loop":false,"preload":"metadata"},"display":{"poster":true,"title":true},"input":{"hotkeys":true,"gestures":true},"controls":{"captions":true,"quality":true,"audioTrack":true,"playbackRate":true,"pip":true,"fullscreen":true,"thumbnails":true,"seekButtons":null,"seekPlacement":"bar"},"logo":null,"progress":{"sequence":true,"timer":true,"bar":false},"labels":{},"skinTag":"video-skin","styles":{"css":"video.css","js":"video.js"},"css":{},"attributes":{"lang":"ko"}}', 'built-in render has empty objects', 'presets');
 same($app->dispatch('GET', 'bootstrap', [])['capabilities']['playerPresets'], true, 'bootstrap advertises player presets', 'presets');
 foreach ($presetFixture['normalize'] as $case) {
     try {
@@ -449,7 +449,7 @@ rejects(fn () => $app->dispatch('POST', 'player-preset-default', ['id' => 'p-zzz
 $vjsRender = $app->dispatch('GET', 'player-preset', []);
 same(Value::json($vjsRender), Value::json(['id' => $vjs['id'], 'revision' => 7, 'playerType' => 'videojs', 'language' => 'ko',
     'playback' => ['autoplay' => false, 'muted' => false, 'loop' => false, 'preload' => 'metadata'], 'display' => ['poster' => true, 'title' => true], 'input' => ['hotkeys' => true, 'gestures' => true],
-    'controls' => ['captions' => true, 'quality' => true, 'audioTrack' => true, 'playbackRate' => true, 'pip' => false, 'fullscreen' => true, 'thumbnails' => true, 'seekButtons' => 10],
+    'controls' => ['captions' => true, 'quality' => true, 'audioTrack' => true, 'playbackRate' => true, 'pip' => false, 'fullscreen' => true, 'thumbnails' => true, 'seekButtons' => 10, 'seekPlacement' => 'bar'],
     'logo' => null, 'progress' => ['sequence' => true, 'timer' => true, 'bar' => false],
     'labels' => ['skip' => '건너뛰기', 'skipCountdown' => '{seconds}초 뒤 건너뛰기', 'timer' => '{elapsed} / {duration} ({remaining})'],
     'skinTag' => 'video-skin', 'styles' => ['css' => 'video.css', 'js' => 'video.js'],
@@ -520,6 +520,41 @@ same($unknownSchema, 'Unsupported player preset schema.', 'an unknown schema is 
 $db->run('UPDATE ' . $db->table('meta') . ' SET value = ? WHERE name = ?', [Value::json($v2Doc), 'player_presets']);
 $autoplayPreset = $app->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'name' => '자동재생', 'playback' => ['autoplay' => true]], 'revision' => 31], $host->csrfToken())['preset'];
 same($app->dispatch('GET', 'player-preset', ['id' => $autoplayPreset['id']])['playback'], ['autoplay' => true, 'muted' => false, 'loop' => false, 'preload' => 'metadata'], 'render keeps an empty muted false even with autoplay; the loader mutes after merging', 'presets');
+
+// GnuBoard keeps one stored preset as the site preset and has no lectures; the document is restored afterwards.
+$siteHost = new class($db, $config) extends Host {
+    public function authenticated(): bool { return true; }
+    public function displayName(): string { return '운영 담당'; }
+    public function csrfToken(): string { return 'site-token'; }
+    public function verifyCsrf(mixed $token): void {}
+    public function resolveVideoContext(string $videoId): array { return ['videoId' => $videoId, 'boardId' => null, 'categoryId' => null]; }
+    public function capabilities(): array { return ['host' => 'gnuboard']; }
+    public function targets(string $type, string $query, ?string $boardId): array { return []; }
+    public function lectures(): bool { return false; }
+    public function singlePlayerPreset(): bool { return true; }
+};
+$siteApp = new App($db, $config, $siteHost);
+$storedPresets = $db->meta('player_presets');
+$db->run('DELETE FROM ' . $db->table('meta') . ' WHERE name = ?', ['player_presets']);
+$siteList = $siteApp->dispatch('GET', 'player-presets', []);
+same([array_column($siteList['presets'], 'id'), $siteList['defaultPresetId']], [['default', 'flat', 'rounded', 'accent'], 'default'], 'without lectures the lecture built-in is not listed', 'presets');
+same($siteApp->dispatch('GET', 'bootstrap', [])['capabilities']['lms'], false, 'bootstrap reports no lectures', 'presets');
+foreach (['lms-session' => 'POST', 'lms-progress' => 'POST', 'lms-notes' => 'POST', 'lms-settings' => 'GET', 'lms-key-rotate' => 'POST', 'lms-test-token' => 'POST', 'lms-progress-list' => 'GET', 'lms-progress-csv' => 'GET'] as $action => $method) {
+    rejects(fn () => $siteApp->dispatch($method, $action, [], 'site-token'), 404, 'action_not_found', null, $action . ' does not exist without lectures');
+}
+rejects(fn () => $siteApp->dispatch('GET', 'player-preset', ['id' => 'lms']), 404, 'preset_not_found', null, 'the lecture built-in does not render without lectures');
+$siteSaved = $siteApp->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'name' => '플레이어 설정', 'lms' => ['enabled' => true]], 'revision' => 0], 'site-token');
+$siteId = $siteSaved['preset']['id'];
+$siteRender = $siteApp->dispatch('GET', 'player-preset', []);
+same([$siteSaved['defaultPresetId'], $siteSaved['preset']['lms']['enabled'], $siteRender['id'], array_key_exists('lms', $siteRender)], [$siteId, null, $siteId, false], 'the first save becomes the site preset with lectures off', 'presets');
+rejects(fn () => $siteApp->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'name' => '둘째'], 'revision' => 1], 'site-token'), 400, 'preset_single', null, 'a second stored preset is refused');
+$siteUpdated = $siteApp->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'id' => $siteId, 'name' => '플레이어 설정', 'controls' => ['seekButtons' => 15]], 'revision' => 1], 'site-token');
+same([$siteUpdated['revision'], $siteUpdated['defaultPresetId'], count($siteUpdated['presets']), $siteApp->dispatch('GET', 'player-preset', [])['controls']['seekButtons']], [2, $siteId, 5, 15], 'later saves update the one site preset', 'presets');
+rejects(fn () => $siteApp->dispatch('POST', 'player-preset-default', ['id' => 'flat', 'revision' => 2], 'site-token'), 400, 'preset_fixed', null, 'the site preset cannot be switched');
+rejects(fn () => $siteApp->dispatch('POST', 'player-preset-delete', ['id' => $siteId, 'revision' => 2], 'site-token'), 400, 'preset_fixed', null, 'the site preset cannot be deleted');
+$db->run('UPDATE ' . $db->table('meta') . ' SET value = ? WHERE name = ?', [Value::json([...Value::decode($db->meta('player_presets')), 'defaultPresetId' => 'lms']), 'player_presets']);
+same([$siteApp->dispatch('GET', 'player-presets', [])['defaultPresetId'], $siteApp->dispatch('GET', 'player-preset', [])['id']], ['default', 'default'], 'a lecture site preset chosen before reads as the plain default', 'presets');
+$db->run('UPDATE ' . $db->table('meta') . ' SET value = ? WHERE name = ?', [$storedPresets, 'player_presets']);
 
 // A1-FIX-API-2 video IDs: contract 4.1 string rules, echoed verbatim because players compare it exactly.
 $schedule = fn (mixed $videoId): array => $app->dispatch('GET', 'schedule', ['videoId' => $videoId]);

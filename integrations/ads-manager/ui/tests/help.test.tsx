@@ -89,9 +89,25 @@ describe('HelpScreen', () => {
     );
 
     const shown = [...document.querySelectorAll('.sa-term h4')].map((heading) => heading.id);
+    // GnuBoard keeps one player setting, which is always the site's.
+    const hidden = host === 'gnuboard' ? ['player-default-preset'] : [];
 
-    expect(shown).toEqual(helpTerms.filter((id) => id.startsWith('player-')).map(termHeadingId));
-    expect(shown).toHaveLength(16);
+    expect(shown).toEqual(
+      helpTerms.filter((id) => id.startsWith('player-') && !hidden.includes(id)).map(termHeadingId)
+    );
+    expect(shown).toHaveLength(16 - hidden.length);
+  });
+
+  it('has no lecture terms and names the one player setting on gnuboard', () => {
+    render(<HelpScreen host="gnuboard" />);
+
+    expect(document.querySelector('a[href="#/lms"]')).toBeNull();
+    expect(termsFor('gnuboard').filter((id) => id.startsWith('lms-'))).toEqual([]);
+    expect(
+      within(screen.getByRole('group', { name: '용어 분류' })).queryByRole('button', { name: /^강의/ })
+    ).toBeNull();
+    expect(document.getElementById(termHeadingId('player-preset'))?.textContent).toBe('플레이어 설정');
+    expect(document.querySelector('a[href="#/players"]')?.textContent).toContain('플레이어 설정');
   });
 
   it('links related terms, such as the video id, the placeholder and the old static code', () => {

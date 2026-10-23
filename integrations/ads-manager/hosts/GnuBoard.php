@@ -83,6 +83,16 @@ final class GnuBoard extends Host
         check_admin_token();
     }
 
+    public function lectures(): bool
+    {
+        return false;
+    }
+
+    public function singlePlayerPreset(): bool
+    {
+        return true;
+    }
+
     public function capabilities(): array
     {
         return ['host' => 'gnuboard', 'manualTargets' => false, 'uploads' => true, 'loginUrl' => Value::url(G5_BBS_URL . '/login.php', 'loginUrl'), 'siteUrl' => Value::url(G5_URL, 'siteUrl'), 'adminUrl' => Value::url(G5_ADMIN_URL, 'adminUrl')];

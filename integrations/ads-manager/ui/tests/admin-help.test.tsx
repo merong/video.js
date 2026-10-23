@@ -143,14 +143,13 @@ async function open(hash: string, heading: string) {
 
 const href = (name: string) => screen.getByRole('link', { name }).getAttribute('href');
 
-/** Names of the links and buttons in the top bar, in document order, without the menu. */
+/** Names of the links and buttons in the top bar, in document order; the menu sits in the side bar. */
 function topActions(): string[] {
   const banner = screen.getByRole('banner');
-  const menu = within(banner).getByRole('navigation');
 
-  return [...banner.querySelectorAll('a, button')]
-    .filter((element) => !menu.contains(element))
-    .map((element) => element.textContent?.trim() ?? '');
+  expect(within(banner).queryByRole('navigation')).toBeNull();
+
+  return [...banner.querySelectorAll('a, button')].map((element) => element.textContent?.trim() ?? '');
 }
 
 const focusedId = () => document.activeElement?.id;

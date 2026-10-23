@@ -21,6 +21,9 @@ export {
   AD_LABEL_KEYS,
   type AdLabelKey,
   DEFAULT_PLAYER_PRESET,
+  LOGO_ASSETS,
+  LOGO_DEFAULTS,
+  type LogoAssetId,
   type LogoPosition,
   type NativePresetRender,
   parsePlayerPreset,
@@ -42,11 +45,13 @@ export {
   type PresetError,
   type PresetErrorCode,
   type PresetLabels,
+  type PresetLogoRender,
   type PresetPlaybackRender,
   type PresetResult,
   presetRender,
   type PresetTimeouts,
   type SeekButtonSeconds,
+  type SeekPlacement,
   type VideojsPresetRender,
 } from './preset';
 export { demoAddress, ThemePreview, type ThemePreviewProps } from './theme-preview';

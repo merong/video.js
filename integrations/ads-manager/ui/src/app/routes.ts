@@ -10,6 +10,8 @@ export type RouteView =
   | { kind: 'schedule' }
   /** Player presets with sub pages under `#/players/…` (contract 3.2). */
   | { kind: 'players' }
+  /** GnuBoard's one fixed player setting; it has no sub pages, so old `#/players/…` links open it. */
+  | { kind: 'playerSettings' }
   /** Lecture progress and LMS link, `#/lms/progress` or `#/lms/settings` (ads-lms-spec 5). */
   | { kind: 'lms' }
   | { kind: 'stats' }
@@ -25,37 +27,76 @@ export interface RouteDef {
   label: string;
   /** Hidden routes are reached from a header action, not the menu. */
   nav: boolean;
+  /** Menu section label; consecutive menu routes with the same group form one section. */
+  group: string;
   view: RouteView;
 }
 
 const standalone: RouteDef[] = [
-  { id: 'dashboard', label: '대시보드', nav: true, view: { kind: 'mock', host: 'standalone', screen: 'dashboard' } },
-  { id: 'campaigns', label: '캠페인', nav: true, view: { kind: 'mock', host: 'standalone', screen: 'campaigns' } },
-  { id: 'creatives', label: '소재', nav: true, view: { kind: 'creatives' } },
-  { id: 'schedule', label: '지면 편성', nav: true, view: { kind: 'schedule' } },
-  { id: 'players', label: '플레이어', nav: true, view: { kind: 'players' } },
-  { id: 'lms', label: '강의', nav: true, view: { kind: 'lms' } },
-  { id: 'approvals', label: '승인함', nav: true, view: { kind: 'mock', host: 'standalone', screen: 'approvals' } },
-  { id: 'reports', label: '리포트', nav: true, view: { kind: 'reports' } },
-  { id: 'settings', label: '설정', nav: true, view: { kind: 'mock', host: 'standalone', screen: 'settings' } },
+  {
+    id: 'dashboard',
+    label: '대시보드',
+    nav: true,
+    group: '개요',
+    view: { kind: 'mock', host: 'standalone', screen: 'dashboard' },
+  },
+  {
+    id: 'campaigns',
+    label: '캠페인',
+    nav: true,
+    group: '광고',
+    view: { kind: 'mock', host: 'standalone', screen: 'campaigns' },
+  },
+  { id: 'creatives', label: '소재', nav: true, group: '광고', view: { kind: 'creatives' } },
+  { id: 'schedule', label: '지면 편성', nav: true, group: '광고', view: { kind: 'schedule' } },
+  { id: 'players', label: '플레이어', nav: true, group: '플레이어', view: { kind: 'players' } },
+  { id: 'lms', label: '강의', nav: true, group: '플레이어', view: { kind: 'lms' } },
+  {
+    id: 'approvals',
+    label: '승인함',
+    nav: true,
+    group: '운영',
+    view: { kind: 'mock', host: 'standalone', screen: 'approvals' },
+  },
+  { id: 'reports', label: '리포트', nav: true, group: '운영', view: { kind: 'reports' } },
+  {
+    id: 'settings',
+    label: '설정',
+    nav: true,
+    group: '시스템',
+    view: { kind: 'mock', host: 'standalone', screen: 'settings' },
+  },
   {
     id: 'new-line-item',
     label: '집행 만들기',
     nav: false,
+    group: '광고',
     view: { kind: 'mock', host: 'standalone', screen: 'newLineItem' },
   },
-  { id: 'help', label: '도움말', nav: false, view: { kind: 'help', host: 'standalone' } },
+  { id: 'help', label: '도움말', nav: false, group: '시스템', view: { kind: 'help', host: 'standalone' } },
 ];
 
+// GnuBoard has no lectures, and one fixed player setting instead of presets.
 const gnuboard: RouteDef[] = [
-  { id: 'requests', label: '광고 요청', nav: true, view: { kind: 'mock', host: 'gnuboard', screen: 'requests' } },
-  { id: 'house', label: '하우스 광고', nav: true, view: { kind: 'creatives' } },
-  { id: 'schedule', label: '지면 편성', nav: true, view: { kind: 'schedule' } },
-  { id: 'players', label: '플레이어', nav: true, view: { kind: 'players' } },
-  { id: 'lms', label: '강의', nav: true, view: { kind: 'lms' } },
-  { id: 'stats', label: '통계', nav: true, view: { kind: 'stats' } },
-  { id: 'settings', label: '설정', nav: true, view: { kind: 'mock', host: 'gnuboard', screen: 'settings' } },
-  { id: 'help', label: '도움말', nav: false, view: { kind: 'help', host: 'gnuboard' } },
+  {
+    id: 'requests',
+    label: '광고 요청',
+    nav: true,
+    group: '광고',
+    view: { kind: 'mock', host: 'gnuboard', screen: 'requests' },
+  },
+  { id: 'house', label: '하우스 광고', nav: true, group: '광고', view: { kind: 'creatives' } },
+  { id: 'schedule', label: '지면 편성', nav: true, group: '광고', view: { kind: 'schedule' } },
+  { id: 'players', label: '플레이어 설정', nav: true, group: '플레이어', view: { kind: 'playerSettings' } },
+  { id: 'stats', label: '통계', nav: true, group: '분석', view: { kind: 'stats' } },
+  {
+    id: 'settings',
+    label: '설정',
+    nav: true,
+    group: '시스템',
+    view: { kind: 'mock', host: 'gnuboard', screen: 'settings' },
+  },
+  { id: 'help', label: '도움말', nav: false, group: '시스템', view: { kind: 'help', host: 'gnuboard' } },
 ];
 
 export function routesFor(host: HostKind): RouteDef[] {

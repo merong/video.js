@@ -634,7 +634,7 @@ describe('options.js', () => {
   it('marks what A2-1 and the ad skin apply and what waits for A2-2 and A2-3', () => {
     const applied = ['skip', 'skipCountdown', 'timer'].map((key) => `ads.labels.${key}`);
     const stage = (path: string) => {
-      if (['controls.seekButtons', 'controls.captions'].includes(path)) return 'A2-E';
+      if (['controls.seekButtons', 'controls.seekPlacement', 'controls.captions'].includes(path)) return 'A2-E';
 
       if (path.startsWith('lms.')) return 'L-2';
 

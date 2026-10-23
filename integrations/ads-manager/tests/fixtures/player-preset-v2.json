@@ -37,7 +37,8 @@
         "pip": null,
         "fullscreen": null,
         "thumbnails": null,
-        "seekButtons": null
+        "seekButtons": null,
+        "seekPlacement": null
       },
       "logo": {
         "assetId": null,
@@ -137,7 +138,8 @@
         "pip": null,
         "fullscreen": null,
         "thumbnails": null,
-        "seekButtons": null
+        "seekButtons": null,
+        "seekPlacement": null
       },
       "logo": {
         "assetId": null,
@@ -237,7 +239,8 @@
         "pip": null,
         "fullscreen": null,
         "thumbnails": null,
-        "seekButtons": null
+        "seekButtons": null,
+        "seekPlacement": null
       },
       "logo": {
         "assetId": null,
@@ -337,7 +340,8 @@
         "pip": null,
         "fullscreen": null,
         "thumbnails": null,
-        "seekButtons": null
+        "seekButtons": null,
+        "seekPlacement": null
       },
       "logo": {
         "assetId": null,
@@ -437,7 +441,8 @@
         "pip": null,
         "fullscreen": null,
         "thumbnails": null,
-        "seekButtons": 10
+        "seekButtons": 10,
+        "seekPlacement": null
       },
       "logo": {
         "assetId": null,
@@ -547,7 +552,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -654,7 +660,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -762,7 +769,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -870,7 +878,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -978,7 +987,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1112,7 +1122,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1219,7 +1230,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1326,7 +1338,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1575,7 +1588,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1683,7 +1697,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1791,7 +1806,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -1899,7 +1915,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2007,7 +2024,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2115,7 +2133,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2267,7 +2286,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2377,7 +2397,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2515,7 +2536,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2625,7 +2647,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2735,7 +2758,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -2974,7 +2998,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3084,7 +3109,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3195,7 +3221,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3320,7 +3347,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3430,7 +3458,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3596,7 +3625,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3708,7 +3738,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3857,7 +3888,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -3981,7 +4013,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4106,7 +4139,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4250,7 +4284,8 @@
             "pip": false,
             "fullscreen": false,
             "thumbnails": false,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4360,7 +4395,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": 5
+            "seekButtons": 5,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4470,7 +4506,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": 10
+            "seekButtons": 10,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4580,7 +4617,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": 15
+            "seekButtons": 15,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4690,7 +4728,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": 30
+            "seekButtons": 30,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -4810,6 +4849,370 @@
       }
     },
     {
+      "name": "seek placement both",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "controls": {
+          "seekButtons": 10,
+          "seekPlacement": "both"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "preset": {
+          "id": null,
+          "name": "테스트",
+          "playerType": "videojs",
+          "language": null,
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "playback": {
+            "autoplay": null,
+            "muted": null,
+            "loop": null,
+            "preload": null
+          },
+          "display": {
+            "poster": null,
+            "title": null
+          },
+          "input": {
+            "hotkeys": null,
+            "gestures": null
+          },
+          "controls": {
+            "captions": null,
+            "quality": null,
+            "audioTrack": null,
+            "playbackRate": null,
+            "pip": null,
+            "fullscreen": null,
+            "thumbnails": null,
+            "seekButtons": 10,
+            "seekPlacement": "both"
+          },
+          "logo": {
+            "assetId": null,
+            "position": null,
+            "margin": null,
+            "width": null,
+            "opacity": null,
+            "href": null,
+            "alt": null,
+            "hideDuringAds": null,
+            "hideWithControls": null
+          },
+          "ads": {
+            "labels": {
+              "advertisement": null,
+              "sequence": null,
+              "playPause": null,
+              "mute": null,
+              "volume": null,
+              "advertiser": null,
+              "newWindow": null,
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null,
+              "loading": null,
+              "paused": null,
+              "blocked": null,
+              "enterFullscreen": null,
+              "exitFullscreen": null,
+              "fullscreenError": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "progress": {
+              "sequence": null,
+              "timer": null,
+              "bar": null
+            },
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "lms": {
+            "enabled": null,
+            "resume": null,
+            "seekLimit": null,
+            "maxRate": null,
+            "completion": null,
+            "tabs": {
+              "chapters": null,
+              "materials": null,
+              "transcript": null,
+              "notes": null
+            },
+            "bookmarks": null,
+            "ads": null
+          }
+        }
+      }
+    },
+    {
+      "name": "seek placement kept without seek buttons",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "controls": {
+          "seekPlacement": "center"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "preset": {
+          "id": null,
+          "name": "테스트",
+          "playerType": "videojs",
+          "language": null,
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "playback": {
+            "autoplay": null,
+            "muted": null,
+            "loop": null,
+            "preload": null
+          },
+          "display": {
+            "poster": null,
+            "title": null
+          },
+          "input": {
+            "hotkeys": null,
+            "gestures": null
+          },
+          "controls": {
+            "captions": null,
+            "quality": null,
+            "audioTrack": null,
+            "playbackRate": null,
+            "pip": null,
+            "fullscreen": null,
+            "thumbnails": null,
+            "seekButtons": null,
+            "seekPlacement": "center"
+          },
+          "logo": {
+            "assetId": null,
+            "position": null,
+            "margin": null,
+            "width": null,
+            "opacity": null,
+            "href": null,
+            "alt": null,
+            "hideDuringAds": null,
+            "hideWithControls": null
+          },
+          "ads": {
+            "labels": {
+              "advertisement": null,
+              "sequence": null,
+              "playPause": null,
+              "mute": null,
+              "volume": null,
+              "advertiser": null,
+              "newWindow": null,
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null,
+              "loading": null,
+              "paused": null,
+              "blocked": null,
+              "enterFullscreen": null,
+              "exitFullscreen": null,
+              "fullscreenError": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "progress": {
+              "sequence": null,
+              "timer": null,
+              "bar": null
+            },
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "lms": {
+            "enabled": null,
+            "resume": null,
+            "seekLimit": null,
+            "maxRate": null,
+            "completion": null,
+            "tabs": {
+              "chapters": null,
+              "materials": null,
+              "transcript": null,
+              "notes": null
+            },
+            "bookmarks": null,
+            "ads": null
+          }
+        }
+      }
+    },
+    {
+      "name": "seek placement empty is null",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "controls": {
+          "seekButtons": 10,
+          "seekPlacement": ""
+        }
+      },
+      "expect": {
+        "ok": true,
+        "preset": {
+          "id": null,
+          "name": "테스트",
+          "playerType": "videojs",
+          "language": null,
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "playback": {
+            "autoplay": null,
+            "muted": null,
+            "loop": null,
+            "preload": null
+          },
+          "display": {
+            "poster": null,
+            "title": null
+          },
+          "input": {
+            "hotkeys": null,
+            "gestures": null
+          },
+          "controls": {
+            "captions": null,
+            "quality": null,
+            "audioTrack": null,
+            "playbackRate": null,
+            "pip": null,
+            "fullscreen": null,
+            "thumbnails": null,
+            "seekButtons": 10,
+            "seekPlacement": null
+          },
+          "logo": {
+            "assetId": null,
+            "position": null,
+            "margin": null,
+            "width": null,
+            "opacity": null,
+            "href": null,
+            "alt": null,
+            "hideDuringAds": null,
+            "hideWithControls": null
+          },
+          "ads": {
+            "labels": {
+              "advertisement": null,
+              "sequence": null,
+              "playPause": null,
+              "mute": null,
+              "volume": null,
+              "advertiser": null,
+              "newWindow": null,
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null,
+              "loading": null,
+              "paused": null,
+              "blocked": null,
+              "enterFullscreen": null,
+              "exitFullscreen": null,
+              "fullscreenError": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "progress": {
+              "sequence": null,
+              "timer": null,
+              "bar": null
+            },
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "lms": {
+            "enabled": null,
+            "resume": null,
+            "seekLimit": null,
+            "maxRate": null,
+            "completion": null,
+            "tabs": {
+              "chapters": null,
+              "materials": null,
+              "transcript": null,
+              "notes": null
+            },
+            "bookmarks": null,
+            "ads": null
+          }
+        }
+      }
+    },
+    {
+      "name": "seek placement top",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "controls": {
+          "seekButtons": 10,
+          "seekPlacement": "top"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "field": "controls.seekPlacement"
+      }
+    },
+    {
+      "name": "seek placement is case-sensitive",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "controls": {
+          "seekPlacement": "Center"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "field": "controls.seekPlacement"
+      }
+    },
+    {
       "name": "controls pip 0",
       "input": {
         "name": "테스트",
@@ -4866,6 +5269,20 @@
       }
     },
     {
+      "name": "native seek placement",
+      "input": {
+        "name": "기본 video",
+        "playerType": "native",
+        "controls": {
+          "seekPlacement": "bar"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "field": "controls.seekPlacement"
+      }
+    },
+    {
       "name": "logo fields without an upload",
       "input": {
         "name": "테스트",
@@ -4919,7 +5336,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5029,7 +5447,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5093,12 +5512,138 @@
       }
     },
     {
-      "name": "logo asset id not yet accepted",
+      "name": "logo sample asset id",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "logo": {
+          "assetId": "sample",
+          "position": "top-right"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "preset": {
+          "id": null,
+          "name": "테스트",
+          "playerType": "videojs",
+          "language": null,
+          "theme": {
+            "accentColor": null,
+            "accentTextColor": null,
+            "borderColor": null,
+            "borderRadius": null,
+            "fontFamily": null,
+            "objectFit": null,
+            "scaleUnit": null
+          },
+          "playback": {
+            "autoplay": null,
+            "muted": null,
+            "loop": null,
+            "preload": null
+          },
+          "display": {
+            "poster": null,
+            "title": null
+          },
+          "input": {
+            "hotkeys": null,
+            "gestures": null
+          },
+          "controls": {
+            "captions": null,
+            "quality": null,
+            "audioTrack": null,
+            "playbackRate": null,
+            "pip": null,
+            "fullscreen": null,
+            "thumbnails": null,
+            "seekButtons": null,
+            "seekPlacement": null
+          },
+          "logo": {
+            "assetId": "sample",
+            "position": "top-right",
+            "margin": null,
+            "width": null,
+            "opacity": null,
+            "href": null,
+            "alt": null,
+            "hideDuringAds": null,
+            "hideWithControls": null
+          },
+          "ads": {
+            "labels": {
+              "advertisement": null,
+              "sequence": null,
+              "playPause": null,
+              "mute": null,
+              "volume": null,
+              "advertiser": null,
+              "newWindow": null,
+              "skip": null,
+              "skipCountdown": null,
+              "timer": null,
+              "loading": null,
+              "paused": null,
+              "blocked": null,
+              "enterFullscreen": null,
+              "exitFullscreen": null,
+              "fullscreenError": null
+            },
+            "accentColor": null,
+            "skipRadius": null,
+            "fontSize": null,
+            "progress": {
+              "sequence": null,
+              "timer": null,
+              "bar": null
+            },
+            "timeouts": {
+              "loadSeconds": null,
+              "stallSeconds": null
+            }
+          },
+          "lms": {
+            "enabled": null,
+            "resume": null,
+            "seekLimit": null,
+            "maxRate": null,
+            "completion": null,
+            "tabs": {
+              "chapters": null,
+              "materials": null,
+              "transcript": null,
+              "notes": null
+            },
+            "bookmarks": null,
+            "ads": null
+          }
+        }
+      }
+    },
+    {
+      "name": "logo asset id other than sample",
       "input": {
         "name": "테스트",
         "playerType": "videojs",
         "logo": {
           "assetId": "logo-1"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "field": "logo.assetId"
+      }
+    },
+    {
+      "name": "logo asset id is case-sensitive",
+      "input": {
+        "name": "테스트",
+        "playerType": "videojs",
+        "logo": {
+          "assetId": "Sample"
         }
       },
       "expect": {
@@ -5153,7 +5698,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5263,7 +5809,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5373,7 +5920,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5499,7 +6047,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5708,7 +6257,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5819,7 +6369,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -5973,7 +6524,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -6188,7 +6740,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -6337,6 +6890,20 @@
       }
     },
     {
+      "name": "native logo sample asset id",
+      "input": {
+        "name": "기본 video",
+        "playerType": "native",
+        "logo": {
+          "assetId": "sample"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "field": "logo.assetId"
+      }
+    },
+    {
       "name": "all 16 labels",
       "input": {
         "name": "테스트",
@@ -6400,7 +6967,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -6512,7 +7080,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -6624,7 +7193,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -6736,7 +7306,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -6848,7 +7419,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -7184,7 +7756,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -7440,7 +8013,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -7551,7 +8125,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -7721,7 +8296,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -7833,7 +8409,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -7994,7 +8571,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8178,7 +8756,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8288,7 +8867,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8400,7 +8980,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8510,7 +9091,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8620,7 +9202,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8730,7 +9313,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8840,7 +9424,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -8950,7 +9535,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9060,7 +9646,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9170,7 +9757,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9280,7 +9868,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9390,7 +9979,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9500,7 +10090,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9610,7 +10201,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9724,7 +10316,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9839,7 +10432,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -9952,7 +10546,8 @@
             "pip": null,
             "fullscreen": null,
             "thumbnails": null,
-            "seekButtons": null
+            "seekButtons": null,
+            "seekPlacement": null
           },
           "logo": {
             "assetId": null,
@@ -10423,7 +11018,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -10512,7 +11108,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -10570,7 +11167,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -10659,7 +11257,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -10720,7 +11319,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -10809,7 +11409,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -10869,7 +11470,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -10958,7 +11560,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -11020,7 +11623,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": 10
+          "seekButtons": 10,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -11109,7 +11713,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": 10
+          "seekButtons": 10,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -11140,6 +11745,155 @@
           },
           "bookmarks": true,
           "ads": "off"
+        }
+      }
+    },
+    {
+      "name": "videojs seek buttons in the middle of the video",
+      "preset": {
+        "id": "p-seekmid001",
+        "name": "가운데 이동",
+        "playerType": "videojs",
+        "language": null,
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": null,
+          "borderRadius": null,
+          "fontFamily": null,
+          "objectFit": null,
+          "scaleUnit": null
+        },
+        "playback": {
+          "autoplay": null,
+          "muted": null,
+          "loop": null,
+          "preload": null
+        },
+        "display": {
+          "poster": null,
+          "title": null
+        },
+        "input": {
+          "hotkeys": null,
+          "gestures": null
+        },
+        "controls": {
+          "captions": null,
+          "quality": null,
+          "audioTrack": null,
+          "playbackRate": null,
+          "pip": null,
+          "fullscreen": null,
+          "thumbnails": null,
+          "seekButtons": 15,
+          "seekPlacement": "center"
+        },
+        "logo": {
+          "assetId": null,
+          "position": null,
+          "margin": null,
+          "width": null,
+          "opacity": null,
+          "href": null,
+          "alt": null,
+          "hideDuringAds": null,
+          "hideWithControls": null
+        },
+        "ads": {
+          "labels": {
+            "advertisement": null,
+            "sequence": null,
+            "playPause": null,
+            "mute": null,
+            "volume": null,
+            "advertiser": null,
+            "newWindow": null,
+            "skip": null,
+            "skipCountdown": null,
+            "timer": null,
+            "loading": null,
+            "paused": null,
+            "blocked": null,
+            "enterFullscreen": null,
+            "exitFullscreen": null,
+            "fullscreenError": null
+          },
+          "accentColor": null,
+          "skipRadius": null,
+          "fontSize": null,
+          "progress": {
+            "sequence": null,
+            "timer": null,
+            "bar": null
+          },
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "lms": {
+          "enabled": null,
+          "resume": null,
+          "seekLimit": null,
+          "maxRate": null,
+          "completion": null,
+          "tabs": {
+            "chapters": null,
+            "materials": null,
+            "transcript": null,
+            "notes": null
+          },
+          "bookmarks": null,
+          "ads": null
+        }
+      },
+      "revision": 7,
+      "render": {
+        "id": "p-seekmid001",
+        "revision": 7,
+        "playerType": "videojs",
+        "language": null,
+        "playback": {
+          "autoplay": false,
+          "muted": false,
+          "loop": false,
+          "preload": "metadata"
+        },
+        "display": {
+          "poster": true,
+          "title": true
+        },
+        "input": {
+          "hotkeys": true,
+          "gestures": true
+        },
+        "controls": {
+          "captions": true,
+          "quality": true,
+          "audioTrack": true,
+          "playbackRate": true,
+          "pip": true,
+          "fullscreen": true,
+          "thumbnails": true,
+          "seekButtons": 15,
+          "seekPlacement": "center"
+        },
+        "logo": null,
+        "progress": {
+          "sequence": true,
+          "timer": true,
+          "bar": false
+        },
+        "labels": {},
+        "skinTag": "video-skin",
+        "styles": {
+          "css": "video.css",
+          "js": "video.js"
+        },
+        "css": {},
+        "attributes": {
+          "lang": "ko"
         }
       }
     },
@@ -11181,7 +11935,8 @@
           "pip": false,
           "fullscreen": null,
           "thumbnails": false,
-          "seekButtons": 10
+          "seekButtons": 10,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -11270,9 +12025,182 @@
           "pip": false,
           "fullscreen": true,
           "thumbnails": false,
-          "seekButtons": 10
+          "seekButtons": 10,
+          "seekPlacement": "bar"
         },
         "logo": null,
+        "progress": {
+          "sequence": true,
+          "timer": false,
+          "bar": true
+        },
+        "labels": {
+          "sequence": "광고 {index}/{count}",
+          "skip": "건너뛰기",
+          "timer": "{remaining}초"
+        },
+        "skinTag": "video-skin",
+        "styles": {
+          "css": "video.css",
+          "js": "video.js"
+        },
+        "css": {
+          "--media-border-color": "#222222",
+          "--media-font-family": "system-ui, sans-serif",
+          "--media-object-fit": "cover",
+          "--media-scale-unit": "1rem",
+          "--ads-skip-radius": "8px",
+          "--ads-font-size": "14px"
+        },
+        "attributes": {
+          "lang": "ko",
+          "skip-label": "건너뛰기",
+          "timer-label": "{remaining}초"
+        }
+      }
+    },
+    {
+      "name": "videojs sample logo fills its empty layout values",
+      "preset": {
+        "id": "p-render0002",
+        "name": "테스트",
+        "playerType": "videojs",
+        "language": "en",
+        "theme": {
+          "accentColor": null,
+          "accentTextColor": null,
+          "borderColor": "#222222",
+          "borderRadius": null,
+          "fontFamily": "system",
+          "objectFit": "cover",
+          "scaleUnit": "root"
+        },
+        "playback": {
+          "autoplay": true,
+          "muted": null,
+          "loop": true,
+          "preload": "auto"
+        },
+        "display": {
+          "poster": null,
+          "title": false
+        },
+        "input": {
+          "hotkeys": null,
+          "gestures": false
+        },
+        "controls": {
+          "captions": null,
+          "quality": null,
+          "audioTrack": null,
+          "playbackRate": null,
+          "pip": false,
+          "fullscreen": null,
+          "thumbnails": false,
+          "seekButtons": 10,
+          "seekPlacement": null
+        },
+        "logo": {
+          "assetId": "sample",
+          "position": "top-left",
+          "margin": null,
+          "width": 120,
+          "opacity": null,
+          "href": null,
+          "alt": "MY SITE",
+          "hideDuringAds": null,
+          "hideWithControls": true
+        },
+        "ads": {
+          "labels": {
+            "advertisement": null,
+            "sequence": "광고 {index}/{count}",
+            "playPause": null,
+            "mute": null,
+            "volume": null,
+            "advertiser": null,
+            "newWindow": null,
+            "skip": "건너뛰기",
+            "skipCountdown": null,
+            "timer": "{remaining}초",
+            "loading": null,
+            "paused": null,
+            "blocked": null,
+            "enterFullscreen": null,
+            "exitFullscreen": null,
+            "fullscreenError": null
+          },
+          "accentColor": null,
+          "skipRadius": 8,
+          "fontSize": 14,
+          "progress": {
+            "sequence": null,
+            "timer": false,
+            "bar": true
+          },
+          "timeouts": {
+            "loadSeconds": null,
+            "stallSeconds": null
+          }
+        },
+        "lms": {
+          "enabled": null,
+          "resume": null,
+          "seekLimit": null,
+          "maxRate": null,
+          "completion": null,
+          "tabs": {
+            "chapters": null,
+            "materials": null,
+            "transcript": null,
+            "notes": null
+          },
+          "bookmarks": null,
+          "ads": null
+        }
+      },
+      "revision": 3,
+      "render": {
+        "id": "p-render0002",
+        "revision": 3,
+        "playerType": "videojs",
+        "language": "en",
+        "playback": {
+          "autoplay": true,
+          "muted": false,
+          "loop": true,
+          "preload": "auto"
+        },
+        "display": {
+          "poster": true,
+          "title": false
+        },
+        "input": {
+          "hotkeys": true,
+          "gestures": false
+        },
+        "controls": {
+          "captions": true,
+          "quality": true,
+          "audioTrack": true,
+          "playbackRate": true,
+          "pip": false,
+          "fullscreen": true,
+          "thumbnails": false,
+          "seekButtons": 10,
+          "seekPlacement": "bar"
+        },
+        "logo": {
+          "src": "logo-sample.svg",
+          "position": "top-left",
+          "margin": 12,
+          "width": 120,
+          "opacity": 80,
+          "href": null,
+          "alt": "MY SITE",
+          "hideDuringAds": true,
+          "hideWithControls": true
+        },
         "progress": {
           "sequence": true,
           "timer": false,
@@ -11341,7 +12269,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -11482,7 +12411,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -11610,7 +12540,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -11699,7 +12630,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -11771,7 +12703,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -11860,7 +12793,8 @@
           "pip": true,
           "fullscreen": true,
           "thumbnails": true,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": "bar"
         },
         "logo": null,
         "progress": {
@@ -11952,7 +12886,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12086,7 +13021,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12220,7 +13156,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12354,7 +13291,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12489,7 +13427,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12623,7 +13562,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12757,7 +13697,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,
@@ -12891,7 +13832,8 @@
           "pip": null,
           "fullscreen": null,
           "thumbnails": null,
-          "seekButtons": null
+          "seekButtons": null,
+          "seekPlacement": null
         },
         "logo": {
           "assetId": null,

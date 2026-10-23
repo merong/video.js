@@ -11,8 +11,11 @@ export interface Capabilities {
   /** GnuBoard site home and host admin; `null` (or absent on an older API) hides the link. */
   siteUrl?: string | null;
   adminUrl?: string | null;
-  /** Whether the LMS tables exist; absent on an older API, which reads as not installed. */
-  lms?: { installed: boolean };
+  /**
+   * Whether the LMS tables exist; absent on an older API, which reads as not installed. `false` on a host without
+   * lectures (GnuBoard).
+   */
+  lms?: { installed: boolean } | false;
 }
 
 export interface Bootstrap {

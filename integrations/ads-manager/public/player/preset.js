@@ -78,6 +78,7 @@ const controlKeys = [
   'fullscreen',
   'thumbnails',
   'seekButtons',
+  'seekPlacement',
 ];
 const logoKeys = [
   'assetId',
@@ -287,15 +288,17 @@ export function parsePlayerPreset(value) {
     fullscreen: read.bool(controlsInput, 'controls.fullscreen'),
     thumbnails: read.bool(controlsInput, 'controls.thumbnails'),
     seekButtons: read.step(controlsInput, 'controls.seekButtons', [5, 10, 15, 30]),
+    seekPlacement: read.choice(controlsInput, 'controls.seekPlacement', ['bar', 'center', 'both']),
   };
   const logoInput = read.group(value, 'logo', logoKeys);
   const assetId = read.text(logoInput, 'logo.assetId');
+  const builtInLogo = assetId !== null && Object.hasOwn(LOGO_ASSETS, assetId);
 
-  // Logo uploads arrive in A2-3; until then any id is refused rather than kept for later.
-  if (assetId !== null) read.fail('logo.assetId', 'unavailable');
+  // Logo uploads are not here yet, so only a built-in image id is accepted.
+  if (assetId !== null && !builtInLogo) read.fail('logo.assetId', 'unavailable');
 
   const logo = {
-    assetId: null,
+    assetId: builtInLogo ? assetId : null,
     position: read.choice(logoInput, 'logo.position', ['top-left', 'top-right', 'bottom-left', 'bottom-right']),
     margin: read.integer(logoInput, 'logo.margin', 0, 48),
     width: read.integer(logoInput, 'logo.width', 24, 240),
@@ -404,6 +407,9 @@ function presetCss({ theme, ads }) {
   return Object.fromEntries(values.filter(([, value]) => value !== null));
 }
 
+/** Built-in logo images by `logo.assetId`: the render's `logo.src`, a file name relative to `public/player/`. */
+export const LOGO_ASSETS = Object.freeze({ sample: 'logo-sample.svg' });
+
 /** The layout a logo takes for each empty preset `logo.*` value (ads-a2e-spec 5.2). */
 export const LOGO_DEFAULTS = Object.freeze({
   position: 'top-right',
@@ -418,9 +424,10 @@ export const LOGO_DEFAULTS = Object.freeze({
 
 /**
  * The render `logo` (ads-a2e-spec 5.2): `null` without an image, otherwise every layout value filled with its default.
- * Only a preview passes `src` until logo uploads exist (A2-3), so the public render keeps `logo: null`.
+ * A preview logo image (`src`) wins over the preset's built-in image.
  */
-function logoRender(logo, src) {
+function logoRender(logo, previewSrc) {
+  const src = previewSrc || (logo.assetId === null ? null : LOGO_ASSETS[logo.assetId]);
   if (!src) return null;
 
   return {
@@ -493,6 +500,7 @@ export function presetRender(preset, revision = 0, logoSrc = null) {
         fullscreen: controls.fullscreen ?? true,
         thumbnails: controls.thumbnails ?? true,
         seekButtons: controls.seekButtons,
+        seekPlacement: controls.seekPlacement ?? 'bar',
       },
       logo: logoRender(preset.logo, logoSrc),
       progress,
@@ -570,6 +578,13 @@ const own = (value) => (isGroup(value) ? { ...value } : {});
 const playbackInput = (playback) =>
   playback.autoplay === true && playback.muted === false ? { ...playback, muted: null } : playback;
 
+/** A render `logo` read back as preset input; an image that is not built in keeps its `src`, which fails as an id. */
+function logoInput({ src, ...layout }) {
+  const assetId = Object.keys(LOGO_ASSETS).find((id) => LOGO_ASSETS[id] === src) ?? src;
+
+  return { ...layout, assetId };
+}
+
 /**
  * Validate a public `player-preset` render (API JSON). The render is read back into preset input, checked with
  * `parsePlayerPreset`, and accepted only when rendering that preset gives the same render. `preset` is that input, so
@@ -618,6 +633,7 @@ export function readPresetRender(value) {
     display: own(value.display),
     input: own(value.input),
     controls: own(value.controls),
+    ...(isGroup(value.logo) ? { logo: logoInput(value.logo) } : {}),
     ads,
     // Only an enabled group renders, so a render `lms` reads back as enabled.
     ...(Object.hasOwn(value, 'lms') ? { lms: { ...own(value.lms), enabled: true } } : {}),

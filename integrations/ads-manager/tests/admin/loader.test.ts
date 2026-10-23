@@ -1177,6 +1177,20 @@ describe('the ad skin and the captions input (A2-E 3)', () => {
     expect(skinOf(element).getAttribute('captions')).toBe(off);
   });
 
+  it.each([
+    [10, 'both', 'both'],
+    [10, 'bar', 'bar'],
+    [null, 'center', null],
+  ])('passes seekButtons %s with seekPlacement %s to the skin', async (seekButtons, seekPlacement, placement) => {
+    serve(() => json({ ok: true, data: render({ controls: { seekButtons, seekPlacement } }) }));
+    const { mount } = await loader();
+    const element = manual();
+
+    await mount(element);
+
+    expect(skinOf(element).getAttribute('seek-placement')).toBe(placement);
+  });
+
   it('adds data-captions as a subtitles track in the player language, off by default', async () => {
     serve(() => json({ ok: true, data: render() }));
     const { mount } = await loader();

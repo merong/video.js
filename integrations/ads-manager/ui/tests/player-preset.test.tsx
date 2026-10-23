@@ -7,6 +7,7 @@ import {
   AD_LABEL_DEFAULTS,
   AD_LABEL_KEYS,
   DEFAULT_PLAYER_PRESET,
+  LOGO_DEFAULTS,
   parsePlayerPreset,
   type PlayerPreset,
   type PlayerPresetRender,
@@ -265,13 +266,14 @@ describe('parsePlayerPreset', () => {
     expect(errors({ ...full, display: { poster: value } })).toStrictEqual([{ path: 'display.poster', code: 'type' }]);
   });
 
-  it('rejects autoplay without muted and a logo asset in A2-1', () => {
+  it('rejects autoplay without muted and a logo asset that is not built in', () => {
     expect(errors({ ...full, playback: { autoplay: true, muted: false } })).toStrictEqual([
       { path: 'playback.muted', code: 'conflict' },
     ]);
     expect(errors({ ...full, logo: { assetId: 'a-1' } })).toStrictEqual([
       { path: 'logo.assetId', code: 'unavailable' },
     ]);
+    expect(parsed({ ...full, logo: { assetId: 'sample' } }).logo.assetId).toBe('sample');
   });
 
   it('rejects values the selected player cannot apply', () => {
@@ -422,9 +424,11 @@ describe('presetRender', () => {
 describe('readPresetRender', () => {
   const videojs = JSON.parse(JSON.stringify(presetRender(parsed(full), 3)));
   const nativeRender = JSON.parse(JSON.stringify(presetRender(parsed(native), 3)));
+  const sampleLogo = { src: 'logo-sample.svg', ...LOGO_DEFAULTS };
 
   it.each([
     ['Video.js', videojs],
+    ['Video.js with the sample logo', { ...videojs, logo: sampleLogo }],
     ['native', nativeRender],
   ] as const)('accepts the %s render presetRender makes and returns its preset', (_name, render) => {
     const result = browser.readPresetRender(render);
@@ -471,6 +475,13 @@ describe('readPresetRender', () => {
     ['an unknown language', { ...videojs, language: 'fr' }, 'language', 'enum'],
     ['a numeric boolean', { ...videojs, playback: { ...videojs.playback, loop: 1 } }, 'playback.loop', 'type'],
     ['a missing revision', { ...nativeRender, revision: null }, 'revision', 'type'],
+    ['an unknown logo key', { ...videojs, logo: { url: '/x.png' } }, 'logo.url', 'unknown_key'],
+    [
+      'a logo image that is not built in',
+      { ...videojs, logo: { ...sampleLogo, src: 'https://example.com/x.png' } },
+      'logo.assetId',
+      'unavailable',
+    ],
   ] as const)('rejects %s', (_name, render, path, code) => {
     expect(browser.readPresetRender(render)).toStrictEqual({ ok: false, errors: [{ path, code }] });
   });
@@ -479,7 +490,7 @@ describe('readPresetRender', () => {
     ['skin tag', { ...videojs, skinTag: 'video-neutral-skin' }],
     ['skin script', { ...videojs, styles: { css: 'video.css', js: '../evil.js' } }],
     ['native styles', { ...nativeRender, styles: { css: 'video.css', js: 'video.js' } }],
-    ['logo', { ...videojs, logo: { url: '/x.png' } }],
+    ['logo', { ...videojs, logo: { src: 'logo-sample.svg', position: 'top-right' } }],
     ['extra key', { ...nativeRender, script: 'x' }],
   ] as const)('rejects a render whose %s does not match its preset', (_name, render) => {
     expect(browser.readPresetRender(render)).toStrictEqual({ ok: false, errors: [{ path: '', code: 'format' }] });

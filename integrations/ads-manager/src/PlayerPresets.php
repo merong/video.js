@@ -19,6 +19,10 @@ final class PlayerPresets
     private const ATTRIBUTES = ['skip' => 'skip-label', 'skipCountdown' => 'skip-countdown-label', 'timer' => 'timer-label'];
     private const CONTROLS = ['captions', 'quality', 'audioTrack', 'playbackRate', 'pip', 'fullscreen', 'thumbnails'];
     private const LMS_TABS = ['chapters', 'materials', 'transcript', 'notes'];
+    // Built-in logo images by `logo.assetId`: the render's `logo.src`, a file name relative to `public/player/`.
+    private const LOGO_ASSETS = ['sample' => 'logo-sample.svg'];
+    // What each empty `logo.*` value renders as once an image is chosen (ads-a2e-spec 5.2), in render key order.
+    private const LOGO_DEFAULTS = ['position' => 'top-right', 'margin' => 12, 'width' => 80, 'opacity' => 80, 'href' => null, 'alt' => null, 'hideDuringAds' => true, 'hideWithControls' => false];
     // `DEFAULT_RATES` values a lecture may cap playback at (ads-lms-spec 1.1).
     private const LMS_RATES = [1, 1.2, 1.5, 1.7, 2];
     // Fixed in code, listed first in this order, never modified or deleted (contract 2.4).
@@ -32,15 +36,19 @@ final class PlayerPresets
     // Server-owned list fields a client may echo back; they are never taken from input.
     private const READ_ONLY = ['builtIn', 'createdAt', 'updatedAt'];
 
-    public function __construct(private readonly Database $db) {}
+    /**
+     * `$single`: the site keeps one stored preset, always the site preset (GnuBoard). `$lectures`: false hides the
+     * lecture built-in and stores and renders every preset with lectures off.
+     */
+    public function __construct(private readonly Database $db, private readonly bool $single = false, private readonly bool $lectures = true) {}
 
     public function list(): array
     {
         $document = $this->document();
-        $builtIn = array_map(self::builtIn(...), array_keys(self::BUILT_IN));
+        $builtIn = array_map(self::builtIn(...), $this->builtInIds());
         return [
             'revision' => $document['revision'],
-            'defaultPresetId' => $document['defaultPresetId'],
+            'defaultPresetId' => $this->defaultId($document),
             'presets' => [...$builtIn, ...array_map(static fn (array $preset): array => [...$preset, 'builtIn' => false], $document['presets'])],
             'migratedNeutral' => $document['migratedNeutral'],
             'migratedLabels' => $document['migratedLabels'],
@@ -55,10 +63,16 @@ final class PlayerPresets
         if ($id !== null) {
             self::requireStoredId($id);
         }
+        if (!$this->lectures) {
+            $preset['lms']['enabled'] = null;
+        }
 
         $saved = $this->change($revision, function (array &$document) use ($preset, $id): array {
             $now = Value::now();
             if ($id === null) {
+                if ($this->single && $document['presets'] !== []) {
+                    throw new ApiError(400, 'preset_single', '플레이어 설정은 하나만 저장할 수 있습니다. 다시 불러와 주세요.');
+                }
                 if (count($document['presets']) >= self::LIMIT) {
                     throw new ApiError(400, 'preset_limit', '플레이어 프리셋은 ' . self::LIMIT . '개까지 저장할 수 있습니다.');
                 }
@@ -67,10 +81,13 @@ final class PlayerPresets
                     $id = self::newId();
                 } while (in_array($id, $ids, true));
                 $document['presets'][] = $preset = [...$preset, 'id' => $id, 'createdAt' => $now, 'updatedAt' => $now];
-                return $preset;
+            } else {
+                $index = self::find($document, $id);
+                $document['presets'][$index] = $preset = [...$preset, 'createdAt' => $document['presets'][$index]['createdAt'], 'updatedAt' => $now];
             }
-            $index = self::find($document, $id);
-            $document['presets'][$index] = $preset = [...$preset, 'createdAt' => $document['presets'][$index]['createdAt'], 'updatedAt' => $now];
+            if ($this->single) {
+                $document['defaultPresetId'] = $id;
+            }
             return $preset;
         });
         return [...$this->list(), 'preset' => [...$saved, 'builtIn' => false]];
@@ -78,6 +95,7 @@ final class PlayerPresets
 
     public function delete(array $input): array
     {
+        $this->requireSeveral();
         $revision = Value::integer($input['revision'] ?? null, 'revision');
         $id = self::requireStoredId($input['id'] ?? null);
 
@@ -92,11 +110,12 @@ final class PlayerPresets
 
     public function setDefault(array $input): array
     {
+        $this->requireSeveral();
         $revision = Value::integer($input['revision'] ?? null, 'revision');
         $id = self::id($input['id'] ?? null);
 
         $this->change($revision, function (array &$document) use ($id): void {
-            if (!isset(self::BUILT_IN[$id])) {
+            if (!in_array($id, $this->builtInIds(), true)) {
                 self::find($document, $id);
             }
             $document['defaultPresetId'] = $id;
@@ -108,8 +127,11 @@ final class PlayerPresets
     public function render(array $input): array
     {
         $document = $this->document();
-        $id = array_key_exists('id', $input) ? self::id($input['id']) : $document['defaultPresetId'];
-        $preset = isset(self::BUILT_IN[$id]) ? self::builtIn($id) : $document['presets'][self::find($document, $id)];
+        $id = array_key_exists('id', $input) ? self::id($input['id']) : $this->defaultId($document);
+        $preset = in_array($id, $this->builtInIds(), true) ? self::builtIn($id) : $document['presets'][self::find($document, $id)];
+        if (!$this->lectures) {
+            $preset['lms']['enabled'] = null;
+        }
         return self::renderPreset($preset, $document['revision']);
     }
 
@@ -160,9 +182,8 @@ final class PlayerPresets
                 ...$rendered,
                 'display' => ['poster' => $display['poster'] ?? true, 'title' => $display['title'] ?? true],
                 'input' => ['hotkeys' => $preset['input']['hotkeys'] ?? true, 'gestures' => $preset['input']['gestures'] ?? true],
-                'controls' => [...array_map(static fn (?bool $shown): bool => $shown ?? true, array_intersect_key($controls, array_flip(self::CONTROLS))), 'seekButtons' => $controls['seekButtons']],
-                // Logo uploads arrive in A2-3; until then no preset can carry a logo.
-                'logo' => null,
+                'controls' => [...array_map(static fn (?bool $shown): bool => $shown ?? true, array_intersect_key($controls, array_flip(self::CONTROLS))), 'seekButtons' => $controls['seekButtons'], 'seekPlacement' => $controls['seekPlacement'] ?? 'bar'],
+                'logo' => self::logoRender($preset['logo']),
                 'progress' => $progress,
                 'labels' => (object) $labels,
                 'skinTag' => 'video-skin',
@@ -237,7 +258,7 @@ final class PlayerPresets
         $display = ['poster' => self::bool($displayInput['poster'] ?? null, 'display.poster'), 'title' => self::bool($displayInput['title'] ?? null, 'display.title')];
         $inputInput = self::group($input, 'input', '', ['hotkeys', 'gestures']);
         $playerInput = ['hotkeys' => self::bool($inputInput['hotkeys'] ?? null, 'input.hotkeys'), 'gestures' => self::bool($inputInput['gestures'] ?? null, 'input.gestures')];
-        $controlsInput = self::group($input, 'controls', '', [...self::CONTROLS, 'seekButtons']);
+        $controlsInput = self::group($input, 'controls', '', [...self::CONTROLS, 'seekButtons', 'seekPlacement']);
         $controls = [];
         foreach (self::CONTROLS as $field) {
             $controls[$field] = self::bool($controlsInput[$field] ?? null, 'controls.' . $field);
@@ -248,13 +269,17 @@ final class PlayerPresets
             Value::fail('controls.seekButtons');
         }
         $controls['seekButtons'] = $seek;
+        // Where the seek pair shows: the control bar, the middle of the video, or both. Kept without seek buttons.
+        $controls['seekPlacement'] = self::choice($controlsInput['seekPlacement'] ?? null, 'controls.seekPlacement', ['bar', 'center', 'both']);
 
         $logoInput = self::group($input, 'logo', '', ['assetId', 'position', 'margin', 'width', 'opacity', 'href', 'alt', 'hideDuringAds', 'hideWithControls']);
-        if (self::empty($logoInput['assetId'] ?? null) !== null) {
-            Value::fail('logo.assetId', '로고 업로드는 아직 준비 중이에요.');
+        // Logo uploads are not here yet, so only a built-in image id is accepted.
+        $assetId = self::empty($logoInput['assetId'] ?? null);
+        if ($assetId !== null && !(is_string($assetId) && isset(self::LOGO_ASSETS[$assetId]))) {
+            Value::fail('logo.assetId', '로고는 아직 샘플 로고만 고를 수 있어요.');
         }
         $logo = [
-            'assetId' => null,
+            'assetId' => $assetId,
             'position' => self::choice($logoInput['position'] ?? null, 'logo.position', ['top-left', 'top-right', 'bottom-left', 'bottom-right']),
             'margin' => self::integer($logoInput['margin'] ?? null, 'logo.margin', 0, 48),
             'width' => self::integer($logoInput['width'] ?? null, 'logo.width', 24, 240),
@@ -395,6 +420,25 @@ final class PlayerPresets
         });
     }
 
+    private function builtInIds(): array
+    {
+        return array_values(array_filter(array_keys(self::BUILT_IN), fn (string $id): bool => $this->lectures || $id !== 'lms'));
+    }
+
+    /** A site preset that is now hidden (the lecture built-in without lectures) reads as the plain default. */
+    private function defaultId(array $document): string
+    {
+        $id = $document['defaultPresetId'];
+        return isset(self::BUILT_IN[$id]) && !in_array($id, $this->builtInIds(), true) ? 'default' : $id;
+    }
+
+    private function requireSeveral(): void
+    {
+        if ($this->single) {
+            throw new ApiError(400, 'preset_fixed', '이 사이트는 플레이어 설정 하나를 고쳐서 사용합니다.');
+        }
+    }
+
     private static function builtIn(string $id): array
     {
         $values = self::normalize([...self::BUILT_IN[$id], 'playerType' => 'videojs']);
@@ -489,6 +533,20 @@ final class PlayerPresets
         }
         self::known($value, $keys, $path . $key . '.');
         return $value;
+    }
+
+    /** The render `logo`: `null` without an image, otherwise every layout value filled with its default. */
+    private static function logoRender(array $logo): ?array
+    {
+        $src = self::LOGO_ASSETS[$logo['assetId'] ?? ''] ?? null;
+        if ($src === null) {
+            return null;
+        }
+        $rendered = ['src' => $src];
+        foreach (self::LOGO_DEFAULTS as $field => $fallback) {
+            $rendered[$field] = $logo[$field] ?? $fallback;
+        }
+        return $rendered;
     }
 
     private static function empty(mixed $value): mixed

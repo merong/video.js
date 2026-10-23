@@ -14,10 +14,9 @@
   display: none !important;
 }
 
+/* `sa-shell` lays out the side menu and the page column. */
 .aa-workspace {
-  display: flex;
   flex: 1;
-  flex-direction: column;
 }
 
 .aa-stack {
@@ -190,6 +189,65 @@
 
 .aa-editor:not(.is-wide) .aa-editor-preview {
   position: static;
+}
+
+/* Without the section list (the GnuBoard settings page) the preview takes the wider column, and the narrower widths
+   put it above the sections. */
+.aa-editor.is-plain.is-wide {
+  grid-template-areas: "main preview";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+}
+
+.aa-editor.is-plain:not(.is-wide) {
+  grid-template-areas: "preview" "main";
+}
+
+.aa-theme-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: var(--gap-sm);
+}
+
+.aa-theme-card {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--panel);
+  cursor: pointer;
+}
+
+.aa-theme-card:has(input:checked) {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.aa-theme-card:has(input:focus-visible) {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.aa-theme-card input {
+  flex: none;
+  margin: 0;
+  accent-color: var(--ink);
+}
+
+.aa-theme-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.aa-theme-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink);
+  font: 600 13px/18px var(--sa-sans);
 }
 
 /* Built-in preset page: the notice beside its preview on wide screens, stacked like the editor below that. The

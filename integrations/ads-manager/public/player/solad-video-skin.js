@@ -2,7 +2,11 @@
  * Solad ad skin `<solad-video-skin>` (`.agents/plans/ads-a2e-spec.md` section 3): the default Video.js video skin
  * without the cast and AirPlay buttons, plus two host attributes read once on connect.
  *
- * - `seek-buttons="N"` (5, 10, 15 or 30): a back/forward pair after the play button, and double-tap seeks of N seconds.
+ * - `seek-buttons="N"` (5, 10, 15 or 30): a back/forward pair of N seconds, and double-tap seeks of N seconds.
+ *   `seek-placement` puts the pair after the control bar's play button (`bar`, the default), around a large play button
+ *   in the middle of the video (`center`), or in both places (`both`). The middle group shows and hides with the
+ *   controls, gives way to the buffering spinner and the ad screen, and replaces the play/pause flash. Below 28rem it
+ *   tightens, and a logo in any corner narrows to stay clear of it.
  * - `captions="off"`: no captions button, settings item or `c` hotkey. Otherwise a video without captions shows the
  *   button disabled with the name "No captions" (hidden below 32rem, like the default skin) and keeps the settings item
  *   disabled with the value "None" (ads-a2e-spec 6.2). No caption text shows over the video.
@@ -20,6 +24,7 @@ import { loadLocale, registerI18n } from '../assets/videojs/i18n.js';
 
 const TAG = 'solad-video-skin';
 const SEEK_STEPS = ['5', '10', '15', '30'];
+const SEEK_PLACEMENTS = ['bar', 'center', 'both'];
 const UNAVAILABLE_KEY = 'solad.captionsUnavailable';
 const unavailableText = { ko: '자막 없음', en: 'No captions', ja: '字幕なし', 'zh-CN': '无字幕' };
 // The settings item's value while no captions exist.
@@ -91,6 +96,104 @@ const STYLES = `
     }
   }
 
+  /* The middle group (seek-placement center or both): above the video, the logo and the title (20), below the control
+     bar (30), dialogs and the ad screen. 44px seek buttons around a larger play button, like other video players. */
+  :where(.media-skin) > .solad-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 25;
+    display: flex;
+    align-items: center;
+    gap: calc(var(--media-spacing) * 6);
+    translate: -50% -50%;
+    color: #fff;
+    transition-property: opacity, scale, visibility;
+    transition-duration: calc(var(--media-duration-controls) / 2);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  :where(.media-skin):not([data-controls-visible]) > .solad-center,
+  :where(.media-skin):has(> [data-ads-overlay]) > .solad-center {
+    opacity: 0;
+    scale: 0.9;
+    visibility: hidden;
+    pointer-events: none;
+    transition-duration: var(--media-duration-controls);
+  }
+
+  :where(.media-skin) > .solad-center .solad-center-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    background-color: rgb(0 0 0 / 0.45);
+    color: inherit;
+  }
+
+  :where(.media-skin) > .solad-center .solad-center-play {
+    width: 64px;
+    height: 64px;
+  }
+
+  /* Narrow players keep the 44px targets but pull the group in, clear of a top-right logo under the top controls. */
+  @container media-root (width < 28rem) {
+    :where(.media-skin) > .solad-center {
+      gap: calc(var(--media-spacing) * 3);
+    }
+
+    :where(.media-skin) > .solad-center .solad-center-play {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  @media (hover: hover) {
+    :where(.media-skin) > .solad-center .solad-center-button:not([aria-disabled="true"]):hover {
+      background-color: rgb(0 0 0 / 0.75);
+      color: inherit;
+    }
+  }
+
+  :where(.media-skin) > .solad-center .solad-center-play .media-button-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  :where(.media-skin) > .solad-center .solad-center-seek .media-button-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* The number sits inside the circular arrow. */
+  :where(.media-skin) > .solad-center .solad-center-seek-label {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding-top: 1px;
+    font-size: 9px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  /* The spinner takes the play button's place while the video waits. */
+  :where(.media-skin):has(> .media-buffering-indicator[data-visible]) > .solad-center .solad-center-play {
+    visibility: hidden;
+  }
+
+  /* The play button already shows the state, so the play/pause flash would draw a second icon on top of it. */
+  :where(.media-skin):has(> .solad-center) .media-playback-status-indicator {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(.media-skin) > .solad-center {
+      transition-property: opacity, visibility;
+      scale: none;
+    }
+  }
+
   /* Logo (ads-a2e-spec 5.4): above the video (z 0) and the controls backdrop (10), level with the title (20), below
      the controls (30), dialogs (40, 50) and the ad screen (100). It draws no wider than a quarter of the player; the
      saved width stays as it is. cqi resolves against the container (media-root) for the logo and the title alike. */
@@ -144,6 +247,14 @@ const STYLES = `
 
     :where(.media-skin)[data-controls-visible] > .solad-logo[data-position="top-right"] {
       translate: 0 var(--solad-logo-bar);
+    }
+  }
+
+  /* In a narrow player the middle group's seek buttons reach 84px either side of the middle, level with a logo in any
+     corner, so the logo narrows to keep an 8px gap. */
+  @container media-root (width < 28rem) {
+    :where(.media-skin):has(> .solad-center) :is(.solad-logo, .media-title) {
+      --solad-logo-size: min(var(--solad-logo-width), 25cqi, 50cqi - 92px - var(--solad-logo-margin));
     }
   }
 
@@ -543,11 +654,43 @@ function seekButton(direction, seconds) {
   return template.content;
 }
 
-function addSeekButtons(root, seconds) {
-  const play = root.querySelector('.video-controls-primary > media-play-button');
-  if (!play) return;
+/** A middle seek button: the bar's name and icon, without a tooltip (like the upstream compat skin's middle group). */
+function centerSeekButton(direction, seconds) {
+  const template = document.createElement('template');
+  const value = direction === 'backward' ? `-${seconds}` : seconds;
 
-  (tooltipFor(play) ?? play).after(seekButton('backward', seconds), seekButton('forward', seconds));
+  template.innerHTML = `<media-seek-button seconds="${value}" class="media-button media-seek-button solad-center-button solad-center-seek" id="solad-center-seek-${direction}">
+<span class="media-seek-button-content">${SEEK_ICON.replace('media-seek-button-icon', `media-seek-button-icon media-seek-button-${direction}-icon`)}<span class="solad-center-seek-label" aria-hidden="true">${seconds}</span></span>
+</media-seek-button>`;
+
+  return template.content;
+}
+
+/**
+ * The middle group after the controls, so the bar's play button stays first in the Tab order and for
+ * `querySelector('media-play-button')`. Its play button copies the untouched template's icons.
+ */
+function addCenterGroup(root, seconds, pristinePlay) {
+  const container = root.querySelector('media-container');
+  if (!container || !pristinePlay) return;
+
+  const group = root.ownerDocument.createElement('div');
+  const play = pristinePlay.cloneNode(true);
+
+  group.className = 'solad-center';
+  play.id = 'solad-center-play';
+  play.classList.add('solad-center-button', 'solad-center-play');
+  group.append(centerSeekButton('backward', seconds), play, centerSeekButton('forward', seconds));
+  container.append(group);
+}
+
+function addSeekButtons(root, seconds, placement, pristinePlay) {
+  const play = root.querySelector('.video-controls-primary > media-play-button');
+
+  if (play && placement !== 'center')
+    (tooltipFor(play) ?? play).after(seekButton('backward', seconds), seekButton('forward', seconds));
+
+  if (placement !== 'bar') addCenterGroup(root, seconds, pristinePlay);
 
   // Double taps match the buttons; arrow keys keep their upstream step.
   for (const gesture of root.querySelectorAll('media-gesture[type="doubletap"][action="seekStep"]')) {
@@ -794,10 +937,17 @@ export class SoladVideoSkinElement extends VideoSkin {
     if (!this.#configured) {
       const root = this.shadowRoot;
       const seconds = this.getAttribute('seek-buttons');
+      const placement = this.getAttribute('seek-placement');
 
       this.#configured = true;
 
-      if (SEEK_STEPS.includes(seconds)) addSeekButtons(root, seconds);
+      if (SEEK_STEPS.includes(seconds))
+        addSeekButtons(
+          root,
+          seconds,
+          SEEK_PLACEMENTS.includes(placement) ? placement : 'bar',
+          this.constructor.template.content.querySelector('.video-controls-primary > media-play-button')
+        );
 
       if (this.getAttribute('captions') === 'off') removeCaptions(root);
       else labelUnavailable(root);

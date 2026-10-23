@@ -8,7 +8,9 @@ import {
   Check,
   ColorField,
   DisabledReason,
+  Disclosure,
   Field,
+  Fieldset,
   Input,
   Note,
   PresetMark,
@@ -36,19 +38,24 @@ import {
   PRESET_FIELD_LABELS,
   type PresetForm,
   type PresetPath,
+  THEME_CHOICES,
+  THEME_FIELDS,
+  themeChoiceOf,
 } from './preset-form';
+import { ThemeCards } from './ThemeCards';
 
 /** One editor is mounted at a time, so field ids are fixed and `focusField` can find them. */
 export function presetFieldId(path: PresetPath): string {
   return `aa-preset-${path.replaceAll('.', '-')}`;
 }
 
-export type PresetSection = 'basic' | 'theme' | 'controls' | 'playback' | 'lms' | 'language' | 'ads';
+export type PresetSection = 'basic' | 'theme' | 'logo' | 'controls' | 'playback' | 'lms' | 'language' | 'ads';
 
-/** Section order of the editor (design SectionNav); the logo section comes in A2-3, between theme and controls. */
+/** Section order of the editor (design SectionNav). */
 export const PRESET_SECTIONS: readonly { id: PresetSection; label: string }[] = [
   { id: 'basic', label: '기본' },
   { id: 'theme', label: '테마' },
+  { id: 'logo', label: '로고' },
   { id: 'controls', label: '컨트롤' },
   { id: 'playback', label: '재생 동작' },
   { id: 'lms', label: '강의(LMS)' },
@@ -68,6 +75,8 @@ export function presetSectionOf(path: PresetPath): PresetSection {
 
   if (path.startsWith('theme.')) return 'theme';
 
+  if (path.startsWith('logo.')) return 'logo';
+
   if (path.startsWith('controls.')) return 'controls';
 
   if (path.startsWith('lms.')) return 'lms';
@@ -80,12 +89,16 @@ export function saveNote({
   errorCount,
   site,
   width,
+  fixed = false,
 }: {
   errorCount: number;
   site: boolean;
   width: LayoutWidth;
+  fixed?: boolean;
 }): string {
   if (errorCount) return `고칠 칸 ${errorCount}개 · 표시한 칸을 고친 뒤 저장해 주세요.`;
+
+  if (fixed) return '저장하면 사이트의 모든 영상 플레이어가 바뀌어요. 페이지를 새로고침하면 보여요.';
 
   if (!site) return '저장하면 이 프리셋을 쓰는 페이지에서, 새로고침하면 바뀐 플레이어가 보여요.';
 
@@ -99,6 +112,14 @@ const NATIVE_NOTE =
 
 const MUTED_LOCKED =
   '자동 재생을 켜서 바꿀 수 없어요. 브라우저는 소리 나는 자동 재생을 막아서, 광고도 음소거로 시작해요. 바꾸려면 자동 재생을 꺼 주세요.';
+
+/** The corner radios in reading order, which `sa-corner-frame` places by position; `''` is the default corner. */
+const LOGO_CORNERS = [
+  { value: 'top-left', label: '왼쪽 위' },
+  { value: '', label: '오른쪽 위' },
+  { value: 'bottom-left', label: '왼쪽 아래' },
+  { value: 'bottom-right', label: '오른쪽 아래' },
+] as const satisfies readonly { value: PresetForm['logo']['position']; label: string }[];
 
 /** "건너뛰는 폭" choices; the first turn on picks 10. */
 const SEEK_OPTIONS = [
@@ -148,6 +169,12 @@ export interface PresetEditorProps {
   previewKey: string;
   /** The sample lecture page (`examples/lecture.html`), opened in a new tab from the lecture section. */
   lectureHref?: string | undefined;
+  /** Whether the host offers lectures; without them the lecture section is left out. */
+  lectures?: boolean | undefined;
+  /** The site's one fixed player setting (GnuBoard): no name field and no preset wording. */
+  fixed?: boolean | undefined;
+  /** The "구획으로 이동" list. Without it, wide screens give its width to the preview, which is wider than the form. */
+  sectionNav?: boolean | undefined;
 }
 
 /**
@@ -171,6 +198,9 @@ export function PresetEditor({
   preview,
   previewKey,
   lectureHref,
+  lectures = true,
+  fixed = false,
+  sectionNav = true,
 }: PresetEditorProps) {
   const native = form.playerType === 'native';
   const width = useLayoutWidth();
@@ -179,6 +209,9 @@ export function PresetEditor({
   const picked = useRef(false);
   const autoplay = flagOn(form, 'playback.autoplay');
   const lmsOn = flagOn(form, 'lms.enabled');
+  const logoOn = form.logo.assetId !== '';
+  const theme = themeChoiceOf(form);
+  const cornerName = `${presetFieldId('logo.position')}-radio`;
   // "테두리 없음" opens on for a see-through border; typing one later does not lock the field mid-entry.
   const [borderOff, setBorderOff] = useState(() => drawsNoBorder(form.theme.borderColor));
   const [borderOffFor, setBorderOffFor] = useState(previewKey);
@@ -186,6 +219,11 @@ export function PresetEditor({
   // Turning "이전·이후 버튼" on again brings back the step it had on this screen.
   const [lastSeek, setLastSeek] = useState<Exclude<FormSeekButtons, ''>>(form.controls.seekButtons || SEEK_FIRST);
   const seek = form.controls.seekButtons;
+  // The seek pair shows in the bar (`''`), the middle of the video, or both; one place always stays on.
+  const seekInBar = form.controls.seekPlacement !== 'center';
+  const seekInCenter = form.controls.seekPlacement !== '';
+  const placeSeek = (bar: boolean, center: boolean) =>
+    change('controls.seekPlacement', bar && center ? 'both' : center ? 'center' : '');
 
   if (borderOffFor !== previewKey) {
     setBorderOffFor(previewKey);
@@ -203,18 +241,19 @@ export function PresetEditor({
 
   const errorCount = [...errorCounts.values()].reduce((sum, count) => sum + count, 0);
 
-  const navItems: SectionNavItem[] = PRESET_SECTIONS.map(({ id, label }) => ({
+  const sections = lectures ? PRESET_SECTIONS : PRESET_SECTIONS.filter(({ id }) => id !== 'lms');
+  const navItems: SectionNavItem[] = sections.map(({ id, label }) => ({
     id: presetSectionId(id),
     label,
     errors: errorCounts.get(id),
-    off: native && (id === 'theme' || id === 'controls' || id === 'lms'),
+    off: native && (id === 'theme' || id === 'logo' || id === 'controls' || id === 'lms'),
   }));
 
   // The section in view follows scrolling where the browser can tell; links and the select set it directly. A picked
   // section stays current through the scroll its focus causes (the heading can land below the observed band, which
   // still holds the section before it) until the next wheel, touch, key or pointer input.
   useEffect(() => {
-    if (!('IntersectionObserver' in window)) return;
+    if (!sectionNav || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -249,7 +288,7 @@ export function PresetEditor({
 
       for (const type of inputs) window.removeEventListener(type, release, { capture: true });
     };
-  }, []);
+  }, [sectionNav]);
 
   const navigate = (sectionId: string) => {
     const section = PRESET_SECTIONS.find(({ id }) => presetSectionId(id) === sectionId);
@@ -344,36 +383,47 @@ export function PresetEditor({
     );
   };
 
+  const themeErrors = errorCounts.get('theme') ?? 0;
+
   return (
-    <form className={`aa-editor is-${width}`} onSubmit={submit} aria-label={title} noValidate>
-      <div className="aa-editor-nav">
-        <SectionNav
-          items={navItems}
-          current={presetSectionId(current)}
-          variant={width === 'wide' ? 'column' : width === 'medium' ? 'row' : 'select'}
-          onNavigate={navigate}
-        />
-      </div>
+    <form
+      className={`aa-editor is-${width}${sectionNav ? '' : ' is-plain'}`}
+      onSubmit={submit}
+      aria-label={title}
+      noValidate
+    >
+      {sectionNav ? (
+        <div className="aa-editor-nav">
+          <SectionNav
+            items={navItems}
+            current={presetSectionId(current)}
+            variant={width === 'wide' ? 'column' : width === 'medium' ? 'row' : 'select'}
+            onNavigate={navigate}
+          />
+        </div>
+      ) : null}
 
       <div className="aa-stack aa-editor-main">
         {section(
           'basic',
           '기본',
           <span className="sa-row">
-            {site ? <PresetMark kind="site" /> : null}
+            {site && !fixed ? <PresetMark kind="site" /> : null}
             {dirty ? <StatusBadge status="pending" label="저장하지 않은 변경" /> : null}
           </span>,
           <div className="aa-stack">
             <div className="aa-form-grid">
-              <Field
-                label={label('name')}
-                id={presetFieldId('name')}
-                error={errors.name}
-                labelAside={term('player-preset')}
-                help="목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요."
-              >
-                <Input {...field('name')} />
-              </Field>
+              {fixed ? null : (
+                <Field
+                  label={label('name')}
+                  id={presetFieldId('name')}
+                  error={errors.name}
+                  labelAside={term('player-preset')}
+                  help="목록과 생성기에서 고를 때 보이는 이름이에요. 1–40자예요."
+                >
+                  <Input {...field('name')} />
+                </Field>
+              )}
               <Field
                 label={label('playerType')}
                 id={presetFieldId('playerType')}
@@ -408,92 +458,247 @@ export function PresetEditor({
               </>
             }
           >
-            <div className="aa-form-grid">
-              {color('theme.accentColor', {
-                help: '진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 강조색을 비우면 광고 화면도 이 색을 따라요.',
-                emptyLabel: '스킨 기본 (흰색)',
-                termId: 'player-accent-color',
-              })}
-              {color('theme.accentTextColor', {
-                help: '비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.',
-                emptyLabel: '자동 대비',
-                warning: contrastWarning(form),
-                termId: 'player-accent-color',
-              })}
-              <div className="sa-field">
-                {color('theme.borderColor', {
-                  help: '플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요.',
-                  emptyLabel: '스킨 기본 (반투명 검정)',
-                  alpha: true,
-                  none: noBorder,
-                })}
-                <Check
-                  label="테두리 없음"
-                  id={`${presetFieldId('theme.borderColor')}-none`}
-                  checked={noBorder}
-                  aria-describedby={`${presetFieldId('theme.borderColor')}-none-help`}
-                  onChange={(event) => {
-                    const off = event.currentTarget.checked;
+            <div className="aa-stack">
+              <ThemeCards
+                choices={THEME_CHOICES}
+                current={theme}
+                onPick={(choice) => {
+                  setBorderOff(drawsNoBorder(choice.borderColor));
 
-                    setBorderOff(off);
-                    change('theme.borderColor', off ? NO_BORDER_COLOR : '');
-                  }}
-                />
-                <span className="sa-help" id={`${presetFieldId('theme.borderColor')}-none-help`}>
-                  켜면 플레이어 둘레에 선을 그리지 않아요.
-                </span>
-              </div>
-              <Field
-                label={label('theme.borderRadius')}
-                id={presetFieldId('theme.borderRadius')}
-                error={errors['theme.borderRadius']}
-                help="0–32 정수예요. 광고 화면 모서리도 따라가요."
+                  for (const key of THEME_FIELDS) change(`theme.${key}`, choice[key]);
+                }}
+              />
+              <Disclosure
+                className="aa-theme-detail"
+                summary={
+                  themeErrors ? `세부 조정 · 고칠 칸 ${themeErrors}개` : '세부 조정 · 색, 테두리, 글꼴, 화면 채우기'
+                }
               >
-                <Input
-                  {...field('theme.borderRadius')}
-                  numeric
-                  type="number"
-                  min={0}
-                  max={32}
-                  step={1}
-                  placeholder="스킨 기본 (28px)"
-                />
-              </Field>
-              <Field
-                label={label('theme.fontFamily')}
-                id={presetFieldId('theme.fontFamily')}
-                error={errors['theme.fontFamily']}
-                help="플레이어 글꼴을 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요."
-              >
-                <Select {...field('theme.fontFamily')}>
-                  <option value="">스킨 기본 (Inter 우선)</option>
-                  <option value="system">시스템 글꼴</option>
-                </Select>
-              </Field>
-              <Field
-                label={label('theme.objectFit')}
-                id={presetFieldId('theme.objectFit')}
-                error={errors['theme.objectFit']}
-                labelAside={term('player-object-fit')}
-                help="전체화면에서는 항상 맞춤이에요. 채우기 위치는 프리셋에서 정하지 않아요."
-              >
-                <Select {...field('theme.objectFit')}>
-                  <option value="">스킨 기본 (맞춤)</option>
-                  <option value="contain">맞춤 · 전체가 보여요</option>
-                  <option value="cover">채움 · 빈 곳 없이 잘려요</option>
-                </Select>
-              </Field>
-              <Field
-                label={label('theme.scaleUnit')}
-                id={presetFieldId('theme.scaleUnit')}
-                error={errors['theme.scaleUnit']}
-                help="컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 광고 화면에는 영향이 없어요."
-              >
-                <Select {...field('theme.scaleUnit')}>
-                  <option value="">스킨 기본 (16px)</option>
-                  <option value="root">문서 글자 크기 (1rem)</option>
-                </Select>
-              </Field>
+                <div className="aa-form-grid">
+                  {color('theme.accentColor', {
+                    help: '진행 막대 채움, 강조 버튼, 메뉴 선택 색이에요. 광고 강조색을 비우면 광고 화면도 이 색을 따라요.',
+                    emptyLabel: '스킨 기본 (흰색)',
+                    termId: 'player-accent-color',
+                  })}
+                  {color('theme.accentTextColor', {
+                    help: '비우면 브라우저가 대비되는 글자색을 골라요. Chrome 147, Firefox 146, Safari 26 미만은 검정으로 고정돼요.',
+                    emptyLabel: '자동 대비',
+                    warning: contrastWarning(form),
+                    termId: 'player-accent-color',
+                  })}
+                  <div className="sa-field">
+                    {color('theme.borderColor', {
+                      help: '플레이어 둘레의 가는 선 색이에요. 8자리로 투명도를 줄 수 있고 #00000000이면 선이 없어요.',
+                      emptyLabel: '스킨 기본 (반투명 검정)',
+                      alpha: true,
+                      none: noBorder,
+                    })}
+                    <Check
+                      label="테두리 없음"
+                      id={`${presetFieldId('theme.borderColor')}-none`}
+                      checked={noBorder}
+                      aria-describedby={`${presetFieldId('theme.borderColor')}-none-help`}
+                      onChange={(event) => {
+                        const off = event.currentTarget.checked;
+
+                        setBorderOff(off);
+                        change('theme.borderColor', off ? NO_BORDER_COLOR : '');
+                      }}
+                    />
+                    <span className="sa-help" id={`${presetFieldId('theme.borderColor')}-none-help`}>
+                      켜면 플레이어 둘레에 선을 그리지 않아요.
+                    </span>
+                  </div>
+                  <Field
+                    label={label('theme.borderRadius')}
+                    id={presetFieldId('theme.borderRadius')}
+                    error={errors['theme.borderRadius']}
+                    help="0–32 정수예요. 광고 화면 모서리도 따라가요."
+                  >
+                    <Input
+                      {...field('theme.borderRadius')}
+                      numeric
+                      type="number"
+                      min={0}
+                      max={32}
+                      step={1}
+                      placeholder="스킨 기본 (28px)"
+                    />
+                  </Field>
+                  <Field
+                    label={label('theme.fontFamily')}
+                    id={presetFieldId('theme.fontFamily')}
+                    error={errors['theme.fontFamily']}
+                    help="플레이어 글꼴을 바꾸면 광고 화면 글꼴도 따라가요. Inter는 페이지가 불러와야 보여요."
+                  >
+                    <Select {...field('theme.fontFamily')}>
+                      <option value="">스킨 기본 (Inter 우선)</option>
+                      <option value="system">시스템 글꼴</option>
+                    </Select>
+                  </Field>
+                  <Field
+                    label={label('theme.objectFit')}
+                    id={presetFieldId('theme.objectFit')}
+                    error={errors['theme.objectFit']}
+                    labelAside={term('player-object-fit')}
+                    help="전체화면에서는 항상 맞춤이에요. 채우기 위치는 프리셋에서 정하지 않아요."
+                  >
+                    <Select {...field('theme.objectFit')}>
+                      <option value="">스킨 기본 (맞춤)</option>
+                      <option value="contain">맞춤 · 전체가 보여요</option>
+                      <option value="cover">채움 · 빈 곳 없이 잘려요</option>
+                    </Select>
+                  </Field>
+                  <Field
+                    label={label('theme.scaleUnit')}
+                    id={presetFieldId('theme.scaleUnit')}
+                    error={errors['theme.scaleUnit']}
+                    help="컨트롤 간격, 아이콘, 글자 크기의 기준이에요. 광고 화면에는 영향이 없어요."
+                  >
+                    <Select {...field('theme.scaleUnit')}>
+                      <option value="">스킨 기본 (16px)</option>
+                      <option value="root">문서 글자 크기 (1rem)</option>
+                    </Select>
+                  </Field>
+                </div>
+              </Disclosure>
+            </div>
+          </DisabledReason>
+        )}
+
+        {section(
+          'logo',
+          '로고',
+          null,
+          <DisabledReason
+            active={native}
+            reason={
+              <>
+                <b>기본 video에서는 로고를 쓸 수 없어요.</b> 기본 구획의 플레이어 종류를 Video.js 플레이어로 바꾸면 쓸
+                수 있어요.
+              </>
+            }
+          >
+            <div className="aa-stack">
+              <Segmented
+                label={label('logo.assetId')}
+                id={presetFieldId('logo.assetId')}
+                value={form.logo.assetId}
+                options={[
+                  { value: '', label: '사용 안 함' },
+                  { value: 'sample', label: '샘플 로고' },
+                ]}
+                onChange={(value) => change('logo.assetId', value)}
+                help="샘플 로고는 가상의 사이트 ‘MY SITE’ 그림이에요. 내 로고 올리기는 아직 준비 중이에요."
+                error={errors['logo.assetId']}
+              />
+              <DisabledReason active={!native && !logoOn} reason={<b>로고 이미지를 고르면 고칠 수 있어요.</b>}>
+                <div className="aa-stack">
+                  <fieldset
+                    className={errors['logo.position'] ? 'sa-corner sa-field is-error' : 'sa-corner'}
+                    aria-describedby={`${cornerName}-help${errors['logo.position'] ? ` ${cornerName}-error` : ''}`}
+                  >
+                    <legend className="sa-label">{label('logo.position')}</legend>
+                    <div className="sa-corner-frame">
+                      {LOGO_CORNERS.map((corner) => (
+                        <label key={corner.value}>
+                          <input
+                            type="radio"
+                            name={cornerName}
+                            value={corner.value}
+                            id={corner.value === form.logo.position ? presetFieldId('logo.position') : undefined}
+                            checked={corner.value === form.logo.position}
+                            onChange={() => change('logo.position', corner.value)}
+                          />
+                          {corner.label}
+                        </label>
+                      ))}
+                    </div>
+                    <span className="sa-help" id={`${cornerName}-help`}>
+                      방향키로 모서리를 옮겨 고를 수 있어요. 아래 모서리의 로고는 컨트롤 막대가 보이면 그 위로 올라가요.
+                    </span>
+                    {errors['logo.position'] ? (
+                      <span className="sa-help" id={`${cornerName}-error`}>
+                        {errors['logo.position']}
+                      </span>
+                    ) : null}
+                  </fieldset>
+                  <div className="aa-form-grid">
+                    <Field
+                      label={label('logo.width')}
+                      id={presetFieldId('logo.width')}
+                      error={errors['logo.width']}
+                      help="24–240 정수예요. 높이는 그림 비율을 따라요."
+                    >
+                      <Input
+                        {...field('logo.width')}
+                        numeric
+                        type="number"
+                        min={24}
+                        max={240}
+                        step={1}
+                        placeholder="80"
+                      />
+                    </Field>
+                    <Field
+                      label={label('logo.margin')}
+                      id={presetFieldId('logo.margin')}
+                      error={errors['logo.margin']}
+                      help="0–48 정수예요. 모서리에서 떨어진 거리예요."
+                    >
+                      <Input
+                        {...field('logo.margin')}
+                        numeric
+                        type="number"
+                        min={0}
+                        max={48}
+                        step={1}
+                        placeholder="12"
+                      />
+                    </Field>
+                    <Field
+                      label={label('logo.opacity')}
+                      id={presetFieldId('logo.opacity')}
+                      error={errors['logo.opacity']}
+                      help="10–100 정수예요."
+                    >
+                      <Input
+                        {...field('logo.opacity')}
+                        numeric
+                        type="number"
+                        min={10}
+                        max={100}
+                        step={1}
+                        placeholder="80"
+                      />
+                    </Field>
+                  </div>
+                  <div className="aa-form-grid">
+                    <Field
+                      label={label('logo.href')}
+                      id={presetFieldId('logo.href')}
+                      error={errors['logo.href']}
+                      help="누르면 새 탭에서 열려요. 비우면 누를 수 없는 그림이에요."
+                    >
+                      <Input {...field('logo.href')} type="url" inputMode="url" placeholder="https://example.com" />
+                    </Field>
+                    <Field
+                      label={label('logo.alt')}
+                      id={presetFieldId('logo.alt')}
+                      error={errors['logo.alt']}
+                      help="링크가 있으면 꼭 넣어요. 링크 이름으로 읽히고 뒤에 ‘(새 탭에서 열림)’이 붙어요."
+                    >
+                      <Input {...field('logo.alt')} maxLength={80} />
+                    </Field>
+                  </div>
+                  <SwitchList
+                    items={[
+                      toggle('logo.hideDuringAds', '광고가 시작되면 숨고 본편으로 돌아오면 다시 보여요.'),
+                      toggle('logo.hideWithControls', '컨트롤 막대가 숨을 때 로고도 함께 숨어요.'),
+                    ]}
+                  />
+                </div>
+              </DisabledReason>
             </div>
           </DisabledReason>
         )}
@@ -516,21 +721,45 @@ export function PresetEditor({
                 {
                   id: presetFieldId('controls.seekButtons'),
                   name: label('controls.seekButtons'),
-                  description: '컨트롤 막대에 뒤로·앞으로 건너뛰기 버튼을 보여요.',
+                  description: '뒤로·앞으로 건너뛰기 버튼을 컨트롤 막대나 화면 가운데, 또는 두 곳 모두에 보여요.',
                   checked: seek !== '',
                   onCheckedChange: (checked) => change('controls.seekButtons', checked ? lastSeek : ''),
                   error: errors['controls.seekButtons'],
                   sub: (
-                    <Segmented
-                      label="건너뛰는 폭"
-                      value={seek || lastSeek}
-                      options={SEEK_OPTIONS}
-                      numeric
-                      onChange={(value) => {
-                        setLastSeek(value);
-                        change('controls.seekButtons', value);
-                      }}
-                    />
+                    <div className="aa-stack">
+                      <Segmented
+                        label="건너뛰는 폭"
+                        value={seek || lastSeek}
+                        options={SEEK_OPTIONS}
+                        numeric
+                        onChange={(value) => {
+                          setLastSeek(value);
+                          change('controls.seekButtons', value);
+                        }}
+                      />
+                      <Fieldset
+                        legend={label('controls.seekPlacement')}
+                        help={
+                          errors['controls.seekPlacement'] ??
+                          '화면 가운데를 고르면 재생 버튼 양옆에 놓이고, 컨트롤 막대와 함께 나타나고 숨어요. 한 곳은 꼭 골라야 해요.'
+                        }
+                      >
+                        <Check
+                          label="컨트롤 막대"
+                          id={presetFieldId('controls.seekPlacement')}
+                          checked={seekInBar}
+                          disabled={seekInBar && !seekInCenter}
+                          onChange={(event) => placeSeek(event.currentTarget.checked, seekInCenter)}
+                        />
+                        <Check
+                          label="화면 가운데"
+                          id={`${presetFieldId('controls.seekPlacement')}-center`}
+                          checked={seekInCenter}
+                          disabled={seekInCenter && !seekInBar}
+                          onChange={(event) => placeSeek(seekInBar, event.currentTarget.checked)}
+                        />
+                      </Fieldset>
+                    </div>
                   ),
                 },
                 {
@@ -612,134 +841,138 @@ export function PresetEditor({
           </div>
         )}
 
-        {section(
-          'lms',
-          '강의(LMS)',
-          <HelpLink termId="lms-progress-rate" />,
-          <DisabledReason active={native} reason={<b>강의 기능은 Video.js 플레이어에서만 써요.</b>}>
-            <div className="aa-stack">
-              <div className="sa-field">
-                <Check
-                  label={label('lms.enabled')}
-                  id={presetFieldId('lms.enabled')}
-                  checked={lmsOn}
-                  aria-describedby={`${presetFieldId('lms.enabled')}-help`}
-                  onChange={(event) => change('lms.enabled', String(event.currentTarget.checked))}
-                />
-                <span className="sa-help" id={`${presetFieldId('lms.enabled')}-help`}>
-                  진도를 기록하고 목차·자료·스크립트·메모 패널을 붙여요.
-                </span>
-              </div>
-              <DisabledReason active={!native && !lmsOn} reason={<b>강의 기능 사용을 켜면 고칠 수 있어요.</b>}>
+        {lectures
+          ? section(
+              'lms',
+              '강의(LMS)',
+              <HelpLink termId="lms-progress-rate" />,
+              <DisabledReason active={native} reason={<b>강의 기능은 Video.js 플레이어에서만 써요.</b>}>
                 <div className="aa-stack">
-                  <Segmented
-                    label={label('lms.resume')}
-                    id={presetFieldId('lms.resume')}
-                    value={form.lms.resume}
-                    options={[
-                      { value: '', label: '물어보기' },
-                      { value: 'auto', label: '바로 이어서' },
-                      { value: 'off', label: '처음부터' },
-                    ]}
-                    onChange={(value) => change('lms.resume', value)}
-                    error={errors['lms.resume']}
-                  />
-                  <Segmented
-                    label={label('lms.seekLimit')}
-                    labelAside={term('lms-seek-limit')}
-                    id={presetFieldId('lms.seekLimit')}
-                    value={form.lms.seekLimit}
-                    options={[
-                      { value: '', label: '자유롭게' },
-                      { value: 'watched', label: '본 곳까지만' },
-                    ]}
-                    onChange={(value) => change('lms.seekLimit', value)}
-                    help="본 곳까지만이면 아직 보지 않은 구간으로 건너뛸 수 없어요. 완료하면 풀려요."
-                    error={errors['lms.seekLimit']}
-                  />
-                  <Segmented
-                    label={label('lms.maxRate')}
-                    id={presetFieldId('lms.maxRate')}
-                    value={form.lms.maxRate}
-                    options={MAX_RATE_OPTIONS}
-                    numeric
-                    onChange={(value) => change('lms.maxRate', value)}
-                    error={errors['lms.maxRate']}
-                  />
-                  <div className="aa-form-grid">
-                    <Field
-                      label={label('lms.completion')}
-                      id={presetFieldId('lms.completion')}
-                      error={errors['lms.completion']}
-                      labelAside={term('lms-completion')}
-                      help="진도율이 이 값 이상이 되는 순간 완료로 기록해요. 규정이 있으면 그 값으로 맞춰 주세요(예: 80%)."
-                    >
-                      <Input
-                        {...field('lms.completion')}
-                        numeric
-                        type="number"
-                        min={50}
-                        max={100}
-                        step={1}
-                        placeholder="90"
-                      />
-                    </Field>
-                  </div>
-                  <fieldset className="aa-fieldset">
-                    <legend className="sa-label">패널 탭</legend>
-                    <SwitchList
-                      items={[
-                        toggle('lms.tabs.chapters', '장 목록과 장별 시청 비율'),
-                        toggle('lms.tabs.materials', '슬라이드와 내려받기 자료'),
-                        toggle('lms.tabs.transcript', '문장 목록과 검색'),
-                        toggle('lms.tabs.notes', '메모와 북마크'),
-                      ]}
+                  <div className="sa-field">
+                    <Check
+                      label={label('lms.enabled')}
+                      id={presetFieldId('lms.enabled')}
+                      checked={lmsOn}
+                      aria-describedby={`${presetFieldId('lms.enabled')}-help`}
+                      onChange={(event) => change('lms.enabled', String(event.currentTarget.checked))}
                     />
-                    <span className="sa-help">넷 다 끄면 패널 없이 진도 줄만 보여요.</span>
-                  </fieldset>
-                  <SwitchList
-                    items={[
-                      {
-                        ...toggle('lms.bookmarks', '컨트롤 막대 버튼과 B 키로 지금 장면을 표시해요.', {
-                          locked: flagOn(form, 'lms.tabs.notes') ? undefined : '메모 탭을 켜야 북마크를 쓸 수 있어요.',
-                        }),
-                        keys: (
-                          <>
-                            단축키 <kbd className="sa-kbd">B</kbd>
-                          </>
-                        ),
-                      },
-                    ]}
-                  />
-                  <Segmented
-                    label={label('lms.ads')}
-                    id={presetFieldId('lms.ads')}
-                    value={form.lms.ads}
-                    options={[
-                      { value: '', label: '끔' },
-                      { value: 'preroll', label: '프리롤만' },
-                    ]}
-                    onChange={(value) => change('lms.ads', value)}
-                    help="프리롤만 재생하고 광고 시간은 진도에 넣지 않아요."
-                    error={errors['lms.ads']}
-                  />
+                    <span className="sa-help" id={`${presetFieldId('lms.enabled')}-help`}>
+                      진도를 기록하고 목차·자료·스크립트·메모 패널을 붙여요.
+                    </span>
+                  </div>
+                  <DisabledReason active={!native && !lmsOn} reason={<b>강의 기능 사용을 켜면 고칠 수 있어요.</b>}>
+                    <div className="aa-stack">
+                      <Segmented
+                        label={label('lms.resume')}
+                        id={presetFieldId('lms.resume')}
+                        value={form.lms.resume}
+                        options={[
+                          { value: '', label: '물어보기' },
+                          { value: 'auto', label: '바로 이어서' },
+                          { value: 'off', label: '처음부터' },
+                        ]}
+                        onChange={(value) => change('lms.resume', value)}
+                        error={errors['lms.resume']}
+                      />
+                      <Segmented
+                        label={label('lms.seekLimit')}
+                        labelAside={term('lms-seek-limit')}
+                        id={presetFieldId('lms.seekLimit')}
+                        value={form.lms.seekLimit}
+                        options={[
+                          { value: '', label: '자유롭게' },
+                          { value: 'watched', label: '본 곳까지만' },
+                        ]}
+                        onChange={(value) => change('lms.seekLimit', value)}
+                        help="본 곳까지만이면 아직 보지 않은 구간으로 건너뛸 수 없어요. 완료하면 풀려요."
+                        error={errors['lms.seekLimit']}
+                      />
+                      <Segmented
+                        label={label('lms.maxRate')}
+                        id={presetFieldId('lms.maxRate')}
+                        value={form.lms.maxRate}
+                        options={MAX_RATE_OPTIONS}
+                        numeric
+                        onChange={(value) => change('lms.maxRate', value)}
+                        error={errors['lms.maxRate']}
+                      />
+                      <div className="aa-form-grid">
+                        <Field
+                          label={label('lms.completion')}
+                          id={presetFieldId('lms.completion')}
+                          error={errors['lms.completion']}
+                          labelAside={term('lms-completion')}
+                          help="진도율이 이 값 이상이 되는 순간 완료로 기록해요. 규정이 있으면 그 값으로 맞춰 주세요(예: 80%)."
+                        >
+                          <Input
+                            {...field('lms.completion')}
+                            numeric
+                            type="number"
+                            min={50}
+                            max={100}
+                            step={1}
+                            placeholder="90"
+                          />
+                        </Field>
+                      </div>
+                      <fieldset className="aa-fieldset">
+                        <legend className="sa-label">패널 탭</legend>
+                        <SwitchList
+                          items={[
+                            toggle('lms.tabs.chapters', '장 목록과 장별 시청 비율'),
+                            toggle('lms.tabs.materials', '슬라이드와 내려받기 자료'),
+                            toggle('lms.tabs.transcript', '문장 목록과 검색'),
+                            toggle('lms.tabs.notes', '메모와 북마크'),
+                          ]}
+                        />
+                        <span className="sa-help">넷 다 끄면 패널 없이 진도 줄만 보여요.</span>
+                      </fieldset>
+                      <SwitchList
+                        items={[
+                          {
+                            ...toggle('lms.bookmarks', '컨트롤 막대 버튼과 B 키로 지금 장면을 표시해요.', {
+                              locked: flagOn(form, 'lms.tabs.notes')
+                                ? undefined
+                                : '메모 탭을 켜야 북마크를 쓸 수 있어요.',
+                            }),
+                            keys: (
+                              <>
+                                단축키 <kbd className="sa-kbd">B</kbd>
+                              </>
+                            ),
+                          },
+                        ]}
+                      />
+                      <Segmented
+                        label={label('lms.ads')}
+                        id={presetFieldId('lms.ads')}
+                        value={form.lms.ads}
+                        options={[
+                          { value: '', label: '끔' },
+                          { value: 'preroll', label: '프리롤만' },
+                        ]}
+                        onChange={(value) => change('lms.ads', value)}
+                        help="프리롤만 재생하고 광고 시간은 진도에 넣지 않아요."
+                        error={errors['lms.ads']}
+                      />
+                    </div>
+                  </DisabledReason>
+                  <Note
+                    tone="info"
+                    actions={
+                      lectureHref ? (
+                        <ButtonLink size="sm" href={lectureHref} target="_blank" rel="noopener">
+                          샘플 강의 열기
+                        </ButtonLink>
+                      ) : undefined
+                    }
+                  >
+                    자료 패널은 샘플 강의에서 볼 수 있어요.
+                  </Note>
                 </div>
               </DisabledReason>
-              <Note
-                tone="info"
-                actions={
-                  lectureHref ? (
-                    <ButtonLink size="sm" href={lectureHref} target="_blank" rel="noopener">
-                      샘플 강의 열기
-                    </ButtonLink>
-                  ) : undefined
-                }
-              >
-                자료 패널은 샘플 강의에서 볼 수 있어요.
-              </Note>
-            </div>
-          </DisabledReason>
-        )}
+            )
+          : null}
 
         {section(
           'language',
@@ -883,15 +1116,15 @@ export function PresetEditor({
         ) : null}
 
         <div className="sa-card aa-between aa-savebar">
-          <span className="sa-small">{saveNote({ errorCount, site, width })}</span>
+          <span className="sa-small">{saveNote({ errorCount, site, width, fixed })}</span>
           <Button type="submit" variant="primary" disabledReason={saveBlocked}>
-            프리셋 저장
+            {fixed ? '설정 저장' : '프리셋 저장'}
           </Button>
         </div>
         <Status status={status} />
         {reloadable ? (
           <div className="sa-row">
-            <Button onClick={reload}>프리셋 목록 다시 불러오기</Button>
+            <Button onClick={reload}>{fixed ? '설정 다시 불러오기' : '프리셋 목록 다시 불러오기'}</Button>
           </div>
         ) : null}
       </div>

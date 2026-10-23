@@ -461,10 +461,22 @@ export const HELP_TERMS = {
       '프리셋 하나를 저장하면 플레이어 미리보기와 재생 테스트의 플레이어 색과 모서리가 함께 바뀌는 그림이에요.',
     screens: '플레이어 › 프리셋',
     related: ['player-default-preset', 'player-loader'],
+    gnuboard: {
+      name: '플레이어 설정',
+      summary:
+        '사이트의 모든 영상 플레이어가 쓰는 설정 하나예요. 플레이어 종류, 테마, 로고, 재생 동작, 화면 표시, 단축키, 컨트롤, 광고 화면을 정하고, 초안·게시 단계 없이 저장하면 바로 적용돼요.',
+      detail:
+        '목록이나 복제 없이 한 설정을 고쳐서 써요. 처음 저장하기 전에는 내장 "기본" 값으로 보이고, 처음 저장하면 그 값이 사이트 설정이 돼요. 이전·이후 버튼은 컨트롤 막대, 화면 가운데, 또는 두 곳 모두에 둘 수 있어요. 저장한 뒤 영상 페이지를 새로고침하면 바뀐 모습이 나와요. 다른 창에서 먼저 저장했으면 저장이 거부되고 입력은 그대로 남아요.',
+      motionLabel:
+        '플레이어 설정을 저장하면 플레이어 미리보기와 영상 페이지의 플레이어 색과 모서리가 함께 바뀌는 그림이에요.',
+      screens: '플레이어 설정',
+    },
   },
   'player-default-preset': {
     category: 'player',
     state: 'live',
+    // GnuBoard keeps one player setting, which is always the site's.
+    hosts: ['standalone'],
     name: '사이트 적용 프리셋',
     summary:
       '로더를 넣은 모든 페이지의 플레이어가 쓰는 프리셋이에요. 프리셋은 여러 개여도 사이트에 적용되는 건 하나예요.',
@@ -645,6 +657,7 @@ export const HELP_TERMS = {
   'lms-progress-rate': {
     category: 'lms',
     state: 'live',
+    hosts: ['standalone'],
     name: '진도율',
     summary:
       '영상 길이 가운데 실제로 재생한 구간이 차지하는 비율이에요. 겹쳐 본 구간은 한 번만 세고, 표시는 내림한 정수 %예요.',
@@ -657,6 +670,7 @@ export const HELP_TERMS = {
   'lms-completion': {
     category: 'lms',
     state: 'live',
+    hosts: ['standalone'],
     name: '완료 기준',
     summary: '진도율이 이 값 이상이 되는 순간 완료로 기록해요. 50–100 정수이고 비우면 90%예요.',
     detail:
@@ -668,6 +682,7 @@ export const HELP_TERMS = {
   'lms-seek-limit': {
     category: 'lms',
     state: 'live',
+    hosts: ['standalone'],
     name: '본 곳까지만',
     summary:
       '앞으로 건너뛰기를 "본 곳까지만"으로 두면, 재생으로 닿은 가장 먼 곳에서 1초 뒤까지만 앞으로 갈 수 있어요. 뒤로는 늘 자유로워요.',
@@ -680,6 +695,7 @@ export const HELP_TERMS = {
   'lms-learner-token': {
     category: 'lms',
     state: 'live',
+    hosts: ['standalone'],
     name: '학습자 토큰',
     summary:
       '외부 LMS가 "이 학습자예요"라고 알려 주는 서명된 글이에요. 자리 요소의 data-learner-token에 넣으면 진도와 메모가 그 학습자로 서버에 저장돼요.',
@@ -693,6 +709,7 @@ export const HELP_TERMS = {
   'lms-key': {
     category: 'lms',
     state: 'live',
+    hosts: ['standalone'],
     name: 'LMS 연동 키',
     summary: '학습자 토큰을 서명하는 비밀 키예요. 만들거나 바꿀 때 한 번만 전체가 보이고, 그 뒤에는 끝 4자리만 보여요.',
     detail:
@@ -704,6 +721,7 @@ export const HELP_TERMS = {
   'lms-manifest': {
     category: 'lms',
     state: 'live',
+    hosts: ['standalone'],
     name: '강의 자료 매니페스트',
     summary:
       '강의의 목차, 슬라이드, 내려받기 자료, 스크립트를 적은 JSON 파일이에요. 자리 요소의 data-lecture에 주소를 넣으면 패널에 나와요.',
