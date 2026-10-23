@@ -4,6 +4,7 @@
 - 경로 약어: `P/` = `packages/`, `AM/` = `integrations/ads-manager/`, `SKIN/` = `P/html/src/internal/skins/default-video/`(생성된 기본 스킨: `template.ts`, `skin.css`, `register.ts`).
 - 표시: ✔ = 작성자가 그 줄을 직접 다시 열어 확인함. 표시가 없는 줄은 하위 조사(읽기 전용)에서 인용한 행 번호이며, 행 번호가 한두 줄 어긋날 수 있음. "미확인" = 실행하거나 확인하지 않음.
 - 이 문서는 사실만 적는다. 추천은 **제안**으로 따로 표시했다.
+- **정책(사용자 결정, 2026-10-23):** LMS 플레이어는 별도 정책으로 만든다. 범용 기능과 충돌하면 LMS 전용 플레이어에서는 LMS 정책을 우선 적용하도록 커스텀 구현한다. 충돌 지점과 분리 지점은 §5에 정리했다.
 
 ## 0. 후보 기능별 결론
 
@@ -269,3 +270,39 @@
 8. JS `addCue`로 추가한 cue가 스토어 `chaptersCues`에 반영되는지.
 9. 포스트롤 광고와 "다음 차시" 오버레이의 순서.
 10. 다른 도메인 LMS 페이지에서 쓰는 방법(같은 출처 원칙과 충돌함. 대안을 적은 문서는 없음).
+
+## 5. LMS 정책 우선 원칙에서 본 충돌 지점과 분리 지점
+
+정책은 머리말에 있음(범용 기능과 충돌하면 LMS 정책이 우선). 이 절은 "범용 동작이 무엇이고, LMS가 어디에서 그것을 덮을 수 있는가"를 사실로만 정리한다. 무엇을 덮을지는 설계에서 정한다.
+
+### 5.1 충돌 지점
+
+| # | 범용 동작(지금) | 근거 | LMS가 덮을 수 있는 자리 | packages 수정 |
+|---|---|---|---|---|
+| C1 | 자유 탐색: 슬라이더, ←/→/j/l, 0-9, Home/End, 더블탭, ±초 버튼 | §1.4 | extension `mediaOverride.currentTime`(모든 UI 경로), 템플릿 사본에서 단축키·제스처·버튼 제거 또는 `disabled` | 불필요(`@internal` API 사용) |
+| C2 | 광고 확장도 `currentTime`을 덮음. 여러 extension이 같은 속성을 덮으면 **먼저 등록된 클래스가 이김**: 클래스별 Map이고, 같은 클래스를 다시 등록해도 순서가 유지되며, facade는 Map 순서대로 첫 override를 고름 | ✔`P/core/src/dom/extensions/coordinator.ts:47-63,108-114`, ✔`P/core/src/dom/extensions/media.ts:60-69` | LMS extension을 광고(`media-ads`)보다 먼저 등록하면 LMS가 이김. 그러면 광고 중 고정(`controller.ts:186-208`)이 가려지므로, 광고 상태를 LMS override 안에서 따로 다뤄야 함. 광고의 `seeking` 되돌리기(`controller.ts:265-276`)는 순서와 상관없이 계속 동작함 | 불필요 |
+| C3 | 미드롤은 seek로 건너뛴 구간에서 1개만 예약하고 도착 지점에서 계속함(스냅백 없음) | `P/extensions/ads/src/core/scheduler.ts:81-134` | LMS에서 앞으로 seek를 자르면 건너뛰는 구간 자체가 줄어듦. 둘이 함께 동작하는 결과는 미확인 | 미확인 |
+| C4 | 배속 목록 0.2~2×, `>`/`<`가 끝에서 순환, 상한 없음 | §1.1 | 템플릿 사본에서 내장 배속 메뉴와 `>`/`<` 단축키를 빼고 자체 메뉴 사용, `ratechange` 되돌리기 | 내장 메뉴의 목록을 바꾸려면 필요 |
+| C5 | 숨긴 탭에서도 계속 재생함 | ✔`P/core/src/dom/store/features/time.ts:128` | `document.visibilitychange`를 LMS 코드에서 처리 | 불필요 |
+| C6 | 전체화면 대상이 shadow 안의 `media-container`라서 플레이어 밖 패널은 전체화면에서 사라짐 | ✔`P/html/src/ui/container/element.ts:86` | 패널을 컨테이너 안 오버레이로 넣거나, 자체 전체화면 버튼으로 바깥 wrapper를 띄움(내장 `isFullscreen`과 어긋날 수 있음, 미확인) | 내장 버튼으로 wrapper를 띄우려면 필요 |
+| C7 | seek indicator가 입력 기준으로 표시됨 | `P/core/src/core/ui/seek-indicator/status.ts:35-51` | 템플릿 사본에서 indicator를 빼거나 숨김 | 막힌 seek만 숨기려면 필요 |
+| C8 | 단축키 action 10개로 고정, 사용자 정의 action 없음 | §1.7 | LMS 키(북마크 등)는 자체 keydown. 범용 키는 템플릿 사본에서 정리 | 불필요 |
+| C9 | 자막은 subtitles 트랙 1개, 한 번에 하나만 표시, 네이티브 렌더링 | §1.2, `loader.js:493-501` | 스크립트용 트랙을 `hidden`으로 따로 붙이고 cue를 패널에 직접 그림 | 불필요 |
+| C10 | 프리셋 스키마가 고정: topKeys, `playerType` 2종, 세 곳 동일 검증 + fixture, `readPresetRender` 동일성, render `skinTag:'video-skin'` 상수 | §2.1 | 새 그룹 또는 새 playerType 추가. 어느 쪽이든 세 구현, fixture, 로더를 함께 고쳐야 함 | 불필요(ads-manager 안 수정) |
+| C11 | 로더 입력이 고정(data-* 13개). `controls.playbackRate/pip/fullscreen`, `input.*`는 적용 안 함 | §2.2 | LMS 전용 data-*와 적용 코드 추가. `skinTags` 맵(✔`loader.js:31`)에 LMS 스킨 태그 연결 | 불필요 |
+| C12 | 서버 계약: 방문자 계정·IP를 저장하지 않음(v1), 같은 출처, JSON 전용, 설치 전체 레이트 리밋, 쓰기 잠금 | §2.3, `.agents/plans/ads-contract-v1.md:105` | LMS 전용 액션, 토큰, 테이블, 한도. **계약과 충돌하므로 계약 문서에 먼저 기록해야 함**(`.agents/plans/ads-admin-app-contract.md:90`) | 불필요 |
+| C13 | DB: `001.sql` 하나, `schema_version` '1' 고정 검사 | §2.5 | migrate와 App 검사를 고쳐 LMS 테이블을 추가. 002 번호는 v2 초안이 먼저 잡아 둠 | 불필요 |
+| C14 | 범위: "영상 목록 관리"는 하지 않음 | `.agents/plans/ads-player-customization-spec.md:313` | LMS에서 영상별 챕터, 자료, 퀴즈를 서버에 두려면 범위를 바꿔야 함 | 불필요 |
+
+### 5.2 범용 경로를 건드리지 않고 LMS를 분리할 수 있는 지점
+
+| 분리 지점 | 사실 | 근거 |
+|---|---|---|
+| 스킨 | 기본 스킨을 상속한 하위 클래스를 다른 태그로 정의할 수 있음(`solad-video-skin` 선례). 로더는 render의 `skinTag`를 `skinTags` 맵으로 바꿔 씀 | `AM/public/player/solad-video-skin.js:190`, ✔`AM/public/player/loader.js:31` |
+| 재생 정책 | extension은 클래스 단위로 따로 등록되고, 같은 클래스만 교체됨. LMS 클래스를 따로 두면 광고 클래스와 공존함(우선순위는 C2) | ✔`coordinator.ts:47-63` |
+| 프리셋 | `playerType` enum 또는 최상위 그룹으로 나눌 수 있음. native/videojs처럼 타입별 거부 규칙을 이미 쓰고 있음 | `preset.js:224-236,328-346` |
+| API | 공개 액션은 목록(`PUBLIC_ACTIONS`, reads/writes)으로 추가함. 광고 `events`와 다른 액션으로 두면 광고 스키마와 섞이지 않음 | ✔`AM/src/Http.php:9`, ✔`AM/src/App.php:28-35` |
+| 서명 | 서버 비밀 `signing_key`가 있음. 서명 함수는 `Events` 안의 private 하나뿐이라 LMS 토큰을 따로 쓰려면 공용 헬퍼로 빼야 함 | ✔`AM/src/Database.php:96`, ✔`AM/src/Events.php:12-15` |
+| 설치 코드 | 데모와 관리자 설치 코드가 줄 단위 동일성 테스트로 묶여 있음. LMS 설치 코드를 따로 두려면 테스트도 따로 필요 | `AM/tests/admin/examples.test.ts:346-382` |
+
+- **제안:** LMS 전용 플레이어를 "LMS 스킨 하위 클래스 + LMS extension 클래스 + LMS 프리셋 타입 + LMS 전용 API와 테이블"로 묶으면 범용 경로(`solad-video-skin`, 광고 `events`, 기본 프리셋)는 바뀌지 않는다. 결정은 오케스트레이터 몫이다.
