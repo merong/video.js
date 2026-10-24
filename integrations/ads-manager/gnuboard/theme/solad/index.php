@@ -16,10 +16,6 @@ $sl_video_count = solad_theme_count_videos(SOLAD_THEME_VIDEO_BOARD);
 $sl_gallery_url = get_pretty_url(SOLAD_THEME_VIDEO_BOARD);
 $sl_request_url = get_pretty_url(SOLAD_THEME_REQUEST_BOARD);
 $sl_player_base = solad_theme_player_base(SOLAD_THEME_VIDEO_BOARD);
-$sl_admin_url = solad_theme_admin_entry();
-// 소개 영상 로더가 이 사이트에 있으면 경로만 쓴다. 다른 호스트 이름(localhost, www 유무)으로 열어도 같은 출처에서 불러온다.
-$sl_hero_loader = $sl_player_base.'/player/loader.js';
-if (strpos($sl_hero_loader, G5_URL.'/') === 0) $sl_hero_loader = rtrim((string)parse_url(G5_URL, PHP_URL_PATH), '/').substr($sl_hero_loader, strlen(G5_URL));
 
 $g5['title'] = '솔애드 동영상 플레이어';
 
@@ -31,29 +27,13 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <section class="sl-hero" aria-labelledby="sl-hero-title" data-sl-hero>
     <div class="sl-hero-bg" aria-hidden="true">
-        <?php if ($sl_hero['poster']) { ?><div class="sl-hero-ambient" style="background-image:url('<?php echo $sl_hero['poster']; ?>')" data-sl-ambient></div><?php } ?>
         <div class="sl-hero-glow"></div>
         <div class="sl-hero-grain"></div>
     </div>
 
     <div class="sl-hero-inner">
-        <div class="sl-hero-copy">
-            <p class="sl-eyebrow sl-hero-step" style="--step:0"><span class="sl-dot" aria-hidden="true"></span>솔애드 동영상 플레이어</p>
-            <h1 class="sl-hero-title" id="sl-hero-title">
-                <span class="sl-hero-line sl-hero-step" style="--step:1">그누보드 영상 게시판에</span>
-                <span class="sl-hero-line sl-hero-step sl-hero-accent" style="--step:2">광고까지 붙는 플레이어</span>
-            </h1>
-            <p class="sl-hero-lead sl-hero-step" style="--step:3">그누보드 동영상 게시판에 바로 붙여 쓰는 솔애드 플레이어예요. 관리자 화면에서 정한 광고·로고·테마가 게시판 영상에 그대로 적용되고, 지금 보이는 소개 영상도 이 플레이어로 재생돼요.</p>
-            <div class="sl-hero-actions sl-hero-step" style="--step:4">
-                <a class="sl-btn sl-btn--accent sl-btn--lg" href="<?php echo $sl_gallery_url; ?>">
-                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5.6v12.8c0 .8.9 1.3 1.6.8l10-6.4c.6-.4.6-1.3 0-1.7l-10-6.4C8.9 4.3 8 4.8 8 5.6Z" fill="currentColor"/></svg>
-                    동영상 갤러리
-                </a>
-                <?php if ($sl_admin_url) { ?><a class="sl-btn sl-btn--ghost sl-btn--lg" href="<?php echo $sl_admin_url; ?>" data-sl-admin-popup>솔애드 관리자</a><?php } ?>
-                <a class="sl-btn sl-btn--glass sl-btn--lg" href="<?php echo $sl_request_url; ?>">광고 요청하기</a>
-            </div>
-            <a class="sl-hero-link sl-hero-step" style="--step:5" href="#sl-demo">광고가 붙는 실제 게시판 영상 보기 <span aria-hidden="true">↓</span></a>
-        </div>
+        <?php // 히어로는 소개 영상만 폭 가득 보여 준다. 제목은 문서 구조를 위해 남기고 화면에서는 숨긴다. ?>
+        <h1 class="sound_only" id="sl-hero-title">그누보드 영상 게시판에 광고까지 붙는 솔애드 플레이어</h1>
 
         <div class="sl-hero-stage">
             <div class="sl-hero-frame">
@@ -66,15 +46,7 @@ include_once(G5_THEME_PATH.'/head.php');
                      data-title="솔애드 플레이어 소개"
                      data-muted="true"
                      data-loop="true"
-                     data-preload="metadata"
-                     <?php if ($sl_hero['poster']) { ?>data-poster="<?php echo solad_attr($sl_hero['poster']); ?>" style="background-image:url('<?php echo $sl_hero['poster']; ?>')"<?php } ?>></div>
-                <button type="button" class="sl-hero-sound" aria-pressed="false" data-sl-hero-sound hidden>
-                    <svg class="sl-hero-sound-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.6V5.4L7.5 9.5H4Z" fill="currentColor"/><path d="m16 9.5 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    <svg class="sl-hero-sound-on" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.6V5.4L7.5 9.5H4Z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    <span>소리 켜기</span>
-                </button>
-                <?php } elseif ($sl_hero['poster']) { ?>
-                <img class="sl-hero-poster" src="<?php echo $sl_hero['poster']; ?>" alt="">
+                     data-preload="metadata"></div>
                 <?php } ?>
             </div>
             <span class="sl-hero-chip sl-hero-chip--ad" aria-hidden="true"><b>광고</b> 3초 후 건너뛰기</span>
@@ -101,7 +73,6 @@ include_once(G5_THEME_PATH.'/head.php');
         video.preload = "metadata";
         video.autoplay = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         video.src = node.getAttribute("data-src");
-        if (node.getAttribute("data-poster")) video.poster = node.getAttribute("data-poster");
         node.classList.add("is-fallback");
         node.appendChild(video);
         node.dispatchEvent(new CustomEvent("sl-hero-ready", { bubbles: true, detail: { media: video } }));
@@ -109,12 +80,12 @@ include_once(G5_THEME_PATH.'/head.php');
     </script>
     <script type="module">
     // 소개 영상은 광고 없이 재생한다. 빈 편성을 미리보기로 넘겨 광고 API를 부르지 않고 이벤트도 보내지 않는다.
-    // 움직임 줄이기를 켠 사람에게는 자동 재생하지 않고 포스터와 재생 버튼만 보여 준다.
+    // 움직임 줄이기를 켠 사람에게는 자동 재생하지 않고 영상 첫 장면과 재생 버튼만 보여 준다. 포스터는 쓰지 않는다.
     // 녹화된 소개 영상 안에 플레이어 로고가 이미 있어서 이 플레이어의 로고는 끈다.
     const node = document.getElementById("sl-hero-player");
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) node.dataset.autoplay = "true";
     try {
-        const { mount } = await import(<?php echo json_encode($sl_hero_loader, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
+        const { mount } = await import(<?php echo json_encode($sl_player_base.'/player/loader.js', JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
         const handle = await mount(node, {
             overrides: { logo: { assetId: null } },
             preview: { schedule: { videoId: "solad-hero", breaks: [] } }
@@ -260,8 +231,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class="sl-wrap">
         <header class="sl-section-head sl-section-head--row" data-reveal>
             <div>
-                <p class="sl-eyebrow">동영상 갤러리</p>
-                <h2 class="sl-section-title" id="sl-latest-title">최근 올라온 영상</h2>
+                <h2 class="sl-section-title" id="sl-latest-title">동영상 갤러리(예제)</h2>
             </div>
             <a class="sl-more" href="<?php echo $sl_gallery_url; ?>">영상 <?php echo number_format($sl_video_count); ?>개 모두 보기 <span aria-hidden="true">→</span></a>
         </header>

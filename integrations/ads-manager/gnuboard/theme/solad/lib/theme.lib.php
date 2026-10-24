@@ -37,22 +37,22 @@ function solad_theme_is_member_frame()
     return true;
 }
 
-// 히어로 영상: media/hero-promo.mp4가 있으면 그것을, 없으면 임시 영상을 쓴다. 포스터도 같은 규칙.
+// 히어로 영상: media/hero-promo.mp4가 있으면 그것을, 없으면 임시 영상을 쓴다. 포스터는 쓰지 않는다. 주소는 루트 상대 경로.
 function solad_theme_hero()
 {
-    $pick = function ($names) {
-        foreach ($names as $name) {
-            if (is_file(G5_THEME_PATH.'/media/'.$name)) {
-                return solad_theme_asset('media/'.$name);
-            }
+    solad_theme_video_lib(null);
+    foreach (array('hero-promo.mp4', 'hero-placeholder.mp4') as $name) {
+        if (is_file(G5_THEME_PATH.'/media/'.$name)) {
+            return array('src' => solad_theme_local_url(solad_theme_asset('media/'.$name)));
         }
-        return '';
-    };
+    }
+    return array('src' => '');
+}
 
-    return array(
-        'src' => $pick(array('hero-promo.mp4', 'hero-placeholder.mp4')),
-        'poster' => $pick(array('hero-promo.jpg', 'hero-placeholder.jpg')),
-    );
+// 동영상 게시판 스킨의 solad_local_url(). 스킨이 없으면 주소를 그대로 둔다.
+function solad_theme_local_url($url)
+{
+    return function_exists('solad_local_url') ? solad_local_url($url) : $url;
 }
 
 // 동영상 게시판 스킨의 공용 함수(재생 주소, 재생 시간, 미리보기 등)를 같이 쓴다.
@@ -80,7 +80,7 @@ function solad_theme_player_base($bo_table)
         $settings = solad_video_settings($board);
         return $settings['base'];
     }
-    return G5_URL.'/ads';
+    return solad_theme_local_url(G5_URL.'/ads');
 }
 
 // 최근 영상. 비밀글과 답글은 뺀다.
@@ -100,7 +100,7 @@ function solad_theme_latest_videos($bo_table, $limit)
     while ($result && $row = sql_fetch_array($result)) {
         $thumb = get_list_thumbnail($bo_table, $row['wr_id'], 640, 360, false, true);
         $row['href'] = get_pretty_url($bo_table, $row['wr_id']);
-        $row['thumb'] = !empty($thumb['src']) ? $thumb['src'] : '';
+        $row['thumb'] = !empty($thumb['src']) ? solad_local_url($thumb['src']) : '';
         $row['duration'] = solad_video_duration($row['wr_2']);
         $rows[] = $row;
     }

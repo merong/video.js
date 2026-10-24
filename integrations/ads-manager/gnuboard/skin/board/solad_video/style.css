@@ -553,7 +553,7 @@
   font-size: 13px;
 }
 
-/* 목록: 썸네일. 메인 '최근 올라온 영상' 카드와 같은 모양과 호버 */
+/* 목록: 썸네일. 메인 '동영상 갤러리(예제)' 카드와 같은 모양과 호버 */
 .sv-thumb {
   position: relative;
   display: block;
