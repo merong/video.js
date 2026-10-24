@@ -20,7 +20,7 @@ final class PlayerPresets
     private const CONTROLS = ['captions', 'quality', 'audioTrack', 'playbackRate', 'pip', 'fullscreen', 'thumbnails'];
     private const LMS_TABS = ['chapters', 'materials', 'transcript', 'notes'];
     // Built-in logo images by `logo.assetId`: the render's `logo.src`, a file name relative to `public/player/`.
-    private const LOGO_ASSETS = ['sample' => 'logo-sample.svg'];
+    public const LOGO_ASSETS = ['sample' => 'logo-sample.svg'];
     // What each empty `logo.*` value renders as once an image is chosen (ads-a2e-spec 5.2), in render key order.
     private const LOGO_DEFAULTS = ['position' => 'top-right', 'margin' => 12, 'width' => 80, 'opacity' => 80, 'href' => null, 'alt' => null, 'hideDuringAds' => true, 'hideWithControls' => false];
     // `DEFAULT_RATES` values a lecture may cap playback at (ads-lms-spec 1.1).
@@ -68,6 +68,10 @@ final class PlayerPresets
         }
 
         $saved = $this->change($revision, function (array &$document) use ($preset, $id): array {
+            $logo = $preset['logo']['assetId'];
+            if ($logo !== null && !isset(self::LOGO_ASSETS[$logo]) && !in_array($logo, array_column(Logos::stored($this->db), 'logoId'), true)) {
+                Value::fail('logo.assetId', '보관함에 없는 로고예요. 다시 골라 주세요.');
+            }
             $now = Value::now();
             if ($id === null) {
                 if ($this->single && $document['presets'] !== []) {
@@ -121,6 +125,12 @@ final class PlayerPresets
             $document['defaultPresetId'] = $id;
         });
         return $this->list();
+    }
+
+    /** Logo library ids (`logo.assetId`) that stored presets use; built-in presets use none. */
+    public function logoIds(): array
+    {
+        return array_values(array_unique(array_filter(array_map(static fn (array $preset): ?string => $preset['logo']['assetId'], $this->document()['presets']))));
     }
 
     /** Public, unauthenticated render. Never includes the administrator-facing name. */
@@ -272,11 +282,15 @@ final class PlayerPresets
         // Where the seek pair shows: the control bar, the middle of the video, or both. Kept without seek buttons.
         $controls['seekPlacement'] = self::choice($controlsInput['seekPlacement'] ?? null, 'controls.seekPlacement', ['bar', 'center', 'both']);
 
-        $logoInput = self::group($input, 'logo', '', ['assetId', 'position', 'margin', 'width', 'opacity', 'href', 'alt', 'hideDuringAds', 'hideWithControls']);
-        // Logo uploads are not here yet, so only a built-in image id is accepted.
+        $logoInput = self::group($input, 'logo', '', ['assetId', 'url', 'position', 'margin', 'width', 'opacity', 'href', 'alt', 'hideDuringAds', 'hideWithControls']);
+        // A built-in image or a library upload (32 hex); save() checks that the upload is still in the library.
         $assetId = self::empty($logoInput['assetId'] ?? null);
-        if ($assetId !== null && !(is_string($assetId) && isset(self::LOGO_ASSETS[$assetId]))) {
-            Value::fail('logo.assetId', '로고는 아직 샘플 로고만 고를 수 있어요.');
+        if ($assetId !== null && !(is_string($assetId) && (isset(self::LOGO_ASSETS[$assetId]) || preg_match('/^[0-9a-f]{32}$/D', $assetId)))) {
+            Value::fail('logo.assetId', '보관함에 없는 로고예요. 다시 골라 주세요.');
+        }
+        $logoUrl = self::imageUrl($logoInput['url'] ?? null);
+        if ($assetId !== null && $logoUrl !== null) {
+            Value::fail('logo.url', '보관함 로고와 이미지 주소 중 하나만 고를 수 있어요.');
         }
         $logo = [
             'assetId' => $assetId,
@@ -292,6 +306,7 @@ final class PlayerPresets
         if ($logo['href'] !== null && $logo['alt'] === null) {
             Value::fail('logo.alt', '링크가 있으면 대체 텍스트를 입력해 주세요.');
         }
+        $logo = self::withLogoUrl($logo, $logoUrl);
 
         $adsInput = self::group($input, 'ads', '', ['labels', 'accentColor', 'skipRadius', 'fontSize', 'progress', 'timeouts']);
         $labelInput = self::group($adsInput, 'labels', 'ads.', array_keys(self::LABELS));
@@ -399,7 +414,11 @@ final class PlayerPresets
         } else {
             // Presets stored before a group existed (lms) read it as empty.
             $template = self::template();
-            $document['presets'] = array_map(static fn (array $preset): array => self::fill($template, $preset), $document['presets']);
+            $document['presets'] = array_map(static function (array $preset) use ($template): array {
+                $filled = self::fill($template, $preset);
+                $filled['logo'] = self::withLogoUrl($filled['logo'], $preset['logo']['url'] ?? null);
+                return $filled;
+            }, $document['presets']);
         }
         return ['revision' => $document['revision'], 'defaultPresetId' => $document['defaultPresetId'], 'presets' => $document['presets'], 'migratedNeutral' => $migratedNeutral, 'migratedLabels' => $migratedLabels];
     }
@@ -535,7 +554,10 @@ final class PlayerPresets
         return $value;
     }
 
-    /** The render `logo`: `null` without an image, otherwise every layout value filled with its default. */
+    /**
+     * The render `logo`: `null` without an image, otherwise every layout value filled with its default. Only a built-in
+     * image renders for now: public/player/preset.js rejects any other `src`, which would drop the whole preset.
+     */
     private static function logoRender(array $logo): ?array
     {
         $src = self::LOGO_ASSETS[$logo['assetId'] ?? ''] ?? null;
@@ -613,6 +635,32 @@ final class PlayerPresets
         }
         if (!is_string($value) || !preg_match('//u', $value) || mb_strlen($value) > 2048 || !preg_match('~^https?://[^/?#]~D', $value) || preg_match('/\s|\p{Cc}|' . Value::SPACE . '/u', $value)) {
             Value::fail('logo.href', 'http:// 또는 https://로 시작하는 주소를 입력해 주세요.');
+        }
+        return $value;
+    }
+
+    /**
+     * `logo.url` sits after `assetId` and, like a schedule's `rotation`, only when set: presets without one keep
+     * the shared v2 shape (tests/fixtures/player-preset-v2.json) that the TS and loader readers check.
+     */
+    private static function withLogoUrl(array $logo, ?string $url): array
+    {
+        unset($logo['url']);
+        return $url === null ? $logo : ['assetId' => $logo['assetId'], 'url' => $url, ...array_slice($logo, 1)];
+    }
+
+    /** An https:// or same-site root-relative image address; never fetched here (the admin checks it in the browser). */
+    private static function imageUrl(mixed $value): ?string
+    {
+        $value = self::empty($value);
+        if ($value === null) {
+            return null;
+        }
+        if (is_string($value) && preg_match('~^http://~i', $value)) {
+            Value::fail('logo.url', 'https:// 주소만 쓸 수 있어요. http:// 이미지는 https 사이트에서 막혀요.');
+        }
+        if (!is_string($value) || !preg_match('//u', $value) || mb_strlen($value) > 2048 || !preg_match('~^(https://[^/?#]|/(?!/))~iD', $value) || preg_match('/\s|\p{Cc}|' . Value::SPACE . '|' . Value::BIDI_CONTROL . '/u', $value)) {
+            Value::fail('logo.url', 'https://로 시작하는 이미지 주소나 /로 시작하는 사이트 경로를 입력해 주세요.');
         }
         return $value;
     }

@@ -152,8 +152,10 @@ export function startPreviewFrame({
         ? message.pageLang
         : 'ko';
     const key = JSON.stringify([played.key, pageLang]);
+    // An uploaded or address logo the frame's preset parser cannot name; the loader draws it as `preview.logo`.
+    const logo = typeof message.logo === 'string' ? message.logo : null;
 
-    if (handle && mounted === key && handle.restyle(preset)) {
+    if (handle && mounted === key && handle.restyle(preset, { logo })) {
       report('ready');
       return;
     }
@@ -173,7 +175,7 @@ export function startPreviewFrame({
         ...(played.title ? { title: played.title } : {}),
         poster: played.poster,
         playerType: type,
-        preview: { schedule: played.schedule, preset, ...(scene ? { scene } : {}) },
+        preview: { schedule: played.schedule, preset, logo, ...(scene ? { scene } : {}) },
         onError(error) {
           failure ||= error.message;
         },

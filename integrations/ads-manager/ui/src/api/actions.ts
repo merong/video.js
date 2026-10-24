@@ -16,6 +16,10 @@ export interface Capabilities {
    * lectures (GnuBoard).
    */
   lms?: { installed: boolean } | false;
+  /** GnuBoard request boards; absent on an older API or the standalone host, which hides the screen. */
+  adRequests?: boolean;
+  /** The logo library actions; absent on an older API, which offers the sample logo only. */
+  logos?: boolean;
 }
 
 export interface Bootstrap {
@@ -26,7 +30,8 @@ export interface Bootstrap {
   site?: { siteId: string; timeZone: string };
   playerModuleUrl?: string | null;
   limits?: { uploadBytes: number };
-  user?: { displayName: string };
+  /** `canWrite` is absent on an older API, which only signs in accounts that can write. */
+  user?: { displayName: string; canWrite?: boolean };
 }
 
 /** The authenticated bootstrap subset the workspace depends on. */
@@ -36,6 +41,8 @@ export interface Session {
   playerModuleUrl: string | null;
   limits: { uploadBytes: number };
   displayName: string;
+  /** `false` for a read-only admin (GnuBoard `r` only); the server still refuses writes on its own. */
+  canWrite: boolean;
 }
 
 export interface TargetChoice {
@@ -117,6 +124,7 @@ export function toSession(data: Bootstrap): Session | null {
     playerModuleUrl: data.playerModuleUrl ?? null,
     limits: data.limits,
     displayName: data.user?.displayName || '',
+    canWrite: data.user?.canWrite !== false,
   };
 }
 

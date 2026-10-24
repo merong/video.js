@@ -153,6 +153,13 @@ integrations/ads-manager/
 - 공개 `schedule`(`breaks=preroll` 포함)과 `schedule-preview`는 요청마다 `random` 구간에서 `random_int`로 광고 하나를 골라 그 하나만 `ads`에 담는다. 응답에 `rotation`은 싣지 않는다(`contract/playback-v1.json` 모양 그대로). 고른 항목은 `eventToken` claims `picks: {breakId: itemId}`(있을 때만)에 서명하고, `frozen()`이 같은 한 개짜리 구간을 다시 만든다. 고르지 않은 항목의 이벤트는 기존 `snapshot_membership` 규칙으로 거절된다.
 - 이미지 항목의 새 기본 노출 시간은 3초다(관리자 화면 기본값, 서버 검증은 그대로).
 
+### 4.4 광고 요청 조회, 로고 보관함, 프리셋 로고 (2026-10-24, TASK R1)
+
+- 확정 JSON 계약은 `integrations/ads-manager/README.md`의 "Logo library", "Ad request reading (GnuBoard)" 절과 R1 `API.md`다. `bootstrap`은 `capabilities.adRequests`(그누보드만 `true`), `capabilities.logos: true`, 인증 응답 `user.canWrite`를 더한다.
+- 광고 요청(`ad-requests`, `ad-request`)은 읽기 전용이다. 쓰기 권한이 없으면 서버가 연락처·작성자를 가리고 `masked: true`를 싣는다. IP는 내보내지 않는다.
+- 로고는 meta `player_logos` 문서와 업로드 폴더의 파일이다. 스키마는 바뀌지 않는다. 프리셋 `logo.assetId`는 `sample` 또는 보관함 id이고, 대신 `logo.url`(https 또는 `/` 경로)을 쓸 수 있으며 값이 있을 때만 저장된다.
+- 공개 `player-preset` render의 `logo`는 공개 로더가 받을 때까지 내장 로고만 `src`로 내보낸다. 로더 변경은 R1 `player-logo.patch`(승인 대기)다.
+
 ## 5. 팀과 배정
 
 2026-10-20 사용자 지시로 Codex 담당 5명을 Claude Opus 5.5(`claude-opus-5-5`, effort high)로 교체했다. 이름과 pane은 유지했다. 이전 Codex 세션 ID(필요 시 `codex resume`): ads-source-analyst `01a14840-dfc1-7630-9362-6f2a55cfd424`, ads-implementer `01a14841-332b-7561-9b3b-4b3c4fbbe6bd`, ads-admin-api `01a14874-e0de-7c33-b579-f716cdec5561`, ads-admin-ui `01a14876-0d6a-78a0-8123-142836ccc2d5`, ads-qa `01a14876-1831-7712-9015-a326b2f016a6`. `grok`(Grok 4.7, `w1:p7`)은 미디어 담당이라 그대로 둔다.

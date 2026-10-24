@@ -3,6 +3,8 @@ import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vite-plus/test';
 
 import { DEFAULT_PLAYER_PRESET, type PlayerPreset, ThemePreview } from '../src/player';
+import { THEME_CHOICES } from '../src/screens/preset-form';
+import { ThemeCards } from '../src/screens/ThemeCards';
 
 const brand: PlayerPreset = { ...DEFAULT_PLAYER_PRESET, id: null, name: '브랜드' };
 
@@ -89,6 +91,33 @@ describe('ThemePreview', () => {
 
     expect(frame().src).toBe(src);
     expect(post).toHaveBeenLastCalledWith({ type: 'ads-player-preview', preset: edited }, location.origin);
+  });
+
+  it('sends the logo address with the preset while one is given', () => {
+    const { rerender } = render(<ThemePreview preset={brand} examplesUrl="/examples/" logoSrc="/ads/media/logo.png" />);
+    const post = spyPost();
+
+    post.mockClear();
+    fireEvent.load(frame());
+
+    expect(post).toHaveBeenLastCalledWith(
+      { type: 'ads-player-preview', preset: brand, pageLang: 'ko', logo: '/ads/media/logo.png' },
+      location.origin
+    );
+
+    rerender(<ThemePreview preset={brand} examplesUrl="/examples/" logoSrc="https://example.com/logo.svg" />);
+
+    expect(post).toHaveBeenLastCalledWith(
+      { type: 'ads-player-preview', preset: brand, pageLang: 'ko', logo: 'https://example.com/logo.svg' },
+      location.origin
+    );
+
+    rerender(<ThemePreview preset={brand} examplesUrl="/examples/" logoSrc={null} />);
+
+    expect(post).toHaveBeenLastCalledWith(
+      { type: 'ads-player-preview', preset: brand, pageLang: 'ko' },
+      location.origin
+    );
   });
 
   it('waits for the frame load before sending', () => {
@@ -685,5 +714,30 @@ describe('ThemePreview', () => {
     expect(link.hasAttribute('role')).toBe(false);
     expect(link.hasAttribute('tabindex')).toBe(false);
     expect(link.hasAttribute('aria-describedby')).toBe(false);
+  });
+});
+
+describe('ThemeCards', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
+  it('shows each built-in card as a picture named by its label, and draws a card without one', () => {
+    const custom = { ...THEME_CHOICES[0]!, id: 'custom', label: '내 테마', note: '직접 만든 값' };
+    const { container } = render(
+      <ThemeCards choices={[...THEME_CHOICES, custom]} current={THEME_CHOICES[0]} onPick={() => {}} />
+    );
+    const pictures = container.querySelectorAll('img.aa-theme-thumb');
+
+    expect(pictures).toHaveLength(THEME_CHOICES.length);
+
+    for (const picture of pictures) {
+      expect(picture.getAttribute('alt')).toBe('');
+      expect(picture.getAttribute('src')).toMatch(/\.webp$|^data:image\/webp/u);
+    }
+
+    expect(container.querySelectorAll('svg.aa-theme-thumb')).toHaveLength(1);
+    expect(screen.getByRole('radio', { name: /^기본/u }).matches(':checked')).toBe(true);
+    expect(screen.getByRole('radio', { name: /^내 테마/u })).toBeTruthy();
   });
 });

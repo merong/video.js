@@ -20,6 +20,7 @@ import { HelpLink } from '../help';
 import { parsePlayerPreset, ThemePreview } from '../player';
 import { ApplyConfirm, languageLabel, PLAYER_TYPE_LABELS } from './ApplyConfirm';
 import { LmsMock } from './LmsMock';
+import { previewLogo, useLogoLibrary } from './logo-library';
 import { LIST_PLANNED, PlannedNote } from './planned';
 import { PlayerOptions } from './PlayerOptions';
 import { PlayerPreviewCard } from './PlayerPreviewCard';
@@ -97,6 +98,7 @@ export function PlayersScreen({ titleId, title, page, activation }: PlayersScree
   const [stale, setStale] = useState(false);
   const latestRefresh = useRef(0);
   const [drafts, setDrafts] = useState<Partial<Record<DraftKey, Draft>>>({});
+  const logos = useLogoLibrary(activation !== null);
   const [listStatus, setListStatus] = useState<Notice>(IDLE);
   const [editStatus, setEditStatus] = useState<Notice>(IDLE);
   const [reloadable, setReloadable] = useState(false);
@@ -583,12 +585,13 @@ export function PlayersScreen({ titleId, title, page, activation }: PlayersScree
         reloadable={reloadable}
         reload={() => reloadList(setEditStatus, true)}
         lectureHref={`${publicBase}examples/lecture.html`}
+        logos={logos}
         preview={
           <>
             {/* `ThemePreview` reloads its frame only when the player type changes. */}
             {draft.preview && activation !== null ? (
               <ThemePreview
-                preset={draft.preview}
+                {...previewLogo(draft.preview, logos.library)}
                 examplesUrl={`${publicBase}examples/`}
                 demo={{ presetId: draft.form.id, unsaved: draft.dirty }}
               />

@@ -6,6 +6,7 @@ import { PageHead } from '../app/ui';
 import { useWorkspace } from '../app/workspace-context';
 import { Button, Note } from '../components';
 import { DEFAULT_PLAYER_PRESET, parsePlayerPreset, type PlayerPreset, ThemePreview } from '../player';
+import { previewLogo, useLogoLibrary } from './logo-library';
 import { ListState } from './PlayerSetup';
 import {
   changedDraft,
@@ -63,6 +64,7 @@ export function PlayerSettingsScreen({ titleId, title, activation }: PlayerSetti
   const [stale, setStale] = useState(false);
   const latestRefresh = useRef(0);
   const [draft, setDraft] = useState<Draft | null>(null);
+  const logos = useLogoLibrary(activation !== null);
   const [status, setStatus] = useState<Notice>(IDLE);
   const [reloadable, setReloadable] = useState(false);
   const focusPath = useRef<PresetPath | null>(null);
@@ -272,12 +274,13 @@ export function PlayerSettingsScreen({ titleId, title, activation }: PlayerSetti
         status={status}
         reloadable={reloadable}
         reload={reload}
+        logos={logos}
         preview={
           <>
             {/* `ThemePreview` reloads its frame only when the player type changes. */}
             {shown.preview && activation !== null ? (
               <ThemePreview
-                preset={shown.preview}
+                {...previewLogo(shown.preview, logos.library)}
                 examplesUrl={`${publicBase}examples/`}
                 demo={{ presetId: shown.form.id, unsaved: shown.dirty }}
               />

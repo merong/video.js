@@ -28,7 +28,7 @@ final class Http
             return $_GET;
         }
         $length = (int) ($_SERVER['CONTENT_LENGTH'] ?? 0);
-        if ($action === 'creative-upload') {
+        if ($action === 'creative-upload' || $action === 'logo-upload') {
             if ($length > Creatives::uploadLimit($config) + 16384 || ($length > 0 && $_POST === [] && $_FILES === [])) {
                 throw new ApiError(413, 'upload_size', '업로드 제한을 초과했습니다.');
             }

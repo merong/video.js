@@ -1783,7 +1783,9 @@ describe('PlayerSettingsScreen', () => {
     expect(within(themes).queryByRole('radio', { checked: true })).toBeNull();
     expect(within(themes).getByText(/지금 테마: 직접 조정/u)).toBeTruthy();
 
-    fireEvent.click(screen.getByRole('radio', { name: '샘플 로고' }));
+    // Choosing the library picks the sample logo first.
+    fireEvent.click(screen.getByRole('radio', { name: '보관함에서 고르기' }));
+    expect(screen.getByRole('radio', { name: '샘플 로고' })).toHaveProperty('checked', true);
     expect(corner('오른쪽 위').checked).toBe(true);
     fireEvent.click(corner('왼쪽 아래'));
     fireEvent.click(screen.getByRole('button', { name: '설정 저장' }));
@@ -1793,6 +1795,8 @@ describe('PlayerSettingsScreen', () => {
 
     expect(preset.theme).toMatchObject({ accentColor: '#445566', borderColor: '#00000000', borderRadius: 0 });
     expect(preset.logo).toMatchObject({ assetId: 'sample', position: 'bottom-left', width: null, alt: null });
+    // `logo.url` is sent only when an address is set.
+    expect(preset.logo).not.toHaveProperty('url');
   });
 
   it('stores the first save as the site setting and updates it afterwards', async () => {

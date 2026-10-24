@@ -1,6 +1,25 @@
 import { useId } from 'react';
 
 import { contrastRatio, drawsNoBorder, type ThemeChoice } from './preset-form';
+import accentShot from './theme-images/accent.webp';
+import darkShot from './theme-images/dark.webp';
+import defaultShot from './theme-images/default.webp';
+import flatShot from './theme-images/flat.webp';
+import roundedShot from './theme-images/rounded.webp';
+import warmShot from './theme-images/warm.webp';
+
+/**
+ * The built-in cards' pictures: the real Video.js player at 640×360 in each theme, paused at 30% with its controls
+ * showing, on a transparent ground outside the frame's radius. How they were made: `admin-r1/theme/` in the R1 notes.
+ */
+const THEME_SHOTS = new Map([
+  ['default', defaultShot],
+  ['flat', flatShot],
+  ['rounded', roundedShot],
+  ['accent', accentShot],
+  ['dark', darkShot],
+  ['warm', warmShot],
+]);
 
 // The skin's own values where a card leaves a theme value empty (the editor's "스킨 기본" placeholders).
 const SKIN_ACCENT = '#ffffff';
@@ -14,7 +33,10 @@ function autoText(accent: string): string {
   return contrastRatio(accent, '#000000') >= contrastRatio(accent, '#ffffff') ? '#000000' : '#ffffff';
 }
 
-/** A small player drawn from the card's theme values: frame, border, big play button, progress and a menu button. */
+/**
+ * A small player drawn from the card's theme values: frame, border, big play button, progress and a menu button. Used
+ * for a card without a picture in `THEME_SHOTS`.
+ */
 function ThemeThumb({ choice }: { choice: ThemeChoice }) {
   const accent = choice.accentColor || SKIN_ACCENT;
   const text = choice.accentTextColor || autoText(accent);
@@ -74,7 +96,11 @@ export function ThemeCards({ choices, current, onPick }: ThemeCardsProps) {
       <div className={current ? 'aa-theme-cards' : 'aa-theme-cards is-custom'}>
         {choices.map((choice) => (
           <label className="aa-theme-card" key={choice.id}>
-            <ThemeThumb choice={choice} />
+            {THEME_SHOTS.has(choice.id) ? (
+              <img className="aa-theme-thumb" src={THEME_SHOTS.get(choice.id)} alt="" width={640} height={360} />
+            ) : (
+              <ThemeThumb choice={choice} />
+            )}
             <span className="aa-theme-name">
               <input
                 type="radio"

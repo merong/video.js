@@ -23,7 +23,7 @@ import uuid
 
 MANAGER = Path(__file__).resolve().parents[2]
 # A1 additions are counted separately so the v1 baseline stays comparable.
-checks = {"v1": 0, "a1": 0, "presets": 0, "session": 0, "videoId": 0, "lms": 0}
+checks = {"v1": 0, "a1": 0, "presets": 0, "session": 0, "videoId": 0, "lms": 0, "r1": 0}
 
 
 def check(condition, message, group="v1"):
@@ -130,6 +130,12 @@ with tempfile.TemporaryDirectory(prefix="ads-http-") as temporary:
                 f"--{boundary}\r\nContent-Disposition: form-data; name=\"file\"; filename=\"{filename}\"\r\n"
                 "Content-Type: application/octet-stream\r\n\r\n").encode() + contents + f"\r\n--{boundary}--\r\n".encode()
         return call("creative-upload", multipart=body, headers={"Content-Type": "multipart/form-data; boundary=" + boundary})
+
+    def logo_upload(contents, filename):
+        boundary = "ads" + uuid.uuid4().hex
+        body = (f"--{boundary}\r\nContent-Disposition: form-data; name=\"file\"; filename=\"{filename}\"\r\n"
+                "Content-Type: application/octet-stream\r\n\r\n").encode() + contents + f"\r\n--{boundary}--\r\n".encode()
+        return call("logo-upload", multipart=body, headers={"Content-Type": "multipart/form-data; boundary=" + boundary})
 
     def media_request(path, headers=None, method="GET"):
         request = urllib.request.Request(base + path, headers=headers or {}, method=method)
@@ -285,7 +291,7 @@ with tempfile.TemporaryDirectory(prefix="ads-http-") as temporary:
         for label, theme, field in (("7-digit", {"borderColor": "#0000002"}, "theme.borderColor"), ("9-digit", {"borderColor": "#000000260"}, "theme.borderColor"), ("accent 8-digit", {"accentColor": "#2563eb80"}, "theme.accentColor")):
             status, invalid, _ = call("player-preset-save", {"preset": {**preset_input, "theme": theme}, "revision": 5})
             check(status == 422 and list(invalid["error"]["fields"]) == [field], label + " color is 422", "presets")
-        check(call("bootstrap")[1]["data"]["user"] == {"displayName": "tester"}, "standalone bootstrap user is the login ID", "a1")
+        check(call("bootstrap")[1]["data"]["user"] == {"displayName": "tester", "canWrite": True}, "standalone bootstrap user is the login ID", "a1")
         check(call("creative-save", {"name": "invalid"})[0] == 422, "invalid write is field validation error")
         check(call("creative-save", {"name": "x", "url": "javascript:alert(1)", "mime": "image/png", "alt": ""})[0] == 422, "unsafe creative URL blocked")
         check(call("creative-save", {"name": "x"}, {"Origin": "https://cross-site.example"})[0] == 403, "cross-origin mutation blocked")
@@ -310,6 +316,20 @@ with tempfile.TemporaryDirectory(prefix="ads-http-") as temporary:
         check(status == 416 and body == b"" and headers.get("Content-Range") == "bytes */0", "empty media has no satisfiable byte range")
         check(upload(b"<?php echo 'not media';", "fake.mp4")[0] == 422, "spoofed media extension blocked")
         check(upload(b"x" * (1048576 + 1), "large.png")[0] == 413, "oversize upload blocked")
+        # R1 logo library over real multipart uploads and the media route.
+        status, logo, _ = logo_upload(png, "브랜드.png")
+        check(status == 200 and logo["data"]["logo"]["name"] == "브랜드" and logo["data"]["logo"]["width"] == 1 and [item["logoId"] for item in logo["data"]["items"]][0] == "sample", "a PNG logo uploads after the sample", "r1")
+        check(media_request(logo["data"]["logo"]["url"])[1] == png, "an uploaded logo is served from the media route", "r1")
+        svg = b'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40"><rect width="120" height="40" fill="#2563eb"/></svg>'
+        status, svg_logo, _ = logo_upload(svg, "mark.svg")
+        check(status == 200 and svg_logo["data"]["logo"]["mime"] == "image/svg+xml" and svg_logo["data"]["logo"]["width"] == 120, "a drawing-only SVG logo uploads", "r1")
+        status, body, headers = media_request(svg_logo["data"]["logo"]["url"])
+        check(status == 200 and body == svg and headers.get("Content-Type") == "image/svg+xml" and "sandbox" in headers.get("Content-Security-Policy", "") and headers.get("X-Content-Type-Options") == "nosniff", "an SVG logo is served inert with CSP and nosniff", "r1")
+        status, refused, _ = logo_upload(svg.replace(b"<rect", b'<script>alert(1)</script><rect'), "evil.svg")
+        check(status == 422 and "file" in refused["error"]["fields"], "an SVG with a script is refused over HTTP", "r1")
+        check(logo_upload(b"not an image", "fake.png")[0] == 422, "a text file named .png is refused over HTTP", "r1")
+        check(call("logo-delete", {"logoId": svg_logo["data"]["logo"]["logoId"]})[0] == 200 and media_request(svg_logo["data"]["logo"]["url"])[0] == 404, "a deleted logo is no longer served", "r1")
+        check(call("logo-delete", {"logoId": logo["data"]["logo"]["logoId"]})[0] == 200, "the PNG logo is deleted again", "r1")
         status, context, _ = call("video-context-save", {"videoId": "http-video", "label": "HTTP 영상", "boardId": "board-real", "categoryId": "category-real"})
         check(status == 200 and context["data"]["saved"], "trusted mapping persisted")
         status, resolved, headers = call("schedule&videoId=http-video&boardId=forged")
@@ -510,6 +530,7 @@ with tempfile.TemporaryDirectory(prefix="ads-http-") as temporary:
         print(f"PASS {checks['session']} A1-FIX-API cookieless public action assertions (counted separately).")
         print(f"PASS {checks['videoId']} A1-FIX-API-2 public video ID assertions (counted separately).")
         print(f"PASS {checks['lms']} L-1 lecture progress, notes and preroll assertions (counted separately).")
+        print(f"PASS {checks['r1']} R1 logo library upload/serve/delete assertions (counted separately).")
     finally:
         process.terminate()
         try:

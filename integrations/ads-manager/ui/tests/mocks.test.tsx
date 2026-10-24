@@ -70,7 +70,7 @@ describe('mockScreens', () => {
       'settings',
       'newLineItem',
     ]);
-    expect(Object.keys(mockScreens.gnuboard)).toEqual(['requests', 'settings']);
+    expect(Object.keys(mockScreens.gnuboard)).toEqual(['settings']);
   });
 
   it.each(screens)('%s shows the mock badge, calls no API, and disables writes', (_name, Screen) => {
@@ -143,43 +143,6 @@ describe('mockScreens', () => {
 
     expect(within(table).getAllByRole('row')).toHaveLength(2);
     expect(screen.getByRole('button', { name: /^승인 대기\s*1$/ }).getAttribute('aria-pressed')).toBe('true');
-  });
-
-  it('labels GnuBoard request stages and filters by them', () => {
-    render(<mockScreens.gnuboard.requests />);
-
-    const table = screen.getByRole('table', { name: '광고 요청 목록 (예시)' });
-
-    expectCaptions(1);
-    expect(within(table).getAllByText('접수')).toHaveLength(2);
-    expect(within(table).getByText('보완 요청')).toBeTruthy();
-
-    fireEvent.click(screen.getByRole('button', { name: /^접수\s*2$/ }));
-
-    expect(within(table).getAllByRole('row')).toHaveLength(3);
-  });
-
-  it('opens a request detail in place with its actions disabled', () => {
-    window.location.hash = '#/requests';
-    render(<mockScreens.gnuboard.requests />);
-
-    fireEvent.click(screen.getByRole('button', { name: '요청 15 열기' }));
-
-    const title = screen.getByRole('heading', { level: 1, name: '예시 동호회 정기 모임 안내' });
-
-    expect(document.activeElement).toBe(title);
-    expect(window.location.hash).toBe('#/requests');
-    expect(screen.getByText(MOCK_BADGE_TEXT)).toBeTruthy();
-    expect(screen.getByRole('table', { name: '요청서' })).toBeTruthy();
-    expect(screen.getByRole('button', { name: '승인하고 집행 만들기' })).toHaveProperty('disabled', true);
-    expectCaptions(0);
-    expectWritesDisabled();
-    expect(fetchSpy).not.toHaveBeenCalled();
-
-    fireEvent.click(screen.getByRole('button', { name: '← 광고 요청 목록' }));
-
-    expect(document.activeElement).toBe(screen.getByRole('heading', { level: 1, name: '광고 요청 관리' }));
-    expect(window.location.hash).toBe('#/requests');
   });
 
   it('renders the v2 report as a section without a page title', () => {

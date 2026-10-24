@@ -53,6 +53,29 @@ abstract class Host
         throw new ApiError(403, 'host_login', '호스트 사이트에서 로그아웃해 주세요.');
     }
 
+    /** Whether the signed-in administrator may change things; read-only accounts get personal data masked. */
+    public function canWrite(): bool
+    {
+        return $this->authenticated();
+    }
+
+    /** Whether the host has ad request boards; without them the ad request actions do not exist. */
+    public function adRequests(): bool
+    {
+        return false;
+    }
+
+    /** One page of ad requests (AdRequests::query filters) with per-stage counts. */
+    public function adRequestList(array $query): array
+    {
+        throw new ApiError(404, 'action_not_found', '요청을 찾을 수 없습니다.');
+    }
+
+    public function adRequestDetail(string $boardId, int $postId, bool $masked): array
+    {
+        throw new ApiError(404, 'action_not_found', '요청을 찾을 수 없습니다.');
+    }
+
     public function saveVideoContext(array $input): array
     {
         throw new ApiError(403, 'host_context', '호스트가 영상 정보를 관리합니다.');

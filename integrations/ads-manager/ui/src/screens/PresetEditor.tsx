@@ -1,4 +1,4 @@
-import { type FormEvent, type ReactNode, useEffect, useRef, useState } from 'react';
+import { type FormEvent, type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 
 import { type LayoutWidth, useLayoutWidth } from '../app/media-query';
 import { Status, type Notice } from '../app/status';
@@ -23,6 +23,8 @@ import {
 } from '../components';
 import { HelpLink, type HelpTermId } from '../help';
 import { AD_LABEL_DEFAULTS } from '../player';
+import type { LogoLibraryState } from './logo-library';
+import { LogoPicker } from './LogoPicker';
 import { PlayerPreviewCard } from './PlayerPreviewCard';
 import {
   contrastWarning,
@@ -175,6 +177,8 @@ export interface PresetEditorProps {
   fixed?: boolean | undefined;
   /** The "구획으로 이동" list. Without it, wide screens give its width to the preview, which is wider than the form. */
   sectionNav?: boolean | undefined;
+  /** The logo library the logo section picks from and uploads to (`useLogoLibrary`). */
+  logos: LogoLibraryState;
 }
 
 /**
@@ -201,6 +205,7 @@ export function PresetEditor({
   lectures = true,
   fixed = false,
   sectionNav = true,
+  logos,
 }: PresetEditorProps) {
   const native = form.playerType === 'native';
   const width = useLayoutWidth();
@@ -209,7 +214,7 @@ export function PresetEditor({
   const picked = useRef(false);
   const autoplay = flagOn(form, 'playback.autoplay');
   const lmsOn = flagOn(form, 'lms.enabled');
-  const logoOn = form.logo.assetId !== '';
+  const logoOn = form.logo.assetId !== '' || form.logo.url.trim() !== '';
   const theme = themeChoiceOf(form);
   const cornerName = `${presetFieldId('logo.position')}-radio`;
   // "테두리 없음" opens on for a see-through border; typing one later does not lock the field mid-entry.
@@ -361,10 +366,18 @@ export function PresetEditor({
     ...extra,
   });
 
+  // A logo address the browser could not load (or is still loading) blocks the save like a malformed color.
+  const logoUrlInvalid = useCallback((invalid: boolean) => {
+    if (invalid) invalidColors.current.add('logo.url');
+    else invalidColors.current.delete('logo.url');
+  }, []);
+
   const submit = (event: FormEvent) => {
     event.preventDefault();
-    // Native video saves no theme, so a theme color it disabled cannot block the save.
-    save([...invalidColors.current].filter((path) => !(native && path.startsWith('theme.'))));
+    // Native video saves no theme or logo, so a value it disabled cannot block the save.
+    save(
+      [...invalidColors.current].filter((path) => !(native && (path.startsWith('theme.') || path.startsWith('logo.'))))
+    );
   };
 
   const section = (id: PresetSection, heading: string, aside: ReactNode, children: ReactNode) => {
@@ -403,7 +416,8 @@ export function PresetEditor({
         </div>
       ) : null}
 
-      <div className="aa-stack aa-editor-main">
+      {/* Basic and theme span the main and preview columns on wide screens, so the theme cards can sit three to a row. */}
+      <div className="aa-stack aa-editor-top">
         {section(
           'basic',
           '기본',
@@ -565,7 +579,9 @@ export function PresetEditor({
             </div>
           </DisabledReason>
         )}
+      </div>
 
+      <div className="aa-stack aa-editor-main">
         {section(
           'logo',
           '로고',
@@ -580,17 +596,14 @@ export function PresetEditor({
             }
           >
             <div className="aa-stack">
-              <Segmented
-                label={label('logo.assetId')}
-                id={presetFieldId('logo.assetId')}
-                value={form.logo.assetId}
-                options={[
-                  { value: '', label: '사용 안 함' },
-                  { value: 'sample', label: '샘플 로고' },
-                ]}
-                onChange={(value) => change('logo.assetId', value)}
-                help="샘플 로고는 가상의 사이트 ‘MY SITE’ 그림이에요. 내 로고 올리기는 아직 준비 중이에요."
-                error={errors['logo.assetId']}
+              <LogoPicker
+                assetId={form.logo.assetId}
+                url={form.logo.url}
+                ids={{ assetId: presetFieldId('logo.assetId'), url: presetFieldId('logo.url') }}
+                errors={{ assetId: errors['logo.assetId'], url: errors['logo.url'] }}
+                change={change}
+                logos={logos}
+                onInvalidChange={logoUrlInvalid}
               />
               <DisabledReason active={!native && !logoOn} reason={<b>로고 이미지를 고르면 고칠 수 있어요.</b>}>
                 <div className="aa-stack">

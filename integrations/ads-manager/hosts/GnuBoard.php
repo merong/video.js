@@ -98,6 +98,125 @@ final class GnuBoard extends Host
         return ['host' => 'gnuboard', 'manualTargets' => false, 'uploads' => true, 'loginUrl' => Value::url(G5_BBS_URL . '/login.php', 'loginUrl'), 'siteUrl' => Value::url(G5_URL, 'siteUrl'), 'adminUrl' => Value::url(G5_ADMIN_URL, 'adminUrl')];
     }
 
+    public function canWrite(): bool
+    {
+        return $this->permission('w');
+    }
+
+    public function adRequests(): bool
+    {
+        return true;
+    }
+
+    public function adRequestList(array $query): array
+    {
+        $boards = $this->requestBoards();
+        $empty = ['boards' => [], 'stages' => AdRequests::stages(), 'counts' => AdRequests::counts([]), 'items' => [], 'page' => $query['page'], 'perPage' => AdRequests::PER_PAGE, 'total' => 0];
+        if ($boards === []) {
+            return $empty;
+        }
+
+        $where = '';
+        if ($query['query'] !== '') {
+            $like = sql_real_escape_string(addcslashes($query['query'], '%_\\'));
+            $where = " AND (wr_subject LIKE '%$like%' OR wr_1 LIKE '%$like%')";
+        }
+        $counts = [];
+        $result = sql_query('SELECT ca_name, COUNT(*) AS posts FROM (' . $this->requestUnion($boards, $where) . ') t GROUP BY ca_name');
+        while ($row = sql_fetch_array($result)) {
+            $counts[(string) $row['ca_name']] = ($counts[(string) $row['ca_name']] ?? 0) + (int) $row['posts'];
+        }
+        $counts = AdRequests::counts($counts);
+
+        $status = $query['status'];
+        if ($status === '접수') {
+            $stages = implode(', ', array_map(static fn (string $stage): string => "'" . sql_real_escape_string($stage) . "'", array_keys(AdRequests::STAGES)));
+            $where .= " AND (ca_name = '접수' OR ca_name NOT IN ($stages))";
+        } elseif ($status !== null) {
+            $where .= " AND ca_name = '" . sql_real_escape_string($status) . "'";
+        }
+        $offset = ($query['page'] - 1) * AdRequests::PER_PAGE;
+        $result = sql_query('SELECT * FROM (' . $this->requestUnion($boards, $where) . ') t ORDER BY wr_datetime DESC, bo_table DESC, wr_id DESC LIMIT ' . $offset . ', ' . AdRequests::PER_PAGE);
+        $items = [];
+        while ($row = sql_fetch_array($result)) {
+            $items[] = AdRequests::item($row, $this->postUrl($row['bo_table'], (int) $row['wr_id']), (int) $row['media_files'] > 0, $this->config['timeZone']);
+        }
+
+        return [...$empty, 'boards' => array_values(array_map(static fn (array $board): array => ['boardId' => $board['bo_table'], 'name' => $board['bo_subject']], $boards)), 'counts' => $counts, 'items' => $items, 'total' => $status === null ? $counts['all'] : $counts[$status]];
+    }
+
+    public function adRequestDetail(string $boardId, int $postId, bool $masked): array
+    {
+        global $g5;
+        $board = $this->requestBoards()[$boardId] ?? throw new ApiError(404, 'board_not_found', '광고 요청 게시판을 찾을 수 없습니다.');
+        $table = $g5['write_prefix'] . $boardId;
+        $post = sql_fetch("SELECT * FROM `$table` WHERE wr_id = $postId AND wr_is_comment = 0");
+        if (!$post) {
+            throw new ApiError(404, 'ad_request_not_found', '광고 요청을 찾을 수 없습니다.');
+        }
+
+        $files = [];
+        $result = sql_query("SELECT * FROM {$g5['board_file_table']} WHERE bo_table = '$boardId' AND wr_id = $postId AND bf_file <> '' ORDER BY bf_no");
+        while ($row = sql_fetch_array($result)) {
+            $url = !empty($row['bf_fileurl']) ? $row['bf_fileurl'] : G5_DATA_URL . '/file/' . $boardId . '/' . $row['bf_file'];
+            $files[] = ['name' => (string) $row['bf_source'], 'size' => (int) $row['bf_filesize'], 'url' => $this->localUrl($url), 'media' => (int) $row['bf_no'] === 0];
+        }
+        $comments = [];
+        $result = sql_query("SELECT wr_id, wr_name, wr_content, wr_option, wr_datetime, wr_1 FROM `$table` WHERE wr_parent = $postId AND wr_is_comment = 1 ORDER BY wr_comment, wr_comment_reply");
+        while ($row = sql_fetch_array($result)) {
+            $comments[] = $row;
+        }
+        $target = null;
+        if (preg_match('/^[a-zA-Z0-9_]{1,20}$/D', (string) $post['wr_9'])) {
+            $row = sql_fetch("SELECT bo_table, bo_subject FROM {$g5['board_table']} WHERE bo_table = '{$post['wr_9']}'");
+            $target = $row ? ['boardId' => $row['bo_table'], 'name' => $row['bo_subject']] : null;
+        }
+
+        return ['request' => AdRequests::detail($board, [...$post, 'bo_table' => $boardId], $files, $comments, $target, $this->postUrl($boardId, $postId), $masked, $this->config['timeZone']), 'masked' => $masked];
+    }
+
+    /** Boards drawn by the ad request skin (plain or theme), keyed by bo_table. */
+    private function requestBoards(): array
+    {
+        global $g5;
+        $boards = [];
+        $result = sql_query("SELECT bo_table, bo_subject FROM {$g5['board_table']} WHERE bo_skin IN ('solad_request', 'theme/solad_request') ORDER BY bo_table");
+        while ($row = sql_fetch_array($result)) {
+            if (preg_match('/^[a-zA-Z0-9_]{1,20}$/D', $row['bo_table'])) {
+                $boards[$row['bo_table']] = $row;
+            }
+        }
+        return $boards;
+    }
+
+    /** Posts of every request board in one result; `$where` is already escaped. */
+    private function requestUnion(array $boards, string $where): string
+    {
+        global $g5;
+        $selects = [];
+        foreach (array_keys($boards) as $id) {
+            $table = $g5['write_prefix'] . $id;
+            $selects[] = "SELECT '$id' AS bo_table, wr_id, wr_subject, ca_name, wr_1, wr_2, wr_3, wr_4, wr_5, wr_7, wr_datetime, wr_comment, wr_option, (SELECT COUNT(*) FROM {$g5['board_file_table']} f WHERE f.bo_table = '$id' AND f.wr_id = w.wr_id AND f.bf_no = 0 AND f.bf_file <> '') AS media_files FROM `$table` w WHERE wr_is_comment = 0$where";
+        }
+        return implode(' UNION ALL ', $selects);
+    }
+
+    private function postUrl(string $boardId, int $postId): string
+    {
+        // get_pretty_url() returns an HTML attribute value (&amp;); the API gives the plain address.
+        return $this->localUrl(function_exists('get_pretty_url') ? html_entity_decode(get_pretty_url($boardId, $postId), ENT_QUOTES | ENT_HTML5, 'UTF-8') : G5_BBS_URL . '/board.php?bo_table=' . $boardId . '&wr_id=' . $postId);
+    }
+
+    /** A G5_URL address as a root-relative path, like the skins' solad_local_url(). */
+    private function localUrl(string $url): string
+    {
+        $site = rtrim(G5_URL, '/');
+        if ($url !== $site && !str_starts_with($url, $site . '/')) {
+            return $url;
+        }
+        return rtrim((string) parse_url($site, PHP_URL_PATH), '/') . '/' . ltrim(substr($url, strlen($site)), '/');
+    }
+
     private function board(string $id): array
     {
         if (!preg_match('/^[a-zA-Z0-9_]{1,20}$/D', $id)) {

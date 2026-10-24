@@ -16,7 +16,7 @@ use AdsManager\Standalone;
 use AdsManager\Value;
 
 // A1 additions are counted separately so the v1 baseline stays comparable.
-$checks = ['v1' => 0, 'a1' => 0, 'presets' => 0, 'videoId' => 0, 'lms' => 0, 'rotation' => 0];
+$checks = ['v1' => 0, 'a1' => 0, 'presets' => 0, 'videoId' => 0, 'lms' => 0, 'rotation' => 0, 'r1' => 0];
 function same(mixed $actual, mixed $expected, string $message, string $group = 'v1'): void
 {
     global $checks;
@@ -76,7 +76,7 @@ fails(fn () => $app->dispatch('POST', 'login', ['username' => 'tester', 'passwor
 $app->dispatch('POST', 'login', ['username' => 'tester', 'password' => 'test-password-12345'], $anon['csrfToken']);
 same($host->authenticated(), true, 'hashed account login');
 same($host->csrfToken() !== $anon['csrfToken'], true, 'login rotates CSRF');
-same($app->dispatch('GET', 'bootstrap', [])['user'], ['displayName' => 'tester'], 'standalone bootstrap user is the login ID', 'a1');
+same($app->dispatch('GET', 'bootstrap', [])['user'], ['displayName' => 'tester', 'canWrite' => true], 'standalone bootstrap user is the login ID', 'a1');
 fails(fn () => $app->dispatch('GET', 'creative-save', []), 400, 'GET cannot mutate');
 
 // Real persisted versions are used to canonicalize the shared playback fixture.
@@ -823,10 +823,118 @@ for ($index = 0; $index < 30; $index++) {
     $previewSeen[$preview['ads'][0]['itemId']] = count($preview['ads']) === 1 && !array_key_exists('rotation', $preview);
 }
 same([count($previewSeen) >= 2, array_unique(array_values($previewSeen))], [true, [true]], 'schedule-preview also picks one ad per request', 'rotation');
+// R1 logo library, preset logo values and ad requests. Counted as their own group.
+$logoFile = function (string $name, string $bytes) use ($directory): string {
+    file_put_contents($path = $directory . '/' . $name, $bytes);
+    return $path;
+};
+$png = function (int $width, int $height): string {
+    $image = imagecreatetruecolor($width, $height);
+    ob_start();
+    imagepng($image);
+    return ob_get_clean();
+};
+$svg = fn (string $body, string $attributes = 'viewBox="0 0 200 60"'): string => '<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' . $attributes . '>' . $body . '</svg>';
+$logoList = $app->dispatch('GET', 'logos', []);
+same([$logoList['items'][0]['logoId'], $logoList['items'][0]['builtIn'], $logoList['items'][0]['url'], count($logoList['items']), $logoList['limits']], ['sample', true, '/player/logo-sample.svg', 1, ['bytes' => min(1048576, \AdsManager\Creatives::uploadLimit($config)), 'count' => 50, 'mimes' => ['image/png', 'image/svg+xml', 'image/gif', 'image/webp', 'image/jpeg']]], 'the library starts with the built-in sample beside the player', 'r1');
+same(\AdsManager\Logos::inspect($logoFile('wide.png', $png(400, 120)), 'wide.png'), ['mime' => 'image/png', 'width' => 400, 'height' => 120], 'a PNG keeps its pixel size', 'r1');
+same(\AdsManager\Logos::inspect($logoFile('mark.svg', $svg('<rect width="10" height="10" fill="url(#g)"/><use href="#r"/>')), 'mark.svg'), ['mime' => 'image/svg+xml', 'width' => 200, 'height' => 60], 'a drawing-only SVG passes with its viewBox size', 'r1');
+rejects(fn () => \AdsManager\Logos::inspect($logoFile('fake.png', 'not an image'), 'fake.png'), 422, 'validation', 'file', 'a text file named .png is refused', 'r1');
+rejects(fn () => \AdsManager\Logos::inspect($logoFile('clip.mp4', "\x00\x00\x00\x18ftypmp42\x00\x00\x00\x00mp42isom"), 'clip.mp4'), 422, 'validation', 'file', 'a video is not a logo', 'r1');
+foreach ([
+    'script' => '<script>alert(1)</script>',
+    'event attribute' => '<rect onload="alert(1)"/>',
+    'foreignObject' => '<foreignObject><div xmlns="http://www.w3.org/1999/xhtml">x</div></foreignObject>',
+    'external href' => '<image href="https://example.com/a.png"/>',
+    'external xlink:href' => '<use xlink:href="other.svg#a"/>',
+    'svg data URI' => '<image href="data:image/svg+xml;base64,PHN2Zy8+"/>',
+    'external CSS url' => '<style>rect { fill: url(https://example.com/x) }</style>',
+    'CSS import' => '<style>@import "x.css";</style>',
+    'javascript: link' => '<a href="#x"><set attributeName="href" to="javascript:alert(1)"/></a>',
+] as $case => $body) {
+    rejects(fn () => \AdsManager\Logos::inspect($logoFile('unsafe.svg', $svg($body)), 'unsafe.svg'), 422, 'validation', 'file', 'an SVG with ' . $case . ' is refused', 'r1');
+}
+rejects(fn () => \AdsManager\Logos::inspect($logoFile('dtd.svg', '<?xml version="1.0"?><!DOCTYPE svg [<!ENTITY x "y">]><svg xmlns="http://www.w3.org/2000/svg">&x;</svg>'), 'dtd.svg'), 422, 'validation', 'file', 'an SVG with a DTD is refused', 'r1');
+rejects(fn () => \AdsManager\Logos::inspect($logoFile('html.svg', '<html><body>x</body></html>'), 'html.svg'), 422, 'validation', 'file', 'a .svg that is not SVG is refused', 'r1');
+
+$stored = $app->logos->store([], $logoFile('brand.png', $png(240, 80)), '브랜드 로고.png', copy(...));
+$logoId = $stored['logo']['logoId'];
+same([preg_match('/^[0-9a-f]{32}$/D', $logoId), $stored['logo']['name'], $stored['logo']['url'], $stored['logo']['inUse'], is_file($config['uploadRoot'] . '/' . $logoId . '.png'), array_column($stored['items'], 'logoId')], [1, '브랜드 로고', '/media/' . $logoId . '.png', false, true, ['sample', $logoId]], 'an upload is kept under a hex name and listed after the sample', 'r1');
+rejects(fn () => $app->logos->store([], $logoFile('big.png', str_repeat('x', 1048577)), 'big.png', copy(...)), 413, 'upload_size', null, 'a logo over 1MB is refused', 'r1');
+rejects(fn () => $app->dispatch('POST', 'logo-delete', ['logoId' => 'sample'], $host->csrfToken()), 400, 'logo_builtin', null, 'the sample cannot be deleted', 'r1');
+rejects(fn () => $app->dispatch('POST', 'logo-delete', ['logoId' => str_repeat('a', 32)], $host->csrfToken()), 404, 'logo_not_found', null, 'an unknown logo is not found', 'r1');
+rejects(fn () => $app->dispatch('POST', 'logo-delete', ['logoId' => $logoId], 'wrong'), 403, 'csrf', null, 'deleting a logo needs the CSRF token', 'r1');
+
+// Preset logo values: a library id is checked on save, an image address only by its form, and both never render yet.
+$logoRevision = $app->dispatch('GET', 'player-presets', [])['revision'];
+rejects(fn () => $app->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'name' => '로고', 'logo' => ['assetId' => str_repeat('b', 32)]], 'revision' => $logoRevision], $host->csrfToken()), 422, 'validation', 'logo.assetId', 'a library id that is not stored is refused', 'r1');
+$logoPreset = $app->dispatch('POST', 'player-preset-save', ['preset' => [...$base, 'name' => '로고', 'logo' => ['assetId' => $logoId]], 'revision' => $logoRevision], $host->csrfToken())['preset'];
+same([$logoPreset['logo']['assetId'], array_key_exists('url', $logoPreset['logo']), $app->dispatch('GET', 'player-preset', ['id' => $logoPreset['id']])['logo']], [$logoId, false, null], 'an uploaded logo saves but renders no logo until the player accepts it', 'r1');
+same($app->dispatch('GET', 'logos', [])['items'][1]['inUse'], true, 'the library marks a logo a preset uses', 'r1');
+rejects(fn () => $app->dispatch('POST', 'logo-delete', ['logoId' => $logoId], $host->csrfToken()), 409, 'logo_in_use', null, 'a logo in use cannot be deleted', 'r1');
+same(array_keys($accept([...$base, 'logo' => ['url' => 'https://cdn.example.com/logo.webp', 'width' => 100]])['logo']), ['assetId', 'url', 'position', 'margin', 'width', 'opacity', 'href', 'alt', 'hideDuringAds', 'hideWithControls'], 'logo.url sits after assetId when set', 'r1');
+same([array_key_exists('url', $accept($base)['logo']), $accept([...$base, 'logo' => ['url' => '']])['logo'] === $accept($base)['logo'], $accept([...$base, 'logo' => ['url' => '/ads/media/a.png']])['logo']['url']], [false, true, '/ads/media/a.png'], 'an empty logo.url leaves no key; a root-relative path is kept', 'r1');
+foreach (['http://example.com/a.png' => 'https:// 주소만', '//example.com/a.png' => 'https://로', 'javascript:alert(1)' => 'https://로', 'https://example.com/a b.png' => 'https://로', 'https://' => 'https://로', 'https://example.com/' . str_repeat('a', 2040) => 'https://로'] as $url => $message) {
+    rejects(fn () => $accept([...$base, 'logo' => ['url' => $url]]), 422, 'validation', 'logo.url', 'logo.url refuses ' . substr($url, 0, 30), 'r1');
+}
+rejects(fn () => $accept([...$base, 'logo' => ['assetId' => 'sample', 'url' => 'https://example.com/a.png']]), 422, 'validation', 'logo.url', 'a library logo and an image address together are refused', 'r1');
+rejects(fn () => $accept([...$nativeBase, 'logo' => ['url' => 'https://example.com/a.png']]), 422, 'validation', 'logo.url', 'native players refuse logo.url', 'r1');
+$urlPreset = $app->dispatch('POST', 'player-preset-save', ['preset' => [...$logoPreset, 'logo' => ['assetId' => null, 'url' => 'https://cdn.example.com/logo.webp']], 'revision' => $logoRevision + 1], $host->csrfToken())['preset'];
+$listedUrl = array_values(array_filter($app->dispatch('GET', 'player-presets', [])['presets'], fn (array $preset): bool => $preset['id'] === $urlPreset['id']))[0];
+same([$listedUrl['logo']['url'], array_slice(array_keys($listedUrl['logo']), 0, 2), $app->dispatch('GET', 'player-preset', ['id' => $urlPreset['id']])['logo']], ['https://cdn.example.com/logo.webp', ['assetId', 'url'], null], 'an image address is stored after assetId and not rendered yet', 'r1');
+$sampleRender = $app->dispatch('GET', 'player-preset', ['id' => $app->dispatch('POST', 'player-preset-save', ['preset' => [...$urlPreset, 'logo' => ['assetId' => 'sample']], 'revision' => $logoRevision + 2], $host->csrfToken())['preset']['id']])['logo'];
+same($sampleRender['src'], 'logo-sample.svg', 'the sample logo still renders as before', 'r1');
+$afterDelete = $app->dispatch('POST', 'logo-delete', ['logoId' => $logoId], $host->csrfToken());
+same([array_column($afterDelete['items'], 'logoId'), is_file($config['uploadRoot'] . '/' . $logoId . '.png')], [['sample'], false], 'an unused logo is deleted with its file', 'r1');
+$app->dispatch('POST', 'player-preset-delete', ['id' => $urlPreset['id'], 'revision' => $logoRevision + 3], $host->csrfToken());
+
+// Ad requests: the standalone host has none; a host with request boards gets the same masking from AdRequests.
+same([$app->dispatch('GET', 'bootstrap', [])['capabilities']['adRequests'], $app->dispatch('GET', 'bootstrap', [])['capabilities']['logos']], [false, true], 'standalone bootstrap has no ad requests but has logos', 'r1');
+rejects(fn () => $app->dispatch('GET', 'ad-requests', []), 404, 'action_not_found', null, 'ad-requests does not exist without request boards', 'r1');
+rejects(fn () => $app->dispatch('GET', 'ad-request', ['boardId' => 'b', 'postId' => '1']), 404, 'action_not_found', null, 'ad-request does not exist without request boards', 'r1');
+$requestRow = ['bo_table' => 'ad_request', 'wr_id' => '7', 'wr_subject' => '가을 프리롤', 'ca_name' => '검토', 'wr_1' => '솔카페', 'wr_2' => '2026-11-01', 'wr_3' => '2026-11-31', 'wr_4' => '프리롤', 'wr_5' => '5000', 'wr_6' => 'https://example.com/', 'wr_7' => '', 'wr_8' => '010-1234-5612', 'wr_9' => 'video', 'wr_10' => '', 'wr_datetime' => '2026-10-20 12:00:00', 'wr_last' => '2026-10-21 09:30:00', 'wr_comment' => '1', 'wr_option' => 'html1,secret', 'wr_content' => '<p>안녕하세요 &amp; 반가워요</p><script>x()</script>둘째 줄', 'wr_name' => '김솔애', 'mb_id' => 'solcafe', 'wr_email' => 'owner@example.com', 'wr_ip' => '203.0.113.9', 'wr_password' => 'hash'];
+$requestComments = [['wr_id' => '9', 'wr_name' => '운영 담당', 'wr_datetime' => '2026-10-21 09:30:00', 'wr_1' => '검토', 'wr_content' => '확인했어요.', 'wr_option' => ''], ['wr_id' => '10', 'wr_name' => '김솔애', 'wr_datetime' => '2026-10-21 10:00:00', 'wr_1' => '', 'wr_content' => "보완\r\n했어요", 'wr_option' => '']];
+$requestFiles = [['name' => 'ad.mp4', 'size' => 1024, 'url' => '/data/file/ad_request/x.mp4', 'media' => true], ['name' => '참고.pdf', 'size' => 10, 'url' => '/data/file/ad_request/y.pdf', 'media' => false]];
+$requestHost = new class($db, $config, $requestRow, $requestComments, $requestFiles) extends Host {
+    public bool $write = false;
+    public function __construct(Database $db, array $config, private array $row, private array $comments, private array $files) { parent::__construct($db, $config); }
+    public function authenticated(): bool { return true; }
+    public function displayName(): string { return '데모'; }
+    public function csrfToken(): string { return 'site-token'; }
+    public function verifyCsrf(mixed $token): void {}
+    public function resolveVideoContext(string $videoId): array { return ['videoId' => $videoId, 'boardId' => null, 'categoryId' => null]; }
+    public function capabilities(): array { return ['host' => 'gnuboard']; }
+    public function targets(string $type, string $query, ?string $boardId): array { return []; }
+    public function lectures(): bool { return false; }
+    public function canWrite(): bool { return $this->write; }
+    public function adRequests(): bool { return true; }
+    public function adRequestList(array $query): array { return ['query' => $query, 'counts' => \AdsManager\AdRequests::counts(['검토' => 2, '' => 1, '옛 상태' => 1, '집행' => 3]), 'items' => [\AdsManager\AdRequests::item($this->row, '/bbs/board.php?bo_table=ad_request&wr_id=7', true, 'Asia/Seoul')]]; }
+    public function adRequestDetail(string $boardId, int $postId, bool $masked): array { return ['request' => \AdsManager\AdRequests::detail(['bo_subject' => '광고 요청'], $this->row, $this->files, $this->comments, ['boardId' => 'video', 'name' => '영상'], '/bbs/board.php?bo_table=ad_request&wr_id=7', $masked, 'Asia/Seoul'), 'masked' => $masked]; }
+};
+$requestApp = new App($db, $config, $requestHost);
+$requestBoot = $requestApp->dispatch('GET', 'bootstrap', []);
+same([$requestBoot['user']['canWrite'], $requestBoot['capabilities']['adRequests']], [false, true], 'bootstrap tells a read-only administrator and the request capability', 'r1');
+$requestList = $requestApp->dispatch('GET', 'ad-requests', ['status' => '검토', 'query' => ' 카페 ', 'page' => '2']);
+same([$requestList['query'], $requestList['counts'], $requestList['masked']], [['status' => '검토', 'query' => '카페', 'page' => 2], ['all' => 7, '접수' => 2, '검토' => 2, '보완 요청' => 0, '집행 예정' => 0, '집행' => 3, '종료' => 0, '반려' => 0], true], 'list filters are parsed and unknown categories count as new requests', 'r1');
+same($requestList['items'][0], ['boardId' => 'ad_request', 'postId' => 7, 'title' => '가을 프리롤', 'status' => '검토', 'tone' => 'pending', 'advertiser' => '솔카페', 'startDate' => '2026-11-01', 'endDate' => null, 'position' => '프리롤', 'impressions' => 5000, 'createdAt' => '2026-10-20T03:00:00Z', 'comments' => 1, 'hasMedia' => true, 'secret' => true, 'url' => '/bbs/board.php?bo_table=ad_request&wr_id=7'], 'a list row has its fields, an invalid date as null and no personal data', 'r1');
+foreach ([['status' => '보류'], ['page' => '0'], ['page' => '1.5'], ['query' => str_repeat('가', 101)]] as $input) {
+    rejects(fn () => $requestApp->dispatch('GET', 'ad-requests', $input), 422, 'validation', array_key_first($input), 'list input refuses ' . Value::json($input), 'r1');
+}
+rejects(fn () => $requestApp->dispatch('GET', 'ad-request', ['boardId' => 'ad_request', 'postId' => 'x']), 422, 'validation', 'postId', 'a post number must be a positive integer', 'r1');
+$maskedRequest = $requestApp->dispatch('GET', 'ad-request', ['boardId' => 'ad_request', 'postId' => '7']);
+$request = $maskedRequest['request'];
+same([$maskedRequest['masked'], $request['contact'], $request['extra']['wr_8'], $request['author'], array_column($request['history'], 'author')], [true, '010-****-**12', '010-****-**12', ['name' => '김**', 'memberId' => null, 'email' => null], ['운****', '김**']], 'a read-only administrator gets the contact and authors masked', 'r1');
+same(str_contains(Value::json($maskedRequest), '203.0.113.9') || str_contains(Value::json($maskedRequest), 'hash') || str_contains(Value::json($maskedRequest), 'solcafe'), false, 'no IP, password or member ID leaks while masked', 'r1');
+same([$request['content'], $request['history'][1]['content'], array_column($request['history'], 'status'), $request['updatedAt'], $request['targetBoard'], array_column($request['files'], 'kind'), array_column($request['files'], 'media')], ["안녕하세요 & 반가워요\n둘째 줄", "보완\n했어요", ['검토', null], '2026-10-21T00:30:00Z', ['boardId' => 'video', 'name' => '영상'], ['video', 'other'], [true, false]], 'the body is plain text and the history keeps its status changes', 'r1');
+$requestHost->write = true;
+$openRequest = $requestApp->dispatch('GET', 'ad-request', ['boardId' => 'ad_request', 'postId' => '7']);
+same([$openRequest['masked'], $openRequest['request']['contact'], $openRequest['request']['author'], str_contains(Value::json($openRequest), '203.0.113.9')], [false, '010-1234-5612', ['name' => '김솔애', 'memberId' => 'solcafe', 'email' => 'owner@example.com'], false], 'an administrator with write permission sees the contact but never the IP', 'r1');
+same([\AdsManager\AdRequests::maskContact('12345'), \AdsManager\AdRequests::maskContact('owner@example.com'), \AdsManager\AdRequests::maskContact(null)], ['*****', 'own**@*******.*om', null], 'short contacts are fully masked; letters mask like digits', 'r1');
 fwrite(STDOUT, 'PASS ' . $checks['v1'] . ' persistence/authorization/publication/collector/statistics assertions (' . $db->driver . ").\n");
 fwrite(STDOUT, 'PASS ' . $checks['a1'] . " A1 bootstrap user/capability assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['presets'] . " A1-API-4/A2-1 player preset assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['videoId'] . " A1-FIX-API-2 video ID assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['lms'] . " L-1 lecture progress, notes and preroll assertions (counted separately).\n");
 fwrite(STDOUT, 'PASS ' . $checks['rotation'] . " ROT random ad rotation assertions (counted separately).\n");
+fwrite(STDOUT, 'PASS ' . $checks['r1'] . " R1 logo library, preset logo and ad request assertions (counted separately).\n");
 fwrite(STDOUT, 'Isolated test prefix: ' . $config['tablePrefix'] . '; SQLite/test files: ' . $directory . "\n");

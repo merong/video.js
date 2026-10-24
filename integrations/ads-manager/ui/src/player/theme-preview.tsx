@@ -121,6 +121,11 @@ export interface ThemePreviewProps {
    * tallest size, but not below 512px; a lower window scrolls the body instead.
    */
   fitHeight?: boolean | undefined;
+  /**
+   * Logo image address the frame draws instead of the preset's sample logo, such as an uploaded logo or an image URL
+   * the runtime preset cannot name; sent as `logo` only when given.
+   */
+  logoSrc?: string | null | undefined;
 }
 
 interface PreviewMessage {
@@ -130,6 +135,7 @@ interface PreviewMessage {
   schedule?: unknown;
   content?: string;
   title?: string;
+  logo?: string;
 }
 
 interface FrameState {
@@ -314,12 +320,12 @@ function useFitWidth(view: RefObject<HTMLDivElement | null>, enabled: boolean): 
  *
  * It renders the inside of a `sa-ppv` card; the caller owns the card and its heading.
  */
-export function ThemePreview({ preset, examplesUrl, source, demo, fitHeight = false }: ThemePreviewProps) {
+export function ThemePreview({ preset, examplesUrl, source, demo, fitHeight = false, logoSrc }: ThemePreviewProps) {
   const ids = useId();
   const frame = useRef<HTMLIFrameElement>(null);
   const view = useRef<HTMLDivElement>(null);
   const [pageLang, setPageLang] = useState<PageLanguage>('ko');
-  const latest = useRef({ preset, pageLang, source });
+  const latest = useRef({ preset, pageLang, source, logoSrc });
   const loaded = useRef(false);
   // Whether the document behind the latest `load` said `loading`; reset at every `load`.
   const heard = useRef(false);
@@ -347,7 +353,7 @@ export function ThemePreview({ preset, examplesUrl, source, demo, fitHeight = fa
   const scale = width && room ? Math.min(1, room / width) : 1;
 
   function post() {
-    const { preset: value, pageLang: lang, source: played } = latest.current;
+    const { preset: value, pageLang: lang, source: played, logoSrc: logo } = latest.current;
     const message: PreviewMessage = { type: PREVIEW_MESSAGE, preset: value };
 
     // The page language only matters while the preset leaves the language empty.
@@ -361,6 +367,8 @@ export function ThemePreview({ preset, examplesUrl, source, demo, fitHeight = fa
 
       if (title) message.title = title;
     }
+
+    if (logo) message.logo = logo;
 
     frame.current?.contentWindow?.postMessage(message, location.origin);
   }
@@ -381,10 +389,10 @@ export function ThemePreview({ preset, examplesUrl, source, demo, fitHeight = fa
   }, []);
 
   useEffect(() => {
-    latest.current = { preset, pageLang, source };
+    latest.current = { preset, pageLang, source, logoSrc };
 
     if (loaded.current) post();
-  }, [preset, pageLang, source]);
+  }, [preset, pageLang, source, logoSrc]);
 
   useEffect(() => {
     if (!src) return;

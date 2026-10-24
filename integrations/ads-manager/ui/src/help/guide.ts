@@ -88,8 +88,9 @@ const HELP_MENUS = {
     {
       route: 'requests',
       name: '광고 요청',
-      summary: '회원이 보낸 광고 요청 목록과 상세, 처리 단계를 예시로 보여 줘요.',
-      states: [{ state: 'mock' }],
+      summary:
+        '회원이 광고 요청 게시판에 올린 요청을 상태별로 보고, 내용과 처리 기록을 열어 봐요. 처리는 게시판에서 해요.',
+      states: [{ state: 'live' }],
     },
     {
       route: 'house',

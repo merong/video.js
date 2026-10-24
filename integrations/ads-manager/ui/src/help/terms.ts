@@ -875,13 +875,15 @@ export const HELP_TERMS = {
   },
   'ad-request': {
     category: 'gnuboard',
-    state: 'mock',
+    state: 'live',
     hosts: ['gnuboard'],
     name: '광고 요청',
-    summary: '회원이 사이트에 광고 게재를 신청하고 관리자가 검토하는 흐름이에요. 지금은 목업 화면이라 처리되지 않아요.',
-    detail: '목업은 접수, 검토, 보완 요청, 집행 예정, 집행, 종료, 반려 7단계로 보여 줘요. 기획 초안과 다를 수 있어요.',
+    summary:
+      '회원이 광고 요청 게시판에 광고 게재를 신청하고 관리자가 검토하는 흐름이에요. 광고 요청 메뉴에서 모아 볼 수 있어요.',
+    detail:
+      '게시판 분류가 상태예요. 접수, 검토, 보완 요청, 집행 예정, 집행, 종료, 반려 7단계이고, 상태 바꾸기와 답변은 게시판에서 해요.',
     motionLabel: '요청이 접수, 검토, 집행 예정, 집행, 종료로 넘어가고, 갈림길로 보완 요청과 반려가 있는 그림이에요.',
-    screens: '광고 요청(목업)',
+    screens: '광고 요청',
   },
 } satisfies Record<HelpTermId, HelpTermData>;
 

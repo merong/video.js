@@ -22,6 +22,8 @@ export interface RequestOptions {
   data?: unknown;
   query?: Record<string, string | number | null | undefined>;
   csv?: boolean;
+  /** Overrides the default timeout, e.g. for a slow server-side job. */
+  timeoutMs?: number;
 }
 
 interface Envelope {
@@ -58,7 +60,7 @@ export class AdminApi {
 
   request(action: string, options: RequestOptions & { csv: true }): Promise<Blob>;
   request<T>(action: string, options?: RequestOptions): Promise<T>;
-  async request<T>(action: string, { data, query, csv = false }: RequestOptions = {}): Promise<T | Blob> {
+  async request<T>(action: string, { data, query, csv = false, timeoutMs }: RequestOptions = {}): Promise<T | Blob> {
     const write = data !== undefined;
     const multipart = data instanceof FormData;
     const headers = new Headers({ Accept: csv ? 'text/csv' : 'application/json' });
@@ -68,7 +70,7 @@ export class AdminApi {
     if (write && !multipart) headers.set('Content-Type', 'application/json');
 
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), multipart ? UPLOAD_TIMEOUT_MS : JSON_TIMEOUT_MS);
+    const timer = setTimeout(() => controller.abort(), timeoutMs ?? (multipart ? UPLOAD_TIMEOUT_MS : JSON_TIMEOUT_MS));
 
     try {
       const init: RequestInit = {

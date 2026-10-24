@@ -12,8 +12,10 @@ import { CreativesScreen } from '../screens/CreativesScreen';
 import { LmsScreen } from '../screens/LmsScreen';
 import { PlayerSettingsScreen } from '../screens/PlayerSettingsScreen';
 import { PlayersScreen } from '../screens/PlayersScreen';
+import { RequestsScreen } from '../screens/RequestsScreen';
 import { ScheduleScreen } from '../screens/ScheduleScreen';
 import { StatsScreen } from '../screens/StatsScreen';
+import { VideosScreen } from '../screens/VideosScreen';
 import { useMediaQuery } from './media-query';
 import { MenuIcon, NavIcon } from './nav-icons';
 import {
@@ -249,6 +251,10 @@ function RouteView({
       );
     case 'stats':
       return <StatsScreen titleId={titleId} title={route.label} />;
+    case 'requests':
+      return <RequestsScreen titleId={titleId} title={route.label} activation={activation} />;
+    case 'videos':
+      return <VideosScreen titleId={titleId} title={route.label} activation={activation} />;
     case 'help':
       // `path` is null while hidden, so coming back to the same term changes `termId` and focuses its heading again.
       return <HelpScreen host={host} termId={path || undefined} titleId={titleId} />;

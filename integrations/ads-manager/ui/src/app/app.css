@@ -148,17 +148,18 @@
 }
 
 /* Preset editor (A2 canvas): 1280 is section list, sections and a sticky preview; narrower widths stack the section
-   chips or select and the folding preview above the sections. `PresetEditor` picks the width class. */
+   chips or select and the folding preview above the sections. `PresetEditor` picks the width class. The basic and
+   theme sections (`top`) span the sections and preview columns so the theme cards get room for three to a row. */
 .aa-editor {
   display: grid;
-  grid-template-areas: "nav main preview";
+  grid-template-areas: "nav top top" "nav main preview";
   grid-template-columns: 200px minmax(0, 1fr) minmax(0, 360px);
   gap: var(--gap-lg);
   align-items: start;
 }
 
 .aa-editor:not(.is-wide) {
-  grid-template-areas: "nav" "preview" "main";
+  grid-template-areas: "nav" "preview" "top" "main";
   grid-template-columns: minmax(0, 1fr);
   gap: var(--gap-md);
 }
@@ -173,6 +174,11 @@
 
 .aa-editor:not(.is-wide) .aa-editor-nav {
   top: 0;
+}
+
+.aa-editor-top {
+  grid-area: top;
+  min-width: 0;
 }
 
 .aa-editor-main {
@@ -194,26 +200,35 @@
 /* Without the section list (the GnuBoard settings page) the preview takes the wider column, and the narrower widths
    put it above the sections. */
 .aa-editor.is-plain.is-wide {
-  grid-template-areas: "main preview";
+  grid-template-areas: "top top" "main preview";
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
 }
 
 .aa-editor.is-plain:not(.is-wide) {
-  grid-template-areas: "preview" "main";
+  grid-template-areas: "preview" "top" "main";
 }
 
+/* Theme cards: at most three to a row, each at least 200px; at 768px and below always two, so six cards stay short. */
 .aa-theme-cards {
+  --_gap: var(--gap-md);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
-  gap: var(--gap-sm);
+  grid-template-columns: repeat(auto-fill, minmax(max(200px, (100% - 2 * var(--_gap)) / 3), 1fr));
+  gap: var(--_gap);
+}
+
+@media (max-width: 768px) {
+  .aa-theme-cards {
+    --_gap: var(--gap-sm);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .aa-theme-card {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   align-content: start;
   min-width: 0;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius-control);
   background: var(--panel);
@@ -240,6 +255,7 @@
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 .aa-theme-name {
@@ -289,4 +305,209 @@
   .aa-main .sa-split {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+/* Ad request detail: plain text keeps its line breaks, and media previews stay small. */
+.aa-pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.aa-request-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--gap-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aa-request-media a {
+  overflow-wrap: anywhere;
+}
+
+/* A long click address or file name wraps instead of widening the dialog on a phone. */
+.aa-request-detail {
+  min-width: 0;
+}
+
+.aa-request-detail .sa-kv td {
+  overflow-wrap: anywhere;
+}
+
+.aa-request-thumb > video,
+.aa-request-thumb > img {
+  max-height: 160px;
+}
+
+/* Uploaded videos (R1-MEDIA): the ffmpeg and board cards side by side on wide screens, small covers in the table. */
+.aa-videos-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: var(--gap-md);
+  align-items: start;
+}
+
+.aa-videos-boards {
+  display: grid;
+  gap: var(--gap-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aa-videos-boards > li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-md);
+}
+
+.aa-videos-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-xs);
+}
+
+.aa-videos-cover {
+  display: block;
+  width: 64px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--line-2);
+}
+
+.aa-videos-actions {
+  flex-wrap: nowrap;
+}
+
+.aa-videos-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--gap-md);
+}
+
+.aa-videos-preview {
+  display: block;
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: var(--line-2);
+}
+
+.aa-videos-preview.is-sprite {
+  object-fit: cover;
+  object-position: left top;
+}
+
+.aa-videos-preview.is-empty {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  color: var(--sub);
+  font-size: 12px;
+}
+
+/* Logo section: the chosen logo on dark and light, the library grid and the address row. */
+.aa-logo-stage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+}
+
+.aa-logo-stage.is-empty {
+  grid-template-columns: minmax(0, 1fr);
+  padding: var(--gap-lg);
+  background: var(--panel-2);
+}
+
+.aa-logo-bg {
+  display: grid;
+  place-items: center;
+  min-height: 96px;
+  padding: var(--gap-md);
+}
+
+.aa-logo-bg.is-dark {
+  background: var(--dark);
+}
+
+.aa-logo-bg.is-light {
+  background-color: #ffffff;
+  background-image: conic-gradient(#e6e6e6 25%, transparent 0 50%, #e6e6e6 0 75%, transparent 0);
+  background-size: 16px 16px;
+}
+
+.aa-logo-bg img {
+  max-width: min(200px, 90%);
+  max-height: 72px;
+}
+
+.aa-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--gap-md);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.aa-logo-grid > legend {
+  margin-bottom: var(--gap-sm);
+  padding: 0;
+}
+
+.aa-logo-card {
+  position: relative;
+  display: grid;
+  gap: var(--gap-sm);
+  align-content: start;
+  padding: var(--gap-sm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+}
+
+.aa-logo-card.is-selected {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 1px var(--focus-ring);
+}
+
+.aa-logo-card:has(input:focus-visible) {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.aa-logo-pick {
+  display: grid;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.aa-logo-pick input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.aa-logo-pick .sa-name {
+  overflow-wrap: anywhere;
+}
+
+.aa-logo-thumb {
+  display: grid;
+  place-items: center;
+  height: 64px;
+  border-radius: var(--radius-tag);
+  background: var(--dark);
+}
+
+.aa-logo-thumb img {
+  max-width: 85%;
+  max-height: 48px;
 }

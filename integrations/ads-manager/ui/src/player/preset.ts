@@ -78,9 +78,12 @@ export interface PlayerControls {
   readonly seekPlacement: SeekPlacement | null;
 }
 
-/** Video.js only. Logo uploads are not here yet, so `assetId` is a built-in image or `null`. */
+/** Video.js only. One image at most: a library logo (`assetId`) or an image address (`url`). */
 export interface PlayerLogo {
-  readonly assetId: LogoAssetId | null;
+  /** A built-in image id or an uploaded logo's 32-character hex id; the server checks the library has it. */
+  readonly assetId: string | null;
+  /** An `https://` or same-site `/` image address; the key exists only when set (contract R1 3). */
+  readonly url?: string;
   readonly position: LogoPosition | null;
   readonly margin: number | null;
   readonly width: number | null;
@@ -205,7 +208,7 @@ export type PresetErrorCode =
   | 'player_type'
   /** `playback.muted: false` while `playback.autoplay` is true. */
   | 'conflict'
-  /** A field accepted only by a later release: a `logo.assetId` that is not built in, until logo uploads exist. */
+  /** A field accepted only by a later release, or a `logo.assetId` that is neither built in nor a library id. */
   | 'unavailable';
 
 export interface PresetError {
@@ -448,6 +451,7 @@ const controlKeys = [
 ] as const satisfies readonly (keyof PlayerControls)[];
 const logoKeys = [
   'assetId',
+  'url',
   'position',
   'margin',
   'width',
@@ -457,6 +461,7 @@ const logoKeys = [
   'hideDuringAds',
   'hideWithControls',
 ] as const satisfies readonly (keyof PlayerLogo)[];
+const logoLayoutKeys = logoKeys.filter((key) => key !== 'assetId' && key !== 'url');
 const lmsKeys = [
   'enabled',
   'resume',
@@ -496,6 +501,10 @@ const colorPattern = /^#[0-9a-f]{6}$/;
 const alphaColorPattern = /^#[0-9a-f]{6}(?:[0-9a-f]{2})?$/;
 const idPattern = /^p-[a-z0-9]{10}$/;
 const hrefPattern = /^https?:\/\/[^/?#]+/;
+// An uploaded logo's id: the 32-character hex file name the library stores it under.
+const logoIdPattern = /^[0-9a-f]{32}$/;
+// `https://host/…` or a same-site path; `//host` would take the page's scheme.
+const imageUrlPattern = /^(?:https:\/\/[^/?#]+|\/(?!\/))/;
 
 /** Untrusted JSON, read once at the boundary so the rules below work on known shapes. */
 type Field =
@@ -656,6 +665,18 @@ class PresetReader {
 
     return hrefPattern.test(value) && !/\s/u.test(value) ? value : this.fail(path, 'format');
   }
+
+  /** An `https://` URL or a `/` path of at most 2048 characters with no spaces or control characters. */
+  imageUrl(fields: Fields, path: string): string | null {
+    const value = this.text(fields, path);
+    if (value === null) return null;
+
+    if (controlPattern.test(value)) return this.fail(path, 'control');
+
+    if ([...value].length > 2048) return this.fail(path, 'length');
+
+    return imageUrlPattern.test(value) && !/\s/u.test(value) ? value : this.fail(path, 'format');
+  }
 }
 
 /** Validate untrusted preset input against schema v2 2.1, returning every failing field path. */
@@ -727,13 +748,14 @@ export function parsePlayerPreset(value: unknown): PresetResult {
   };
   const logoInput = read.group(input, 'logo', logoKeys);
   const assetId = read.text(logoInput, 'logo.assetId');
-  const builtInLogo = assetId !== null && isLogoAsset(assetId) ? assetId : null;
+  const knownLogo = assetId !== null && (isLogoAsset(assetId) || logoIdPattern.test(assetId)) ? assetId : null;
+  const logoUrl = read.imageUrl(logoInput, 'logo.url');
 
-  // Logo uploads are not here yet, so only a built-in image id is accepted.
-  if (assetId !== null && builtInLogo === null) read.fail('logo.assetId', 'unavailable');
+  if (assetId !== null && knownLogo === null) read.fail('logo.assetId', 'unavailable');
 
-  const logo: PlayerLogo = {
-    assetId: builtInLogo,
+  if (knownLogo !== null && logoUrl !== null) read.fail('logo.url', 'conflict');
+
+  const logoLayout = {
     position: read.choice(logoInput, 'logo.position', [
       'top-left',
       'top-right',
@@ -748,6 +770,9 @@ export function parsePlayerPreset(value: unknown): PresetResult {
     hideDuringAds: read.bool(logoInput, 'logo.hideDuringAds'),
     hideWithControls: read.bool(logoInput, 'logo.hideWithControls'),
   };
+  // `logo.url` exists only when set (contract R1 3).
+  const logo: PlayerLogo =
+    logoUrl === null ? { assetId: knownLogo, ...logoLayout } : { assetId: knownLogo, url: logoUrl, ...logoLayout };
   const adsInput = read.group(input, 'ads', [
     'labels',
     'accentColor',
@@ -812,7 +837,9 @@ export function parsePlayerPreset(value: unknown): PresetResult {
       ['display.title', display.title],
       ...inputKeys.map((key) => [`input.${key}`, inputs[key]] as const),
       ...controlKeys.map((key) => [`controls.${key}`, controls[key]] as const),
-      ...logoKeys.map((key) => [`logo.${key}`, key === 'assetId' ? assetId : logo[key]] as const),
+      ['logo.assetId', assetId],
+      ['logo.url', logoUrl],
+      ...logoLayoutKeys.map((key) => [`logo.${key}`, logo[key]] as const),
       ['lms.enabled', lms.enabled],
       ['lms.resume', lms.resume],
       ['lms.seekLimit', lms.seekLimit],
@@ -864,9 +891,13 @@ function isLogoAsset(id: string): id is LogoAssetId {
   return Object.hasOwn(LOGO_ASSETS, id);
 }
 
-/** The render `logo`: `null` without an image, otherwise every layout value filled with its default. */
+/**
+ * The render `logo`: `null` without a built-in image, otherwise every layout value filled with its default. Uploaded
+ * logos and image addresses render `null` until the site player can draw them (contract R1 3); the admin preview passes
+ * their address as `preview.logo`.
+ */
 function logoRender(logo: PlayerLogo): PresetLogoRender | null {
-  if (logo.assetId === null) return null;
+  if (logo.assetId === null || !isLogoAsset(logo.assetId)) return null;
 
   return {
     src: LOGO_ASSETS[logo.assetId],

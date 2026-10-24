@@ -118,7 +118,15 @@ describe('routesFor', () => {
       '리포트',
       '설정',
     ]);
-    expect(labels('gnuboard')).toEqual(['광고 요청', '하우스 광고', '지면 편성', '플레이어 설정', '통계', '설정']);
+    expect(labels('gnuboard')).toEqual([
+      '광고 요청',
+      '하우스 광고',
+      '지면 편성',
+      '플레이어 설정',
+      '업로드 동영상',
+      '통계',
+      '설정',
+    ]);
   });
 
   it('groups the menus under section labels', () => {
@@ -254,8 +262,12 @@ describe('App', () => {
     expect(screen.queryByLabelText('비밀번호')).toBeNull();
   });
 
-  it('renders the GnuBoard menu, lands on house ads and keeps mocks off the API', async () => {
-    const fetch = serve({ bootstrap: () => ok(bootstrap('gnuboard')), creatives: () => ok({ items: [] }) });
+  it('renders the GnuBoard menu, lands on house ads and loads ad requests only when opened', async () => {
+    const fetch = serve({
+      bootstrap: () => ok(bootstrap('gnuboard')),
+      creatives: () => ok({ items: [] }),
+      'ad-requests': () => ok({ boards: [], items: [], counts: {}, total: 0, page: 1, perPage: 20, masked: false }),
+    });
 
     renderApp();
 
@@ -270,8 +282,9 @@ describe('App', () => {
     location.hash = '#/requests';
     window.dispatchEvent(new HashChangeEvent('hashchange'));
 
-    expect(await screen.findByText('목업 · 아직 동작하지 않아요')).toBeTruthy();
-    expect(actions(fetch)).toEqual(['bootstrap', 'creatives']);
+    expect(await screen.findByText('광고 요청 게시판이 없어요.')).toBeTruthy();
+    expect(screen.queryByText('목업 · 아직 동작하지 않아요')).toBeNull();
+    expect(actions(fetch)).toEqual(['bootstrap', 'creatives', 'ad-requests']);
   });
 
   it('opens 집행 만들기 from the top bar as a mock screen without API requests (QA B12)', async () => {
@@ -304,10 +317,10 @@ describe('App', () => {
         .map((link) => link.textContent);
 
     expect(links('광고')).toEqual(['광고 요청', '하우스 광고', '지면 편성']);
-    expect(links('플레이어')).toEqual(['플레이어 설정']);
+    expect(links('플레이어')).toEqual(['플레이어 설정', '업로드 동영상']);
     expect(links('분석')).toEqual(['통계']);
     expect(links('시스템')).toEqual(['설정']);
-    expect(nav.querySelectorAll('a > svg[aria-hidden="true"]')).toHaveLength(6);
+    expect(nav.querySelectorAll('a > svg[aria-hidden="true"]')).toHaveLength(7);
     // The menu is in the side bar, and wide windows have no menu button.
     expect(within(screen.getByRole('banner')).queryByRole('navigation')).toBeNull();
     expect(screen.queryByRole('button', { name: '메뉴 열기' })).toBeNull();

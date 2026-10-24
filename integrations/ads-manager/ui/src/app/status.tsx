@@ -26,8 +26,13 @@ export interface ErrorReport {
   fields: Record<string, string>;
 }
 
+/** A 403 `forbidden` on a write: the account has the menu's read permission only (GnuBoard `r`). */
+export const READ_ONLY_TEXT = '읽기 권한만 있어 저장할 수 없어요.';
+
 export function describeError(error: unknown): ErrorReport {
   const status = error instanceof ApiError ? error.status : 0;
+  // A missing permission is not fixed by reconnecting, unlike a stale token or origin.
+  const readOnly = status === 403 && error instanceof ApiError && error.code === 'forbidden';
   let text = error instanceof Error ? error.message : '요청을 처리하지 못했어요.';
 
   if (status === 409) {
@@ -35,6 +40,8 @@ export function describeError(error: unknown): ErrorReport {
       '다른 곳에서 초안이 변경됐어요. 현재 입력은 그대로 두었어요. 내용을 확인한 뒤 서버 초안을 다시 불러와 주세요.';
   } else if (status === 401) {
     text = '로그인이 만료됐어요. 현재 입력은 그대로 두었어요. 다시 로그인한 뒤 작업을 이어가 주세요.';
+  } else if (readOnly) {
+    text = READ_ONLY_TEXT;
   } else if (status === 403) {
     text =
       '권한 또는 보안 토큰을 확인하지 못했어요. 연결을 다시 확인한 뒤 다시 시도해 주세요. 입력은 그대로 남아 있어요.';
@@ -50,7 +57,7 @@ export function describeError(error: unknown): ErrorReport {
   return {
     message: failure([text, ...extra].join(' ')),
     conflict: status === 409,
-    auth: status === 401 || status === 403,
+    auth: status === 401 || (status === 403 && !readOnly),
     fields,
   };
 }

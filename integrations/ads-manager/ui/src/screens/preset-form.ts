@@ -8,7 +8,6 @@ import {
   type PlayerAdsLabels,
   type PlayerAdsProgress,
   type PlayerControls,
-  type LogoAssetId,
   type LogoPosition,
   type PlayerInput,
   type PlayerPreset,
@@ -76,7 +75,9 @@ export interface PresetForm {
   controls: { seekButtons: FormSeekButtons; seekPlacement: FormSeekPlacement; captions: FormFlag };
   /** Number and text fields keep their raw text, like `theme`; `''` is the built-in default. */
   logo: {
-    assetId: '' | LogoAssetId;
+    /** `sample` or a library logo's id; empty with no logo or with `url`. */
+    assetId: string;
+    url: string;
     position: FormLogoPosition;
     width: string;
     margin: string;
@@ -153,6 +154,7 @@ export const PRESET_FIELD_LABELS = {
   'controls.seekPlacement': '이전·이후 버튼 위치',
   'controls.captions': '자막',
   'logo.assetId': '로고 이미지',
+  'logo.url': '로고 이미지 주소',
   'logo.position': '로고 위치',
   'logo.width': '로고 폭 (px)',
   'logo.margin': '로고 여백 (px)',
@@ -207,7 +209,9 @@ const FIELD_RULES = {
   'controls.seekButtons': '건너뛰는 폭을 다시 골라 주세요.',
   'controls.seekPlacement': '컨트롤 막대와 화면 가운데 중 한 곳 이상을 골라 주세요.',
   'controls.captions': SWITCH_RULE,
-  'logo.assetId': '로고 이미지를 다시 골라 주세요. 지금은 샘플 로고만 쓸 수 있어요.',
+  'logo.assetId': '보관함에 없는 로고예요. 다시 골라 주세요.',
+  'logo.url':
+    'https:// 또는 /로 시작하는 2048자 이내 이미지 주소를 넣어 주세요. http:// 이미지는 https 사이트에서 막혀요. 보관함 로고와 함께 쓸 수 없어요.',
   'logo.position': '로고 위치를 다시 골라 주세요.',
   'logo.width': '24–240 사이의 정수로 입력해 주세요.',
   'logo.margin': '0–48 사이의 정수로 입력해 주세요.',
@@ -347,6 +351,7 @@ export function formFromPreset(preset: PlayerPreset): PresetForm {
     },
     logo: {
       assetId: logo.assetId ?? '',
+      url: logo.url ?? '',
       position: pick(logo.position ?? '', LOGO_POSITIONS, ''),
       width: text(logo.width),
       margin: text(logo.margin),
@@ -441,7 +446,11 @@ export function updateForm(form: PresetForm, path: PresetPath, value: string): P
       next.theme.scaleUnit = pick(value, ['', 'root'], '');
       break;
     case 'logo.assetId':
-      next.logo.assetId = pick(value, ['', 'sample'], '');
+      // The schema checks the id, and the server checks the library has it.
+      next.logo.assetId = value.trim();
+      break;
+    case 'logo.url':
+      next.logo.url = value;
       break;
     case 'logo.position':
       // `top-right` is the built-in default, so it is stored as `''` like the other choices.
@@ -611,6 +620,20 @@ export function presetInput(form: PresetForm) {
   };
   // Native video saves the Video.js-only groups as all `null` (decision 27); the form still keeps them.
   const empty = DEFAULT_PLAYER_PRESET;
+  const logoUrl = optional(logo.url);
+  const logoLayout = {
+    position: logo.position || null,
+    margin: integer(logo.margin),
+    width: integer(logo.width),
+    opacity: integer(logo.opacity),
+    href: optional(logo.href),
+    alt: optional(logo.alt),
+    hideDuringAds: bool(logo.hideDuringAds),
+    hideWithControls: bool(logo.hideWithControls),
+  };
+  const assetId = logo.assetId || null;
+  // `logo.url` exists only when set (contract R1 3).
+  const logoValue = logoUrl === null ? { assetId, ...logoLayout } : { assetId, url: logoUrl, ...logoLayout };
 
   return {
     id: form.id,
@@ -642,19 +665,7 @@ export function presetInput(form: PresetForm) {
           seekButtons: form.controls.seekButtons ? Number(form.controls.seekButtons) : null,
           seekPlacement: form.controls.seekPlacement || null,
         },
-    logo: native
-      ? empty.logo
-      : {
-          assetId: logo.assetId || null,
-          position: logo.position || null,
-          margin: integer(logo.margin),
-          width: integer(logo.width),
-          opacity: integer(logo.opacity),
-          href: optional(logo.href),
-          alt: optional(logo.alt),
-          hideDuringAds: bool(logo.hideDuringAds),
-          hideWithControls: bool(logo.hideWithControls),
-        },
+    logo: native ? empty.logo : logoValue,
     ads: {
       labels: Object.fromEntries(AD_LABEL_KEYS.map((key) => [key, labels[key]])),
       accentColor: optional(ads.accentColor),

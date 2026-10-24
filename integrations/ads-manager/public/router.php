@@ -13,7 +13,7 @@ try {
     $adsMediaPrefix = rtrim(parse_url($adsConfig['uploadUrl'], PHP_URL_PATH), '/') . '/';
     if (str_starts_with($adsPath, $adsMediaPrefix)) {
         $adsName = substr($adsPath, strlen($adsMediaPrefix));
-        if (!preg_match('/^[a-f0-9]{32}\.(mp4|webm|jpg|png|webp|gif)$/D', $adsName)) {
+        if (!preg_match('/^[a-f0-9]{32}\.(mp4|webm|jpg|png|webp|gif|svg)$/D', $adsName)) {
             http_response_code(404);
             exit;
         }
@@ -22,7 +22,11 @@ try {
             http_response_code(404);
             exit;
         }
-        \AdsManager\MediaResponse::send($adsFile, (new finfo(FILEINFO_MIME_TYPE))->file($adsFile), 'public, max-age=31536000, immutable');
+        // An uploaded SVG logo (checked by Logos::inspect) is still served as an inert document: no scripts or loads.
+        if (str_ends_with($adsName, '.svg')) {
+            header("Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; sandbox");
+        }
+        \AdsManager\MediaResponse::send($adsFile, str_ends_with($adsName, '.svg') ? 'image/svg+xml' : (new finfo(FILEINFO_MIME_TYPE))->file($adsFile), 'public, max-age=31536000, immutable');
         exit;
     }
 } catch (Throwable $adsError) {

@@ -11,6 +11,7 @@ final class App
     public readonly Statistics $statistics;
     public readonly PlayerPresets $playerPresets;
     public readonly Lms $lms;
+    public readonly Logos $logos;
 
     public function __construct(public readonly Database $db, public readonly array $config, public readonly Host $host)
     {
@@ -23,14 +24,15 @@ final class App
         $this->statistics = new Statistics($db, $config);
         $this->playerPresets = new PlayerPresets($db, $host->singlePlayerPreset(), $host->lectures());
         $this->lms = new Lms($db, $config, $host, $this->playerPresets);
+        $this->logos = new Logos($db, $config, $this->playerPresets);
     }
 
     public function dispatch(string $method, string $action, array $input, mixed $csrf = null, array $files = []): array|string
     {
-        $reads = ['bootstrap', 'creatives', 'targets', 'schedule-draft', 'stats', 'stats-csv', 'schedule', 'player-presets', 'player-preset', 'lms-settings', 'lms-progress-list', 'lms-progress-csv'];
-        $writes = ['login', 'logout', 'creative-save', 'creative-upload', 'creative-archive', 'video-context-save', 'schedule-save', 'schedule-publish', 'schedule-preview', 'events', 'player-preset-save', 'player-preset-delete', 'player-preset-default', 'lms-session', 'lms-progress', 'lms-notes', 'lms-key-rotate', 'lms-test-token'];
-        // A host without lectures has no LMS actions at all, public ones included.
-        if (!in_array($action, [...$reads, ...$writes], true) || (str_starts_with($action, 'lms-') && !$this->host->lectures())) {
+        $reads = ['bootstrap', 'creatives', 'targets', 'schedule-draft', 'stats', 'stats-csv', 'schedule', 'player-presets', 'player-preset', 'lms-settings', 'lms-progress-list', 'lms-progress-csv', 'ad-requests', 'ad-request', 'logos', 'uploaded-videos', 'uploaded-video'];
+        $writes = ['login', 'logout', 'creative-save', 'creative-upload', 'creative-archive', 'video-context-save', 'schedule-save', 'schedule-publish', 'schedule-preview', 'events', 'player-preset-save', 'player-preset-delete', 'player-preset-default', 'lms-session', 'lms-progress', 'lms-notes', 'lms-key-rotate', 'lms-test-token', 'logo-upload', 'logo-delete', 'uploaded-video-generate', 'uploaded-video-delete'];
+        // A host without lectures has no LMS actions at all, public ones included; likewise ad requests.
+        if (!in_array($action, [...$reads, ...$writes], true) || (str_starts_with($action, 'lms-') && !$this->host->lectures()) || (str_starts_with($action, 'ad-request') && !$this->host->adRequests()) || (str_starts_with($action, 'uploaded-video') && !$this->host instanceof GnuBoard)) {
             throw new ApiError(404, 'action_not_found', '요청을 찾을 수 없습니다.');
         }
         if (($method === 'GET' && !in_array($action, $reads, true)) || ($method === 'POST' && !in_array($action, $writes, true)) || !in_array($method, ['GET', 'POST'], true)) {
@@ -38,12 +40,12 @@ final class App
         }
 
         if ($action === 'bootstrap') {
-            $base = ['authenticated' => $this->host->authenticated(), 'csrfToken' => $this->host->csrfToken(), 'apiUrl' => $this->config['apiUrl'], 'capabilities' => [...$this->host->capabilities(), 'playerPresets' => true, 'lms' => $this->host->lectures() ? ['installed' => $this->lms->installed()] : false]];
+            $base = ['authenticated' => $this->host->authenticated(), 'csrfToken' => $this->host->csrfToken(), 'apiUrl' => $this->config['apiUrl'], 'capabilities' => [...$this->host->capabilities(), 'playerPresets' => true, 'lms' => $this->host->lectures() ? ['installed' => $this->lms->installed()] : false, 'adRequests' => $this->host->adRequests(), 'logos' => true, 'uploadedVideos' => $this->host instanceof GnuBoard]];
             if (!$base['authenticated']) {
                 return $base;
             }
             $this->host->requireAdmin();
-            return [...$base, 'user' => ['displayName' => $this->host->displayName()], 'site' => ['siteId' => $this->config['siteId'], 'timeZone' => $this->config['timeZone']], 'playerModuleUrl' => $this->config['playerModuleUrl'], 'limits' => ['uploadBytes' => Creatives::uploadLimit($this->config)]];
+            return [...$base, 'user' => ['displayName' => $this->host->displayName(), 'canWrite' => $this->host->canWrite()], 'site' => ['siteId' => $this->config['siteId'], 'timeZone' => $this->config['timeZone']], 'playerModuleUrl' => $this->config['playerModuleUrl'], 'limits' => ['uploadBytes' => Creatives::uploadLimit($this->config)]];
         }
         if ($action === 'schedule') {
             $videoId = Value::videoId($input['videoId'] ?? null);
@@ -102,7 +104,21 @@ final class App
             'lms-test-token' => $this->lms->testToken($input),
             'lms-progress-list' => $this->lms->progressList($input),
             'lms-progress-csv' => $this->lms->csv($input),
+            'ad-requests' => [...$this->host->adRequestList(AdRequests::query($input)), 'masked' => !$this->host->canWrite()],
+            'ad-request' => $this->host->adRequestDetail(Value::text($input['boardId'] ?? null, 'boardId', 20), AdRequests::number($input['postId'] ?? null, 'postId'), !$this->host->canWrite()),
+            'logos' => $this->logos->list(),
+            'logo-upload' => $this->logos->upload($input, $files['file'] ?? []),
+            'logo-delete' => $this->logos->delete($input),
+            'uploaded-videos' => $this->uploadedVideos()->list($input, !$this->host->canWrite()),
+            'uploaded-video' => $this->uploadedVideos()->item($input),
+            'uploaded-video-generate' => $this->uploadedVideos()->generate($input),
+            'uploaded-video-delete' => $this->uploadedVideos()->delete($input),
         };
+    }
+
+    private function uploadedVideos(): UploadedVideos
+    {
+        return new UploadedVideos(VideoMedia::gnuboard());
     }
 
     private function targets(array $input): array

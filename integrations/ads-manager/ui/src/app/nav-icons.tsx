@@ -34,6 +34,12 @@ const PATHS = {
       <path d="M6.5 6v4l3.5-2z" />
     </>
   ),
+  'uploaded-videos': (
+    <>
+      <rect x="2" y="4" width="9" height="8" rx="1.5" />
+      <path d="M11 7l3-2v6l-3-2" />
+    </>
+  ),
   lms: <path d="M8 4.5c-1.5-1-3.5-1.2-5.5-1v9c2-.2 4 0 5.5 1 1.5-1 3.5-1.2 5.5-1v-9c-2-.2-4 0-5.5 1zM8 4.5v9" />,
   approvals: (
     <>

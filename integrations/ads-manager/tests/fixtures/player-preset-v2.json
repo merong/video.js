@@ -6852,12 +6852,12 @@
         "name": "테스트",
         "playerType": "videojs",
         "logo": {
-          "url": "https://example.com/logo.png"
+          "src": "https://example.com/logo.png"
         }
       },
       "expect": {
         "ok": false,
-        "field": "logo.url"
+        "field": "logo.src"
       }
     },
     {

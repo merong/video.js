@@ -3,7 +3,7 @@ import { isHelpTermId, termsFor } from '../help';
 import { DEFAULT_PLAYER_PRESET, parsePlayerPreset } from '../player';
 
 export type StandaloneMock = 'dashboard' | 'campaigns' | 'approvals' | 'reportV2' | 'settings' | 'newLineItem';
-export type GnuboardMock = 'requests' | 'settings';
+export type GnuboardMock = 'settings';
 
 export type RouteView =
   | { kind: 'creatives' }
@@ -15,6 +15,10 @@ export type RouteView =
   /** Lecture progress and LMS link, `#/lms/progress` or `#/lms/settings` (ads-lms-spec 5). */
   | { kind: 'lms' }
   | { kind: 'stats' }
+  /** GnuBoard ad requests read from the request boards (R1). */
+  | { kind: 'requests' }
+  /** GnuBoard video posts and their ffmpeg extras (R1-MEDIA). */
+  | { kind: 'videos' }
   /** Feature guide and term dictionary, `#/help[/<termId>]` (contract 3.1). A term the host hides opens the start page. */
   | { kind: 'help'; host: HostKind }
   /** Standalone report: working basic statistics followed by the v2 report mockup. */
@@ -78,16 +82,11 @@ const standalone: RouteDef[] = [
 
 // GnuBoard has no lectures, and one fixed player setting instead of presets.
 const gnuboard: RouteDef[] = [
-  {
-    id: 'requests',
-    label: '광고 요청',
-    nav: true,
-    group: '광고',
-    view: { kind: 'mock', host: 'gnuboard', screen: 'requests' },
-  },
+  { id: 'requests', label: '광고 요청', nav: true, group: '광고', view: { kind: 'requests' } },
   { id: 'house', label: '하우스 광고', nav: true, group: '광고', view: { kind: 'creatives' } },
   { id: 'schedule', label: '지면 편성', nav: true, group: '광고', view: { kind: 'schedule' } },
   { id: 'players', label: '플레이어 설정', nav: true, group: '플레이어', view: { kind: 'playerSettings' } },
+  { id: 'uploaded-videos', label: '업로드 동영상', nav: true, group: '플레이어', view: { kind: 'videos' } },
   { id: 'stats', label: '통계', nav: true, group: '분석', view: { kind: 'stats' } },
   {
     id: 'settings',
