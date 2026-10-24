@@ -108,9 +108,11 @@ function solad_theme_latest_videos($bo_table, $limit)
                            limit ".(int) $limit, false);
     $rows = array();
     while ($result && $row = sql_fetch_array($result)) {
-        $thumb = get_list_thumbnail($bo_table, $row['wr_id'], 640, 360, false, true);
+        // 게시판 목록과 같은 규칙: 만든 커버가 있으면 먼저, 없으면 첨부·본문 이미지.
+        $thumb = solad_video_thumb($bo_table, $row, 640, 360);
         $row['href'] = get_pretty_url($bo_table, $row['wr_id']);
-        $row['thumb'] = !empty($thumb['src']) ? solad_local_url($thumb['src']) : '';
+        $row['thumb'] = !empty($thumb['src']) ? $thumb['src'] : '';
+        $row['highlight'] = solad_video_highlight($bo_table, $row);
         $row['duration'] = solad_video_duration($row['wr_2']);
         $rows[] = $row;
     }
@@ -144,13 +146,15 @@ function solad_theme_demo_video($bo_table, $wr_id)
         if (!$src) {
             continue;
         }
-        $poster = solad_video_pick_file($files, SOLAD_IMAGE_EXTENSIONS);
+        // 포스터는 보기 화면과 같이 만든 커버를 먼저 쓴다.
+        $media = solad_video_media_files($bo_table, $row['wr_id']);
+        $poster = isset($media['cover']) ? null : solad_video_pick_file($files, SOLAD_IMAGE_EXTENSIONS);
         return array(
             'board' => $board,
             'row' => $row,
             'src' => $src,
             'engine' => solad_video_engine($src),
-            'poster' => $poster ? solad_video_file_url($poster) : '',
+            'poster' => isset($media['cover']) ? $media['cover'] : ($poster ? solad_video_file_url($poster) : ''),
             'href' => get_pretty_url($bo_table, $row['wr_id']),
             'settings' => solad_video_settings($board),
         );

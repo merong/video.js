@@ -4,23 +4,25 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 include_once($board_skin_path.'/solad.lib.php');
 
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+add_javascript('<script src="'.$board_skin_url.'/preview.js?v='.filemtime($board_skin_path.'/preview.js').'" defer></script>', 10);
 
 $sv_settings = solad_video_settings($board);
 $sv_src = solad_video_source($view, $view['file']);
 $sv_engine = solad_video_engine($sv_src);
 $sv_video_file = solad_video_pick_file($view['file'], SOLAD_VIDEO_EXTENSIONS);
-$sv_poster_file = solad_video_pick_file($view['file'], SOLAD_IMAGE_EXTENSIONS);
-$sv_poster = $sv_poster_file ? solad_video_file_url($sv_poster_file) : '';
-// 솔애드 영상 추가 기능: 이미지 첨부가 없으면 만든 커버를 포스터로, 진행바 썸네일 VTT가 있으면 플레이어에 넘긴다.
+// 솔애드 영상 추가 기능: 관리자가 만든 커버를 이미지 첨부보다 먼저 포스터로 쓰고, 진행바 썸네일 VTT와 하이라이트는 플레이어에 넘긴다.
+// 비밀글은 커버와 하이라이트를 쓰지 않는다.
+$sv_secret = strstr($view['wr_option'], 'secret');
 $sv_media = solad_video_media_files($bo_table, $view['wr_id']);
-if ($sv_poster === '' && isset($sv_media['cover'])) {
-    $sv_poster = $sv_media['cover'];
-}
+$sv_cover = !$sv_secret && isset($sv_media['cover']) ? $sv_media['cover'] : '';
+$sv_poster_file = $sv_cover ? null : solad_video_pick_file($view['file'], SOLAD_IMAGE_EXTENSIONS);
+$sv_poster = $sv_cover ? $sv_cover : ($sv_poster_file ? solad_video_file_url($sv_poster_file) : '');
 $sv_thumbnails = isset($sv_media['thumbnails']) ? $sv_media['thumbnails'] : '';
+$sv_highlight = !$sv_secret && isset($sv_media['highlight']) ? $sv_media['highlight'] : '';
 $sv_duration = solad_video_duration($view['wr_2']);
 $sv_next = solad_video_next_list($bo_table, $write_table, $view, 8);
 
-// 영상과 썸네일로 쓴 첨부는 첨부파일 목록에서 뺀다.
+// 영상과 포스터로 쓴 첨부는 첨부파일 목록에서 뺀다. 커버가 포스터이면 이미지 첨부는 본문 이미지로 그대로 보인다.
 $sv_used = array();
 if ($sv_video_file && $sv_src === solad_video_file_url($sv_video_file)) {
     $sv_used[] = $sv_video_file['no'];
@@ -58,7 +60,8 @@ $sv_more = $update_href || $delete_href || $reply_href || $copy_href || $move_hr
                  data-title="<?php echo get_text($view['wr_subject']); ?>"
                  <?php if ($sv_engine) { ?>data-engine="<?php echo $sv_engine; ?>"<?php } ?>
                  <?php if ($sv_poster) { ?>data-poster="<?php echo solad_attr($sv_poster); ?>"<?php } ?>
-                 <?php if ($sv_thumbnails) { ?>data-thumbnails="<?php echo solad_attr($sv_thumbnails); ?>"<?php } ?>></div>
+                 <?php if ($sv_thumbnails) { ?>data-thumbnails="<?php echo solad_attr($sv_thumbnails); ?>"<?php } ?>
+                 <?php if ($sv_highlight) { ?>data-highlight="<?php echo solad_attr($sv_highlight); ?>"<?php } ?>></div>
             <script>
             // 솔애드를 불러오지 못하면 브라우저 기본 플레이어로 본편만 보여 준다. HLS는 Safari처럼 HLS를 바로 재생하는 브라우저에서만 나온다.
             function sv_player_fallback() {
@@ -185,10 +188,12 @@ $sv_more = $update_href || $delete_href || $reply_href || $copy_href || $move_hr
             <?php foreach ($sv_next as $sv_item) {
                 $sv_thumb = solad_video_thumb($bo_table, $sv_item, 320, 180);
                 $sv_item_duration = solad_video_duration($sv_item['wr_2']);
+                // 다음 영상은 만든 하이라이트만 미리 재생한다. 외부 원본은 받지 않는다.
+                $sv_item_highlight = solad_video_highlight($bo_table, $sv_item);
             ?>
             <li>
                 <a href="<?php echo $sv_item['href']; ?>" class="sv-next-item">
-                    <span class="sv-next-thumb">
+                    <span class="sv-next-thumb"<?php echo $sv_item_highlight !== '' ? ' data-preview="'.solad_attr($sv_item_highlight).'"' : ''; ?>>
                         <?php if (!empty($sv_thumb['src'])) { ?><img src="<?php echo $sv_thumb['src']; ?>" alt="" loading="lazy"><?php } ?>
                         <?php if ($sv_item_duration) { ?><span class="sv-duration"><?php echo $sv_item_duration; ?></span><?php } ?>
                     </span>

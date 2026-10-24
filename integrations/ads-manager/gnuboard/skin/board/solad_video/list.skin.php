@@ -4,6 +4,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 include_once($board_skin_path.'/solad.lib.php');
 
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+add_javascript('<script src="'.$board_skin_url.'/preview.js?v='.filemtime($board_skin_path.'/preview.js').'" defer></script>', 10);
 
 $sv_settings = solad_video_settings($board);
 $sv_thumb_w = (int) $board[G5_IS_MOBILE ? 'bo_mobile_gallery_width' : 'bo_gallery_width'];
@@ -49,6 +50,8 @@ if ($page <= 1 && $stx === '' && $sv_sort === '' && !$wr_id) {
 }
 $sv_previews = solad_video_previews($bo_table, $sv_hero ? array_merge(array($sv_hero), $sv_items) : $sv_items);
 $sv_new_hours = (int) $board['bo_new'];
+// 만든 하이라이트가 있는 글의 썸네일 칩. 썸네일 링크는 화면 읽기에서 숨기므로 읽을 문구는 제목 링크에 따로 둔다.
+$sv_highlight_badge = '<span class="sv-highlight"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z" fill="currentColor"/></svg>하이라이트</span>';
 ?>
 
 <!-- 솔애드 동영상 갤러리 목록 { -->
@@ -171,6 +174,7 @@ $sv_new_hours = (int) $board['bo_new'];
         $sv_thumb = solad_video_thumb($board['bo_table'], $sv_item, 640, 360);
         $sv_duration = solad_video_duration($sv_item['wr_2']);
         $sv_excerpt = solad_video_excerpt($sv_item['wr_content'], 120);
+        $sv_highlight = solad_video_highlight($board['bo_table'], $sv_item);
     ?>
     <section class="sv-hero" aria-labelledby="sv_hero_title">
         <?php if ($is_checkbox) { ?><label class="sv-card-check"><input type="checkbox" name="chk_wr_id[]" value="<?php echo $sv_item['wr_id']; ?>"><span class="sound_only"><?php echo $sv_item['subject']; ?> 선택</span></label><?php } ?>
@@ -179,11 +183,12 @@ $sv_new_hours = (int) $board['bo_new'];
                 echo run_replace('thumb_image_tag', '<img src="'.$sv_thumb['src'].'" alt="'.get_text($sv_item['wr_subject']).'">', $sv_thumb);
             } else { ?><span class="sv-thumb-empty"></span><?php } ?>
             <span class="sv-play"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
+            <?php if ($sv_highlight !== '') { echo $sv_highlight_badge; } ?>
             <?php if ($sv_duration) { ?><span class="sv-duration"><?php echo $sv_duration; ?></span><?php } ?>
         </a>
         <div class="sv-hero-body">
             <p class="sv-eyebrow">최신 영상<?php echo $is_category && $sv_item['ca_name'] ? ' · '.$sv_item['ca_name'] : ''; ?></p>
-            <h3 id="sv_hero_title" class="sv-hero-title"><a href="<?php echo $sv_item['href']; ?>"><?php echo $sv_item['subject']; ?></a></h3>
+            <h3 id="sv_hero_title" class="sv-hero-title"><a href="<?php echo $sv_item['href']; ?>"><?php echo $sv_item['subject']; ?><?php if ($sv_highlight !== '') { ?><span class="sound_only"> 하이라이트 미리보기 있음</span><?php } ?></a></h3>
             <div class="sv-hero-author">
                 <span class="sv-avatar"><?php echo solad_video_avatar($sv_item['mb_id'], $sv_item['wr_name']); ?></span>
                 <span class="sv-name"><?php echo $sv_item['name']; ?></span>
@@ -205,6 +210,7 @@ $sv_new_hours = (int) $board['bo_new'];
             $sv_thumb = solad_video_thumb($board['bo_table'], $sv_item, $sv_thumb_w, $sv_thumb_h);
             $sv_current = $wr_id && $wr_id == $sv_item['wr_id'];
             $sv_secret = strstr($sv_item['wr_option'], 'secret');
+            $sv_highlight = solad_video_highlight($board['bo_table'], $sv_item);
         ?>
         <li class="sv-card<?php echo $sv_current ? ' is-current' : ''; ?>">
             <?php if ($is_checkbox) { ?>
@@ -216,6 +222,7 @@ $sv_new_hours = (int) $board['bo_new'];
                 } else { ?><span class="sv-thumb-empty"><?php echo $sv_secret ? '<i class="fa fa-lock"></i>' : ''; ?></span><?php } ?>
                 <span class="sv-play"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
                 <?php if ($is_category && $sv_item['ca_name']) { ?><span class="sv-thumb-cate"><?php echo $sv_item['ca_name']; ?></span><?php } ?>
+                <?php if ($sv_highlight !== '') { echo $sv_highlight_badge; } ?>
                 <?php if ($sv_current) { ?><span class="sv-now">재생 중</span><?php } elseif ($sv_duration) { ?><span class="sv-duration"><?php echo $sv_duration; ?></span><?php } ?>
             </a>
             <div class="sv-card-body">
@@ -224,6 +231,7 @@ $sv_new_hours = (int) $board['bo_new'];
                     <a href="<?php echo $sv_item['href']; ?>" class="sv-title">
                         <?php if ($sv_secret) { ?><i class="fa fa-lock" aria-hidden="true"></i><span class="sound_only">비밀글</span><?php } ?>
                         <?php echo $sv_item['subject']; ?>
+                        <?php if ($sv_highlight !== '') { ?><span class="sound_only">하이라이트 미리보기 있음</span><?php } ?>
                     </a>
                     <div class="sv-name"><span class="sound_only">작성자 </span><?php echo $sv_item['name']; ?></div>
                     <div class="sv-meta">
@@ -249,37 +257,6 @@ $sv_new_hours = (int) $board['bo_new'];
     <?php echo $write_pages; ?>
 </div>
 
-<script>
-// 마우스를 올리면 MP4·WebM 영상을 소리 없이 미리 재생한다. 터치 기기와 동작 줄이기 설정에서는 하지 않는다.
-(function () {
-    if (!window.matchMedia || !matchMedia("(hover: hover) and (pointer: fine)").matches || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    document.querySelectorAll("#sv_list [data-preview]").forEach(function (thumb) {
-        var timer = 0;
-        thumb.addEventListener("mouseenter", function () {
-            timer = setTimeout(function () {
-                var video = document.createElement("video");
-                video.muted = true;
-                video.loop = true;
-                video.playsInline = true;
-                video.className = "sv-thumb-preview-video";
-                video.src = thumb.getAttribute("data-preview");
-                video.addEventListener("playing", function () { thumb.classList.add("is-previewing"); });
-                thumb.appendChild(video);
-                video.play().catch(function () {});
-            }, 450);
-        });
-        thumb.addEventListener("mouseleave", function () {
-            clearTimeout(timer);
-            thumb.classList.remove("is-previewing");
-            thumb.querySelectorAll("video").forEach(function (video) {
-                video.removeAttribute("src");
-                video.load();
-                video.remove();
-            });
-        });
-    });
-})();
-</script>
 
 <?php if ($is_checkbox) { ?>
 <noscript><p>자바스크립트를 끄면 선택삭제가 확인 없이 바로 처리돼요.</p></noscript>

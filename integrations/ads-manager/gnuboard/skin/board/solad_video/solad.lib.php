@@ -227,6 +227,7 @@ function solad_video_avatar($mb_id, $name)
 function solad_video_media_files($bo_table, $wr_id)
 {
     static $features = array();
+    static $cache = array();
 
     $media = function_exists('solad_media') ? solad_media() : null;
     if (!$media) {
@@ -239,6 +240,11 @@ function solad_video_media_files($bo_table, $wr_id)
         return array();
     }
 
+    // 목록 한 쪽에서 썸네일·미리보기·배지가 같은 글을 여러 번 묻는다.
+    $key = $bo_table.':'.(int) $wr_id;
+    if (isset($cache[$key])) {
+        return $cache[$key];
+    }
     $files = $media->files($bo_table, (int) $wr_id);
     $result = array();
     foreach ($features[$bo_table] as $feature) {
@@ -246,20 +252,31 @@ function solad_video_media_files($bo_table, $wr_id)
             $result[$feature] = solad_local_url($files[$feature]);
         }
     }
-    return $result;
+    return $cache[$key] = $result;
 }
 
-// 목록 썸네일. 첨부·본문 이미지가 먼저이고, 없으면 만든 커버를 쓴다. 비밀글은 커버를 쓰지 않는다.
+// 만든 하이라이트 주소. 하이라이트 기능을 켜고 파일이 있을 때만 있고, 공지와 비밀글은 빈 문자열이다.
+function solad_video_highlight($bo_table, $row)
+{
+    if (!empty($row['is_notice']) || strstr($row['wr_option'], 'secret')) {
+        return '';
+    }
+    $media = solad_video_media_files($bo_table, $row['wr_id']);
+    return isset($media['highlight']) ? $media['highlight'] : '';
+}
+
+// 목록 썸네일. 관리자가 글마다 만든 커버가 있으면 그것을 먼저 쓰고, 없으면 첨부·본문 이미지를 쓴다.
+// 공지와 비밀글은 커버를 쓰지 않는다.
 function solad_video_thumb($bo_table, $row, $width, $height)
 {
-    $thumb = get_list_thumbnail($bo_table, $row['wr_id'], $width, $height, false, true);
-    $thumb['src'] = solad_local_url($thumb['src']);
-    if (empty($thumb['src']) && empty($row['is_notice']) && !strstr($row['wr_option'], 'secret')) {
+    if (empty($row['is_notice']) && !strstr($row['wr_option'], 'secret')) {
         $media = solad_video_media_files($bo_table, $row['wr_id']);
         if (isset($media['cover'])) {
-            $thumb['src'] = $media['cover'];
+            return array('src' => $media['cover'], 'ori' => $media['cover'], 'alt' => '');
         }
     }
+    $thumb = get_list_thumbnail($bo_table, $row['wr_id'], $width, $height, false, true);
+    $thumb['src'] = solad_local_url($thumb['src']);
     return $thumb;
 }
 
@@ -275,9 +292,9 @@ function solad_video_previews($bo_table, $list)
         if (!empty($row['is_notice']) || strstr($row['wr_option'], 'secret')) {
             continue;
         }
-        $media = solad_video_media_files($bo_table, $row['wr_id']);
-        if (isset($media['highlight'])) {
-            $previews[$row['wr_id']] = $media['highlight'];
+        $highlight = solad_video_highlight($bo_table, $row);
+        if ($highlight !== '') {
+            $previews[$row['wr_id']] = $highlight;
             continue;
         }
         $type = solad_video_source_type($row);

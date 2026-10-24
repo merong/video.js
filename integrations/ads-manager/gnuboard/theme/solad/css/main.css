@@ -876,6 +876,28 @@
   bottom: 10px;
   font-family: var(--sl-font-num);
 }
+/* 만든 하이라이트가 있는 영상: 왼쪽 아래 칩(게시판 목록 .sv-highlight와 같은 모양) */
+.sl-card-highlight {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px 2px 6px;
+  border: 1px solid rgba(205, 243, 82, 0.55);
+  border-radius: 999px;
+  background: rgba(14, 14, 16, 0.78);
+  color: var(--sl-accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.sl-card-highlight svg {
+  flex: none;
+}
 .sl-card-play {
   position: absolute;
   top: 50%;

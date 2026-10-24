@@ -297,6 +297,7 @@ for (const player of players) {
                     <span class="sl-card-thumb"<?php echo isset($sl_previews[$sl_video['wr_id']]) ? ' data-preview="'.solad_attr($sl_previews[$sl_video['wr_id']]).'"' : ''; ?>>
                         <?php if ($sl_video['thumb']) { ?><img src="<?php echo $sl_video['thumb']; ?>" alt="" loading="lazy"><?php } else { ?><span class="sl-card-empty" aria-hidden="true"></span><?php } ?>
                         <?php if ($sl_video['ca_name']) { ?><span class="sl-card-cate"><?php echo get_text($sl_video['ca_name']); ?></span><?php } ?>
+                        <?php if ($sl_video['highlight'] !== '') { ?><span class="sl-card-highlight"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z" fill="currentColor"/></svg>하이라이트<span class="sound_only"> 미리보기 있음</span></span><?php } ?>
                         <?php if ($sl_video['duration']) { ?><span class="sl-card-time"><span class="sound_only">재생 시간 </span><?php echo $sl_video['duration']; ?></span><?php } ?>
                         <span class="sl-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.6v12.8c0 .8.9 1.3 1.6.8l10-6.4c.6-.4.6-1.3 0-1.7l-10-6.4C8.9 4.3 8 4.8 8 5.6Z" fill="currentColor"/></svg></span>
                     </span>

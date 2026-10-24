@@ -674,6 +674,28 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* 만든 하이라이트가 있는 글: 썸네일 왼쪽 아래 칩. 위 모서리는 분류와 선택 상자, 오른쪽 아래는 재생 시간이 쓴다. */
+.sv-highlight {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px 2px 6px;
+  border: 1px solid rgba(205, 243, 82, 0.55);
+  border-radius: 999px;
+  background: rgba(14, 14, 16, 0.78);
+  color: var(--sv-accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.sv-highlight svg {
+  flex: none;
+}
 .sv-card.is-current .sv-thumb {
   box-shadow: 0 0 0 2px var(--sv-accent);
 }
@@ -1279,6 +1301,9 @@ summary.sv-pill:hover {
 .sv-next-item:hover .sv-next-thumb,
 .sv-next-item:focus-visible .sv-next-thumb {
   box-shadow: 0 0 0 2px rgba(205, 243, 82, 0.6);
+}
+.sv-next-thumb.is-previewing .sv-thumb-preview-video {
+  opacity: 1;
 }
 .sv-next-thumb img {
   display: block;
