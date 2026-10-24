@@ -131,6 +131,13 @@ export const INSTALL_OPTIONS = [
           '자막 파일이에요. 플레이어 화면 언어의 자막으로 붙이고 처음에는 꺼 둬요. 자막 버튼은 프리셋의 자막이 정하고, Video.js 플레이어에서만 써요.',
       },
       {
+        name: 'data-highlight',
+        type: '/경로 또는 http(s):// 주소',
+        defaultValue: '없음',
+        description:
+          '재생 전 포스터에 마우스를 올리면 소리 없이 보여 줄 짧은 하이라이트 영상이에요. Video.js 플레이어에서만 쓰고, 강의와 LMS, 미리보기에서는 쓰지 않아요.',
+      },
+      {
         name: 'data-autoplay',
         type: 'true | false',
         defaultValue: '프리셋 값, 없으면 false',

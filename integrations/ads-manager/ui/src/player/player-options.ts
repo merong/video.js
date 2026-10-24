@@ -86,6 +86,14 @@ const loaderData: PlayerOptionGroup = {
       status: 'preview',
     },
     {
+      name: 'data-highlight',
+      type: '/경로 또는 http(s):// 주소',
+      defaultValue: '없음',
+      description:
+        '재생 전 포스터에 마우스를 올리면 소리 없이 보여 줄 짧은 하이라이트 영상이에요. Video.js 플레이어에서만 쓰고, 강의와 LMS, 미리보기에서는 쓰지 않아요.',
+      status: 'preview',
+    },
+    {
       name: 'data-autoplay',
       type: 'true | false',
       defaultValue: '프리셋 값, 없으면 false',
