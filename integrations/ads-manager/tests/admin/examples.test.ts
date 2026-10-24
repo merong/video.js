@@ -977,6 +977,7 @@ describe('startPreviewFrame', () => {
       expect(test.mount.mock.calls[1]![1].preview).toEqual({
         schedule: SAMPLE_SCHEDULE_URL,
         preset,
+        logo: null,
         scene: 'before-midroll',
       });
       expect(test.statuses().slice(-2)).toEqual(['loading', 'ready']);
