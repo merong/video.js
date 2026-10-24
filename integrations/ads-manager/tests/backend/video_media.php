@@ -131,6 +131,43 @@ try {
     same($error->errorCode, 'feature_disabled', 'a feature off in the board is refused');
 }
 
+// Cover frame choice with a stand-in ffmpeg: the scan's keyframe statistics pick the -ss time, a failed scan falls back to 10%.
+$coverRunner = function (array $scan) use (&$commands) {
+    return function (array $command) use ($scan, &$commands) {
+        $commands[] = $command;
+        if (in_array('-version', $command, true)) {
+            return ['code' => 0, 'out' => basename($command[0]) . " version 4.2.7\n", 'err' => ''];
+        }
+        if (basename($command[0]) === 'ffprobe') {
+            return ['code' => 0, 'out' => "20.0\n", 'err' => ''];
+        }
+        if (in_array('-skip_frame', $command, true)) {
+            return $scan;
+        }
+        file_put_contents(end($command), 'jpeg');
+        return ['code' => 0, 'out' => '', 'err' => ''];
+    };
+};
+$frame = fn (float $time, float $average, float $low, float $high) => "frame:0    pts:0       pts_time:$time\nlavfi.signalstats.YMIN=0\nlavfi.signalstats.YLOW=$low\nlavfi.signalstats.YAVG=$average\nlavfi.signalstats.YHIGH=$high\n";
+$commands = [];
+$seek = function () use (&$commands) {
+    $last = end($commands);
+    return $last[array_search('-ss', $last, true) + 1];
+};
+$stats = $frame(0, 120, 20, 230) . $frame(4, 12, 2, 20) . $frame(8, 240, 236, 250) . $frame(12, 90, 30, 160) . $frame(16, 110, 40, 150) . $frame(19.5, 128, 0, 255);
+$stub = new VideoMedia($data, '/data', '/opt/x/ffmpeg', '/opt/x/ffprobe', runner: $coverRunner(['code' => 0, 'out' => $stats, 'err' => '']));
+same($stub->generate('video', 5, $data . '/file/video/clip.mp4', 'cover'), null, 'a stand-in cover generates');
+same($seek(), '12.000', 'the widest spread inside 5–95% wins over dark, white and edge frames');
+same(array_values(array_filter($commands, fn ($command) => $command[0] === '/opt/x/ffmpeg' && !in_array('-version', $command, true))) === array_values(array_filter($commands, fn ($command) => $command[0] === '/opt/x/ffmpeg' && in_array('-protocol_whitelist', $command, true) && in_array('-nostdin', $command, true))), true, 'every ffmpeg run keeps the whitelist and -nostdin');
+$commands = [];
+$failed = new VideoMedia($data, '/data', '/opt/x/ffmpeg', '/opt/x/ffprobe', runner: $coverRunner(['code' => 1, 'out' => '', 'err' => 'scan failed']));
+same([$failed->generate('video', 5, $data . '/file/video/clip.mp4', 'cover'), $seek()], [null, '2.000'], 'a failed scan falls back to 10%');
+$commands = [];
+$black = new VideoMedia($data, '/data', '/opt/x/ffmpeg', '/opt/x/ffprobe', runner: $coverRunner(['code' => 0, 'out' => $frame(0, 16, 16, 16) . $frame(2, 16, 16, 16) . $frame(6, 17, 16, 18), 'err' => '']));
+same([$black->generate('video', 5, $data . '/file/video/clip.mp4', 'cover'), $seek()], [null, '6.000'], 'an all-dark video still gets its least dark frame');
+same(glob($data . '/file/video/solad/5/*'), [$data . '/file/video/solad/5/cover.jpg'], 'only cover.jpg remains');
+$blocked->remove('video', 5);
+
 // Real ffmpeg
 $real = new VideoMedia($data, '/data');
 if ($real->detect()['available']) {
@@ -148,6 +185,43 @@ if ($real->detect()['available']) {
     $real->remove('video', 3);
     same(is_dir($data . '/file/video/solad/3'), false, 'the post folder removed');
     same($real->generate('video', 4, $root . '/outside.mp4', 'cover'), '영상 파일을 찾지 못했어요.', 'generate rechecks the input path');
+
+    // A video whose first 60% is black: the old 10% frame was black. Also through an unpacked HLS playlist.
+    $ffmpeg = $real->detect()['ffmpeg']['path'];
+    $make = function (array $arguments) use ($ffmpeg) {
+        $process = proc_open([$ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error', '-y', ...$arguments], [1 => ['pipe', 'w'], 2 => ['pipe', 'w']], $pipes);
+        $error = stream_get_contents($pipes[2]);
+        fclose($pipes[1]);
+        fclose($pipes[2]);
+        if (proc_close($process) !== 0) {
+            throw new RuntimeException('ffmpeg fixture failed: ' . $error);
+        }
+    };
+    $dark = $data . '/file/video/dark.mp4';
+    $make(['-f', 'lavfi', '-i', 'color=c=black:s=320x180:r=10:d=10', '-f', 'lavfi', '-i', 'testsrc=s=320x180:r=10:d=10', '-filter_complex', "[0:v][1:v]overlay=enable='gte(t,6)'", '-c:v', 'libx264', '-g', '10', '-pix_fmt', 'yuv420p', $dark]);
+    mkdir($data . '/file/video/hls/6', 0700, true);
+    $make(['-i', $dark, '-c', 'copy', '-hls_time', '2', '-hls_playlist_type', 'vod', '-f', 'hls', $data . '/file/video/hls/6/index.m3u8']);
+    $brightness = function (string $file): float {
+        $image = imagecreatefromjpeg($file);
+        [$width, $height] = [imagesx($image), imagesy($image)];
+        $sum = 0;
+        $count = 0;
+        for ($y = 0; $y < $height; $y += 4) {
+            for ($x = 0; $x < $width; $x += 4) {
+                $rgb = imagecolorat($image, $x, $y);
+                $sum += 0.299 * ($rgb >> 16 & 255) + 0.587 * ($rgb >> 8 & 255) + 0.114 * ($rgb & 255);
+                $count++;
+            }
+        }
+        return $sum / $count;
+    };
+    foreach ([5 => $dark, 6 => $data . '/file/video/hls/6/index.m3u8'] as $post => $source) {
+        same($real->generate('video', $post, $real->inputPath('video', $source), 'cover'), null, "cover $post generates");
+        same(glob($data . "/file/video/solad/$post/*"), [$data . "/file/video/solad/$post/cover.jpg"], "cover $post leaves only cover.jpg");
+        if (function_exists('imagecreatefromjpeg')) {
+            same($brightness($data . "/file/video/solad/$post/cover.jpg") > 60, true, "cover $post avoids the black opening");
+        }
+    }
 } else {
     echo "ffmpeg not found; generation checks skipped\n";
 }

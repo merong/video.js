@@ -20,6 +20,12 @@ final class VideoMedia
     private const SPRITE_WIDTH = 160;
     private const SPRITE_MAX = 100;
     private const HIGHLIGHT_SECONDS = 4;
+    // The cover keyframe scan's share of the cover time limit; the frame extraction gets the rest.
+    private const COVER_SCAN_SECONDS = 40;
+    // Covers prefer this part of the video: the first and last moments are often black or a title card.
+    private const COVER_RANGE = [0.05, 0.95];
+    // stdout keeps the scan's per-keyframe statistics (about 1 KB each); stderr only needs its last lines.
+    private const OUTPUT_LIMITS = [8388608, 65536];
 
     private static ?self $gnuboard = null;
     private ?array $detected = null;
@@ -210,8 +216,46 @@ final class VideoMedia
 
     private function cover(string $input, string $whitelist, float $duration, string $directory): ?string
     {
-        $at = sprintf('%.3f', $duration * 0.1);
-        return $this->encode($directory, 'cover.jpg', 'cover', fn ($out) => ['-ss', $at, '-i', $input, '-frames:v', '1', '-vf', "scale='min(1280,iw)':-2", '-q:v', '3', $out], $whitelist);
+        $started = microtime(true);
+        $at = sprintf('%.3f', $this->coverTime($input, $whitelist, $duration) ?? $duration * 0.1);
+        $timeout = max(5, self::TIMEOUTS['cover'] - (int) ceil(microtime(true) - $started));
+        return $this->encode($directory, 'cover.jpg', 'cover', fn ($out) => ['-ss', $at, '-i', $input, '-frames:v', '1', '-vf', "scale='min(1280,iw)':-2", '-q:v', '3', $out], $whitelist, $timeout);
+    }
+
+    /**
+     * The time of the keyframe that looks best as a cover, or null when the scan fails (the cover then uses 10%).
+     * Only keyframes are decoded, and signalstats gives each one's mean luma (YAVG) and its 10th–90th percentile spread
+     * (YLOW–YHIGH): the spread scores the frame, scaled down near black or white, so dark, blank and flat scenes lose.
+     * Every option here exists in ffmpeg 4.2.
+     */
+    private function coverTime(string $input, string $whitelist, float $duration): ?float
+    {
+        $run = $this->run([$this->detect()['ffmpeg']['path'], '-nostdin', '-hide_banner', '-loglevel', 'error', '-protocol_whitelist', $whitelist, '-skip_frame', 'nokey', '-i', $input, '-an', '-sn', '-dn', '-vf', 'scale=160:-2,format=yuv420p,signalstats,metadata=mode=print:file=-', '-f', 'null', '-'], self::COVER_SCAN_SECONDS);
+        if ($run['code'] !== 0) {
+            return null;
+        }
+
+        $frames = [];
+        foreach (preg_split('/\R/', $run['out']) ?: [] as $line) {
+            if (preg_match('/pts_time:(-?[0-9.]+)/', $line, $match)) {
+                $frames[] = ['time' => (float) $match[1]];
+            } elseif ($frames && preg_match('/^lavfi\.signalstats\.(YAVG|YLOW|YHIGH)=([0-9.]+)/', $line, $match)) {
+                $frames[count($frames) - 1][$match[1]] = (float) $match[2];
+            }
+        }
+        $best = null;
+        foreach ($frames as $frame) {
+            if (!isset($frame['YAVG'], $frame['YLOW'], $frame['YHIGH'])) {
+                continue;
+            }
+            $inside = $frame['time'] >= $duration * self::COVER_RANGE[0] && $frame['time'] <= $duration * self::COVER_RANGE[1];
+            $score = ($frame['YHIGH'] - $frame['YLOW']) * min(1, $frame['YAVG'] / 80) * min(1, (255 - $frame['YAVG']) / 80);
+            // Inside the range first, then the score; the earliest of equal frames stays.
+            if ($best === null || [$inside, $score] > $best['rank']) {
+                $best = ['rank' => [$inside, $score], 'time' => max(0, $frame['time'])];
+            }
+        }
+        return $best['time'] ?? null;
     }
 
     private function thumbnails(string $input, string $whitelist, float $duration, string $directory): ?string
@@ -254,11 +298,11 @@ final class VideoMedia
     }
 
     /** Runs ffmpeg into a temporary file beside the target, then moves it into place. */
-    private function encode(string $directory, string $name, string $feature, \Closure $arguments, string $whitelist): ?string
+    private function encode(string $directory, string $name, string $feature, \Closure $arguments, string $whitelist, ?int $timeout = null): ?string
     {
         $temporary = $directory . '/' . pathinfo($name, PATHINFO_FILENAME) . '.' . bin2hex(random_bytes(4)) . '.tmp.' . pathinfo($name, PATHINFO_EXTENSION);
         $command = [$this->detect()['ffmpeg']['path'], '-nostdin', '-hide_banner', '-loglevel', 'error', '-y', '-protocol_whitelist', $whitelist, ...$arguments($temporary)];
-        $run = $this->run($command, self::TIMEOUTS[$feature]);
+        $run = $this->run($command, $timeout ?? self::TIMEOUTS[$feature]);
 
         if ($run['code'] !== 0 || !is_file($temporary) || filesize($temporary) === 0) {
             @unlink($temporary);
@@ -329,7 +373,7 @@ final class VideoMedia
                 }
             }
             // Keep only the tail of chatty output.
-            $output = array_map(fn ($text) => strlen($text) > 65536 ? substr($text, -65536) : $text, $output);
+            $output = array_map(fn ($text, $limit) => strlen($text) > $limit ? substr($text, -$limit) : $text, $output, self::OUTPUT_LIMITS);
             $status = proc_get_status($process);
             if (!$status['running']) {
                 $code = $status['exitcode'];
