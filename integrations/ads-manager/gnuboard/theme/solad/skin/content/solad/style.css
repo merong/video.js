@@ -160,6 +160,20 @@
 .sl-buy-contact .sl-btn {
   margin-top: 20px;
 }
+/* 커스텀 플레이어 제작: 두 상품 카드 아래 한 줄을 다 쓰고, 문의 구획에서는 구매 문의와 선으로 나눈다. */
+.sl-buy-custom {
+  margin-top: 20px;
+}
+.sl-buy-contact h3 {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--sl-line);
+  font-size: 18px;
+  font-weight: 800;
+}
+.sl-buy-contact h3 + p {
+  margin-top: 8px;
+}
 /* 플레이어 특징(co_id=features) */
 .sl-feat-lead {
   max-width: 760px;
