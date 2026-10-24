@@ -11,6 +11,12 @@ $sv_engine = solad_video_engine($sv_src);
 $sv_video_file = solad_video_pick_file($view['file'], SOLAD_VIDEO_EXTENSIONS);
 $sv_poster_file = solad_video_pick_file($view['file'], SOLAD_IMAGE_EXTENSIONS);
 $sv_poster = $sv_poster_file ? solad_video_file_url($sv_poster_file) : '';
+// 솔애드 영상 추가 기능: 이미지 첨부가 없으면 만든 커버를 포스터로, 진행바 썸네일 VTT가 있으면 플레이어에 넘긴다.
+$sv_media = solad_video_media_files($bo_table, $view['wr_id']);
+if ($sv_poster === '' && isset($sv_media['cover'])) {
+    $sv_poster = $sv_media['cover'];
+}
+$sv_thumbnails = isset($sv_media['thumbnails']) ? $sv_media['thumbnails'] : '';
 $sv_duration = solad_video_duration($view['wr_2']);
 $sv_next = solad_video_next_list($bo_table, $write_table, $view, 8);
 
@@ -51,7 +57,8 @@ $sv_more = $update_href || $delete_href || $reply_href || $copy_href || $move_hr
                  data-src="<?php echo solad_attr($sv_src); ?>"
                  data-title="<?php echo get_text($view['wr_subject']); ?>"
                  <?php if ($sv_engine) { ?>data-engine="<?php echo $sv_engine; ?>"<?php } ?>
-                 <?php if ($sv_poster) { ?>data-poster="<?php echo solad_attr($sv_poster); ?>"<?php } ?>></div>
+                 <?php if ($sv_poster) { ?>data-poster="<?php echo solad_attr($sv_poster); ?>"<?php } ?>
+                 <?php if ($sv_thumbnails) { ?>data-thumbnails="<?php echo solad_attr($sv_thumbnails); ?>"<?php } ?>></div>
             <script>
             // 솔애드를 불러오지 못하면 브라우저 기본 플레이어로 본편만 보여 준다. HLS는 Safari처럼 HLS를 바로 재생하는 브라우저에서만 나온다.
             function sv_player_fallback() {
@@ -176,8 +183,7 @@ $sv_more = $update_href || $delete_href || $reply_href || $copy_href || $move_hr
         <?php if ($sv_next) { ?>
         <ol class="sv-next">
             <?php foreach ($sv_next as $sv_item) {
-                $sv_thumb = get_list_thumbnail($bo_table, $sv_item['wr_id'], 320, 180, false, true);
-                $sv_thumb['src'] = solad_local_url($sv_thumb['src']);
+                $sv_thumb = solad_video_thumb($bo_table, $sv_item, 320, 180);
                 $sv_item_duration = solad_video_duration($sv_item['wr_2']);
             ?>
             <li>

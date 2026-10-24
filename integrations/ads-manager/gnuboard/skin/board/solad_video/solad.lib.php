@@ -7,6 +7,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
  * 게시판 설정(관리자 > 게시판관리 > 게시판 수정)에서 읽는 값
  * - 여분필드 제목 "솔애드 주소": 솔애드 관리자를 올린 경로. 비우면 사이트 경로 + /ads.
  * - 플레이어 모양과 옵션은 솔애드 관리자 > 플레이어의 사이트 플레이어 설정을 따른다.
+ * - 여분필드 제목 "솔애드 추가 기능": ffmpeg로 만든 결과 중 쓸 것(cover,thumbnails,highlight). 게시판 수정 화면의 "솔애드 영상 추가 기능"에서 고른다.
  * - 갤러리 썸네일 폭·높이, 갤러리 이미지 수, 파일 업로드 개수·용량은 그누보드 기본 항목을 그대로 쓴다.
  *
  * 이 사이트(G5_URL) 아래의 영상·그림·솔애드 주소는 도메인 없이 루트 상대 경로(/…)로 내보낸다(solad_local_url).
@@ -221,7 +222,49 @@ function solad_video_avatar($mb_id, $name)
     return '<span class="sv-avatar-letter" style="--sv-hue:'.(crc32($name) % 360).'">'.solad_attr($letter).'</span>';
 }
 
-// 목록 카드에 마우스를 올렸을 때 재생할 MP4·WebM 주소. 쪽마다 첨부를 한 번에 읽는다. HLS는 미리보기를 하지 않는다.
+// 솔애드 영상 추가 기능(ffmpeg)으로 만든 커버·진행바 썸네일(VTT)·하이라이트 주소. 게시판에서 켠 기능이고 파일이 있을 때만 넣는다.
+// extend/solad.extend.php가 없거나 쓸 수 없으면 빈 배열이라 지금 동작 그대로다.
+function solad_video_media_files($bo_table, $wr_id)
+{
+    static $features = array();
+
+    $media = function_exists('solad_media') ? solad_media() : null;
+    if (!$media) {
+        return array();
+    }
+    if (!isset($features[$bo_table])) {
+        $features[$bo_table] = $media->boardFeatures(get_board_db($bo_table, true));
+    }
+    if (!$features[$bo_table]) {
+        return array();
+    }
+
+    $files = $media->files($bo_table, (int) $wr_id);
+    $result = array();
+    foreach ($features[$bo_table] as $feature) {
+        if (!empty($files[$feature])) {
+            $result[$feature] = solad_local_url($files[$feature]);
+        }
+    }
+    return $result;
+}
+
+// 목록 썸네일. 첨부·본문 이미지가 먼저이고, 없으면 만든 커버를 쓴다. 비밀글은 커버를 쓰지 않는다.
+function solad_video_thumb($bo_table, $row, $width, $height)
+{
+    $thumb = get_list_thumbnail($bo_table, $row['wr_id'], $width, $height, false, true);
+    $thumb['src'] = solad_local_url($thumb['src']);
+    if (empty($thumb['src']) && empty($row['is_notice']) && !strstr($row['wr_option'], 'secret')) {
+        $media = solad_video_media_files($bo_table, $row['wr_id']);
+        if (isset($media['cover'])) {
+            $thumb['src'] = $media['cover'];
+        }
+    }
+    return $thumb;
+}
+
+// 목록 카드에 마우스를 올렸을 때 재생할 주소. 만든 하이라이트가 있으면 그것을, 없으면 MP4·WebM 원본을 쓴다.
+// 쪽마다 첨부를 한 번에 읽는다. HLS는 하이라이트가 있을 때만 미리보기를 한다.
 function solad_video_previews($bo_table, $list)
 {
     global $g5;
@@ -230,6 +273,11 @@ function solad_video_previews($bo_table, $list)
     $ids = array();
     foreach ($list as $row) {
         if (!empty($row['is_notice']) || strstr($row['wr_option'], 'secret')) {
+            continue;
+        }
+        $media = solad_video_media_files($bo_table, $row['wr_id']);
+        if (isset($media['highlight'])) {
+            $previews[$row['wr_id']] = $media['highlight'];
             continue;
         }
         $type = solad_video_source_type($row);
@@ -419,9 +467,19 @@ function solad_hls_remove($bo_table, $wr_id, $keep = '')
     }
 }
 
+// 글의 HLS 폴더와 솔애드 영상 추가 기능 결과 폴더(data/file/<게시판>/solad/<글번호>/)를 지운다.
+function solad_video_remove_files($bo_table, $wr_id)
+{
+    solad_hls_remove($bo_table, $wr_id);
+    $media = function_exists('solad_media') ? solad_media() : null;
+    if ($media) {
+        $media->remove($bo_table, (int) $wr_id);
+    }
+}
+
 function solad_hls_after_delete($write, $board)
 {
-    solad_hls_remove($board['bo_table'], $write['wr_id']);
+    solad_video_remove_files($board['bo_table'], $write['wr_id']);
 }
 
 // 권한이 없어 남은 글도 있으므로 표에서 사라진 글만 고른다.
@@ -432,7 +490,7 @@ function solad_hls_after_delete_all($ids, $board)
     foreach ((array) $ids as $id) {
         $row = sql_fetch(" select wr_id from {$g5['write_prefix']}{$board['bo_table']} where wr_id = '".(int) $id."' ");
         if (empty($row['wr_id'])) {
-            solad_hls_remove($board['bo_table'], $id);
+            solad_video_remove_files($board['bo_table'], $id);
         }
     }
 }

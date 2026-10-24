@@ -168,8 +168,7 @@ $sv_new_hours = (int) $board['bo_new'];
     <?php if ($sv_hero) {
         $sv_item = $sv_hero;
         // 원본보다 큰 썸네일을 청하면 그누보드가 여백을 채워 만들므로 흔한 영상 크기에 맞춘다.
-        $sv_thumb = get_list_thumbnail($board['bo_table'], $sv_item['wr_id'], 640, 360, false, true);
-        $sv_thumb['src'] = solad_local_url($sv_thumb['src']);
+        $sv_thumb = solad_video_thumb($board['bo_table'], $sv_item, 640, 360);
         $sv_duration = solad_video_duration($sv_item['wr_2']);
         $sv_excerpt = solad_video_excerpt($sv_item['wr_content'], 120);
     ?>
@@ -203,8 +202,7 @@ $sv_new_hours = (int) $board['bo_new'];
     <ul class="sv-grid" style="--sv-cols:<?php echo max(1, (int) $bo_gallery_cols); ?>;--sv-ratio:<?php echo $sv_thumb_w; ?> / <?php echo $sv_thumb_h; ?>">
         <?php foreach ($sv_items as $sv_item) {
             $sv_duration = solad_video_duration($sv_item['wr_2']);
-            $sv_thumb = get_list_thumbnail($board['bo_table'], $sv_item['wr_id'], $sv_thumb_w, $sv_thumb_h, false, true);
-            $sv_thumb['src'] = solad_local_url($sv_thumb['src']);
+            $sv_thumb = solad_video_thumb($board['bo_table'], $sv_item, $sv_thumb_w, $sv_thumb_h);
             $sv_current = $wr_id && $wr_id == $sv_item['wr_id'];
             $sv_secret = strstr($sv_item['wr_option'], 'secret');
         ?>
