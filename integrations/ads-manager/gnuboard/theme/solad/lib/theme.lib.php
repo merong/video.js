@@ -82,15 +82,15 @@ function solad_theme_video_lib($board)
     return true;
 }
 
-// 솔애드 플레이어 주소(loader.js가 있는 곳의 상위). 동영상 게시판 설정을 따른다.
-function solad_theme_player_base($bo_table)
+// 솔애드 플레이어 loader.js 주소. 동영상 게시판 설정을 따른다.
+function solad_theme_player_loader($bo_table)
 {
     $board = get_board_db($bo_table, true);
     if ($board && solad_theme_video_lib($board)) {
         $settings = solad_video_settings($board);
-        return $settings['base'];
+        return $settings['loader'];
     }
-    return solad_theme_local_url(G5_URL.'/ads');
+    return solad_theme_local_url(G5_URL.'/ads').'/player/loader.js';
 }
 
 // 최근 영상. 비밀글과 답글은 뺀다.

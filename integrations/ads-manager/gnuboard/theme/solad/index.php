@@ -16,7 +16,7 @@ $sl_previews = $sl_videos ? solad_video_previews(SOLAD_THEME_VIDEO_BOARD, $sl_vi
 $sl_video_count = solad_theme_count_videos(SOLAD_THEME_VIDEO_BOARD);
 $sl_gallery_url = get_pretty_url(SOLAD_THEME_VIDEO_BOARD);
 $sl_request_url = get_pretty_url(SOLAD_THEME_REQUEST_BOARD);
-$sl_player_base = solad_theme_player_base(SOLAD_THEME_VIDEO_BOARD);
+$sl_player_loader = solad_theme_player_loader(SOLAD_THEME_VIDEO_BOARD);
 $sl_admin_url = solad_theme_admin_entry();
 
 $g5['title'] = '솔애드 동영상 플레이어';
@@ -132,7 +132,7 @@ const players = [
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 let loader = null;
 try {
-    loader = await import(<?php echo json_encode($sl_player_base.'/player/loader.js', JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
+    loader = await import(<?php echo json_encode($sl_player_loader, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
 } catch (error) {}
 
 for (const player of players) {
@@ -270,7 +270,7 @@ for (const player of players) {
             }
             document.getElementById("sl-demo-player").addEventListener("solad-error", sl_demo_fallback);
             </script>
-            <script type="module" src="<?php echo solad_attr($sl_player_base); ?>/player/loader.js" onerror="sl_demo_fallback()"></script>
+            <script type="module" src="<?php echo solad_attr($sl_player_loader); ?>" onerror="sl_demo_fallback()"></script>
             <?php } else { ?>
             <div class="sl-demo-frame sl-demo-empty">
                 <p>아직 올라온 영상이 없어요. 동영상 갤러리에 첫 영상을 올려 보세요.</p>

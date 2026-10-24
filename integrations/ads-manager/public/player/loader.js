@@ -15,6 +15,9 @@ import {
 
 // Read through a variable so bundler-aware test runners keep the real file URLs.
 const here = import.meta.url;
+// A page that loads this file with `?v=` gets the same version of the modules imported on demand below, so a new
+// player reaches browsers and the CDN at once. preset.js is a static import and keeps its plain address.
+const version = new URL(here).search;
 const api = new URL('../api/index.php', here);
 const SELECTOR = '[data-solad-player]';
 const PRESET_TIMEOUT = 3000;
@@ -460,7 +463,7 @@ function scheduleUrl(videoId, breaks) {
 async function lectureLayout(render, preview) {
   if (preview) return null;
 
-  const { ensureLayoutStyle } = await import(new URL('./lms-panel.js', here).href);
+  const { ensureLayoutStyle } = await import(new URL(`./lms-panel.js${version}`, here).href);
   const wrapper = document.createElement('div');
   const grid = document.createElement('div');
   const panel = document.createElement('solad-lms-panel');
@@ -530,7 +533,7 @@ async function buildVideojs(element, render, values, signal, onEvent, preview) {
   if (hls) await import(asset(`videojs/media/${tag}.js`));
 
   await import(asset('videojs/ui/seek-button.js'));
-  await import(new URL('./solad-video-skin.js', here).href);
+  await import(new URL(`./solad-video-skin.js${version}`, here).href);
 
   const module = await import(asset('ads.js'));
 
@@ -1047,7 +1050,7 @@ export async function mount(element, options = {}) {
 
   if (render.lms && render.playerType === 'videojs') {
     try {
-      const { attachLecture } = await import(new URL('./lms.js', here).href);
+      const { attachLecture } = await import(new URL(`./lms.js${version}`, here).href);
 
       if (signal.aborted) throw new DOMException('같은 요소에 플레이어를 다시 만들었습니다.', 'AbortError');
 

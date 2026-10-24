@@ -70,13 +70,32 @@ function solad_video_is_hls($url)
     return is_string($path) && preg_match('/\.m3u8$/i', $path);
 }
 
+// 이 서버의 플레이어 파일(public/player/*.js) 중 가장 늦게 바뀐 시각. loader.js 주소의 ?v=로 써서,
+// 플레이어를 다시 올리면 브라우저와 CDN이 하루 캐시를 기다리지 않고 새 파일을 받게 한다.
+function solad_video_player_version()
+{
+    static $version = null;
+
+    if ($version === null) {
+        $version = 0;
+        $dir = defined('SOLAD_MANAGER_PATH') ? rtrim((string) SOLAD_MANAGER_PATH, '/').'/public/player' : '';
+        foreach ($dir !== '' ? (glob($dir.'/*.js') ?: array()) : array() as $file) {
+            $version = max($version, (int) @filemtime($file));
+        }
+    }
+    return $version;
+}
+
 function solad_video_settings($board)
 {
-    $base = rtrim(solad_video_option($board, '솔애드 주소'), '/');
+    $option = rtrim(solad_video_option($board, '솔애드 주소'), '/');
+    $base = solad_local_url($option !== '' && solad_video_is_url($option) ? $option : G5_URL.'/ads');
+    $version = solad_video_player_version();
 
     return array(
-        'base' => solad_local_url($base !== '' && solad_video_is_url($base) ? $base : G5_URL.'/ads'),
-        'base_valid' => $base === '' || solad_video_is_url($base),
+        'base' => $base,
+        'loader' => $base.'/player/loader.js'.($version ? '?v='.$version : ''),
+        'base_valid' => $option === '' || solad_video_is_url($option),
     );
 }
 

@@ -78,7 +78,7 @@ $sv_more = $update_href || $delete_href || $reply_href || $copy_href || $move_hr
             }
             document.getElementById("sv_player").addEventListener("solad-error", sv_player_fallback);
             </script>
-            <script type="module" src="<?php echo solad_attr($sv_settings['base']); ?>/player/loader.js" onerror="sv_player_fallback()"></script>
+            <script type="module" src="<?php echo solad_attr($sv_settings['loader']); ?>" onerror="sv_player_fallback()"></script>
             <?php } else { ?>
             <div class="sv-stage-empty">
                 <?php if ($sv_poster) { ?><img src="<?php echo solad_attr($sv_poster); ?>" alt=""><?php } ?>
