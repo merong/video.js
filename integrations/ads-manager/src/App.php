@@ -110,7 +110,7 @@ final class App
             'logo-upload' => $this->logos->upload($input, $files['file'] ?? []),
             'logo-delete' => $this->logos->delete($input),
             'uploaded-videos' => $this->uploadedVideos()->list($input, !$this->host->canWrite()),
-            'uploaded-video' => $this->uploadedVideos()->item($input),
+            'uploaded-video' => $this->uploadedVideos()->item($input, !$this->host->canWrite()),
             'uploaded-video-generate' => $this->uploadedVideos()->generate($input),
             'uploaded-video-delete' => $this->uploadedVideos()->delete($input),
         };

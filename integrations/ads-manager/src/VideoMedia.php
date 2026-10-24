@@ -171,6 +171,12 @@ final class VideoMedia
         return $this->dataPath . '/file/' . $this->board($boTable) . '/' . $file;
     }
 
+    /** The root-relative URL of a board attachment. */
+    public function attachmentUrl(string $boTable, string $file): string
+    {
+        return $this->dataUrl . '/file/' . $this->board($boTable) . '/' . rawurlencode($file);
+    }
+
     /** The local file behind a root-relative data URL such as an unpacked HLS playlist. */
     public function pathFromUrl(string $url): ?string
     {

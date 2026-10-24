@@ -11,10 +11,13 @@ import {
   uploadedVideos,
   VIDEO_FEATURE_LABELS,
   VIDEO_FEATURES,
+  VIDEO_PLACE_OF,
+  VIDEO_PLACES,
   VIDEO_SOURCE_LABELS,
   type VideoBoard,
   type VideoFeature,
   type VideoFeatureStatus,
+  type VideoPlace,
 } from '../api/videos';
 import { describeError, failure, IDLE, info, Status, type Notice } from '../app/status';
 import { PageHead } from '../app/ui';
@@ -24,21 +27,22 @@ import {
   Button,
   ButtonLink,
   Card,
-  DataTable,
-  type DataTableColumn,
   Dialog,
   Input,
   KeyValue,
   Note,
+  Segmented,
   Select,
   StatusBadge,
 } from '../components';
 
 const FILTER_DELAY_MS = 400;
-const NO_FILTERS: UploadedVideoFilters = { boardId: '', query: '' };
+const NO_FILTERS: UploadedVideoFilters = { boardId: '', query: '', place: 'internal' };
 const READ_ONLY = '읽기 전용 계정이라 만들거나 지울 수 없어요.';
 const NO_FFMPEG = 'ffmpeg를 찾지 못해 만들 수 없어요.';
 const NO_FEATURES = '게시판 설정에서 켜진 기능이 없어요.';
+const EXTERNAL_NOTE = '외부 주소 영상은 사이트에 파일이 없어 커버, 진행바 썸네일, 하이라이트를 만들 수 없어요.';
+const HIDDEN_SECRET = '비밀글이라 숨겼어요.';
 const INSTALL_HINT =
   '서버에 ffmpeg를 설치해 주세요(예: apt install ffmpeg). 다른 경로에 있으면 그누보드 설정의 SOLAD_FFMPEG_PATH로 알려 주세요.';
 
@@ -58,6 +62,21 @@ const STATUS_SUFFIX = {
   unsupported: '못 만듦',
   error: '오류',
 } satisfies Record<VideoFeatureStatus, string>;
+
+const PLACE_LABELS = { internal: '내부 영상', external: '외부 주소' } satisfies Record<VideoPlace, string>;
+
+/** What the location row calls the address: a site path or an outside URL. */
+const ADDRESS_LABELS = { internal: '경로', external: '주소' } satisfies Record<VideoPlace, string>;
+
+const NO_ADDRESS = {
+  internal: '영상 파일을 찾지 못했어요.',
+  external: '영상 주소가 없어요.',
+} satisfies Record<VideoPlace, string>;
+
+const EMPTY_PLACE = {
+  internal: { title: '사이트에 올린 영상이 없어요.', description: '동영상 게시판에 영상 파일을 올리면 여기에 보여요.' },
+  external: { title: '외부 주소 영상이 없어요.', description: '동영상 게시판 글에 영상 주소를 적으면 여기에 보여요.' },
+} satisfies Record<VideoPlace, { title: string; description: string }>;
 
 const STATUS_WORDS = {
   ready: '만들었어요',
@@ -93,7 +112,10 @@ const keyOf = (video: Pick<UploadedVideo, 'boardId' | 'postId'>) => `${video.boa
 /** The query with `next` filters; a real change goes back to the first page, and no change keeps the same object. */
 function filterQuery(current: VideoQuery, next: Partial<UploadedVideoFilters>): VideoQuery {
   const filters = { ...current.filters, ...next };
-  const same = filters.query.trim() === current.filters.query.trim() && filters.boardId === current.filters.boardId;
+  const same =
+    filters.query.trim() === current.filters.query.trim() &&
+    filters.boardId === current.filters.boardId &&
+    filters.place === current.filters.place;
 
   return same ? current : { filters, page: 1, refresh: false };
 }
@@ -162,7 +184,9 @@ export function VideosScreen({ titleId, title, activation }: VideosScreenProps) 
   const loading = !loadFailure && loaded?.query !== query;
   const boards = result?.boards ?? [];
   const media = result?.media ?? null;
+  const place = query.filters.place;
   const filtered = Boolean(query.filters.query.trim() || query.filters.boardId);
+  const items = result?.items ?? [];
   const total = result?.total ?? 0;
   const pages = result ? Math.max(1, Math.ceil(total / result.pageSize)) : 1;
   const openedVideo = result?.items.find((video) => keyOf(video) === opened) ?? null;
@@ -170,9 +194,10 @@ export function VideosScreen({ titleId, title, activation }: VideosScreenProps) 
   const apply = (next: Partial<UploadedVideoFilters>) => setQuery((current) => filterQuery(current, next));
   const reload = (refresh = false) => setQuery((current) => ({ ...current, refresh }));
   const go = (page: number) => setQuery((current) => ({ ...current, page, refresh: false }));
+  // Clearing the filters keeps the place tab.
   const clear = () => {
     setDraft('');
-    setQuery({ filters: NO_FILTERS, page: 1, refresh: false });
+    setQuery((current) => ({ filters: { ...NO_FILTERS, place: current.filters.place }, page: 1, refresh: false }));
   };
   const submit = (event: FormEvent) => {
     event.preventDefault();
@@ -250,16 +275,21 @@ export function VideosScreen({ titleId, title, activation }: VideosScreenProps) 
           <BoardsCard boards={result ? boards : null} />
         </div>
         {!session.canWrite ? <Note>{READ_ONLY}</Note> : null}
-        <DataTable
-          caption="업로드 동영상 목록"
-          hideCaption
-          dense
-          className="aa-videos-table"
-          columns={videoColumns(boards.length > 1, actions)}
-          rows={result?.items ?? []}
-          rowKey={keyOf}
-          toolbar={
-            <form className="sa-row" role="search" aria-label="업로드 동영상 검색" onSubmit={submit}>
+        <Segmented
+          label="영상 위치"
+          value={place}
+          options={VIDEO_PLACES.map((value) => ({
+            value,
+            label: result?.counts
+              ? `${PLACE_LABELS[value]} ${result.counts[value].toLocaleString('ko-KR')}`
+              : PLACE_LABELS[value],
+          }))}
+          onChange={(value) => apply({ place: value })}
+        />
+        {place === 'external' ? <Note>{EXTERNAL_NOTE}</Note> : null}
+        <div className="sa-card is-flush sa-dense">
+          <div className="sa-toolbar">
+            <form className="sa-row aa-videos-search" role="search" aria-label="업로드 동영상 검색" onSubmit={submit}>
               <h2 className="sa-card-title">영상 {total.toLocaleString('ko-KR')}개</h2>
               <span className="sa-spacer" />
               {boards.length > 1 ? (
@@ -288,45 +318,54 @@ export function VideosScreen({ titleId, title, activation }: VideosScreenProps) 
                 검색
               </Button>
             </form>
-          }
-          empty={
-            !result
-              ? { title: loadFailure ? '영상 목록을 불러오지 못했어요.' : '영상 목록을 불러오는 중이에요.' }
-              : filtered
-                ? {
-                    title: '조건에 맞는 영상이 없어요.',
-                    description: (
-                      <Button size="sm" onClick={clear}>
-                        거름 지우기
-                      </Button>
-                    ),
-                  }
-                : boards.length === 0
-                  ? {
-                      title: '동영상 게시판이 없어요.',
-                      description: '게시판 스킨을 솔애드 동영상(solad_video)으로 고른 게시판이 있어야 영상이 모여요.',
-                    }
-                  : { title: '아직 올린 영상이 없어요.', description: '동영상 게시판에 글을 쓰면 여기에 보여요.' }
-          }
-          after={
-            total > 0 && result && pages > 1 ? (
-              <nav className="sa-pager" aria-label="쪽 넘김">
-                <span className="sa-pager-total">영상 {total.toLocaleString('ko-KR')}개</span>
-                <div className="sa-pager-nav">
-                  <Button size="sm" disabled={result.page <= 1} onClick={() => go(result.page - 1)}>
-                    이전
+          </div>
+          {items.length > 0 ? (
+            <ul className="aa-videos-list" aria-label="업로드 동영상 목록" aria-busy={loading || undefined}>
+              {items.map((video) => (
+                <VideoItem key={keyOf(video)} video={video} showBoard={boards.length > 1} actions={actions} />
+              ))}
+            </ul>
+          ) : (
+            <div className="sa-empty">
+              {!result ? (
+                <b>{loadFailure ? '영상 목록을 불러오지 못했어요.' : '영상 목록을 불러오는 중이에요.'}</b>
+              ) : filtered ? (
+                <>
+                  <b>조건에 맞는 영상이 없어요.</b>
+                  <Button size="sm" onClick={clear}>
+                    거름 지우기
                   </Button>
-                  <span className="sa-pager-now" aria-current="page">
-                    {result.page} / {pages}쪽
-                  </span>
-                  <Button size="sm" disabled={result.page >= pages} onClick={() => go(result.page + 1)}>
-                    다음
-                  </Button>
-                </div>
-              </nav>
-            ) : undefined
-          }
-        />
+                </>
+              ) : boards.length === 0 ? (
+                <>
+                  <b>동영상 게시판이 없어요.</b>
+                  게시판 스킨을 솔애드 동영상(solad_video)으로 고른 게시판이 있어야 영상이 모여요.
+                </>
+              ) : (
+                <>
+                  <b>{EMPTY_PLACE[place].title}</b>
+                  {EMPTY_PLACE[place].description}
+                </>
+              )}
+            </div>
+          )}
+          {total > 0 && result && pages > 1 ? (
+            <nav className="sa-pager" aria-label="쪽 넘김">
+              <span className="sa-pager-total">영상 {total.toLocaleString('ko-KR')}개</span>
+              <div className="sa-pager-nav">
+                <Button size="sm" disabled={result.page <= 1} onClick={() => go(result.page - 1)}>
+                  이전
+                </Button>
+                <span className="sa-pager-now" aria-current="page">
+                  {result.page} / {pages}쪽
+                </span>
+                <Button size="sm" disabled={result.page >= pages} onClick={() => go(result.page + 1)}>
+                  다음
+                </Button>
+              </div>
+            </nav>
+          ) : null}
+        </div>
         {loadFailure ? (
           <Note
             tone="bad"
@@ -446,57 +485,50 @@ interface RowActions {
   onOpen: (video: UploadedVideo) => void;
 }
 
-function videoColumns(showBoard: boolean, actions: RowActions): DataTableColumn<UploadedVideo>[] {
-  return [
-    {
-      key: 'cover',
-      header: '커버',
-      render: (video) => <Cover video={video} />,
-    },
-    {
-      key: 'title',
-      header: '제목',
-      render: (video) => (
-        <span className="aa-stack">
-          <span className="sa-name">
-            <b>{video.title}</b>
-          </span>
-          <span className="sa-small">
-            {[showBoard ? video.boardSubject : null, `${video.postId}번`, video.secret ? '비밀글' : null]
-              .filter(Boolean)
-              .join(' · ')}
-          </span>
-        </span>
-      ),
-    },
-    { key: 'source', header: '형식', render: (video) => VIDEO_SOURCE_LABELS[video.source] },
-    {
-      key: 'duration',
-      header: '재생 시간',
-      numeric: true,
-      render: (video) => (video.duration === null ? '—' : clock(video.duration)),
-    },
-    {
-      key: 'created',
-      header: '작성일',
-      render: (video) => <span className="sa-num">{video.createdAt.slice(0, 16) || '—'}</span>,
-    },
-    {
-      key: 'features',
-      header: '추가 기능',
-      render: (video) => <FeatureBadges video={video} />,
-    },
-    {
-      key: 'actions',
-      header: '동작',
-      hideHeader: true,
-      pinEnd: true,
-      render: (video) => {
-        const busy = actions.busy?.key === keyOf(video);
-        const block = actions.media ? generateBlock(video, 'all', actions.media, actions.canWrite) : NO_FFMPEG;
+/** One video as two lines beside its cover: title and facts, then location, extras and actions. */
+function VideoItem({ video, showBoard, actions }: { video: UploadedVideo; showBoard: boolean; actions: RowActions }) {
+  const external = VIDEO_PLACE_OF[video.source] === 'external';
+  const busy = actions.busy?.key === keyOf(video);
+  const block = actions.media ? generateBlock(video, 'all', actions.media, actions.canWrite) : NO_FFMPEG;
+  // An outside address can make none of them; the tab note says so once instead of three badges per row.
+  const makeable = VIDEO_FEATURES.some((feature) => video.features[feature].status !== 'unsupported');
 
-        return (
-          <span className="sa-row aa-videos-actions">
+  return (
+    <li className="aa-videos-item">
+      <Cover video={video} />
+      <div className="aa-videos-head">
+        <h3 className="aa-videos-title">{video.title}</h3>
+        <span className="sa-small">
+          {[showBoard ? video.boardSubject : null, `${video.postId}번`, video.secret ? '비밀글' : null]
+            .filter(Boolean)
+            .join(' · ')}
+        </span>
+        <span className="sa-small aa-videos-facts">
+          {VIDEO_SOURCE_LABELS[video.source]}
+          {video.duration === null ? null : (
+            <>
+              {' · '}
+              <span className="sa-sr">재생 시간 </span>
+              <span className="sa-num">{clock(video.duration)}</span>
+            </>
+          )}
+          {video.createdAt ? (
+            <>
+              {' · '}
+              <span className="sa-sr">작성일 </span>
+              <span className="sa-num">{video.createdAt.slice(0, 16)}</span>
+            </>
+          ) : null}
+        </span>
+      </div>
+      <div className="aa-videos-body">
+        <p className="aa-videos-loc">
+          <span className="aa-videos-loc-label">{ADDRESS_LABELS[VIDEO_PLACE_OF[video.source]]}</span>
+          <VideoLocation video={video} canWrite={actions.canWrite} />
+        </p>
+        {makeable ? <FeatureBadges video={video} /> : null}
+        <span className="sa-row aa-videos-actions">
+          {external ? null : (
             <Button
               size="sm"
               variant="primary"
@@ -507,14 +539,42 @@ function videoColumns(showBoard: boolean, actions: RowActions): DataTableColumn<
             >
               {busy && actions.busy?.kind === 'generate' ? '만드는 중…' : '모두 만들기'}
             </Button>
-            <Button size="sm" aria-label={`${video.title} 관리`} onClick={() => actions.onOpen(video)}>
-              관리
-            </Button>
-          </span>
-        );
-      },
-    },
-  ];
+          )}
+          <Button size="sm" aria-label={`${video.title} 관리`} onClick={() => actions.onOpen(video)}>
+            관리
+          </Button>
+        </span>
+      </div>
+    </li>
+  );
+}
+
+/** The site path or outside URL, linked only when `safeUrl` accepts it, and the original file name. */
+function VideoLocation({ video, canWrite }: { video: UploadedVideo; canWrite: boolean }) {
+  const { address, name } = video.location;
+  const missing = video.secret && !canWrite ? HIDDEN_SECRET : NO_ADDRESS[VIDEO_PLACE_OF[video.source]];
+
+  return (
+    <>
+      {address === null ? (
+        <span className="sa-small">{missing}</span>
+      ) : safeUrl(address) ? (
+        <a className="aa-videos-path" href={address} target="_blank" rel="noopener noreferrer" title={address}>
+          {address}
+          <span className="sa-sr"> (새 창)</span>
+        </a>
+      ) : (
+        <span className="aa-videos-path" title={address}>
+          {address}
+        </span>
+      )}
+      {address !== null && name ? (
+        <span className="sa-small aa-videos-name" title={name}>
+          원래 파일 {name}
+        </span>
+      ) : null}
+    </>
+  );
 }
 
 function Cover({ video }: { video: UploadedVideo }) {
@@ -583,6 +643,18 @@ function VideoDialog({
           {VIDEO_SOURCE_LABELS[video.source]} · {video.duration === null ? '재생 시간 모름' : clock(video.duration)}.
           다시 만들면 덮어써요.
         </p>
+        <div className="sa-card is-flush aa-videos-location">
+          <KeyValue
+            label="영상 위치"
+            rows={[
+              {
+                key: 'location',
+                label: ADDRESS_LABELS[VIDEO_PLACE_OF[video.source]],
+                value: <VideoLocation video={video} canWrite={actions.canWrite} />,
+              },
+            ]}
+          />
+        </div>
         <div className="aa-videos-features">
           {VIDEO_FEATURES.map((feature) => {
             const state = video.features[feature];

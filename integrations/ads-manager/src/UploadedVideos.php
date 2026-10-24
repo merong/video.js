@@ -10,17 +10,22 @@ final class UploadedVideos
     private const PAGE_SIZE = 20;
     private const SOURCES = ['file', 'hls_zip', 'hls_url', 'url'];
     private const VIDEO_EXTENSIONS = '/\.(mp4|m4v|webm)$/i';
+    private const PLACES = ['', 'internal', 'external'];
 
     private ?array $boards = null;
 
     public function __construct(private readonly VideoMedia $media) {}
 
-    /** @param bool $masked Hides the ffmpeg and ffprobe paths from an account that cannot write (the public demo admin). */
+    /** @param bool $masked Hides the ffmpeg and ffprobe paths, and secret posts' video locations, from an account that cannot write (the public demo admin). */
     public function list(array $input, bool $masked = false): array
     {
         global $g5;
         $boardId = $this->boardInput($input['boardId'] ?? '', true);
         $query = Value::text($input['query'] ?? '', 'query', 100, true);
+        $place = $input['place'] ?? '';
+        if (!in_array($place, self::PLACES, true)) {
+            Value::fail('place');
+        }
         $page = $input['page'] ?? '1';
         if (!(is_int($page) && $page >= 1) && !(is_string($page) && preg_match('/^[1-9][0-9]{0,5}$/D', $page))) {
             Value::fail('page');
@@ -39,14 +44,22 @@ final class UploadedVideos
             throw new ApiError(404, 'board_not_found', '게시판을 찾을 수 없습니다.');
         }
         $where = 'wr_is_comment = 0' . ($query === '' ? '' : " AND wr_subject LIKE '%" . sql_real_escape_string(addcslashes($query, '%_\\')) . "%'");
+        $internal = $this->internalSql();
+        $placed = $where . match ($place) {
+            'internal' => " AND $internal",
+            'external' => " AND NOT $internal",
+            default => '',
+        };
         $limit = $page * self::PAGE_SIZE;
-        $total = 0;
+        $counts = ['internal' => 0, 'external' => 0];
         $rows = [];
         // Each board's newest rows up to this page, merged by date: boards are few, pages shallow.
         foreach ($selected as $board) {
             $table = $g5['write_prefix'] . $board['bo_table'];
-            $total += (int) (sql_fetch("SELECT COUNT(*) AS n FROM `$table` WHERE $where")['n'] ?? 0);
-            $result = sql_query("SELECT wr_id, wr_subject, wr_option, wr_datetime, wr_1, wr_2, wr_3 FROM `$table` WHERE $where ORDER BY wr_datetime DESC, wr_id DESC LIMIT $limit");
+            $count = sql_fetch("SELECT COUNT(*) AS n, SUM(CASE WHEN $internal THEN 1 ELSE 0 END) AS internal FROM `$table` WHERE $where");
+            $counts['internal'] += (int) ($count['internal'] ?? 0);
+            $counts['external'] += (int) ($count['n'] ?? 0) - (int) ($count['internal'] ?? 0);
+            $result = sql_query("SELECT wr_id, wr_subject, wr_option, wr_datetime, wr_1, wr_2, wr_3 FROM `$table` WHERE $placed ORDER BY wr_datetime DESC, wr_id DESC LIMIT $limit");
             while ($post = sql_fetch_array($result)) {
                 $rows[] = [$board, $post];
             }
@@ -57,17 +70,18 @@ final class UploadedVideos
         return [
             'media' => $media,
             'boards' => array_values(array_map(fn ($board) => ['id' => $board['bo_table'], 'subject' => $board['bo_subject'], 'features' => $this->media->boardFeatures($board), 'formUrl' => $this->local(G5_ADMIN_URL . '/board_form.php?w=u&bo_table=' . rawurlencode($board['bo_table']))], $boards)),
-            'items' => array_map(fn ($row) => $this->row($row[0], $row[1]), $rows),
+            'items' => array_map(fn ($row) => $this->row($row[0], $row[1], $masked), $rows),
             'page' => $page,
             'pageSize' => self::PAGE_SIZE,
-            'total' => $total,
+            'total' => $place === '' ? $counts['internal'] + $counts['external'] : $counts[$place],
+            'counts' => $counts,
         ];
     }
 
-    public function item(array $input): array
+    public function item(array $input, bool $masked = false): array
     {
         [$board, $post] = $this->post($input);
-        return ['item' => $this->row($board, $post)];
+        return ['item' => $this->row($board, $post, $masked)];
     }
 
     public function generate(array $input): array
@@ -113,10 +127,12 @@ final class UploadedVideos
         return ['item' => $this->row($board, $post)];
     }
 
-    private function row(array $board, array $post): array
+    /** @param bool $masked Hides a secret post's video location. */
+    private function row(array $board, array $post, bool $masked = false): array
     {
         $postId = (int) $post['wr_id'];
         $source = $this->source($board, $post);
+        $secret = str_contains((string) $post['wr_option'], 'secret');
         $enabled = $this->media->boardFeatures($board);
         $files = $this->media->files($board['bo_table'], $postId);
         $errors = $this->media->errors($board['bo_table'], $postId);
@@ -139,16 +155,20 @@ final class UploadedVideos
             'boardSubject' => $board['bo_subject'],
             'postId' => $postId,
             'title' => (string) $post['wr_subject'],
-            'secret' => str_contains((string) $post['wr_option'], 'secret'),
+            'secret' => $secret,
             'source' => $source['type'],
+            'location' => $masked && $secret ? ['address' => null, 'name' => null] : $source['location'],
             'duration' => $duration > 0 ? $duration : null,
             'createdAt' => (string) $post['wr_datetime'],
-            'postUrl' => $this->local(function_exists('get_pretty_url') ? get_pretty_url($board['bo_table'], $postId) : G5_BBS_URL . '/board.php?bo_table=' . rawurlencode($board['bo_table']) . '&wr_id=' . $postId),
+            'postUrl' => $this->local(function_exists('get_pretty_url') ? html_entity_decode(get_pretty_url($board['bo_table'], $postId), ENT_QUOTES | ENT_HTML5, 'UTF-8') : G5_BBS_URL . '/board.php?bo_table=' . rawurlencode($board['bo_table']) . '&wr_id=' . $postId),
             'features' => $features,
         ];
     }
 
-    /** The post's local input video, or why there is none. Mirrors solad_video_source_type() in the skin. */
+    /**
+     * The post's local input video, or why there is none, and where the video lives for the screen.
+     * Mirrors solad_video_source_type() in the skin. The location never carries a server path.
+     */
     private function source(array $board, array $post): array
     {
         global $g5;
@@ -158,12 +178,15 @@ final class UploadedVideos
             $type = $url === '' ? 'file' : (preg_match('/\.m3u8$/i', (string) parse_url($url, PHP_URL_PATH)) ? 'hls_url' : 'url');
         }
         if ($type === 'url' || $type === 'hls_url') {
-            return ['type' => $type, 'path' => null, 'message' => VideoMedia::UNSUPPORTED];
+            return ['type' => $type, 'path' => null, 'message' => VideoMedia::UNSUPPORTED, 'location' => ['address' => $url === '' ? null : $url, 'name' => null]];
         }
 
         $candidate = null;
+        // The skin deletes the uploaded zip once it is unpacked, so an HLS bundle has no original name to show.
+        $location = ['address' => null, 'name' => null];
         if ($type === 'hls_zip') {
             $candidate = $this->media->pathFromUrl($url);
+            $location['address'] = $this->local($url);
         } else {
             $boTable = sql_real_escape_string($board['bo_table']);
             $postId = (int) $post['wr_id'];
@@ -171,13 +194,21 @@ final class UploadedVideos
             while ($file = sql_fetch_array($result)) {
                 if (preg_match(self::VIDEO_EXTENSIONS, $file['bf_source'] !== '' ? $file['bf_source'] : $file['bf_file'])) {
                     $candidate = $this->media->attachmentPath($board['bo_table'], $file['bf_file']);
+                    $location = ['address' => $this->media->attachmentUrl($board['bo_table'], $file['bf_file']), 'name' => $file['bf_source'] !== '' ? $file['bf_source'] : null];
                     break;
                 }
             }
         }
         $path = $candidate === null ? null : $this->media->inputPath($board['bo_table'], $candidate);
 
-        return ['type' => $type, 'path' => $path, 'message' => $path === null ? '이 글에서 영상 파일을 찾지 못했어요.' : null];
+        return ['type' => $type, 'path' => $path, 'message' => $path === null ? '이 글에서 영상 파일을 찾지 못했어요.' : null, 'location' => $path === null ? ['address' => null, 'name' => null] : $location];
+    }
+
+    /** SQL true for posts source() reads as file or hls_zip; wr_1 and wr_3 are NOT NULL in gnuboard write tables. */
+    private function internalSql(): string
+    {
+        $known = "'" . implode("', '", self::SOURCES) . "'";
+        return "(TRIM(wr_3) IN ('file', 'hls_zip') OR (TRIM(wr_3) NOT IN ($known) AND TRIM(wr_1) = ''))";
     }
 
     private function post(array $input): array

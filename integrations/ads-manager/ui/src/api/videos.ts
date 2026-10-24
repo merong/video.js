@@ -20,6 +20,25 @@ export const VIDEO_SOURCE_LABELS = {
   url: '영상 주소',
 } satisfies Record<VideoSource, string>;
 
+/** `internal`: a file uploaded to the site; `external`: an address the post points to (BRIEF-V1). */
+export type VideoPlace = 'internal' | 'external';
+
+export const VIDEO_PLACES = ['internal', 'external'] as const satisfies readonly VideoPlace[];
+
+export const VIDEO_PLACE_OF = {
+  file: 'internal',
+  hls_zip: 'internal',
+  hls_url: 'external',
+  url: 'external',
+} satisfies Record<VideoSource, VideoPlace>;
+
+export interface VideoLocation {
+  /** Root-relative path of the site file, or the external URL; `null` when not found or hidden from a read-only account. */
+  address: string | null;
+  /** The uploaded file's original name. */
+  name: string | null;
+}
+
 /** `unsupported`: an external address or no local file; `disabled`: switched off in the board settings. */
 export type VideoFeatureStatus = 'none' | 'ready' | 'unsupported' | 'disabled' | 'error';
 
@@ -46,6 +65,7 @@ export interface UploadedVideo {
   createdAt: string;
   /** Root-relative address of the post. */
   postUrl: string | null;
+  location: VideoLocation;
   features: Record<VideoFeature, VideoFeatureState>;
 }
 
@@ -75,6 +95,7 @@ export interface UploadedVideoFilters {
   /** `''` lists every video board. */
   boardId: string;
   query: string;
+  place: VideoPlace;
 }
 
 export interface UploadedVideoPage {
@@ -84,6 +105,8 @@ export interface UploadedVideoPage {
   page: number;
   pageSize: number;
   total: number;
+  /** Per place under the board and title filters; `null` from a server without them. */
+  counts: Record<VideoPlace, number> | null;
 }
 
 const INVALID_RESPONSE = '업로드 동영상 응답을 읽지 못했어요. 새로고침한 뒤 다시 시도해 주세요.';
@@ -101,7 +124,13 @@ export async function uploadedVideos(
   refresh = false
 ): Promise<UploadedVideoPage> {
   const data = await api.request<unknown>('uploaded-videos', {
-    query: { boardId: filters.boardId || null, query: filters.query.trim() || null, page, refresh: refresh ? 1 : null },
+    query: {
+      boardId: filters.boardId || null,
+      query: filters.query.trim() || null,
+      place: filters.place,
+      page,
+      refresh: refresh ? 1 : null,
+    },
   });
   if (!isRecord(data)) throw new Error(INVALID_RESPONSE);
 
@@ -114,6 +143,9 @@ export async function uploadedVideos(
     page: Math.max(1, count(data.page, page)),
     pageSize: Math.max(1, count(data.pageSize, PAGE_SIZE)),
     total: count(data.total, items.length),
+    counts: isRecord(data.counts)
+      ? { internal: count(data.counts.internal, 0), external: count(data.counts.external, 0) }
+      : null,
   };
 }
 
@@ -167,6 +199,7 @@ function videoItem(value: unknown): UploadedVideo[] {
   if (boardId === null || !postId || title === null) return [];
 
   const features = isRecord(value.features) ? value.features : {};
+  const location = isRecord(value.location) ? value.location : {};
   const duration = count(value.duration, 0);
 
   return [
@@ -180,6 +213,7 @@ function videoItem(value: unknown): UploadedVideo[] {
       duration: duration > 0 ? duration : null,
       createdAt: text(value.createdAt) ?? '',
       postUrl: text(value.postUrl),
+      location: { address: text(location.address), name: text(location.name) },
       // SAFETY: the entries cover every feature exactly once.
       features: Object.fromEntries(VIDEO_FEATURES.map((name) => [name, featureState(features[name])])) as Record<
         VideoFeature,
