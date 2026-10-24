@@ -55,6 +55,19 @@ function solad_request_attr($value)
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
+// G5_URL 아래 주소를 루트 상대 경로로 바꾼다. solad_video/solad.lib.php와 같은 함수이고, 이 스킨만 설치한 사이트를 위해 여기에도 둔다.
+if (!function_exists('solad_local_url')) {
+function solad_local_url($url)
+{
+    $url = (string) $url;
+    $site = rtrim(G5_URL, '/');
+    if ($url !== $site && strpos($url, $site.'/') !== 0) {
+        return $url;
+    }
+    return rtrim((string) parse_url($site, PHP_URL_PATH), '/').'/'.ltrim(substr($url, strlen($site)), '/');
+}
+}
+
 function solad_request_option($board, $subject)
 {
     for ($i = 1; $i <= 10; $i++) {
@@ -102,7 +115,7 @@ function solad_request_settings($board)
     $base = rtrim(solad_request_option($board, '솔애드 주소'), '/');
 
     return array(
-        'base' => $base !== '' && solad_request_is_media_url($base) ? $base : G5_URL.'/ads',
+        'base' => solad_local_url($base !== '' && solad_request_is_media_url($base) ? $base : G5_URL.'/ads'),
         'base_valid' => $base === '' || solad_request_is_media_url($base),
     );
 }
@@ -144,7 +157,7 @@ function solad_request_media_file($files)
     }
     $file = $files[0];
     $file['kind'] = solad_request_media_kind($file['source'] ? $file['source'] : $file['file']);
-    $file['url'] = !empty($file['bf_fileurl']) ? $file['bf_fileurl'] : $file['path'].'/'.$file['file'];
+    $file['url'] = solad_local_url(!empty($file['bf_fileurl']) ? $file['bf_fileurl'] : $file['path'].'/'.$file['file']);
     return $file;
 }
 

@@ -17,7 +17,7 @@ $sr_is_notice = in_array((string) $view['wr_id'], array_map('trim', explode(',',
 // 소재: 소재 주소가 1번 칸 파일보다 먼저다.
 $sr_media_file = solad_request_media_file($view['file']);
 $sr_media_from_file = !solad_request_is_media_url($view['wr_7']) && $sr_media_file;
-$sr_media_url = $sr_media_from_file ? $sr_media_file['url'] : (solad_request_is_media_url($view['wr_7']) ? $view['wr_7'] : '');
+$sr_media_url = $sr_media_from_file ? $sr_media_file['url'] : (solad_request_is_media_url($view['wr_7']) ? solad_local_url($view['wr_7']) : '');
 $sr_media_kind = $sr_media_from_file ? $sr_media_file['kind'] : solad_request_media_kind($sr_media_url);
 
 $sr_boards = $view['wr_9'] !== '' ? solad_request_boards($bo_table) : array();

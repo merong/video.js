@@ -177,6 +177,7 @@ $sv_more = $update_href || $delete_href || $reply_href || $copy_href || $move_hr
         <ol class="sv-next">
             <?php foreach ($sv_next as $sv_item) {
                 $sv_thumb = get_list_thumbnail($bo_table, $sv_item['wr_id'], 320, 180, false, true);
+                $sv_thumb['src'] = solad_local_url($sv_thumb['src']);
                 $sv_item_duration = solad_video_duration($sv_item['wr_2']);
             ?>
             <li>

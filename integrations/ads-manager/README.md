@@ -110,6 +110,8 @@ Configure everything in 게시판 수정:
 - 파일 업로드 개수 must be at least 2: slot 1 is the video file or HLS zip, slot 2 the thumbnail. Further slots are ordinary attachments. 파일 업로드 용량 also limits the video and the zip.
 - The extra field titled `솔애드 주소` (read by subject, not by number) takes the manager URL when it is not `/ads`. The player always uses the site preset chosen in the manager's 플레이어 menu.
 
+The skins print addresses under `G5_URL` (uploaded videos, thumbnails, hover previews, a same-site `wr_1`, and the manager address with its `/ads` default) as root-relative paths that keep a `G5_URL` sub-path, through `solad_local_url()`. The player and media then load from the page's own origin under any host name; addresses on other domains stay as they are.
+
 The write form offers four sources, stored in `wr_3`:
 
 | `wr_3` | Source | `wr_1` |

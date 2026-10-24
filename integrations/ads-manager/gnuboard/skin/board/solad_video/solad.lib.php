@@ -5,9 +5,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
  * 솔애드 동영상 갤러리 스킨 공용 함수.
  *
  * 게시판 설정(관리자 > 게시판관리 > 게시판 수정)에서 읽는 값
- * - 여분필드 제목 "솔애드 주소": 솔애드 관리자를 올린 경로. 비우면 사이트 주소 + /ads.
+ * - 여분필드 제목 "솔애드 주소": 솔애드 관리자를 올린 경로. 비우면 사이트 경로 + /ads.
  * - 플레이어 모양과 옵션은 솔애드 관리자 > 플레이어의 사이트 플레이어 설정을 따른다.
  * - 갤러리 썸네일 폭·높이, 갤러리 이미지 수, 파일 업로드 개수·용량은 그누보드 기본 항목을 그대로 쓴다.
+ *
+ * 이 사이트(G5_URL) 아래의 영상·그림·솔애드 주소는 도메인 없이 루트 상대 경로(/…)로 내보낸다(solad_local_url).
  *
  * 글 여분필드: wr_1 = 영상 주소, wr_2 = 재생 시간(초), wr_3 = 등록 형식.
  * 등록 형식
@@ -28,6 +30,20 @@ define('SOLAD_HLS_MAX_FILES', 5000);
 function solad_attr($value)
 {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
+
+// G5_URL 아래 주소에서 도메인을 빼고 루트 상대 경로로 바꾼다. G5_URL의 하위 경로는 남긴다. 다른 도메인 주소와 경로는 그대로 둔다.
+// 광고 요청 스킨(request.lib.php)과 솔애드 테마도 이 함수를 쓴다.
+if (!function_exists('solad_local_url')) {
+function solad_local_url($url)
+{
+    $url = (string) $url;
+    $site = rtrim(G5_URL, '/');
+    if ($url !== $site && strpos($url, $site.'/') !== 0) {
+        return $url;
+    }
+    return rtrim((string) parse_url($site, PHP_URL_PATH), '/').'/'.ltrim(substr($url, strlen($site)), '/');
+}
 }
 
 // 여분필드 제목으로 값을 찾는다. 칸 번호는 사이트마다 다를 수 있다.
@@ -58,7 +74,7 @@ function solad_video_settings($board)
     $base = rtrim(solad_video_option($board, '솔애드 주소'), '/');
 
     return array(
-        'base' => $base !== '' && solad_video_is_url($base) ? $base : G5_URL.'/ads',
+        'base' => solad_local_url($base !== '' && solad_video_is_url($base) ? $base : G5_URL.'/ads'),
         'base_valid' => $base === '' || solad_video_is_url($base),
     );
 }
@@ -66,9 +82,9 @@ function solad_video_settings($board)
 function solad_video_file_url($file)
 {
     if (!empty($file['bf_fileurl'])) {
-        return $file['bf_fileurl'];
+        return solad_local_url($file['bf_fileurl']);
     }
-    return $file['path'].'/'.$file['file'];
+    return solad_local_url($file['path'].'/'.$file['file']);
 }
 
 // get_file() 결과에서 확장자가 맞는 첫 첨부를 고른다. 첨부 칸 순서에 기대지 않는다.
@@ -106,7 +122,7 @@ function solad_video_source($write, $files)
 {
     if (solad_video_source_type($write) !== 'file') {
         $url = isset($write['wr_1']) ? trim($write['wr_1']) : '';
-        return solad_video_is_url($url) ? $url : '';
+        return solad_video_is_url($url) ? solad_local_url($url) : '';
     }
     $file = solad_video_pick_file($files, SOLAD_VIDEO_EXTENSIONS);
     return $file ? solad_video_file_url($file) : '';
@@ -197,7 +213,7 @@ function solad_video_avatar($mb_id, $name)
     if ($mb_id) {
         $file = G5_DATA_PATH.'/member_image/'.substr($mb_id, 0, 2).'/'.get_mb_icon_name($mb_id).'.gif';
         if (is_file($file)) {
-            return '<img src="'.solad_attr(str_replace(G5_DATA_PATH, G5_DATA_URL, $file)).'" alt="">';
+            return '<img src="'.solad_attr(solad_local_url(str_replace(G5_DATA_PATH, G5_DATA_URL, $file))).'" alt="">';
         }
     }
     $name = trim(strip_tags((string) $name));
@@ -218,7 +234,7 @@ function solad_video_previews($bo_table, $list)
         }
         $type = solad_video_source_type($row);
         if ($type === 'url' && solad_video_is_url(trim($row['wr_1']))) {
-            $previews[$row['wr_id']] = trim($row['wr_1']);
+            $previews[$row['wr_id']] = solad_local_url(trim($row['wr_1']));
         } elseif ($type === 'file') {
             $ids[] = (int) $row['wr_id'];
         }
@@ -234,7 +250,7 @@ function solad_video_previews($bo_table, $list)
         if (isset($previews[$file['wr_id']]) || !preg_match('/\.('.SOLAD_VIDEO_EXTENSIONS.')$/i', $file['bf_source'] ? $file['bf_source'] : $file['bf_file'])) {
             continue;
         }
-        $previews[$file['wr_id']] = $file['bf_fileurl'] ? $file['bf_fileurl'] : G5_DATA_URL.'/file/'.$bo_table.'/'.$file['bf_file'];
+        $previews[$file['wr_id']] = solad_local_url($file['bf_fileurl'] ? $file['bf_fileurl'] : G5_DATA_URL.'/file/'.$bo_table.'/'.$file['bf_file']);
     }
     return $previews;
 }
