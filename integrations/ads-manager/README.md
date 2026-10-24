@@ -139,6 +139,32 @@ The list shows the newest post large on an unfiltered first page, then cards wit
 
 Request fields use `wr_1`–`wr_9`: advertiser, start and end date, position (프리롤, 미드롤 or 포스트롤), impressions, click URL, creative URL, contact and preferred board. Comments are the processing log: an administrator picks a new stage in the comment form, the skin updates the request's category and stores the stage in the comment's `wr_1`. 보완 요청 and 반려 need a reason. From 집행 예정 on, members can no longer edit or delete the request. For approved requests the view page links to the manager's 하우스 광고 (`#/house`) and 지면 편성 (`#/schedule`) pages.
 
+### Demo administrator
+
+The `solad` theme can offer a one-click, read-only "데모 관리자" login so visitors can look around the manager without an account. It is off unless `data/solad-demo.php` exists and returns the account ID:
+
+```php
+<?php
+return array('admin_id' => 'demo_admin');
+```
+
+The account is an ordinary level-2 member, never the super administrator, with only read access to the manager menu:
+
+```sql
+INSERT INTO g5_auth (mb_id, au_menu, au_auth) VALUES ('demo_admin', '300950', 'r');
+```
+
+Its `mb_password` must be a value that is not a password hash (for example `!demo-login-only`), so no password can sign in with it, and its e-mail should be an `@example.invalid` address. Without `w`, every manager write API answers 403.
+
+While the switch is on:
+
+- The login page (`bbs/login.php`) uses the theme's `skin/member/basic/login.skin.php`. Only that page switches skins, so leave 회원 스킨 in the site settings unchanged. The page shows a 데모 관리자 card beside the ID form; on narrow screens the form comes first with a link down to the card. Without the switch the page shows the ID form only.
+- The card posts to `bbs/login.php` with a session token. The theme signs the account in the way `login_check.php` does, but without points or an auto-login cookie, and returns to a same-site address under the manager (`/ads/` by default). A visitor already signed in with another account is asked to log out first.
+- The header shows "데모 관리자 · 읽기 전용" instead of 영상 올리기 and 정보수정.
+- GnuBoard writes by the demo account are refused with "데모 관리자 계정은 읽기 전용입니다…": every non-GET request except login and logout, which covers posts, comments, profile, password, withdrawal, memos, scraps and `adm/` forms, plus GET handlers that write, such as delete links, `good.php` and admin batch actions. XHR or JSON requests get a 403 JSON body `{"error":"demo_readonly"}`; other requests get GnuBoard's alert. Manager API requests are left to the manager's own `w` check.
+
+To turn the demo off, delete `data/solad-demo.php`. To remove the account as well, delete its `g5_auth`, `g5_login` and `g5_member` rows.
+
 ## Persistence and public boundaries
 
 - A creative ID is the advertisement ID. Edits create immutable media versions. Archive blocks new selection/publication; it does not modify old snapshots or delete files.

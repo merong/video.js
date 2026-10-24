@@ -261,25 +261,44 @@ function solad_theme_demo_token()
     return $token;
 }
 
-// 로그인 화면 아래 "데모 관리자로 로그인" (member_login_tail 이벤트). 데모가 켜져 있을 때만 나온다.
-function solad_theme_demo_login_form($login_url = '', $login_action_url = '', $member_skin_path = '', $url = '')
+// 로그인 화면은 테마 회원 스킨(skin/member/basic/login.skin.php)으로 그린다(common_header 이벤트).
+// 그 폴더에는 로그인 스킨만 있으므로 사이트 설정의 회원 스킨은 바꾸지 않고, 로그인 화면에서만 경로를 바꾼다.
+function solad_theme_login_skin()
 {
-    if (!solad_theme_demo_config()) {
+    global $member_skin_path, $member_skin_url;
+
+    $script = isset($_SERVER['SCRIPT_NAME']) ? $_SERVER['SCRIPT_NAME'] : '';
+    $path = G5_THEME_PATH.'/'.G5_SKIN_DIR.'/member/basic';
+    if (basename(dirname($script)) !== G5_BBS_DIR || basename($script) !== 'login.php' || !is_file($path.'/login.skin.php')) {
         return;
     }
-    ?>
-    <form class="sl-demo-login" method="post" action="<?php echo G5_BBS_URL; ?>/login.php">
-        <input type="hidden" name="solad_demo_login" value="1">
-        <input type="hidden" name="solad_demo_token" value="<?php echo solad_theme_demo_token(); ?>">
-        <input type="hidden" name="url" value="<?php echo htmlspecialchars((string) $url, ENT_QUOTES); ?>">
-        <p class="sl-demo-login-title">솔애드 관리자 둘러보기</p>
-        <p class="sl-demo-login-text">비밀번호 없이 데모 계정으로 광고 관리 화면을 볼 수 있어요.</p>
-        <button type="submit" class="sl-btn sl-btn--ghost">데모 관리자로 로그인</button>
-    </form>
-    <?php
+    $member_skin_path = $path;
+    $member_skin_url = G5_THEME_URL.'/'.G5_SKIN_DIR.'/member/basic';
 }
 
-// 데모 로그인 처리 (common_header 이벤트). bbs/login.php로 온 POST에 solad_demo_login이 있을 때만 움직인다.
+// 지금 회원이 데모 관리자인지. 데모가 꺼져 있으면 언제나 false.
+function solad_theme_is_demo_member()
+{
+    global $member;
+
+    $demo = solad_theme_demo_config();
+    return $demo && !empty($member['mb_id']) && strtolower($member['mb_id']) === strtolower($demo['admin_id']);
+}
+
+// 데모 로그인 뒤 돌아갈 곳. 같은 사이트의 솔애드 관리 화면 주소만 받고, 아니면 관리 화면 첫 화면으로 간다(오픈 리다이렉트 방지).
+// 루트 상대 경로로 돌려주므로 사이트를 다른 호스트 이름으로 열어도 그 호스트의 세션으로 돌아간다.
+function solad_theme_demo_return_url($url)
+{
+    solad_theme_video_lib(null);
+    $home = solad_theme_local_url(SOLAD_URL.'/');
+    $url = solad_theme_local_url(trim(urldecode((string) $url)));
+    if ($url === '' || $url[0] !== '/' || strpos($url, '//') === 0 || strpos($url, '\\') !== false || strpos($url, '..') !== false || preg_match('/[\x00-\x1f]/', $url)) {
+        return $home;
+    }
+    return strpos(rtrim((string) parse_url($url, PHP_URL_PATH), '/').'/', $home) === 0 ? $url : $home;
+}
+
+// 데모 로그인 처리 (common_header 이벤트). 로그인 화면의 데모 카드가 bbs/login.php로 보낸 POST에 solad_demo_login이 있을 때만 움직인다.
 // 세션은 bbs/login_check.php와 같게 세운다. 비밀번호는 보지 않고, 포인트와 자동 로그인 쿠키는 만들지 않는다.
 function solad_theme_demo_login_handle()
 {
@@ -289,15 +308,20 @@ function solad_theme_demo_login_handle()
     if (!isset($_POST['solad_demo_login']) || basename(dirname($script)) !== G5_BBS_DIR || basename($script) !== 'login.php') {
         return;
     }
-    // 이미 로그인한 사람은 bbs/login.php가 url로 돌려보낸다.
-    if ($is_member) {
-        return;
-    }
 
     $fail = '데모 관리자로 로그인할 수 없어요. 사이트 관리자에게 문의해 주세요.';
     $demo = solad_theme_demo_config();
     if (!$demo || $_SERVER['REQUEST_METHOD'] !== 'POST') {
-        alert('데모 관리자 로그인을 쓸 수 없어요.');
+        alert('데모 관리자 로그인을 쓸 수 없어요. 아이디로 로그인해 주세요.', G5_BBS_URL.'/login.php');
+    }
+    $link = solad_theme_demo_return_url(isset($_POST['url']) ? $_POST['url'] : '');
+
+    // 이미 데모 관리자면 세션을 새로 만들지 않는다. 다른 계정으로 로그인한 사람은 그 계정을 말없이 끊지 않고 로그아웃을 먼저 하게 한다.
+    if ($is_member) {
+        if (solad_theme_is_demo_member()) {
+            goto_url($link);
+        }
+        alert('이미 다른 계정으로 로그인되어 있어요. 로그아웃한 뒤 데모 관리자로 들어가 주세요.', G5_URL);
     }
 
     $saved = get_session('ss_solad_demo_token');
@@ -315,14 +339,6 @@ function solad_theme_demo_login_handle()
         || (is_use_email_certify() && !preg_match('/[1-9]/', $mb['mb_email_certify']))
         || !solad_theme_has_solad_auth($mb['mb_id'])) {
         alert($fail);
-    }
-
-    // 다른 호스트로 가는 url이면 check_url_host가 알림 후 첫 화면으로 보낸다. 로그인 전에 검사한다.
-    $url = isset($_POST['url']) ? trim((string) $_POST['url']) : '';
-    $link = SOLAD_URL.'/';
-    if ($url !== '') {
-        check_url_host($url, '', G5_URL, true);
-        $link = urldecode($url);
     }
 
     run_event('login_session_before', $mb, false);
@@ -347,6 +363,45 @@ function solad_theme_demo_login_handle()
 
     run_event('member_login_check', $mb, $link, false);
     goto_url($link);
+}
+
+// 데모 관리자의 그누보드 쓰기 요청인지. 로그아웃과 로그인(데모 로그인 포함)은 통과시킨다.
+function solad_theme_demo_is_write_request()
+{
+    $method = isset($_SERVER['REQUEST_METHOD']) ? strtoupper($_SERVER['REQUEST_METHOD']) : 'GET';
+    $script = isset($_SERVER['SCRIPT_NAME']) ? $_SERVER['SCRIPT_NAME'] : '';
+    $name = basename($script);
+    if (basename(dirname($script)) === G5_BBS_DIR && in_array($name, array('login.php', 'login_check.php', 'logout.php'), true)) {
+        return false;
+    }
+    if ($method !== 'GET' && $method !== 'HEAD') {
+        return true;
+    }
+    // GET으로 처리하는 쓰기: 글·댓글·쪽지·스크랩 삭제, 추천·비추천, 탈퇴, 관리자 일괄 처리
+    return preg_match('/(update|delete|insert|cancel|upgrade|restore|optimize|backup|install|leave)/i', $name)
+        || preg_match('/(^|_)(send|copy|move|reset|del)(_|\.php$)/i', $name)
+        || (basename(dirname($script)) === G5_BBS_DIR && $name === 'good.php');
+}
+
+// 데모 관리자는 읽기 전용이다(common_header 이벤트). 글쓰기·댓글·회원정보·쪽지·스크랩·추천과 adm/ POST 같은 그누보드 쓰기를 막는다.
+// 솔애드 관리 API(/ads)도 그누보드 common.php를 읽지만, 그쪽은 메뉴 권한(w)으로 직접 막으므로 건드리지 않는다.
+function solad_theme_demo_guard()
+{
+    if (!solad_theme_is_demo_member() || class_exists('AdsManager\Config', false) || !solad_theme_demo_is_write_request()) {
+        return;
+    }
+
+    $msg = '데모 관리자 계정은 읽기 전용입니다. 저장·삭제는 실행되지 않았어요.';
+    $accept = isset($_SERVER['HTTP_ACCEPT']) ? $_SERVER['HTTP_ACCEPT'] : '';
+    $type = isset($_SERVER['CONTENT_TYPE']) ? $_SERVER['CONTENT_TYPE'] : '';
+    $xhr = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+    if ($xhr || stripos($accept, 'application/json') !== false || stripos($type, 'application/json') !== false) {
+        header('HTTP/1.1 403 Forbidden');
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(array('error' => 'demo_readonly', 'message' => $msg), JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    alert($msg);
 }
 
 }

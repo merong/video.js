@@ -11,6 +11,8 @@ $sl_content = (isset($co_id) && basename($_SERVER['SCRIPT_NAME']) === 'content.p
 // 로그인 화면에서는 로그인 버튼과, 로그인 화면으로 가는 "관리자" 버튼을 내지 않는다.
 $sl_on_login = basename(dirname($_SERVER['SCRIPT_NAME'])) === G5_BBS_DIR && basename($_SERVER['SCRIPT_NAME']) === 'login.php';
 $sl_admin_url = $sl_on_login ? '' : solad_theme_admin_entry();
+// 데모 관리자는 읽기 전용이라 영상 올리기와 정보수정을 내지 않고 "데모 관리자 · 읽기 전용"을 표시한다.
+$sl_is_demo = $is_member && solad_theme_is_demo_member();
 ?>
 <header class="sl-hd<?php echo $sl_is_index ? ' sl-hd--overlay' : ''; ?>" id="sl-hd" data-sl-header>
     <div class="sl-hd-inner">
@@ -39,7 +41,11 @@ $sl_admin_url = $sl_on_login ? '' : solad_theme_admin_entry();
         </form>
 
         <div class="sl-account">
-            <?php if ($is_member) { ?>
+            <?php if ($sl_is_demo) { ?>
+            <span class="sl-demo-badge">데모 관리자 · 읽기 전용</span>
+            <?php if ($sl_admin_url) { ?><a class="sl-account-link" href="<?php echo $sl_admin_url; ?>">관리자</a><?php } ?>
+            <a class="sl-account-link" href="<?php echo G5_BBS_URL; ?>/logout.php">로그아웃</a>
+            <?php } else if ($is_member) { ?>
             <a class="sl-btn sl-btn--ghost sl-hd-upload" href="<?php echo G5_BBS_URL; ?>/write.php?bo_table=<?php echo SOLAD_THEME_VIDEO_BOARD; ?>">영상 올리기</a>
             <?php if ($is_admin) { ?><a class="sl-account-link" href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">사이트 관리</a><?php } ?>
             <?php if ($sl_admin_url) { ?><a class="sl-account-link" href="<?php echo $sl_admin_url; ?>">관리자</a><?php } ?>
@@ -73,7 +79,11 @@ $sl_admin_url = $sl_on_login ? '' : solad_theme_admin_entry();
             <?php } ?>
         </ul>
         <div class="sl-drawer-account">
-            <?php if ($is_member) { ?>
+            <?php if ($sl_is_demo) { ?>
+            <p class="sl-drawer-demo"><span class="sl-demo-badge">데모 관리자 · 읽기 전용</span></p>
+            <?php if ($sl_admin_url) { ?><a href="<?php echo $sl_admin_url; ?>">관리자</a><?php } ?>
+            <a href="<?php echo G5_BBS_URL; ?>/logout.php">로그아웃</a>
+            <?php } else if ($is_member) { ?>
             <a href="<?php echo G5_BBS_URL; ?>/write.php?bo_table=<?php echo SOLAD_THEME_VIDEO_BOARD; ?>">영상 올리기</a>
             <?php if ($is_admin) { ?><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">사이트 관리</a><?php } ?>
             <?php if ($sl_admin_url) { ?><a href="<?php echo $sl_admin_url; ?>">관리자</a><?php } ?>

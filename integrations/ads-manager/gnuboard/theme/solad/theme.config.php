@@ -32,8 +32,9 @@ add_replace('html_process_add_meta', function ($meta) {
     return $meta.'<meta name="viewport" content="width=device-width,initial-scale=1">'.PHP_EOL.'<meta name="theme-color" content="#0e0e10">';
 }, 10, 1);
 
-// 데모 관리자 로그인: 로그인 화면 아래 버튼과, 그 버튼이 bbs/login.php로 보낸 POST 처리.
+// 로그인 화면(테마 회원 스킨)과 데모 관리자: 데모 카드가 bbs/login.php로 보낸 POST 처리, 데모 관리자의 그누보드 쓰기 막기.
 // 솔애드 상수(extend/solad.extend.php)는 확장 파일을 읽은 뒤에 생기므로 common_header에서 처리한다.
 include_once(G5_THEME_PATH.'/lib/theme.lib.php');
-add_event('member_login_tail', 'solad_theme_demo_login_form', 10, 4);
+add_event('common_header', 'solad_theme_demo_guard', 1, 0);
+add_event('common_header', 'solad_theme_login_skin', 10, 0);
 add_event('common_header', 'solad_theme_demo_login_handle', 10, 0);
