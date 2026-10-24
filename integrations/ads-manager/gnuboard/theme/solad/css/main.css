@@ -130,7 +130,108 @@
   object-fit: cover;
   background: #000;
 }
-.sl-hero-chip {
+/* 서브 히어로: 왼쪽 글과 오른쪽 플레이어(도시 야경)를 나란히 두고, 플레이어 둘레에 기능 칩을 띄운다 */
+.sl-subhero {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 120px;
+  background: radial-gradient(44% 60% at 74% 50%, rgba(58, 138, 253, 0.14), transparent 70%);
+}
+.sl-subhero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.sl-subhero-title {
+  margin: 20px 0 0;
+  color: #fff;
+  font-size: clamp(36px, 3.6vw, 56px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  word-break: keep-all;
+}
+.sl-subhero-line {
+  display: block;
+}
+.sl-subhero-accent {
+  color: var(--sl-accent);
+}
+.sl-subhero-lead {
+  max-width: 500px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.75;
+}
+.sl-subhero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.sl-subhero-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.sl-subhero-link:hover {
+  color: #fff !important;
+  border-color: var(--sl-accent);
+}
+/* 글은 구역이 화면에 들어올 때(.is-in) 한 줄씩 올라온다. 구역 자체는 data-reveal로 숨기지 않는다. */
+.sl-js .sl-subhero-inner[data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+.sl-js .sl-subhero-step {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 0.9s var(--sl-ease),
+    transform 0.9s var(--sl-ease);
+  transition-delay: calc(var(--step, 0) * 0.12s);
+}
+.sl-js .sl-subhero-inner.is-in .sl-subhero-step {
+  opacity: 1;
+  transform: none;
+}
+.sl-subhero-stage {
+  position: relative;
+}
+.sl-subhero-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #000;
+  box-shadow:
+    0 60px 140px -60px rgba(58, 138, 253, 0.5),
+    0 30px 60px -30px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+/* 화면에 들어오기 전에는 영상을 받지 않아(preload none) 크기를 모르므로, 재생할 때 자리가 늘지 않게 16:9를 미리 잡는다. */
+.sl-subhero-frame [data-solad-player] {
+  aspect-ratio: 16 / 9;
+}
+.sl-subhero-frame .is-fallback video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+}
+.sl-subhero-chip {
   position: absolute;
   z-index: 2;
   display: inline-flex;
@@ -152,9 +253,16 @@
   animation:
     sl-chip-in 0.8s var(--sl-ease) both,
     sl-float 6s ease-in-out infinite;
-  animation-delay: calc(1.2s + var(--d, 0s)), calc(2s + var(--d, 0s));
+  animation-delay: calc(0.6s + var(--d, 0s)), calc(1.4s + var(--d, 0s));
 }
-.sl-hero-chip b {
+/* 스크립트가 돌면 구역이 화면에 들어올 때까지 칩 등장을 멈춰 둔다. */
+.sl-js .sl-subhero-chip {
+  animation-play-state: paused;
+}
+.sl-js .sl-subhero-inner.is-in .sl-subhero-chip {
+  animation-play-state: running;
+}
+.sl-subhero-chip b {
   padding: 2px 6px;
   border-radius: 4px;
   background: #f5c518;
@@ -162,32 +270,44 @@
   font-size: 11px;
   font-weight: 800;
 }
-.sl-hero-chip i {
+.sl-subhero-chip i {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--sl-accent);
   box-shadow: 0 0 12px var(--sl-accent);
 }
-/* 건너뛰기 칩은 실제 플레이어의 건너뛰기 버튼처럼 오른쪽 아래(컨트롤 막대 위), 로고 칩은 오른쪽 위에 둔다. */
-.sl-hero-chip--ad {
+/* 건너뛰기 칩은 실제 건너뛰기 버튼처럼 오른쪽 아래(컨트롤 막대 위), 재생 형식 칩은 왼쪽 위에 둔다. */
+.sl-subhero-chip--ad {
   right: -32px;
-  bottom: 88px;
-  --d: 0.75s;
-}
-.sl-hero-chip--hls {
-  top: -20px;
-  left: 40%;
-  --d: 0.25s;
-}
-.sl-hero-chip--logo {
-  top: 64px;
-  right: -28px;
+  bottom: 80px;
   --d: 0.5s;
 }
+.sl-subhero-chip--hls {
+  top: -20px;
+  left: 32px;
+  --d: 0s;
+}
+.sl-subhero-chip--logo {
+  top: 64px;
+  right: -28px;
+  --d: 0.25s;
+}
 
+/* 플레이어 그림자가 히어로 아래 끝에서 잘린 줄이 서브 히어로와 만나는 곳에 보이지 않게, 아래 여백을 바탕색으로 흐린다. */
+.sl-hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 64px;
+  background: linear-gradient(180deg, transparent, var(--sl-bg));
+  pointer-events: none;
+}
 .sl-hero-foot {
   position: absolute;
+  z-index: 1;
   right: 0;
   bottom: 28px;
   left: 0;
@@ -1170,8 +1290,22 @@
   .sl-hero-inner {
     padding: calc(var(--sl-hd-h) + 32px) var(--sl-gutter) 64px;
   }
-  .sl-hero-chip--ad,
-  .sl-hero-chip--logo {
+  .sl-subhero {
+    padding: 88px 0 96px;
+  }
+  .sl-subhero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    padding: 0 var(--sl-gutter);
+  }
+  .sl-subhero-copy {
+    max-width: 680px;
+  }
+  .sl-subhero-title {
+    font-size: clamp(32px, 6vw, 56px);
+  }
+  .sl-subhero-chip--ad,
+  .sl-subhero-chip--logo {
     right: -12px;
   }
   .sl-hero-foot {
@@ -1196,6 +1330,9 @@
   .sl-hero-inner {
     padding: var(--sl-hd-h) 0 32px;
   }
+  .sl-hero::after {
+    height: 32px;
+  }
   .sl-hero-stage {
     max-width: none;
   }
@@ -1206,7 +1343,31 @@
     border-radius: 0;
     box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.9);
   }
-  .sl-hero-chip {
+  /* 서브 히어로는 글 다음에 영상을 화면 폭 가득 붙인다. 칩은 숨긴다. */
+  .sl-subhero {
+    padding: 64px 0 72px;
+  }
+  .sl-subhero-inner {
+    gap: 32px;
+  }
+  .sl-subhero-title {
+    margin-top: 14px;
+    font-size: clamp(30px, 9vw, 44px);
+  }
+  .sl-subhero-lead {
+    font-size: 16px;
+  }
+  .sl-subhero-actions .sl-btn {
+    flex: 1 1 auto;
+  }
+  .sl-subhero-stage {
+    margin: 0 calc(var(--sl-gutter) * -1);
+  }
+  .sl-subhero-frame {
+    border-radius: 0;
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.9);
+  }
+  .sl-subhero-chip {
     display: none;
   }
   .sl-section {
@@ -1287,7 +1448,8 @@
     transition: none !important;
   }
   .sl-js [data-reveal],
-  .sl-js .sl-step-list li {
+  .sl-js .sl-step-list li,
+  .sl-js .sl-subhero-step {
     opacity: 1;
     transform: none;
   }

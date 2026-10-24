@@ -28,12 +28,14 @@
     });
   }
 
-  // 소개 영상은 히어로가 화면에서 벗어나면 쉬고, 돌아오면 이어서 재생한다. 사람이 멈춘 영상은 그대로 둔다.
+  // 히어로 영상은 화면에서 벗어나면 쉬고, 돌아오면 이어서 재생한다. 사람이 멈춘 영상은 그대로 둔다.
+  // 서브 히어로 영상(data-sl-play-in-view)은 처음 화면에 들어올 때 재생을 시작한다. 움직임 줄이기면 첫 장면만 불러온다.
   document.addEventListener('sl-hero-ready', function (event) {
     var media = event.detail && event.detail.media;
     if (!media || !('IntersectionObserver' in window)) return;
 
-    var autoPaused = false;
+    var playInView = event.target.hasAttribute('data-sl-play-in-view');
+    var autoPaused = playInView && !reduceMotion;
 
     new IntersectionObserver(
       function (entries) {
@@ -45,6 +47,8 @@
         } else if (autoPaused) {
           autoPaused = false;
           media.play().catch(function () {});
+        } else if (playInView && reduceMotion && media.preload === 'none') {
+          media.preload = 'metadata';
         }
       },
       { threshold: 0.2 }

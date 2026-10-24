@@ -49,6 +49,16 @@ function solad_theme_hero()
     return array('src' => '');
 }
 
+// 서브 히어로 영상. 테마 media/hero-placeholder.mp4가 없으면 빈 주소를 돌려준다.
+function solad_theme_subhero()
+{
+    solad_theme_video_lib(null);
+    if (!is_file(G5_THEME_PATH.'/media/hero-placeholder.mp4')) {
+        return array('src' => '');
+    }
+    return array('src' => solad_theme_local_url(solad_theme_asset('media/hero-placeholder.mp4')));
+}
+
 // 동영상 게시판 스킨의 solad_local_url(). 스킨이 없으면 주소를 그대로 둔다.
 function solad_theme_local_url($url)
 {

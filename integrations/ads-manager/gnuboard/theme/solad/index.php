@@ -9,6 +9,7 @@ add_stylesheet('<link rel="stylesheet" href="'.solad_theme_asset('css/main.css')
 add_javascript('<script src="'.solad_theme_asset('js/main.js').'" defer></script>', 21);
 
 $sl_hero = solad_theme_hero();
+$sl_subhero = solad_theme_subhero();
 $sl_demo = solad_theme_demo_video(SOLAD_THEME_VIDEO_BOARD, SOLAD_THEME_DEMO_WR_ID);
 $sl_videos = solad_theme_latest_videos(SOLAD_THEME_VIDEO_BOARD, 8);
 $sl_previews = $sl_videos ? solad_video_previews(SOLAD_THEME_VIDEO_BOARD, $sl_videos) : array();
@@ -16,6 +17,7 @@ $sl_video_count = solad_theme_count_videos(SOLAD_THEME_VIDEO_BOARD);
 $sl_gallery_url = get_pretty_url(SOLAD_THEME_VIDEO_BOARD);
 $sl_request_url = get_pretty_url(SOLAD_THEME_REQUEST_BOARD);
 $sl_player_base = solad_theme_player_base(SOLAD_THEME_VIDEO_BOARD);
+$sl_admin_url = solad_theme_admin_entry();
 
 $g5['title'] = '솔애드 동영상 플레이어';
 
@@ -49,54 +51,105 @@ include_once(G5_THEME_PATH.'/head.php');
                      data-preload="metadata"></div>
                 <?php } ?>
             </div>
-            <span class="sl-hero-chip sl-hero-chip--ad" aria-hidden="true"><b>광고</b> 3초 후 건너뛰기</span>
-            <span class="sl-hero-chip sl-hero-chip--hls" aria-hidden="true"><i></i>MP4 · HLS 재생</span>
-            <span class="sl-hero-chip sl-hero-chip--logo" aria-hidden="true"><i></i>로고 네 모서리</span>
         </div>
     </div>
 
     <div class="sl-hero-foot">
-        <a class="sl-scroll-cue" href="#sl-features"><span class="sound_only">기능 소개로 내려가기</span><span class="sl-scroll-cue-bar" aria-hidden="true"></span></a>
+        <a class="sl-scroll-cue" href="#sl-subhero"><span class="sound_only">플레이어 소개로 내려가기</span><span class="sl-scroll-cue-bar" aria-hidden="true"></span></a>
     </div>
+</section>
 
-    <?php if ($sl_hero['src']) { ?>
-    <script>
-    // 솔애드를 불러오지 못하면 브라우저 기본 플레이어로 소개 영상을 보여 준다.
-    function sl_hero_fallback() {
-        var node = document.getElementById("sl-hero-player");
-        if (!node || node.classList.contains("is-fallback") || node.querySelector("video-player, video")) return;
-        var video = document.createElement("video");
-        video.controls = true;
-        video.muted = true;
-        video.loop = true;
-        video.playsInline = true;
-        video.preload = "metadata";
-        video.autoplay = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        video.src = node.getAttribute("data-src");
-        node.classList.add("is-fallback");
-        node.appendChild(video);
-        node.dispatchEvent(new CustomEvent("sl-hero-ready", { bubbles: true, detail: { media: video } }));
-    }
-    </script>
-    <script type="module">
-    // 소개 영상은 광고 없이 재생한다. 빈 편성을 미리보기로 넘겨 광고 API를 부르지 않고 이벤트도 보내지 않는다.
-    // 움직임 줄이기를 켠 사람에게는 자동 재생하지 않고 영상 첫 장면과 재생 버튼만 보여 준다. 포스터는 쓰지 않는다.
-    // 녹화된 소개 영상 안에 플레이어 로고가 이미 있어서 이 플레이어의 로고는 끈다.
-    const node = document.getElementById("sl-hero-player");
-    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) node.dataset.autoplay = "true";
+<section class="sl-subhero" id="sl-subhero" aria-labelledby="sl-subhero-title">
+    <div class="sl-subhero-inner" data-reveal>
+        <div class="sl-subhero-copy">
+            <p class="sl-eyebrow sl-subhero-step" style="--step:0"><span class="sl-dot" aria-hidden="true"></span>솔애드 동영상 플레이어</p>
+            <h2 class="sl-subhero-title" id="sl-subhero-title">
+                <span class="sl-subhero-line sl-subhero-step" style="--step:1">그누보드 영상 게시판에</span>
+                <span class="sl-subhero-line sl-subhero-step sl-subhero-accent" style="--step:2">광고까지 붙는 플레이어</span>
+            </h2>
+            <p class="sl-subhero-lead sl-subhero-step" style="--step:3">그누보드 동영상 게시판에 바로 붙여 쓰는 솔애드 플레이어예요. 관리자 화면에서 정한 광고·로고·테마가 게시판 영상에 그대로 적용되고, 함께 보이는 영상도 이 플레이어로 재생돼요.</p>
+            <div class="sl-subhero-actions sl-subhero-step" style="--step:4">
+                <a class="sl-btn sl-btn--accent sl-btn--lg" href="<?php echo $sl_gallery_url; ?>">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5.6v12.8c0 .8.9 1.3 1.6.8l10-6.4c.6-.4.6-1.3 0-1.7l-10-6.4C8.9 4.3 8 4.8 8 5.6Z" fill="currentColor"/></svg>
+                    동영상 갤러리
+                </a>
+                <?php if ($sl_admin_url) { ?><a class="sl-btn sl-btn--ghost sl-btn--lg" href="<?php echo $sl_admin_url; ?>" data-sl-admin-popup>솔애드 관리자</a><?php } ?>
+                <a class="sl-btn sl-btn--glass sl-btn--lg" href="<?php echo $sl_request_url; ?>">광고 요청하기</a>
+            </div>
+            <a class="sl-subhero-link sl-subhero-step" style="--step:5" href="#sl-demo">광고가 붙는 실제 게시판 영상 보기 <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="sl-subhero-stage">
+            <div class="sl-subhero-frame">
+                <?php if ($sl_subhero['src']) { ?>
+                <div id="sl-subhero-player"
+                     data-solad-player
+                     data-solad-manual
+                     data-sl-play-in-view
+                     data-video-id="solad-sub-hero"
+                     data-src="<?php echo solad_attr($sl_subhero['src']); ?>"
+                     data-title="솔애드 플레이어 예시"
+                     data-muted="true"
+                     data-loop="true"
+                     data-preload="none"></div>
+                <?php } ?>
+            </div>
+            <span class="sl-subhero-chip sl-subhero-chip--ad" aria-hidden="true"><b>광고</b> 3초 후 건너뛰기</span>
+            <span class="sl-subhero-chip sl-subhero-chip--hls" aria-hidden="true"><i></i>MP4 · HLS 재생</span>
+            <span class="sl-subhero-chip sl-subhero-chip--logo" aria-hidden="true"><i></i>로고 네 모서리</span>
+        </div>
+    </div>
+</section>
+
+<?php if ($sl_hero['src'] || $sl_subhero['src']) { ?>
+<script>
+// 솔애드를 불러오지 못하면 브라우저 기본 플레이어로 영상을 보여 준다.
+function sl_player_fallback(id, autoplay) {
+    var node = document.getElementById(id);
+    if (!node || node.classList.contains("is-fallback") || node.querySelector("video-player, video")) return;
+    var video = document.createElement("video");
+    video.controls = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = node.getAttribute("data-preload") || "metadata";
+    video.autoplay = autoplay && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    video.src = node.getAttribute("data-src");
+    node.classList.add("is-fallback");
+    node.appendChild(video);
+    node.dispatchEvent(new CustomEvent("sl-hero-ready", { bubbles: true, detail: { media: video } }));
+}
+</script>
+<script type="module">
+// 히어로와 서브 히어로 영상은 광고 없이 재생한다. 빈 편성을 미리보기로 넘겨 광고 API를 부르지 않고 이벤트도 보내지 않는다.
+// 움직임 줄이기를 켠 사람에게는 자동 재생하지 않는다. 포스터는 쓰지 않는다.
+// 히어로 소개 영상 안에는 플레이어 로고가 이미 녹화돼 있어 그 플레이어의 로고만 끈다. 서브 히어로는 사이트 로고를 보여 준다.
+// 서브 히어로 영상은 화면에 들어올 때 main.js가 재생한다.
+const players = [
+    { id: "sl-hero-player", autoplay: true, overrides: { logo: { assetId: null } } },
+    { id: "sl-subhero-player", autoplay: false }
+];
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let loader = null;
+try {
+    loader = await import(<?php echo json_encode($sl_player_base.'/player/loader.js', JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
+} catch (error) {}
+
+for (const player of players) {
+    const node = document.getElementById(player.id);
+    if (!node) continue;
+    if (player.autoplay && !reduceMotion) node.dataset.autoplay = "true";
     try {
-        const { mount } = await import(<?php echo json_encode($sl_player_base.'/player/loader.js', JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>);
-        const handle = await mount(node, {
-            overrides: { logo: { assetId: null } },
-            preview: { schedule: { videoId: "solad-hero", breaks: [] } }
-        });
+        const options = { preview: { schedule: { videoId: node.dataset.videoId, breaks: [] } } };
+        if (player.overrides) options.overrides = player.overrides;
+        const handle = await loader.mount(node, options);
         node.dispatchEvent(new CustomEvent("sl-hero-ready", { bubbles: true, detail: handle }));
     } catch (error) {
-        sl_hero_fallback();
+        sl_player_fallback(player.id, player.autoplay);
     }
-    </script>
-    <?php } ?>
-</section>
+}
+</script>
+<?php } ?>
 
 <div class="sl-ticker" aria-label="지원하는 기능">
     <div class="sl-ticker-track">
