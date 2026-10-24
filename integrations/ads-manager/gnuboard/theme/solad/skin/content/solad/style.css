@@ -174,6 +174,61 @@
 .sl-buy-contact h3 + p {
   margin-top: 8px;
 }
+/* 구매 안내 자주 묻는 질문. 답은 접어 두고, 질문 줄 전체를 눌러 펼친다. */
+.sl-faq {
+  margin-top: 56px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.sl-faq-title {
+  margin-bottom: 16px;
+  color: var(--sl-text);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.sl-faq-item {
+  border-top: 1px solid var(--sl-line);
+}
+.sl-faq-item:last-child {
+  border-bottom: 1px solid var(--sl-line);
+}
+.sl-faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 4px;
+  color: var(--sl-text);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.sl-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.sl-faq-item summary::after {
+  content: "+";
+  flex: none;
+  color: var(--sl-accent);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+.sl-faq-item[open] summary::after {
+  content: "−";
+}
+.sl-faq-item summary:focus-visible {
+  outline: 2px solid var(--sl-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.sl-faq-item p {
+  padding: 0 4px 20px;
+  word-break: keep-all;
+  font-size: 15px;
+}
 /* 플레이어 특징(co_id=features) */
 .sl-feat-lead {
   max-width: 760px;
@@ -285,6 +340,12 @@
   .sl-buy-card,
   .sl-buy-contact {
     padding: 22px 18px;
+  }
+  .sl-faq-title {
+    font-size: 22px;
+  }
+  .sl-faq-item summary {
+    font-size: 16px;
   }
   .sl-feat-grid,
   .sl-feat-grid--3 {

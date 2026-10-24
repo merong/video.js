@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /adm/
+Disallow: /ads/api/
+Disallow: /ads/$
+Disallow: /ads/index.php
+Disallow: /bbs/login.php
+Disallow: /bbs/register.php
+Disallow: /bbs/register_form.php
+Disallow: /bbs/password_lost.php
+Disallow: /bbs/write.php
+
+Sitemap: https://solad.oootool.com/sitemap.xml

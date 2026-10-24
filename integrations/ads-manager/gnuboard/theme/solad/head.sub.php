@@ -5,6 +5,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // 코어 head.sub.php는 관리자 화면이 아니면 이 파일을 읽고 바로 끝난다. 그래서 관리자 분기는 두지 않는다.
 // 이 사이트는 쇼핑몰을 쓰지 않으므로(G5_USE_SHOP 없음) 쇼핑몰 분기도 두지 않는다.
 include_once(G5_THEME_PATH.'/lib/theme.lib.php');
+include_once(G5_THEME_PATH.'/lib/seo.lib.php');
 
 $g5_debug['php']['begin_time'] = $begin_time = get_microtime();
 
@@ -53,6 +54,7 @@ if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
 <title><?php echo $g5_head_title; ?></title>
+<?php solad_seo_head(); ?>
 <?php
 echo '<link rel="stylesheet" href="'.get_versioned_asset_url(run_replace('head_css_url', G5_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').'.css', G5_URL)).'">'.PHP_EOL;
 ?>
