@@ -98,6 +98,11 @@ function placeholder(attributes: Record<string, string>, parent: Element = docum
 
 const manual = (attributes: Record<string, string> = {}) => placeholder({ 'data-solad-manual': '', ...attributes });
 
+/** The skin's highlight address in `element`, or `null`; a later describe loads the real skin, which says `null`. */
+const highlightOf = (element: Element) =>
+  // SAFETY: every mount in these tests builds a `<solad-video-skin>`.
+  (element.querySelector('solad-video-skin') as HTMLElement & { highlight?: string | null }).highlight ?? null;
+
 /** A `CustomEvent`'s detail; the loader dispatches only those. */
 const detailOf = (event: Event) => (event instanceof CustomEvent ? event.detail : undefined);
 
@@ -296,6 +301,58 @@ describe('loader value merging (4.2)', () => {
 
     expect(track).toMatchObject({ kind: 'metadata', label: 'thumbnails', default: true });
     expect(track.getAttribute('src')).toBe(new URL('/media/a-thumbs.vtt', document.baseURI).href);
+  });
+
+  it('adds no thumbnail track when the preset turns the thumbnails off', async () => {
+    serve(() => json({ ok: true, data: render({ controls: { thumbnails: false } }) }));
+    const { mount } = await loader();
+    const handle = await mount(manual({ 'data-thumbnails': '/media/a-thumbs.vtt' }));
+
+    expect(handle.media.querySelector('track')).toBeNull();
+  });
+
+  it('gives an HLS element a copy of the thumbnails with absolute cue images', async () => {
+    const vtt = 'WEBVTT\n\n00:00:00.000 --> 00:00:02.000\nthumbnails.jpg?v=1#xywh=0,0,160,90\n';
+    const blobs: Blob[] = [];
+
+    serve(
+      () => json({ ok: true, data: render() }),
+      (url) => (url.pathname === '/media/a-thumbs.vtt' ? new Response(vtt) : json({ ok: false }, 500))
+    );
+    // jsdom has no object URLs.
+    Object.defineProperty(URL, 'createObjectURL', {
+      configurable: true,
+      value: (blob: Blob) => (blobs.push(blob), 'blob:thumbs'),
+    });
+    const { mount } = await loader();
+    const handle = await mount(manual({ 'data-src': '/media/master.m3u8', 'data-thumbnails': '/media/a-thumbs.vtt' }), {
+      engine: 'hlsjs',
+    }).finally(() => Reflect.deleteProperty(URL, 'createObjectURL'));
+
+    expect(handle.media.querySelector('track').getAttribute('src')).toBe('blob:thumbs');
+    // jsdom's Blob has no text().
+    const text = await new Promise((resolve) => {
+      const reader = new FileReader();
+
+      reader.onload = () => resolve(reader.result);
+      reader.readAsText(blobs[0]!);
+    });
+
+    expect(text).toContain(`\n${new URL('/media/thumbnails.jpg?v=1#xywh=0,0,160,90', document.baseURI).href}\n`);
+  });
+
+  it('reads data-highlight for the skin and drops an invalid one', async () => {
+    serve(() => json({ ok: true, data: render() }));
+    const { mount } = await loader();
+    const valid = manual({ 'data-highlight': '/data/file/video/solad/7/highlight.mp4?v=1' });
+    const invalid = manual({ 'data-highlight': 'javascript:alert(1)' });
+
+    await mount(valid);
+    await mount(invalid);
+
+    expect(highlightOf(valid)).toBe(new URL('/data/file/video/solad/7/highlight.mp4?v=1', document.baseURI).href);
+    expect(highlightOf(invalid)).toBeNull();
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('data-highlight'));
   });
 });
 
@@ -744,6 +801,16 @@ describe('mount preview (A2-D 5)', () => {
 
     controller.options.onEvent({ type: 'start', breakId: 'pre' });
     expect(onEvent).toHaveBeenCalledWith({ type: 'start', breakId: 'pre' });
+  });
+
+  it('keeps the poster without a highlight in a preview', async () => {
+    serve(() => json({ ok: true, data: render() }));
+    const { mount } = await loader();
+    const element = manual({ 'data-highlight': '/media/highlight.mp4' });
+
+    await mount(element, { preview: { schedule: { schedule } } });
+
+    expect(highlightOf(element)).toBeNull();
   });
 
   it('attaches a preview controller with the ad labels to a Video.js player for a schedule object', async () => {

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 
-import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const assets = 'integrations/ads-manager/public/assets/videojs';
 const bundle = readFileSync(`${assets}/video.js`, 'utf8');
@@ -352,6 +352,90 @@ describe('SoladVideoSkinElement', () => {
         'padding-inline-start: calc(var(--solad-logo-margin) + var(--solad-logo-size) + var(--media-spacing) * 2)'
       );
       expect(css).not.toMatch(/(?<!-)width: var\(--solad-logo-width\)/);
+    });
+  });
+
+  describe('highlight', () => {
+    const clip = 'https://site.test/data/file/video/solad/7/highlight.mp4?v=1';
+    let play: ReturnType<typeof vi.spyOn>;
+
+    beforeEach(() => {
+      play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue(undefined);
+      vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
+      vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(() => {});
+    });
+
+    function withHighlight() {
+      // SAFETY: the skin module defined this tag in beforeAll.
+      const element = document.createElement('solad-video-skin') as HTMLElement & { highlight: string | null };
+      const content = document.createElement('video');
+
+      document.body.append(element);
+      element.append(content);
+      element.highlight = clip;
+      return { element, content, layer: () => element.shadowRoot!.querySelector('.solad-highlight') };
+    }
+
+    // jsdom has no PointerEvent; the skin reads only `pointerType`.
+    const pointer = (type: string, pointerType = 'mouse') =>
+      // SAFETY: Object.assign added `pointerType` just now.
+      Object.assign(new Event(type), { pointerType }) as Event & { pointerType: string };
+
+    it('plays the clip muted in a loop over the poster while a mouse rests on the player', () => {
+      const { element, layer } = withHighlight();
+      const video = layer()!.querySelector('video')!;
+
+      expect(layer()!.previousElementSibling!.localName).toBe('media-poster');
+      expect(layer()!.getAttribute('aria-hidden')).toBe('true');
+      expect([video.muted, video.loop, video.hasAttribute('src')]).toEqual([true, true, false]);
+
+      element.dispatchEvent(pointer('pointerenter'));
+      video.dispatchEvent(new Event('playing'));
+
+      expect(video.getAttribute('src')).toBe(clip);
+      expect(play).toHaveBeenCalledTimes(1);
+      expect(layer()!.hasAttribute('data-active')).toBe(true);
+      expect(element.shadowRoot!.querySelector('.solad-highlight-badge[data-active]')!.textContent).toBe('Highlight');
+
+      element.dispatchEvent(pointer('pointerleave'));
+
+      expect(layer()!.hasAttribute('data-active')).toBe(false);
+    });
+
+    it('does not start for a touch or with reduced motion', () => {
+      vi.stubGlobal('matchMedia', (query: string) => ({ matches: query.includes('reduce') }));
+      const { element } = withHighlight();
+
+      element.dispatchEvent(pointer('pointerenter', 'touch'));
+      element.dispatchEvent(pointer('pointerenter'));
+
+      expect(play).not.toHaveBeenCalled();
+    });
+
+    it('is gone for good after the first play, and never comes for content that has played', () => {
+      const { element, content, layer } = withHighlight();
+
+      content.dispatchEvent(new Event('play'));
+      element.dispatchEvent(pointer('pointerenter'));
+
+      expect(layer()).toBeNull();
+      expect(element.shadowRoot!.querySelector('.solad-highlight-badge')).toBeNull();
+      expect(play).not.toHaveBeenCalled();
+
+      const later = withHighlight();
+
+      later.content.currentTime = 3;
+      later.element.highlight = clip;
+
+      expect(later.layer()).toBeNull();
+    });
+
+    it('leaves the poster when the clip fails', () => {
+      const { layer } = withHighlight();
+
+      layer()!.querySelector('video')!.dispatchEvent(new Event('error'));
+
+      expect(layer()).toBeNull();
     });
   });
 

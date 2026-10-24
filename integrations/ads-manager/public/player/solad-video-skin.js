@@ -32,6 +32,8 @@ const NONE_KEY = 'solad.captionsNone';
 const noneText = { ko: '없음', en: 'None', ja: 'なし', 'zh-CN': '无' };
 const BOOKMARK_KEY = 'solad.bookmark';
 const bookmarkText = { ko: '북마크 추가', en: 'Add bookmark', ja: 'ブックマークを追加', 'zh-CN': '添加书签' };
+const HIGHLIGHT_KEY = 'solad.highlight';
+const highlightText = { ko: '하이라이트', en: 'Highlight', ja: 'ハイライト', 'zh-CN': '精彩片段' };
 // The rates of Video.js `DEFAULT_RATES`, as the settings menu lists them.
 const RATES = [0.2, 0.5, 0.7, 1, 1.2, 1.5, 1.7, 2];
 // The logo link's name ends with this; ko and en keep a space after the alt text, the full-width brackets do not.
@@ -191,6 +193,52 @@ const STYLES = `
     :where(.media-skin) > .solad-center {
       transition-property: opacity, visibility;
       scale: none;
+    }
+  }
+
+  /* Highlight preview: over the video and poster, under the controls backdrop (10); its badge sits level with the
+     title (20). Presses reach the video and the large play button below. */
+  :where(.media-skin) .solad-highlight {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    border-radius: inherit;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  :where(.media-skin) :is(.solad-highlight, .solad-highlight-badge)[data-active] {
+    opacity: 1;
+  }
+
+  :where(.media-skin) .solad-highlight-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: var(--media-object-fit, contain);
+    background: #000;
+  }
+
+  :where(.media-skin) .solad-highlight-badge {
+    position: absolute;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    bottom: calc(var(--media-spacing, 0.25rem) * 4 + var(--media-control-size, 2.25rem) + 0.5rem);
+    left: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 0.6);
+    color: #fff;
+    font: 600 0.75rem/1 system-ui, sans-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(.media-skin) :is(.solad-highlight, .solad-highlight-badge) {
+      transition: none;
     }
   }
 
@@ -595,6 +643,7 @@ await Promise.all(
         captionsNone: noneText[locale],
         opensInNewTab: newTabText[locale],
         bookmark: bookmarkText[locale],
+        highlight: highlightText[locale],
       },
     };
 
@@ -901,12 +950,152 @@ function renderLogo(root, logo) {
   logoContent(slot, logo);
 }
 
+/**
+ * Show `src` over the poster until the first play: a muted loop while a mouse rests on the player or the keyboard focus
+ * is inside it. Touch, reduced motion and a failed load leave the poster as it is. The video element is separate from
+ * the content, so playback, ads and progress never see it. Returns the removal.
+ */
+function attachHighlight(host, src) {
+  const root = host.shadowRoot;
+  const container = root.querySelector('media-container');
+  if (!container) return () => {};
+
+  const doc = root.ownerDocument;
+  const layer = doc.createElement('div');
+  const video = doc.createElement('video');
+  const badge = doc.createElement('span');
+  const text = doc.createElement('media-text');
+  const poster = [...container.children].find((node) => node.localName === 'media-poster');
+  const events = new AbortController();
+  const options = { signal: events.signal };
+  let hovered = false;
+  let focused = false;
+
+  layer.className = 'solad-highlight';
+  layer.setAttribute('aria-hidden', 'true');
+  video.className = 'solad-highlight-video';
+  video.muted = true;
+  video.loop = true;
+  video.preload = 'none';
+  video.tabIndex = -1;
+
+  // Muted and inline, so browsers let it play without a gesture; the address loads on the first hover.
+  for (const name of ['muted', 'playsinline', 'disablepictureinpicture', 'disableremoteplayback'])
+    video.setAttribute(name, '');
+
+  badge.className = 'solad-highlight-badge';
+  badge.setAttribute('aria-hidden', 'true');
+  text.setAttribute('token', HIGHLIGHT_KEY);
+  text.textContent = highlightText.en;
+  badge.append(text);
+  layer.append(video);
+  container.insertBefore(layer, poster?.nextSibling ?? container.firstChild);
+  // Before the controls, like the logo, so the controls backdrop does not dim it.
+  container.insertBefore(badge, [...container.children].find((node) => node.localName === 'media-controls') ?? null);
+
+  const show = (on) => {
+    layer.toggleAttribute('data-active', on);
+    badge.toggleAttribute('data-active', on);
+  };
+
+  const remove = () => {
+    events.abort();
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    layer.remove();
+    badge.remove();
+  };
+  const reduced = () => doc.defaultView?.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+  const update = () => {
+    if ((hovered || focused) && !reduced()) {
+      if (!video.hasAttribute('src')) video.src = src;
+
+      video.play()?.catch?.(() => {});
+      return;
+    }
+
+    show(false);
+    video.pause();
+
+    if (video.readyState > 0) video.currentTime = 0;
+  };
+
+  // Shown once frames come, so a slow or failed load keeps the poster.
+  video.addEventListener('playing', () => show(hovered || focused), options);
+  video.addEventListener('error', remove, options);
+  host.addEventListener(
+    'pointerenter',
+    (event) => {
+      if (event.pointerType === 'touch') return;
+
+      hovered = true;
+      update();
+    },
+    options
+  );
+  host.addEventListener(
+    'pointerleave',
+    () => {
+      hovered = false;
+      update();
+    },
+    options
+  );
+  host.addEventListener(
+    'focusin',
+    (event) => {
+      focused = Boolean(event.composedPath()[0]?.matches?.(':focus-visible'));
+      update();
+    },
+    options
+  );
+  // Focus moving between two controls leaves and enters at once; only a focus that left the player stops it.
+  host.addEventListener(
+    'focusout',
+    () =>
+      setTimeout(() => {
+        if (events.signal.aborted || host.matches(':focus-within')) return;
+
+        focused = false;
+        update();
+      }),
+    options
+  );
+
+  // The content may come after the address. A custom media element forwards `play` only to its own listeners, so the
+  // listener goes on the media itself; one that has already played ends the preview at once.
+  const watched = new WeakSet();
+  const watch = () => {
+    for (const media of host.children) {
+      if (media.localName === 'media-ads' || !('paused' in media) || watched.has(media)) continue;
+
+      if (!media.paused || media.currentTime > 0) {
+        remove();
+        return;
+      }
+
+      watched.add(media);
+      media.addEventListener('play', remove, options);
+    }
+  };
+  const observer = new MutationObserver(watch);
+
+  observer.observe(host, { childList: true });
+  events.signal.addEventListener('abort', () => observer.disconnect());
+  watch();
+
+  return remove;
+}
+
 export class SoladVideoSkinElement extends VideoSkin {
   static tagName = TAG;
   static template = createTemplate(VideoSkin.template);
 
   #configured = false;
   #logo = null;
+  #highlight = null;
+  #removeHighlight = null;
 
   constructor() {
     super();
@@ -930,6 +1119,20 @@ export class SoladVideoSkinElement extends VideoSkin {
   set logo(value) {
     this.#logo = value ?? null;
     renderLogo(this.shadowRoot, this.#logo);
+  }
+
+  /**
+   * The highlight video address for the preview over the poster, or `null`. It shows until the first play and is gone
+   * after it.
+   */
+  get highlight() {
+    return this.#highlight;
+  }
+
+  set highlight(value) {
+    this.#removeHighlight?.();
+    this.#highlight = value || null;
+    this.#removeHighlight = this.#highlight ? attachHighlight(this, this.#highlight) : null;
   }
 
   connectedCallback() {

@@ -223,6 +223,7 @@ function readPlaceholder(element, options) {
     poster: url('poster', 'poster', 'data-poster'),
     title: text('title', 'title', 'data-title'),
     thumbnails: url('thumbnails', 'thumbnails', 'data-thumbnails'),
+    highlight: url('highlight', 'highlight', 'data-highlight'),
     captions: url('captions', 'captions', 'data-captions'),
     // The `lecture` option is a manifest object; `data-lecture` is its URL.
     lecture: isGroup(options.lecture) ? options.lecture : url('lecture', 'lecture', 'data-lecture'),
@@ -472,9 +473,56 @@ async function lectureLayout(render, preview) {
   return { wrapper, grid, panel };
 }
 
+/** A WebVTT file with each cue's payload line made absolute against `base`. */
+function absoluteCues(text, base) {
+  let payload = false;
+
+  return text
+    .split(/\r?\n/)
+    .map((line) => {
+      if (!line.trim()) payload = false;
+      else if (line.includes('-->')) payload = true;
+      else if (payload) {
+        try {
+          return new URL(line.trim(), base).href;
+        } catch {
+          return line;
+        }
+      }
+
+      return line;
+    })
+    .join('\n');
+}
+
+/**
+ * The thumbnails track address for `tag`. The thumbnail slider resolves a cue's image against the `<track>` it finds in
+ * the media's own children, and an HLS element's track belongs to its inner `<video>`, so it falls back to the page
+ * address. Those get a copy whose cue images are already absolute; anything that fails keeps the original address.
+ */
+async function thumbnailsSource(href, tag, signal) {
+  if (tag === 'video' || !URL.createObjectURL) return href;
+
+  try {
+    const response = await fetch(href, { credentials: 'same-origin', signal });
+    if (!response.ok) return href;
+
+    const blob = new Blob([absoluteCues(await response.text(), response.url || href)], { type: 'text/vtt' });
+    const copy = URL.createObjectURL(blob);
+
+    signal.addEventListener('abort', () => URL.revokeObjectURL(copy), { once: true });
+    return copy;
+  } catch {
+    return href;
+  }
+}
+
 async function buildVideojs(element, render, values, signal, onEvent, preview) {
   const hls = /\.m3u8$/i.test(new URL(pageUrl(values.src)).pathname);
   const tag = hls ? (values.engine === 'hlsjs' ? 'hlsjs-video' : 'hls-video') : 'video';
+  // Off in the site's controls means no track at all, so the slider has nothing to show.
+  const thumbnails =
+    render.controls.thumbnails !== false && values.thumbnails ? thumbnailsSource(values.thumbnails, tag, signal) : null;
 
   loadStyle(asset(`videojs/${render.styles.css}`));
   await import(asset(`videojs/${render.styles.js}`));
@@ -497,6 +545,7 @@ async function buildVideojs(element, render, values, signal, onEvent, preview) {
   const ads = lms?.ads === 'off' ? null : document.createElement('media-ads');
   const language = playerLanguage(render.language ?? pageLanguage(element));
   const lecture = lms ? await lectureLayout(render, preview) : null;
+  const thumbnailsSrc = await thumbnails;
 
   if (signal.aborted) return null;
 
@@ -522,6 +571,9 @@ async function buildVideojs(element, render, values, signal, onEvent, preview) {
     if (lms.bookmarks && lms.tabs.notes && values.lecture && !preview) skin.setAttribute('lms-bookmarks', '');
   }
 
+  // A board view's preview over the poster; a lecture and the admin preview keep their poster as it is.
+  if (values.highlight && !lms && !values.lecture && !preview) skin.highlight = values.highlight;
+
   // `<video-player>` reads `content-title` and `poster` (packages/core/src/dom/store/features/metadata.ts).
   if (render.display.title && values.title) player.setAttribute('content-title', values.title);
 
@@ -530,13 +582,13 @@ async function buildVideojs(element, render, values, signal, onEvent, preview) {
   applyPresetCss(skin, render.css);
   media.setAttribute('src', pageUrl(values.src));
 
-  if (values.thumbnails) {
+  if (thumbnailsSrc) {
     const track = document.createElement('track');
 
     // The thumbnail slider reads the first metadata track labelled `thumbnails`.
     track.kind = 'metadata';
     track.label = 'thumbnails';
-    track.src = values.thumbnails;
+    track.src = thumbnailsSrc;
     track.default = true;
     media.append(track);
   }
