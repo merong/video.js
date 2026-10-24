@@ -722,21 +722,14 @@ describe('ThemeCards', () => {
     cleanup();
   });
 
-  it('shows each built-in card as a picture named by its label, and draws a card without one', () => {
+  it('draws every card from its theme values and names it by its label', () => {
     const custom = { ...THEME_CHOICES[0]!, id: 'custom', label: '내 테마', note: '직접 만든 값' };
     const { container } = render(
       <ThemeCards choices={[...THEME_CHOICES, custom]} current={THEME_CHOICES[0]} onPick={() => {}} />
     );
-    const pictures = container.querySelectorAll('img.aa-theme-thumb');
 
-    expect(pictures).toHaveLength(THEME_CHOICES.length);
-
-    for (const picture of pictures) {
-      expect(picture.getAttribute('alt')).toBe('');
-      expect(picture.getAttribute('src')).toMatch(/\.webp$|^data:image\/webp/u);
-    }
-
-    expect(container.querySelectorAll('svg.aa-theme-thumb')).toHaveLength(1);
+    expect(container.querySelectorAll('img')).toHaveLength(0);
+    expect(container.querySelectorAll('svg.aa-theme-thumb[aria-hidden="true"]')).toHaveLength(THEME_CHOICES.length + 1);
     expect(screen.getByRole('radio', { name: /^기본/u }).matches(':checked')).toBe(true);
     expect(screen.getByRole('radio', { name: /^내 테마/u })).toBeTruthy();
   });

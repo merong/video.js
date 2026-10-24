@@ -148,18 +148,17 @@
 }
 
 /* Preset editor (A2 canvas): 1280 is section list, sections and a sticky preview; narrower widths stack the section
-   chips or select and the folding preview above the sections. `PresetEditor` picks the width class. The basic and
-   theme sections (`top`) span the sections and preview columns so the theme cards get room for three to a row. */
+   chips or select and the folding preview above the sections. `PresetEditor` picks the width class. */
 .aa-editor {
   display: grid;
-  grid-template-areas: "nav top top" "nav main preview";
+  grid-template-areas: "nav main preview";
   grid-template-columns: 200px minmax(0, 1fr) minmax(0, 360px);
   gap: var(--gap-lg);
   align-items: start;
 }
 
 .aa-editor:not(.is-wide) {
-  grid-template-areas: "nav" "preview" "top" "main";
+  grid-template-areas: "nav" "preview" "main";
   grid-template-columns: minmax(0, 1fr);
   gap: var(--gap-md);
 }
@@ -174,11 +173,6 @@
 
 .aa-editor:not(.is-wide) .aa-editor-nav {
   top: 0;
-}
-
-.aa-editor-top {
-  grid-area: top;
-  min-width: 0;
 }
 
 .aa-editor-main {
@@ -200,19 +194,19 @@
 /* Without the section list (the GnuBoard settings page) the preview takes the wider column, and the narrower widths
    put it above the sections. */
 .aa-editor.is-plain.is-wide {
-  grid-template-areas: "top top" "main preview";
+  grid-template-areas: "main preview";
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
 }
 
 .aa-editor.is-plain:not(.is-wide) {
-  grid-template-areas: "preview" "top" "main";
+  grid-template-areas: "preview" "main";
 }
 
-/* Theme cards: at most three to a row, each at least 200px; at 768px and below always two, so six cards stay short. */
+/* Theme cards: each at least 200px, so the sections column holds two to a row; at 768px and below always two. */
 .aa-theme-cards {
   --_gap: var(--gap-md);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(max(200px, (100% - 2 * var(--_gap)) / 3), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--_gap);
 }
 

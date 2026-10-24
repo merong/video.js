@@ -416,8 +416,7 @@ export function PresetEditor({
         </div>
       ) : null}
 
-      {/* Basic and theme span the main and preview columns on wide screens, so the theme cards can sit three to a row. */}
-      <div className="aa-stack aa-editor-top">
+      <div className="aa-stack aa-editor-main">
         {section(
           'basic',
           '기본',
@@ -579,9 +578,7 @@ export function PresetEditor({
             </div>
           </DisabledReason>
         )}
-      </div>
 
-      <div className="aa-stack aa-editor-main">
         {section(
           'logo',
           '로고',
