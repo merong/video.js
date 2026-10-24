@@ -7,6 +7,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$content_skin_url.'/style.css?v='
 // 구매 안내 아래 자주 묻는 질문. 구조화 데이터(FAQPage)와 같은 배열을 쓴다.
 include_once(G5_THEME_PATH.'/lib/seo.lib.php');
 $sl_faq = $co_id === 'purchase' ? solad_seo_faq() : array();
+
+// 특징 페이지 부가 기능 그림에 같은 이름의 mp4 모션을 겹친다.
+if ($co_id === 'features') {
+    add_javascript('<script src="'.$content_skin_url.'/features.js?v='.filemtime($content_skin_path.'/features.js').'" defer></script>', 10);
+}
 ?>
 
 <article class="sl-doc ctt_<?php echo $co_id; ?>">
