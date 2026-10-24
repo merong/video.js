@@ -181,7 +181,8 @@ function solad_theme_count_videos($bo_table)
     return $board ? (int) $board['bo_count_write'] : 0;
 }
 
-// 데모 스위치. data/solad-demo.php가 array('admin_id' => '<아이디>')를 돌려주면 켜지고, 파일이 없거나 모양이 다르면 꺼진다(null).
+// 데모 스위치. 그누보드 데모 모드(사이트 루트의 DEMO 파일)가 켜져 있고 data/solad-demo.php가 array('admin_id' => '<아이디>')를 돌려주면 켜진다.
+// 둘 중 하나라도 없거나 모양이 다르면 꺼진다(null). 데모 모드에서는 그누보드 check_demo()가 최고관리자가 아닌 관리자의 adm/ 저장도 막는다.
 function solad_theme_demo_config()
 {
     static $demo = false;
@@ -191,7 +192,7 @@ function solad_theme_demo_config()
 
     $demo = null;
     $file = G5_DATA_PATH.'/solad-demo.php';
-    if (defined('SOLAD_URL') && is_file($file)) {
+    if (defined('SOLAD_URL') && is_file(G5_PATH.'/DEMO') && is_file($file)) {
         $value = include $file;
         if (is_array($value) && isset($value['admin_id']) && is_string($value['admin_id']) && preg_match('/^[0-9a-z_]+$/i', $value['admin_id'])) {
             $demo = array('admin_id' => $value['admin_id']);
