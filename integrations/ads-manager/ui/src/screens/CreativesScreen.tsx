@@ -377,7 +377,7 @@ export function CreativesScreen({ titleId, title, host }: { titleId: string; tit
                 <Input
                   required
                   inputMode="url"
-                  placeholder="https://… 또는 /media/…"
+                  placeholder={`https://… 또는 ${session.uploadUrl}/…`}
                   value={form.url}
                   onChange={(event) => update({ url: event.currentTarget.value })}
                 />

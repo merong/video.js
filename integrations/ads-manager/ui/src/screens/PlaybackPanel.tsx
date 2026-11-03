@@ -45,7 +45,7 @@ export function PlaybackPanel({
   /** The menu's current activation; `null` while hidden. */
   activation: number | null;
 }) {
-  const { api, publicBase, run } = useWorkspace();
+  const { api, session, publicBase, run } = useWorkspace();
   const targetVideo = draft?.target.type === 'video' ? draft.target.id : null;
   const [contentUrl, setContentUrl] = useState(() => `${publicBase}${DEFAULT_CONTENT_PATH}`);
   const [videoId, setVideoId] = useState('');
@@ -168,7 +168,7 @@ export function PlaybackPanel({
           <Input
             required
             inputMode="url"
-            placeholder="https://…/content.mp4 또는 /media/content.mp4"
+            placeholder={`https://…/content.mp4 또는 ${session.uploadUrl}/content.mp4`}
             value={contentUrl}
             onChange={(event) => {
               setContentUrl(event.currentTarget.value);

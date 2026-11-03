@@ -29,6 +29,8 @@ export interface Bootstrap {
   capabilities: Capabilities;
   site?: { siteId: string; timeZone: string };
   playerModuleUrl?: string | null;
+  /** Where uploaded files are served, `/data/media` in the GnuBoard package; absent on an older API. */
+  uploadUrl?: string;
   limits?: { uploadBytes: number };
   /** `canWrite` is absent on an older API, which only signs in accounts that can write. */
   user?: { displayName: string; canWrite?: boolean };
@@ -39,6 +41,8 @@ export interface Session {
   capabilities: Capabilities;
   site: { siteId: string; timeZone: string };
   playerModuleUrl: string | null;
+  /** Upload address without a trailing slash, for input hints. */
+  uploadUrl: string;
   limits: { uploadBytes: number };
   displayName: string;
   /** `false` for a read-only admin (GnuBoard `r` only); the server still refuses writes on its own. */
@@ -122,6 +126,7 @@ export function toSession(data: Bootstrap): Session | null {
     capabilities: data.capabilities,
     site: data.site,
     playerModuleUrl: data.playerModuleUrl ?? null,
+    uploadUrl: (data.uploadUrl || '/media').replace(/\/+$/u, ''),
     limits: data.limits,
     displayName: data.user?.displayName || '',
     canWrite: data.user?.canWrite !== false,

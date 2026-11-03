@@ -45,7 +45,7 @@ final class App
                 return $base;
             }
             $this->host->requireAdmin();
-            return [...$base, 'user' => ['displayName' => $this->host->displayName(), 'canWrite' => $this->host->canWrite()], 'site' => ['siteId' => $this->config['siteId'], 'timeZone' => $this->config['timeZone']], 'playerModuleUrl' => $this->config['playerModuleUrl'], 'limits' => ['uploadBytes' => Creatives::uploadLimit($this->config)]];
+            return [...$base, 'user' => ['displayName' => $this->host->displayName(), 'canWrite' => $this->host->canWrite()], 'site' => ['siteId' => $this->config['siteId'], 'timeZone' => $this->config['timeZone']], 'playerModuleUrl' => $this->config['playerModuleUrl'], 'uploadUrl' => $this->config['uploadUrl'], 'limits' => ['uploadBytes' => Creatives::uploadLimit($this->config)]];
         }
         if ($action === 'schedule') {
             $videoId = Value::videoId($input['videoId'] ?? null);

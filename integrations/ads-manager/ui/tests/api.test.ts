@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vite-plus/test';
 
+import { type Bootstrap, toSession } from '../src/api/actions';
 import { AdminApi, ApiError } from '../src/api/client';
 
 interface Reply {
@@ -202,5 +203,20 @@ describe('AdminApi', () => {
     } finally {
       vi.useRealTimers();
     }
+  });
+});
+
+describe('toSession', () => {
+  const data: Bootstrap = {
+    authenticated: true,
+    csrfToken: 'token-1',
+    capabilities: { host: 'gnuboard', manualTargets: false, uploads: true, loginUrl: null },
+    site: { siteId: 'site-1', timeZone: 'Asia/Seoul' },
+    limits: { uploadBytes: 1024 },
+  };
+
+  it('keeps the upload address for input hints, falling back to /media on an older API', () => {
+    expect(toSession({ ...data, uploadUrl: '/data/media/' })?.uploadUrl).toBe('/data/media');
+    expect(toSession(data)?.uploadUrl).toBe('/media');
   });
 });

@@ -77,6 +77,7 @@ $app->dispatch('POST', 'login', ['username' => 'tester', 'password' => 'test-pas
 same($host->authenticated(), true, 'hashed account login');
 same($host->csrfToken() !== $anon['csrfToken'], true, 'login rotates CSRF');
 same($app->dispatch('GET', 'bootstrap', [])['user'], ['displayName' => 'tester', 'canWrite' => true], 'standalone bootstrap user is the login ID', 'a1');
+same($app->dispatch('GET', 'bootstrap', [])['uploadUrl'], $config['uploadUrl'], 'bootstrap tells the admin app the upload address', 'a1');
 fails(fn () => $app->dispatch('GET', 'creative-save', []), 400, 'GET cannot mutate');
 
 // Real persisted versions are used to canonicalize the shared playback fixture.
