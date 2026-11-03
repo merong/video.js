@@ -11,10 +11,11 @@ if (!defined('SOLAD_URL')) {
 }
 
 // 솔애드 영상 추가 기능(ffmpeg). 운영자는 이 파일보다 먼저 읽히는 extend/solad.config.php에서 정할 수 있다.
-// - SOLAD_MANAGER_PATH: src/VideoMedia.php가 있는 솔애드 관리자 폴더. 기본값은 이 파일이 저장소 안에 있을 때의 위치다.
+// - SOLAD_MANAGER_PATH: src/VideoMedia.php가 있는 솔애드 관리자 폴더. 기본값은 배포본대로 그누보드 루트의 ads 폴더이고,
+//   거기에 없으면 이 파일이 저장소 안에 있을 때의 위치다.
 // - SOLAD_FFMPEG_PATH, SOLAD_FFPROBE_PATH: 비우면 PATH와 /usr/bin, /usr/local/bin, /opt/homebrew/bin에서 찾는다.
 if (!defined('SOLAD_MANAGER_PATH')) {
-    define('SOLAD_MANAGER_PATH', dirname(__DIR__, 2));
+    define('SOLAD_MANAGER_PATH', is_file(G5_PATH.'/ads/src/VideoMedia.php') ? G5_PATH.'/ads' : dirname(__DIR__, 2));
 }
 if (!defined('SOLAD_FFMPEG_PATH')) {
     define('SOLAD_FFMPEG_PATH', '');
@@ -67,11 +68,11 @@ function solad_media()
     return $media;
 }
 
-// PC나 모바일 스킨이 솔애드 동영상 갤러리인 게시판.
+// PC나 모바일 스킨이 솔애드 동영상 갤러리(어두운 solad_video, 밝은 solad_video_light)인 게시판.
 function solad_media_is_video_board($board)
 {
     foreach (array('bo_skin', 'bo_mobile_skin') as $key) {
-        if (isset($board[$key]) && preg_replace('#^theme/#', '', (string) $board[$key]) === 'solad_video') {
+        if (isset($board[$key]) && in_array(preg_replace('#^theme/#', '', (string) $board[$key]), array('solad_video', 'solad_video_light'), true)) {
             return true;
         }
     }

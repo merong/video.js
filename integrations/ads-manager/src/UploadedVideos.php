@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace AdsManager;
 
-/** The gnuboard "업로드 동영상" admin screen: video posts of solad_video boards and their ffmpeg extras. */
+/** The gnuboard "업로드 동영상" admin screen: video posts of solad_video (dark or light) boards and their ffmpeg extras. */
 final class UploadedVideos
 {
-    private const SKIN = 'solad_video';
+    private const SKINS = ['solad_video', 'solad_video_light'];
     private const PAGE_SIZE = 20;
     private const SOURCES = ['file', 'hls_zip', 'hls_url', 'url'];
     private const VIDEO_EXTENSIONS = '/\.(mp4|m4v|webm)$/i';
@@ -256,15 +256,15 @@ final class UploadedVideos
         return $value;
     }
 
-    /** solad_video boards keyed by bo_table, with their extra fields. */
+    /** solad_video and solad_video_light boards keyed by bo_table, with their extra fields. */
     private function boards(): array
     {
         global $g5;
         if ($this->boards !== null) {
             return $this->boards;
         }
-        $skin = sql_real_escape_string(self::SKIN);
-        $result = sql_query("SELECT bo_table FROM {$g5['board_table']} WHERE bo_skin = '$skin' OR bo_mobile_skin = '$skin' ORDER BY bo_order, bo_table");
+        $skins = "'" . implode("', '", array_map('sql_real_escape_string', self::SKINS)) . "'";
+        $result = sql_query("SELECT bo_table FROM {$g5['board_table']} WHERE bo_skin IN ($skins) OR bo_mobile_skin IN ($skins) ORDER BY bo_order, bo_table");
         $this->boards = [];
         while ($row = sql_fetch_array($result)) {
             $this->boards[$row['bo_table']] = get_board_db($row['bo_table'], true);

@@ -55,6 +55,22 @@ function solad_request_attr($value)
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
+// 밝은 스킨(solad_request_light)도 이 폴더의 화면·스크립트·기본 CSS를 쓴다. 고른 스킨의 주소에서 이 폴더의 주소를 얻는다.
+function solad_request_skin_url($board_skin_url)
+{
+    return preg_replace('#/[^/]*$#', '/'.basename(__DIR__), rtrim($board_skin_url, '/'));
+}
+
+// 이 폴더의 기본 CSS를 불러오고, 고른 스킨이 다른 폴더(밝은 스킨)면 그 폴더의 색 토큰 CSS를 뒤에 덧붙인다.
+function solad_request_stylesheets($board_skin_url)
+{
+    $url = solad_request_skin_url($board_skin_url);
+    add_stylesheet('<link rel="stylesheet" href="'.$url.'/style.css">', 0);
+    if ($url !== rtrim($board_skin_url, '/')) {
+        add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+    }
+}
+
 // G5_URL 아래 주소를 루트 상대 경로로 바꾼다. solad_video/solad.lib.php와 같은 함수이고, 이 스킨만 설치한 사이트를 위해 여기에도 둔다.
 if (!function_exists('solad_local_url')) {
 function solad_local_url($url)

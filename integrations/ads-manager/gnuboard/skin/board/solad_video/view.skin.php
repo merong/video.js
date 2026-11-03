@@ -3,8 +3,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 include_once($board_skin_path.'/solad.lib.php');
 
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
-add_javascript('<script src="'.$board_skin_url.'/preview.js?v='.filemtime($board_skin_path.'/preview.js').'" defer></script>', 10);
+solad_video_stylesheets($board_skin_url);
+add_javascript('<script src="'.solad_video_skin_url($board_skin_url).'/preview.js?v='.filemtime(__DIR__.'/preview.js').'" defer></script>', 10);
 
 $sv_settings = solad_video_settings($board);
 $sv_src = solad_video_source($view, $view['file']);

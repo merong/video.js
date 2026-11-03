@@ -2,7 +2,7 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once($board_skin_path.'/request.lib.php');
 
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+solad_request_stylesheets($board_skin_url);
 
 $sr_settings = solad_request_settings($board);
 $sr_stages = solad_request_stages();
@@ -262,6 +262,6 @@ function fboardlist_submit(f) {
         });
 })();
 </script>
-<script src="<?php echo $board_skin_url; ?>/request.js"></script>
+<script src="<?php echo solad_request_skin_url($board_skin_url); ?>/request.js"></script>
 <?php } ?>
 <!-- } 솔애드 광고 요청 목록 -->

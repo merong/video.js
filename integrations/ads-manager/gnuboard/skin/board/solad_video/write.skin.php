@@ -2,7 +2,7 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once($board_skin_path.'/solad.lib.php');
 
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+solad_video_stylesheets($board_skin_url);
 
 // 첨부 1번 칸은 영상 파일이나 HLS 묶음(zip), 2번 칸은 썸네일, 나머지는 일반 첨부다.
 $sv_video_slot = $is_file && $file_count >= 1;
@@ -243,7 +243,7 @@ $sv_existing_thumb = ($w == 'u' && $sv_thumb_slot && !empty($file[1]['file'])) ?
     </div>
     </form>
 
-    <script src="<?php echo $board_skin_url; ?>/write.js"
+    <script src="<?php echo solad_video_skin_url($board_skin_url); ?>/write.js"
             data-max-bytes="<?php echo (int) $board['bo_upload_size']; ?>"
             data-max-label="<?php echo solad_attr($upload_max_filesize); ?>"
             data-solad-base="<?php echo solad_attr($sv_settings['base']); ?>"></script>

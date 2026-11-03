@@ -33,6 +33,22 @@ function solad_attr($value)
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
+// 밝은 스킨(solad_video_light)도 이 폴더의 화면·스크립트·기본 CSS를 쓴다. 고른 스킨의 주소에서 이 폴더의 주소를 얻는다.
+function solad_video_skin_url($board_skin_url)
+{
+    return preg_replace('#/[^/]*$#', '/'.basename(__DIR__), rtrim($board_skin_url, '/'));
+}
+
+// 이 폴더의 기본 CSS를 불러오고, 고른 스킨이 다른 폴더(밝은 스킨)면 그 폴더의 색 토큰 CSS를 뒤에 덧붙인다.
+function solad_video_stylesheets($board_skin_url)
+{
+    $url = solad_video_skin_url($board_skin_url);
+    add_stylesheet('<link rel="stylesheet" href="'.$url.'/style.css">', 0);
+    if ($url !== rtrim($board_skin_url, '/')) {
+        add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+    }
+}
+
 // G5_URL 아래 주소에서 도메인을 빼고 루트 상대 경로로 바꾼다. G5_URL의 하위 경로는 남긴다. 다른 도메인 주소와 경로는 그대로 둔다.
 // 광고 요청 스킨(request.lib.php)과 솔애드 테마도 이 함수를 쓴다.
 if (!function_exists('solad_local_url')) {
@@ -70,7 +86,7 @@ function solad_video_is_hls($url)
     return is_string($path) && preg_match('/\.m3u8$/i', $path);
 }
 
-// 이 서버의 플레이어 파일(public/player/*.js) 중 가장 늦게 바뀐 시각. loader.js 주소의 ?v=로 써서,
+// 이 서버의 플레이어 파일(배포본 ads/player/*.js, 저장소 public/player/*.js) 중 가장 늦게 바뀐 시각. loader.js 주소의 ?v=로 써서,
 // 플레이어를 다시 올리면 브라우저와 CDN이 하루 캐시를 기다리지 않고 새 파일을 받게 한다.
 function solad_video_player_version()
 {
@@ -78,7 +94,8 @@ function solad_video_player_version()
 
     if ($version === null) {
         $version = 0;
-        $dir = defined('SOLAD_MANAGER_PATH') ? rtrim((string) SOLAD_MANAGER_PATH, '/').'/public/player' : '';
+        $root = defined('SOLAD_MANAGER_PATH') ? rtrim((string) SOLAD_MANAGER_PATH, '/') : '';
+        $dir = $root === '' ? '' : (is_dir($root.'/player') ? $root.'/player' : $root.'/public/player');
         foreach ($dir !== '' ? (glob($dir.'/*.js') ?: array()) : array() as $file) {
             $version = max($version, (int) @filemtime($file));
         }

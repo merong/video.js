@@ -175,12 +175,12 @@ final class GnuBoard extends Host
         return ['request' => AdRequests::detail($board, [...$post, 'bo_table' => $boardId], $files, $comments, $target, $this->postUrl($boardId, $postId), $masked, $this->config['timeZone']), 'masked' => $masked];
     }
 
-    /** Boards drawn by the ad request skin (plain or theme), keyed by bo_table. */
+    /** Boards drawn by the ad request skin (dark or light, plain or theme), keyed by bo_table. */
     private function requestBoards(): array
     {
         global $g5;
         $boards = [];
-        $result = sql_query("SELECT bo_table, bo_subject FROM {$g5['board_table']} WHERE bo_skin IN ('solad_request', 'theme/solad_request') ORDER BY bo_table");
+        $result = sql_query("SELECT bo_table, bo_subject FROM {$g5['board_table']} WHERE bo_skin IN ('solad_request', 'theme/solad_request', 'solad_request_light', 'theme/solad_request_light') ORDER BY bo_table");
         while ($row = sql_fetch_array($result)) {
             if (preg_match('/^[a-zA-Z0-9_]{1,20}$/D', $row['bo_table'])) {
                 $boards[$row['bo_table']] = $row;

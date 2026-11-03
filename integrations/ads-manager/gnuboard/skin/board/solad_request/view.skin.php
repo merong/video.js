@@ -2,7 +2,7 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once($board_skin_path.'/request.lib.php');
 
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+solad_request_stylesheets($board_skin_url);
 
 $sr_settings = solad_request_settings($board);
 $sr_stage = solad_request_is_stage($view['ca_name']) ? $view['ca_name'] : '접수';
@@ -209,5 +209,5 @@ $(function() {
 });
 <?php } ?>
 </script>
-<script src="<?php echo $board_skin_url; ?>/request.js"></script>
+<script src="<?php echo solad_request_skin_url($board_skin_url); ?>/request.js"></script>
 <!-- } 솔애드 광고 요청 보기 -->

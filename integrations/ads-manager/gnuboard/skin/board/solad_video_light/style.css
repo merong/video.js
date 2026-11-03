@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 솔애드 동영상 갤러리 밝은 스킨. 흰 바탕 테마(그누보드 기본 테마 등)용이다.
+   화면 규칙은 solad_video/style.css를 먼저 불러 그대로 쓰고, 여기서는 그 파일의 --sv-* 토큰 값만 바꾼다.
+   테마 변수(--sl-*)에 기대지 않고, 글꼴은 사이트 테마의 글꼴을 물려받는다. */
+.sv {
+  --sv-accent: #cdf352;
+  --sv-accent-text: #18181a;
+  --sv-accent-hover: #c2ea3a;
+  --sv-accent-ink: #4f6b00;
+  --sv-accent-soft: rgba(110, 145, 0, 0.12);
+  --sv-tint: 110, 145, 0;
+  --sv-ink: 17, 17, 20;
+  --sv-ink-invert: #fff;
+  --sv-text: #27272a;
+  --sv-muted: #63636b;
+  --sv-line: rgba(17, 17, 20, 0.1);
+  --sv-line-strong: rgba(17, 17, 20, 0.18);
+  --sv-soft: rgba(17, 17, 20, 0.05);
+  --sv-soft-hover: rgba(17, 17, 20, 0.08);
+  --sv-card: #fff;
+  --sv-surface-2: #eef0f3;
+  --sv-pop: #fff;
+  --sv-blank: linear-gradient(135deg, #eef0f3, #e2e5ea);
+  --sv-float: rgba(255, 255, 255, 0.94);
+  --sv-shadow: rgba(17, 17, 20, 0.22);
+  --sv-glow: rgba(58, 138, 253, 0.22);
+  --sv-glow-strong: rgba(58, 138, 253, 0.3);
+  --sv-warn: #b45309;
+  --sv-warn-soft: rgba(245, 124, 0, 0.1);
+  --sv-ok: #15803d;
+  --sv-icon-filter: none;
+  --sv-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --sv-sticky-top: 8px;
+  /* 그누보드 basic 모바일처럼 테마가 좌우 여백을 주지 않을 때 좁은 화면에서 스킨이 두는 여백 */
+  --sv-inset: 16px;
+  --sv-gutter: 16px;
+  color-scheme: light;
+}

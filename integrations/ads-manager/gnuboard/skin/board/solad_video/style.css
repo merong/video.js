@@ -1,10 +1,21 @@
 @charset "utf-8";
 
-/* 솔애드 동영상 갤러리 게시판 스킨. 색·글꼴·간격은 솔애드 테마(theme/solad/css/theme.css)의 --sl-* 변수를 그대로 쓴다. */
+/* 솔애드 동영상 갤러리 게시판 스킨. 화면 규칙은 이 파일 하나이고, 색은 아래 --sv-* 토큰으로만 쓴다.
+   여기 값은 솔애드 테마(theme/solad/css/theme.css)의 --sl-* 변수를 따르는 어두운 색이다.
+   밝은 스킨(solad_video_light)은 이 파일 다음에 자기 style.css를 불러 토큰만 바꾼다. */
 .sv {
   --sv-accent: var(--sl-accent);
   --sv-accent-text: var(--sl-on-accent);
+  --sv-accent-hover: #dbff6e;
+  /* 강조색을 글자·선·포커스 테두리로 쓸 때. 어두운 바탕에서는 강조색 그대로다. */
+  --sv-accent-ink: var(--sv-accent);
   --sv-accent-soft: rgba(205, 243, 82, 0.14);
+  /* 강조 테두리와 옅은 강조 바탕의 RGB. rgba(var(--sv-tint), 0.6)처럼 투명도를 붙여 쓴다. */
+  --sv-tint: 205, 243, 82;
+  /* 제목 글자와 옅은 칠의 RGB. rgb(var(--sv-ink))는 제목색, rgba(var(--sv-ink), 0.06)은 옅은 칠이다. */
+  --sv-ink: 255, 255, 255;
+  /* 제목색으로 칠한 칸(고른 분류, 현재 쪽 번호) 위의 글자 */
+  --sv-ink-invert: #111;
   --sv-text: var(--sl-text);
   --sv-muted: var(--sl-muted);
   --sv-line: var(--sl-line);
@@ -12,6 +23,25 @@
   --sv-soft: rgba(255, 255, 255, 0.06);
   --sv-soft-hover: rgba(255, 255, 255, 0.12);
   --sv-card: linear-gradient(180deg, var(--sl-surface) 0%, #121214 100%);
+  /* 썸네일·프로필 자리 바탕, 펼침 메뉴 바탕, 썸네일이 없을 때의 바탕 */
+  --sv-surface-2: var(--sl-surface-2);
+  --sv-pop: var(--sl-surface-2);
+  --sv-blank: linear-gradient(135deg, #26262b, #151517);
+  /* 선택 모드 관리 막대 바탕 */
+  --sv-float: rgba(33, 33, 37, 0.94);
+  --sv-shadow: rgba(0, 0, 0, 0.9);
+  --sv-glow: rgba(58, 138, 253, 0.45);
+  --sv-glow-strong: rgba(58, 138, 253, 0.55);
+  --sv-warn: #ffb27d;
+  --sv-warn-soft: rgba(255, 138, 61, 0.16);
+  --sv-ok: #86efac;
+  /* basic 댓글 스킨의 어두운 펼침 아이콘을 바탕에 맞춘다. */
+  --sv-icon-filter: invert(1);
+  --sv-ease: var(--sl-ease);
+  --sv-sticky-top: calc(var(--sl-hd-h) + 8px);
+  --sv-gutter: var(--sl-gutter);
+  /* 좁은 화면에서 스킨이 직접 두는 좌우 여백. 솔애드 테마는 본문 틀(.sl-page)이 이미 여백을 주므로 0이다. */
+  --sv-inset: 0px;
   --sv-radius: 14px;
   --sv-gap: 16px;
   margin: 0 auto 40px;
@@ -36,10 +66,10 @@
 }
 .sv input[type="checkbox"],
 .sv input[type="radio"] {
-  accent-color: var(--sv-accent);
+  accent-color: var(--sv-accent-ink);
 }
 .sv :is(a, button, input, select, textarea, summary):focus-visible {
-  outline: 2px solid var(--sv-accent);
+  outline: 2px solid var(--sv-accent-ink);
   outline-offset: 3px;
 }
 
@@ -84,12 +114,12 @@
   letter-spacing: 0.02em;
 }
 .sv-badge.is-notice {
-  background: rgba(255, 138, 61, 0.16);
-  color: #ffb27d;
+  background: var(--sv-warn-soft);
+  color: var(--sv-warn);
 }
 .sv-badge.is-new {
   background: var(--sv-accent-soft);
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
 }
 .sv-avatar {
   display: inline-flex;
@@ -98,7 +128,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--sl-surface-2);
+  background: var(--sv-surface-2);
 }
 .sv-avatar img {
   display: block;
@@ -149,7 +179,7 @@
     background-color 0.2s,
     border-color 0.2s,
     color 0.2s,
-    transform 0.2s var(--sl-ease);
+    transform 0.2s var(--sv-ease);
 }
 .sv .btn:active {
   transform: scale(0.97);
@@ -164,7 +194,7 @@
 .sv .btn_b01.btn:hover,
 .sv .btn_b02.btn:hover,
 .sv .btn_cancel.btn:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(var(--sv-ink), 0.4);
   background: transparent;
 }
 .sv .sv-btn-primary.btn,
@@ -176,7 +206,7 @@
 }
 .sv .sv-btn-primary.btn:hover,
 .sv .btn_submit.btn:hover {
-  background: #dbff6e;
+  background: var(--sv-accent-hover);
 }
 .sv-check {
   display: inline-flex;
@@ -187,7 +217,7 @@
 .sv-warn {
   display: block;
   margin-top: 2px;
-  color: #ffb27d;
+  color: var(--sv-warn);
   font-weight: 600;
 }
 
@@ -205,7 +235,7 @@
 }
 .sv-bar-title {
   margin: 0;
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -221,7 +251,7 @@
 }
 .sv-head-title {
   margin: 10px 0 0;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: clamp(28px, 3.2vw, 44px);
   font-weight: 800;
   line-height: 1.2;
@@ -273,10 +303,10 @@
   color: var(--sv-muted);
 }
 .sv-setup-status.is-ok {
-  color: #86efac;
+  color: var(--sv-ok);
 }
 .sv-setup-status.is-bad {
-  color: #ffb27d;
+  color: var(--sv-warn);
   font-weight: 600;
 }
 .sv-setup-help {
@@ -306,12 +336,12 @@
   pointer-events: none;
 }
 .sv .sv-selecting:checked + label {
-  border-color: #fff;
-  background: #fff;
-  color: #111;
+  border-color: rgb(var(--sv-ink));
+  background: rgb(var(--sv-ink));
+  color: var(--sv-ink-invert);
 }
 .sv-selecting:focus-visible + label {
-  outline: 2px solid var(--sv-accent);
+  outline: 2px solid var(--sv-accent-ink);
   outline-offset: 3px;
 }
 .sv-filters {
@@ -344,7 +374,7 @@
   border: 1px solid var(--sv-line-strong);
   border-radius: 999px;
   background: var(--sv-soft);
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(var(--sv-ink), 0.78);
   font-size: 14px;
   font-weight: 700;
   line-height: 34px;
@@ -355,16 +385,16 @@
     background-color 0.2s;
 }
 .sv-chips a:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #fff;
+  border-color: rgba(var(--sv-ink), 0.4);
+  color: rgb(var(--sv-ink));
 }
 .sv-chips a:focus-visible {
   outline-offset: -2px;
 }
 .sv-chips #bo_cate_on {
-  border-color: #fff;
-  background: #fff;
-  color: #111;
+  border-color: rgb(var(--sv-ink));
+  background: rgb(var(--sv-ink));
+  color: var(--sv-ink-invert);
 }
 .sv-search {
   display: flex;
@@ -381,8 +411,8 @@
     background-color 0.2s;
 }
 .sv-search:focus-within {
-  border-color: rgba(205, 243, 82, 0.6);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(var(--sv-tint), 0.6);
+  background: rgba(var(--sv-ink), 0.1);
 }
 .sv-search select {
   flex: 0 0 auto;
@@ -402,11 +432,11 @@
   padding: 0 12px;
   border: 0;
   background: transparent;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 14px;
 }
 .sv-search input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--sv-ink), 0.5);
 }
 .sv .sv-search select:focus,
 .sv .sv-search input:focus {
@@ -417,11 +447,11 @@
   border: 0;
   border-radius: 0 999px 999px 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(var(--sv-ink), 0.8);
   cursor: pointer;
 }
 .sv-search button:hover {
-  color: #fff;
+  color: rgb(var(--sv-ink));
 }
 .sv .sv-search button:focus-visible {
   outline-offset: -3px;
@@ -435,7 +465,7 @@
   position: relative;
   padding: 8px 12px;
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(var(--sv-ink), 0.72);
   font-size: 14px;
   font-weight: 600;
   transition:
@@ -443,11 +473,11 @@
     background-color 0.2s;
 }
 .sv-sort a:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: rgba(var(--sv-ink), 0.08);
+  color: rgb(var(--sv-ink));
 }
 .sv-sort a[aria-current] {
-  color: #fff;
+  color: rgb(var(--sv-ink));
 }
 .sv-sort a[aria-current]::after {
   content: "";
@@ -457,7 +487,7 @@
   left: 12px;
   height: 2px;
   border-radius: 2px;
-  background: var(--sv-accent);
+  background: var(--sv-accent-ink);
 }
 
 /* 목록: 관리(선택 모드에서만 보인다) */
@@ -469,7 +499,7 @@
 .sv:has(.sv-selecting:checked) .sv-manage {
   position: sticky;
   z-index: 3;
-  top: calc(var(--sl-hd-h) + 8px);
+  top: var(--sv-sticky-top);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -479,8 +509,8 @@
   padding: 8px 8px 8px 18px;
   border: 1px solid var(--sv-line-strong);
   border-radius: 999px;
-  background: rgba(33, 33, 37, 0.94);
-  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.9);
+  background: var(--sv-float);
+  box-shadow: 0 18px 40px -18px var(--sv-shadow);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
@@ -513,7 +543,7 @@
 }
 .sv-card:has(.sv-card-check input:checked) .sv-thumb,
 .sv-hero:has(.sv-card-check input:checked) .sv-thumb {
-  box-shadow: 0 0 0 3px var(--sv-accent);
+  box-shadow: 0 0 0 3px var(--sv-accent-ink);
 }
 
 /* 목록: 공지 */
@@ -538,7 +568,7 @@
   flex: 1 1 auto;
   min-width: 0;
   overflow: hidden;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -560,17 +590,17 @@
   overflow: hidden;
   aspect-ratio: var(--sv-ratio, 16 / 9);
   border-radius: var(--sv-radius);
-  background: var(--sl-surface-2);
+  background: var(--sv-surface-2);
   transition:
-    transform 0.45s var(--sl-ease),
-    box-shadow 0.45s var(--sl-ease);
+    transform 0.45s var(--sv-ease),
+    box-shadow 0.45s var(--sv-ease);
 }
 .sv-thumb img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--sl-ease);
+  transition: transform 0.6s var(--sv-ease);
 }
 .sv-thumb-preview-video {
   position: absolute;
@@ -591,8 +621,8 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #26262b, #151517);
-  color: rgba(255, 255, 255, 0.5);
+  background: var(--sv-blank);
+  color: rgba(var(--sv-ink), 0.5);
   font-size: 22px;
 }
 .sv-play {
@@ -612,7 +642,7 @@
   transform: translate(-50%, -50%) scale(0.7);
   transition:
     opacity 0.3s,
-    transform 0.4s var(--sl-ease);
+    transform 0.4s var(--sv-ease);
 }
 .sv-thumb-empty + .sv-play {
   opacity: 0.85;
@@ -624,8 +654,8 @@
 .sv-hero:has(a:focus-visible) .sv-thumb {
   transform: translateY(-6px);
   box-shadow:
-    0 24px 48px -20px rgba(0, 0, 0, 0.9),
-    0 0 0 2px rgba(205, 243, 82, 0.6);
+    0 24px 48px -20px var(--sv-shadow),
+    0 0 0 2px rgba(var(--sv-tint), 0.6);
 }
 .sv-card:hover .sv-thumb img,
 .sv-card:has(.sv-title:focus-visible) .sv-thumb img,
@@ -697,7 +727,7 @@
   flex: none;
 }
 .sv-card.is-current .sv-thumb {
-  box-shadow: 0 0 0 2px var(--sv-accent);
+  box-shadow: 0 0 0 2px var(--sv-accent-ink);
 }
 
 /* 목록: 최신 영상. 메인 플레이어 데모처럼 큰 화면과 글을 나란히 둔다. */
@@ -713,14 +743,14 @@
   border-radius: 18px;
   background: #000;
   box-shadow:
-    0 40px 120px -40px rgba(58, 138, 253, 0.45),
-    0 0 0 8px rgba(255, 255, 255, 0.03);
+    0 40px 120px -40px var(--sv-glow),
+    0 0 0 8px rgba(var(--sv-ink), 0.03);
 }
 .sv-hero:hover .sv-thumb,
 .sv-hero:has(a:focus-visible) .sv-thumb {
   box-shadow:
-    0 40px 120px -40px rgba(58, 138, 253, 0.55),
-    0 0 0 2px rgba(205, 243, 82, 0.6);
+    0 40px 120px -40px var(--sv-glow-strong),
+    0 0 0 2px rgba(var(--sv-tint), 0.6);
 }
 .sv-hero .sv-play {
   width: 72px;
@@ -735,7 +765,7 @@
 }
 .sv-eyebrow {
   margin: 0;
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -744,7 +774,7 @@
   display: -webkit-box;
   margin: 0;
   overflow: hidden;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: clamp(24px, 2.6vw, 36px);
   font-weight: 800;
   line-height: 1.2;
@@ -833,7 +863,7 @@
 .sv-title {
   display: -webkit-box;
   overflow: hidden;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 16px;
   font-weight: 700;
   line-height: 1.45;
@@ -845,7 +875,7 @@
 .sv .sv-title:focus-visible {
   outline: none;
   text-decoration: underline;
-  text-decoration-color: var(--sv-accent);
+  text-decoration-color: var(--sv-accent-ink);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
@@ -868,7 +898,7 @@
   text-align: center;
 }
 .sv-empty svg {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(var(--sv-ink), 0.25);
 }
 .sv-empty p {
   margin: 0;
@@ -899,7 +929,7 @@
   border: 1px solid var(--sv-line-strong);
   border-radius: 999px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(var(--sv-ink), 0.78);
   font-family: var(--sl-font-num);
   font-size: 14px;
   font-weight: 700;
@@ -907,9 +937,9 @@
   text-indent: 0;
 }
 .sv .pg_page:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(var(--sv-ink), 0.4);
   background: transparent;
-  color: #fff;
+  color: rgb(var(--sv-ink));
 }
 .sv .pg_start,
 .sv .pg_prev,
@@ -919,9 +949,9 @@
   font-family: var(--sl-font);
 }
 .sv .pg_current {
-  border-color: #fff;
-  background: #fff;
-  color: #111;
+  border-color: rgb(var(--sv-ink));
+  background: rgb(var(--sv-ink));
+  color: var(--sv-ink-invert);
 }
 
 /* 보기 */
@@ -963,8 +993,8 @@
   border-radius: 18px;
   background: #000;
   box-shadow:
-    0 40px 120px -40px rgba(58, 138, 253, 0.45),
-    0 0 0 8px rgba(255, 255, 255, 0.03);
+    0 40px 120px -40px var(--sv-glow),
+    0 0 0 8px rgba(var(--sv-ink), 0.03);
 }
 .sv-stage [data-solad-player]:empty {
   aspect-ratio: 16 / 9;
@@ -998,7 +1028,7 @@
 }
 .sv-watch-title {
   margin: 24px 0 14px;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: clamp(22px, 2.4vw, 30px);
   font-weight: 800;
   line-height: 1.3;
@@ -1031,7 +1061,7 @@
 }
 .sv-author strong {
   overflow: hidden;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1054,7 +1084,7 @@
   padding: 0 16px;
   border: 1px solid var(--sv-line-strong);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(var(--sv-ink), 0.04);
   color: var(--sv-text);
   font: inherit;
   font-size: 14px;
@@ -1073,14 +1103,14 @@
 a.sv-pill:hover,
 button.sv-pill:hover,
 summary.sv-pill:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(var(--sv-ink), 0.4);
+  background: rgba(var(--sv-ink), 0.08);
 }
 .sv-pill strong {
   font-family: var(--sl-font-num);
 }
 .sv-pill.is-on {
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
 }
 .sv-pill-group {
   display: inline-flex;
@@ -1116,8 +1146,8 @@ summary.sv-pill:hover {
   padding: 6px;
   border: 1px solid var(--sv-line-strong);
   border-radius: var(--sv-radius);
-  background: var(--sl-surface-2);
-  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.9);
+  background: var(--sv-pop);
+  box-shadow: 0 18px 40px -18px var(--sv-shadow);
   list-style: none;
 }
 .sv-menu a {
@@ -1129,7 +1159,7 @@ summary.sv-pill:hover {
   font-size: 14px;
 }
 .sv-menu a:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(var(--sv-ink), 0.08);
 }
 .sv-menu a:focus-visible {
   outline-offset: -2px;
@@ -1152,7 +1182,7 @@ summary.sv-pill:hover {
   background: rgba(33, 33, 37, 0.96);
   color: #fff;
   font-size: 14px;
-  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 18px 40px -18px var(--sv-shadow);
   opacity: 0;
   pointer-events: none;
   transform: translateY(8px);
@@ -1180,24 +1210,24 @@ summary.sv-pill:hover {
   font-size: 14px;
 }
 .sv-desc-meta strong {
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-weight: 700;
 }
 .sv-desc-meta span {
   color: var(--sv-muted);
 }
 .sv .sv-tag {
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
   font-weight: 700;
 }
 .sv-content {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(var(--sv-ink), 0.82);
   font-size: 15px;
   line-height: 1.75;
   overflow-wrap: anywhere;
 }
 .sv .sv-content a {
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
   text-decoration: underline;
 }
 /* 댓글 때문에 함께 불러온 basic 스킨의 #bo_v_con 규칙을 되돌린다. */
@@ -1230,7 +1260,7 @@ summary.sv-pill:hover {
 }
 .sv-files h4 {
   margin: 0 0 8px;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 14px;
 }
 .sv-files ul {
@@ -1247,7 +1277,7 @@ summary.sv-pill:hover {
   padding: 10px 14px;
   border: 1px solid var(--sv-line);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(var(--sv-ink), 0.04);
 }
 .sv-files li + li {
   margin-top: 6px;
@@ -1266,7 +1296,7 @@ summary.sv-pill:hover {
 }
 .sv-side-title {
   margin: 0 0 14px;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -1287,7 +1317,7 @@ summary.sv-pill:hover {
   transition: background-color 0.2s;
 }
 .sv-next-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(var(--sv-ink), 0.05);
 }
 .sv-next-thumb {
   position: relative;
@@ -1295,12 +1325,12 @@ summary.sv-pill:hover {
   overflow: hidden;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
-  background: linear-gradient(135deg, #26262b, #151517);
+  background: var(--sv-blank);
   transition: box-shadow 0.3s;
 }
 .sv-next-item:hover .sv-next-thumb,
 .sv-next-item:focus-visible .sv-next-thumb {
-  box-shadow: 0 0 0 2px rgba(205, 243, 82, 0.6);
+  box-shadow: 0 0 0 2px rgba(var(--sv-tint), 0.6);
 }
 .sv-next-thumb.is-previewing .sv-thumb-preview-video {
   opacity: 1;
@@ -1326,7 +1356,7 @@ summary.sv-pill:hover {
 .sv-next-text strong {
   display: -webkit-box;
   overflow: hidden;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 14px;
   line-height: 1.4;
   word-break: keep-all;
@@ -1357,7 +1387,7 @@ summary.sv-pill:hover {
   transition: border-color 0.2s;
 }
 .sv .sv-side-all:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(var(--sv-ink), 0.4);
 }
 .sv-watch-comments {
   min-width: 0;
@@ -1379,16 +1409,16 @@ summary.sv-pill:hover {
   font-size: 15px;
 }
 #sv_view .cmt_btn b {
-  color: #fff;
+  color: rgb(var(--sv-ink));
 }
 #sv_view .cmt_btn span.total {
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
 }
 #sv_view .cmt_btn span.total::after {
-  background: var(--sv-accent);
+  background: var(--sv-accent-ink);
 }
 #sv_view .cmt_btn span.cmt_more {
-  filter: invert(1);
+  filter: var(--sv-icon-filter);
 }
 #sv_view #bo_vc article {
   border-bottom-color: var(--sv-line);
@@ -1400,25 +1430,25 @@ summary.sv-pill:hover {
 #sv_view .bo_vc_act {
   border-color: var(--sv-line-strong);
   border-radius: 8px;
-  background: var(--sl-surface-2);
+  background: var(--sv-pop);
 }
 #sv_view .bo_vc_act::before {
   border-bottom-color: var(--sv-line-strong);
 }
 #sv_view .bo_vc_act::after {
-  border-bottom-color: var(--sl-surface-2);
+  border-bottom-color: var(--sv-pop);
 }
 #sv_view .bo_vc_act li {
   border-bottom-color: var(--sv-line);
 }
 #sv_view .bo_vc_act li a:hover {
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
 }
 #sv_view .bo_vc_w textarea,
 #sv_view .bo_vc_w .frm_input {
   border: 1px solid var(--sv-line-strong);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(var(--sv-ink), 0.04);
   color: var(--sv-text);
 }
 #sv_view .bo_vc_w .btn_submit {
@@ -1428,7 +1458,7 @@ summary.sv-pill:hover {
   color: var(--sv-accent-text);
 }
 #sv_view .bo_vc_w .btn_submit:hover {
-  background: #dbff6e;
+  background: var(--sv-accent-hover);
 }
 
 /* 글쓰기: 기능은 그대로 두고 색·글꼴·간격만 테마에 맞춘다. */
@@ -1445,13 +1475,13 @@ summary.sv-pill:hover {
 .sv-label {
   display: block;
   margin-bottom: 10px;
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 15px;
   font-weight: 700;
 }
 .sv-req {
   margin-left: 4px;
-  color: var(--sv-accent);
+  color: var(--sv-accent-ink);
   font-size: 12px;
 }
 .sv-opt {
@@ -1483,7 +1513,7 @@ summary.sv-pill:hover {
   padding: 0 16px;
   border: 1px solid var(--sv-line-strong);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(var(--sv-ink), 0.04);
   color: var(--sv-text);
   font-size: 15px;
   box-shadow: none;
@@ -1500,14 +1530,14 @@ summary.sv-pill:hover {
 }
 #sv_write .frm_input::placeholder,
 #sv_write textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--sv-ink), 0.5);
 }
 #sv_write .frm_input:focus,
 #sv_write select:focus,
 #sv_write .wr_content textarea:focus {
-  border-color: rgba(205, 243, 82, 0.6);
-  background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(205, 243, 82, 0.18);
+  border-color: rgba(var(--sv-tint), 0.6);
+  background-color: rgba(var(--sv-ink), 0.08);
+  box-shadow: 0 0 0 3px rgba(var(--sv-tint), 0.18);
   outline: none;
 }
 #sv_write .frm_file {
@@ -1528,7 +1558,7 @@ summary.sv-pill:hover {
   cursor: pointer;
 }
 #sv_write .frm_file::file-selector-button:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(var(--sv-ink), 0.4);
 }
 #sv_write #char_count_desc,
 #sv_write #char_count_wrap {
@@ -1561,7 +1591,7 @@ summary.sv-pill:hover {
   transition: border-color 0.3s;
 }
 .sv-source-item:hover {
-  border-color: rgba(205, 243, 82, 0.35);
+  border-color: rgba(var(--sv-tint), 0.35);
 }
 .sv-source-item input {
   position: absolute;
@@ -1580,7 +1610,7 @@ summary.sv-pill:hover {
   font-size: 15px;
 }
 .sv-source-item strong {
-  color: #fff;
+  color: rgb(var(--sv-ink));
   font-size: 14px;
 }
 .sv-source-item small {
@@ -1590,7 +1620,7 @@ summary.sv-pill:hover {
 }
 .sv-source-item:has(input:checked) {
   border-color: var(--sv-accent);
-  background: rgba(205, 243, 82, 0.08);
+  background: rgba(var(--sv-tint), 0.08);
   box-shadow: inset 0 0 0 1px var(--sv-accent);
 }
 .sv-source-item:has(input:checked) .sv-source-icon {
@@ -1598,14 +1628,14 @@ summary.sv-pill:hover {
   color: var(--sv-accent-text);
 }
 .sv-source-item:has(input:focus-visible) {
-  outline: 2px solid var(--sv-accent);
+  outline: 2px solid var(--sv-accent-ink);
   outline-offset: 3px;
 }
 .sv-guide {
   padding: 12px 14px;
   border: 1px solid var(--sv-line);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(var(--sv-ink), 0.04);
 }
 .sv-guide p {
   margin: 0;
@@ -1666,7 +1696,7 @@ summary.sv-pill:hover {
   aspect-ratio: 16 / 9;
   border: 1px solid var(--sv-line);
   border-radius: 12px;
-  background: var(--sl-surface-2) center / 28px no-repeat
+  background: var(--sv-surface-2) center / 28px no-repeat
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2371717a'%3E%3Cpath d='M4 5h16v14H4zM6 15l3.5-4 2.5 3 3.5-4.5L18 15z'/%3E%3C/svg%3E");
 }
 .sv-thumb-preview img {
@@ -1718,8 +1748,8 @@ summary.sv-pill:hover {
   width: min(350px, 100%);
   border: 1px solid var(--sv-line-strong);
   border-radius: 12px;
-  background: var(--sl-surface-2);
-  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.9);
+  background: var(--sv-pop);
+  box-shadow: 0 18px 40px -18px var(--sv-shadow);
   overflow: hidden;
 }
 #sv_write #autosave_pop strong {
@@ -1743,7 +1773,7 @@ summary.sv-pill:hover {
   border-radius: 8px;
 }
 #sv_write #autosave_pop li:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(var(--sv-ink), 0.06);
 }
 #sv_write #autosave_pop li a {
   flex: 1 1 auto;
@@ -1781,12 +1811,17 @@ summary.sv-pill:hover {
   }
 }
 
-/* 좁은 화면: 테마 본문 틀(.sl-page)이 이미 좌우 여백을 두므로 스킨은 여백을 더하지 않는다. */
+/* 좁은 화면: 솔애드 테마는 본문 틀(.sl-page)이 좌우 여백을 두므로 --sv-inset이 0이다.
+   여백을 주지 않는 테마용 밝은 스킨은 --sv-inset으로 여백을 두고, 무대·칩처럼 화면 끝까지 넓히는 요소는 --sv-gutter만큼 밖으로 뺀다. */
 @media (max-width: 640px) {
+  .sv {
+    padding-right: var(--sv-inset);
+    padding-left: var(--sv-inset);
+  }
   .sv-chips {
     flex-basis: 100%;
-    margin-right: calc(-1 * var(--sl-gutter));
-    padding-right: var(--sl-gutter);
+    margin-right: calc(-1 * var(--sv-gutter));
+    padding-right: var(--sv-gutter);
   }
   .sv-search {
     flex-basis: 100%;
@@ -1796,17 +1831,17 @@ summary.sv-pill:hover {
     margin-bottom: 44px;
   }
   .sv-stage {
-    margin-right: calc(-1 * var(--sl-gutter));
-    margin-left: calc(-1 * var(--sl-gutter));
+    margin-right: calc(-1 * var(--sv-gutter));
+    margin-left: calc(-1 * var(--sv-gutter));
     border-width: 1px 0;
     border-radius: 0;
     box-shadow: none;
   }
   .sv-pills {
     flex-wrap: nowrap;
-    width: calc(100% + var(--sl-gutter));
-    margin: -4px calc(-1 * var(--sl-gutter)) -4px 0;
-    padding: 4px var(--sl-gutter) 4px 4px;
+    width: calc(100% + var(--sv-gutter));
+    margin: -4px calc(-1 * var(--sv-gutter)) -4px 0;
+    padding: 4px var(--sv-gutter) 4px 4px;
     overflow-x: auto;
     scrollbar-width: none;
   }

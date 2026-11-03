@@ -66,6 +66,7 @@ function solad_theme_local_url($url)
 }
 
 // 동영상 게시판 스킨의 공용 함수(재생 주소, 재생 시간, 미리보기 등)를 같이 쓴다.
+// 밝은 스킨(solad_video_light)의 solad.lib.php는 solad_video 것을 불러오므로 어느 스킨이든 같은 함수다.
 function solad_theme_video_lib($board)
 {
     if (function_exists('solad_video_source')) {

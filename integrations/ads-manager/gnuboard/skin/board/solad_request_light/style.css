@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 솔애드 광고 요청 밝은 스킨. 흰 바탕 테마(그누보드 기본 테마 등)용이다.
+   화면 규칙은 solad_request/style.css를 먼저 불러 그대로 쓰고, 여기서는 그 파일의 --sr-* 토큰과 상태 색 값만 바꾼다.
+   상태 점 색은 솔애드 관리자 디자인 토큰(st-*)의 밝은 값이고, 글자는 같은 계열의 진한 색이다.
+   테마 변수(--sl-*)에 기대지 않고, 글꼴은 사이트 테마의 글꼴을 물려받는다. */
+.sr {
+  --sr-accent: #cdf352;
+  --sr-accent-text: #18181a;
+  --sr-accent-ink: #4f6b00;
+  --sr-accent-soft: rgba(110, 145, 0, 0.12);
+  --sr-tint: 110, 145, 0;
+  --sr-ink: 17, 17, 20;
+  --sr-text: #27272a;
+  --sr-muted: #63636b;
+  --sr-line: rgba(17, 17, 20, 0.1);
+  --sr-line-strong: rgba(17, 17, 20, 0.18);
+  --sr-soft: rgba(17, 17, 20, 0.05);
+  --sr-card: #fff;
+  --sr-page: #fff;
+  --sr-page-muted: rgba(255, 255, 255, 0.75);
+  --sr-surface: #fff;
+  --sr-surface-2: #fff;
+  --sr-shadow: rgba(17, 17, 20, 0.16);
+  --sr-warn: #8a4b00;
+  --sr-warn-soft: rgba(232, 166, 0, 0.14);
+  --sr-danger: #c0262d;
+  --sr-danger-rgb: 192, 38, 45;
+  --sr-ok: #15803d;
+  color-scheme: light;
+}
+
+.sr .is-draft {
+  --sr-c: #a1a1aa;
+  --sr-bg: rgba(161, 161, 170, 0.16);
+  --sr-fg: #52525b;
+}
+.sr .is-pending {
+  --sr-c: #e8a600;
+  --sr-bg: rgba(232, 166, 0, 0.14);
+  --sr-fg: #7a5000;
+}
+.sr .is-paused {
+  --sr-c: #f97316;
+  --sr-bg: rgba(249, 115, 22, 0.12);
+  --sr-fg: #a8410a;
+}
+.sr .is-scheduled {
+  --sr-c: #3b82f6;
+  --sr-bg: rgba(59, 130, 246, 0.12);
+  --sr-fg: #1d4ed8;
+}
+.sr .is-active {
+  --sr-c: #1f9d55;
+  --sr-bg: rgba(31, 157, 85, 0.12);
+  --sr-fg: #13693a;
+}
+.sr .is-done {
+  --sr-c: #3f3f46;
+  --sr-bg: rgba(63, 63, 70, 0.1);
+  --sr-fg: #3f3f46;
+}
+.sr .is-rejected {
+  --sr-c: #d9363e;
+  --sr-bg: rgba(217, 54, 62, 0.1);
+  --sr-fg: #b42328;
+}

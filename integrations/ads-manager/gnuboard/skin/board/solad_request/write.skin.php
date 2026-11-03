@@ -2,7 +2,7 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once($board_skin_path.'/request.lib.php');
 
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+solad_request_stylesheets($board_skin_url);
 
 $sr_stage = ($w == 'u' && solad_request_is_stage($write['ca_name'])) ? $write['ca_name'] : '접수';
 
@@ -276,7 +276,7 @@ $upload_max_filesize = get_filesize($board['bo_upload_size']);
     </div>
     </form>
 
-    <script src="<?php echo $board_skin_url; ?>/write.js"
+    <script src="<?php echo solad_request_skin_url($board_skin_url); ?>/write.js"
             data-max-bytes="<?php echo (int) $board['bo_upload_size']; ?>"
             data-max-label="<?php echo solad_request_attr($upload_max_filesize); ?>"></script>
     <script>
