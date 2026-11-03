@@ -7,12 +7,14 @@ import { clearLocalProgress, formatTime } from '../player/lms.js';
 import { loaderSnippet } from './install-code.js';
 import { bindCopy, clearCopy, setStatus } from './page.js';
 
+// Root paths built from this file's address, so the sample works with the manager under /ads/ as well as at the root.
+const here = (path) => new URL(path, import.meta.url).pathname;
 const VIDEO = {
   videoId: 'sample-lecture',
-  src: '/demo-media/lecture/lecture.mp4',
+  src: here('../demo-media/lecture/lecture.mp4'),
   title: '솔애드 강의 프리셋 둘러보기',
-  poster: '/examples/lecture/slide-01.svg',
-  lecture: '/examples/lecture/manifest.json',
+  poster: here('lecture/slide-01.svg'),
+  lecture: here('lecture/manifest.json'),
 };
 const LOG_SIZE = 20;
 // The built-in lecture preset's rules, which the server keeps while a learner token is in use.

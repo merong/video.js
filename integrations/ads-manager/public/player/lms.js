@@ -117,10 +117,23 @@ export function resumeTime(position, duration) {
   return Number.isFinite(duration) && duration > 0 && position >= duration - 10 ? null : position;
 }
 
-function manifestUrl(value) {
-  return typeof value === 'string' && value.length <= 2048 && /^(\/|https?:\/\/)/i.test(value.trim())
-    ? value.trim()
-    : null;
+function manifestUrl(value, base) {
+  if (typeof value !== 'string' || value.length > 2048) return null;
+
+  const text = value.trim();
+  if (/^(\/|https?:\/\/)/i.test(text)) return text;
+
+  // A path relative to a fetched manifest (`slide-01.svg`) resolves against the manifest's own address, so a lecture
+  // folder works under any base path. Anything with a scheme is never relative.
+  if (!base || /^[a-z][a-z0-9+.-]*:/i.test(text)) return null;
+
+  try {
+    const url = new URL(text, base);
+
+    return /^https?:$/.test(url.protocol) ? url.href : null;
+  } catch {
+    return null;
+  }
 }
 
 function manifestText(value, min, max) {
@@ -133,9 +146,9 @@ function manifestText(value, min, max) {
 
 /**
  * Read a lecture manifest (spec 2.5). Wrong items are dropped and counted in `dropped`; a value that is not a manifest
- * gives `failed: true` and no items.
+ * gives `failed: true` and no items. `base`, the address the manifest was fetched from, lets item URLs be relative.
  */
-export function readManifest(value) {
+export function readManifest(value, base) {
   const empty = { chapters: [], slides: [], files: [], transcript: null, dropped: 0, failed: true };
 
   if (!isRecord(value) || value.version !== 1) return empty;
@@ -169,7 +182,7 @@ export function readManifest(value) {
   // Chapters must rise; a chapter that does not is dropped.
   const rising = chapters.filter((chapter, index) => index === 0 || chapter.start > chapters[index - 1].start);
   const slides = list(value.slides, 300, (item) => {
-    const image = manifestUrl(item.image);
+    const image = manifestUrl(item.image, base);
     const alt = manifestText(item.alt, 1, 160);
     const title = item.title === undefined ? '' : manifestText(item.title, 0, 80);
 
@@ -178,7 +191,7 @@ export function readManifest(value) {
       : null;
   }).sort((a, b) => a.start - b.start);
   const files = list(value.files, 50, (item) => {
-    const url = manifestUrl(item.url);
+    const url = manifestUrl(item.url, base);
     const title = manifestText(item.title, 1, 80);
     const size = item.size === undefined || item.size === '' ? '' : manifestText(item.size, 1, 16);
 
@@ -187,7 +200,7 @@ export function readManifest(value) {
   let transcript = null;
 
   if (value.transcript !== undefined) {
-    const src = isRecord(value.transcript) ? manifestUrl(value.transcript.src) : null;
+    const src = isRecord(value.transcript) ? manifestUrl(value.transcript.src, base) : null;
 
     if (src) transcript = { src, lang: typeof value.transcript.lang === 'string' ? value.transcript.lang : '' };
     else dropped++;
@@ -758,7 +771,7 @@ async function loadManifest(lecture) {
   try {
     const response = await fetch(lecture, { credentials: 'same-origin' });
 
-    return readManifest(response.ok ? await response.json() : null);
+    return readManifest(response.ok ? await response.json() : null, response.url);
   } catch {
     return readManifest(null);
   }

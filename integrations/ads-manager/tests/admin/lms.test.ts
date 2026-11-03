@@ -106,6 +106,26 @@ describe('readManifest', () => {
     });
   });
 
+  it('resolves relative item URLs against the manifest address only', () => {
+    const value = {
+      version: 1,
+      slides: [
+        { start: 0, image: 'slide-01.svg', alt: '첫째' },
+        { start: 1, image: 'javascript:alert(1)', alt: 'x' },
+      ],
+      files: [{ title: 'PDF', url: '../../demo-media/lecture/slides.pdf' }],
+      transcript: { src: 'transcript.ko.vtt' },
+    };
+
+    expect(readManifest(value, 'https://example.com/ads/examples/lecture/manifest.json')).toMatchObject({
+      slides: [{ image: 'https://example.com/ads/examples/lecture/slide-01.svg' }],
+      files: [{ url: 'https://example.com/ads/demo-media/lecture/slides.pdf' }],
+      transcript: { src: 'https://example.com/ads/examples/lecture/transcript.ko.vtt' },
+      dropped: 1,
+    });
+    expect(readManifest(value)).toMatchObject({ slides: [], files: [], transcript: null, dropped: 4 });
+  });
+
   it('fails on another version or a non-object', () => {
     expect(readManifest({ version: 2 })).toMatchObject({ failed: true, chapters: [] });
     expect(readManifest(null)).toMatchObject({ failed: true });
