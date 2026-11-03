@@ -14,7 +14,7 @@ if (isset($options['help'])) {
 }
 
 try {
-    $path = $options['config'] ?? (getenv('ADS_CONFIG') ?: dirname(__DIR__) . '/config.php');
+    $path = $options['config'] ?? \AdsManager\Config::defaultPath();
     if (isset($options['sqlite'])) {
         if (file_exists($path) || is_link($path)) {
             throw new RuntimeException('Configuration already exists. Omit --sqlite to migrate it.');

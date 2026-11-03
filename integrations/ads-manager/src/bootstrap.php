@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+// The GnuBoard package serves this folder (<G5>/ads/src). Only the API entry may run it.
+if (get_included_files()[0] === __FILE__) {
+    http_response_code(404);
+    exit;
+}
 require_once __DIR__ . '/load.php';
 
 $adsConfig = \AdsManager\Config::load();

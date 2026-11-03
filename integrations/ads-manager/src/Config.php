@@ -5,9 +5,31 @@ namespace AdsManager;
 
 final class Config
 {
+    /**
+     * ADS_CONFIG, then config.php beside src/. The GnuBoard package keeps the manager in <G5>/ads and lets
+     * setup.php write <G5>/data/solad/config.php, which PHP can write and GnuBoard's data/.htaccess hides.
+     */
+    public static function defaultPath(): string
+    {
+        $root = dirname(__DIR__);
+        $local = $root . '/config.php';
+        $gnuboard = dirname($root) . '/data/solad/config.php';
+        return getenv('ADS_CONFIG') ?: (!is_file($local) && is_file(dirname($root) . '/common.php') ? $gnuboard : $local);
+    }
+
+    /**
+     * The served folder: the manager folder itself in the GnuBoard package (<G5>/ads), public/ in the repository.
+     * Checked by assets/ so a public/ folder left over from package 1.0.0 is not mistaken for it.
+     */
+    public static function webRoot(): string
+    {
+        $root = dirname(__DIR__);
+        return is_dir($root . '/assets') ? $root : $root . '/public';
+    }
+
     public static function load(?string $path = null): array
     {
-        $path ??= getenv('ADS_CONFIG') ?: dirname(__DIR__) . '/config.php';
+        $path ??= self::defaultPath();
         if (!is_file($path) || is_link($path)) {
             throw new ApiError(500, 'installation_required', '설치 설정 파일이 필요합니다.');
         }

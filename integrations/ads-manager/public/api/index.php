@@ -2,7 +2,9 @@
 declare(strict_types=1);
 
 ini_set('display_errors', '0');
-require_once dirname(__DIR__, 2) . '/src/load.php';
+// The repository keeps src/ beside public/. The GnuBoard package (<G5>/ads) puts public/'s files beside src/.
+$adsRoot = is_dir(dirname(__DIR__) . '/src') ? dirname(__DIR__) : dirname(__DIR__, 2);
+require_once $adsRoot . '/src/load.php';
 
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
@@ -10,7 +12,7 @@ $adsApp = null;
 $adsAction = is_string($_GET['action'] ?? null) ? $_GET['action'] : '';
 try {
     \AdsManager\Http::sameOrigin();
-    require dirname(__DIR__, 2) . '/src/bootstrap.php';
+    require $adsRoot . '/src/bootstrap.php';
     $adsMethod = $_SERVER['REQUEST_METHOD'] ?? 'GET';
     $adsInput = \AdsManager\Http::input($adsMethod, $adsAction, $adsConfig);
     $adsResult = $adsApp->dispatch($adsMethod, $adsAction, $adsInput, $_SERVER['HTTP_X_CSRF_TOKEN'] ?? ($adsInput['csrfToken'] ?? null), $_FILES);

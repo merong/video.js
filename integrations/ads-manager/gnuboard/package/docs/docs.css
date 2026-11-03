@@ -1,0 +1,285 @@
+/* 솔애드 설치 가이드·사용 도움말 공용 스타일. 파일만 열어도(file://) 보이도록 외부 자원을 쓰지 않는다. */
+:root {
+  color-scheme: light;
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1d2026;
+  --muted: #5b6270;
+  --line: #e2e5ea;
+  --accent: #2563eb;
+  --accent-soft: #e8efff;
+  --warn: #9a5b00;
+  --warn-soft: #fff6e0;
+  --ok: #17803d;
+  --code-bg: #f1f3f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font:
+    16px/1.75 -apple-system,
+    BlinkMacSystemFont,
+    "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    "Noto Sans KR",
+    sans-serif;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 32px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  font-size: 14px;
+}
+.toc .brand {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--text);
+  text-decoration: none;
+}
+.toc .switch {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 20px;
+}
+.toc li {
+  margin: 4px 0;
+}
+.toc a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.toc a:hover {
+  color: var(--accent);
+}
+
+main {
+  min-width: 0;
+}
+
+header.doc {
+  margin-bottom: 28px;
+}
+header.doc h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  line-height: 1.3;
+}
+header.doc p {
+  margin: 0;
+  color: var(--muted);
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+section > h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+section h3 {
+  margin: 26px 0 8px;
+  font-size: 17px;
+}
+section p,
+section li {
+  margin: 8px 0;
+}
+section ol,
+section ul {
+  padding-left: 22px;
+}
+
+a {
+  color: var(--accent);
+}
+
+code,
+kbd {
+  font:
+    0.88em/1.5 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  background: var(--code-bg);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+pre {
+  background: #1f2430;
+  color: #e6e9ef;
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow: auto;
+  font:
+    13.5px/1.6 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+}
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+figure {
+  margin: 18px 0;
+}
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+figure.narrow img {
+  max-width: 760px;
+}
+figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.note,
+.warn,
+.tip {
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  font-size: 15px;
+}
+.note {
+  background: var(--accent-soft);
+}
+.warn {
+  background: var(--warn-soft);
+  color: #4a3200;
+}
+.warn strong {
+  color: var(--warn);
+}
+.tip {
+  background: #eaf7ef;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 15px;
+}
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #f8f9fb;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 40px;
+  margin: 14px 0;
+}
+.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+}
+
+.tree {
+  background: var(--code-bg);
+  color: var(--text);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+footer.doc {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px 16px 60px;
+  }
+  .toc {
+    position: static;
+    max-height: none;
+  }
+  section {
+    padding: 22px 18px;
+  }
+  .grid2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

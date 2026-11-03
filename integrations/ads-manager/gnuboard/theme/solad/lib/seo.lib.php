@@ -360,10 +360,15 @@ function solad_seo_head()
     if ($seo['canonical'] !== '') {
         $out[] = '<link rel="canonical" href="'.solad_seo_attr($seo['canonical']).'">';
     }
-    $out[] = '<link rel="icon" href="'.solad_seo_attr($home.'favicon.ico').'" sizes="32x32">';
+    // 사이트 루트의 favicon.ico와 site.webmanifest는 배포본에 없으므로 사이트에 있을 때만 넣는다.
+    if (is_file(G5_PATH.'/favicon.ico')) {
+        $out[] = '<link rel="icon" href="'.solad_seo_attr($home.'favicon.ico').'" sizes="32x32">';
+    }
     $out[] = '<link rel="icon" href="'.solad_seo_attr(solad_seo_brand('favicon.svg')).'" type="image/svg+xml">';
     $out[] = '<link rel="apple-touch-icon" href="'.solad_seo_attr(solad_seo_brand('apple-touch-icon.png')).'">';
-    $out[] = '<link rel="manifest" href="'.solad_seo_attr($home.'site.webmanifest').'">';
+    if (is_file(G5_PATH.'/site.webmanifest')) {
+        $out[] = '<link rel="manifest" href="'.solad_seo_attr($home.'site.webmanifest').'">';
+    }
 
     $org_id = $home.'#organization';
     $graph = array_merge(array(

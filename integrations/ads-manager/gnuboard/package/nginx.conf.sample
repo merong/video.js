@@ -1,0 +1,19 @@
+# 솔애드 nginx 보안 설정 예시(선택). 설치와 동작에는 필요 없다. 주소는 그누보드처럼 실제 파일 경로 그대로 쓴다.
+# 넣는다면 그누보드 server { } 블록 안, 기존 "location ~ \.php$" 보다 위에 둔다.
+
+# 내부 폴더는 웹에서 열지 않는다.
+location ~ ^/ads/(src|hosts|admin|database|bin)/ {
+    return 404;
+}
+
+# 업로드 폴더(그누보드 data/media): 솔애드가 만든 파일 이름만 내보내고 스크립트는 실행하지 않는다.
+location ^~ /data/media/ {
+    location ~ "^/data/media/[a-f0-9]{32}\.(mp4|webm|jpg|png|webp|gif)$" {
+        add_header X-Content-Type-Options nosniff;
+    }
+    location ~ "^/data/media/[a-f0-9]{32}\.svg$" {
+        add_header X-Content-Type-Options nosniff;
+        add_header Content-Security-Policy "default-src 'none'; style-src 'unsafe-inline'; img-src data:; sandbox";
+    }
+    return 403;
+}

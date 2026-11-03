@@ -12,7 +12,7 @@ if (!is_string($apiUrl) || !preg_match('~^(?:https?://[^/]+)?/[^\s]*api/index\.p
 }
 
 // Build output of the ui package; it is generated and not tracked.
-$bundleDirectory = dirname(__DIR__) . '/public/assets/admin-app/';
+$bundleDirectory = \AdsManager\Config::webRoot() . '/assets/admin-app/';
 $bundleFiles = ['css' => $bundleDirectory . 'admin-app.css', 'js' => $bundleDirectory . 'admin-app.js'];
 foreach ($bundleFiles as $file) {
     if (!is_file($file)) {

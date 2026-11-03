@@ -1,0 +1,9 @@
+# 솔애드 내부 폴더(ads/src, hosts, admin, database, bin). 웹에서 열 일이 없으므로 막는다.
+# 설치와 동작에는 필요 없는 보안 설정이다. 없어도 PHP 파일은 직접 열었을 때 아무 일도 하지 않는다.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
