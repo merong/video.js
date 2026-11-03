@@ -61,7 +61,7 @@ final class Logos
             if (file_exists($path) || is_link($path) || !$move($tmp, $path)) {
                 throw new ApiError(500, 'upload_failed', '파일 저장에 실패했습니다.');
             }
-            chmod($path, 0640);
+            chmod($path, 0644);
             try {
                 $logos[] = $logo = ['logoId' => $id, 'name' => $name, 'file' => $file, 'mime' => $image['mime'], 'bytes' => $size, 'width' => $image['width'], 'height' => $image['height'], 'createdAt' => Value::now()];
                 $this->save($logos);

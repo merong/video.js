@@ -108,7 +108,8 @@ final class Creatives
         if (file_exists($path) || is_link($path) || !move_uploaded_file($file['tmp_name'], $path)) {
             throw new ApiError(500, 'upload_failed', '파일 저장에 실패했습니다.');
         }
-        chmod($path, 0640);
+        // The web server serves this public file directly, often as a different user than PHP (shared hosting).
+        chmod($path, 0644);
         try {
             return $this->save([...$input, 'url' => rtrim($this->config['uploadUrl'], '/') . '/' . $filename, 'mime' => $mime], 'upload');
         } catch (\Throwable $error) {
