@@ -1,0 +1,23 @@
+/* 솔애드 라이트 플레이어 자리. 플레이어 모양은 Video.js 기본 스킨(vendor/videojs/video.css)을 따른다. */
+.solad-lite {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 16px;
+}
+
+/* 플레이어를 읽기 전에도 16:9 자리를 잡아 글이 덜컥 밀리지 않게 한다. */
+.solad-lite:empty {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+}
+
+.solad-lite video-player {
+  display: block;
+  width: 100%;
+}
+
+.solad-lite-files {
+  margin: 0 0 20px;
+}

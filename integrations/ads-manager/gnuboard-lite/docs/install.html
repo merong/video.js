@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>솔애드 라이트 설치 가이드</title>
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <nav class="toc" aria-label="목차">
+        <a class="brand" href="#top">솔애드 라이트 설치 가이드</a>
+        <a class="switch" href="guide.html">게시판 연동 가이드로 가기 →</a>
+        <ol>
+          <li><a href="#contents">구성 파일</a></li>
+          <li><a href="#requirements">필요 환경</a></li>
+          <li><a href="#upload">파일 올리기</a></li>
+          <li><a href="#admin">광고 설정</a></li>
+          <li><a href="#boards">적용 게시판</a></li>
+          <li><a href="#upload-size">업로드 용량</a></li>
+          <li><a href="#verify">설치 확인</a></li>
+          <li><a href="#auth">운영자 권한</a></li>
+          <li><a href="#update">업데이트·삭제</a></li>
+          <li><a href="#trouble">문제 해결</a></li>
+        </ol>
+      </nav>
+
+      <main id="top">
+        <header class="doc">
+          <h1>솔애드 라이트 설치 가이드</h1>
+          <p>
+            그누보드5 게시판의 동영상을 Video.js 플레이어로 바꾸고, 재생 전에 광고 영상 1개(프리롤)를 보여 주는
+            플러그인이에요. 코어 파일은 고치지 않고, FTP와 브라우저만으로 설치할 수 있어요.
+          </p>
+        </header>
+
+        <section id="contents">
+          <h2>1. 구성 파일</h2>
+          <p>서버에 올리는 것은 <code>upload</code> 폴더 <strong>안의</strong> 파일뿐이에요.</p>
+          <pre class="tree"><code>solad-lite-gnuboard-{{VERSION}}/
+├─ README.txt                 빠른 설치 요약
+├─ docs/                      이 설치 가이드와 게시판 연동 가이드
+└─ upload/                    그누보드 루트에 그대로 올리는 파일
+    ├─ extend/solad_lite.extend.php       관리자 메뉴 추가, 페이지에 플레이어 스크립트 넣기
+    ├─ adm/solad_lite_form.php            광고 설정 화면
+    ├─ adm/solad_lite_form_update.php     광고 설정 저장
+    └─ plugin/solad_lite/
+        ├─ solad_lite.lib.php             설정, 광고 편성, PHP 함수
+        ├─ solad-lite.js / solad-lite.css 플레이어 스크립트와 스타일
+        ├─ vendor/                        Video.js 플레이어와 광고 모듈(ads.js)
+        ├─ example.php                    예제 페이지(최고관리자만)
+        └─ sample/                        예제 영상, 시험용 광고 영상</code></pre>
+          <p class="note">
+            들어 있는 기능은 <strong>플레이어 교체</strong>와 <strong>프리롤 광고 1개</strong>뿐이에요. 광고 여러 개,
+            미드롤·포스트롤, 노출 통계, 광고주 관리는 솔애드 정식판 기능이에요.
+          </p>
+        </section>
+
+        <section id="requirements">
+          <h2>2. 필요 환경</h2>
+          <ul>
+            <li>그누보드 5.6 이상 (5.6.43에서 확인)</li>
+            <li>PHP 7.4 이상</li>
+            <li>최신 브라우저(크롬·엣지·사파리·파이어폭스). 플레이어는 자바스크립트 모듈로 동작해요.</li>
+          </ul>
+          <p>
+            ffmpeg, Composer, Node.js, 따로 하는 DB 작업은 필요 없어요. 설정 테이블(<code>g5_solad_lite</code>)은 광고
+            설정 화면을 처음 열 때 자동으로 만들어져요.
+          </p>
+        </section>
+
+        <section id="upload">
+          <h2>3. 파일 올리기</h2>
+          <ol class="steps">
+            <li>압축을 풀고 <code>upload</code> 폴더를 열어요.</li>
+            <li>
+              안에 있는 <code>extend</code>, <code>adm</code>, <code>plugin</code> 폴더를 그누보드
+              루트(<code>common.php</code>가 있는 곳)에 그대로 올려요. 같은 이름의 폴더와 합쳐지면 돼요.
+            </li>
+            <li>
+              <code>data</code> 폴더에 쓰기 권한(707)이 있는지 확인해요. 그누보드가 정상 동작 중이면 이미 되어 있어요.
+              광고 영상은 <code>data/solad_lite</code>에 저장돼요.
+            </li>
+          </ol>
+          <div class="warn">
+            FTP로 올릴 때는 바이너리 모드로 올려 주세요. 텍스트 모드로 올리면 <code>vendor</code> 안의 파일이나 예제
+            영상이 깨질 수 있어요.
+          </div>
+        </section>
+
+        <section id="admin">
+          <h2>4. 광고 설정</h2>
+          <ol class="steps">
+            <li>최고관리자로 로그인하고 <strong>관리자 &gt; 게시판관리 &gt; 솔애드 라이트 광고</strong>를 열어요.</li>
+            <li>
+              <strong>플레이어 사용</strong>이 켜져 있는지 확인해요. 켜져 있으면 게시판 글의 동영상이 플레이어로
+              바뀌어요.
+            </li>
+            <li>
+              <strong>광고 영상</strong>에 mp4 또는 webm 파일을 올려요. 시험할 때는
+              <code>plugin/solad_lite/sample/sample-ad.mp4</code>를 써도 돼요.
+            </li>
+            <li>
+              필요하면 <strong>광고 링크</strong>(광고를 누르면 새 창으로 열 주소)와 <strong>광고 설명</strong>(화면
+              읽기 프로그램이 읽는 문구)을 적어요.
+            </li>
+            <li>
+              <strong>광고 사용</strong>을 켜고 <strong>확인</strong>을 눌러요. "지금 광고가 나가고 있습니다."가 보이면
+              끝이에요.
+            </li>
+          </ol>
+          <p>
+            광고는 <strong>프리롤(본편 앞) 1개</strong>로 고정이고, 광고가 시작되고
+            <strong>5초가 지나면 [광고 건너뛰기]</strong>를 누를 수 있어요. 건너뛰지 않으면 광고가 끝까지 나온 뒤 본편이
+            이어서 재생돼요.
+          </p>
+          <ul>
+            <li>
+              올릴 수 있는 파일은 <code>.mp4</code>와 <code>.webm</code>뿐이에요. 확장자만 바꾼 파일은 파일 앞부분을
+              검사해서 거절해요.
+            </li>
+            <li>새 광고 영상을 올리면 이전 광고 영상 파일은 지워져요.</li>
+            <li>광고를 잠시 멈추려면 <strong>광고 사용</strong>만 끄면 돼요. 플레이어는 그대로 남아요.</li>
+            <li>
+              광고 영상은 가로 16:9, 30초 이하, 5MB 안팎을 권장해요. 모바일에서는 광고가 길고 무거울수록 이탈이 늘어요.
+            </li>
+          </ul>
+        </section>
+
+        <section id="boards">
+          <h2>5. 적용 게시판</h2>
+          <p>
+            <strong>적용 게시판</strong>에서 아무것도 고르지 않으면 <strong>모든 게시판</strong>에 적용돼요. 일부
+            게시판에만 쓰려면 그 게시판만 체크하세요.
+          </p>
+          <p>적용된 게시판의 글 보기 화면에서는</p>
+          <ul>
+            <li>첨부한 <code>mp4</code>·<code>webm</code> 파일이 본문 위에 플레이어로 나오고,</li>
+            <li>본문 안에 들어간 <code>&lt;video&gt;</code> 태그도 그 자리에서 플레이어로 바뀌어요.</li>
+          </ul>
+          <p>
+            기존 글도 그대로 적용돼요. 게시판 스킨을 고칠 필요는 없어요. 스킨이 달라 본문 영역을 못 찾는 경우와,
+            게시판이 아닌 페이지에 플레이어를 넣는 방법은 <a href="guide.html">게시판 연동 가이드</a>를 보세요.
+          </p>
+        </section>
+
+        <section id="upload-size">
+          <h2>6. 업로드 용량</h2>
+          <p>동영상은 용량이 커서 기본 설정으로는 올라가지 않을 수 있어요. 두 곳을 확인하세요.</p>
+          <ol class="steps">
+            <li>
+              <strong>게시판 설정</strong>: 관리자 &gt; 게시판관리 &gt; 해당 게시판 수정 &gt;
+              <strong>파일 업로드 용량</strong>을 늘려요(예: 52428800 = 50MB).
+            </li>
+            <li>
+              <strong>PHP 설정</strong>: <code>upload_max_filesize</code>와 <code>post_max_size</code>가 올릴 파일보다
+              커야 해요. 광고 설정 화면의 광고 영상 칸에 지금 서버 한도가 보여요. 호스팅 관리 화면이나
+              <code>.user.ini</code>에서 바꿀 수 있어요.
+            </li>
+          </ol>
+          <pre><code>; .user.ini (그누보드 루트, 호스팅이 허용하는 경우)
+upload_max_filesize = 64M
+post_max_size = 64M</code></pre>
+        </section>
+
+        <section id="verify">
+          <h2>7. 설치 확인</h2>
+          <ol class="steps">
+            <li>
+              최고관리자로 <code>https://내사이트/plugin/solad_lite/example.php</code>를 열어요. 예제 플레이어 3개가
+              보이면 플레이어 파일이 제대로 올라간 거예요.
+            </li>
+            <li>적용 게시판에 mp4 파일을 첨부한 글을 하나 써요.</li>
+            <li>
+              글을 열고 재생하면 광고가 먼저 나오고, 오른쪽 아래 버튼이 "5초 후 건너뛰기"부터 줄어들다 "광고 건너뛰기"로
+              바뀌어요.
+            </li>
+            <li>건너뛰기를 누르거나 광고가 끝나면 본편이 재생돼요.</li>
+          </ol>
+          <p class="tip">광고는 플레이어마다 처음 재생할 때 한 번 나와요. 다시 확인하려면 페이지를 새로 고치세요.</p>
+        </section>
+
+        <section id="auth">
+          <h2>8. 운영자 권한</h2>
+          <p>
+            최고관리자가 아닌 운영자에게 광고 설정을 맡기려면
+            <strong>관리자 &gt; 환경설정 &gt; 관리권한설정</strong>에서 그 회원에게
+            <strong>솔애드 라이트 광고</strong>(메뉴 코드 <code>300960</code>) 권한을 주세요. 읽기(r)는 보기, 쓰기(w)는
+            저장이에요.
+          </p>
+          <p>
+            다른 플러그인과 메뉴 코드가 겹치면 <a href="guide.html#config">설정 파일</a>에서
+            <code>SOLAD_LITE_MENU</code>를 바꿀 수 있어요.
+          </p>
+        </section>
+
+        <section id="update">
+          <h2>9. 업데이트·삭제</h2>
+          <h3>업데이트</h3>
+          <p>
+            새 버전의 <code>upload</code> 폴더를 같은 자리에 덮어 올리세요. 설정(DB)과 올린 광고
+            영상(<code>data/solad_lite</code>)은 그대로 남아요. 직접 만든 <code>extend/solad_lite.config.php</code>도
+            패키지에 없어서 덮어쓰이지 않아요.
+          </p>
+          <h3>삭제</h3>
+          <ol class="steps">
+            <li><code>extend/solad_lite.extend.php</code>를 지우면 플레이어와 메뉴가 바로 꺼져요.</li>
+            <li>
+              완전히 지우려면 <code>adm/solad_lite_form.php</code>, <code>adm/solad_lite_form_update.php</code>,
+              <code>plugin/solad_lite/</code>, <code>data/solad_lite/</code>를 지우고 DB에서
+              <code>g5_solad_lite</code> 테이블을 지워요.
+            </li>
+          </ol>
+        </section>
+
+        <section id="trouble">
+          <h2>10. 문제 해결</h2>
+          <dl>
+            <dt>관리자 메뉴에 "솔애드 라이트 광고"가 없어요.</dt>
+            <dd>
+              <code>extend/solad_lite.extend.php</code>가 그누보드 루트의 <code>extend</code> 폴더에 있는지 확인하세요.
+              <code>upload/extend</code>처럼 한 단계 더 들어가 있으면 읽히지 않아요.
+            </dd>
+
+            <dt>"광고 영상이 서버 업로드 한도보다 큽니다."가 나와요.</dt>
+            <dd><a href="#upload-size">업로드 용량</a>의 PHP 설정을 늘리거나, 광고 영상을 더 작게 인코딩하세요.</dd>
+
+            <dt>저장하면 "요청 한도(post_max_size)보다 큽니다."가 나와요.</dt>
+            <dd>
+              올린 파일이 PHP <code>post_max_size</code>보다 커서 서버가 요청을 통째로 버린 거예요. PHP 한도를 늘리거나
+              파일을 줄이세요.
+            </dd>
+
+            <dt>저장하면 "올바른 방법으로 이용해 주십시오."가 나와요.</dt>
+            <dd>
+              관리자 보안 토큰이 맞지 않는 경우예요. 화면을 새로 고친 뒤 다시 저장하세요. 브라우저 확장 프로그램이
+              관리자 스크립트를 막고 있지 않은지도 확인하세요.
+            </dd>
+
+            <dt>글 보기 화면에 플레이어가 안 나오고 첨부 파일 목록만 보여요.</dt>
+            <dd>
+              <ul>
+                <li>
+                  광고 설정의 <strong>플레이어 사용</strong>이 켜져 있는지, <strong>적용 게시판</strong>에 그 게시판이
+                  들어 있는지(아무것도 고르지 않으면 전체) 확인하세요.
+                </li>
+                <li>
+                  첨부 파일 확장자가 <code>mp4</code>·<code>webm</code>인지 확인하세요. <code>mov</code>,
+                  <code>avi</code> 등은 바꾸지 않아요.
+                </li>
+                <li>
+                  브라우저 개발자 도구(F12) 콘솔에 "본문 영역(#bo_v_con)을 찾지 못해"가 보이면 스킨의 본문 영역이 다른
+                  거예요. <a href="guide.html#selector">본문 영역 바꾸기</a>를 보세요.
+                </li>
+              </ul>
+            </dd>
+
+            <dt>플레이어 틀만 보이고 재생이 안 돼요.</dt>
+            <dd>
+              <ul>
+                <li>
+                  F12 &gt; 네트워크에서 <code>plugin/solad_lite/vendor/</code> 파일이 404면 <code>vendor</code> 폴더가
+                  덜 올라간 거예요. 다시 올리세요.
+                </li>
+                <li>mp4가 H.264(영상)·AAC(음성)인지 확인하세요. H.265(HEVC)는 브라우저에 따라 재생되지 않아요.</li>
+              </ul>
+            </dd>
+
+            <dt>광고가 안 나와요.</dt>
+            <dd>
+              광고 설정 화면에 "지금 광고가 나가고 있습니다."가 보이는지 확인하세요. 보이는데도 안 나오면
+              <code>data/solad_lite/schedule.json</code>이 열리는지 브라우저로 확인하세요. nginx 등에서
+              <code>data</code> 폴더의 json 접근을 막았다면 풀어 주세요.
+            </dd>
+          </dl>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>솔애드 라이트 게시판 연동 가이드</title>
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <nav class="toc" aria-label="목차">
+        <a class="brand" href="#top">게시판 연동 가이드</a>
+        <a class="switch" href="install.html">설치 가이드로 가기 →</a>
+        <ol>
+          <li><a href="#how">동작 방식</a></li>
+          <li><a href="#boards">기존 게시판에 연동</a></li>
+          <li><a href="#selector">본문 영역 바꾸기</a></li>
+          <li><a href="#skin">스킨에 직접 넣기</a></li>
+          <li><a href="#html">HTML로 넣기</a></li>
+          <li><a href="#js">자바스크립트로 넣기</a></li>
+          <li><a href="#outside">그누보드 밖 페이지</a></li>
+          <li><a href="#style">모양 바꾸기</a></li>
+          <li><a href="#config">설정 파일</a></li>
+          <li><a href="#notes">알아 둘 점</a></li>
+        </ol>
+      </nav>
+
+      <main id="top">
+        <header class="doc">
+          <h1>솔애드 라이트 게시판 연동 가이드</h1>
+          <p>
+            기존 게시판, 직접 만든 스킨, 게시판이 아닌 페이지에 동영상 플레이어와 프리롤 광고를 넣는 방법이에요. 예제
+            코드는 최고관리자로 <code>/plugin/solad_lite/example.php</code>를 열면 실제로 동작하는 모습과 함께 볼 수
+            있어요.
+          </p>
+        </header>
+
+        <section id="how">
+          <h2>1. 동작 방식</h2>
+          <p>
+            <code>extend/solad_lite.extend.php</code>가 사용자 페이지 끝(<code>tail.sub.php</code>)에 아래 세 가지를
+            넣어요. 관리자 화면에는 넣지 않아요.
+          </p>
+          <pre><code>&lt;link rel="stylesheet" href="/plugin/solad_lite/solad-lite.css?v=버전"&gt;
+&lt;script type="application/json" id="solad-lite-config"&gt;{ 글 보기 여부, 본문 영역, 첨부 동영상, 광고 편성 주소 }&lt;/script&gt;
+&lt;script type="module" src="/plugin/solad_lite/solad-lite.js?v=버전"&gt;&lt;/script&gt;</code></pre>
+          <p>
+            <code>solad-lite.js</code>는 페이지에서 바꿀 동영상을 찾고, 있을 때만
+            Video.js(<code>vendor/videojs/</code>)와 광고 모듈(<code>vendor/ads.js</code>)을 읽어요. 동영상이 없는
+            페이지에서는 추가로 읽는 파일이 없어요.
+          </p>
+          <p>
+            광고 설정을 저장하면 <code>data/solad_lite/schedule.json</code>(광고 편성)이 만들어지고, 모든 플레이어가 이
+            편성을 읽어 재생 전에 광고를 보여 줘요. 광고를 끄면 이 파일이 지워지고 플레이어만 남아요.
+          </p>
+        </section>
+
+        <section id="boards">
+          <h2>2. 기존 게시판에 연동</h2>
+          <p>
+            설치만 하면 <strong>스킨 수정 없이</strong> 모든 게시판(또는 광고 설정에서 고른 게시판)의 글 보기 화면에
+            적용돼요.
+          </p>
+          <div class="grid2">
+            <div>
+              <h3>첨부 파일</h3>
+              <p>
+                글에 첨부한 <code>mp4</code>·<code>webm</code> 파일마다 본문 영역 맨 위에 플레이어를 하나씩 넣어요.
+                플레이어 위쪽에 올린 파일 이름이 제목으로 나와요.
+              </p>
+            </div>
+            <div>
+              <h3>본문 속 &lt;video&gt;</h3>
+              <p>
+                에디터로 넣은 <code>&lt;video src="….mp4"&gt;</code>나
+                <code>&lt;video&gt;&lt;source src="….webm"&gt;&lt;/video&gt;</code>를 그 자리에서 플레이어로 바꿔요.
+                <code>poster</code>도 그대로 써요.
+              </p>
+            </div>
+          </div>
+          <p>예전에 쓴 글도 다시 저장할 필요 없이 바로 적용돼요. 첨부 파일 목록(다운로드 링크)은 그대로 남아요.</p>
+          <p class="note">
+            YouTube 같은 외부 동영상(iframe)과 <code>mp4</code>·<code>webm</code>이 아닌 파일(<code>mov</code>,
+            <code>avi</code>, <code>mkv</code>)은 바꾸지 않아요.
+          </p>
+        </section>
+
+        <section id="selector">
+          <h2>3. 본문 영역 바꾸기</h2>
+          <p>
+            첨부 동영상은 본문 영역 <code>#bo_v_con</code> 안에 들어가요. 그누보드 기본 스킨(basic, gallery 등)과
+            대부분의 스킨이 이 이름을 써요. 스킨의 본문 영역이 다르면 브라우저 콘솔에 아래 경고가 보여요.
+          </p>
+          <pre><code>[solad-lite] 본문 영역(#bo_v_con)을 찾지 못해 첨부 동영상을 넣지 못했습니다.</code></pre>
+          <p>
+            이때는 <a href="#config">설정 파일</a>을 만들어 본문 영역을 CSS 선택자로 알려 주세요. 여러 스킨을 함께 쓰면
+            쉼표로 이어 적을 수 있고, 페이지에서 처음 찾은 곳에 들어가요.
+          </p>
+          <pre><code>&lt;?php
+// extend/solad_lite.config.php
+if (!defined('_GNUBOARD_')) exit;
+
+define('SOLAD_LITE_CONTENT_SELECTOR', '#bo_v_con, .view-content, #view_content');</code></pre>
+        </section>
+
+        <section id="skin">
+          <h2>4. 스킨에 직접 넣기 (PHP)</h2>
+          <p>원하는 위치에 플레이어를 두고 싶다면 스킨의 <code>view.skin.php</code>에서 PHP 함수를 쓰세요.</p>
+          <pre><code>&lt;?php echo solad_lite_player($src, array(
+    'poster' =&gt; $poster,   // 미리보기 이미지 주소 (선택)
+    'title'  =&gt; $title,    // 플레이어 위쪽 제목 (선택)
+    'ads'    =&gt; true,      // false면 이 플레이어에는 광고를 넣지 않음 (선택)
+)); ?&gt;</code></pre>
+          <p>
+            글에 첨부한 동영상 목록은 <code>solad_lite_post_videos()</code>로 가져올 수 있어요. 아래는 본문 위가 아니라
+            제목 아래에 첫 번째 동영상만 크게 넣는 예예요.
+          </p>
+          <pre><code>&lt;?php
+// skin/board/내스킨/view.skin.php, 제목 아래
+if (function_exists('solad_lite_post_videos')) {
+    $videos = solad_lite_post_videos($bo_table, $view['wr_id']);
+    if ($videos) {
+        echo solad_lite_player($videos[0]['src'], array('title' =&gt; $videos[0]['title']));
+    }
+}
+?&gt;</code></pre>
+          <div class="warn">
+            스킨에 직접 넣었다면 같은 동영상이 본문 위에 한 번 더 나오지 않게, 광고 설정의
+            <strong>적용 게시판</strong>에서 그 게시판을 빼 주세요. 자동 연동은 빠지고 직접 넣은 플레이어만 남아요.
+            광고는 직접 넣은 플레이어에도 그대로 나와요.
+          </div>
+          <p class="tip"><code>function_exists()</code>로 감싸 두면 플러그인을 지워도 스킨이 오류 없이 동작해요.</p>
+        </section>
+
+        <section id="html">
+          <h2>5. HTML로 넣기</h2>
+          <p>
+            그누보드 페이지(내용관리, 테마, 최신글 등)라면 어디든 <code>data-solad-lite</code> 자리를 두면 플레이어로
+            바뀌어요. PHP를 쓸 수 없는 곳에서 편해요.
+          </p>
+          <pre><code>&lt;!-- 광고 + 플레이어 --&gt;
+&lt;div data-solad-lite data-src="/data/file/free/movie.mp4" data-poster="/data/file/free/cover.jpg" data-title="회사 소개"&gt;&lt;/div&gt;
+
+&lt;!-- 광고 없이 플레이어만 --&gt;
+&lt;div data-solad-lite data-src="/data/file/free/movie.mp4" data-ads="off"&gt;&lt;/div&gt;</code></pre>
+          <table>
+            <thead>
+              <tr>
+                <th>속성</th>
+                <th>뜻</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>data-src</code></td>
+                <td>동영상 주소(필수). 같은 사이트의 <code>/경로</code> 또는 <code>http(s)://</code> 주소.</td>
+              </tr>
+              <tr>
+                <td><code>data-poster</code></td>
+                <td>재생 전 보여 줄 이미지 주소.</td>
+              </tr>
+              <tr>
+                <td><code>data-title</code></td>
+                <td>플레이어 위쪽 제목.</td>
+              </tr>
+              <tr>
+                <td><code>data-ads="off"</code></td>
+                <td>이 플레이어에는 광고를 넣지 않아요.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="note">
+            관리자 &gt; 내용관리처럼 에디터를 쓰는 곳에서는 에디터가 <code>data-*</code> 속성을 지우지 않도록 HTML(소스)
+            모드로 넣어 주세요.
+          </p>
+        </section>
+
+        <section id="js">
+          <h2>6. 자바스크립트로 넣기</h2>
+          <p>
+            AJAX로 불러온 글, 무한 스크롤, 모달처럼 페이지가 다 그려진 뒤에 생기는 동영상에는 <code>SoladLite</code>를
+            직접 불러요. <code>solad-lite.js</code>는 모듈이라 늦게 실행되므로 <code>load</code> 이벤트 뒤에 부르세요.
+          </p>
+          <pre><code>&lt;div id="my-player"&gt;&lt;/div&gt;
+&lt;script&gt;
+window.addEventListener('load', function () {
+  // 원하는 요소 안에 플레이어 만들기
+  SoladLite.mount(document.getElementById('my-player'), {
+    src: '/data/file/free/movie.mp4',
+    poster: '/data/file/free/cover.jpg',  // 선택
+    title: '회사 소개',                    // 선택
+    ads: true                              // false면 광고 없음
+  });
+});
+
+// 새로 넣은 HTML 안의 [data-solad-lite]를 플레이어로 바꾸기
+$('#list').load('/bbs/board.php?bo_table=free&amp;page=2 #list &gt; *', function () {
+  SoladLite.scan(document.getElementById('list'));
+});
+&lt;/script&gt;</code></pre>
+          <p>
+            <code>mount()</code>와 <code>scan()</code>은 Promise를 돌려줘요. 이미 플레이어로 바꾼 요소는 다시 바꾸지
+            않으니 여러 번 불러도 괜찮아요.
+          </p>
+        </section>
+
+        <section id="outside">
+          <h2>7. 그누보드 밖 페이지</h2>
+          <p>
+            그누보드의 <code>tail.sub.php</code>를 쓰지 않는 페이지(직접 만든 PHP 페이지 등)는 스크립트가 자동으로
+            들어가지 않아요. <code>common.php</code>를 불러 오고 <code>head.sub.php</code>·<code>tail.sub.php</code>로
+            감싸면 그대로 쓸 수 있어요.
+          </p>
+          <pre><code>&lt;?php
+include_once './common.php';
+$g5['title'] = '홍보 영상';
+include_once G5_PATH.'/head.sub.php';
+
+echo solad_lite_player(G5_DATA_URL.'/promo/intro.mp4', array('title' =&gt; '홍보 영상'));
+
+include_once G5_PATH.'/tail.sub.php';</code></pre>
+        </section>
+
+        <section id="style">
+          <h2>8. 모양 바꾸기</h2>
+          <p>
+            플레이어는 <code>.solad-lite</code> 상자 안에 들어가고 폭 100%로 늘어나요. 테마 CSS에서 크기와 여백을 바꿀
+            수 있어요.
+          </p>
+          <pre><code>/* 플레이어 최대 폭과 가운데 정렬 */
+.solad-lite { max-width: 960px; margin: 0 auto 24px; }
+
+/* 첨부 동영상 묶음(본문 위) 간격 */
+.solad-lite-files .solad-lite { margin-bottom: 16px; }</code></pre>
+          <p>플레이어 색과 모서리는 Video.js 기본 스킨의 CSS 변수로 바꿔요.</p>
+          <pre><code>.solad-lite video-player {
+  --media-accent-color: #e60033;   /* 진행 막대 등 강조색 */
+  --media-border-radius: 8px;
+}</code></pre>
+        </section>
+
+        <section id="config">
+          <h2>9. 설정 파일</h2>
+          <p>
+            코드로 바꿀 값은 <code>extend/solad_lite.config.php</code>를 직접 만들어 적어요. 이 파일은
+            <code>solad_lite.extend.php</code>보다 먼저 읽히고, 업데이트할 때 덮어쓰이지 않아요.
+          </p>
+          <pre><code>&lt;?php
+// extend/solad_lite.config.php
+if (!defined('_GNUBOARD_')) exit;
+
+// 첨부 동영상을 넣을 본문 영역 (기본 #bo_v_con)
+define('SOLAD_LITE_CONTENT_SELECTOR', '#bo_v_con');
+
+// 관리자 메뉴 코드 (기본 300960, 다른 플러그인과 겹칠 때만)
+define('SOLAD_LITE_MENU', '300960');</code></pre>
+        </section>
+
+        <section id="notes">
+          <h2>10. 알아 둘 점</h2>
+          <ul>
+            <li>
+              <strong>다운로드 포인트</strong>: 플레이어는 첨부 파일을 <code>data/file/</code> 주소로 바로 재생해요.
+              재생에는 그누보드 다운로드 포인트가 차감되지 않아요. 첨부 파일 목록의 다운로드 링크는 원래대로 포인트가
+              적용돼요.
+            </li>
+            <li>
+              <strong>읽기 권한</strong>: 글을 볼 수 있는 사람만 글 보기 화면에서 플레이어를 볼 수 있지만, 파일 주소
+              자체를 막지는 않아요. 회원 전용 유료 영상처럼 주소 보호가 필요하면 별도 보호 장치가 필요해요.
+            </li>
+            <li>
+              <strong>모바일</strong>: 광고와 본편 모두 화면 안에서 재생돼요(<code>playsinline</code>). 대부분의 모바일
+              브라우저는 소리 있는 자동 재생을 막기 때문에 사용자가 재생 버튼을 눌러야 시작해요.
+            </li>
+            <li>
+              <strong>광고 클릭</strong>: 광고 링크를 적으면 광고 화면에 "광고주 사이트" 버튼이 나오고, 누르면 새 창으로
+              열려요.
+            </li>
+            <li>
+              <strong>캐시</strong>: 광고를 바꾸면 편성 주소의 <code>?v=</code> 값이 올라가서 브라우저 캐시에 막히지
+              않아요.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
