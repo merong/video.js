@@ -1,0 +1,105 @@
+{
+ "W": 1280,
+ "pages": {
+  "video-view": {
+   "url": "/bbs/board.php?bo_table=video&wr_id=1",
+   "overflowX": false,
+   "lowContrast": [
+    {
+     "el": "a#ol_after_logout",
+     "text": "로그아웃",
+     "color": "rgb(160, 160, 161)",
+     "bg": "rgb(255, 255, 255)",
+     "bgEl": "body",
+     "ratio": 2.61
+    },
+    {
+     "el": "div#ft_copy",
+     "text": "Copyright © 소유하신 도메인. All righ",
+     "color": "rgb(91, 91, 91)",
+     "bg": "rgb(33, 32, 32)",
+     "bgEl": "div#ft",
+     "ratio": 2.39
+    },
+    {
+     "el": "b",
+     "text": "소유하신 도메인.",
+     "color": "rgb(91, 91, 91)",
+     "bg": "rgb(33, 32, 32)",
+     "bgEl": "div#ft",
+     "ratio": 2.39
+    }
+   ],
+   "lowCount": 3,
+   "darkBlocks": [
+    {
+     "el": "div#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 1280,
+     "h": 243,
+     "top": 0,
+     "text": "솔애드 예제 영상 > 동영상\n본문 바로가기\n커뮤니티\n쇼핑몰\nFAQ\nQ&A"
+    },
+    {
+     "el": "input#sch_stx",
+     "bg": "rgb(44, 44, 44)",
+     "w": 385,
+     "h": 45,
+     "top": 77,
+     "text": ""
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(33, 32, 32)",
+     "w": 1280,
+     "h": 326,
+     "top": 1826,
+     "text": "회사소개\n개인정보처리방침\n서비스이용약관\n모바일버전\n사이트 정보\n\n회사명 "
+    }
+   ],
+   "darkCount": 3,
+   "skinCss": [
+    "http://127.0.0.1:18840/skin/board/solad_video/style.css?ver=2303229",
+    "http://127.0.0.1:18840/skin/board/solad_video_light/style.css?ver=2303229"
+   ]
+  }
+ },
+ "play": {
+  "clicked": "media-play-button",
+  "timeline": [
+   [
+    {
+     "src": "ad.mp4",
+     "t": 0.5,
+     "paused": false
+    },
+    {
+     "src": "content.mp4",
+     "t": 0,
+     "paused": true
+    }
+   ],
+   [
+    {
+     "src": "ad.mp4",
+     "t": 2.6,
+     "paused": false
+    },
+    {
+     "src": "content.mp4",
+     "t": 0,
+     "paused": true
+    }
+   ],
+   [
+    {
+     "src": "content.mp4",
+     "t": 1.1,
+     "paused": false
+    }
+   ]
+  ],
+  "adAt": 0,
+  "contentAt": 6
+ }
+}

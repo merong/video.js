@@ -1,0 +1,229 @@
+{
+ "W": 390,
+ "pages": {
+  "video-list": {
+   "url": "/bbs/board.php?bo_table=video",
+   "overflowX": false,
+   "lowContrast": [],
+   "lowCount": 0,
+   "darkBlocks": [
+    {
+     "el": "header#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 390,
+     "h": 60,
+     "top": 0,
+     "text": "동영상 페이지\n본문 바로가기\n메뉴열기\n사용자메뉴"
+    },
+    {
+     "el": "a.sv-thumb",
+     "bg": "rgb(0, 0, 0)",
+     "w": 390,
+     "h": 219,
+     "top": 396,
+     "text": "0:36"
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(34, 34, 34)",
+     "w": 390,
+     "h": 278,
+     "top": 1260,
+     "text": "회사소개 개인정보처리방침 서비스이용약관\nCopyright © 소유하신 도"
+    }
+   ],
+   "darkCount": 3,
+   "skinCss": [
+    "http://127.0.0.1:18840/mobile/skin/board/solad_video/style.css?ver=2303229",
+    "http://127.0.0.1:18840/mobile/skin/board/solad_video_light/style.css?ver=2303229"
+   ]
+  },
+  "video-write": {
+   "url": "/bbs/write.php?bo_table=video",
+   "overflowX": false,
+   "lowContrast": [],
+   "lowCount": 0,
+   "darkBlocks": [
+    {
+     "el": "header#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 390,
+     "h": 60,
+     "top": 0,
+     "text": "동영상 글쓰기\n본문 바로가기\n메뉴열기\n사용자메뉴"
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(34, 34, 34)",
+     "w": 390,
+     "h": 278,
+     "top": 1981,
+     "text": "회사소개 개인정보처리방침 서비스이용약관\nCopyright © 소유하신 도"
+    }
+   ],
+   "darkCount": 2,
+   "skinCss": [
+    "http://127.0.0.1:18840/mobile/skin/board/solad_video/style.css?ver=2303229",
+    "http://127.0.0.1:18840/mobile/skin/board/solad_video_light/style.css?ver=2303229"
+   ]
+  },
+  "adreq-list": {
+   "url": "/bbs/board.php?bo_table=adreq",
+   "overflowX": false,
+   "lowContrast": [],
+   "lowCount": 0,
+   "darkBlocks": [
+    {
+     "el": "header#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 390,
+     "h": 60,
+     "top": 0,
+     "text": "광고 요청 페이지\n본문 바로가기\n메뉴열기\n사용자메뉴"
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(34, 34, 34)",
+     "w": 390,
+     "h": 278,
+     "top": 978,
+     "text": "회사소개 개인정보처리방침 서비스이용약관\nCopyright © 소유하신 도"
+    }
+   ],
+   "darkCount": 2,
+   "skinCss": [
+    "http://127.0.0.1:18840/mobile/skin/board/solad_request/style.css?ver=2303229",
+    "http://127.0.0.1:18840/mobile/skin/board/solad_request_light/style.css?ver=2303229"
+   ]
+  },
+  "adreq-view": {
+   "url": "/bbs/board.php?bo_table=adreq&wr_id=1",
+   "overflowX": false,
+   "lowContrast": [],
+   "lowCount": 0,
+   "darkBlocks": [
+    {
+     "el": "header#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 390,
+     "h": 60,
+     "top": 0,
+     "text": "QA 1.0.3 광고 요청 > 광고 요청\n본문 바로가기\n메뉴열기\n사용자메"
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(34, 34, 34)",
+     "w": 390,
+     "h": 278,
+     "top": 2397,
+     "text": "회사소개 개인정보처리방침 서비스이용약관\nCopyright © 소유하신 도"
+    }
+   ],
+   "darkCount": 2,
+   "skinCss": [
+    "http://127.0.0.1:18840/mobile/skin/board/solad_request/style.css?ver=2303229",
+    "http://127.0.0.1:18840/mobile/skin/board/solad_request_light/style.css?ver=2303229"
+   ]
+  },
+  "adreq-write": {
+   "url": "/bbs/write.php?bo_table=adreq",
+   "overflowX": false,
+   "lowContrast": [],
+   "lowCount": 0,
+   "darkBlocks": [
+    {
+     "el": "header#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 390,
+     "h": 60,
+     "top": 0,
+     "text": "광고 요청 글쓰기\n본문 바로가기\n메뉴열기\n사용자메뉴"
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(34, 34, 34)",
+     "w": 390,
+     "h": 278,
+     "top": 2728,
+     "text": "회사소개 개인정보처리방침 서비스이용약관\nCopyright © 소유하신 도"
+    }
+   ],
+   "darkCount": 2,
+   "skinCss": [
+    "http://127.0.0.1:18840/mobile/skin/board/solad_request/style.css?ver=2303229",
+    "http://127.0.0.1:18840/mobile/skin/board/solad_request_light/style.css?ver=2303229"
+   ]
+  },
+  "video-view": {
+   "url": "/bbs/board.php?bo_table=video&wr_id=1",
+   "overflowX": false,
+   "lowContrast": [],
+   "lowCount": 0,
+   "darkBlocks": [
+    {
+     "el": "header#hd",
+     "bg": "rgb(33, 32, 32)",
+     "w": 390,
+     "h": 60,
+     "top": 0,
+     "text": "솔애드 예제 영상 > 동영상\n본문 바로가기\n메뉴열기\n사용자메뉴"
+    },
+    {
+     "el": "div#ft",
+     "bg": "rgb(34, 34, 34)",
+     "w": 390,
+     "h": 278,
+     "top": 1521,
+     "text": "회사소개 개인정보처리방침 서비스이용약관\nCopyright © 소유하신 도"
+    }
+   ],
+   "darkCount": 2,
+   "skinCss": [
+    "http://127.0.0.1:18840/mobile/skin/board/solad_video/style.css?ver=2303229",
+    "http://127.0.0.1:18840/mobile/skin/board/solad_video_light/style.css?ver=2303229"
+   ]
+  }
+ },
+ "env": {
+  "w": 390,
+  "dpr": 2
+ },
+ "play": {
+  "clicked": "media-play-button",
+  "timeline": [
+   [
+    {
+     "src": "ad.mp4",
+     "t": 0.5,
+     "paused": false
+    },
+    {
+     "src": "content.mp4",
+     "t": 0,
+     "paused": true
+    }
+   ],
+   [
+    {
+     "src": "ad.mp4",
+     "t": 3,
+     "paused": false
+    },
+    {
+     "src": "content.mp4",
+     "t": 0,
+     "paused": true
+    }
+   ],
+   [
+    {
+     "src": "content.mp4",
+     "t": 1.5,
+     "paused": false
+    }
+   ]
+  ],
+  "adAt": 0,
+  "contentAt": 6
+ }
+}
